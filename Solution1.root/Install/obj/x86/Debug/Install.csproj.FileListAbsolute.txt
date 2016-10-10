@@ -1,4 +1,0 @@
-D:\Company Project\Git\EDERP\Solution1.root\Install\bin\x86\Debug\Install.dll
-D:\Company Project\Git\EDERP\Solution1.root\Install\bin\x86\Debug\Install.pdb
-D:\Company Project\Git\EDERP\Solution1.root\Install\obj\x86\Debug\Install.dll
-D:\Company Project\Git\EDERP\Solution1.root\Install\obj\x86\Debug\Install.pdb
