@@ -10,3 +10,6 @@ D:\Company Project\Git\EDERP\Solution1.root\Book.Model\obj\x86\Debug\zh-CHS\Book
 D:\Company Project\Git\EDERP\Solution1.root\Book.Model\obj\x86\Debug\zh-CHT\Book.Model.resources.dll
 D:\Company Project\Git\EDERP\Solution1.root\Book.Model\obj\x86\Debug\Book.Model.dll
 D:\Company Project\Git\EDERP\Solution1.root\Book.Model\obj\x86\Debug\Book.Model.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.Model\bin\x86\Debug\Book.Model.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.Model\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.Model\bin\x86\Debug\zh-CHT\Book.Model.resources.dll

@@ -153,8 +153,8 @@ namespace Book.UI.Settings.BasicData.Customs
                 //font.GetType().InvokeMember("Size", BindingFlags.SetProperty, null, font, new object[] { 20 });
                 //object cellDate = objExcel.GetType().InvokeMember("Range",BindingFlags.GetProperty,null,objExcel,new object[]{string."A:"});
 
-                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-                dynamic excel1 = Activator.CreateInstance(objClassType);
+                //Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                dynamic excel = Activator.CreateInstance(objClassType);
                 excel.Application.Workbooks.Add(true);
                 excel.Visible = true;//是否打开该Excel文件
 

@@ -1,4 +1,5 @@
 D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.pdb
 D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.dll
 D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.dll
 D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.dll
