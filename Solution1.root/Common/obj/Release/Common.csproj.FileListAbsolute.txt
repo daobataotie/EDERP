@@ -1,4 +1,0 @@
-D:\公司项目\易达ERP\Solution1.root\Common\bin\Debug\Common.dll
-D:\公司项目\易达ERP\Solution1.root\Common\obj\Release\ResolveAssemblyReference.cache
-D:\公司项目\易达ERP\Solution1.root\Common\obj\Release\Common.dll
-D:\公司项目\易达ERP\Solution1.root\Common\obj\Release\Common.pdb

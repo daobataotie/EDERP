@@ -1,5 +1,0 @@
-D:\公司项目\易达ERP\Solution1.root\Install\bin\Release\Install.dll
-D:\公司项目\易达ERP\Solution1.root\Install\bin\Release\Install.pdb
-D:\公司项目\易达ERP\Solution1.root\Install\obj\Release\ResolveAssemblyReference.cache
-D:\公司项目\易达ERP\Solution1.root\Install\obj\Release\Install.dll
-D:\公司项目\易达ERP\Solution1.root\Install\obj\Release\Install.pdb

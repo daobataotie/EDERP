@@ -10,6 +10,7 @@ using System.Linq;
 using CrystalDecisions.Shared;
 using System.Reflection;
 using Microsoft.CSharp;
+using Microsoft.Office.Core;
 
 
 namespace Book.UI.Settings.BasicData.Customs

@@ -1,5 +1,0 @@
-D:\公司项目\易达ERP\Solution1.root\Helper\bin\Release\Helper.dll
-D:\公司项目\易达ERP\Solution1.root\Helper\bin\Release\Helper.pdb
-D:\公司项目\易达ERP\Solution1.root\Helper\obj\Release\ResolveAssemblyReference.cache
-D:\公司项目\易达ERP\Solution1.root\Helper\obj\Release\Helper.dll
-D:\公司项目\易达ERP\Solution1.root\Helper\obj\Release\Helper.pdb

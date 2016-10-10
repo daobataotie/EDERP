@@ -679,7 +679,7 @@ namespace Book.UI.ExcelClass
         {
             if (System.IO.File.Exists(_filename))
             {
-                Microsoft.Office.Interop.Excel.ApplicationClass myExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+                Microsoft.Office.Interop.Excel.Application myExcelApp = new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel.Workbook excel_wb;
                 excel_wb = myExcelApp.Workbooks.Open(_filename, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                 StringCollection a = new StringCollection();
@@ -728,7 +728,7 @@ namespace Book.UI.ExcelClass
         /// <returns></returns>
         public int rowcount(string _filename, string sheetname) //行数
         {
-            Microsoft.Office.Interop.Excel.ApplicationClass myExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            Microsoft.Office.Interop.Excel.Application myExcelApp = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel.Workbook excel_wb;
             excel_wb = myExcelApp.Workbooks.Open(_filename, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             int counts = ((Microsoft.Office.Interop.Excel.Worksheet)excel_wb.Worksheets.get_Item(sheetname)).UsedRange.Rows.Count;
@@ -761,7 +761,7 @@ namespace Book.UI.ExcelClass
         /// <returns></returns>
         public int colcount(string _filename, string sheetname) //列数
         {
-            Microsoft.Office.Interop.Excel.ApplicationClass myExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            Microsoft.Office.Interop.Excel.Application myExcelApp = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel.Workbook excel_wb;
             excel_wb = myExcelApp.Workbooks.Open(_filename, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             int counts = ((Microsoft.Office.Interop.Excel.Worksheet)excel_wb.Worksheets.get_Item(sheetname)).UsedRange.Columns.Count;
