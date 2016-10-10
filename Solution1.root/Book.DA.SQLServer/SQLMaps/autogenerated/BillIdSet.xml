@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="BillIdSet" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="BillIdSet" type="Book.Model.BillIdSet, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="BillIdSetResult" class="BillIdSet">
+			<result property="BillIdSetId" column="BillIdSetId" />
+			<result property="EnglishId" column="EnglishId" />
+			<result property="StartBillId" column="StartBillId" />
+			<result property="EndBillId" column="EndBillId" />
+			<result property="StartDate" column="StartDate" />
+			<result property="EndDate" column="EndDate" />
+			<result property="InsertTime" column="InsertTime" />
+			<result property="UpdatetTime" column="UpdatetTime" />
+			<result property="IdState" column="IdState" />
+			<result property="IdNumber" column="IdNumber" />
+        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[BillIdSet]
+				WHERE
+				[BillIdSetId] = #BillIdSetId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[BillIdSet]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="get_first" resultMap="BillIdSetResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.BillIdSet
+			 
+			order by InsertTime 
+			]]>
+		</select>
+		<select id="get_last" resultMap="BillIdSetResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.BillIdSet
+						
+            order by InsertTime desc
+			]]>
+            
+		</select>
+		<select id="get_prev" resultMap="BillIdSetResult" parameterClass="BillIdSet">
+			<![CDATA[
+			select top 1 *
+			from dbo.BillIdSet
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+		</select>
+		<select id="get_next" resultMap="BillIdSetResult" parameterClass="BillIdSet">
+			<![CDATA[
+			select top 1 *
+			from dbo.BillIdSet
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+		</select>
+		
+		<select id="has_rows_before" resultClass="bool" parameterClass="BillIdSet">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.BillIdSet
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+		</select>
+		
+		<select id="has_rows_after" resultClass="bool" parameterClass="BillIdSet">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.BillIdSet
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="BillIdSetResult" parameterClass="BillIdSet">
+			<![CDATA[SELECT
+				[BillIdSetId],
+				[EnglishId],
+				[StartBillId],
+				[EndBillId],
+				[StartDate],
+				[EndDate],
+				[InsertTime],
+				[UpdatetTime],
+				[IdState],
+				[IdNumber]
+			FROM
+				[dbo].[BillIdSet]
+			WHERE
+				[BillIdSetId] = #BillIdSetId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[BillIdSet]
+			WHERE            
+				[BillIdSetId] = #BillIdSetId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="BillIdSetResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[BillIdSet]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[BillIdSet]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="BillIdSetResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[BillIdSet]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="BillIdSet">
+			 <![CDATA[ INSERT INTO [dbo].[BillIdSet] 
+			(
+				[BillIdSetId],
+				[EnglishId],
+				[StartBillId],
+				[EndBillId],
+				[StartDate],
+				[EndDate],
+				[InsertTime],
+				[UpdatetTime],
+				[IdState],
+				[IdNumber]
+			) 
+			VALUES 
+			(
+				#BillIdSetId#,
+				#EnglishId#,
+				#StartBillId#,
+				#EndBillId#,
+				#StartDate#,
+				#EndDate#,
+				#InsertTime#,
+				#UpdatetTime#,
+				#IdState#,
+				#IdNumber#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="BillIdSet">
+		 <![CDATA[ 	UPDATE [BillIdSet] SET
+				[EnglishId] = #EnglishId#,
+				[StartBillId] = #StartBillId#,
+				[EndBillId] = #EndBillId#,
+				[StartDate] = #StartDate#,
+				[EndDate] = #EndDate#,
+				[InsertTime] = #InsertTime#,
+				[UpdatetTime] = #UpdatetTime#,
+				[IdState] = #IdState#,
+				[IdNumber] = #IdNumber#
+			WHERE
+				[BillIdSetId] = #BillIdSetId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[BillIdSet]
+				where  BillIdSetId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

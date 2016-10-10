@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="BGHandbookRangeDetail" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByBGHandbookId" resultMap="BGHandbookRangeDetailResult" parameterClass="string">
+      select * from BGHandbookRangeDetail where BGHandbookRangeId=#value#
+    </select>
+
+    <delete id="DeleteByBGHandbookId" parameterClass="string">
+      Delete from BGHandbookRangeDetail where BGHandbookRangeId=#value#
+    </delete>
+  </statements>
+
+</sqlMap>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="AtBillsIncome" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="select_AtBillsIncomeBillsOften" resultMap="AtBillsIncomeResult" parameterClass="Map">
+      SELECT * FROM AtBillsIncome WHERE BillsOften = #BillsOften# and   IncomeCategory=0
+    </select>
+    <select id="select_byDdate" resultMap="AtBillsIncomeResult" parameterClass="Map">
+      <![CDATA[
+     select * from AtBillsIncome  where (TheOpenDate  between #startdate# and #enddate#)or(#startdate# is null and #enddate# is null) 
+    ]]>
+    </select>
+    <select id="select_byDdateAndBank" resultMap="AtBillsIncomeResult" parameterClass="Map">
+      <![CDATA[
+     select * from AtBillsIncome where
+     (CollectionAccount  between #startCollectionAccount# and #endCollectionAccount#) or (#startCollectionAccount# is null and #endCollectionAccount# is null) and (Maturity  between #startdate# and #enddate# )or(#startdate# is null and #enddate# is null) 
+    ]]>
+    </select>
+    <select id="select_byDdate2" resultMap="AtBillsIncomeResult" parameterClass="Map">
+      <![CDATA[
+     select * from AtBillsIncome  where (TheJpy  between #startdate# and #enddate#) or (#startdate# is null and #enddate# is null) and BillsOften = #BillsOften#
+    ]]>
+    </select>
+    <select id="select_DuiXianByDate" resultMap="AtBillsIncomeResult" parameterClass="Map">
+      <![CDATA[
+     select * from AtBillsIncome  where TheOpenDate  between #startdate# and #enddate#  and Maturity  between #daoQiDate1# and #daoQiDate2# and IncomeCategory=#IncomeCategory# and BillsOften=#BillsOften#
+    ]]>
+    </select>
+    <select id="SelectByCondition" parameterClass="Map" resultMap="AtBillsIncomeResult">
+      <![CDATA[
+      select * from AtBillsIncome where 1=1 $sb$
+      ]]>
+    </select>
+
+    <select id="SelectByShouldPayAccountId" parameterClass="String" resultMap="AtBillsIncomeResult">
+      <![CDATA[
+      select * from AtBillsIncome where ShouldPayAccountId=#value#
+      ]]>
+    </select>
+
+    <delete id="DeleteByShouldPayAccountId" parameterClass="String">
+      <![CDATA[
+       delete from AtBillsIncome where ShouldPayAccountId=#value#
+      ]]>
+    </delete>
+    <select id="IsExistsIdInsert" parameterClass="string" resultClass="bool">
+      <![CDATA[
+      select case when exists( select * from AtBillsIncome where Id=#value#) then 1 else 0 end
+      ]]>
+    </select>
+
+    <select id="IsExistsIdUpdate" parameterClass="Map" resultClass="bool">
+      <![CDATA[
+      select case when exists( select * from AtBillsIncome where Id=#Id# and BillsId<>#BillsId#) then 1 else 0 end
+      ]]>
+    </select>
+  </statements>
+
+</sqlMap>

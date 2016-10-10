@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="ShouldPayAccount" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="ShouldPayAccount" type="Book.Model.ShouldPayAccount, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="ShouldPayAccountResult" class="ShouldPayAccount">
+      <result property="ShouldPayAccountId" column="ShouldPayAccountId" />
+      <result property="InvoiceDate" column="InvoiceDate" />
+      <result property="PayDate" column="PayDate" />
+      <result property="SupplierId" column="SupplierId" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="AtSummonId" column="AtSummonId" />
+      <result property="AtBillsIncomeId" column="AtBillsIncomeId" />
+      <result property="JinE" column="JinE" />
+      <result property="ShuiE" column="ShuiE" />
+      <result property="ZheRang" column="ZheRang" />
+      <result property="Total" column="Total" />
+      <result property="PayZheRang" column="PayZheRang"/>
+      <result property="EmployeeId" column="EmployeeId"/>
+      <result property="ShouldPayAccountConditionId" column="ShouldPayAccountConditionId"/>
+      <result property="FPMoney" column="FPMoney"/>
+      <result property="FPTax" column="FPTax"/>
+      <result property="FPTotal" column="FPTotal"/>
+      <result property ="PMTotal" column="PMTotal"/>
+      <result property="Supplier" column="SupplierId" lazyLoad="false" select="Supplier.select_by_primary_key" />
+      <result property="AtBillsIncome" column="AtBillsIncomeId" lazyLoad="false" select="AtBillsIncome.select_by_primary_key" />
+      <result property="AtSummon" column="AtSummonId" lazyLoad="false" select="AtSummon.select_by_primary_key" />
+      <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key"/>
+      <result property="ShouldPayAccountCondition" column="ShouldPayAccountConditionId" lazyLoad="false" select="ShouldPayAccountCondition.select_by_primary_key"/>
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ShouldPayAccount]
+				WHERE
+				[ShouldPayAccountId] = #ShouldPayAccountId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[ShouldPayAccount]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="get_first" resultMap="ShouldPayAccountResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.ShouldPayAccount
+			 
+			order by InsertTime 
+			]]>
+    </select>
+    <select id="get_last" resultMap="ShouldPayAccountResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.ShouldPayAccount
+						
+            order by InsertTime desc
+			]]>
+
+    </select>
+    <select id="get_prev" resultMap="ShouldPayAccountResult" parameterClass="ShouldPayAccount">
+      <![CDATA[
+			select top 1 *
+			from dbo.ShouldPayAccount
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+    </select>
+    <select id="get_next" resultMap="ShouldPayAccountResult" parameterClass="ShouldPayAccount">
+      <![CDATA[
+			select top 1 *
+			from dbo.ShouldPayAccount
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="ShouldPayAccount">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.ShouldPayAccount
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="ShouldPayAccount">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.ShouldPayAccount
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="ShouldPayAccountResult" parameterClass="ShouldPayAccount">
+      <![CDATA[SELECT
+				[ShouldPayAccountId],
+				[InvoiceDate],
+				[PayDate],
+				[SupplierId],
+				[InsertTime],
+				[UpdateTime],
+				[AtSummonId],
+				[AtBillsIncomeId],
+				[JinE],
+				[ShuiE],
+				[ZheRang],
+				[Total],
+        [PayZheRang],
+        [EmployeeId],
+        [ShouldPayAccountConditionId],
+        [FPMoney],
+        [FPTax],
+        [FPTotal],
+        [PMTotal]
+        
+			FROM
+				[dbo].[ShouldPayAccount]
+			WHERE
+				[ShouldPayAccountId] = #ShouldPayAccountId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[ShouldPayAccount]
+			WHERE            
+				[ShouldPayAccountId] = #ShouldPayAccountId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="ShouldPayAccountResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[ShouldPayAccount]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[ShouldPayAccount]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="ShouldPayAccountResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[ShouldPayAccount]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="ShouldPayAccount">
+      <![CDATA[ INSERT INTO [dbo].[ShouldPayAccount] 
+			(
+				[ShouldPayAccountId],
+				[InvoiceDate],
+				[PayDate],
+				[SupplierId],
+				[InsertTime],
+				[UpdateTime],
+				[AtSummonId],
+				[AtBillsIncomeId],
+				[JinE],
+				[ShuiE],
+				[ZheRang],
+				[Total],
+        [PayZheRang],
+        [EmployeeId],
+        [ShouldPayAccountConditionId],
+        [FPMoney],
+        [FPTax],
+        [FPTotal],
+        [PMTotal]
+			) 
+			VALUES 
+			(
+				#ShouldPayAccountId#,
+				#InvoiceDate#,
+				#PayDate#,
+				#SupplierId#,
+				#InsertTime#,
+				#UpdateTime#,
+				#AtSummonId#,
+				#AtBillsIncomeId#,
+				#JinE#,
+				#ShuiE#,
+				#ZheRang#,
+				#Total#,
+        #PayZheRang#,
+        #EmployeeId#,
+        #ShouldPayAccountConditionId#,
+        #FPMoney#,
+        #FPTax#,
+        #FPTotal#,
+        #PMTotal#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="ShouldPayAccount">
+      <![CDATA[ 	UPDATE [ShouldPayAccount] SET
+				[InvoiceDate] = #InvoiceDate#,
+				[PayDate] = #PayDate#,
+				[SupplierId] = #SupplierId#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+				[AtSummonId] = #AtSummonId#,
+				[AtBillsIncomeId] = #AtBillsIncomeId#,
+				[JinE] = #JinE#,
+				[ShuiE] = #ShuiE#,
+				[ZheRang] = #ZheRang#,
+				[Total] = #Total#,
+        [PayZheRang]=#PayZheRang#,
+        [EmployeeId]=#EmployeeId#,
+        [ShouldPayAccountConditionId]=#ShouldPayAccountConditionId#,
+        [FPMoney]=#FPMoney#,
+        [FPTax]=#FPTax#,
+        [FPTotal]=#FPTotal#,
+        [PMTotal]=#PMTotal#
+			WHERE
+				[ShouldPayAccountId] = #ShouldPayAccountId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[ShouldPayAccount]
+				where  ShouldPayAccountId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

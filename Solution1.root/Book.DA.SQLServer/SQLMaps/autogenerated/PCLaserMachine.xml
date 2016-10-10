@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCLaserMachine" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="PCLaserMachine" type="Book.Model.PCLaserMachine, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="PCLaserMachineResult" class="PCLaserMachine">
+			<result property="PCLaserMachineId" column="PCLaserMachineId" />
+			<result property="PCDataInputId" column="PCDataInputId" />
+			<result property="NoId" column="NoId" />
+			<result property="LeftX" column="LeftX" />
+			<result property="RightX" column="RightX" />
+			<result property="LeftY" column="LeftY" />
+			<result property="RightY" column="RightY" />
+			<result property="Judge" column="Judge" />
+		<result property="PCDataInput" column="PCDataInputId" lazyLoad="false" select="PCDataInput.select_by_primary_key" />        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCLaserMachine]
+				WHERE
+				[PCLaserMachineId] = #PCLaserMachineId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCLaserMachine]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="PCLaserMachineResult" parameterClass="PCLaserMachine">
+			<![CDATA[SELECT
+				[PCLaserMachineId],
+				[PCDataInputId],
+				[NoId],
+				[LeftX],
+				[RightX],
+				[LeftY],
+				[RightY],
+				[Judge]
+			FROM
+				[dbo].[PCLaserMachine]
+			WHERE
+				[PCLaserMachineId] = #PCLaserMachineId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[PCLaserMachine]
+			WHERE            
+				[PCLaserMachineId] = #PCLaserMachineId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="PCLaserMachineResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[PCLaserMachine]
+                			                   
+
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[PCLaserMachine]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="PCLaserMachineResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCLaserMachine]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="PCLaserMachine">
+			 <![CDATA[ INSERT INTO [dbo].[PCLaserMachine] 
+			(
+				[PCLaserMachineId],
+				[PCDataInputId],
+				[NoId],
+				[LeftX],
+				[RightX],
+				[LeftY],
+				[RightY],
+				[Judge]
+			) 
+			VALUES 
+			(
+				#PCLaserMachineId#,
+				#PCDataInputId#,
+				#NoId#,
+				#LeftX#,
+				#RightX#,
+				#LeftY#,
+				#RightY#,
+				#Judge#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="PCLaserMachine">
+		 <![CDATA[ 	UPDATE [PCLaserMachine] SET
+				[PCDataInputId] = #PCDataInputId#,
+				[NoId] = #NoId#,
+				[LeftX] = #LeftX#,
+				[RightX] = #RightX#,
+				[LeftY] = #LeftY#,
+				[RightY] = #RightY#,
+				[Judge] = #Judge#
+			WHERE
+				[PCLaserMachineId] = #PCLaserMachineId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCLaserMachine]
+				where  PCLaserMachineId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="AtSummon" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <statements>
+    <select id="SelectByDateRage" parameterClass="Map" resultMap="AtSummonResult">
+      <![CDATA[
+      SELECT * FROM AtSummon WHERE AtSummon.SummonDate BETWEEN #startdate# AND #enddate# ORDER BY SummonDate desc
+      ]]>
+    </select>
+
+    <select id="IsExistsId" resultClass="bool" parameterClass="string">
+      <![CDATA[
+      SELECT CASE WHEN EXISTS (SELECT * FROM AtSummon WHERE id=#value#) THEN 1 ELSE 0 end
+      ]]>
+    </select>
+
+    <select id="IsExistsIdUpdate" resultClass="bool" parameterClass="Map">
+      <![CDATA[
+      SELECT CASE WHEN EXISTS (SELECT * FROM AtSummon WHERE id=#Id# and SummonId<>#SummonId#) THEN 1 ELSE 0 end
+      ]]>
+    </select>
+
+    <select id="SelectByCondition" resultMap="AtSummonResult" parameterClass="Map">
+      <![CDATA[
+      select * from AtSummon where 1=1 $sql$
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

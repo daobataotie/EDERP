@@ -1,0 +1,2248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="barSubItem1.Caption" xml:space="preserve">
+    <value>檔案</value>
+  </data>
+  <data name="barButtonItem30.Caption" xml:space="preserve">
+    <value>修改密碼(&amp;P)...</value>
+  </data>
+  <data name="barButtonItemExit.Caption" xml:space="preserve">
+    <value>離開(&amp;X)</value>
+  </data>
+  <data name="barSubItem2.Caption" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="barButtonItem257.Caption" xml:space="preserve">
+    <value>公司基本資料</value>
+  </data>
+  <data name="barButtonItem14.Caption" xml:space="preserve">
+    <value>編號規則</value>
+  </data>
+  <data name="barSubItem15.Caption" xml:space="preserve">
+    <value>權限設定</value>
+  </data>
+  <data name="barButtonItem69.Caption" xml:space="preserve">
+    <value>角色管理</value>
+  </data>
+  <data name="barButtonItem70.Caption" xml:space="preserve">
+    <value>操作員設定</value>
+  </data>
+  <data name="barButtonItem359.Caption" xml:space="preserve">
+    <value>功能設置</value>
+  </data>
+  <data name="barButtonItem169.Caption" xml:space="preserve">
+    <value>定義流程</value>
+  </data>
+  <data name="barSubItem35.Caption" xml:space="preserve">
+    <value>客戶</value>
+  </data>
+  <data name="barButtonItem5.Caption" xml:space="preserve">
+    <value>客戶基本資料(&amp;C)...</value>
+  </data>
+  <data name="barButtonItem161.Caption" xml:space="preserve">
+    <value>客戶產品對照資料</value>
+  </data>
+  <data name="barButtonItem163.Caption" xml:space="preserve">
+    <value>客戶產品加工類型</value>
+  </data>
+  <data name="barButtonItem164.Caption" xml:space="preserve">
+    <value>客戶產品加工內容</value>
+  </data>
+  <data name="barButtonItem243.Caption" xml:space="preserve">
+    <value>客戶產品加工組</value>
+  </data>
+  <data name="barButtonItem166.Caption" xml:space="preserve">
+    <value>客戶產品包裝類型</value>
+  </data>
+  <data name="barButtonItem207.Caption" xml:space="preserve">
+    <value>客戶產品包裝內容</value>
+  </data>
+  <data name="barButtonItem456.Caption" xml:space="preserve">
+    <value>客戶產品價格設置</value>
+  </data>
+  <data name="barSubItem89.Caption" xml:space="preserve">
+    <value>供應商管理</value>
+  </data>
+  <data name="barButtonItem247.Caption" xml:space="preserve">
+    <value>供應商分類</value>
+  </data>
+  <data name="barButtonItem33.Caption" xml:space="preserve">
+    <value>供應商基本資料(&amp;S)...</value>
+  </data>
+  <data name="barButtonItem419.Caption" xml:space="preserve">
+    <value>廠商商品/加工對照表</value>
+  </data>
+  <data name="barSubItem37.Caption" xml:space="preserve">
+    <value>商品設定</value>
+  </data>
+  <data name="barButtonItem147.Caption" xml:space="preserve">
+    <value>計量單位組</value>
+  </data>
+  <data name="barButtonItem148.Caption" xml:space="preserve">
+    <value>計量單位</value>
+  </data>
+  <data name="barButtonItem149.Caption" xml:space="preserve">
+    <value>自定義抽檢規則</value>
+  </data>
+  <data name="barButtonItem150.Caption" xml:space="preserve">
+    <value>質檢方案</value>
+  </data>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>商品類別(&amp;C)...</value>
+  </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>商品(&amp;P)...</value>
+  </data>
+  <data name="barButtonItem246.Caption" xml:space="preserve">
+    <value>庫房貨位設置</value>
+  </data>
+  <data name="barButtonItem165.Caption" xml:space="preserve">
+    <value>貨運公司資料</value>
+  </data>
+  <data name="barButtonItem245.Caption" xml:space="preserve">
+    <value>貨運方式</value>
+  </data>
+  <data name="barButtonItem249.Caption" xml:space="preserve">
+    <value>生產設備</value>
+  </data>
+  <data name="barButtonItem454.Caption" xml:space="preserve">
+    <value>產品規格</value>
+  </data>
+  <data name="barButtonItem252.Caption" xml:space="preserve">
+    <value>成品材質</value>
+  </data>
+  <data name="barButtonItem253.Caption" xml:space="preserve">
+    <value>材料設置</value>
+  </data>
+  <data name="barButtonItem254.Caption" xml:space="preserve">
+    <value>產品模具</value>
+  </data>
+  <data name="barButtonItem255.Caption" xml:space="preserve">
+    <value>試模管理</value>
+  </data>
+  <data name="barButtonItem363.Caption" xml:space="preserve">
+    <value>客戶基本資料一覽表</value>
+  </data>
+  <data name="barButtonItem364.Caption" xml:space="preserve">
+    <value>供應商基本資料一覽表</value>
+  </data>
+  <data name="barSubItem44.Caption" xml:space="preserve">
+    <value>製造數據</value>
+  </data>
+  <data name="barButtonItem170.Caption" xml:space="preserve">
+    <value>生產站</value>
+  </data>
+  <data name="barButtonItem185.Caption" xml:space="preserve">
+    <value>生產站日誌</value>
+  </data>
+  <data name="barButtonItem152.Caption" xml:space="preserve">
+    <value>物料清單</value>
+  </data>
+  <data name="barButtonItem186.Caption" xml:space="preserve">
+    <value>產品BOM單列表</value>
+  </data>
+  <data name="barButtonItem177.Caption" xml:space="preserve">
+    <value>產品BOM單</value>
+  </data>
+  <data name="barButtonItem175.Caption" xml:space="preserve">
+    <value>物料類型</value>
+  </data>
+  <data name="barButtonItem162.Caption" xml:space="preserve">
+    <value>物料清單整批修改</value>
+  </data>
+  <data name="barButtonItem178.Caption" xml:space="preserve">
+    <value>工藝管理</value>
+  </data>
+  <data name="barButtonItem181.Caption" xml:space="preserve">
+    <value>生產流程序號關係</value>
+  </data>
+  <data name="barButtonItem303.Caption" xml:space="preserve">
+    <value>工序委外價格</value>
+  </data>
+  <data name="barSubItem52.Caption" xml:space="preserve">
+    <value>採購管理</value>
+  </data>
+  <data name="barButtonItem46.Caption" xml:space="preserve">
+    <value>採購詢價單</value>
+  </data>
+  <data name="barButtonItem45.Caption" xml:space="preserve">
+    <value>採購訂單</value>
+  </data>
+  <data name="barButtonItem77.Caption" xml:space="preserve">
+    <value>進庫單</value>
+  </data>
+  <data name="barButtonItem78.Caption" xml:space="preserve">
+    <value>採購退貨單</value>
+  </data>
+  <data name="barButtonItem75.Caption" xml:space="preserve">
+    <value>採購詢價單一覽</value>
+  </data>
+  <data name="barButtonItem76.Caption" xml:space="preserve">
+    <value>採購訂單一覽</value>
+  </data>
+  <data name="barButtonItem345.Caption" xml:space="preserve">
+    <value>採購進貨單一覽</value>
+  </data>
+  <data name="barButtonItem346.Caption" xml:space="preserve">
+    <value>採購退貨單一覽</value>
+  </data>
+  <data name="barButtonItem343.Caption" xml:space="preserve">
+    <value>採購訂單明細表</value>
+  </data>
+  <data name="barButtonItem351.Caption" xml:space="preserve">
+    <value>採購訂單明細表</value>
+  </data>
+  <data name="barButtonItem95.Caption" xml:space="preserve">
+    <value>進貨明細表</value>
+  </data>
+  <data name="barButtonItem96.Caption" xml:space="preserve">
+    <value>採購退貨明細表</value>
+  </data>
+  <data name="barButtonItem98.Caption" xml:space="preserve">
+    <value>進貨簡要表</value>
+  </data>
+  <data name="barButtonItem97.Caption" xml:space="preserve">
+    <value>進貨總覽表</value>
+  </data>
+  <data name="barSubItem55.Caption" xml:space="preserve">
+    <value>銷售管理</value>
+  </data>
+  <data name="barButtonItem47.Caption" xml:space="preserve">
+    <value>客戶報價單</value>
+  </data>
+  <data name="barButtonItem44.Caption" xml:space="preserve">
+    <value>客戶訂單</value>
+  </data>
+  <data name="barButtonItem16.Caption" xml:space="preserve">
+    <value>出貨單</value>
+  </data>
+  <data name="barButtonItem17.Caption" xml:space="preserve">
+    <value>客戶退貨單</value>
+  </data>
+  <data name="barButtonItem74.Caption" xml:space="preserve">
+    <value>客戶報價單一覽</value>
+  </data>
+  <data name="barButtonItem73.Caption" xml:space="preserve">
+    <value>客戶訂單一覽</value>
+  </data>
+  <data name="barButtonItem32.Caption" xml:space="preserve">
+    <value>出庫單一覽</value>
+  </data>
+  <data name="barButtonItem344.Caption" xml:space="preserve">
+    <value>客戶退貨單一覽</value>
+  </data>
+  <data name="barButtonItem342.Caption" xml:space="preserve">
+    <value>銷售訂單明細表</value>
+  </data>
+  <data name="barButtonItem99.Caption" xml:space="preserve">
+    <value>出貨明細表</value>
+  </data>
+  <data name="barButtonItem102.Caption" xml:space="preserve">
+    <value>出貨退貨明細表</value>
+  </data>
+  <data name="barButtonItem101.Caption" xml:space="preserve">
+    <value>出貨簡要表</value>
+  </data>
+  <data name="barButtonItem100.Caption" xml:space="preserve">
+    <value>出貨總覽表</value>
+  </data>
+  <data name="barButtonItem444.Caption" xml:space="preserve">
+    <value>出貨裝箱</value>
+  </data>
+  <data name="barButtonItem443.Caption" xml:space="preserve">
+    <value>箱/櫃參數設置</value>
+  </data>
+  <data name="barButtonItem445.Caption" xml:space="preserve">
+    <value>訂單裝箱</value>
+  </data>
+  <data name="barButtonItem451.Caption" xml:space="preserve">
+    <value>箱子裝櫃</value>
+  </data>
+  <data name="barSubItem56.Caption" xml:space="preserve">
+    <value>倉庫管理</value>
+  </data>
+  <data name="barButtonItem259.Caption" xml:space="preserve">
+    <value>出倉單</value>
+  </data>
+  <data name="barButtonItem262.Caption" xml:space="preserve">
+    <value>進倉單</value>
+  </data>
+  <data name="barButtonItem8.Caption" xml:space="preserve">
+    <value>庫存期初狀況(&amp;S)...</value>
+  </data>
+  <data name="barButtonItem263.Caption" xml:space="preserve">
+    <value>庫存盤點錄入</value>
+  </data>
+  <data name="barButtonItem216.Caption" xml:space="preserve">
+    <value>庫存盤點錄入(&amp;C)...</value>
+  </data>
+  <data name="barButtonItem258.Caption" xml:space="preserve">
+    <value>庫存盤點校正</value>
+  </data>
+  <data name="barButtonItem130.Caption" xml:space="preserve">
+    <value>產品借出單</value>
+  </data>
+  <data name="barButtonItem131.Caption" xml:space="preserve">
+    <value>產品還入單</value>
+  </data>
+  <data name="barButtonItem132.Caption" xml:space="preserve">
+    <value>供應商借入單</value>
+  </data>
+  <data name="barButtonItem133.Caption" xml:space="preserve">
+    <value>供應商借入還出單</value>
+  </data>
+  <data name="barButtonItem134.Caption" xml:space="preserve">
+    <value>客戶借出單</value>
+  </data>
+  <data name="barButtonItem135.Caption" xml:space="preserve">
+    <value>客戶借出還入單</value>
+  </data>
+  <data name="barButtonItem11.Caption" xml:space="preserve">
+    <value>庫存量限制(&amp;L)...</value>
+  </data>
+  <data name="barButtonItem28.Caption" xml:space="preserve">
+    <value>庫存調撥(&amp;T)...</value>
+  </data>
+  <data name="barButtonItem244.Caption" xml:space="preserve">
+    <value>庫存盤點明細</value>
+  </data>
+  <data name="barButtonItem260.Caption" xml:space="preserve">
+    <value>庫存盤點差異表詳細</value>
+  </data>
+  <data name="barSubItem49.Caption" xml:space="preserve">
+    <value>生產管理</value>
+  </data>
+  <data name="barButtonItem189.Caption" xml:space="preserve">
+    <value>生產計畫(MPS)</value>
+  </data>
+  <data name="barButtonItem195.Caption" xml:space="preserve">
+    <value>物料需求計畫(MRP)</value>
+  </data>
+  <data name="barButtonItem250.Caption" xml:space="preserve">
+    <value>生產工序能力</value>
+  </data>
+  <data name="barButtonItem251.Caption" xml:space="preserve">
+    <value>生產進度計劃</value>
+  </data>
+  <data name="barButtonItem196.Caption" xml:space="preserve">
+    <value>生產加工</value>
+  </data>
+  <data name="barButtonItem261.Caption" xml:space="preserve">
+    <value>生產領料</value>
+  </data>
+  <data name="barButtonItem205.Caption" xml:space="preserve">
+    <value>生產退料</value>
+  </data>
+  <data name="barButtonItem204.Caption" xml:space="preserve">
+    <value>生產入庫</value>
+  </data>
+  <data name="barButtonItem200.Caption" xml:space="preserve">
+    <value>委外發料</value>
+  </data>
+  <data name="barButtonItem203.Caption" xml:space="preserve">
+    <value>委外入庫</value>
+  </data>
+  <data name="barSubItem77.Caption" xml:space="preserve">
+    <value>車間管理</value>
+  </data>
+  <data name="barButtonItem304.Caption" xml:space="preserve">
+    <value>移轉單</value>
+  </data>
+  <data name="barButtonItem317.Caption" xml:space="preserve">
+    <value>生產車間</value>
+  </data>
+  <data name="barButtonItem305.Caption" xml:space="preserve">
+    <value>生產車間數量</value>
+  </data>
+  <data name="barButtonItem308.Caption" xml:space="preserve">
+    <value>生產車間數量列表</value>
+  </data>
+  <data name="barButtonItem320.Caption" xml:space="preserve">
+    <value>生產車間質檢</value>
+  </data>
+  <data name="barButtonItem321.Caption" xml:space="preserve">
+    <value>生產車間質檢列表</value>
+  </data>
+  <data name="barButtonItem319.Caption" xml:space="preserve">
+    <value>生產日統計</value>
+  </data>
+  <data name="barSubItem78.Caption" xml:space="preserve">
+    <value>明細查詢</value>
+  </data>
+  <data name="barButtonItem221.Caption" xml:space="preserve">
+    <value>生產計畫明細表</value>
+  </data>
+  <data name="barButtonItem198.Caption" xml:space="preserve">
+    <value>物料需求計畫明細</value>
+  </data>
+  <data name="barButtonItem348.Caption" xml:space="preserve">
+    <value>物料需求計劃明細</value>
+  </data>
+  <data name="barButtonItem225.Caption" xml:space="preserve">
+    <value>生產加工明細表</value>
+  </data>
+  <data name="barButtonItem226.Caption" xml:space="preserve">
+    <value>加工領料明細表</value>
+  </data>
+  <data name="barButtonItem227.Caption" xml:space="preserve">
+    <value>生產退料明細表</value>
+  </data>
+  <data name="barButtonItem230.Caption" xml:space="preserve">
+    <value>生產入庫明細表</value>
+  </data>
+  <data name="barButtonItem231.Caption" xml:space="preserve">
+    <value>委外加工單</value>
+  </data>
+  <data name="barButtonItem232.Caption" xml:space="preserve">
+    <value>委外出庫明細表</value>
+  </data>
+  <data name="barButtonItem233.Caption" xml:space="preserve">
+    <value>外包退料明細表</value>
+  </data>
+  <data name="barButtonItem234.Caption" xml:space="preserve">
+    <value>委外入庫明细表</value>
+  </data>
+  <data name="barButtonItem322.Caption" xml:space="preserve">
+    <value>生產車間數量明細</value>
+  </data>
+  <data name="barButtonItem323.Caption" xml:space="preserve">
+    <value>生產車間質檢明細</value>
+  </data>
+  <data name="barButtonItem360.Caption" xml:space="preserve">
+    <value>生產不良率統計表</value>
+  </data>
+  <data name="barButtonItem361.Caption" xml:space="preserve">
+    <value>商品不良率統計表</value>
+  </data>
+  <data name="barButtonItem469.Caption" xml:space="preserve">
+    <value>生管未生產數量總表</value>
+  </data>
+  <data name="barSubItem53.Caption" xml:space="preserve">
+    <value>質量管理</value>
+  </data>
+  <data name="barButtonItem328.Caption" xml:space="preserve">
+    <value>組裝成品檢驗單</value>
+  </data>
+  <data name="barButtonItem330.Caption" xml:space="preserve">
+    <value>進料檢驗單</value>
+  </data>
+  <data name="barButtonItem329.Caption" xml:space="preserve">
+    <value>衝擊測試單</value>
+  </data>
+  <data name="barButtonItem331.Caption" xml:space="preserve">
+    <value>ANSI衝擊測試單</value>
+  </data>
+  <data name="barButtonItem452.Caption" xml:space="preserve">
+    <value>JIS衝擊測試單</value>
+  </data>
+  <data name="barButtonItem332.Caption" xml:space="preserve">
+    <value>CSA衝擊/H.M.測試報告</value>
+  </data>
+  <data name="barButtonItem333.Caption" xml:space="preserve">
+    <value>BS/EN衝擊 H.M.測試報告</value>
+  </data>
+  <data name="barButtonItem335.Caption" xml:space="preserve">
+    <value>AS/NZS衝擊測試報告</value>
+  </data>
+  <data name="barButtonItem453.Caption" xml:space="preserve">
+    <value>框腳檢驗單</value>
+  </data>
+  <data name="barButtonItem457.Caption" xml:space="preserve">
+    <value>模具上線檢驗單</value>
+  </data>
+  <data name="barButtonItem336.Caption" xml:space="preserve">
+    <value>光學/厚度表</value>
+  </data>
+  <data name="barButtonItem355.Caption" xml:space="preserve">
+    <value>紫外線測試單</value>
+  </data>
+  <data name="barButtonItem356.Caption" xml:space="preserve">
+    <value>霧度測試單</value>
+  </data>
+  <data name="barButtonItem357.Caption" xml:space="preserve">
+    <value>鏡片穿透測試</value>
+  </data>
+  <data name="barButtonItem334.Caption" xml:space="preserve">
+    <value>質檢參數設定</value>
+  </data>
+  <data name="barSubItem60.Caption" xml:space="preserve">
+    <value>ANSI外銷報告</value>
+  </data>
+  <data name="barButtonItem366.Caption" xml:space="preserve">
+    <value>目視檢驗</value>
+  </data>
+  <data name="barButtonItem368.Caption" xml:space="preserve">
+    <value>棱鏡度數&amp;&amp;棱鏡平衡度數</value>
+  </data>
+  <data name="barButtonItem369.Caption" xml:space="preserve">
+    <value>可見光透視率</value>
+  </data>
+  <data name="barButtonItem370.Caption" xml:space="preserve">
+    <value>紫外線透視率</value>
+  </data>
+  <data name="barButtonItem371.Caption" xml:space="preserve">
+    <value>球面度數</value>
+  </data>
+  <data name="barButtonItem372.Caption" xml:space="preserve">
+    <value>散光度數</value>
+  </data>
+  <data name="barButtonItem373.Caption" xml:space="preserve">
+    <value>高速衝擊測試</value>
+  </data>
+  <data name="barButtonItem374.Caption" xml:space="preserve">
+    <value>圓錐墜落測試</value>
+  </data>
+  <data name="barButtonItem375.Caption" xml:space="preserve">
+    <value>鏡片穿透測試</value>
+  </data>
+  <data name="barButtonItem376.Caption" xml:space="preserve">
+    <value>霧度測試</value>
+  </data>
+  <data name="barButtonItem377.Caption" xml:space="preserve">
+    <value>耐燃性測試</value>
+  </data>
+  <data name="barButtonItem354.Caption" xml:space="preserve">
+    <value>ANSI外銷報告</value>
+  </data>
+  <data name="barButtonItem446.Caption" xml:space="preserve">
+    <value>詳細測試查詢</value>
+  </data>
+  <data name="barSubItem80.Caption" xml:space="preserve">
+    <value>CSA外銷報告</value>
+  </data>
+  <data name="barButtonItem383.Caption" xml:space="preserve">
+    <value>屈光/光學</value>
+  </data>
+  <data name="barButtonItem386.Caption" xml:space="preserve">
+    <value>霧度測試</value>
+  </data>
+  <data name="barButtonItem387.Caption" xml:space="preserve">
+    <value>可見光透視率</value>
+  </data>
+  <data name="barButtonItem388.Caption" xml:space="preserve">
+    <value>高速衝擊測試</value>
+  </data>
+  <data name="barButtonItem382.Caption" xml:space="preserve">
+    <value>CSA外銷報告</value>
+  </data>
+  <data name="barButtonItem447.Caption" xml:space="preserve">
+    <value>詳細測試查詢</value>
+  </data>
+  <data name="barSubItem87.Caption" xml:space="preserve">
+    <value>CEEN外銷報告</value>
+  </data>
+  <data name="barButtonItem389.Caption" xml:space="preserve">
+    <value>結構</value>
+  </data>
+  <data name="barButtonItem390.Caption" xml:space="preserve">
+    <value>球面度數</value>
+  </data>
+  <data name="barButtonItem391.Caption" xml:space="preserve">
+    <value>散光度數</value>
+  </data>
+  <data name="barButtonItem392.Caption" xml:space="preserve">
+    <value>棱鏡度數</value>
+  </data>
+  <data name="barButtonItem393.Caption" xml:space="preserve">
+    <value>座標</value>
+  </data>
+  <data name="barButtonItem394.Caption" xml:space="preserve">
+    <value>透視率</value>
+  </data>
+  <data name="barButtonItem395.Caption" xml:space="preserve">
+    <value>表面品質</value>
+  </data>
+  <data name="barButtonItem396.Caption" xml:space="preserve">
+    <value>直式衝擊</value>
+  </data>
+  <data name="barButtonItem397.Caption" xml:space="preserve">
+    <value>高速衝擊</value>
+  </data>
+  <data name="barButtonItem398.Caption" xml:space="preserve">
+    <value>記號</value>
+  </data>
+  <data name="barButtonItem399.Caption" xml:space="preserve">
+    <value>資訊</value>
+  </data>
+  <data name="barButtonItem400.Caption" xml:space="preserve">
+    <value>UV成份</value>
+  </data>
+  <data name="barButtonItem401.Caption" xml:space="preserve">
+    <value>CEEN外銷報告</value>
+  </data>
+  <data name="barButtonItem448.Caption" xml:space="preserve">
+    <value>詳細測試查詢</value>
+  </data>
+  <data name="barSubItem88.Caption" xml:space="preserve">
+    <value>AS外銷報告</value>
+  </data>
+  <data name="barButtonItem405.Caption" xml:space="preserve">
+    <value>年輪</value>
+  </data>
+  <data name="barButtonItem406.Caption" xml:space="preserve">
+    <value>抽測數量</value>
+  </data>
+  <data name="barButtonItem407.Caption" xml:space="preserve">
+    <value>外觀測試</value>
+  </data>
+  <data name="barButtonItem408.Caption" xml:space="preserve">
+    <value>加熱穩定性</value>
+  </data>
+  <data name="barButtonItem409.Caption" xml:space="preserve">
+    <value>座標</value>
+  </data>
+  <data name="barButtonItem410.Caption" xml:space="preserve">
+    <value>球面度數折射度</value>
+  </data>
+  <data name="barButtonItem411.Caption" xml:space="preserve">
+    <value>霧度</value>
+  </data>
+  <data name="barButtonItem412.Caption" xml:space="preserve">
+    <value>中速衝擊數率</value>
+  </data>
+  <data name="barButtonItem413.Caption" xml:space="preserve">
+    <value>高速衝擊數率</value>
+  </data>
+  <data name="barButtonItem414.Caption" xml:space="preserve">
+    <value>特高速衝擊數率</value>
+  </data>
+  <data name="barButtonItem415.Caption" xml:space="preserve">
+    <value>穿透測試</value>
+  </data>
+  <data name="barButtonItem417.Caption" xml:space="preserve">
+    <value>耐蝕性</value>
+  </data>
+  <data name="barButtonItem418.Caption" xml:space="preserve">
+    <value>記號</value>
+  </data>
+  <data name="barButtonItem404.Caption" xml:space="preserve">
+    <value>AS外銷報告</value>
+  </data>
+  <data name="barButtonItem449.Caption" xml:space="preserve">
+    <value>詳細測試查詢</value>
+  </data>
+  <data name="barSubItem90.Caption" xml:space="preserve">
+    <value>JIS外銷報告</value>
+  </data>
+  <data name="barButtonItem420.Caption" xml:space="preserve">
+    <value>鏡片外觀</value>
+  </data>
+  <data name="barButtonItem421.Caption" xml:space="preserve">
+    <value>鏡片棱鏡度</value>
+  </data>
+  <data name="barButtonItem422.Caption" xml:space="preserve">
+    <value>鏡片曲光度</value>
+  </data>
+  <data name="barButtonItem423.Caption" xml:space="preserve">
+    <value>鏡片散光度</value>
+  </data>
+  <data name="barButtonItem424.Caption" xml:space="preserve">
+    <value>鏡片透光率</value>
+  </data>
+  <data name="barButtonItem425.Caption" xml:space="preserve">
+    <value>鏡片耐衝擊性</value>
+  </data>
+  <data name="barButtonItem426.Caption" xml:space="preserve">
+    <value>鏡片表面耐磨耗抵抗</value>
+  </data>
+  <data name="barButtonItem427.Caption" xml:space="preserve">
+    <value>鏡片耐熱性</value>
+  </data>
+  <data name="barButtonItem428.Caption" xml:space="preserve">
+    <value>鏡片耐蝕性</value>
+  </data>
+  <data name="barButtonItem429.Caption" xml:space="preserve">
+    <value>鏡片耐燃性</value>
+  </data>
+  <data name="barButtonItem430.Caption" xml:space="preserve">
+    <value>完成品外觀</value>
+  </data>
+  <data name="barButtonItem431.Caption" xml:space="preserve">
+    <value>完成品耐衝擊性</value>
+  </data>
+  <data name="barButtonItem432.Caption" xml:space="preserve">
+    <value>完成品緊密性第一試驗鏡腳拉伸</value>
+  </data>
+  <data name="barButtonItem433.Caption" xml:space="preserve">
+    <value>完成品緊密性第二試驗中樑吊掛測試機</value>
+  </data>
+  <data name="barButtonItem435.Caption" xml:space="preserve">
+    <value>完成品頭帶強度</value>
+  </data>
+  <data name="barButtonItem437.Caption" xml:space="preserve">
+    <value>完成品構造</value>
+  </data>
+  <data name="barButtonItem439.Caption" xml:space="preserve">
+    <value>完成品記號標示</value>
+  </data>
+  <data name="barButtonItem440.Caption" xml:space="preserve">
+    <value>完成品包裝上記號</value>
+  </data>
+  <data name="barButtonItem441.Caption" xml:space="preserve">
+    <value>完成品使用手冊</value>
+  </data>
+  <data name="barButtonItem442.Caption" xml:space="preserve">
+    <value>JIS外銷報告</value>
+  </data>
+  <data name="barButtonItem450.Caption" xml:space="preserve">
+    <value>詳細測試查詢</value>
+  </data>
+  <data name="barButtonItem379.Caption" xml:space="preserve">
+    <value>外銷報告郵件發送</value>
+  </data>
+  <data name="barButtonItem381.Caption" xml:space="preserve">
+    <value>郵件發送參數設置</value>
+  </data>
+  <data name="barSubItem54.Caption" xml:space="preserve">
+    <value>人力資源</value>
+  </data>
+  <data name="barButtonItem127.Caption" xml:space="preserve">
+    <value>部門設定</value>
+  </data>
+  <data name="barButtonItem6.Caption" xml:space="preserve">
+    <value>員工基本資料(&amp;E)...</value>
+  </data>
+  <data name="barButtonItem237.Caption" xml:space="preserve">
+    <value>休假類別</value>
+  </data>
+  <data name="barButtonItem468.Caption" xml:space="preserve">
+    <value>隔周休設定</value>
+  </data>
+  <data name="barButtonItem211.Caption" xml:space="preserve">
+    <value>排班管理</value>
+  </data>
+  <data name="barButtonItem242.Caption" xml:space="preserve">
+    <value>區段彈性排班</value>
+  </data>
+  <data name="barButtonItem208.Caption" xml:space="preserve">
+    <value>臨時卡</value>
+  </data>
+  <data name="barButtonItem212.Caption" xml:space="preserve">
+    <value>餐費管理</value>
+  </data>
+  <data name="barButtonItem214.Caption" xml:space="preserve">
+    <value>打卡管理</value>
+  </data>
+  <data name="barButtonItem229.Caption" xml:space="preserve">
+    <value>考勤管理</value>
+  </data>
+  <data name="barButtonItem235.Caption" xml:space="preserve">
+    <value>異常出勤記錄</value>
+  </data>
+  <data name="barButtonItem217.Caption" xml:space="preserve">
+    <value>薪資設定</value>
+  </data>
+  <data name="barButtonItem218.Caption" xml:space="preserve">
+    <value>薪資計算</value>
+  </data>
+  <data name="barButtonItem238.Caption" xml:space="preserve">
+    <value>列印月薪資</value>
+  </data>
+  <data name="barSubItem59.Caption" xml:space="preserve">
+    <value>財務管理 </value>
+  </data>
+  <data name="barButtonItem49.Caption" xml:space="preserve">
+    <value>支出類別</value>
+  </data>
+  <data name="barButtonItem39.Caption" xml:space="preserve">
+    <value>資金帳戶(&amp;A)...</value>
+  </data>
+  <data name="barButtonItem48.Caption" xml:space="preserve">
+    <value>收入類別</value>
+  </data>
+  <data name="barButtonItem144.Caption" xml:space="preserve">
+    <value>應收(&amp;R)...</value>
+  </data>
+  <data name="barButtonItem9.Caption" xml:space="preserve">
+    <value>應付(&amp;P)...</value>
+  </data>
+  <data name="barButtonItem10.Caption" xml:space="preserve">
+    <value>資金帳戶餘額(&amp;F)...</value>
+  </data>
+  <data name="barButtonItem123.Caption" xml:space="preserve">
+    <value>商品交易排行</value>
+  </data>
+  <data name="barButtonItem122.Caption" xml:space="preserve">
+    <value>業務交易排行</value>
+  </data>
+  <data name="barButtonItem352.Caption" xml:space="preserve">
+    <value>廠商交易排行</value>
+  </data>
+  <data name="barButtonItem353.Caption" xml:space="preserve">
+    <value>客戶交易排行</value>
+  </data>
+  <data name="barButtonItem312.Caption" xml:space="preserve">
+    <value>期初應付賬款</value>
+  </data>
+  <data name="barButtonItem310.Caption" xml:space="preserve">
+    <value>其他應付款</value>
+  </data>
+  <data name="barButtonItem316.Caption" xml:space="preserve">
+    <value>採購發票</value>
+  </data>
+  <data name="barButtonItem314.Caption" xml:space="preserve">
+    <value>應付結算</value>
+  </data>
+  <data name="barButtonItem341.Caption" xml:space="preserve">
+    <value>應付賬款明細賬</value>
+  </data>
+  <data name="barButtonItem403.Caption" xml:space="preserve">
+    <value>應付賬款明細表</value>
+  </data>
+  <data name="barButtonItem362.Caption" xml:space="preserve">
+    <value>應付賬款發票號碼維護</value>
+  </data>
+  <data name="barButtonItem313.Caption" xml:space="preserve">
+    <value>期初應收賬款</value>
+  </data>
+  <data name="barButtonItem311.Caption" xml:space="preserve">
+    <value>其他應收款</value>
+  </data>
+  <data name="barButtonItem315.Caption" xml:space="preserve">
+    <value>應收結算</value>
+  </data>
+  <data name="barButtonItem340.Caption" xml:space="preserve">
+    <value>應收賬款明細賬</value>
+  </data>
+  <data name="barButtonItem402.Caption" xml:space="preserve">
+    <value>應收賬款明細表</value>
+  </data>
+  <data name="barButtonItem380.Caption" xml:space="preserve">
+    <value>應收賬款發票編號維護</value>
+  </data>
+  <data name="barSubItem19.Caption" xml:space="preserve">
+    <value>應收應付統計</value>
+  </data>
+  <data name="barButtonItem105.Caption" xml:space="preserve">
+    <value>應收帳款簡要表</value>
+  </data>
+  <data name="barButtonItem106.Caption" xml:space="preserve">
+    <value>應付帳款簡要表</value>
+  </data>
+  <data name="barButtonItem107.Caption" xml:space="preserve">
+    <value>應付帳款明細表</value>
+  </data>
+  <data name="barButtonItem108.Caption" xml:space="preserve">
+    <value>應收帳款明細表</value>
+  </data>
+  <data name="barButtonItem118.Caption" xml:space="preserve">
+    <value>應付帳款統計表</value>
+  </data>
+  <data name="barButtonItem109.Caption" xml:space="preserve">
+    <value>應收帳款統計表</value>
+  </data>
+  <data name="barButtonItem110.Caption" xml:space="preserve">
+    <value>業務員應收明細表</value>
+  </data>
+  <data name="barButtonItem111.Caption" xml:space="preserve">
+    <value>業務員應收簡要表</value>
+  </data>
+  <data name="barSubItem20.Caption" xml:space="preserve">
+    <value>帳款沖銷報表</value>
+  </data>
+  <data name="barButtonItem112.Caption" xml:space="preserve">
+    <value>收款沖銷日報表</value>
+  </data>
+  <data name="barButtonItem113.Caption" xml:space="preserve">
+    <value>付款沖銷日報表</value>
+  </data>
+  <data name="barSubItem79.Caption" xml:space="preserve">
+    <value>應收應付結算</value>
+  </data>
+  <data name="barButtonItem339.Caption" xml:space="preserve">
+    <value>應收賬款超期跟催表</value>
+  </data>
+  <data name="barSubItem61.Caption" xml:space="preserve">
+    <value>綜合查询</value>
+  </data>
+  <data name="barSubItem17.Caption" xml:space="preserve">
+    <value>表單總覽</value>
+  </data>
+  <data name="barButtonItem115.Caption" xml:space="preserve">
+    <value>應收帳款郵寄標籤</value>
+  </data>
+  <data name="barButtonItem103.Caption" xml:space="preserve">
+    <value>商品低於安全存量表</value>
+  </data>
+  <data name="barButtonItem104.Caption" xml:space="preserve">
+    <value>組裝明細表</value>
+  </data>
+  <data name="barButtonItem114.Caption" xml:space="preserve">
+    <value>應收帳款帳齡分析表</value>
+  </data>
+  <data name="barButtonItem116.Caption" xml:space="preserve">
+    <value>商品利潤分析表</value>
+  </data>
+  <data name="barButtonItem117.Caption" xml:space="preserve">
+    <value>商品交易明細表</value>
+  </data>
+  <data name="barButtonItem119.Caption" xml:space="preserve">
+    <value>供應商歷次進貨表</value>
+  </data>
+  <data name="barButtonItem120.Caption" xml:space="preserve">
+    <value>客戶歷次出貨表</value>
+  </data>
+  <data name="barSubItem10.Caption" xml:space="preserve">
+    <value>單據一覽</value>
+  </data>
+  <data name="barSubItem29.Caption" xml:space="preserve">
+    <value>組裝與拆分</value>
+  </data>
+  <data name="barButtonItem81.Caption" xml:space="preserve">
+    <value>商品組裝單</value>
+  </data>
+  <data name="barButtonItem143.Caption" xml:space="preserve">
+    <value>商品拆分單</value>
+  </data>
+  <data name="barSubItem31.Caption" xml:space="preserve">
+    <value>其它單據</value>
+  </data>
+  <data name="barButtonItem88.Caption" xml:space="preserve">
+    <value>其它收入單</value>
+  </data>
+  <data name="barButtonItem89.Caption" xml:space="preserve">
+    <value>其它支出單</value>
+  </data>
+  <data name="barButtonItem87.Caption" xml:space="preserve">
+    <value>資金流轉單</value>
+  </data>
+  <data name="barButtonItem82.Caption" xml:space="preserve">
+    <value>調撥單</value>
+  </data>
+  <data name="barButtonItem91.Caption" xml:space="preserve">
+    <value>請款單</value>
+  </data>
+  <data name="barButtonItem79.Caption" xml:space="preserve">
+    <value>贈送單</value>
+  </data>
+  <data name="barButtonItem80.Caption" xml:space="preserve">
+    <value>獲贈單</value>
+  </data>
+  <data name="barButtonItem83.Caption" xml:space="preserve">
+    <value>報損單</value>
+  </data>
+  <data name="barButtonItem84.Caption" xml:space="preserve">
+    <value>報溢單</value>
+  </data>
+  <data name="barSubItem4.Caption" xml:space="preserve">
+    <value>搜尋</value>
+  </data>
+  <data name="barButtonItem35.Caption" xml:space="preserve">
+    <value>操作過程</value>
+  </data>
+  <data name="barButtonItem36.Caption" xml:space="preserve">
+    <value>庫存狀況</value>
+  </data>
+  <data name="barButtonItem66.Caption" xml:space="preserve">
+    <value>庫存</value>
+  </data>
+  <data name="barButtonItem38.Caption" xml:space="preserve">
+    <value>應收應付</value>
+  </data>
+  <data name="barButtonItem53.Caption" xml:space="preserve">
+    <value>超期應付</value>
+  </data>
+  <data name="barButtonItem61.Caption" xml:space="preserve">
+    <value>帳戶餘額</value>
+  </data>
+  <data name="barButtonItem54.Caption" xml:space="preserve">
+    <value>出貨列表</value>
+  </data>
+  <data name="barButtonItem55.Caption" xml:space="preserve">
+    <value>客戶退貨列表</value>
+  </data>
+  <data name="barButtonItem56.Caption" xml:space="preserve">
+    <value>進貨列表</value>
+  </data>
+  <data name="barButtonItem57.Caption" xml:space="preserve">
+    <value>採購退貨列表</value>
+  </data>
+  <data name="barButtonItem58.Caption" xml:space="preserve">
+    <value>贈送列表</value>
+  </data>
+  <data name="barButtonItem60.Caption" xml:space="preserve">
+    <value>獲贈列表</value>
+  </data>
+  <data name="barButtonItem62.Caption" xml:space="preserve">
+    <value>採購訂貨列表</value>
+  </data>
+  <data name="barButtonItem37.Caption" xml:space="preserve">
+    <value>應請款列表</value>
+  </data>
+  <data name="barButtonItem159.Caption" xml:space="preserve">
+    <value>庫房庫存</value>
+  </data>
+  <data name="barButtonItem160.Caption" xml:space="preserve">
+    <value>產品庫存</value>
+  </data>
+  <data name="barSubItem3.Caption" xml:space="preserve">
+    <value>單據輸入</value>
+  </data>
+  <data name="barSubItem24.Caption" xml:space="preserve">
+    <value>組裝與拆分</value>
+  </data>
+  <data name="barButtonItem18.Caption" xml:space="preserve">
+    <value>商品組裝單</value>
+  </data>
+  <data name="barButtonItem129.Caption" xml:space="preserve">
+    <value>商品拆分單</value>
+  </data>
+  <data name="barSubItem25.Caption" xml:space="preserve">
+    <value>其它單據</value>
+  </data>
+  <data name="barButtonItem26.Caption" xml:space="preserve">
+    <value>其它收入單</value>
+  </data>
+  <data name="barButtonItem27.Caption" xml:space="preserve">
+    <value>其他支出單</value>
+  </data>
+  <data name="barButtonItem25.Caption" xml:space="preserve">
+    <value>資金流轉單</value>
+  </data>
+  <data name="barButtonItem90.Caption" xml:space="preserve">
+    <value>請款單</value>
+  </data>
+  <data name="barButtonItem19.Caption" xml:space="preserve">
+    <value>贈送單</value>
+  </data>
+  <data name="barButtonItem20.Caption" xml:space="preserve">
+    <value>獲贈單</value>
+  </data>
+  <data name="barButtonItem21.Caption" xml:space="preserve">
+    <value>報損單</value>
+  </data>
+  <data name="barButtonItem22.Caption" xml:space="preserve">
+    <value>報溢單</value>
+  </data>
+  <data name="barSubItem62.Caption" xml:space="preserve">
+    <value>系統幫助</value>
+  </data>
+  <data name="barButtonItemCalculator.Caption" xml:space="preserve">
+    <value>小算盤</value>
+  </data>
+  <data name="barSubItem16.Caption" xml:space="preserve">
+    <value>視窗</value>
+  </data>
+  <data name="barButtonItem31.Caption" xml:space="preserve">
+    <value>層疊</value>
+  </data>
+  <data name="barButtonItem93.Caption" xml:space="preserve">
+    <value>水平平鋪</value>
+  </data>
+  <data name="barButtonItem94.Caption" xml:space="preserve">
+    <value>垂直平鋪</value>
+  </data>
+  <data name="barButtonItemCloseAll.Caption" xml:space="preserve">
+    <value>關閉所有</value>
+  </data>
+  <data name="barButtonItem29.Caption" xml:space="preserve">
+    <value>關於(&amp;A)...</value>
+  </data>
+  <data name="barSubItem34.Caption" xml:space="preserve">
+    <value>會計管理</value>
+  </data>
+  <data name="barButtonItem264.Caption" xml:space="preserve">
+    <value>會計科目總類</value>
+  </data>
+  <data name="barButtonItem266.Caption" xml:space="preserve">
+    <value>會計科目設定</value>
+  </data>
+  <data name="barButtonItem358.Caption" xml:space="preserve">
+    <value>會計參數設定</value>
+  </data>
+  <data name="barButtonItem265.Caption" xml:space="preserve">
+    <value>科目類別設定</value>
+  </data>
+  <data name="barButtonItem267.Caption" xml:space="preserve">
+    <value>發票資料設定</value>
+  </data>
+  <data name="barButtonItem268.Caption" xml:space="preserve">
+    <value>專案資料設定</value>
+  </data>
+  <data name="barButtonItem272.Caption" xml:space="preserve">
+    <value>銀行資料</value>
+  </data>
+  <data name="barButtonItem309.Caption" xml:space="preserve">
+    <value>幣別設置</value>
+  </data>
+  <data name="barButtonItem279.Caption" xml:space="preserve">
+    <value>每日匯率</value>
+  </data>
+  <data name="barButtonItem273.Caption" xml:space="preserve">
+    <value>開戶往來銀行</value>
+  </data>
+  <data name="barSubItem74.Caption" xml:space="preserve">
+    <value>會計作業</value>
+  </data>
+  <data name="barButtonItem278.Caption" xml:space="preserve">
+    <value>期初餘額設定</value>
+  </data>
+  <data name="barButtonItem280.Caption" xml:space="preserve">
+    <value>會計傳票</value>
+  </data>
+  <data name="barButtonItem285.Caption" xml:space="preserve">
+    <value>日記帳</value>
+  </data>
+  <data name="barButtonItem295.Caption" xml:space="preserve">
+    <value>日記帳</value>
+  </data>
+  <data name="barButtonItem296.Caption" xml:space="preserve">
+    <value>總分類帳</value>
+  </data>
+  <data name="barButtonItem297.Caption" xml:space="preserve">
+    <value>試算表</value>
+  </data>
+  <data name="barButtonItem298.Caption" xml:space="preserve">
+    <value>期間試算表</value>
+  </data>
+  <data name="barButtonItem299.Caption" xml:space="preserve">
+    <value>損益</value>
+  </data>
+  <data name="barButtonItem300.Caption" xml:space="preserve">
+    <value>損益表</value>
+  </data>
+  <data name="barButtonItem301.Caption" xml:space="preserve">
+    <value>資產負債</value>
+  </data>
+  <data name="barButtonItem302.Caption" xml:space="preserve">
+    <value>資產負債表</value>
+  </data>
+  <data name="barSubItem45.Caption" xml:space="preserve">
+    <value>財產管理</value>
+  </data>
+  <data name="barButtonItem270.Caption" xml:space="preserve">
+    <value>財產基本資料</value>
+  </data>
+  <data name="barButtonItem271.Caption" xml:space="preserve">
+    <value>折舊明細維護</value>
+  </data>
+  <data name="barButtonItem292.Caption" xml:space="preserve">
+    <value>科目別財產表</value>
+  </data>
+  <data name="barButtonItem293.Caption" xml:space="preserve">
+    <value>日期別財產表</value>
+  </data>
+  <data name="barButtonItem294.Caption" xml:space="preserve">
+    <value>財產別折舊表</value>
+  </data>
+  <data name="barSubItem73.Caption" xml:space="preserve">
+    <value>銀行票據</value>
+  </data>
+  <data name="barButtonItem274.Caption" xml:space="preserve">
+    <value>應收票據作業</value>
+  </data>
+  <data name="barButtonItem275.Caption" xml:space="preserve">
+    <value>應收/付票據作業</value>
+  </data>
+  <data name="barButtonItem276.Caption" xml:space="preserve">
+    <value>銀行存提款作業</value>
+  </data>
+  <data name="barButtonItem277.Caption" xml:space="preserve">
+    <value>銀行轉帳作業</value>
+  </data>
+  <data name="barButtonItem281.Caption" xml:space="preserve">
+    <value>應收票據整批托收</value>
+  </data>
+  <data name="barButtonItem282.Caption" xml:space="preserve">
+    <value>應收票據整批票貼</value>
+  </data>
+  <data name="barButtonItem283.Caption" xml:space="preserve">
+    <value>應收票據整批兌現</value>
+  </data>
+  <data name="barButtonItem284.Caption" xml:space="preserve">
+    <value>應付票據整批兌現</value>
+  </data>
+  <data name="barSubItem75.Caption" xml:space="preserve">
+    <value>應收票據明細表</value>
+  </data>
+  <data name="barButtonItem286.Caption" xml:space="preserve">
+    <value>收票日別</value>
+  </data>
+  <data name="barButtonItem287.Caption" xml:space="preserve">
+    <value>托收銀行別</value>
+  </data>
+  <data name="barSubItem76.Caption" xml:space="preserve">
+    <value>應付票據明細表</value>
+  </data>
+  <data name="barButtonItem288.Caption" xml:space="preserve">
+    <value>開票日別</value>
+  </data>
+  <data name="barButtonItem289.Caption" xml:space="preserve">
+    <value>開票銀行別</value>
+  </data>
+  <data name="barButtonItem290.Caption" xml:space="preserve">
+    <value>銀行存提款對帳單</value>
+  </data>
+  <data name="barButtonItem291.Caption" xml:space="preserve">
+    <value>未兌換應收票據</value>
+  </data>
+  <data name="未兑现应付票据.Caption" xml:space="preserve">
+    <value>未兌換應付票據</value>
+  </data>
+  <data name="barSubItem91.Caption" xml:space="preserve">
+    <value>報關係統</value>
+  </data>
+  <data name="barEditItem1.Caption" xml:space="preserve">
+    <value>barEditItem1</value>
+  </data>
+  <data name="barStaticItem2.Caption" xml:space="preserve">
+    <value>連接名稱</value>
+  </data>
+  <data name="barStaticItem3.Caption" xml:space="preserve">
+    <value>員工名稱</value>
+  </data>
+  <data name="barLargeButtonItem8.Caption" xml:space="preserve">
+    <value>架構圖</value>
+  </data>
+  <data name="barLargeButtonItem3.Caption" xml:space="preserve">
+    <value>採購訂單</value>
+  </data>
+  <data name="barLargeButtonItem4.Caption" xml:space="preserve">
+    <value>進庫單</value>
+  </data>
+  <data name="barLargeButtonItem5.Caption" xml:space="preserve">
+    <value>客戶訂單</value>
+  </data>
+  <data name="barLargeButtonItem6.Caption" xml:space="preserve">
+    <value>出貨單</value>
+  </data>
+  <data name="barLargeButtonItem2.Caption" xml:space="preserve">
+    <value>付款單</value>
+  </data>
+  <data name="barLargeButtonItem7.Caption" xml:space="preserve">
+    <value>調撥單</value>
+  </data>
+  <data name="barLargeButtonItem11.Caption" xml:space="preserve">
+    <value>庫存期初</value>
+  </data>
+  <data name="barLargeButtonItem10.Caption" xml:space="preserve">
+    <value>庫存</value>
+  </data>
+  <data name="barLargeButtonItem13.Caption" xml:space="preserve">
+    <value>單據審核</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="barDockControlTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1026, 107</value>
+  </data>
+  <data name="barDockControlLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 107</value>
+  </data>
+  <data name="barDockControlLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 523</value>
+  </data>
+  <data name="barDockControlRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1026, 107</value>
+  </data>
+  <data name="barDockControlRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 523</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>IEStore</value>
+  </data>
+  <data name="barSubItem7.Caption" xml:space="preserve">
+    <value>說明</value>
+  </data>
+  <data name="barSubItem8.Caption" xml:space="preserve">
+    <value>基礎設定(&amp;B)</value>
+  </data>
+  <data name="barButtonItem4.Caption" xml:space="preserve">
+    <value>庫房設定(&amp;D)...</value>
+  </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>進庫單</value>
+  </data>
+  <data name="barButtonItem15.Caption" xml:space="preserve">
+    <value>採購退貨單</value>
+  </data>
+  <data name="barButtonItem23.Caption" xml:space="preserve">
+    <value>付款單</value>
+  </data>
+  <data name="barButtonItem24.Caption" xml:space="preserve">
+    <value>收款單</value>
+  </data>
+  <data name="barButtonItem50.Caption" xml:space="preserve">
+    <value>客戶類別</value>
+  </data>
+  <data name="barButtonItem52.Caption" xml:space="preserve">
+    <value>獲利率</value>
+  </data>
+  <data name="barButtonItem72.Caption" xml:space="preserve">
+    <value>客戶退貨單</value>
+  </data>
+  <data name="barButtonItem85.Caption" xml:space="preserve">
+    <value>收款單</value>
+  </data>
+  <data name="barButtonItem86.Caption" xml:space="preserve">
+    <value>付款單</value>
+  </data>
+  <data name="barLargeButtonItem1.Caption" xml:space="preserve">
+    <value>收款單</value>
+  </data>
+  <data name="barLargeButtonItem9.Caption" xml:space="preserve">
+    <value>操作過程</value>
+  </data>
+  <data name="barSubItem18.Caption" xml:space="preserve">
+    <value>進貨出貨統計</value>
+  </data>
+  <data name="barButtonItem124.Caption" xml:space="preserve">
+    <value>職務設定</value>
+  </data>
+  <data name="barButtonItem125.Caption" xml:space="preserve">
+    <value>庫存盤點</value>
+  </data>
+  <data name="barSubItem23.Caption" xml:space="preserve">
+    <value>採購與銷售</value>
+  </data>
+  <data name="barButtonItem191.Caption" xml:space="preserve">
+    <value>銷售預測</value>
+  </data>
+  <data name="barSubItem26.Caption" xml:space="preserve">
+    <value>帳款沖銷</value>
+  </data>
+  <data name="barSubItem27.Caption" xml:space="preserve">
+    <value>採購與銷售</value>
+  </data>
+  <data name="barButtonItem137.Caption" xml:space="preserve">
+    <value>產品借出單</value>
+  </data>
+  <data name="barButtonItem138.Caption" xml:space="preserve">
+    <value>產品還入單</value>
+  </data>
+  <data name="barButtonItem139.Caption" xml:space="preserve">
+    <value>借入單</value>
+  </data>
+  <data name="barButtonItem140.Caption" xml:space="preserve">
+    <value>借入還出單</value>
+  </data>
+  <data name="barButtonItem141.Caption" xml:space="preserve">
+    <value>借出單</value>
+  </data>
+  <data name="barButtonItem142.Caption" xml:space="preserve">
+    <value>借出還入單</value>
+  </data>
+  <data name="barSubItem30.Caption" xml:space="preserve">
+    <value>帳款沖銷</value>
+  </data>
+  <data name="barButtonItem146.Caption" xml:space="preserve">
+    <value>貨位設定</value>
+  </data>
+  <data name="barButtonItem153.Caption" xml:space="preserve">
+    <value>銀行資料</value>
+  </data>
+  <data name="barButtonItem154.Caption" xml:space="preserve">
+    <value>學歷</value>
+  </data>
+  <data name="barButtonItem155.Caption" xml:space="preserve">
+    <value>班別</value>
+  </data>
+  <data name="barButtonItem156.Caption" xml:space="preserve">
+    <value>公司資料</value>
+  </data>
+  <data name="barSubItem36.Caption" xml:space="preserve">
+    <value>庫房貨品設置</value>
+  </data>
+  <data name="barButtonItem168.Caption" xml:space="preserve">
+    <value>計價方式</value>
+  </data>
+  <data name="barButtonItem171.Caption" xml:space="preserve">
+    <value>表單管理</value>
+  </data>
+  <data name="barButtonItem193.Caption" xml:space="preserve">
+    <value>產生生產計畫</value>
+  </data>
+  <data name="barButtonItem197.Caption" xml:space="preserve">
+    <value>加工領料</value>
+  </data>
+  <data name="barButtonItem201.Caption" xml:space="preserve">
+    <value>生產物流</value>
+  </data>
+  <data name="barSubItem57.Caption" xml:space="preserve">
+    <value>質量管理</value>
+  </data>
+  <data name="barButtonItem458.Caption" xml:space="preserve">
+    <value>備案資料庫</value>
+  </data>
+  <data name="barButtonItem459.Caption" xml:space="preserve">
+    <value>通關手冊</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="imageCollection1.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v10.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLlV0aWxzLnYxMC4yLCBWZXJzaW9uPTEwLjIu
+        NC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEMAwAAAFFT
+        eXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRv
+        a2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAChEZXZFeHByZXNzLlV0aWxzLkltYWdlQ29sbGVjdGlvblN0
+        cmVhbWVyAgAAAAlJbWFnZVNpemUERGF0YQQHE1N5c3RlbS5EcmF3aW5nLlNpemUDAAAAAgIAAAAF/P//
+        /xNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAV3aWR0aAZoZWlnaHQAAAgIAwAAACAAAAAgAAAACQUAAAAP
+        BQAAACyvAAAC+QUAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK8gAA
+        CvIBPVL3EQAABW9JREFUWEfFl9lTFFcUxudPzkMqSVU0mhgBNYl5ErXiVpXKg6lKFRrLiCIoouxYyirD
+        7Cszvdx7u3uGYeDLd3oBREQlRrvqx+2+t+ecr885dyG1traWbjQa1udAfKds29b4TJf4TokSedje3ka7
+        00WrvYGNdnuXDT4fkQ4J7XU2Q/t7kUt8p9bX1y159FttdDv8EWmHIsRIh0Y2I2gkohsTPYvxDY7Lu+2Y
+        Vlug85bYaaG7EcDjfXdrC1sxconvVL1etwJxwBfHMgo35gyuzfm48TzBi9n/vB8f1xP4+x1mFSayLu0H
+        cL0WNjc30e12QwHiO1Wsrjvb/OrhtMLZUYMecob0kd4DkP4zT6L2fegd9XD6kcJUTsMPgjAy+wQ0tDI+
+        Loy76HkcOT85rHHyoYvTIy56H+3Sw2fpl3ERcY6cfSe0NWJwfUbB+EGYaomC1EEooFRdNzUnwK9PFU4/
+        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
+</value>
+  </data>
+  <data name="barButtonItem477.Caption" xml:space="preserve">
+    <value>入料檢驗單</value>
+  </data>
+</root>

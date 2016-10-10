@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="BGHandbookDetail2" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="select_byheader" resultMap="BGHandbookDetail2Result" parameterClass="string">
+      <![CDATA[
+      select * from BGHandbookDetail2 where BGHandbookId=#value:varchar# order by Id
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

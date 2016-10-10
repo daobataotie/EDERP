@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="BillIdDeleted" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectBillIdByBillIdSetId" resultClass="string" parameterClass="string">
+      <![CDATA[
+      select top 1 BillId from BillIdDeleted where BillIdSetId =#value# order by DeleteTime
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

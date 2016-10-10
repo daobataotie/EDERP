@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="AtCashAccountDetail" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByHeaderId" resultMap="AtCashAccountDetailResult" parameterClass="string">
+      <![CDATA[
+      select  * from AtCashAccountDetail where AtCashAccountId=#value# order by AtCashAccountDetaiDate 
+      ]]>
+    </select>
+
+    <delete id="DeleteByHeaderId" parameterClass="string">
+      <![CDATA[
+      delete from AtCashAccountDetail where AtCashAccountId=#value# 
+      ]]>
+    </delete>
+
+    <select id="SelectByDate" resultMap="AtCashAccountDetailResult" parameterClass="Map">
+      <![CDATA[
+      select ad.* from AtCashAccountDetail ad left join AtCashAccount a on a.AtCashAccountId=ad.AtCashAccountId
+ where a.AtCashAccountId in (select AtCashAccountId from AtCashAccount where AtCashAccountMonth between #startdate# and #enddate#) order by a.AtCashAccountMonth
+      ]]>
+    </select>
+
+  </statements>
+</sqlMap>

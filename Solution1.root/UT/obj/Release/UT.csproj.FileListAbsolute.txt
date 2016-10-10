@@ -1,0 +1,5 @@
+D:\公司项目\易达ERP\Solution1.root\UT\bin\Release\UT.dll
+D:\公司项目\易达ERP\Solution1.root\UT\bin\Release\UT.pdb
+D:\公司项目\易达ERP\Solution1.root\UT\obj\Release\ResolveAssemblyReference.cache
+D:\公司项目\易达ERP\Solution1.root\UT\obj\Release\UT.dll
+D:\公司项目\易达ERP\Solution1.root\UT\obj\Release\UT.pdb

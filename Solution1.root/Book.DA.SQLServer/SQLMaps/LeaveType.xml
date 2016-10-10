@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="LeaveType" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="ExistsName" resultClass="bool" parameterClass="Map">
+      <![CDATA[
+               select case when exists(select * from LeaveType where LeaveTypeId<>#id# and LeaveTypeName=#name#) then 1 else 0 end
+      ]]>
+    </select>
+
+    <select id="SelectPayRateByName" resultClass="double" parameterClass="string">
+      <![CDATA[
+      SELECT abs(PayRate) FROM LeaveType WHERE LeaveType.LeaveTypeName=#value#
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

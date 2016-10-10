@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="BillIdSet" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectAll" resultMap="BillIdSetResult">
+      <![CDATA[
+      select * from BillIdSet order by InsertTime
+      ]]>
+    </select>
+
+    <update id="DisableAll">
+      <![CDATA[
+      update BillIdSet set IdState=0
+      ]]>
+    </update>
+
+    <select id="SelectEnable" resultMap="BillIdSetResult">
+      <![CDATA[
+      select * from BillIdSet where IdState=1
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

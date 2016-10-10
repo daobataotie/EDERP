@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="MonthlySalary" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="get_byempid" parameterClass="string" resultMap="MonthlySalaryResult">
+      <![CDATA[
+        SELECT *
+        FROM [dbo].[MonthlySalary]
+        WHERE [EmployeeId] = #value#
+      ]]>
+    </select>
+    
+    <select id="get_byempidMonth" parameterClass="Map" resultMap="MonthlySalaryResult">
+      <![CDATA[
+      SELECT *
+      FROM [dbo].[MonthlySalary]
+      WHERE [EmployeeId] = #employeeid# and year(IdentifyDate)=#year# and month(IdentifyDate)=#month#
+    ]]>
+    </select>
+    
+    <select id="get_MaxIdentifyDateMonth" resultClass="DateTime">
+      <![CDATA[
+        SELECT TOP 1 IdentifyDate FROM MonthlySalary ORDER BY IdentifyDate DESC
+      ]]>
+    </select>
+    
+    <select id="SelectForSpecialMonth" resultMap="MonthlySalaryResult" parameterClass="Map">
+      <![CDATA[
+      SELECT * FROM MonthlySalary WHERE YEAR(IdentifyDate) = #year# AND MONTH(IdentifyDate) = #month#
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

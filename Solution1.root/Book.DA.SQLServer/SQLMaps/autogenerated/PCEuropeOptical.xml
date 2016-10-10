@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCEuropeOptical" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="PCEuropeOptical" type="Book.Model.PCEuropeOptical, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="PCEuropeOpticalResult" class="PCEuropeOptical">
+			<result property="PCEuropeOpticalId" column="PCEuropeOpticalId" />
+			<result property="PCDataInputId" column="PCDataInputId" />
+			<result property="NoId" column="NoId" />
+			<result property="LeftD11" column="LeftD11" />
+			<result property="RightD11" column="RightD11" />
+			<result property="LeftD12" column="LeftD12" />
+			<result property="RightD12" column="RightD12" />
+			<result property="LeftD13" column="LeftD13" />
+			<result property="RightD13" column="RightD13" />
+			<result property="LeftD14" column="LeftD14" />
+			<result property="RightD14" column="RightD14" />
+			<result property="LeftD15" column="LeftD15" />
+			<result property="RightD15" column="RightD15" />
+			<result property="LeftD21" column="LeftD21" />
+			<result property="RightD21" column="RightD21" />
+			<result property="LeftD22" column="LeftD22" />
+			<result property="RightD22" column="RightD22" />
+			<result property="LeftD23" column="LeftD23" />
+			<result property="RightD23" column="RightD23" />
+			<result property="LeftD24" column="LeftD24" />
+			<result property="RightD24" column="RightD24" />
+			<result property="LeftD25" column="LeftD25" />
+			<result property="RightD25" column="RightD25" />
+			<result property="Judge" column="Judge" />
+		<result property="PCDataInput" column="PCDataInputId" lazyLoad="false" select="PCDataInput.select_by_primary_key" />        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEuropeOptical]
+				WHERE
+				[PCEuropeOpticalId] = #PCEuropeOpticalId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEuropeOptical]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="PCEuropeOpticalResult" parameterClass="PCEuropeOptical">
+			<![CDATA[SELECT
+				[PCEuropeOpticalId],
+				[PCDataInputId],
+				[NoId],
+				[LeftD11],
+				[RightD11],
+				[LeftD12],
+				[RightD12],
+				[LeftD13],
+				[RightD13],
+				[LeftD14],
+				[RightD14],
+				[LeftD15],
+				[RightD15],
+				[LeftD21],
+				[RightD21],
+				[LeftD22],
+				[RightD22],
+				[LeftD23],
+				[RightD23],
+				[LeftD24],
+				[RightD24],
+				[LeftD25],
+				[RightD25],
+				[Judge]
+			FROM
+				[dbo].[PCEuropeOptical]
+			WHERE
+				[PCEuropeOpticalId] = #PCEuropeOpticalId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[PCEuropeOptical]
+			WHERE            
+				[PCEuropeOpticalId] = #PCEuropeOpticalId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="PCEuropeOpticalResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[PCEuropeOptical]
+                			                   
+
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[PCEuropeOptical]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="PCEuropeOpticalResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCEuropeOptical]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="PCEuropeOptical">
+			 <![CDATA[ INSERT INTO [dbo].[PCEuropeOptical] 
+			(
+				[PCEuropeOpticalId],
+				[PCDataInputId],
+				[NoId],
+				[LeftD11],
+				[RightD11],
+				[LeftD12],
+				[RightD12],
+				[LeftD13],
+				[RightD13],
+				[LeftD14],
+				[RightD14],
+				[LeftD15],
+				[RightD15],
+				[LeftD21],
+				[RightD21],
+				[LeftD22],
+				[RightD22],
+				[LeftD23],
+				[RightD23],
+				[LeftD24],
+				[RightD24],
+				[LeftD25],
+				[RightD25],
+				[Judge]
+			) 
+			VALUES 
+			(
+				#PCEuropeOpticalId#,
+				#PCDataInputId#,
+				#NoId#,
+				#LeftD11#,
+				#RightD11#,
+				#LeftD12#,
+				#RightD12#,
+				#LeftD13#,
+				#RightD13#,
+				#LeftD14#,
+				#RightD14#,
+				#LeftD15#,
+				#RightD15#,
+				#LeftD21#,
+				#RightD21#,
+				#LeftD22#,
+				#RightD22#,
+				#LeftD23#,
+				#RightD23#,
+				#LeftD24#,
+				#RightD24#,
+				#LeftD25#,
+				#RightD25#,
+				#Judge#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="PCEuropeOptical">
+		 <![CDATA[ 	UPDATE [PCEuropeOptical] SET
+				[PCDataInputId] = #PCDataInputId#,
+				[NoId] = #NoId#,
+				[LeftD11] = #LeftD11#,
+				[RightD11] = #RightD11#,
+				[LeftD12] = #LeftD12#,
+				[RightD12] = #RightD12#,
+				[LeftD13] = #LeftD13#,
+				[RightD13] = #RightD13#,
+				[LeftD14] = #LeftD14#,
+				[RightD14] = #RightD14#,
+				[LeftD15] = #LeftD15#,
+				[RightD15] = #RightD15#,
+				[LeftD21] = #LeftD21#,
+				[RightD21] = #RightD21#,
+				[LeftD22] = #LeftD22#,
+				[RightD22] = #RightD22#,
+				[LeftD23] = #LeftD23#,
+				[RightD23] = #RightD23#,
+				[LeftD24] = #LeftD24#,
+				[RightD24] = #RightD24#,
+				[LeftD25] = #LeftD25#,
+				[RightD25] = #RightD25#,
+				[Judge] = #Judge#
+			WHERE
+				[PCEuropeOpticalId] = #PCEuropeOpticalId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCEuropeOptical]
+				where  PCEuropeOpticalId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

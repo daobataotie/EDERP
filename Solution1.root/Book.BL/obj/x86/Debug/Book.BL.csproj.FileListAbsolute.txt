@@ -1,0 +1,38 @@
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.BL.dll
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.BL.pdb
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.DA.dll
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.Model.dll
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Helper.dll
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.Model.pdb
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.DA.pdb
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Helper.pdb
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\公司项目\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\zh-CHT\Book.Model.resources.dll
+D:\公司项目\易达ERP\Solution1.root\Book.BL\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\公司项目\易达ERP\Solution1.root\Book.BL\obj\x86\Debug\Book.BL.dll
+D:\公司项目\易达ERP\Solution1.root\Book.BL\obj\x86\Debug\Book.BL.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.BL.dll
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.BL.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.DA.dll
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.Model.dll
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Helper.dll
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.Model.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Book.DA.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\Helper.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\Company Project\易达ERP\Solution1.root\Book.BL\bin\x86\Debug\zh-CHT\Book.Model.resources.dll
+D:\Company Project\易达ERP\Solution1.root\Book.BL\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\易达ERP\Solution1.root\Book.BL\obj\x86\Debug\Book.BL.dll
+D:\Company Project\易达ERP\Solution1.root\Book.BL\obj\x86\Debug\Book.BL.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\Book.BL.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\Book.DA.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\Book.Model.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\Helper.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\Book.DA.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\Book.Model.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\Helper.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\bin\x86\Debug\zh-CHT\Book.Model.resources.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\obj\x86\Debug\Book.BL.csprojResolveAssemblyReference.cache
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\obj\x86\Debug\Book.BL.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.BL\obj\x86\Debug\Book.BL.pdb

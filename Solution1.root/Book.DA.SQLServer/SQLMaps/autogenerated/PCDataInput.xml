@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCDataInput" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PCDataInput" type="Book.Model.PCDataInput, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PCDataInputResult" class="PCDataInput">
+      <result property="PCDataInputId" column="PCDataInputId" />
+      <result property="PCDataInputDate" column="PCDataInputDate" />
+      <result property="PronoteHeaderId" column="PronoteHeaderId" />
+      <result property="InvoiceCusId" column="InvoiceCusId" />
+      <result property="ProductId" column="ProductId" />
+      <result property="TestQuantity" column="TestQuantity" />
+      <result property="CheckStandard" column="CheckStandard" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="CustomerShortName" column="CustomerShortName"/>
+      <result property="OrderQuantity" column="OrderQuantity"/>
+      <result property="EmployeeId" column="EmployeeId"/>
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+      <result property="PronoteHeader" column="PronoteHeaderId" lazyLoad="false" select="PronoteHeader.select_by_primary_key" />
+      <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key"/>
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCDataInput]
+				WHERE
+				[PCDataInputId] = #PCDataInputId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCDataInput]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="get_first" resultMap="PCDataInputResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCDataInput
+			 
+			order by InsertTime 
+			]]>
+    </select>
+    <select id="get_last" resultMap="PCDataInputResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCDataInput
+						
+            order by InsertTime desc
+			]]>
+
+    </select>
+    <select id="get_prev" resultMap="PCDataInputResult" parameterClass="PCDataInput">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCDataInput
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+    </select>
+    <select id="get_next" resultMap="PCDataInputResult" parameterClass="PCDataInput">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCDataInput
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="PCDataInput">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCDataInput
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="PCDataInput">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCDataInput
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PCDataInputResult" parameterClass="PCDataInput">
+      <![CDATA[SELECT
+				[PCDataInputId],
+				[PCDataInputDate],
+				[PronoteHeaderId],
+				[InvoiceCusId],
+				[ProductId],
+				[TestQuantity],
+				[CheckStandard],
+				[InsertTime],
+				[UpdateTime],
+        [CustomerShortName],
+			  [OrderQuantity],
+        [EmployeeId]
+			FROM
+				[dbo].[PCDataInput]
+			WHERE
+				[PCDataInputId] = #PCDataInputId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[PCDataInput]
+			WHERE            
+				[PCDataInputId] = #PCDataInputId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="PCDataInputResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[PCDataInput]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[PCDataInput]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PCDataInputResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCDataInput]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PCDataInput">
+      <![CDATA[ INSERT INTO [dbo].[PCDataInput] 
+			(
+				[PCDataInputId],
+				[PCDataInputDate],
+				[PronoteHeaderId],
+				[InvoiceCusId],
+				[ProductId],
+				[TestQuantity],
+				[CheckStandard],
+				[InsertTime],
+				[UpdateTime],
+        [CustomerShortName],
+			  [OrderQuantity],
+        [EmployeeId]
+			) 
+			VALUES 
+			(
+				#PCDataInputId#,
+				#PCDataInputDate#,
+				#PronoteHeaderId#,
+				#InvoiceCusId#,
+				#ProductId#,
+				#TestQuantity#,
+				#CheckStandard#,
+				#InsertTime#,
+				#UpdateTime#,
+        #CustomerShortName#,
+			  #OrderQuantity#,
+        #EmployeeId#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PCDataInput">
+      <![CDATA[ 	UPDATE [PCDataInput] SET
+				[PCDataInputDate] = #PCDataInputDate#,
+				[PronoteHeaderId] = #PronoteHeaderId#,
+				[InvoiceCusId] = #InvoiceCusId#,
+				[ProductId] = #ProductId#,
+				[TestQuantity] = #TestQuantity#,
+				[CheckStandard] = #CheckStandard#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+        [CustomerShortName]=#CustomerShortName#,
+			  [OrderQuantity]=#OrderQuantity#,
+        [EmployeeId]=#EmployeeId#
+			WHERE
+				[PCDataInputId] = #PCDataInputId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCDataInput]
+				where  PCDataInputId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

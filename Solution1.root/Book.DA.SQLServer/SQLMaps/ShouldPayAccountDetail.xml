@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="ShouldPayAccountDetail" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="GetByDateRangeAndSupplier" resultMap="ShouldPayAccountDetailResult" parameterClass="Map">
+      <![CDATA[
+      select * from ShouldPayAccountDetail where FPDate between #startDate# and #endDate# and (FPSupplierId=#supplierID# or #supplierID# is null)
+      ]]>
+    </select>
+
+    <select id="GetByHeaderId" resultMap="ShouldPayAccountDetailResult" parameterClass="String">
+      <![CDATA[
+      select * from ShouldPayAccountDetail where ShouldPayAccountId=#value#
+      ]]>
+    </select>
+
+    <delete id="DeleteByHeaderId" parameterClass="String">
+      <![CDATA[
+      delete from ShouldPayAccountDetail where ShouldPayAccountId=#value#
+      ]]>
+    </delete>
+  </statements>
+</sqlMap>

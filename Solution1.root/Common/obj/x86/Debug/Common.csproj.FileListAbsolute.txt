@@ -1,0 +1,15 @@
+D:\公司项目\易达ERP\Solution1.root\Common\bin\x86\Debug\Common.dll
+D:\公司项目\易达ERP\Solution1.root\Common\bin\x86\Debug\Common.pdb
+D:\公司项目\易达ERP\Solution1.root\Common\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\公司项目\易达ERP\Solution1.root\Common\obj\x86\Debug\Common.dll
+D:\公司项目\易达ERP\Solution1.root\Common\obj\x86\Debug\Common.pdb
+D:\Company Project\易达ERP\Solution1.root\Common\bin\x86\Debug\Common.dll
+D:\Company Project\易达ERP\Solution1.root\Common\bin\x86\Debug\Common.pdb
+D:\Company Project\易达ERP\Solution1.root\Common\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\易达ERP\Solution1.root\Common\obj\x86\Debug\Common.dll
+D:\Company Project\易达ERP\Solution1.root\Common\obj\x86\Debug\Common.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Common\bin\x86\Debug\Common.dll
+D:\Company Project\Git\EDERP\Solution1.root\Common\bin\x86\Debug\Common.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Common\obj\x86\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Company Project\Git\EDERP\Solution1.root\Common\obj\x86\Debug\Common.dll
+D:\Company Project\Git\EDERP\Solution1.root\Common\obj\x86\Debug\Common.pdb

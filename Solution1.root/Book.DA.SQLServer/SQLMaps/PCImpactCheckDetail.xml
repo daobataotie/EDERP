@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCImpactCheckDetail" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <statements>
+    <select id="select_byPCImpactCheckID" resultMap="PCImpactCheckDetailResult" parameterClass="string">
+      <![CDATA[
+      SELECT * FROM PCImpactCheckDetail WHERE PCImpactCheckDetail.PCImpactCheckId= #value# ORDER BY attrDate
+      ]]>
+    </select>
+
+    <delete id="DeleteByPCImpactCheckId" parameterClass="string">
+      <![CDATA[
+      DELETE FROM PCImpactCheckDetail WHERE PCImpactCheckDetail.PCImpactCheckId = #value#
+      ]]>
+    </delete>
+
+    <select id="SelectByDateRange" resultMap="PCImpactCheckDetailResult" parameterClass="Map">
+      <![CDATA[
+      select d.*,e.EmployeeName from PCImpactCheckDetail d left join PCImpactCheck p on d.PCImpactCheckId=p.PCImpactCheckId left join Employee e on e.EmployeeId=p.EmployeeId where d.attrDate between #startdate# and #enddate# $sql$
+      ]]>
+    </select>
+
+    <select id="SelectChecker" resultClass="string" parameterClass="string">
+      <![CDATA[
+      select e.EmployeeName from PCImpactCheck p left join Employee e on p.EmployeeId=e.EmployeeId where p.PCImpactCheckId=#value#
+      ]]>
+    </select>
+
+  </statements>
+</sqlMap>

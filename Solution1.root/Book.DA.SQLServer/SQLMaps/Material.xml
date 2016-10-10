@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Material" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="CountJWeightByMaterial" resultClass="double" parameterClass="Map">
+      <![CDATA[
+      SELECT sum(Jweight) FROM Material WHERE 1=1 $sql$
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="AtCashAccount" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="AtCashAccount" type="Book.Model.AtCashAccount, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="AtCashAccountResult" class="AtCashAccount">
+			<result property="AtCashAccountId" column="AtCashAccountId" />
+			<result property="AtCashAccountMonth" column="AtCashAccountMonth" />
+			<result property="IncomeTotal" column="IncomeTotal" />
+			<result property="PayTotal" column="PayTotal" />
+			<result property="BalanceTotal" column="BalanceTotal" />
+			<result property="InsertTime" column="InsertTime" />
+			<result property="UpdateTime" column="UpdateTime" />
+        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[AtCashAccount]
+				WHERE
+				[AtCashAccountId] = #AtCashAccountId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[AtCashAccount]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="get_first" resultMap="AtCashAccountResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.AtCashAccount
+			 
+			order by InsertTime 
+			]]>
+		</select>
+		<select id="get_last" resultMap="AtCashAccountResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.AtCashAccount
+						
+            order by InsertTime desc
+			]]>
+            
+		</select>
+		<select id="get_prev" resultMap="AtCashAccountResult" parameterClass="AtCashAccount">
+			<![CDATA[
+			select top 1 *
+			from dbo.AtCashAccount
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+		</select>
+		<select id="get_next" resultMap="AtCashAccountResult" parameterClass="AtCashAccount">
+			<![CDATA[
+			select top 1 *
+			from dbo.AtCashAccount
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+		</select>
+		
+		<select id="has_rows_before" resultClass="bool" parameterClass="AtCashAccount">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.AtCashAccount
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+		</select>
+		
+		<select id="has_rows_after" resultClass="bool" parameterClass="AtCashAccount">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.AtCashAccount
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="AtCashAccountResult" parameterClass="AtCashAccount">
+			<![CDATA[SELECT
+				[AtCashAccountId],
+				[AtCashAccountMonth],
+				[IncomeTotal],
+				[PayTotal],
+				[BalanceTotal],
+				[InsertTime],
+				[UpdateTime]
+			FROM
+				[dbo].[AtCashAccount]
+			WHERE
+				[AtCashAccountId] = #AtCashAccountId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[AtCashAccount]
+			WHERE            
+				[AtCashAccountId] = #AtCashAccountId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="AtCashAccountResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[AtCashAccount]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[AtCashAccount]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="AtCashAccountResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[AtCashAccount]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="AtCashAccount">
+			 <![CDATA[ INSERT INTO [dbo].[AtCashAccount] 
+			(
+				[AtCashAccountId],
+				[AtCashAccountMonth],
+				[IncomeTotal],
+				[PayTotal],
+				[BalanceTotal],
+				[InsertTime],
+				[UpdateTime]
+			) 
+			VALUES 
+			(
+				#AtCashAccountId#,
+				#AtCashAccountMonth#,
+				#IncomeTotal#,
+				#PayTotal#,
+				#BalanceTotal#,
+				#InsertTime#,
+				#UpdateTime#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="AtCashAccount">
+		 <![CDATA[ 	UPDATE [AtCashAccount] SET
+				[AtCashAccountMonth] = #AtCashAccountMonth#,
+				[IncomeTotal] = #IncomeTotal#,
+				[PayTotal] = #PayTotal#,
+				[BalanceTotal] = #BalanceTotal#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#
+			WHERE
+				[AtCashAccountId] = #AtCashAccountId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[AtCashAccount]
+				where  AtCashAccountId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

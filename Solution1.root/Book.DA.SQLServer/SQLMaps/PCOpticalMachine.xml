@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCOpticalMachine" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <statements>
+    <select id="SelectByHeaderId" resultMap="PCOpticalMachineResult" parameterClass="string">
+      <![CDATA[
+      select * from PCOpticalMachine where PCDataInputId=#value# order by NoId 
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

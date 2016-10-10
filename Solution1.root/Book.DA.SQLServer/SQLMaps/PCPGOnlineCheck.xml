@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCPGOnlineCheck" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByDateRange" resultMap="PCPGOnlineCheckResult" parameterClass="Map">
+      <![CDATA[
+      select * from PCPGOnlineCheck where PCPGOnlineCheckId in(select p.PCPGOnlineCheckId from  PCPGOnlineCheck  p left join PCPGOnlineCheckDetail pd on pd.PCPGOnlineCheckId=p.PCPGOnlineCheckId left join PronoteHeader ph on pd.FromInvoiceId=ph.PronoteHeaderID left join ProduceOtherCompact pc on pd.FromInvoiceId=pc.ProduceOtherCompactId  where 1=1 $SQL$
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

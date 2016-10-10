@@ -1,0 +1,56 @@
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.pdb
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.Common.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.DataMapper.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\System.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Castle.DynamicProxy.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.pdb
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.pdb
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.Common.xml
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.DataMapper.xml
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.pdb
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\zh-CHT\Book.Model.resources.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.dll
+D:\公司项目\易达ERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.Common.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.DataMapper.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\System.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Castle.DynamicProxy.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.Common.xml
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.DataMapper.xml
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.pdb
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\zh-CHT\Book.Model.resources.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.dll
+D:\Company Project\易达ERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.SQLServer.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.Common.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.DataMapper.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\System.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Castle.DynamicProxy.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.DA.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Book.Model.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\Helper.pdb
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.Common.xml
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\IBatisNet.DataMapper.xml
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\zh-CHS\Book.Model.resources.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\bin\x86\Debug\zh-CHT\Book.Model.resources.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.csprojResolveAssemblyReference.cache
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.dll
+D:\Company Project\Git\EDERP\Solution1.root\Book.DA.SQLServer\obj\x86\Debug\Book.DA.SQLServer.pdb

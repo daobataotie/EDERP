@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCPerspective" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="PCPerspective" type="Book.Model.PCPerspective, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="PCPerspectiveResult" class="PCPerspective">
+			<result property="PCPerspectiveId" column="PCPerspectiveId" />
+			<result property="PCDataInputId" column="PCDataInputId" />
+			<result property="NoId" column="NoId" />
+			<result property="LeftT" column="LeftT" />
+			<result property="RightT" column="RightT" />
+			<result property="Judge" column="Judge" />
+		<result property="PCDataInput" column="PCDataInputId" lazyLoad="false" select="PCDataInput.select_by_primary_key" />        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCPerspective]
+				WHERE
+				[PCPerspectiveId] = #PCPerspectiveId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCPerspective]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="PCPerspectiveResult" parameterClass="PCPerspective">
+			<![CDATA[SELECT
+				[PCPerspectiveId],
+				[PCDataInputId],
+				[NoId],
+				[LeftT],
+				[RightT],
+				[Judge]
+			FROM
+				[dbo].[PCPerspective]
+			WHERE
+				[PCPerspectiveId] = #PCPerspectiveId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[PCPerspective]
+			WHERE            
+				[PCPerspectiveId] = #PCPerspectiveId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="PCPerspectiveResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[PCPerspective]
+                			                   
+
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[PCPerspective]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="PCPerspectiveResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCPerspective]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="PCPerspective">
+			 <![CDATA[ INSERT INTO [dbo].[PCPerspective] 
+			(
+				[PCPerspectiveId],
+				[PCDataInputId],
+				[NoId],
+				[LeftT],
+				[RightT],
+				[Judge]
+			) 
+			VALUES 
+			(
+				#PCPerspectiveId#,
+				#PCDataInputId#,
+				#NoId#,
+				#LeftT#,
+				#RightT#,
+				#Judge#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="PCPerspective">
+		 <![CDATA[ 	UPDATE [PCPerspective] SET
+				[PCDataInputId] = #PCDataInputId#,
+				[NoId] = #NoId#,
+				[LeftT] = #LeftT#,
+				[RightT] = #RightT#,
+				[Judge] = #Judge#
+			WHERE
+				[PCPerspectiveId] = #PCPerspectiveId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCPerspective]
+				where  PCPerspectiveId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

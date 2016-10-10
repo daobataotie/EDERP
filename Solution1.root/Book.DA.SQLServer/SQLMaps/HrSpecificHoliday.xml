@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="HrSpecificHoliday" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="IsExistForHolidayDate" resultClass="bool" prameterClass="string">
+      <![CDATA[
+       SELECT CASE WHEN EXISTS
+	      (SELECT * FROM HrSpecificHoliday
+		      WHERE HolidayDate = #value#)
+		      THEN 1 ELSE 0 END 
+      ]]>
+    </select>
+
+    <select id="ISExistsByName" parameterClass="String"  resultClass="bool">
+      <![CDATA[
+      SELECT CASE WHEN EXISTS (SELECT * FROM HrSpecificHoliday WHERE [Name]=#value#) then 1 else 0 end
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

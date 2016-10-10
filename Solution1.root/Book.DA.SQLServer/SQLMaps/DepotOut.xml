@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="DepotOut" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<statements>
+		<select id="SelectByDateRange" resultMap="DepotOutResult" parameterClass="Map">
+			select * from DepotOut where depotoutdate between #startdate# and #enddate# order by DepotOutId desc
+		</select>
+
+    <select id="SelectByInvoiceCusID" resultClass="String" parameterClass="String">
+      <![CDATA[
+      select Cast(DepotOutId as varchar)+' '+char(10) from DepotOut where (InvioiceId in (select ProduceMaterialID from ProduceMaterial where InvoiceXOId=(select InvoiceId from InvoiceXO where CustomerInvoiceXOId=#value#))) or (InvioiceId in (select ProduceOtherMaterialId from ProduceOtherMaterial where ProduceOtherCompactId in (select ProduceOtherCompactId from ProduceOtherCompact where InvoiceXOId=(select InvoiceId from InvoiceXO where CustomerInvoiceXOId=#value#)))) for xml path('')
+      ]]>
+    </select>
+	</statements>
+</sqlMap>

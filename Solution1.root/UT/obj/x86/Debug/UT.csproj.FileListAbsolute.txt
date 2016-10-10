@@ -1,0 +1,14 @@
+D:\公司项目\易达ERP\Solution1.root\UT\bin\x86\Debug\UT.dll
+D:\公司项目\易达ERP\Solution1.root\UT\bin\x86\Debug\UT.pdb
+D:\公司项目\易达ERP\Solution1.root\UT\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\公司项目\易达ERP\Solution1.root\UT\obj\x86\Debug\UT.dll
+D:\公司项目\易达ERP\Solution1.root\UT\obj\x86\Debug\UT.pdb
+D:\Company Project\易达ERP\Solution1.root\UT\bin\x86\Debug\UT.dll
+D:\Company Project\易达ERP\Solution1.root\UT\bin\x86\Debug\UT.pdb
+D:\Company Project\易达ERP\Solution1.root\UT\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Company Project\易达ERP\Solution1.root\UT\obj\x86\Debug\UT.dll
+D:\Company Project\易达ERP\Solution1.root\UT\obj\x86\Debug\UT.pdb
+D:\Company Project\Git\EDERP\Solution1.root\UT\bin\x86\Debug\UT.dll
+D:\Company Project\Git\EDERP\Solution1.root\UT\bin\x86\Debug\UT.pdb
+D:\Company Project\Git\EDERP\Solution1.root\UT\obj\x86\Debug\UT.dll
+D:\Company Project\Git\EDERP\Solution1.root\UT\obj\x86\Debug\UT.pdb

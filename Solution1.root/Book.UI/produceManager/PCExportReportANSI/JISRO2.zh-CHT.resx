@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="xrLabel160.Text" xml:space="preserve">
+    <value>參照開發設計資料</value>
+  </data>
+  <data name="xrLabel159.Text" xml:space="preserve">
+    <value>1.容易使用 不易損壞 2.使用時不會有不舒適感 3.使用者不會因使用此護具而行動受到限制 4.不可有特別之角度或不平滑而令使用者受傷 5.各部位應可被更換</value>
+  </data>
+  <data name="xrLabel171.Text" xml:space="preserve">
+    <value>10.記號標示 Marking</value>
+  </data>
+  <data name="xrLabel168.Text" xml:space="preserve">
+    <value>參照材料設計錶</value>
+  </data>
+  <data name="xrLabel167.Text" xml:space="preserve">
+    <value>1.觸及皮膚之部分不應造成皮膚不適或傷害 2.材料本身的強度與彈性應符合使用</value>
+  </data>
+  <data name="xrLabel156.Text" xml:space="preserve">
+    <value>12.使用手冊 Instruction manual</value>
+  </data>
+  <data name="xrLabel150.Text" xml:space="preserve">
+    <value>消毒劑</value>
+  </data>
+  <data name="xrLabel151.Text" xml:space="preserve">
+    <value>經測試后不應有可見之損傷</value>
+  </data>
+  <data name="xrLabel158.Text" xml:space="preserve">
+    <value>圓面</value>
+  </data>
+  <data name="xrLabel186.Text" xml:space="preserve">
+    <value>a)清潔或消毒方式b)使用時注意事項c)維修方式d)其他事項</value>
+  </data>
+  <data name="xrLabel187.Text" xml:space="preserve">
+    <value>參照開發設計資料</value>
+  </data>
+  <data name="xrLabel185.Text" xml:space="preserve">
+    <value>目視</value>
+  </data>
+  <data name="xrLabel184.Text" xml:space="preserve">
+    <value>應附於產品</value>
+  </data>
+  <data name="xrLabel191.Text" xml:space="preserve">
+    <value>主管簽核:</value>
+  </data>
+  <data name="xrLabel189.Text" xml:space="preserve">
+    <value>6、構造 Construction</value>
+  </data>
+  <data name="xrLabel173.Text" xml:space="preserve">
+    <value>製造商之名稱或英文簡化字母名稱應永久固定之方式印于鏡片尚且不會妨礙視線處</value>
+  </data>
+  <data name="xrLabel161.Text" xml:space="preserve">
+    <value>10.1記號標示 Marking for product</value>
+  </data>
+  <data name="xrLabel172.Text" xml:space="preserve">
+    <value>目視</value>
+  </data>
+  <data name="xrLabel176.Text" xml:space="preserve">
+    <value>10.2包裝上記號 Marking for packaging</value>
+  </data>
+  <data name="xrLabel177.Text" xml:space="preserve">
+    <value>目視</value>
+  </data>
+  <data name="xrLabel178.Text" xml:space="preserve">
+    <value>a)標磚名稱b)劃分標示c)生產者名稱或名稱簡化英文字母d)生產年月日或DOM</value>
+  </data>
+  <data name="xrLabel110.Text" xml:space="preserve">
+    <value>目視</value>
+  </data>
+  <data name="xrLabel115.Text" xml:space="preserve">
+    <value>不應有缺陷、裂縫、骯髒 同時各部門組裝組合製造應完美</value>
+  </data>
+  <data name="xrLabel119.Text" xml:space="preserve">
+    <value>8.4b)耐衝擊性Test for Shock resistance</value>
+  </data>
+  <data name="xrLabel118.Text" xml:space="preserve">
+    <value>b)耐衝擊性 Shock resistance</value>
+  </data>
+  <data name="xrLabel120.Text" xml:space="preserve">
+    <value>羅球測試機</value>
+  </data>
+  <data name="xrLabel109.Text" xml:space="preserve">
+    <value>8.4a)外觀 Test for Appearance</value>
+  </data>
+  <data name="xrLabel112.Text" xml:space="preserve">
+    <value>a)外觀 Appearance</value>
+  </data>
+  <data name="xrLabel121.Text" xml:space="preserve">
+    <value>鏡片邊緣不應有缺口、傷痕或脫框</value>
+  </data>
+  <data name="xrLabel140.Text" xml:space="preserve">
+    <value>d)頭帶強度測試 Strength of headband attached section</value>
+  </data>
+  <data name="xrLabel141.Text" xml:space="preserve">
+    <value>8.4d)頭帶強度測試Test for Strength of headband attached section</value>
+  </data>
+  <data name="xrLabel142.Text" xml:space="preserve">
+    <value>頭帶拉伸測試機</value>
+  </data>
+  <data name="xrLabel143.Text" xml:space="preserve">
+    <value>不可有裂開或脫離之情形</value>
+  </data>
+  <data name="xrLabel133.Text" xml:space="preserve">
+    <value>8.4c2)緊密性試驗 第二次試驗 Test for holding</value>
+  </data>
+  <data name="xrLabel125.Text" xml:space="preserve">
+    <value>8.4c1)緊密性試驗 第一次試驗 Test for holding</value>
+  </data>
+  <data name="xrLabel126.Text" xml:space="preserve">
+    <value>鏡腳拉伸測試機</value>
+  </data>
+  <data name="xrLabel128.Text" xml:space="preserve">
+    <value>c)緊密性、把持性測試 Holding characteristics of spectacle tpe eye-protectors</value>
+  </data>
+  <data name="xrLabel131.Text" xml:space="preserve">
+    <value>框變形時鏡片不應脫出鏡溝凹槽</value>
+  </data>
+  <data name="xrLabel135.Text" xml:space="preserve">
+    <value>框變形時鏡片不應脫出鏡溝凹槽</value>
+  </data>
+  <data name="xrLabel134.Text" xml:space="preserve">
+    <value>中梁吊掛測試機</value>
+  </data>
+</root>

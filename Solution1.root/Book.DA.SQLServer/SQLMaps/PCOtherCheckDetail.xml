@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCOtherCheckDetail" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="select_byPCOtherCheckId" resultMap="PCOtherCheckDetailResult" parameterClass="string">
+      <![CDATA[
+      SELECT * FROM PCOtherCheckDetail WHERE PCOtherCheckDetail.PCOtherCheckId = #value#
+      ]]>
+    </select>
+
+    <delete id="DeleteByPCOCId" parameterClass="string">
+      <![CDATA[
+      DELETE FROM PCOtherCheckDetail WHERE PCOtherCheckDetail.PCOtherCheckId = #value#
+      ]]>
+    </delete>
+
+    <select id="SelectByInvoiceCusID" resultClass="String" parameterClass="String">
+      <![CDATA[
+      select distinct Cast(PCOtherCheckId as varchar) + ' ' +char(10) from PCOtherCheckDetail where FromInvoiceID in (select InvoiceId from InvoiceCGDetail where InvoiceCOId in (select InvoiceId from InvoiceCO where InvoiceXOId=(select InvoiceId from InvoiceXO where CustomerInvoiceXOId=#value#))) or FromInvoiceID in (select ProduceOtherInDepotId from ProduceOtherInDepotDetail where ProduceOtherCompactId in (select ProduceOtherCompactId from ProduceOtherCompact where InvoiceXOId =(select InvoiceId from InvoiceXO where CustomerInvoiceXOId=#value#))) for xml path('')
+      ]]>
+    </select>
+
+    <select id="IsHasByFromInvoiceDetailID" resultClass="bool" parameterClass="String">
+      <![CDATA[
+      select case when exists(select * from PCOtherCheckDetail where FromInvoiceDetailID=#value#) then 1 else 0 end
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

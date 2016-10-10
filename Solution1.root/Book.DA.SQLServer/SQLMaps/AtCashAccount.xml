@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="AtCashAccount" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="ISExistsMonth" resultClass="bool" parameterClass="Map">
+      <![CDATA[
+      select case when exists(select * from AtCashAccount where AtCashAccountMonth=#Date# and AtCashAccountId<>#Id#) then 1 else 0 end
+      ]]>
+    </select>
+
+    <select id="GetBalance" resultClass="decimal">
+      <![CDATA[
+      select top 1 isnull(BalanceTotal,0) from AtCashAccount order by AtCashAccountMonth desc
+      ]]>
+    </select>
+
+    <select id="GetBalanceByDate" resultClass="decimal" parameterClass="Map">
+      <![CDATA[
+      select top 1 isnull(BalanceTotal,0) from AtCashAccount where AtCashAccountMonth between #startdate# and #enddate# order by AtCashAccountMonth desc
+      ]]>
+    </select>
+  </statements>
+</sqlMap>
