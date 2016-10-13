@@ -156,7 +156,6 @@ namespace Book.UI.Settings.BasicData.Customs
                 //Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
                 dynamic excel = Activator.CreateInstance(objClassType);
                 excel.Application.Workbooks.Add(true);
-                excel.Visible = true;//是否打开该Excel文件
 
                 dynamic r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, productShipmentList.Count]);
                 r.MergeCells = true;//合并单元格
@@ -221,9 +220,11 @@ namespace Book.UI.Settings.BasicData.Customs
 
                             rows++;
                         }
-
                     }
                 }
+
+
+                excel.Visible = true;//是否打开该Excel文件
             }
             catch
             {

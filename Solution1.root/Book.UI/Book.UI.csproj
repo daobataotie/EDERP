@@ -108,6 +108,9 @@
     <Reference Include="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Data.v10.2.10.2.4.0.Fakes">
+      <HintPath>FakesAssemblies\DevExpress.Data.v10.2.10.2.4.0.Fakes.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.OfficeSkins.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -173,6 +176,12 @@
     <Reference Include="DevExpress.XtraWizard.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="microsoft.office.interop.excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>G:\Users\caoru_000\Desktop\microsoft.office.interop.excel各个版本\x32\12.0.4518.1014\microsoft.office.interop.excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Vbe.Interop, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -806,7 +815,43 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ConnDB.cs" />
+    <Compile Include="CustomsClearance\BGHandbookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomsClearance\BGHandbookForm.Designer.cs">
+      <DependentUpon>BGHandbookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomsClearance\HandbookRange\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomsClearance\HandbookRange\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomsClearance\HandbookRange\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomsClearance\HandbookRange\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomsClearance\MyRecord\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomsClearance\MyRecord\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomsClearance\PassNoteBook\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomsClearance\PassNoteBook\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBmange\SqlHelper.cs" />
+    <Compile Include="ExcelClass\ExcelClass1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExcelClass\ExcelHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Hr\Attendance\AnnualHoliday\AnnualHolidayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11260,38 +11305,6 @@
     <Compile Include="AnnualCarryoverForm.Designer.cs">
       <DependentUpon>AnnualCarryoverForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomsClearance\BGHandbookForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomsClearance\BGHandbookForm.Designer.cs">
-      <DependentUpon>BGHandbookForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomsClearance\HandbookRange\EditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomsClearance\HandbookRange\EditForm.Designer.cs">
-      <DependentUpon>EditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomsClearance\HandbookRange\ListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomsClearance\HandbookRange\ListForm.Designer.cs">
-      <DependentUpon>ListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomsClearance\MyRecord\EditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomsClearance\MyRecord\EditForm.Designer.cs">
-      <DependentUpon>EditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomsClearance\PassNoteBook\EditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomsClearance\PassNoteBook\EditForm.Designer.cs">
-      <DependentUpon>EditForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ExcelClass\ExcelClass1.cs" />
-    <Compile Include="ExcelClass\ExcelHandler.cs" />
     <Compile Include="Hr\Attendance\AnnualHoliday\ChooseDepartments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12912,15 +12925,6 @@
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>8</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="VBIDE">
       <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>

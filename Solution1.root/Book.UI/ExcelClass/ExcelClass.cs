@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace Book.UI
+namespace Book.UI.ExcelClass
 {
     public class ExcelClass
     {
