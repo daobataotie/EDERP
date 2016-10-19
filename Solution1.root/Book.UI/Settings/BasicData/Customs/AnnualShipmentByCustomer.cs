@@ -7,10 +7,12 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Linq;
-using CrystalDecisions.Shared;
+//using CrystalDecisions.Shared;
 using System.Reflection;
 using Microsoft.CSharp;
-using Microsoft.Office.Core;
+using DevExpress.XtraCharts;
+//using Microsoft.Office.Interop.Excel;
+//using Microsoft.Office.Core;
 
 
 namespace Book.UI.Settings.BasicData.Customs
@@ -156,24 +158,29 @@ namespace Book.UI.Settings.BasicData.Customs
                 //Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
                 dynamic excel = Activator.CreateInstance(objClassType);
                 excel.Application.Workbooks.Add(true);
-
+                //Microsoft.Office.Interop.Excel.Line l = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+             
+                //Microsoft.Office.Interop.Excel.Range r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, productShipmentList.Count]);
                 dynamic r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, productShipmentList.Count]);
                 r.MergeCells = true;//合并单元格
 
+                //Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignCenter = -4108;
+                //Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium= -4138;
+                //Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic= -4105;
                 excel.Cells.ColumnWidth = 25;
                 excel.Cells[1, 1] = (this.nccCustomer.EditValue as Model.Customer).CustomerShortName;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).Font.Size = 20;
                 excel.Cells[1, productShipmentList.Count + 1] = DateTime.Now.ToString("yyyy.MM.dd");
-                excel.get_Range(excel.Cells[1, productShipmentList.Count + 1], excel.Cells[1, productShipmentList.Count + 1]).HorizontalAlignment = XlVAlign.xlVAlignCenter;
+                excel.get_Range(excel.Cells[1, productShipmentList.Count + 1], excel.Cells[1, productShipmentList.Count + 1]).HorizontalAlignment = -4108;
 
                 int rowCount = this.date_End.DateTime.Year - this.date_Start.DateTime.Year + 1;
                 if (showType != 0)
                     rowCount = rowCount * 12;
 
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 1]).BorderAround(LineStyle.SingleLine, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 1]).BorderAround(1, -4138, -4105, "#000000");
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[2, productShipmentList.Count + 1]).Interior.ColorIndex = 15;
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 2, productShipmentList.Count + 1]).HorizontalAlignment = XlVAlign.xlVAlignCenter;
+                excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 2, productShipmentList.Count + 1]).HorizontalAlignment = -4108;
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 2, productShipmentList.Count + 1]).WrapText = true;
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 2, productShipmentList.Count + 1]).EntireRow.AutoFit();
                 excel.get_Range(excel.Cells[3, 1], excel.Cells[rowCount + 2, productShipmentList.Count + 1]).RowHeight = 20;
@@ -183,7 +190,7 @@ namespace Book.UI.Settings.BasicData.Customs
                 for (int j = 0; j < productShipmentList.Count; j++)
                 {
                     excel.Cells[2, j + 2] = productShipmentList[j].CustomerProductName;
-                    excel.get_Range(excel.Cells[2, j + 2], excel.Cells[2, j + 2]).BorderAround(LineStyle.SingleLine, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                    excel.get_Range(excel.Cells[2, j + 2], excel.Cells[2, j + 2]).BorderAround(1, -4138, -4105, "#000000");
                 }
 
                 int rows = 3;
@@ -192,12 +199,12 @@ namespace Book.UI.Settings.BasicData.Customs
                     for (int i = this.date_Start.DateTime.Year; i <= this.date_End.DateTime.Year; i++)
                     {
                         excel.Cells[rows, 1] = i.ToString() + "年";
-                        excel.get_Range(excel.Cells[rows, 1], excel.Cells[rows, 1]).BorderAround(LineStyle.SingleLine, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                        excel.get_Range(excel.Cells[rows, 1], excel.Cells[rows, 1]).BorderAround(1, -4138, -4105, "#000000");
 
                         for (int j = 0; j < productShipmentList.Count; j++)
                         {
                             excel.Cells[rows, j + 2] = productShipmentList[j].ShipmentDetail.First(d => d.Year == i.ToString()).Quantity;
-                            excel.get_Range(excel.Cells[rows, j + 2], excel.Cells[rows, j + 2]).BorderAround(LineStyle.SingleLine, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                            excel.get_Range(excel.Cells[rows, j + 2], excel.Cells[rows, j + 2]).BorderAround(1, -4138, -4105, "#000000");
                         }
 
                         rows++;
@@ -210,12 +217,12 @@ namespace Book.UI.Settings.BasicData.Customs
                         for (int l = 1; l <= 12; l++)
                         {
                             excel.Cells[rows, 1] = i.ToString() + "年" + l.ToString() + "月";
-                            excel.get_Range(excel.Cells[rows, 1], excel.Cells[rows, 1]).BorderAround(LineStyle.SingleLine, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                            excel.get_Range(excel.Cells[rows, 1], excel.Cells[rows, 1]).BorderAround(1, -4138, -4105, "#000000");
 
                             for (int j = 0; j < productShipmentList.Count; j++)
                             {
                                 excel.Cells[rows, j + 2] = productShipmentList[j].ShipmentDetail.First(d => d.Year == i.ToString() + "." + l.ToString()).Quantity;
-                                excel.get_Range(excel.Cells[rows, j + 2], excel.Cells[rows, j + 2]).BorderAround(LineStyle.SingleLine, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                                excel.get_Range(excel.Cells[rows, j + 2], excel.Cells[rows, j + 2]).BorderAround(1, -4138, -4105, "#000000");
                             }
 
                             rows++;
