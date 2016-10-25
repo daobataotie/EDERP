@@ -38,6 +38,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lblZhiXingCeShiYuan.Text = _PCExpANSI.Employee == null ? "" : _PCExpANSI.Employee.ToString();
 
             this.lblCriteria3.Text = _PCExpANSI.Criteria3;
+            this.lblCriteria3.Multiline = true;
 
             this.lblPanDing1.Text = (_PCExpANSI.PanDing1.HasValue ? _PCExpANSI.PanDing1.ToString() : "0") + "PASS";
             this.lblPanDing2.Text = (_PCExpANSI.PanDing2.HasValue ? _PCExpANSI.PanDing2.ToString() : "0") + "PASS";

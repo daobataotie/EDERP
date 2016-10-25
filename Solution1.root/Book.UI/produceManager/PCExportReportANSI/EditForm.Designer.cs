@@ -33,18 +33,26 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.lookUpEditUnit = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSourceUnit = new System.Windows.Forms.BindingSource(this.components);
-            this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
             this.newChooseContorlAuditEmp = new Book.UI.Invoices.NewChooseContorl();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCusXOid = new DevExpress.XtraEditors.TextEdit();
+            this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
             this.btnEditProduct = new DevExpress.XtraEditors.ButtonEdit();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.spinPanDing12 = new DevExpress.XtraEditors.SpinEdit();
+            this.label18 = new System.Windows.Forms.Label();
+            this.spinQuYangShu12 = new DevExpress.XtraEditors.SpinEdit();
+            this.label17 = new System.Windows.Forms.Label();
+            this.spinShouCeShu12 = new DevExpress.XtraEditors.SpinEdit();
+            this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -97,6 +105,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -114,26 +123,20 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintALAN = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintPPE = new DevExpress.XtraBars.BarButtonItem();
-            this.label15 = new System.Windows.Forms.Label();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.label16 = new System.Windows.Forms.Label();
-            this.spinShouCeShu12 = new DevExpress.XtraEditors.SpinEdit();
-            this.label17 = new System.Windows.Forms.Label();
-            this.spinQuYangShu12 = new DevExpress.XtraEditors.SpinEdit();
-            this.label18 = new System.Windows.Forms.Label();
-            this.spinPanDing12 = new DevExpress.XtraEditors.SpinEdit();
-            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCusXOid.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditProduct.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinPanDing12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinQuYangShu12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinShouCeShu12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinQuYangShu1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinShouCeShu1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinShouCeShu2.Properties)).BeginInit();
@@ -177,6 +180,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -189,10 +193,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinShouCeShu12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinQuYangShu12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinPanDing12.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -253,13 +253,6 @@
             this.lookUpEditUnit.Properties.ValueMember = "ProductUnitId";
             this.lookUpEditUnit.StyleController = this.layoutControl1;
             // 
-            // txt_AuditState
-            // 
-            resources.ApplyResources(this.txt_AuditState, "txt_AuditState");
-            this.txt_AuditState.MenuManager = this.barManager1;
-            this.txt_AuditState.Name = "txt_AuditState";
-            this.txt_AuditState.StyleController = this.layoutControl1;
-            // 
             // newChooseContorlAuditEmp
             // 
             this.newChooseContorlAuditEmp.EditValue = null;
@@ -282,6 +275,13 @@
             this.txtCusXOid.MenuManager = this.barManager1;
             this.txtCusXOid.Name = "txtCusXOid";
             this.txtCusXOid.StyleController = this.layoutControl1;
+            // 
+            // txt_AuditState
+            // 
+            resources.ApplyResources(this.txt_AuditState, "txt_AuditState");
+            this.txt_AuditState.MenuManager = this.barManager1;
+            this.txt_AuditState.Name = "txt_AuditState";
+            this.txt_AuditState.StyleController = this.layoutControl1;
             // 
             // btnEditProduct
             // 
@@ -358,6 +358,58 @@
             this.panel2.Controls.Add(this.txtCriteria3);
             this.panel2.Name = "panel2";
             // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.White;
+            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.Name = "label19";
+            // 
+            // spinPanDing12
+            // 
+            resources.ApplyResources(this.spinPanDing12, "spinPanDing12");
+            this.spinPanDing12.Name = "spinPanDing12";
+            this.spinPanDing12.Properties.AutoHeight = ((bool)(resources.GetObject("spinPanDing12.Properties.AutoHeight")));
+            this.spinPanDing12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.White;
+            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // spinQuYangShu12
+            // 
+            resources.ApplyResources(this.spinQuYangShu12, "spinQuYangShu12");
+            this.spinQuYangShu12.Name = "spinQuYangShu12";
+            this.spinQuYangShu12.Properties.AutoHeight = ((bool)(resources.GetObject("spinQuYangShu12.Properties.AutoHeight")));
+            this.spinQuYangShu12.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.spinQuYangShu12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.White;
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // spinShouCeShu12
+            // 
+            resources.ApplyResources(this.spinShouCeShu12, "spinShouCeShu12");
+            this.spinShouCeShu12.Name = "spinShouCeShu12";
+            this.spinShouCeShu12.Properties.AutoHeight = ((bool)(resources.GetObject("spinShouCeShu12.Properties.AutoHeight")));
+            this.spinShouCeShu12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
@@ -385,6 +437,12 @@
             this.label11.Name = "label11";
             this.label11.Tag = "YZZLZJCS";
             this.label11.Click += new System.EventHandler(this.ChildFrmLable_Click);
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
             // 
             // label10
             // 
@@ -747,7 +805,6 @@
             // 
             // dateEditReport
             // 
-            this.dateEditReport.EditValue = null;
             resources.ApplyResources(this.dateEditReport, "dateEditReport");
             this.dateEditReport.MenuManager = this.barManager1;
             this.dateEditReport.Name = "dateEditReport";
@@ -793,7 +850,7 @@
             this.layoutControlItem14});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(809, 506);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(809, 524);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -815,13 +872,22 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(264, 25);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(84, 14);
             // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.nccEmployee;
+            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
+            this.layoutControlItem7.Location = new System.Drawing.Point(237, 50);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(264, 25);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(84, 14);
+            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.panel1;
             resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 100);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(789, 386);
+            this.layoutControlItem9.Size = new System.Drawing.Size(789, 404);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextToControlDistance = 0;
             this.layoutControlItem9.TextVisible = false;
@@ -966,79 +1032,11 @@
             this.barPrintPPE.Name = "barPrintPPE";
             this.barPrintPPE.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPrintPPE_ItemClick);
             // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.nccEmployee;
-            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(237, 50);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(264, 25);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(84, 14);
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
-            // 
-            // spinShouCeShu12
-            // 
-            resources.ApplyResources(this.spinShouCeShu12, "spinShouCeShu12");
-            this.spinShouCeShu12.Name = "spinShouCeShu12";
-            this.spinShouCeShu12.Properties.AutoHeight = ((bool)(resources.GetObject("spinEdit1.Properties.AutoHeight1")));
-            this.spinShouCeShu12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.Color.White;
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
-            // 
-            // spinQuYangShu12
-            // 
-            resources.ApplyResources(this.spinQuYangShu12, "spinQuYangShu12");
-            this.spinQuYangShu12.Name = "spinQuYangShu12";
-            this.spinQuYangShu12.Properties.AutoHeight = ((bool)(resources.GetObject("spinEdit1.Properties.AutoHeight")));
-            this.spinQuYangShu12.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.spinQuYangShu12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.Color.White;
-            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
-            // 
-            // spinPanDing12
-            // 
-            resources.ApplyResources(this.spinPanDing12, "spinPanDing12");
-            this.spinPanDing12.Name = "spinPanDing12";
-            this.spinPanDing12.Properties.AutoHeight = ((bool)(resources.GetObject("spinEdit2.Properties.AutoHeight")));
-            this.spinPanDing12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.White;
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.MaximizeBox = false;
             this.Name = "EditForm";
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -1047,11 +1045,14 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCusXOid.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditProduct.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spinPanDing12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinQuYangShu12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinShouCeShu12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinQuYangShu1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinShouCeShu1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinShouCeShu2.Properties)).EndInit();
@@ -1095,6 +1096,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -1107,10 +1109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinShouCeShu12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinQuYangShu12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinPanDing12.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

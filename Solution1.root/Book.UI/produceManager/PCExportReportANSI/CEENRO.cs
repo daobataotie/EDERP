@@ -37,6 +37,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
             //this.LbReportDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
             this.LbReportDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("dd/MM/yyyy");
             this.LbClearlens.Text = _PCExportReportANSI.Clearlens == null ? null : _PCExportReportANSI.Clearlens.ToString();
+            this.LbClearlens.Multiline = true;
+            this.LbTestTS.Borders= DevExpress.XtraPrinting.BorderSide.None; 
+            this.LbJudgeTS.Borders = DevExpress.XtraPrinting.BorderSide.None;
+
+            //this.xrTableCell37.DataBindings("Text",);
+            //this.xrTableCell37.Text = (_PCExportReportANSI.ShouCeShu6.HasValue ? _PCExportReportANSI.ShouCeShu6.ToString() : "0") + "OF";
+            //this.xrTableCell39.Text = (_PCExportReportANSI.PanDing6.HasValue ? _PCExportReportANSI.PanDing6.ToString() : "0") + "PASS";
             //this.lbTraceability.Text = _PCExportReportANSI.TraceMarking == null ? null : _PCExportReportANSI.TraceMarking.ToString();
             //this.xrLabel31.Text = "6mm dia.Steel ball at " + _PCExportReportANSI.CeShiSuLi + this.xrLabel31.Text;
 

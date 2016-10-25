@@ -112,13 +112,13 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
+  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <data name="barBtnInvoiceXO.Caption" xml:space="preserve">
     <value>订单</value>
@@ -135,15 +135,15 @@
   <data name="barPrintPPE.Caption" xml:space="preserve">
     <value>打印PPE</value>
   </data>
-  <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>148, 17</value>
   </metadata>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="imageCollection1.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v10.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFpEZXZFeHByZXNzLlV0aWxzLnYxMC4yLCBWZXJzaW9uPTEwLjIu
         NC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEMAwAAAFFT
-        eXN0ZW0uRHJhd2luZywgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRv
+        eXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRv
         a2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAChEZXZFeHByZXNzLlV0aWxzLkltYWdlQ29sbGVjdGlvblN0
         cmVhbWVyAgAAAAlJbWFnZVNpemUERGF0YQQHE1N5c3RlbS5EcmF3aW5nLlNpemUDAAAAAgIAAAAF/P//
         /xNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAV3aWR0aAZoZWlnaHQAAAgIAwAAABgAAAAYAAAACQUAAAAP
@@ -444,7 +444,7 @@
         PiydRVvthbEShq0tdS1YP1XNB1WKv8rxjMwZjD8BORXH707ETOoAAAAASUVORK5CYIIL
 </value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lookUpEditUnit.Location" type="System.Drawing.Point, System.Drawing">
     <value>700, 37</value>
   </data>
@@ -457,7 +457,7 @@
   <data name="lookUpEditUnit.Properties.Columns1" xml:space="preserve">
     <value>单位</value>
   </data>
-  <metadata name="bindingSourceUnit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="bindingSourceUnit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>303, 17</value>
   </metadata>
   <data name="lookUpEditUnit.Properties.NullText" xml:space="preserve">
@@ -466,7 +466,7 @@
   <data name="lookUpEditUnit.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lookUpEditUnit.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
@@ -483,10 +483,10 @@
     <value>4</value>
   </data>
   <data name="newChooseContorlAuditEmp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 87</value>
+    <value>99, 87</value>
   </data>
   <data name="newChooseContorlAuditEmp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 21</value>
+    <value>146, 21</value>
   </data>
   <data name="newChooseContorlAuditEmp.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -522,7 +522,7 @@
     <value>label2</value>
   </data>
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>layoutControl1</value>
@@ -549,7 +549,7 @@
     <value>label1</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>layoutControl1</value>
@@ -558,10 +558,10 @@
     <value>7</value>
   </data>
   <data name="txtCusXOid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>601, 12</value>
+    <value>600, 12</value>
   </data>
   <data name="txtCusXOid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 21</value>
+    <value>197, 21</value>
   </data>
   <data name="txtCusXOid.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -579,10 +579,10 @@
     <value>8</value>
   </data>
   <data name="txt_AuditState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 87</value>
+    <value>336, 87</value>
   </data>
   <data name="txt_AuditState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>173, 21</value>
   </data>
   <data name="txt_AuditState.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -600,10 +600,10 @@
     <value>9</value>
   </data>
   <data name="btnEditProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 12</value>
+    <value>336, 12</value>
   </data>
   <data name="btnEditProduct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>173, 21</value>
   </data>
   <data name="btnEditProduct.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -3795,7 +3795,7 @@
   <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -3818,7 +3818,7 @@
     <value>label19</value>
   </data>
   <data name="&gt;&gt;label19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label19.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -3832,7 +3832,7 @@
   <data name="spinPanDing12.Location" type="System.Drawing.Point, System.Drawing">
     <value>686, 708</value>
   </data>
-  <data name="spinEdit2.Properties.AutoHeight" type="System.Boolean, mscorlib">
+  <data name="spinPanDing12.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="spinPanDing12.Size" type="System.Drawing.Size, System.Drawing">
@@ -3878,7 +3878,7 @@
     <value>label18</value>
   </data>
   <data name="&gt;&gt;label18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label18.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -3892,7 +3892,7 @@
   <data name="spinQuYangShu12.Location" type="System.Drawing.Point, System.Drawing">
     <value>604, 708</value>
   </data>
-  <data name="spinEdit1.Properties.AutoHeight" type="System.Boolean, mscorlib">
+  <data name="spinQuYangShu12.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="spinQuYangShu12.Size" type="System.Drawing.Size, System.Drawing">
@@ -3938,7 +3938,7 @@
     <value>label17</value>
   </data>
   <data name="&gt;&gt;label17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label17.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -3952,7 +3952,7 @@
   <data name="spinShouCeShu12.Location" type="System.Drawing.Point, System.Drawing">
     <value>530, 708</value>
   </data>
-  <data name="spinEdit1.Properties.AutoHeight1" type="System.Boolean, mscorlib">
+  <data name="spinShouCeShu12.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="spinShouCeShu12.Size" type="System.Drawing.Size, System.Drawing">
@@ -4002,7 +4002,7 @@
     <value>label16</value>
   </data>
   <data name="&gt;&gt;label16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label16.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4029,7 +4029,7 @@
     <value>label14</value>
   </data>
   <data name="&gt;&gt;label14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label14.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4056,7 +4056,7 @@
     <value>label13</value>
   </data>
   <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label13.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4086,7 +4086,7 @@
     <value>label12</value>
   </data>
   <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4113,7 +4113,7 @@
     <value>label11</value>
   </data>
   <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label11.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4147,7 +4147,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label15</value>
   </data>
   <data name="&gt;&gt;label15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label15.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4177,7 +4177,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label10</value>
   </data>
   <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label10.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4204,7 +4204,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label9</value>
   </data>
   <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label9.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4231,7 +4231,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label8</value>
   </data>
   <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label8.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4261,7 +4261,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label7</value>
   </data>
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label7.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4288,7 +4288,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label6</value>
   </data>
   <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4318,7 +4318,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label5</value>
   </data>
   <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4345,7 +4345,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label4</value>
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -4375,7 +4375,7 @@ dropped from a height of 127cm (50.0 in),
     <value>label3</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -5335,7 +5335,7 @@ dropped from a height of 127cm (50.0 in),
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -5347,7 +5347,7 @@ dropped from a height of 127cm (50.0 in),
     <value>12, 112</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>785, 382</value>
+    <value>785, 400</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -5356,7 +5356,7 @@ dropped from a height of 127cm (50.0 in),
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>layoutControl1</value>
@@ -5365,10 +5365,10 @@ dropped from a height of 127cm (50.0 in),
     <value>11</value>
   </data>
   <data name="nccEmployee.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 62</value>
+    <value>336, 62</value>
   </data>
   <data name="nccEmployee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>173, 21</value>
   </data>
   <data name="nccEmployee.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -5413,10 +5413,10 @@ dropped from a height of 127cm (50.0 in),
     <value>0</value>
   </data>
   <data name="spinEditDDSL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 37</value>
+    <value>336, 37</value>
   </data>
   <data name="spinEditDDSL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>173, 21</value>
   </data>
   <data name="spinEditDDSL.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -5433,14 +5433,17 @@ dropped from a height of 127cm (50.0 in),
   <data name="&gt;&gt;spinEditDDSL.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <data name="dateEditReport.EditValue" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="dateEditReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>601, 62</value>
+    <value>600, 62</value>
   </data>
   <data name="dateEditReport.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="dateEditReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 21</value>
+    <value>197, 21</value>
   </data>
   <data name="dateEditReport.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -5458,10 +5461,10 @@ dropped from a height of 127cm (50.0 in),
     <value>15</value>
   </data>
   <data name="nccCustomer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 37</value>
+    <value>99, 37</value>
   </data>
   <data name="nccCustomer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 21</value>
+    <value>146, 21</value>
   </data>
   <data name="nccCustomer.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -5479,10 +5482,10 @@ dropped from a height of 127cm (50.0 in),
     <value>16</value>
   </data>
   <data name="txtPCExportReportId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 12</value>
+    <value>99, 12</value>
   </data>
   <data name="txtPCExportReportId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 21</value>
+    <value>146, 21</value>
   </data>
   <data name="txtPCExportReportId.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -5602,7 +5605,7 @@ dropped from a height of 127cm (50.0 in),
     <value>layoutControlGroup1</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>809, 506</value>
+    <value>809, 524</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -5622,17 +5625,17 @@ dropped from a height of 127cm (50.0 in),
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>44</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>809, 553</value>
+    <value>809, 571</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ANSI外销报告</value>
@@ -5671,7 +5674,7 @@ dropped from a height of 127cm (50.0 in),
     <value>bindingSourceUnit</value>
   </data>
   <data name="&gt;&gt;bindingSourceUnit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -5689,6 +5692,12 @@ dropped from a height of 127cm (50.0 in),
     <value>layoutControlItem4</value>
   </data>
   <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
@@ -5792,12 +5801,6 @@ dropped from a height of 127cm (50.0 in),
   </data>
   <data name="&gt;&gt;barPrintPPE.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
-    <value>layoutControlItem7</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

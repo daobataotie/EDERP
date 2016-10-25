@@ -124,6 +124,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
         protected override void MoveLast()
         {
+            if (sign == 1)
+            {
+                sign = 0;
+                return;
+            }
             this._pcExpANSI = this._pcExpANSIManager.mget_last("ANSI");
         }
 
