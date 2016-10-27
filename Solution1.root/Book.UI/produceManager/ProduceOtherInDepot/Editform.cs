@@ -38,6 +38,8 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             this.requireValueExceptions.Add(Model.ProduceOtherInDepot.PRO_ProduceOtherInDepotId, new AA(Properties.Resources.RequireDataForId, this.textEditProduceOtherInDepotId));
             //this.requireValueExceptions.Add(Model.ProduceOtherInDepot.PROPERTY_WORKHOUSEID, new AA(Properties.Resources.WorkHouse, this.newChooseWorkHorseId));
             this.invalidValueExceptions.Add(Model.ProduceOtherInDepot.PRO_ProduceOtherInDepotId, new AA(Properties.Resources.EntityExists, this.textEditProduceOtherInDepotId));
+            this.invalidValueExceptions.Add(Model.ProduceOtherInDepot.PRO_SupplierId, new AA(Properties.Resources.Supplier, this.newChooseContorlSipu));
+
             this.action = "view";
             this.newChooseEmployee0.Choose = new ChooseEmployee();
             this.newChooseEmployee1.Choose = new ChooseEmployee();

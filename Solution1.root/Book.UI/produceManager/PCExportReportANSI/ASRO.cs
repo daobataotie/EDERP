@@ -33,9 +33,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbModelNo.Text = _PCExportReportANSI.Product == null ? null : _PCExportReportANSI.Product.CustomerProductName;
             //this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
             this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("dd-MMM-yy", new System.Globalization.CultureInfo("en-us"));
+
             this.LbQtyTest.Text = (_PCExportReportANSI.QuYangShu2.HasValue ? _PCExportReportANSI.QuYangShu2.Value.ToString() : "0") + "PCS";
             this.LbBuyer.Text += "   " + (_PCExportReportANSI.Customer == null ? null : _PCExportReportANSI.Customer.ToString());
             this.LbOrderNo.Text += "   " + (_PCExportReportANSI.InvoiceCusXOId == null ? null : _PCExportReportANSI.InvoiceCusXOId.ToString());
+            this.lbl_OrderQuantity.Text += "   " + (_PCExportReportANSI.Amount.HasValue ? _PCExportReportANSI.Amount.ToString() + "PCS" : "");
+
             this.LbBatchNo.Text = _PCExportReportANSI.ProductBatchNo == null ? null : _PCExportReportANSI.ProductBatchNo.ToString();
             this.CheckVisual.Checked = _PCExportReportANSI.VisualTest.HasValue ? _PCExportReportANSI.VisualTest.Value : false;
             this.CheckThermal.Checked = _PCExportReportANSI.ThermalStability.HasValue ? _PCExportReportANSI.ThermalStability.Value : false;
@@ -43,7 +46,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.CheckPriHOut.Checked = _PCExportReportANSI.PrismaticPowerHOut.HasValue ? _PCExportReportANSI.PrismaticPowerHOut.Value : false;
             this.CheckPriVUp.Checked = _PCExportReportANSI.PrismaticPowerVUp.HasValue ? _PCExportReportANSI.PrismaticPowerVUp.Value : false;
             this.CheckPriVDwn.Checked = _PCExportReportANSI.PrismaticPowerVDwn.HasValue ? _PCExportReportANSI.PrismaticPowerVDwn.Value : false;
-            this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? _PCExportReportANSI.RefractivePower.Value.ToString("0.00") : "0.00";
+            this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? "(" + _PCExportReportANSI.RefractivePower.Value.ToString("0.00") + ") 2" : "(0.00) 2";
             this.CheckScatter.Checked = _PCExportReportANSI.ScatterLight.HasValue ? _PCExportReportANSI.ScatterLight.Value : false;
             this.CheckMdeium.Checked = _PCExportReportANSI.MediumImpact.HasValue ? _PCExportReportANSI.MediumImpact.Value : false;
             this.CheckHigh.Checked = _PCExportReportANSI.HighImpact.HasValue ? _PCExportReportANSI.HighImpact.Value : false;
@@ -55,7 +58,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbTester.Text = _PCExportReportANSI.Employee == null ? null : _PCExportReportANSI.Employee.ToString();
 
             //对外观，加热，坐标等判定新增的 测试数量
-            
+
             this.lbl1.Text = _PCExportReportANSI.ShouCeShu4.HasValue ? _PCExportReportANSI.ShouCeShu4.Value.ToString() : "";
             this.lbl2.Text = _PCExportReportANSI.ShouCeShu5.HasValue ? _PCExportReportANSI.ShouCeShu5.Value.ToString() : "";
             this.lbl3.Text = _PCExportReportANSI.ShouCeShu6.HasValue ? _PCExportReportANSI.ShouCeShu6.Value.ToString() : "";
@@ -70,7 +73,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbl12.Text = _PCExportReportANSI.ShouCeShu15.HasValue ? _PCExportReportANSI.ShouCeShu15.Value.ToString() : "";
             this.lbl13.Text = _PCExportReportANSI.ShouCeShu16.HasValue ? _PCExportReportANSI.ShouCeShu16.Value.ToString() : "";
             this.lbl14.Text = _PCExportReportANSI.ShouCeShu17.HasValue ? _PCExportReportANSI.ShouCeShu17.Value.ToString() : "";
-            
+
         }
 
     }

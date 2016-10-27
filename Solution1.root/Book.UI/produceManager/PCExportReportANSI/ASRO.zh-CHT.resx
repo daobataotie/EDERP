@@ -117,19 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_OrderQuantity.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_OrderQuantity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt, style=Bold, Underline</value>
+  </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lbl_OrderQuantity.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 185.1024</value>
+  </data>
+  <data name="lbl_OrderQuantity.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>814.9167, 58.4200058</value>
+  </data>
+  <data name="lbl_OrderQuantity.Text" xml:space="preserve">
+    <value>ORDER QTY(訂單數量):</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lbl_OrderQuantity.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
   <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>933.9788, 1336.04016</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>296.3334, 58.4202881</value>
   </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="xrLabel3.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -744,6 +762,9 @@
   </data>
   <data name="LbTestDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>179.91655, 139.912018</value>
+  </data>
+  <data name="xrLabel13.Text" xml:space="preserve">
+    <value>Tested against AS/NZS 1337.1:2010 Version</value>
   </data>
   <data name="LbOrderNo.Text" xml:space="preserve">
     <value>ORDER NO(訂單號碼):</value>

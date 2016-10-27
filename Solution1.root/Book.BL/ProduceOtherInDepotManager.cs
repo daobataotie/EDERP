@@ -268,6 +268,11 @@ namespace Book.BL
             {
                 throw new Helper.RequireValueException(Model.ProduceOtherInDepot.PRO_ProduceOtherInDepotId);
             }
+            if (string.IsNullOrEmpty(produceOtherInDepot.SupplierId))
+            {
+                throw new Helper.InvalidValueException(Model.ProduceOtherInDepot.PRO_SupplierId);
+            }
+            
             //if (string.IsNullOrEmpty(produceOtherInDepot.WorkHouseId))
             //{
             //    throw new Helper.RequireValueException(Model.ProduceOtherInDepot.PROPERTY_WORKHOUSEID);
