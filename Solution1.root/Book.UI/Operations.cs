@@ -737,6 +737,9 @@ namespace Book.UI
 
             //客戶商品年度出貨查詢
             operations.Add("Book.UI.Settings.BasicData.Customs.AnnualShipment", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Customs.AnnualShipmentByCustomer", form); });
+
+            //ANSI2015外销报告
+            operations.Add("produceManager.PCExportReportANSI.ANSI2015", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.ANSI2015", form); });
         }
 
         static Form CreateForm(string formTypeName)

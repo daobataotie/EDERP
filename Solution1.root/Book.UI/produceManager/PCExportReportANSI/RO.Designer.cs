@@ -278,6 +278,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // 
             this.lblCriteria3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             resources.ApplyResources(this.lblCriteria3, "lblCriteria3");
+            this.lblCriteria3.Multiline = true;
             this.lblCriteria3.Name = "lblCriteria3";
             this.lblCriteria3.StylePriority.UseBorders = false;
             this.lblCriteria3.StylePriority.UseTextAlignment = false;

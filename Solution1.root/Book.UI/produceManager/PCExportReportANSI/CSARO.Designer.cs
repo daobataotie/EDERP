@@ -108,6 +108,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbClearJudge = new DevExpress.XtraReports.UI.XRLabel();
             this.LbClearTestAmount = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrTableCell23 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -330,6 +331,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableRow6.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell16,
             this.xrTableCell17,
+            this.xrTableCell23,
             this.xrTableCell18});
             resources.ApplyResources(this.xrTableRow6, "xrTableRow6");
             this.xrTableRow6.Name = "xrTableRow6";
@@ -368,25 +370,28 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // xrTableCell18
             // 
             this.xrTableCell18.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbLightTestAmount,
             this.LbLightJudge});
             resources.ApplyResources(this.xrTableCell18, "xrTableCell18");
             this.xrTableCell18.Name = "xrTableCell18";
-            this.xrTableCell18.Weight = 1;
+            this.xrTableCell18.Weight = 0.47983439839025954;
             // 
             // LbLightTestAmount
             // 
+            this.LbLightTestAmount.Borders = DevExpress.XtraPrinting.BorderSide.None;
             resources.ApplyResources(this.LbLightTestAmount, "LbLightTestAmount");
             this.LbLightTestAmount.Name = "LbLightTestAmount";
             this.LbLightTestAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.LbLightTestAmount.StylePriority.UseBorders = false;
             this.LbLightTestAmount.StylePriority.UseFont = false;
             this.LbLightTestAmount.StylePriority.UseTextAlignment = false;
             // 
             // LbLightJudge
             // 
+            this.LbLightJudge.Borders = DevExpress.XtraPrinting.BorderSide.None;
             resources.ApplyResources(this.LbLightJudge, "LbLightJudge");
             this.LbLightJudge.Name = "LbLightJudge";
             this.LbLightJudge.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.LbLightJudge.StylePriority.UseBorders = false;
             this.LbLightJudge.StylePriority.UseFont = false;
             this.LbLightJudge.StylePriority.UseTextAlignment = false;
             // 
@@ -860,6 +865,14 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             // 
+            // xrTableCell23
+            // 
+            this.xrTableCell23.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.LbLightTestAmount});
+            resources.ApplyResources(this.xrTableCell23, "xrTableCell23");
+            this.xrTableCell23.Name = "xrTableCell23";
+            this.xrTableCell23.Weight = 0.52016560160974046;
+            // 
             // CSARO
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -966,5 +979,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRLabel xrLabel119;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell22;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell23;
     }
 }

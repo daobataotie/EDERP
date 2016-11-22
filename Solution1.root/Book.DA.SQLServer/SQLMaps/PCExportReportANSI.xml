@@ -120,5 +120,17 @@
       select *from PCExportReportANSI where ExpType=#JIS# and InvoiceCusXOId=#invoiceCusId#
       ]]>
     </select>
+
+    <select id="IsExistsForInsert" resultClass="bool" parameterClass="Map">
+      <![CDATA[
+      select case when exists (select * from PCExportReportANSI where ProductId=#ProductId# and InvoiceCusXOId=#InvoiceCusXOId# and ExpType=#ExpType#) then 1 else 0 end
+      ]]>
+    </select>
+
+    <select id="IsExistsForUpdate" resultClass="bool" parameterClass="Map">
+      <![CDATA[
+      select case when exists (select * from PCExportReportANSI where ProductId=#ProductId# and InvoiceCusXOId=#InvoiceCusXOId# and ExpType=#ExpType# and ExportReportId<>#ExportReportId#) then 1 else 0 end
+      ]]>
+    </select>
   </statements>
 </sqlMap>

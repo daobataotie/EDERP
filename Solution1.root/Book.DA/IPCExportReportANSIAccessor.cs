@@ -39,6 +39,10 @@ namespace Book.DA
         //IList<Model.PCExportReportANSI> Mhas_rows_of(string ExportReportId, string ExpType);
 
         IList<Model.PCExportReportANSI> SelectByInvoiceCusId(string invoiceCusId, string type);
+
+        bool IsExistsForUpdate(string productId, string invoiceCusId, string primaryId, string expType);
+
+        bool IsExistsForInsert(string productId, string invoiceCusId, string expType);
     }
 }
 

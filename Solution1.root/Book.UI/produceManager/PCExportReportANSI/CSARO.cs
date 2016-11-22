@@ -37,7 +37,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             //this.LbReportDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
             this.LbReportDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("dd/MM/yyyy");
             this.LbMirrorlens.Text = _PCExportReportANSI.Mirrorlens == null ? null : _PCExportReportANSI.Mirrorlens.ToString();
-
+            this.LbMirrorlens.Multiline = true;
             //this.xrTableCell20.Text = _PCExportReportANSI.CeShiSuLi + this.xrTableCell20.Text;
 
             this.LbOpticsTestAmount.Text = (_PCExportReportANSI.ShouCeShu1.HasValue ? _PCExportReportANSI.ShouCeShu1.ToString() : "0") + "OF";

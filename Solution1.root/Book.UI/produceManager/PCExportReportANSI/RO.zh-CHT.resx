@@ -135,7 +135,7 @@
     <value>TEST/測試項目</value>
   </data>
   <data name="lblCeShiBiaoZhun.Text" xml:space="preserve">
-    <value>ANSI  Z87.1-2012</value>
+    <value>ANSI  Z87.1-2010</value>
   </data>
   <data name="xrLabel12.Text" xml:space="preserve">
     <value>REPORT  DATE (測試報告日期)：</value>

@@ -805,6 +805,7 @@
             // 
             // dateEditReport
             // 
+            this.dateEditReport.EditValue = null;
             resources.ApplyResources(this.dateEditReport, "dateEditReport");
             this.dateEditReport.MenuManager = this.barManager1;
             this.dateEditReport.Name = "dateEditReport";

@@ -130,5 +130,26 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.PCExportReportANSI>("PCExportReportANSI.SelectByInvoiceCusId", ht);
         }
 
+        public bool IsExistsForInsert(string productId, string invoiceCusId, string expType)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("ProductId", productId);
+            ht.Add("InvoiceCusXOId", invoiceCusId);
+            ht.Add("ExpType",expType);
+
+            return sqlmapper.QueryForObject<bool>("PCExportReportANSI.IsExistsForInsert", ht);
+        }
+
+        public bool IsExistsForUpdate(string productId, string invoiceCusId, string primaryId, string expType)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("ProductId", productId);
+            ht.Add("InvoiceCusXOId", invoiceCusId);
+            ht.Add("ExportReportId", primaryId);
+            ht.Add("ExpType", expType);
+
+            return sqlmapper.QueryForObject<bool>("PCExportReportANSI.IsExistsForUpdate", ht);
+        }
+
     }
 }

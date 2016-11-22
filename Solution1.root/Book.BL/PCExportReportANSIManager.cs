@@ -29,7 +29,7 @@ namespace Book.BL
 
         public void Insert(Model.PCExportReportANSI pCExportReportANSI)
         {
-            Validate(pCExportReportANSI);
+            Validate(pCExportReportANSI, 0);
             try
             {
                 BL.V.BeginTransaction();
@@ -64,7 +64,7 @@ namespace Book.BL
         {
             if (pCExportReportANSI != null)
             {
-                Validate(pCExportReportANSI);
+                Validate(pCExportReportANSI, 1);
                 pCExportReportANSI.UpdateTime = DateTime.Now;
                 accessor.Update(pCExportReportANSI);
             }
@@ -99,7 +99,7 @@ namespace Book.BL
             }
         }
 
-        private void Validate(Model.PCExportReportANSI mPCExpANSI)
+        private void Validate(Model.PCExportReportANSI mPCExpANSI, int type)
         {
             if (string.IsNullOrEmpty(mPCExpANSI.ExportReportId))
                 throw new Helper.RequireValueException(Model.PCExportReportANSI.PRO_ExportReportId);
@@ -117,6 +117,17 @@ namespace Book.BL
                 throw new Helper.RequireValueException(Model.PCExportReportANSI.PRO_EmployeeId);
             if (string.IsNullOrEmpty(mPCExpANSI.ReportDate.ToString()))
                 throw new Helper.RequireValueException(Model.PCExportReportANSI.PRO_ReportDate);
+
+            if (type == 0) //insert
+            {
+                if (this.IsExistsForInsert(mPCExpANSI.ProductId, mPCExpANSI.InvoiceCusXOId, mPCExpANSI.ExpType))
+                    throw new Helper.MessageValueException(string.Format("商品:{0}，訂單號:{1}重複錄入！", mPCExpANSI.Product.ToString(), mPCExpANSI.InvoiceCusXOId));
+            }
+            else if (type == 1)
+            {
+                if (this.IsExistsForUpdate(mPCExpANSI.ProductId, mPCExpANSI.InvoiceCusXOId, mPCExpANSI.ExportReportId, mPCExpANSI.ExpType))
+                    throw new Helper.MessageValueException(string.Format("商品:{0}，訂單號:{1}重複錄入！", mPCExpANSI.Product.ToString(), mPCExpANSI.InvoiceCusXOId));
+            }
 
             //测试数量未达标
             //受测数量默认为订单数量的1/500,无条件进位.最大12
@@ -191,7 +202,17 @@ namespace Book.BL
 
         public IList<Model.PCExportReportANSI> SelectByInvoiceCusId(string invoiceCusId, string type)
         {
-            return accessor.SelectByInvoiceCusId(invoiceCusId,type);
+            return accessor.SelectByInvoiceCusId(invoiceCusId, type);
+        }
+
+        public bool IsExistsForInsert(string productId, string invoiceCusId, string expType)
+        {
+            return accessor.IsExistsForInsert(productId, invoiceCusId, expType);
+        }
+
+        public bool IsExistsForUpdate(string productId, string invoiceCusId, string primaryId, string expType)
+        {
+            return accessor.IsExistsForUpdate(productId, invoiceCusId, primaryId, expType);
         }
     }
 }

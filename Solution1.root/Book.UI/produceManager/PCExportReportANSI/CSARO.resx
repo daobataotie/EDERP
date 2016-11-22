@@ -410,13 +410,16 @@ Transmittance
     <value>新細明體, 10pt</value>
   </data>
   <data name="LbLightTestAmount.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0.000122070313, 0</value>
+    <value>0, 0</value>
   </data>
   <data name="LbLightTestAmount.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>346.603638, 222.25</value>
   </data>
   <data name="LbLightTestAmount.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
+  </data>
+  <data name="xrTableCell23.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="LbLightJudge.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -425,7 +428,7 @@ Transmittance
     <value>新細明體, 10pt</value>
   </data>
   <data name="LbLightJudge.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>346.604126, 0</value>
+    <value>0, 0.000484466553</value>
   </data>
   <data name="LbLightJudge.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>319.729, 222.25</value>
@@ -457,7 +460,7 @@ Transmittance
   <data name="xrTableCell13.Text" xml:space="preserve">
     <value>Clause 6.4.5
 Haze
-雾化测试</value>
+雾度测试</value>
   </data>
   <data name="xrTableCell13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
