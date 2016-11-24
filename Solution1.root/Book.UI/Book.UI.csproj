@@ -5017,6 +5017,9 @@
       <DependentUpon>OutDepotDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Query\Q53_2.zh-CHT.resx">
+      <DependentUpon>Q53_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Query\ROFP.resx">
       <DependentUpon>ROFP.cs</DependentUpon>
     </EmbeddedResource>
@@ -7609,6 +7612,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXSlist2.zh-CHT.resx">
       <DependentUpon>ROInvoiceXSlist2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\Q53_2.resx">
+      <DependentUpon>Q53_2.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ROStockPrompt.resx">
@@ -12624,6 +12631,12 @@
     </Compile>
     <Compile Include="Query\ROInvoiceXSlist2.Designer.cs">
       <DependentUpon>ROInvoiceXSlist2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\Q53_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\Q53_2.Designer.cs">
+      <DependentUpon>Q53_2.cs</DependentUpon>
     </Compile>
     <Compile Include="ROStockPrompt.cs">
       <SubType>Component</SubType>

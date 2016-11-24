@@ -58,6 +58,9 @@ namespace Book.UI.Query
             this.condition.EndDate = this.dateEditEndDate.EditValue == null ? global::Helper.DateTimeParse.EndDate : this.dateEditEndDate.DateTime;
             this.condition.SupplierId1 = this.newChooseSupplier1.EditValue == null ? null : (this.newChooseSupplier1.EditValue as Model.Supplier).Id;
             this.condition.SupplierId2 = this.newChooseSupplier2.EditValue == null ? null : (this.newChooseSupplier2.EditValue as Model.Supplier).Id;
+            this.condition.SupplierName1 = this.newChooseSupplier1.EditValue == null ? null : (this.newChooseSupplier1.EditValue as Model.Supplier).SupplierFullName;
+            this.condition.SupplierName2 = this.newChooseSupplier2.EditValue == null ? null : (this.newChooseSupplier2.EditValue as Model.Supplier).SupplierFullName;
+
             this.condition.ProduceOtherCompactId1 = this.buttonEditProduceOtherCompactId1.EditValue == null ? null : this.buttonEditProduceOtherCompactId1.EditValue.ToString();
             this.condition.ProduceOtherCompactId2 = this.buttonEditProduceOtherCompactId2.EditValue == null ? null : this.buttonEditProduceOtherCompactId2.EditValue.ToString();
             this.condition.ProductId1 = (this.buttonEditProduct1.EditValue as Model.Product) == null ? null : (this.buttonEditProduct1.EditValue as Model.Product).Id;

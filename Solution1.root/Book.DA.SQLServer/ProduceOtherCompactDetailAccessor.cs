@@ -106,5 +106,32 @@ namespace Book.DA.SQLServer
             ht.Add("productid", p);
             return sqlmapper.QueryForList<Model.ProduceOtherCompactDetail>("ProduceOtherCompactDetail.SelectByDateRangeAndProductId", ht);
         }
+
+        public DataTable SelectDetail(string StartCompactId, string EndCompactId, DateTime Startdate, DateTime EndDate, string StartSupplierId, string EndSupplierId, string StartPid, string EndPid, string InvoiceCusId)
+        {
+            StringBuilder sb = new StringBuilder("select pc.ProduceOtherCompactId,pc.ProduceOtherCompactDate,pcd.JiaoQi,p.ProductName,x.CustomerInvoiceXOId,pcd.OtherCompactCount,pcd.InDepotCount,pcd.CancelQuantity,pcd.ProductUnit from ProduceOtherCompactDetail pcd left join ProduceOtherCompact pc on pcd.ProduceOtherCompactId=pc.ProduceOtherCompactId left join Product p on pcd.ProductId=p.ProductId left join InvoiceXO x on pc.InvoiceXOId=x.InvoiceId");
+            sb.Append(" where pc.ProduceOtherCompactDate BETWEEN '" + Startdate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.AddDays(1).Date.ToString("yyyy-MM-dd") + "'");
+            if (!string.IsNullOrEmpty(StartCompactId) && !string.IsNullOrEmpty(EndCompactId))
+            {
+                sb.Append(" AND pc.ProduceOtherCompactId BETWEEN '" + StartCompactId + "' AND '" + EndCompactId + "'");
+            }
+            if (!string.IsNullOrEmpty(StartSupplierId) && !string.IsNullOrEmpty(EndSupplierId))
+            {
+                sb.Append(" AND pc.SupplierId IN (SELECT Supplier.SupplierId FROM Supplier WHERE Id BETWEEN '" + StartSupplierId + "' AND '" + EndSupplierId + "')");
+            }
+            if (!string.IsNullOrEmpty(StartPid) && !string.IsNullOrEmpty(EndPid))
+            {
+                sb.Append(" AND pcd.ProductId IN (SELECT Product.ProductId FROM Product WHERE Id BETWEEN '" + StartPid + "' AND '" + EndPid + "'))");
+            }
+            if (!string.IsNullOrEmpty(InvoiceCusId))
+                sb.Append(" AND pc.InvoiceXOId in (select InvoiceId from InvoiceXO where CustomerInvoiceXOId='" + InvoiceCusId + "')");
+
+            sb.Append(" AND pc.InvoiceStatus<>2 ORDER BY ProduceOtherCompactId DESC");
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sb.ToString(), sqlmapper.DataSource.ConnectionString);
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }

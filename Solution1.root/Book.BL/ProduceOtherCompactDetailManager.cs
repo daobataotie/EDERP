@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -91,6 +92,11 @@ namespace Book.BL
         public IList<Model.ProduceOtherCompactDetail> SelectByDateRangeAndProductId(DateTime dateStart, DateTime dateEnd, string p)
         {
             return accessor.SelectByDateRangeAndProductId(dateStart, dateEnd, p);
+        }
+
+        public DataTable SelectDetail(string StartCompactId, string EndCompactId, DateTime Startdate, DateTime EndDate, string StartSupplierId, string EndSupplierId, string StartPid, string EndPid, string InvoiceCusId)
+        {
+            return accessor.SelectDetail(StartCompactId, EndCompactId, Startdate, EndDate, StartSupplierId, EndSupplierId, StartPid, EndPid, InvoiceCusId);
         }
     }
 }

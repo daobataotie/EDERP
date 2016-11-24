@@ -8,6 +8,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.DA
 {
@@ -27,6 +28,7 @@ namespace Book.DA
         IList<Model.ProduceOtherCompactDetail> Select(string CompactId, string StartpId, string EndpId);
 
         IList<Model.ProduceOtherCompactDetail> SelectByDateRangeAndProductId(DateTime dateStart, DateTime dateEnd, string p);
+        DataTable SelectDetail(string StartCompactId, string EndCompactId, DateTime Startdate, DateTime EndDate, string StartSupplierId, string EndSupplierId, string StartPid, string EndPid, string InvoiceCusId);
     }
 
 }

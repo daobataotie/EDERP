@@ -544,7 +544,7 @@ namespace Book.UI
             operations.Add("query.customertransactionsrank", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.CustomerTransactionsRank", new Book.UI.Query.ConditionFChooseForm(Helper.CompanyKind.Customer)); });
 
             //operations.Add("checkDepot", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q45", new Book.UI.Query.ConditionLChooseForm()); });
-            operations.Add("query.q53", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q53", new Book.UI.Query.ConditionOtherCompactChooseForm()); });
+            operations.Add("query.q53", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q53_2", new Book.UI.Query.ConditionOtherCompactChooseForm()); });
             operations.Add("query.q54", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q54", new Book.UI.Query.ConditionOtherMaterialChooseForm()); });
             operations.Add("query.q55", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q55", new Book.UI.Query.ConditionOtherExitChooseForm()); });
             operations.Add("query.q56", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q56", new Book.UI.Query.ConditionOtherInDepotChooseForm()); });

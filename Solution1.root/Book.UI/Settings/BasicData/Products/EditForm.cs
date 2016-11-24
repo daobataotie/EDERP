@@ -3398,5 +3398,10 @@ namespace Book.UI.Settings.BasicData.Products
             this.bindingSourceProduceMaterial.DataSource = (new BL.ProduceMaterialdetailsManager().SelectByDateRange(this.product.ProductId, dateStart, dateEnd));
             this.gridControl7.RefreshDataSource();
         }
+
+        protected override string tableCode()
+        {
+            return "Product" + "," + this.product.Id;
+        }
     }
 }

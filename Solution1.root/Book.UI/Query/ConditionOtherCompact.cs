@@ -27,12 +27,28 @@ namespace Book.UI.Query
             get { return supplierId1; }
             set { supplierId1 = value; }
         }
+
+        private string supplierName1;
+
+        public string SupplierName1
+        {
+            get { return supplierName1; }
+            set { supplierName1 = value; }
+        }
         private string supplierId2;
 
         public string SupplierId2
         {
             get { return supplierId2; }
             set { supplierId2 = value; }
+        }
+
+        private string supplierName2;
+
+        public string SupplierName2
+        {
+            get { return supplierName2; }
+            set { supplierName2 = value; }
         }
         private string productId1;
 
@@ -56,5 +72,6 @@ namespace Book.UI.Query
             get { return invoiceCusId; }
             set { invoiceCusId = value; }
         }
+
     }
 }
