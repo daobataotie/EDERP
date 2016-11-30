@@ -38,8 +38,9 @@ namespace Book.UI.Query
 
             //Detail
             this.TC_Id.DataBindings.Add("Text", this.DataSource, "ProduceOtherCompactId");
-            this.TC_Date.DataBindings.Add("Text", this.DataSource, "ProduceOtherCompactDate", "{0:yyyy-MM-dd}");
-            this.TC_YJDate.DataBindings.Add("Text", this.DataSource, "JiaoQi", "{0:yyyy-MM-dd}");
+            this.TC_Date.DataBindings.Add("Text", this.DataSource, "ProduceOtherCompactDate");
+            this.TC_YJDate.DataBindings.Add("Text", this.DataSource, "JiaoQi");
+            this.TC_InvoiceYJDate.DataBindings.Add("Text", this.DataSource, "InvoiceYjrq");
             this.TC_InvoiceCusId.DataBindings.Add("Text", this.DataSource, "CustomerInvoiceXOId");
             this.TC_Product.DataBindings.Add("Text", this.DataSource, "ProductName");
             this.TC_Quantity.DataBindings.Add("Text", this.DataSource, "OtherCompactCount");

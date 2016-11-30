@@ -109,7 +109,7 @@ namespace Book.DA.SQLServer
 
         public DataTable SelectDetail(string StartCompactId, string EndCompactId, DateTime Startdate, DateTime EndDate, string StartSupplierId, string EndSupplierId, string StartPid, string EndPid, string InvoiceCusId)
         {
-            StringBuilder sb = new StringBuilder("select pc.ProduceOtherCompactId,pc.ProduceOtherCompactDate,pcd.JiaoQi,p.ProductName,x.CustomerInvoiceXOId,pcd.OtherCompactCount,pcd.InDepotCount,pcd.CancelQuantity,pcd.ProductUnit from ProduceOtherCompactDetail pcd left join ProduceOtherCompact pc on pcd.ProduceOtherCompactId=pc.ProduceOtherCompactId left join Product p on pcd.ProductId=p.ProductId left join InvoiceXO x on pc.InvoiceXOId=x.InvoiceId");
+            StringBuilder sb = new StringBuilder("select pc.ProduceOtherCompactId,Convert(varchar(50),pc.ProduceOtherCompactDate,111) as ProduceOtherCompactDate,Convert(varchar(50),pcd.JiaoQi,111) as JiaoQi,Convert(varchar(50),x.InvoiceYjrq,111) as InvoiceYjrq,p.ProductName,x.CustomerInvoiceXOId,pcd.OtherCompactCount,pcd.InDepotCount,pcd.CancelQuantity,pcd.ProductUnit from ProduceOtherCompactDetail pcd left join ProduceOtherCompact pc on pcd.ProduceOtherCompactId=pc.ProduceOtherCompactId left join Product p on pcd.ProductId=p.ProductId left join InvoiceXO x on pc.InvoiceXOId=x.InvoiceId");
             sb.Append(" where pc.ProduceOtherCompactDate BETWEEN '" + Startdate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.AddDays(1).Date.ToString("yyyy-MM-dd") + "'");
             if (!string.IsNullOrEmpty(StartCompactId) && !string.IsNullOrEmpty(EndCompactId))
             {

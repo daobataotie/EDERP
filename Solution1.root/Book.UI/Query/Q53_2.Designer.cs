@@ -30,10 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Q53_2));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.TC_Id = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_Date = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_YJDate = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_InvoiceCusId = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_Product = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_Quantity = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_InQuantity = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_CancelQuantity = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_Unit = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelSupplierId = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabelDateRange = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelDates = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -54,31 +76,11 @@
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.TC_Id = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_Date = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_YJDate = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_InvoiceCusId = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_Product = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_Quantity = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_InQuantity = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_CancelQuantity = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_Unit = new DevExpress.XtraReports.UI.XRTableCell();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
+            this.xrTableCell19 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_InvoiceYJDate = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -88,6 +90,87 @@
             resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // xrTable3
+            // 
+            resources.ApplyResources(this.xrTable3, "xrTable3");
+            this.xrTable3.Name = "xrTable3";
+            this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 254F);
+            this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow3});
+            this.xrTable3.StylePriority.UsePadding = false;
+            this.xrTable3.StylePriority.UseTextAlignment = false;
+            // 
+            // xrTableRow3
+            // 
+            this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.TC_Id,
+            this.TC_Date,
+            this.TC_YJDate,
+            this.TC_InvoiceYJDate,
+            this.TC_InvoiceCusId,
+            this.TC_Product,
+            this.TC_Quantity,
+            this.TC_InQuantity,
+            this.TC_CancelQuantity,
+            this.TC_Unit});
+            resources.ApplyResources(this.xrTableRow3, "xrTableRow3");
+            this.xrTableRow3.Name = "xrTableRow3";
+            this.xrTableRow3.Weight = 1;
+            // 
+            // TC_Id
+            // 
+            resources.ApplyResources(this.TC_Id, "TC_Id");
+            this.TC_Id.Name = "TC_Id";
+            this.TC_Id.Weight = 0.39642686185090614;
+            // 
+            // TC_Date
+            // 
+            resources.ApplyResources(this.TC_Date, "TC_Date");
+            this.TC_Date.Name = "TC_Date";
+            this.TC_Date.Weight = 0.24728157923307451;
+            // 
+            // TC_YJDate
+            // 
+            resources.ApplyResources(this.TC_YJDate, "TC_YJDate");
+            this.TC_YJDate.Name = "TC_YJDate";
+            this.TC_YJDate.Weight = 0.25556711633527407;
+            // 
+            // TC_InvoiceCusId
+            // 
+            resources.ApplyResources(this.TC_InvoiceCusId, "TC_InvoiceCusId");
+            this.TC_InvoiceCusId.Name = "TC_InvoiceCusId";
+            this.TC_InvoiceCusId.Weight = 0.31350323244774131;
+            // 
+            // TC_Product
+            // 
+            resources.ApplyResources(this.TC_Product, "TC_Product");
+            this.TC_Product.Name = "TC_Product";
+            this.TC_Product.Weight = 0.70326333658762163;
+            // 
+            // TC_Quantity
+            // 
+            resources.ApplyResources(this.TC_Quantity, "TC_Quantity");
+            this.TC_Quantity.Name = "TC_Quantity";
+            this.TC_Quantity.Weight = 0.17788592672480255;
+            // 
+            // TC_InQuantity
+            // 
+            resources.ApplyResources(this.TC_InQuantity, "TC_InQuantity");
+            this.TC_InQuantity.Name = "TC_InQuantity";
+            this.TC_InQuantity.Weight = 0.22928555395449862;
+            // 
+            // TC_CancelQuantity
+            // 
+            resources.ApplyResources(this.TC_CancelQuantity, "TC_CancelQuantity");
+            this.TC_CancelQuantity.Name = "TC_CancelQuantity";
+            this.TC_CancelQuantity.Weight = 0.23757115078838176;
+            // 
+            // TC_Unit
+            // 
+            resources.ApplyResources(this.TC_Unit, "TC_Unit");
+            this.TC_Unit.Name = "TC_Unit";
+            this.TC_Unit.Weight = 0.16299836612342583;
             // 
             // ReportTitle
             // 
@@ -123,6 +206,87 @@
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // xrTable2
+            // 
+            resources.ApplyResources(this.xrTable2, "xrTable2");
+            this.xrTable2.Name = "xrTable2";
+            this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 254F);
+            this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow2});
+            this.xrTable2.StylePriority.UsePadding = false;
+            this.xrTable2.StylePriority.UseTextAlignment = false;
+            // 
+            // xrTableRow2
+            // 
+            this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell13,
+            this.xrTableCell6,
+            this.xrTableCell11,
+            this.xrTableCell19,
+            this.xrTableCell14,
+            this.xrTableCell15,
+            this.xrTableCell12,
+            this.xrTableCell18,
+            this.xrTableCell16,
+            this.xrTableCell17});
+            resources.ApplyResources(this.xrTableRow2, "xrTableRow2");
+            this.xrTableRow2.Name = "xrTableRow2";
+            this.xrTableRow2.Weight = 1;
+            // 
+            // xrTableCell13
+            // 
+            resources.ApplyResources(this.xrTableCell13, "xrTableCell13");
+            this.xrTableCell13.Name = "xrTableCell13";
+            this.xrTableCell13.Weight = 0.39642688574357948;
+            // 
+            // xrTableCell6
+            // 
+            resources.ApplyResources(this.xrTableCell6, "xrTableCell6");
+            this.xrTableCell6.Name = "xrTableCell6";
+            this.xrTableCell6.Weight = 0.24728162701842124;
+            // 
+            // xrTableCell11
+            // 
+            resources.ApplyResources(this.xrTableCell11, "xrTableCell11");
+            this.xrTableCell11.Name = "xrTableCell11";
+            this.xrTableCell11.Weight = 0.25556721190596754;
+            // 
+            // xrTableCell14
+            // 
+            resources.ApplyResources(this.xrTableCell14, "xrTableCell14");
+            this.xrTableCell14.Name = "xrTableCell14";
+            this.xrTableCell14.Weight = 0.31350323244774136;
+            // 
+            // xrTableCell15
+            // 
+            resources.ApplyResources(this.xrTableCell15, "xrTableCell15");
+            this.xrTableCell15.Name = "xrTableCell15";
+            this.xrTableCell15.Weight = 0.703263432158315;
+            // 
+            // xrTableCell12
+            // 
+            resources.ApplyResources(this.xrTableCell12, "xrTableCell12");
+            this.xrTableCell12.Name = "xrTableCell12";
+            this.xrTableCell12.Weight = 0.17788573558341578;
+            // 
+            // xrTableCell18
+            // 
+            resources.ApplyResources(this.xrTableCell18, "xrTableCell18");
+            this.xrTableCell18.Name = "xrTableCell18";
+            this.xrTableCell18.Weight = 0.22928555395449862;
+            // 
+            // xrTableCell16
+            // 
+            resources.ApplyResources(this.xrTableCell16, "xrTableCell16");
+            this.xrTableCell16.Name = "xrTableCell16";
+            this.xrTableCell16.Weight = 0.23757115078838176;
+            // 
+            // xrTableCell17
+            // 
+            resources.ApplyResources(this.xrTableCell17, "xrTableCell17");
+            this.xrTableCell17.Name = "xrTableCell17";
+            this.xrTableCell17.Weight = 0.16299836612342583;
             // 
             // xrLabelDateRange
             // 
@@ -280,165 +444,19 @@
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrPageInfo2.StylePriority.UseTextAlignment = false;
             // 
-            // xrTable2
+            // xrTableCell19
             // 
-            resources.ApplyResources(this.xrTable2, "xrTable2");
-            this.xrTable2.Name = "xrTable2";
-            this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 254F);
-            this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.xrTableRow2});
-            this.xrTable2.StylePriority.UsePadding = false;
-            this.xrTable2.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.xrTableCell19, "xrTableCell19");
+            this.xrTableCell19.Name = "xrTableCell19";
+            this.xrTableCell19.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 0, 3, 3, 254F);
+            this.xrTableCell19.StylePriority.UsePadding = false;
+            this.xrTableCell19.Weight = 0.27621680427625334;
             // 
-            // xrTableRow2
+            // TC_InvoiceYJDate
             // 
-            this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell13,
-            this.xrTableCell6,
-            this.xrTableCell11,
-            this.xrTableCell14,
-            this.xrTableCell15,
-            this.xrTableCell12,
-            this.xrTableCell18,
-            this.xrTableCell16,
-            this.xrTableCell17});
-            resources.ApplyResources(this.xrTableRow2, "xrTableRow2");
-            this.xrTableRow2.Name = "xrTableRow2";
-            this.xrTableRow2.Weight = 1;
-            // 
-            // xrTableCell6
-            // 
-            resources.ApplyResources(this.xrTableCell6, "xrTableCell6");
-            this.xrTableCell6.Name = "xrTableCell6";
-            this.xrTableCell6.Weight = 0.26385339411034775;
-            // 
-            // xrTableCell11
-            // 
-            resources.ApplyResources(this.xrTableCell11, "xrTableCell11");
-            this.xrTableCell11.Name = "xrTableCell11";
-            this.xrTableCell11.Weight = 0.25556711633527412;
-            // 
-            // xrTableCell12
-            // 
-            resources.ApplyResources(this.xrTableCell12, "xrTableCell12");
-            this.xrTableCell12.Name = "xrTableCell12";
-            this.xrTableCell12.Weight = 0.17788573558341578;
-            // 
-            // xrTableCell13
-            // 
-            resources.ApplyResources(this.xrTableCell13, "xrTableCell13");
-            this.xrTableCell13.Name = "xrTableCell13";
-            this.xrTableCell13.Weight = 0.39642688574357948;
-            // 
-            // xrTableCell14
-            // 
-            resources.ApplyResources(this.xrTableCell14, "xrTableCell14");
-            this.xrTableCell14.Name = "xrTableCell14";
-            this.xrTableCell14.Weight = 0.36185886041951204;
-            // 
-            // xrTableCell15
-            // 
-            resources.ApplyResources(this.xrTableCell15, "xrTableCell15");
-            this.xrTableCell15.Name = "xrTableCell15";
-            this.xrTableCell15.Weight = 0.91455293694156448;
-            // 
-            // xrTableCell16
-            // 
-            resources.ApplyResources(this.xrTableCell16, "xrTableCell16");
-            this.xrTableCell16.Name = "xrTableCell16";
-            this.xrTableCell16.Weight = 0.23757115078838176;
-            // 
-            // xrTableCell17
-            // 
-            resources.ApplyResources(this.xrTableCell17, "xrTableCell17");
-            this.xrTableCell17.Name = "xrTableCell17";
-            this.xrTableCell17.Weight = 0.16299836612342583;
-            // 
-            // xrTableCell18
-            // 
-            resources.ApplyResources(this.xrTableCell18, "xrTableCell18");
-            this.xrTableCell18.Name = "xrTableCell18";
-            this.xrTableCell18.Weight = 0.22928555395449862;
-            // 
-            // xrTable3
-            // 
-            resources.ApplyResources(this.xrTable3, "xrTable3");
-            this.xrTable3.Name = "xrTable3";
-            this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 254F);
-            this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.xrTableRow3});
-            this.xrTable3.StylePriority.UsePadding = false;
-            this.xrTable3.StylePriority.UseTextAlignment = false;
-            // 
-            // xrTableRow3
-            // 
-            this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.TC_Id,
-            this.TC_Date,
-            this.TC_YJDate,
-            this.TC_InvoiceCusId,
-            this.TC_Product,
-            this.TC_Quantity,
-            this.TC_InQuantity,
-            this.TC_CancelQuantity,
-            this.TC_Unit});
-            resources.ApplyResources(this.xrTableRow3, "xrTableRow3");
-            this.xrTableRow3.Name = "xrTableRow3";
-            this.xrTableRow3.Weight = 1;
-            // 
-            // TC_Id
-            // 
-            resources.ApplyResources(this.TC_Id, "TC_Id");
-            this.TC_Id.Name = "TC_Id";
-            this.TC_Id.Weight = 0.39642686185090614;
-            // 
-            // TC_Date
-            // 
-            resources.ApplyResources(this.TC_Date, "TC_Date");
-            this.TC_Date.Name = "TC_Date";
-            this.TC_Date.Weight = 0.26385329853965434;
-            // 
-            // TC_YJDate
-            // 
-            resources.ApplyResources(this.TC_YJDate, "TC_YJDate");
-            this.TC_YJDate.Name = "TC_YJDate";
-            this.TC_YJDate.Weight = 0.2555672835839875;
-            // 
-            // TC_InvoiceCusId
-            // 
-            resources.ApplyResources(this.TC_InvoiceCusId, "TC_InvoiceCusId");
-            this.TC_InvoiceCusId.Name = "TC_InvoiceCusId";
-            this.TC_InvoiceCusId.Weight = 0.36185866927812527;
-            // 
-            // TC_Product
-            // 
-            resources.ApplyResources(this.TC_Product, "TC_Product");
-            this.TC_Product.Name = "TC_Product";
-            this.TC_Product.Weight = 0.9145528891562178;
-            // 
-            // TC_Quantity
-            // 
-            resources.ApplyResources(this.TC_Quantity, "TC_Quantity");
-            this.TC_Quantity.Name = "TC_Quantity";
-            this.TC_Quantity.Weight = 0.17788592672480255;
-            // 
-            // TC_InQuantity
-            // 
-            resources.ApplyResources(this.TC_InQuantity, "TC_InQuantity");
-            this.TC_InQuantity.Name = "TC_InQuantity";
-            this.TC_InQuantity.Weight = 0.22928555395449862;
-            // 
-            // TC_CancelQuantity
-            // 
-            resources.ApplyResources(this.TC_CancelQuantity, "TC_CancelQuantity");
-            this.TC_CancelQuantity.Name = "TC_CancelQuantity";
-            this.TC_CancelQuantity.Weight = 0.23757115078838176;
-            // 
-            // TC_Unit
-            // 
-            resources.ApplyResources(this.TC_Unit, "TC_Unit");
-            this.TC_Unit.Name = "TC_Unit";
-            this.TC_Unit.Weight = 0.16299836612342583;
+            resources.ApplyResources(this.TC_InvoiceYJDate, "TC_InvoiceYJDate");
+            this.TC_InvoiceYJDate.Name = "TC_InvoiceYJDate";
+            this.TC_InvoiceYJDate.Weight = 0.27621687595427336;
             // 
             // Q53_2
             // 
@@ -455,9 +473,9 @@
             this.PageHeight = 2794;
             this.PageWidth = 2159;
             this.Version = "10.2";
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -511,5 +529,7 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell18;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;
+        private DevExpress.XtraReports.UI.XRTableCell TC_InvoiceYJDate;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell19;
     }
 }

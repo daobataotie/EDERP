@@ -175,14 +175,8 @@
   <data name="xrTableRow1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrLabelCustomerXoId.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
   <data name="xrLabelSupplierId.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>394.912354, 50.0000153</value>
-  </data>
-  <data name="ReportTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 15pt, style=Bold</value>
   </data>
   <data name="ReportName.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 0</value>
@@ -235,6 +229,9 @@
   <data name="xrLabelWorkHouse.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1509.08752, 50.0000153</value>
   </data>
+  <data name="xrLabelJhDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>365.558319, 49.9999962</value>
+  </data>
   <data name="xrTableCell4.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -267,6 +264,9 @@
   </data>
   <data name="xrPageInfo2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="xrLabelProduceOtherCompactId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>225.954, 0</value>
   </data>
   <data name="xrLabelEmployee0.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -307,6 +307,9 @@
   <data name="xrTableCell7.Text" xml:space="preserve">
     <value>单位</value>
   </data>
+  <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1905, 50</value>
+  </data>
   <data name="PageFooter.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -315,6 +318,9 @@
   </data>
   <data name="xrLabelDateRange.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>1201.45825, 50.0000076</value>
+  </data>
+  <data name="xrTableCell2.Text" xml:space="preserve">
+    <value>规格</value>
   </data>
   <data name="xrTableCell4.Text" xml:space="preserve">
     <value>通知单编号</value>
@@ -382,9 +388,6 @@
   <data name="xrLabelDateRange.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrLabel5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
-  </data>
   <data name="$this.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -439,6 +442,9 @@
   <data name="xrLabelDates.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
+  <data name="xrLine1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="xrSubreport1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>4.08332634, 150.000137</value>
   </data>
@@ -450,9 +456,6 @@
   </data>
   <data name="bottomMarginBand1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
-  </data>
-  <data name="xrLabel13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
   </data>
   <data name="xrLabel7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -502,8 +505,8 @@
   <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>225.954, 49.9999962</value>
   </data>
-  <data name="xrLine1.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="ReportTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 15pt, style=Bold</value>
   </data>
   <data name="xrTableCell5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -511,8 +514,8 @@
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
     <value>83</value>
   </data>
-  <data name="ReportTitle.Text" xml:space="preserve">
-    <value>ReportTitle</value>
+  <data name="xrLabel5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="xrLabelProduceOtherCompactDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>888.470947, 0</value>
@@ -523,11 +526,8 @@
   <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1264.70837, 100.000114</value>
   </data>
-  <data name="xrTableCell2.Text" xml:space="preserve">
-    <value>规格</value>
-  </data>
-  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 0</value>
+  <data name="ReportTitle.Text" xml:space="preserve">
+    <value>ReportTitle</value>
   </data>
   <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>225.954, 50</value>
@@ -541,11 +541,11 @@
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 0</value>
   </data>
-  <data name="xrLabelProduceOtherCompactId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>225.954, 0</value>
+  <data name="xrLabelCustomerXoId.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
-  <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1905, 50</value>
+  <data name="xrLabel13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
     <value>118.000023</value>
@@ -563,8 +563,8 @@
   <data name="xrTableCell8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
-  <data name="xrLabelJhDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>365.558319, 49.9999962</value>
+  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 0</value>
   </data>
   <data name="xrLabel3.Text" xml:space="preserve">
     <value>制 单 人：</value>

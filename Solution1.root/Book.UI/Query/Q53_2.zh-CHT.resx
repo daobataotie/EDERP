@@ -130,6 +130,9 @@
   <data name="TC_YJDate.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="TC_InvoiceYJDate.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="TC_InvoiceCusId.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -204,6 +207,12 @@
   </data>
   <data name="xrTableCell11.Text" xml:space="preserve">
     <value>交貨日期</value>
+  </data>
+  <data name="xrTableCell19.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell19.Text" xml:space="preserve">
+    <value>訂單預交日</value>
   </data>
   <data name="xrTableCell14.Dpi" type="System.Single, mscorlib">
     <value>254</value>
