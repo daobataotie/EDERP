@@ -470,13 +470,13 @@
     <value>記號</value>
   </data>
   <data name="colattrFangWuMoYingDu.Caption" xml:space="preserve">
-    <value>防雾膜硬度實驗</value>
+    <value>防霧膜測試</value>
   </data>
   <data name="colattrQiangHuaMo.Caption" xml:space="preserve">
-    <value>强化膜實驗</value>
+    <value>強化模測試</value>
   </data>
   <data name="colattrZhePian.Caption" xml:space="preserve">
-    <value>折片實驗</value>
+    <value>折片測試</value>
   </data>
   <data name="colattrMaoBian.Caption" xml:space="preserve">
     <value>毛邊</value>

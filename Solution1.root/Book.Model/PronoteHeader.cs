@@ -166,6 +166,8 @@ namespace Book.Model
             set { this._heJiCheckOutSum = value; }
         }
 
+        public string DateHelp { get; set; }
+
         /// <summary>
         /// 射出工作单-原料
         /// </summary>

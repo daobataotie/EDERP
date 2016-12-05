@@ -55,6 +55,7 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
@@ -148,7 +149,8 @@
             this.gridColumn2,
             this.gridColumn4,
             this.gridColumn3,
-            this.gridColumn5});
+            this.gridColumn5,
+            this.gridColumn6});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -288,6 +290,12 @@
             this.layoutControlItem8.Size = new System.Drawing.Size(258, 26);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 14);
             // 
+            // gridColumn6
+            // 
+            resources.ApplyResources(this.gridColumn6, "gridColumn6");
+            this.gridColumn6.FieldName = "ProductVersion";
+            this.gridColumn6.Name = "gridColumn6";
+            // 
             // NoDepotOutProducts
             // 
             resources.ApplyResources(this, "$this");
@@ -341,5 +349,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private Book.UI.Invoices.NewChooseContorl newChooseContorl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }

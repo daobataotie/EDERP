@@ -120,6 +120,12 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
+  <data name="barBtnSearch.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barBtnContionPrint.Caption" xml:space="preserve">
+    <value>条件列印</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -975,7 +981,7 @@
     <value>10</value>
   </data>
   <data name="colattrFangWuMoYingDu.Caption" xml:space="preserve">
-    <value>防雾膜硬度实验</value>
+    <value>防雾膜测试</value>
   </data>
   <data name="repositoryItemLookUpEdit13.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -990,7 +996,7 @@
     <value>11</value>
   </data>
   <data name="colattrQiangHuaMo.Caption" xml:space="preserve">
-    <value>强化膜实验</value>
+    <value>强化模测试</value>
   </data>
   <data name="repositoryItemLookUpEdit12.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1005,7 +1011,7 @@
     <value>12</value>
   </data>
   <data name="colattrZhePian.Caption" xml:space="preserve">
-    <value>折片试验</value>
+    <value>折片测试</value>
   </data>
   <data name="repositoryItemLookUpEdit11.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1103,12 +1109,6 @@
   <data name="repositoryItemLookUpEdit4.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
-  <data name="attrGaoDiJiaoL.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="attrGaoDiJiaoL.VisibleIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
   <data name="attrGaoDiJiaoR.Caption" xml:space="preserve">
     <value>高低脚(右)</value>
   </data>
@@ -1117,12 +1117,6 @@
   </data>
   <data name="repositoryItemLookUpEdit5.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
-  </data>
-  <data name="attrGaoDiJiaoR.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="attrGaoDiJiaoR.VisibleIndex" type="System.Int32, mscorlib">
-    <value>19</value>
   </data>
   <data name="attrZhuangJiaoSJD.Caption" xml:space="preserve">
     <value>装脚松紧度</value>
@@ -1133,12 +1127,6 @@
   <data name="GVCattrZhuangJiaoSJD.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
-  <data name="attrZhuangJiaoSJD.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="attrZhuangJiaoSJD.VisibleIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>醋酸测试</value>
   </data>
@@ -1147,12 +1135,6 @@
   </data>
   <data name="repositoryItemLookUpEdit3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
-  </data>
-  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>22</value>
   </data>
   <data name="attrZhuangJiaoSJDR.Caption" xml:space="preserve">
     <value>装脚松紧度(右)</value>
@@ -1182,7 +1164,7 @@
     <value>True</value>
   </data>
   <data name="PCPGOnlineCheckDetailDesc.VisibleIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>18</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>商品</value>
@@ -1588,12 +1570,6 @@
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>班別：</value>
-  </data>
-  <data name="barBtnSearch.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="barBtnContionPrint.Caption" xml:space="preserve">
-    <value>条件列印</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -138,6 +138,9 @@
   <data name="TCCustomer.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
+  <data name="TC_Version.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="TCLastDepotoutDate.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -252,6 +255,12 @@
   </data>
   <data name="客户.Text" xml:space="preserve">
     <value>客户</value>
+  </data>
+  <data name="xrTableCell2.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell2.Text" xml:space="preserve">
+    <value>版本</value>
   </data>
   <data name="xrTableCell1.Dpi" type="System.Single, mscorlib">
     <value>254</value>

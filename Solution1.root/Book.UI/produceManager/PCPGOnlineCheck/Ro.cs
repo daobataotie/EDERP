@@ -57,8 +57,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.TCattrDianDuPDSLv.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrDianDuPDSLv);
             this.TCattrExterior.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrExterior);
             this.TCattrFangWuMoYingDu.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrFangWuMoYingDu);
-            this.TCattrGaoDiJiaoL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoL);
-            this.TCattrGaoDiJiaoR.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoR);
+            //this.TCattrGaoDiJiaoL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoL);
+            //this.TCattrGaoDiJiaoR.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoR);
             this.TCattrGuanXue.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGuanXue);
             this.TCattrHouDu.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrHouDu);
             this.TCattrMaoBian.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrMaoBian);
@@ -66,7 +66,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.TCattrTouShiLv.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrTouShiLv);
             this.TCattrUVChengFen.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrUVChengFen);
             this.TCattrZhePian.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrZhePian);
-            this.TCattrZhuangJiaoSJDL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrZhuangJiaoSJDL);
+            //this.TCattrZhuangJiaoSJDL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrZhuangJiaoSJDL);
             this.TCCheckQuantity.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_CheckQuantity);
             this.TCImpactCheck.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_ImpactCheck);
             this.TCPCPGOnlineCheckDetailDate.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_PCPGOnlineCheckDetailDate, "{0:yyyy-MM-dd HH:mm:ss}");
@@ -122,8 +122,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.TCattrDianDuPDSLv.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrDianDuPDSLv);
             this.TCattrExterior.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrExterior);
             this.TCattrFangWuMoYingDu.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrFangWuMoYingDu);
-            this.TCattrGaoDiJiaoL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoL);
-            this.TCattrGaoDiJiaoR.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoR);
+            //this.TCattrGaoDiJiaoL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoL);
+            //this.TCattrGaoDiJiaoR.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoR);
             this.TCattrGuanXue.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGuanXue);
             this.TCattrHouDu.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrHouDu);
             this.TCattrMaoBian.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrMaoBian);
@@ -131,7 +131,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.TCattrTouShiLv.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrTouShiLv);
             this.TCattrUVChengFen.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrUVChengFen);
             this.TCattrZhePian.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrZhePian);
-            this.TCattrZhuangJiaoSJDL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrZhuangJiaoSJDL);
+            //this.TCattrZhuangJiaoSJDL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrZhuangJiaoSJDL);
             this.TCCheckQuantity.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_CheckQuantity);
             this.TCImpactCheck.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_ImpactCheck);
             this.TCPCPGOnlineCheckDetailDate.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_PCPGOnlineCheckDetailDate, "{0:yyyy-MM-dd HH:mm:ss}");

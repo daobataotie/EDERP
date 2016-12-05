@@ -301,7 +301,7 @@
     <value>0</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>283</value>
+    <value>256</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>客户型号</value>
@@ -313,7 +313,7 @@
     <value>1</value>
   </data>
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
-    <value>129</value>
+    <value>116</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>最后一次出仓日期</value>
@@ -322,10 +322,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
-    <value>110</value>
+    <value>106</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>库存</value>
@@ -334,10 +334,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
-    <value>85</value>
+    <value>73</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>客户</value>
@@ -349,7 +349,19 @@
     <value>2</value>
   </data>
   <data name="gridColumn5.Width" type="System.Int32, mscorlib">
-    <value>108</value>
+    <value>97</value>
+  </data>
+  <data name="gridColumn6.Caption" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="gridColumn6.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gridColumn6.Width" type="System.Int32, mscorlib">
+    <value>67</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>733, 384</value>
@@ -557,6 +569,12 @@
   </data>
   <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn6.Name" xml:space="preserve">
+    <value>gridColumn6</value>
+  </data>
+  <data name="&gt;&gt;gridColumn6.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>NoDepotOutProducts</value>

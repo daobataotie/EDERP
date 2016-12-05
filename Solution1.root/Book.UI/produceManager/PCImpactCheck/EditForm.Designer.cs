@@ -32,12 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.BarBtn_Search = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btn_InvoiceCO = new DevExpress.XtraEditors.SimpleButton();
             this.newChooseContorlAuditEmp = new Book.UI.Invoices.NewChooseContorl();
             this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDelDetail = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddDetail = new DevExpress.XtraEditors.SimpleButton();
-            this.btnGetOtherPacmt = new DevExpress.XtraEditors.SimpleButton();
             this.nccEmployee0 = new Book.UI.Invoices.NewChooseContorl();
             this.txtPCImpactCheckDesc = new DevExpress.XtraEditors.MemoEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -136,9 +136,10 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RICBattr60L = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.nccWorkHouse = new Book.UI.Invoices.NewChooseContorl();
-            this.btnGetPronoteHeader = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGetOtherPacmt = new DevExpress.XtraEditors.SimpleButton();
             this.DE_PCImpactCheckDate = new DevExpress.XtraEditors.DateEdit();
             this.txtPCImpactCheckId = new DevExpress.XtraEditors.TextEdit();
+            this.btnGetPronoteHeader = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -155,7 +156,6 @@
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btn_InvoiceCO = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -283,6 +283,13 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
+            // btn_InvoiceCO
+            // 
+            resources.ApplyResources(this.btn_InvoiceCO, "btn_InvoiceCO");
+            this.btn_InvoiceCO.Name = "btn_InvoiceCO";
+            this.btn_InvoiceCO.StyleController = this.layoutControl1;
+            this.btn_InvoiceCO.Click += new System.EventHandler(this.btn_InvoiceCO_Click);
+            // 
             // newChooseContorlAuditEmp
             // 
             this.newChooseContorlAuditEmp.EditValue = null;
@@ -320,13 +327,6 @@
             this.btnAddDetail.Name = "btnAddDetail";
             this.btnAddDetail.StyleController = this.layoutControl1;
             this.btnAddDetail.Click += new System.EventHandler(this.btnAddDetail_Click);
-            // 
-            // btnGetOtherPacmt
-            // 
-            resources.ApplyResources(this.btnGetOtherPacmt, "btnGetOtherPacmt");
-            this.btnGetOtherPacmt.Name = "btnGetOtherPacmt";
-            this.btnGetOtherPacmt.StyleController = this.layoutControl1;
-            this.btnGetOtherPacmt.Click += new System.EventHandler(this.btnGetOtherPacmt_Click);
             // 
             // nccEmployee0
             // 
@@ -1121,12 +1121,12 @@
             resources.ApplyResources(this.nccWorkHouse, "nccWorkHouse");
             this.nccWorkHouse.Name = "nccWorkHouse";
             // 
-            // btnGetPronoteHeader
+            // btnGetOtherPacmt
             // 
-            resources.ApplyResources(this.btnGetPronoteHeader, "btnGetPronoteHeader");
-            this.btnGetPronoteHeader.Name = "btnGetPronoteHeader";
-            this.btnGetPronoteHeader.StyleController = this.layoutControl1;
-            this.btnGetPronoteHeader.Click += new System.EventHandler(this.btnGetPronoteHeader_Click);
+            resources.ApplyResources(this.btnGetOtherPacmt, "btnGetOtherPacmt");
+            this.btnGetOtherPacmt.Name = "btnGetOtherPacmt";
+            this.btnGetOtherPacmt.StyleController = this.layoutControl1;
+            this.btnGetOtherPacmt.Click += new System.EventHandler(this.btnGetOtherPacmt_Click);
             // 
             // DE_PCImpactCheckDate
             // 
@@ -1166,6 +1166,13 @@
             this.txtPCImpactCheckId.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txtPCImpactCheckId.Properties.Mask.ShowPlaceHolders")));
             this.txtPCImpactCheckId.Properties.NullValuePrompt = null;
             this.txtPCImpactCheckId.StyleController = this.layoutControl1;
+            // 
+            // btnGetPronoteHeader
+            // 
+            resources.ApplyResources(this.btnGetPronoteHeader, "btnGetPronoteHeader");
+            this.btnGetPronoteHeader.Name = "btnGetPronoteHeader";
+            this.btnGetPronoteHeader.StyleController = this.layoutControl1;
+            this.btnGetPronoteHeader.Click += new System.EventHandler(this.btnGetPronoteHeader_Click);
             // 
             // layoutControlGroup1
             // 
@@ -1347,13 +1354,6 @@
             this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(40, 20);
             this.layoutControlItem5.TextToControlDistance = 5;
-            // 
-            // btn_InvoiceCO
-            // 
-            resources.ApplyResources(this.btn_InvoiceCO, "btn_InvoiceCO");
-            this.btn_InvoiceCO.Name = "btn_InvoiceCO";
-            this.btn_InvoiceCO.StyleController = this.layoutControl1;
-            this.btn_InvoiceCO.Click += new System.EventHandler(this.btn_InvoiceCO_Click);
             // 
             // layoutControlItem3
             // 
