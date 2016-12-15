@@ -106,6 +106,8 @@ namespace Book.DA.SQLServer
                 dt.Merge(dto);
                 dt.Merge(dti);
 
+                dt.TableName = "employee";
+
                 DataSet ds = new DataSet();
                 ds.Tables.Add(dt);
                 return ds;

@@ -97,7 +97,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                     _drT["OtherPunish"] = _ms.mOtherPunish;
                     _drT["BonusTotal"] = _ms.BonusTotal;
                     _drT["ShouldPay"] = _ms.mShouldPay;
-                    _drT["LatePunish"] = _ms.mLatePunish;
+                    _drT["LatePunish"] = _ms.mLatePunish.ToString("N0");
                     _drT["LateCount"] = _ms.mLateCount;
                     _drT["TotalLateInMinute"] = _ms.mTotalLateInMinute;
                     _drT["TotalLateInHour"] = _ms.mTotalLateInHour;
@@ -202,7 +202,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                     _drT["OtherPunish"] = _ms.mOtherPunish;
                     _drT["BonusTotal"] = _ms.BonusTotal;
                     _drT["ShouldPay"] = _ms.mShouldPay;
-                    _drT["LatePunish"] = _ms.mLatePunish;
+                    _drT["LatePunish"] = _ms.mLatePunish.ToString("N0");
                     _drT["LateCount"] = _ms.mLateCount;
                     _drT["TotalLateInMinute"] = _ms.mTotalLateInMinute;
                     _drT["TotalLateInHour"] = _ms.mTotalLateInHour;
@@ -764,7 +764,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                 }
                 mIcount = m;
                 _ms.mTotalLateInHour = (_ms.mLateCount - mIcount - mHicount) * 0.5 + mLateHalfCount;
-                _ms.mLatePunish = _ms.mTotalLateInHour * _ms.mMonthlyPay / 30 / 8;
+                _ms.mLatePunish = global::Helper.DateTimeParse.GetSiSheWuRu(_ms.mTotalLateInHour * _ms.mMonthlyPay / 30 / 8, 0);
             }
             else
             {

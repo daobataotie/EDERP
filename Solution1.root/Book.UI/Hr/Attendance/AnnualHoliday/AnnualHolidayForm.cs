@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
 using System.Linq;
+using Microsoft.Office.Interop.Excel;
 
 namespace Book.UI.Hr.Attendance.AnnualHoliday
 {
@@ -66,6 +67,7 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.data = this._holidayManager.SelectAnnualInfoByYear(Int32.Parse(this.comboBoxEdit1.Text));
             this.Tempdata = this.data.Copy();
             this.bindingSourceAnnualHoliday.DataSource = data.Tables[0];
+
         }
 
         //private void InitSpecificHolidayInfo()
@@ -308,6 +310,54 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
                     this.dataGridViewAnnualHoliday.Rows[e.RowIndex].Cells[4].Value = f.SelectDepartIds;
                 }
             }
+        }
+
+        private void barExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Type objClassType = null;
+            objClassType = Type.GetTypeFromProgID("Excel.Application");
+            if (objClassType == null)
+            {
+                MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
+                return;
+            }
+
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Application.Workbooks.Add(true);
+            Microsoft.Office.Interop.Excel.Range r = excel.Cells;
+            excel.Rows.RowHeight = 20;
+            excel.Columns.ColumnWidth = 15;
+            excel.get_Range(excel.Cells[2, 1], excel.Cells[dataGridViewAnnualHoliday.Rows.Count, 1]).NumberFormatLocal = "yyyy-MM-dd";
+            excel.get_Range(excel.Cells[1, 1], excel.Cells[dataGridViewAnnualHoliday.Rows.Count, 5]).Borders.LineStyle = XlLineStyle.xlContinuous;
+            excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 5]).Interior.ColorIndex = 15;
+
+            ((Microsoft.Office.Interop.Excel.Range)excel.Cells[1, 1]).Value2 = "假日日期";
+            ((Microsoft.Office.Interop.Excel.Range)excel.Cells[1, 2]).Value2 = "星期";
+            ((Microsoft.Office.Interop.Excel.Range)excel.Cells[1, 3]).Value2 = "假日名稱";
+            ((Microsoft.Office.Interop.Excel.Range)excel.Cells[1, 4]).Value2 = "部門";
+            ((Microsoft.Office.Interop.Excel.Range)excel.Cells[1, 5]).Value2 = "是否國定假日";
+            string date = string.Empty;
+            string week = string.Empty;
+            string name = string.Empty;
+            string department = string.Empty;
+            string isHoliday = string.Empty;
+            for (int i = 0; i < dataGridViewAnnualHoliday.Rows.Count-1; i++)
+            {
+                date = dataGridViewAnnualHoliday.Rows[i].Cells["HolidayDate"].Value == null ? "" : dataGridViewAnnualHoliday.Rows[i].Cells["HolidayDate"].Value.ToString();
+                week = dataGridViewAnnualHoliday.Rows[i].Cells["DayOfWeek"].Value == null ? "" : dataGridViewAnnualHoliday.Rows[i].Cells["DayOfWeek"].Value.ToString();
+                name = dataGridViewAnnualHoliday.Rows[i].Cells["HolidayName"].Value == null ? "" : dataGridViewAnnualHoliday.Rows[i].Cells["HolidayName"].Value.ToString();
+                department = dataGridViewAnnualHoliday.Rows[i].Cells["Departs"].Value == null ? "" : dataGridViewAnnualHoliday.Rows[i].Cells["Departs"].Value.ToString();
+                isHoliday = (dataGridViewAnnualHoliday.Rows[i].Cells["IsNationalHoliday"].Value == null ? "" : dataGridViewAnnualHoliday.Rows[i].Cells["IsNationalHoliday"].Value.ToString()) == "True" ? "是" : "";
+
+
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 2, 1]).Value2 = date;
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 2, 2]).Value2 = week;
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 2, 3]).Value2 = name;
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 2, 4]).Value2 = department;
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 2, 5]).Value2 = isHoliday;
+            }
+            ((Microsoft.Office.Interop.Excel.Range)excel.Cells[dataGridViewAnnualHoliday.Rows.Count + 1, 1]).Value2 = "如果數據未顯示完整，請先在ERP裡面將滾動條拉至下邊緣以刷新所有數據！";
+            excel.Visible = true;
         }
     }
 }

@@ -34,6 +34,13 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.btnAutoArrangeHoliday = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridViewAnnualHoliday = new System.Windows.Forms.DataGridView();
+            this.HolidayDate = new Book.UI.Hr.Attendance.AnnualHoliday.CalendarColumn();
+            this.DayOfWeek = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HolidayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departids = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnnualHolidayId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsNationalHoliday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bindingSourceAnnualHoliday = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceSpecificHoliday = new System.Windows.Forms.BindingSource(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -45,13 +52,7 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.HolidayDate = new Book.UI.Hr.Attendance.AnnualHoliday.CalendarColumn();
-            this.DayOfWeek = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HolidayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Departs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Departids = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AnnualHolidayId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsNationalHoliday = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.barExport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAnnualHoliday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAnnualHoliday)).BeginInit();
@@ -102,6 +103,50 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.dataGridViewAnnualHoliday.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewAnnualHoliday_CellFormatting);
             this.dataGridViewAnnualHoliday.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridViewAnnualHoliday_CurrentCellDirtyStateChanged);
             // 
+            // HolidayDate
+            // 
+            this.HolidayDate.DataPropertyName = "HolidayDate";
+            resources.ApplyResources(this.HolidayDate, "HolidayDate");
+            this.HolidayDate.Name = "HolidayDate";
+            this.HolidayDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.HolidayDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // DayOfWeek
+            // 
+            resources.ApplyResources(this.DayOfWeek, "DayOfWeek");
+            this.DayOfWeek.Name = "DayOfWeek";
+            // 
+            // HolidayName
+            // 
+            this.HolidayName.DataPropertyName = "HolidayName";
+            resources.ApplyResources(this.HolidayName, "HolidayName");
+            this.HolidayName.Name = "HolidayName";
+            // 
+            // Departs
+            // 
+            resources.ApplyResources(this.Departs, "Departs");
+            this.Departs.Name = "Departs";
+            // 
+            // Departids
+            // 
+            this.Departids.DataPropertyName = "Departs";
+            resources.ApplyResources(this.Departids, "Departids");
+            this.Departids.Name = "Departids";
+            // 
+            // AnnualHolidayId
+            // 
+            this.AnnualHolidayId.DataPropertyName = "AnnualHolidayId";
+            resources.ApplyResources(this.AnnualHolidayId, "AnnualHolidayId");
+            this.AnnualHolidayId.Name = "AnnualHolidayId";
+            // 
+            // IsNationalHoliday
+            // 
+            this.IsNationalHoliday.DataPropertyName = "IsNationalHoliday";
+            resources.ApplyResources(this.IsNationalHoliday, "IsNationalHoliday");
+            this.IsNationalHoliday.Name = "IsNationalHoliday";
+            this.IsNationalHoliday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IsNationalHoliday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // barManager1
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
@@ -113,8 +158,9 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.barManager1.Form = this;
             this.barManager1.Images = this.imageCollection1;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1});
-            this.barManager1.MaxItemId = 1;
+            this.barButtonItem1,
+            this.barExport});
+            this.barManager1.MaxItemId = 2;
             // 
             // bar1
             // 
@@ -124,7 +170,8 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barExport)});
             resources.ApplyResources(this.bar1, "bar1");
             // 
             // barButtonItem1
@@ -169,49 +216,12 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items"))), resources.GetString("radioGroup1.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items2"))), resources.GetString("radioGroup1.Properties.Items3"))});
             // 
-            // HolidayDate
+            // barExport
             // 
-            this.HolidayDate.DataPropertyName = "HolidayDate";
-            resources.ApplyResources(this.HolidayDate, "HolidayDate");
-            this.HolidayDate.Name = "HolidayDate";
-            this.HolidayDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.HolidayDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // DayOfWeek
-            // 
-            resources.ApplyResources(this.DayOfWeek, "DayOfWeek");
-            this.DayOfWeek.Name = "DayOfWeek";
-            // 
-            // HolidayName
-            // 
-            this.HolidayName.DataPropertyName = "HolidayName";
-            resources.ApplyResources(this.HolidayName, "HolidayName");
-            this.HolidayName.Name = "HolidayName";
-            // 
-            // Departs
-            // 
-            resources.ApplyResources(this.Departs, "Departs");
-            this.Departs.Name = "Departs";
-            // 
-            // Departids
-            // 
-            this.Departids.DataPropertyName = "Departs";
-            resources.ApplyResources(this.Departids, "Departids");
-            this.Departids.Name = "Departids";
-            // 
-            // AnnualHolidayId
-            // 
-            this.AnnualHolidayId.DataPropertyName = "AnnualHolidayId";
-            resources.ApplyResources(this.AnnualHolidayId, "AnnualHolidayId");
-            this.AnnualHolidayId.Name = "AnnualHolidayId";
-            // 
-            // IsNationalHoliday
-            // 
-            this.IsNationalHoliday.DataPropertyName = "IsNationalHoliday";
-            resources.ApplyResources(this.IsNationalHoliday, "IsNationalHoliday");
-            this.IsNationalHoliday.Name = "IsNationalHoliday";
-            this.IsNationalHoliday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.IsNationalHoliday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            resources.ApplyResources(this.barExport, "barExport");
+            this.barExport.Id = 1;
+            this.barExport.Name = "barExport";
+            this.barExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barExport_ItemClick);
             // 
             // AnnualHolidayForm
             // 
@@ -265,5 +275,6 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
         private System.Windows.Forms.DataGridViewTextBoxColumn Departids;
         private System.Windows.Forms.DataGridViewTextBoxColumn AnnualHolidayId;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsNationalHoliday;
+        private DevExpress.XtraBars.BarButtonItem barExport;
     }
 }

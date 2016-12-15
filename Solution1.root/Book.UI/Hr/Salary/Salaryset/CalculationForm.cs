@@ -385,7 +385,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                 {
                     if (string.IsNullOrEmpty(_ms.mNote))
                         attendDays++;
-                    else if (_ms.mNote == "遲到" || _ms.mNote == "早退")
+                    else if (_ms.mNote == "遲到" || _ms.mNote == "早退" || _ms.mNote == ";遲到" || _ms.mNote == ";早退" || _ms.mNote == "遲到;" || _ms.mNote == "早退;")
                         attendDays++;
                 }
                 //加班天数
@@ -708,7 +708,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                 }
                 mIcount = m;
                 _ms.mTotalLateInHour = (_ms.mLateCount - mIcount - mHicount) * 0.5 + mLateHalfCount;
-                _ms.mLatePunish = _ms.mTotalLateInHour * _ms.mMonthlyPay / 30 / 8;
+                _ms.mLatePunish = global::Helper.DateTimeParse.GetSiSheWuRu(_ms.mTotalLateInHour * _ms.mMonthlyPay / 30 / 8, 0);
             }
             else
             {
@@ -1570,7 +1570,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                 }
                 mIcount = m;
                 _ms.mTotalLateInHour = (_ms.mLateCount - mIcount - mHicount) * 0.5 + mLateHalfCount;
-                _ms.mLatePunish = _ms.mTotalLateInHour * _ms.mMonthlyPay / 30 / 8;
+                _ms.mLatePunish = global::Helper.DateTimeParse.GetSiSheWuRu(_ms.mTotalLateInHour * _ms.mMonthlyPay / 30 / 8, 0);
             }
             else
             {

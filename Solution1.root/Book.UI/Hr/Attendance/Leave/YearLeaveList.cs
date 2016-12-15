@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using Microsoft.Office.Interop.Excel;
 
 namespace Book.UI.Hr.Attendance.Leave
 {
@@ -56,6 +57,46 @@ namespace Book.UI.Hr.Attendance.Leave
 
             this.bindingSource1.DataSource = this.helpLeaveList;
             this.gridControl1.RefreshDataSource();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (helpLeaveList != null && helpLeaveList.Count != 0)
+            {
+                Type objClassType = null;
+                objClassType = Type.GetTypeFromProgID("Excel.Application");
+                if (objClassType == null)
+                {
+                    MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
+                    return;
+                }
+
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Application.Workbooks.Add(true);
+                excel.Rows.RowHeight = 27;
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[1, 1]).Value2 = "年份：" + this.comboBoxEditYear.Text;
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 2])).MergeCells = true;
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[2, 1]).Value2 = "員工姓名";
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[2, 2]).Value2 = "請假匯總";
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 2])).Interior.ColorIndex = 15;
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 1], excel.Cells[helpLeaveList.Count + 2, 1])).ColumnWidth = 10;
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 2], excel.Cells[helpLeaveList.Count + 2, 2])).ColumnWidth = 160;
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 2], excel.Cells[helpLeaveList.Count + 2, 2])).WrapText = true;
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[1, 1], excel.Cells[helpLeaveList.Count + 2, 2])).Borders.LineStyle = XlLineStyle.xlContinuous;
+
+                for (int i = 0; i < helpLeaveList.Count; i++)
+                {
+                    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 1]).Value2 = helpLeaveList[i].EmployeeName;
+                    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 2]).Value2 = helpLeaveList[i].LeaveNote;
+                }
+
+                excel.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("請先進行查詢！", "提示", MessageBoxButtons.OK);
+                return;
+            }
         }
     }
 

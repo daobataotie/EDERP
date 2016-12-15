@@ -574,7 +574,8 @@ namespace Book.BL
                             //if (mLateInMinute > 10)
                             //{   //遲到超過10分鐘，顯示異常（讓員工有申訴機會）
                             mIsNormal = false;
-                            if (mNote != "")
+                            //if (mNote != "")
+                            if (!string.IsNullOrEmpty(mNote))
                             {
                                 mNote = mNote + ";";
                             }
@@ -595,7 +596,8 @@ namespace Book.BL
                         if (mLeaveEarly > 0)
                         {
                             mIsNormal = false;
-                            if (mNote != "")
+                            //if (mNote != "")
+                            if (!string.IsNullOrEmpty(mNote))
                             {
                                 mNote = mNote + ";";
                             }
@@ -942,7 +944,8 @@ namespace Book.BL
                             //if (mLateInMinute > 10)
                             //{   //遲到超過10分鐘，顯示異常（讓員工有申訴機會）
                             mIsNormal = false;
-                            if (mNote != "")
+                            //if (mNote != "")
+                            if (!string.IsNullOrEmpty(mNote))
                             {
                                 mNote = mNote + ";";
                             }
@@ -963,7 +966,8 @@ namespace Book.BL
                         if (mLeaveEarly > 0)
                         {
                             mIsNormal = false;
-                            if (mNote != "")
+                            //if (mNote != "")
+                            if (!string.IsNullOrEmpty(mNote))
                             {
                                 mNote = mNote + ";";
                             }
@@ -1007,7 +1011,7 @@ namespace Book.BL
                         mayBeCheckOut = DateTime.Parse(checkdate.ToString("yyyy-MM-dd") + " " + mBusinessHour.ToTime.Value.Hour.ToString().PadLeft(2, '0') + ":" + mBusinessHour.ToTime.Value.Minute.ToString().PadLeft(2, '0'));
                     }
                 }
-               
+
                 //有正常刷卡假日加班
                 if (mActualCheckIn != null && mActualCheckOut != null)
                 {
