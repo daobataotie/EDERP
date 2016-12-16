@@ -276,5 +276,10 @@ namespace Book.DA.SQLServer
             ht.Add("DateTime", dateTime);
             return sqlmapper.QueryForObject<string>("Leave.SelectYearLeaveCount", ht);
         }
+
+        public IList<string> SelectLeaveName()
+        {
+            return sqlmapper.QueryForList<string>("Leave.SelectLeaveName", null);
+        }
     }
 }

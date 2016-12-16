@@ -42,6 +42,8 @@ namespace Book.DA
         IList<Model.Leave> SelectByDate(DateTime date);
 
         string SelectYearLeaveCount(string p, int dateTime);
+
+        IList<string> SelectLeaveName();
     }
 }
 

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Microsoft.Office.Interop.Excel;
+using System.Linq;
 
 namespace Book.UI.Hr.Attendance.Leave
 {
@@ -63,6 +64,8 @@ namespace Book.UI.Hr.Attendance.Leave
         {
             if (helpLeaveList != null && helpLeaveList.Count != 0)
             {
+                IList<string> leaveType = manager.SelectLeaveName();
+
                 Type objClassType = null;
                 objClassType = Type.GetTypeFromProgID("Excel.Application");
                 if (objClassType == null)
@@ -73,22 +76,41 @@ namespace Book.UI.Hr.Attendance.Leave
 
                 Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
                 excel.Application.Workbooks.Add(true);
-                excel.Rows.RowHeight = 27;
+                excel.Rows.RowHeight = 15;
+                excel.Columns.ColumnWidth = 8;
                 ((Microsoft.Office.Interop.Excel.Range)excel.Cells[1, 1]).Value2 = "年份：" + this.comboBoxEditYear.Text;
                 ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 2])).MergeCells = true;
                 ((Microsoft.Office.Interop.Excel.Range)excel.Cells[2, 1]).Value2 = "員工姓名";
-                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[2, 2]).Value2 = "請假匯總";
-                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 2])).Interior.ColorIndex = 15;
-                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 1], excel.Cells[helpLeaveList.Count + 2, 1])).ColumnWidth = 10;
-                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 2], excel.Cells[helpLeaveList.Count + 2, 2])).ColumnWidth = 160;
-                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 2], excel.Cells[helpLeaveList.Count + 2, 2])).WrapText = true;
-                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[1, 1], excel.Cells[helpLeaveList.Count + 2, 2])).Borders.LineStyle = XlLineStyle.xlContinuous;
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 1], excel.Cells[2, leaveType.Count + 1])).Interior.ColorIndex = 15;
+                //((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 2], excel.Cells[helpLeaveList.Count + 2, 2])).WrapText = true;
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[1, 1], excel.Cells[helpLeaveList.Count + 2, leaveType.Count + 1])).Borders.LineStyle = XlLineStyle.xlContinuous;
+
+                //for (int i = 0; i < helpLeaveList.Count; i++)
+                //{
+                //    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 1]).Value2 = helpLeaveList[i].EmployeeName;
+                //    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 2]).Value2 = helpLeaveList[i].LeaveNote;
+                //}
+
+                //表头
+                for (int i = 0; i < leaveType.Count; i++)
+                {
+                    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[2, i + 2]).Value2 = leaveType[i];
+                }
 
                 for (int i = 0; i < helpLeaveList.Count; i++)
                 {
-                    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 1]).Value2 = helpLeaveList[i].EmployeeName;
-                    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 2]).Value2 = helpLeaveList[i].LeaveNote;
+                    HelpLeave helpLeave = helpLeaveList[i];
+                    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 1]).Value2 = helpLeave.EmployeeName;
+                    string[] leaveArray = helpLeave.LeaveNote.Split(',');
+
+                    for (int j = 0; j < leaveType.Count; j++)
+                    {
+                        string leave = leaveArray.FirstOrDefault(l => l.StartsWith(leaveType[j]));
+                        string days = new string(leave.ToCharArray().Where(c => char.IsDigit(c) || c == '.').ToArray());
+                        ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, j + 2]).Value2 = days;
+                    }
                 }
+
 
                 excel.Visible = true;
             }

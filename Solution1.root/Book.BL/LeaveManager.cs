@@ -436,6 +436,11 @@ namespace Book.BL
         {
             return accessor.SelectYearLeaveCount(p, dateTime);
         }
+
+        public IList<string> SelectLeaveName()
+        {
+            return accessor.SelectLeaveName();
+        }
     }
 }
 

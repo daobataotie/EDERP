@@ -123,5 +123,11 @@
        FOR xml path('')
       ]]>
     </select>
+
+    <select id="SelectLeaveName" resultClass="string">
+      <![CDATA[
+      select LeaveTypeName from LeaveType order by InsertTime
+      ]]>
+    </select>
   </statements>
 </sqlMap>
