@@ -47,6 +47,7 @@ namespace Book.UI.Hr.Attendance.Leave
             {
                 this.helpLeave = new HelpLeave();
                 helpLeave.EmployeeName = item.EmployeeName;
+                helpLeave.JoinDate = item.EmployeeJoinDate.HasValue ? item.EmployeeJoinDate.Value.ToString("yyyy-MM-dd") : "";
                 helpLeave.LeaveNote = this.manager.SelectYearLeaveCount(item.EmployeeId, Convert.ToInt32(this.comboBoxEditYear.EditValue));
                 if (helpLeave.LeaveNote != null)
                 {
@@ -78,9 +79,10 @@ namespace Book.UI.Hr.Attendance.Leave
                 excel.Application.Workbooks.Add(true);
                 excel.Rows.RowHeight = 15;
                 excel.Columns.ColumnWidth = 8;
+                ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 1], excel.Cells[helpLeaveList.Count + 2, 1])).ColumnWidth = 20;
                 ((Microsoft.Office.Interop.Excel.Range)excel.Cells[1, 1]).Value2 = "年份：" + this.comboBoxEditYear.Text;
                 ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 2])).MergeCells = true;
-                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[2, 1]).Value2 = "員工姓名";
+                ((Microsoft.Office.Interop.Excel.Range)excel.Cells[2, 1]).Value2 = "員工姓名(到職日期)";
                 ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 1], excel.Cells[2, leaveType.Count + 1])).Interior.ColorIndex = 15;
                 //((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[2, 2], excel.Cells[helpLeaveList.Count + 2, 2])).WrapText = true;
                 ((Microsoft.Office.Interop.Excel.Range)excel.get_Range(excel.Cells[1, 1], excel.Cells[helpLeaveList.Count + 2, leaveType.Count + 1])).Borders.LineStyle = XlLineStyle.xlContinuous;
@@ -100,7 +102,7 @@ namespace Book.UI.Hr.Attendance.Leave
                 for (int i = 0; i < helpLeaveList.Count; i++)
                 {
                     HelpLeave helpLeave = helpLeaveList[i];
-                    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 1]).Value2 = helpLeave.EmployeeName;
+                    ((Microsoft.Office.Interop.Excel.Range)excel.Cells[i + 3, 1]).Value2 = helpLeave.EmployeeName + string.Format("({0})", helpLeave.JoinDate);
                     string[] leaveArray = helpLeave.LeaveNote.Split(',');
 
                     for (int j = 0; j < leaveType.Count; j++)
@@ -125,6 +127,8 @@ namespace Book.UI.Hr.Attendance.Leave
     public class HelpLeave
     {
         public string EmployeeId { get; set; }
+
+        public string JoinDate { get; set; }
 
         public string EmployeeName { get; set; }
 
