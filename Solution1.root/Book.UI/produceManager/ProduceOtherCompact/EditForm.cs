@@ -49,15 +49,20 @@ namespace Book.UI.produceManager.ProduceOtherCompact
             this.newChooseDepartment.Choose = new Invoices.ChooseDepartment();
             this.EmpAudit.Choose = new ChooseEmployee();
 
-            if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
+            this.gridColumn14.Visible = false;
+            this.ColOtherCompactPrice.Visible = false;
+            IList<Model.Role> roleList = BL.V.RoleList;
+            if (roleList != null && roleList.Count > 0)
             {
-                this.gridColumn14.Visible = true;
-                this.ColOtherCompactPrice.Visible = true;
-            }
-            else
-            {
-                this.gridColumn14.Visible = false;
-                this.ColOtherCompactPrice.Visible = false;
+                for (int i = 0; i < roleList.Count; i++)
+                {
+                    if (roleList[i].IsPOCPrice == true)
+                    {
+                        this.gridColumn14.Visible = true;
+                        this.ColOtherCompactPrice.Visible = true;
+                        break;
+                    }
+                }
             }
         }
 

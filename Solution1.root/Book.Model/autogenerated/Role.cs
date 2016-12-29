@@ -646,5 +646,13 @@ namespace Book.Model
 		
 
 		#endregion
+
+        private bool? _IsPOCPrice;
+
+        public bool? IsPOCPrice
+        {
+            get { return _IsPOCPrice; }
+            set { _IsPOCPrice = value; }
+        }
 	}
 }

@@ -170,7 +170,9 @@ namespace Book.UI.Settings.Privileges.Roles
                 r.IsXOFaPiaoZiLiao = this.checkEditIsXOFaPiaoZiLiao.Checked;
                 r.IsXOZhangKuanZiLiao = this.checkEditIsXOZhangKuanZiLiao.Checked;
                 r.IsXOXiangGuanZiLiao = this.checkEditIsXOXiangGuanZiLiao.Checked;
-                r.IsXOJinHuoJinE = this.checkEditIsXOJinHuoJinE.Checked;              
+                r.IsXOJinHuoJinE = this.checkEditIsXOJinHuoJinE.Checked;
+
+                r.IsPOCPrice = this.checkEditWWPrice.Checked;
 
                 roleManager.Update(r);
                 BL.V.RoleList = roleManager.Select(BL.V.ActiveOperator.OperatorsId);
