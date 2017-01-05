@@ -110,6 +110,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="AuditState" column="AuditState" />
       <result property="AuditEmpId" column="AuditEmpId" />
       <result property="ProductUnitId" column="ProductUnitId"/>
+      <result property="CSAJiShuBiaoZhun" column="CSAJiShuBiaoZhun"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
@@ -305,7 +306,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Protectiontwo],
         [AuditState],
         [AuditEmpId],
-        [ProductUnitId]
+        [ProductUnitId],
+        [CSAJiShuBiaoZhun]
 			FROM
 				[dbo].[PCExportReportANSI]
 			WHERE
@@ -462,7 +464,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Protectiontwo],
         [AuditState],
         [AuditEmpId],
-        [ProductUnitId]
+        [ProductUnitId],
+        [CSAJiShuBiaoZhun]
 			) 
 			VALUES 
 			(
@@ -569,7 +572,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #Protectiontwo#,
         #AuditState#,
         #AuditEmpId#,
-        #ProductUnitId#
+        #ProductUnitId#,
+        #CSAJiShuBiaoZhun#
 			)
              ]]>
     </insert>
@@ -679,7 +683,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Protectiontwo]=#Protectiontwo#,
         [AuditState]=#AuditState#,        
         [AuditEmpId]=#AuditEmpId#,
-        [ProductUnitId] = #ProductUnitId#
+        [ProductUnitId] = #ProductUnitId#,
+        [CSAJiShuBiaoZhun] = #CSAJiShuBiaoZhun#
 			WHERE
 				[ExportReportId] = #ExportReportId#
                     ]]>

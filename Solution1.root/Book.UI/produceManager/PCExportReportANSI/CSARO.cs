@@ -39,6 +39,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbMirrorlens.Text = _PCExportReportANSI.Mirrorlens == null ? null : _PCExportReportANSI.Mirrorlens.ToString();
             this.LbMirrorlens.Multiline = true;
             //this.xrTableCell20.Text = _PCExportReportANSI.CeShiSuLi + this.xrTableCell20.Text;
+            this.LbSpecifiction.Text = string.IsNullOrEmpty(_PCExportReportANSI.CSAJiShuBiaoZhun) ? "CSA Z94.3-07" : _PCExportReportANSI.CSAJiShuBiaoZhun;
 
             this.LbOpticsTestAmount.Text = (_PCExportReportANSI.ShouCeShu1.HasValue ? _PCExportReportANSI.ShouCeShu1.ToString() : "0") + "OF";
             this.LbClearTestAmount.Text = (_PCExportReportANSI.ShouCeShu2.HasValue ? _PCExportReportANSI.ShouCeShu2.ToString() : "0") + "OF";

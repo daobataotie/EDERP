@@ -53,8 +53,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
             this.LbMirrorlens = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell23 = new DevExpress.XtraReports.UI.XRTableCell();
             this.LbLightTestAmount = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
             this.LbLightJudge = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -108,7 +109,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbClearJudge = new DevExpress.XtraReports.UI.XRLabel();
             this.LbClearTestAmount = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrTableCell23 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -367,13 +367,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbMirrorlens.StylePriority.UseFont = false;
             this.LbMirrorlens.StylePriority.UseTextAlignment = false;
             // 
-            // xrTableCell18
+            // xrTableCell23
             // 
-            this.xrTableCell18.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbLightJudge});
-            resources.ApplyResources(this.xrTableCell18, "xrTableCell18");
-            this.xrTableCell18.Name = "xrTableCell18";
-            this.xrTableCell18.Weight = 0.47983439839025954;
+            this.xrTableCell23.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.LbLightTestAmount});
+            resources.ApplyResources(this.xrTableCell23, "xrTableCell23");
+            this.xrTableCell23.Name = "xrTableCell23";
+            this.xrTableCell23.Weight = 0.52016560160974046;
             // 
             // LbLightTestAmount
             // 
@@ -384,6 +384,14 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbLightTestAmount.StylePriority.UseBorders = false;
             this.LbLightTestAmount.StylePriority.UseFont = false;
             this.LbLightTestAmount.StylePriority.UseTextAlignment = false;
+            // 
+            // xrTableCell18
+            // 
+            this.xrTableCell18.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.LbLightJudge});
+            resources.ApplyResources(this.xrTableCell18, "xrTableCell18");
+            this.xrTableCell18.Name = "xrTableCell18";
+            this.xrTableCell18.Weight = 0.47983439839025954;
             // 
             // LbLightJudge
             // 
@@ -864,14 +872,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // 
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
-            // 
-            // xrTableCell23
-            // 
-            this.xrTableCell23.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbLightTestAmount});
-            resources.ApplyResources(this.xrTableCell23, "xrTableCell23");
-            this.xrTableCell23.Name = "xrTableCell23";
-            this.xrTableCell23.Weight = 0.52016560160974046;
             // 
             // CSARO
             // 

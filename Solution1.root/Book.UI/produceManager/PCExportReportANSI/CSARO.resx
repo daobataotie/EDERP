@@ -795,7 +795,7 @@ Base out≦0.75 prism dioptre.</value>
     <value>503.748779, 51.94083</value>
   </data>
   <data name="LbSpecifiction.Text" xml:space="preserve">
-    <value> CSA Z94.3-07</value>
+    <value> CSA Z94.3-2015</value>
   </data>
   <data name="LbSpecifiction.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>

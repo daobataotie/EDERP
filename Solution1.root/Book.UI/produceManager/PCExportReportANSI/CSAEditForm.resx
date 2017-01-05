@@ -120,18 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="BarBtnCutomerOrder.Caption" xml:space="preserve">
-    <value>客户订单</value>
-  </data>
-  <data name="BarBtnSearch.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="barPrintAlan.Caption" xml:space="preserve">
-    <value>打印ALAN</value>
-  </data>
-  <data name="barPrintPPE.Caption" xml:space="preserve">
-    <value>打印PPE</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -531,7 +519,7 @@
     <value>88</value>
   </data>
   <data name="label25.Text" xml:space="preserve">
-    <value>CSA Z94.3-07</value>
+    <value>CSA Z94.3-2015</value>
   </data>
   <data name="label25.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -917,6 +905,18 @@
   </data>
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="BarBtnCutomerOrder.Caption" xml:space="preserve">
+    <value>客户订单</value>
+  </data>
+  <data name="BarBtnSearch.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barPrintAlan.Caption" xml:space="preserve">
+    <value>打印ALAN</value>
+  </data>
+  <data name="barPrintPPE.Caption" xml:space="preserve">
+    <value>打印PPE</value>
   </data>
   <data name="SpinImpactTestAmount.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
