@@ -287,6 +287,8 @@ namespace Book.UI.Hr.Salary.Salaryset
             double hunSangChan = 0;
             //隔周休假
             double gezhouxiu = 0;
+            //公假 ，年假 天数
+            double gnDays = 0;
             //DataSet ds = this.monthlySalaryManager.getAttendInfoList(emp.EmployeeId, hryear, hrmonth);                   
             foreach (Model.HrDailyEmployeeAttendInfo attend in this._hrManager.SelectByEmpMonth(emp, hryear, hrmonth))
             {
@@ -332,6 +334,19 @@ namespace Book.UI.Hr.Salary.Salaryset
                         hasPayDays++;
                         if (_ms.mNote == "週日休假" || _ms.mNote == "周日休假")
                             WeekendDays++;
+
+                        if (_ms.mNote.Contains("公假") || _ms.mNote.Contains("年假"))
+                        {
+                            if (_ms.mNote.Contains("整日"))
+                                gnDays++;
+                            else
+                            {
+                                if (_ms.mNote.Contains("公假") && _ms.mNote.Contains("年假"))
+                                    gnDays++;
+                                else
+                                    gnDays += 0.5;
+                            }
+                        }
                     }
                     //if (_ms.mNote.Contains("隔周休假") && emp.GeZhouChuQinJJ)
                     //    hasPayDays++;
@@ -551,8 +566,9 @@ namespace Book.UI.Hr.Salary.Salaryset
                             _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
                         else
                             _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                        //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + halfattend + gnDays), 0);
                     }
-                } //责任津贴   新版改为出勤奖金
+                } //责任津贴   新版改为出勤奖金 改为 年终
                 _ms.DutyPayTotal = mStrToDouble(dx_dr["DutyPay"]);
                 _ms.mGivenDays = mStrToDouble(dx_dr["HolidayBonusGivenDays"]);  //年假(补休)天数
                 _ms.mAnnualHolidayFee = this.GetSiSheWuRu(_ms.mMonthlyPay / 30 * _ms.mGivenDays, 0);         //年假(补休)金额
@@ -667,8 +683,8 @@ namespace Book.UI.Hr.Salary.Salaryset
                         //    _ms.TimeBonus = 0;
                         //else
                         //    _ms.TimeBonus = this.GetSiSheWuRu((Convert.ToDouble(attendDays) + halfattend - TimeBonus) * _ms.mMonthlyPay / 30 / 8 * 0.833, 0);
-                        //2016年4月28日18:30:36  时数补贴 改为按全勤天数计算
-                        _ms.TimeBonus = this.GetSiSheWuRu((Convert.ToDouble(attendDays)) * _ms.mMonthlyPay / 30 / 8 * 0.833, 0);
+                        //2016年4月28日18:30:36  时数补贴 改为按全勤天数计算  2017年1月24日 去掉 时数补贴
+                        //_ms.TimeBonus = this.GetSiSheWuRu((Convert.ToDouble(attendDays)) * _ms.mMonthlyPay / 30 / 8 * 0.833, 0);
                     }
                     if (emp.IsMigrantWorker)
                         _ms.mSpecialBonus = 0;

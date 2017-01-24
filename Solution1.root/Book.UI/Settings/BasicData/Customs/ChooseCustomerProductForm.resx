@@ -137,7 +137,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>客户产品编号</value>
@@ -149,6 +149,9 @@
   <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="gridColumn1.Width" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>公司产品编号</value>
   </data>
@@ -157,6 +160,9 @@
   </data>
   <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="gridColumn2.Width" type="System.Int32, mscorlib">
+    <value>121</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>客户产品名称</value>
@@ -167,6 +173,9 @@
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="gridColumn3.Width" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>客户名称</value>
   </data>
@@ -175,6 +184,9 @@
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="gridColumn4.Width" type="System.Int32, mscorlib">
+    <value>139</value>
   </data>
   <data name="simpleButtonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>381, 282</value>
@@ -189,7 +201,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;simpleButtonCancel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="simpleButtonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>234, 282</value>
@@ -204,7 +216,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;simpleButtonOK.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="simpleButtonNew.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 282</value>
@@ -219,7 +231,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;simpleButtonNew.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

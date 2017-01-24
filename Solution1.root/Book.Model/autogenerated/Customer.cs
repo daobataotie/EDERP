@@ -204,7 +204,7 @@ namespace Book.Model
         /// </summary>
         private string _customerFP;
 
-              /// <summary>
+        /// <summary>
         /// 地区分类
         /// </summary>
         private AreaCategory _areaCategory;
@@ -1019,5 +1019,15 @@ namespace Book.Model
         public readonly static string PRO_CustomerFP = "CustomerFP";
 
         #endregion
+
+        private string _customerName;
+
+        public string CustomerName
+        {
+            get { return _customerName; }
+            set { _customerName = value; }
+        }
+
+        public static readonly string PRO_CustomerName = "CustomerName";
     }
 }

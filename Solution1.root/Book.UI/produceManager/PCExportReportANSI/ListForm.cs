@@ -78,6 +78,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 return new CSAEditForm();
             else if (this.Text.Contains("JIS"))
                 return new JISEditForm();
+            else if (this.Text.Contains("ANSI2015"))
+                return new ANSI2015();
             else
                 return new EditForm();
         }
@@ -110,6 +112,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 type = typeof(JISEditForm);
                 return (JISEditForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
             }
+            else if (this.Text.Contains("ANSI2015"))
+            {
+                type = typeof(ANSI2015);
+                return (ANSI2015)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
+            }
             else
             {
                 type = typeof(EditForm);
@@ -139,6 +146,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
             else if (this.Text.Contains("JIS"))
             {
                 JISEditForm f = new JISEditForm(model);
+                f.ShowDialog();
+            }
+            else if (this.Text.Contains("ANSI2015"))
+            {
+                ANSI2015 f = new ANSI2015(model);
                 f.ShowDialog();
             }
             else

@@ -859,7 +859,7 @@ the center of the support tube</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="LbClearlens.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>9.12348041E-05, 0</value>
+    <value>8.074442E-05, 0.000242233276</value>
   </data>
   <data name="LbClearlens.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>697.4322, 116.416626</value>

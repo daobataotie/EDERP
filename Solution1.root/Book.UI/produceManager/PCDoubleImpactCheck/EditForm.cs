@@ -264,7 +264,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this._pcdic.PCDoubleImpactCheckDate = this.DE_PCDoubleImpactCheckDate.DateTime;
             this._pcdic.PCDoubleImpactCheckDesc = this.txtPCDoubleImpactCheckDesc.Text;
             this._pcdic.InvoiceCusXOId = this.txtInvoiceCusXOId.Text;
-            this._pcdic.PronoteHeaderId = this.txtPronoteHeaderId.Text;
+            this._pcdic.PronoteHeaderId = this.txtPronoteHeaderId.Text; 
             this._pcdic.PCDoubleImpactCheckType = this.pcType;
             this._pcdic.PowerImpact = this.coBoxCJLD.Text;
             this._pcdic.JiaReWenDu = this.comBox_ChongJICeShiJiaRe.Text;

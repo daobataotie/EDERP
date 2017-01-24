@@ -918,7 +918,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbClearlens.Borders = DevExpress.XtraPrinting.BorderSide.None;
             resources.ApplyResources(this.LbClearlens, "LbClearlens");
             this.LbClearlens.Name = "LbClearlens";
-            this.LbClearlens.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.LbClearlens.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.LbClearlens.StylePriority.UseBorders = false;
             this.LbClearlens.StylePriority.UseFont = false;
             this.LbClearlens.StylePriority.UseTextAlignment = false;

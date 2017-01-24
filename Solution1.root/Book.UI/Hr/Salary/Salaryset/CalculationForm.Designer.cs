@@ -89,9 +89,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.labelControl44 = new DevExpress.XtraEditors.LabelControl();
             this.label_baox = new DevExpress.XtraEditors.LabelControl();
             this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.label_cf = new DevExpress.XtraEditors.LabelControl();
-            this.lbl_timebonus = new DevExpress.XtraEditors.LabelControl();
             this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
             this.label_SubTotal = new DevExpress.XtraEditors.LabelControl();
             this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
@@ -552,28 +550,26 @@ namespace Book.UI.Hr.Salary.Salaryset
             resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
             this.tableLayoutPanel5.Controls.Add(this.labelControl38, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label_dx, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.label_SalaryTotal, 1, 11);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl46, 0, 11);
-            this.tableLayoutPanel5.Controls.Add(this.label_jiez, 1, 9);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl44, 0, 9);
-            this.tableLayoutPanel5.Controls.Add(this.label_baox, 1, 8);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl43, 0, 8);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl4, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label_cf, 1, 7);
-            this.tableLayoutPanel5.Controls.Add(this.lbl_timebonus, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl42, 0, 7);
-            this.tableLayoutPanel5.Controls.Add(this.label_SubTotal, 1, 6);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl41, 0, 6);
-            this.tableLayoutPanel5.Controls.Add(this.label_PingRiJiaBan, 1, 3);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl1, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel1, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl34, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl5, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl45, 0, 10);
-            this.tableLayoutPanel5.Controls.Add(this.labelControl28, 0, 5);
-            this.tableLayoutPanel5.Controls.Add(this.label_cdkk, 1, 5);
-            this.tableLayoutPanel5.Controls.Add(this.label_JiaRiJiaBan, 1, 4);
-            this.tableLayoutPanel5.Controls.Add(this.txt_JiuYuanJiaoKou, 1, 10);
+            this.tableLayoutPanel5.Controls.Add(this.label_SalaryTotal, 1, 10);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl46, 0, 10);
+            this.tableLayoutPanel5.Controls.Add(this.label_jiez, 1, 8);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl44, 0, 8);
+            this.tableLayoutPanel5.Controls.Add(this.label_baox, 1, 7);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl43, 0, 7);
+            this.tableLayoutPanel5.Controls.Add(this.label_cf, 1, 6);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl42, 0, 6);
+            this.tableLayoutPanel5.Controls.Add(this.label_SubTotal, 1, 5);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl41, 0, 5);
+            this.tableLayoutPanel5.Controls.Add(this.label_PingRiJiaBan, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl1, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel1, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl34, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl5, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl45, 0, 9);
+            this.tableLayoutPanel5.Controls.Add(this.labelControl28, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.label_cdkk, 1, 4);
+            this.tableLayoutPanel5.Controls.Add(this.label_JiaRiJiaBan, 1, 3);
+            this.tableLayoutPanel5.Controls.Add(this.txt_JiuYuanJiaoKou, 1, 9);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             // 
             // labelControl38
@@ -617,21 +613,11 @@ namespace Book.UI.Hr.Salary.Salaryset
             resources.ApplyResources(this.labelControl43, "labelControl43");
             this.labelControl43.Name = "labelControl43";
             // 
-            // labelControl4
-            // 
-            resources.ApplyResources(this.labelControl4, "labelControl4");
-            this.labelControl4.Name = "labelControl4";
-            // 
             // label_cf
             // 
             resources.ApplyResources(this.label_cf, "label_cf");
             this.label_cf.Name = "label_cf";
             this.label_cf.Click += new System.EventHandler(this.label_cf_Click);
-            // 
-            // lbl_timebonus
-            // 
-            resources.ApplyResources(this.lbl_timebonus, "lbl_timebonus");
-            this.lbl_timebonus.Name = "lbl_timebonus";
             // 
             // labelControl42
             // 
@@ -908,9 +894,7 @@ namespace Book.UI.Hr.Salary.Salaryset
         private DevExpress.XtraEditors.LabelControl labelControl44;
         private DevExpress.XtraEditors.LabelControl label_baox;
         private DevExpress.XtraEditors.LabelControl labelControl43;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl label_cf;
-        private DevExpress.XtraEditors.LabelControl lbl_timebonus;
         private DevExpress.XtraEditors.LabelControl labelControl42;
         private DevExpress.XtraEditors.LabelControl label_SubTotal;
         private DevExpress.XtraEditors.LabelControl labelControl41;
