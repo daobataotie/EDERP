@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Linq;
+using Microsoft.Office.Interop.Excel;
 
 namespace Book.UI.produceManager.PronoteHeader
 {
@@ -321,11 +322,88 @@ namespace Book.UI.produceManager.PronoteHeader
         {
             if (this.DetailList == null || this.DetailList.Count == 0)
             {
-                MessageBox.Show("無數據！", this.Text, MessageBoxButtons.OK);
+                MessageBox.Show("無數據！", "提示！", MessageBoxButtons.OK);
                 return;
             }
             ROProductIndepot ro = new ROProductIndepot(this.DetailList);
             ro.ShowPreviewDialog();
+        }
+
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+            Type objClassType = null;
+            objClassType = Type.GetTypeFromProgID("Excel.Application");
+            if (objClassType == null)
+            {
+                MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
+                return;
+            }
+
+            DateTime startTime = global::Helper.DateTimeParse.NullDate;
+            DateTime endTime = global::Helper.DateTimeParse.EndDate;
+            if (this.dateEditStartDate.EditValue != null)
+            {
+                startTime = this.dateEditStartDate.DateTime;
+            }
+            if (this.dateEditEndDate.EditValue != null)
+            {
+                endTime = this.dateEditEndDate.DateTime;
+            }
+
+            System.Data.DataTable dt = pronoteHeaderManager.GetExcelData(startTime, endTime);
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                MessageBox.Show("無數據！", "提示！", MessageBoxButtons.OK);
+                return;
+            }
+
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Application.Workbooks.Add(true);
+                excel.Cells.ColumnWidth = 12;
+                excel.Rows.RowHeight = 20;
+
+                #region 表頭
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 10]).Borders.LineStyle = XlLineStyle.xlContinuous;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 10]).HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).ColumnWidth = 18;
+                excel.get_Range(excel.Cells[1, 2], excel.Cells[1, 2]).ColumnWidth = 18;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).Font.Size = 15;
+                excel.get_Range(excel.Cells[1, 5], excel.Cells[1, 5]).ColumnWidth = 50;
+                excel.Cells[1, 1] = "加工單號";
+                excel.Cells[1, 2] = "客戶訂單號";
+                excel.Cells[1, 3] = "最慢交期";
+                excel.Cells[1, 4] = "交貨日期";
+                excel.Cells[1, 5] = "貨品名稱";
+                excel.Cells[1, 6] = "生產數量";
+                excel.Cells[1, 7] = "當前合計生產";
+                excel.Cells[1, 8] = "當前合格";
+                excel.Cells[1, 9] = "單位";
+                excel.Cells[1, 10] = "機台";
+                #endregion
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    excel.Cells[i + 2, 1] = dt.Rows[i]["PronoteHeaderID"] == null ? "" : dt.Rows[i]["PronoteHeaderID"].ToString();
+                    excel.Cells[i + 2, 2] = dt.Rows[i]["CustomerInvoiceXOId"] == null ? "" : dt.Rows[i]["CustomerInvoiceXOId"].ToString();
+                    excel.Cells[i + 2, 3] = dt.Rows[i]["LastDate"] == null ? "" : dt.Rows[i]["LastDate"].ToString();
+                    excel.Cells[i + 2, 4] = dt.Rows[i]["InvoiceYjrq"] == null ? "" : dt.Rows[i]["InvoiceYjrq"].ToString();
+                    excel.Cells[i + 2, 5] = dt.Rows[i]["ProductName"] == null ? "" : dt.Rows[i]["ProductName"].ToString();
+                    excel.Cells[i + 2, 6] = dt.Rows[i]["DetailsSum"] == null ? "" : dt.Rows[i]["DetailsSum"].ToString();
+                    excel.Cells[i + 2, 7] = dt.Rows[i]["TotalProcess"] == null ? "" : dt.Rows[i]["TotalProcess"].ToString();
+                    excel.Cells[i + 2, 8] = dt.Rows[i]["TotalPass"] == null ? "" : dt.Rows[i]["TotalPass"].ToString();
+                    excel.Cells[i + 2, 9] = dt.Rows[i]["ProductUnit"] == null ? "" : dt.Rows[i]["ProductUnit"].ToString();
+                    excel.Cells[i + 2, 10] = dt.Rows[i]["MachineId"] == null ? "" : dt.Rows[i]["MachineId"].ToString();
+                }
+                excel.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Excel未生成完畢，請勿操作，并重新點擊按鈕生成數據！", "提示！", MessageBoxButtons.OK);
+                return;
+            }
         }
     }
 }

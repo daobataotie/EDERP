@@ -417,5 +417,16 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<Model.PronoteHeader>("PronoteHeader.mGetNext", p);
         }
+
+        public DataTable GetExcelData(DateTime startDate, DateTime endDate)
+        {
+            string sql = "select ph.PronoteHeaderID,xo.CustomerInvoiceXOId,Convert(varchar(50),xo.InvoiceYjrq,23) as InvoiceYjrq,p.ProductName,ph.DetailsSum,(select sum(ProceduresSum) from ProduceInDepotDetail where PronoteHeaderId=ph.PronoteHeaderID) as TotalProcess,(select sum(CheckOutSum)from ProduceInDepotDetail where PronoteHeaderId=ph.PronoteHeaderID)as TotalPass,ph.ProductUnit,(select top 1 Convert(varchar(50),PronoteProceduresDate,23) from PronoteProceduresDetail where PronoteHeaderId=ph.PronoteHeaderID order by ProceduresNo) as LastDate,(select top 1 PronoteMachineId from PronoteProceduresDetail where PronoteHeaderId=ph.PronoteHeaderID order by ProceduresNo) as MachineId from PronoteHeader ph left join InvoiceXO xo on ph.InvoiceXOId=xo.InvoiceId left join Product p on ph.ProductId=p.ProductId where ph.PronoteDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "' and ph.InvoiceType=0 and ((select sum(CheckOutSum)from ProduceInDepotDetail where PronoteHeaderId=ph.PronoteHeaderID)<DetailsSum or (select sum(CheckOutSum)from ProduceInDepotDetail where PronoteHeaderId=ph.PronoteHeaderID) is null)";
+
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            return dt;
+        }
     }
 }
