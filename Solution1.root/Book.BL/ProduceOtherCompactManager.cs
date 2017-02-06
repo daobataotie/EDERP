@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -200,6 +201,11 @@ namespace Book.BL
         public string SelectByInvoiceCusID(string Id)
         {
             return accessor.SelectByInvoiceCusID(Id);
+        }
+
+        public DataTable GetExcelData(DateTime startDate, DateTime endDate)
+        {
+            return accessor.GetExcelData(startDate, endDate);
         }
     }
 }

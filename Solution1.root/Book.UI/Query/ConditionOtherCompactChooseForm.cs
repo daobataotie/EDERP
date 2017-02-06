@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Book.UI.Invoices;
 using Book.UI.produceManager.ProduceOtherCompact;
+using Microsoft.Office.Interop.Excel;
 
 namespace Book.UI.Query
 {
@@ -100,6 +101,78 @@ namespace Book.UI.Query
             ChooseOutContract form = new ChooseOutContract();
             if (form.ShowDialog() == DialogResult.OK)
                 this.buttonEditProduceOtherCompactId2.EditValue = (form.SelectItem as Model.ProduceOtherCompact).ProduceOtherCompactId;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Type objClassType = null;
+            objClassType = Type.GetTypeFromProgID("Excel.Application");
+            if (objClassType == null)
+            {
+                MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
+                return;
+            }
+
+            DateTime startTime = global::Helper.DateTimeParse.NullDate;
+            DateTime endTime = global::Helper.DateTimeParse.EndDate;
+            if (this.dateEditStartDate.EditValue != null)
+            {
+                startTime = this.dateEditStartDate.DateTime;
+            }
+            if (this.dateEditEndDate.EditValue != null)
+            {
+                endTime = this.dateEditEndDate.DateTime;
+            }
+
+            System.Data.DataTable dt = new BL.ProduceOtherCompactManager().GetExcelData(startTime, endTime);
+
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                MessageBox.Show("無數據！", "提示！", MessageBoxButtons.OK);
+                return;
+            }
+
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Application.Workbooks.Add(true);
+                excel.Cells.ColumnWidth = 12;
+                excel.Rows.RowHeight = 20;
+
+                #region 表頭
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 7]).Borders.LineStyle = XlLineStyle.xlContinuous;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 7]).HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).ColumnWidth = 18;
+                excel.get_Range(excel.Cells[1, 3], excel.Cells[1, 3]).ColumnWidth = 18;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 10]).Font.Size = 12;
+                excel.get_Range(excel.Cells[1, 4], excel.Cells[1, 4]).ColumnWidth = 50;
+                excel.Cells[1, 1] = "編號";
+                excel.Cells[1, 2] = "最慢交期";
+                excel.Cells[1, 3] = "客戶訂單號";
+                excel.Cells[1, 4] = "貨品名稱";
+                excel.Cells[1, 5] = "數量";
+                excel.Cells[1, 6] = "進貨數量";
+                excel.Cells[1, 7] = "單位";
+                #endregion
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    excel.Cells[i + 2, 1] = dt.Rows[i]["ProduceOtherCompactId"] == null ? "" : dt.Rows[i]["ProduceOtherCompactId"].ToString();
+                    excel.Cells[i + 2, 2] = dt.Rows[i]["LastDate"] == null ? "" : dt.Rows[i]["LastDate"].ToString();
+                    excel.Cells[i + 2, 3] = dt.Rows[i]["CustomerInvoiceXOId"] == null ? "" : dt.Rows[i]["CustomerInvoiceXOId"].ToString();
+                    excel.Cells[i + 2, 4] = dt.Rows[i]["ProductName"] == null ? "" : dt.Rows[i]["ProductName"].ToString();
+                    excel.Cells[i + 2, 5] = dt.Rows[i]["OtherCompactCount"] == null ? "" : dt.Rows[i]["OtherCompactCount"].ToString();
+                    excel.Cells[i + 2, 6] = dt.Rows[i]["ArrivalInQuantity"] == null ? "" : dt.Rows[i]["ArrivalInQuantity"].ToString();
+                    excel.Cells[i + 2, 7] = dt.Rows[i]["ProductUnit"] == null ? "" : dt.Rows[i]["ProductUnit"].ToString();
+                }
+                excel.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Excel未生成完畢，請勿操作，并重新點擊按鈕生成數據！", "提示！", MessageBoxButtons.OK);
+                return;
+            }
         }
     }
 }

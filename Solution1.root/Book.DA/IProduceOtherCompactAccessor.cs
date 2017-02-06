@@ -23,6 +23,8 @@ namespace Book.DA
         IList<Book.Model.ProduceOtherCompact> GetByDate(DateTime startDate, DateTime endDate, Model.Product sendProduct, string CustomerInvoiceXOId, string customerid, string supplierid, string ProduceOtherCompactId);
         IList<Model.ProduceOtherCompact> Select(string StartCompactId, string EndCompactId, DateTime Startdate, DateTime EndDate, string StartSupplierId, string EndSupplierId, string StartPid, string EndPid, string InvoiceCusId);
         string SelectByInvoiceCusID(string Id);
+
+        System.Data.DataTable GetExcelData(DateTime startDate, DateTime endDate);
     }
 }
 

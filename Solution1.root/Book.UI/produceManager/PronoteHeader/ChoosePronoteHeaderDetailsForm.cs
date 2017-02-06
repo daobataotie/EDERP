@@ -370,7 +370,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).ColumnWidth = 18;
                 excel.get_Range(excel.Cells[1, 2], excel.Cells[1, 2]).ColumnWidth = 18;
-                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).Font.Size = 15;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 10]).Font.Size = 12;
                 excel.get_Range(excel.Cells[1, 5], excel.Cells[1, 5]).ColumnWidth = 50;
                 excel.Cells[1, 1] = "加工單號";
                 excel.Cells[1, 2] = "客戶訂單號";

@@ -96,5 +96,16 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<string>("ProduceOtherCompact.SelectByInvoiceCusID", Id);
         }
+
+        public DataTable GetExcelData(DateTime startDate, DateTime endDate)
+        {
+            string sql = " select po.ProduceOtherCompactId,Convert(varchar(50),po.ProduceOtherCompactDate,23) as LastDate,xo.CustomerInvoiceXOId,p.ProductName,pod.OtherCompactCount,pod.ArrivalInQuantity,pod.ProductUnit from ProduceOtherCompactDetail pod left join ProduceOtherCompact po on pod.ProduceOtherCompactId =po.ProduceOtherCompactId left join InvoiceXO xo on xo.InvoiceId=po.InvoiceXOId left join Product p on pod.ProductId=p.ProductId where po.ProduceOtherCompactDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "' and (pod.ArrivalInQuantity<pod.OtherCompactCount or pod.ArrivalInQuantity is null)";
+
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            return dt;
+        }
     }
 }

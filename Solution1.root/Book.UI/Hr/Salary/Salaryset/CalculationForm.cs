@@ -256,8 +256,10 @@ namespace Book.UI.Hr.Salary.Salaryset
             double hunSangChan = 0;
             //隔周休假
             double gezhouxiu = 0;
-            //公假 ，年假 天数
+            //公假 ，年假，出差 天数
             double gnDays = 0;
+            //J,O周六天数
+            int saturdays = 0;
             foreach (Model.HrDailyEmployeeAttendInfo attend in this._hrManager.SelectByEmpMonth(emp, hryear, hrmonth))
             {
                 if (attend.LateInMinute.HasValue && attend.LateInMinute.Value != 0)
@@ -297,23 +299,26 @@ namespace Book.UI.Hr.Salary.Salaryset
                         else
                             noPayleaveDays += 0.5;
                     }
-                    if (_ms.mNote.Contains("公假") || _ms.mNote == "週日休假" || _ms.mNote == "周日休假" || _ms.mNote.Contains("年假") || (_ms.mNote.Contains("週六休假") && emp.IDNo.Contains("J")))
+                    if (_ms.mNote.Contains("公假") || _ms.mNote == "週日休假" || _ms.mNote == "周日休假" || _ms.mNote.Contains("年假") || _ms.mNote.Contains("出差") || (_ms.mNote.Contains("週六休假") && (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))))
                     {
                         hasPayDays++;
                         if (_ms.mNote == "週日休假" || _ms.mNote == "周日休假")
                             WeekendDays++;
 
-                        if (_ms.mNote.Contains("公假") || _ms.mNote.Contains("年假"))
+                        if (_ms.mNote.Contains("週六休假") && (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O")))
+                            saturdays++;
+
+                        if (_ms.mNote.Contains("公假") || _ms.mNote.Contains("年假") || _ms.mNote.Contains("出差"))
                         {
                             if (_ms.mNote.Contains("整日"))
                                 gnDays++;
-                            else
-                            {
-                                if (_ms.mNote.Contains("公假") && _ms.mNote.Contains("年假"))
-                                    gnDays++;
-                                else
-                                    gnDays += 0.5;
-                            }
+                            //else
+                            //{
+                            //    if (_ms.mNote.Contains("公假") && _ms.mNote.Contains("年假"))
+                            //        gnDays++;
+                            //    else
+                            //        gnDays += 0.5;
+                            //}
                         }
                     }
                     //if (_ms.mNote.Contains("隔周休假") && emp.GeZhouChuQinJJ)
@@ -521,23 +526,30 @@ namespace Book.UI.Hr.Salary.Salaryset
                 {
                     _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]), 0);
                 }
-                else if (emp.EmployeeJoinDate < Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) && (_ms.mLeaveDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + totalDay.ToString()) || _ms.mLeaveDate == global::Helper.DateTimeParse.NullDate))
+                else if (emp.EmployeeJoinDate <= Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) && (_ms.mLeaveDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + totalDay.ToString()) || _ms.mLeaveDate == global::Helper.DateTimeParse.NullDate))
                 {
-                    if (emp.IDNo.Contains("J"))
-                    {
-                        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
-                    }
-                    //员工编号以J开头的不管满不满足设定的出勤奖金天数 只扣除了年假，公假，国定假日之外的请假
-                    //2017年1月24日 設定的年終值/（當月天數-當月星期天數）* 該員實際出勤天數(公假 年假應算出勤)=年終
+                    //if (emp.IDNo.Contains("J"))
+                    //{
+                    //    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                    //}
+                    ////员工编号以J开头的不管满不满足设定的出勤奖金天数 只扣除了年假，公假，国定假日之外的请假
+
+                    //else
+                    //{
+                    //    if (emp.AttendanceJJDays.HasValue && attendDays + halfattend < emp.AttendanceJJDays)
+                    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
+                    //    else
+                    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                    //}
+
+                    //2017年1月24日 設定的年終值/（當月天數-當月星期天數）* 該員實際出勤天數(公假 年假應算出勤)=年終，半天不算
+                    //以O, J 开头的员工 設定的年終值/（當月天數-當月星期6，日天數）* 該員實際出勤天數(公假 年假應算出勤)=年終
+                    if (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))
+                        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays - saturdays) * (attendDays + gnDays), 0);
                     else
-                    {
-                        if (emp.AttendanceJJDays.HasValue && attendDays + halfattend < emp.AttendanceJJDays)
-                            _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
-                        else
-                            _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
-                        //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + halfattend + gnDays), 0);
-                    }
+                        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + gnDays), 0);
                 } //责任津贴   新版改为出勤奖金 后改为 伙食津贴  现改为  津贴. 改 年终
+
                 this.turnOutSalary = Convert.ToInt32(mStrToDouble(dx_dr["DutyPay"]));
                 _ms.mGivenDays = mStrToDouble(dx_dr["HolidayBonusGivenDays"]);  //年假(补休)天数
                 _ms.mAnnualHolidayFee = this.GetSiSheWuRu(_ms.mMonthlyPay / 30 * _ms.mGivenDays, 0);         //年假(补休)金额，2016年3月2日16:06:28改为固定除以30天
@@ -1082,6 +1094,8 @@ namespace Book.UI.Hr.Salary.Salaryset
             double gezhouxiu = 0;
             //公假 ，年假 天数
             double gnDays = 0;
+            //J,O周六天数
+            int saturdays = 0;
             foreach (Model.HrDailyEmployeeAttendInfo attend in this._hrManager.SelectByEmpMonth(emp, hryear, hrmonth))
             {
                 if (attend.LateInMinute.HasValue && attend.LateInMinute.Value != 0)
@@ -1121,22 +1135,26 @@ namespace Book.UI.Hr.Salary.Salaryset
                         else
                             noPayleaveDays += 0.5;
                     }
-                    if (_ms.mNote.Contains("公假") || _ms.mNote == "週日休假" || _ms.mNote == "周日休假" || _ms.mNote.Contains("年假") || (_ms.mNote.Contains("週六休假") && emp.IDNo.Contains("J")))
+                    if (_ms.mNote.Contains("公假") || _ms.mNote == "週日休假" || _ms.mNote == "周日休假" || _ms.mNote.Contains("年假") || _ms.mNote.Contains("出差") || (_ms.mNote.Contains("週六休假") && (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))))
                     {
                         hasPayDays++;
                         if (_ms.mNote == "週日休假" || _ms.mNote == "周日休假")
                             WeekendDays++;
-                        if (_ms.mNote.Contains("公假") || _ms.mNote.Contains("年假"))
+
+                        if (_ms.mNote.Contains("週六休假") && (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O")))
+                            saturdays++;
+
+                        if (_ms.mNote.Contains("公假") || _ms.mNote.Contains("年假") || _ms.mNote.Contains("出差"))
                         {
                             if (_ms.mNote.Contains("整日"))
                                 gnDays++;
-                            else
-                            {
-                                if (_ms.mNote.Contains("公假") && _ms.mNote.Contains("年假"))
-                                    gnDays++;
-                                else
-                                    gnDays += 0.5;
-                            }
+                            //else
+                            //{
+                            //    if (_ms.mNote.Contains("公假") && _ms.mNote.Contains("年假"))
+                            //        gnDays++;
+                            //    else
+                            //        gnDays += 0.5;
+                            //}
                         }
                     }
                     //if (_ms.mNote.Contains("隔周休假") && emp.GeZhouChuQinJJ)
@@ -1376,19 +1394,25 @@ namespace Book.UI.Hr.Salary.Salaryset
                 }
                 else if (emp.EmployeeJoinDate < Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) && (_ms.mLeaveDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + totalDay.ToString()) || _ms.mLeaveDate == global::Helper.DateTimeParse.NullDate))
                 {
-                    if (emp.IDNo.Contains("J"))
-                    {
-                        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
-                    }
-                    //员工编号以J开头的不管满不满足设定的出勤奖金天数 只扣除了年假，公假之外的请假，其他都给
+                    //if (emp.IDNo.Contains("J"))
+                    //{
+                    //    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                    //}
+                    ////员工编号以J开头的不管满不满足设定的出勤奖金天数 只扣除了年假，公假之外的请假，其他都给
+                    //else
+                    //{
+                    //    if (emp.AttendanceJJDays.HasValue && attendDays + halfattend < emp.AttendanceJJDays)
+                    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
+                    //    else
+                    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                    //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + halfattend + gnDays), 0);
+                    //}
+                    //2017年1月24日 設定的年終值/（當月天數-當月星期天數）* 該員實際出勤天數(公假 年假應算出勤)=年終，半天不算
+                    //以O, J 开头的员工 設定的年終值/（當月天數-當月星期6，日天數）* 該員實際出勤天數(公假 年假應算出勤)=年終
+                    if (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))
+                        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays - saturdays) * (attendDays + gnDays), 0);
                     else
-                    {
-                        if (emp.AttendanceJJDays.HasValue && attendDays + halfattend < emp.AttendanceJJDays)
-                            _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
-                        else
-                            _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
-                        //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + halfattend + gnDays), 0);
-                    }
+                        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + gnDays), 0);
                 } //责任津贴   新版改为出勤奖金   又改为 伙食津贴 改为 年終
                 _ms.mGivenDays = mStrToDouble(dx_dr["HolidayBonusGivenDays"]);  //年假(补休)天数
                 _ms.mAnnualHolidayFee = this.GetSiSheWuRu(_ms.mMonthlyPay / 30 * _ms.mGivenDays, 0);         //年假(补休)金额
@@ -2248,9 +2272,9 @@ namespace Book.UI.Hr.Salary.Salaryset
         public static readonly IList<string> vipPerson = new List<string> { "B212C2AD-E291-41C1-ABBC-79C7496BFC55" };
 
         /// <summary>
-        /// 特殊员工:林雄正  董宏仁 黃明華 辛旻瓊 黃盟舜 康振忠 柯欣茂 底薪，年终固定，没有班别津贴和时数补贴
+        /// 特殊员工:林雄正  董宏仁 黃明華 辛旻瓊 黃盟舜 康振忠 柯欣茂，魏貝恩 底薪，年终固定，没有班别津贴和时数补贴
         /// </summary>
-        public static readonly IList<string> specialEmp = new List<string> { "F9A22FFE-15E5-4D52-A039-3F5BAC57ACFA", "A534791D-0C81-4DFC-83D1-03801DDBB446", "3B7A16B8-2A24-49D2-AD85-E7BA3F4E5700", "97F1E465-AA14-4D62-A514-A85EA1A8AACB", "195933C9-F363-4C76-B6EE-55EC06FFE651", "B212C2AD-E291-41C1-ABBC-79C7496BFC55", "D4AE743A-390C-43A3-B45C-90781E8DC115" };
+        public static readonly IList<string> specialEmp = new List<string> { "F9A22FFE-15E5-4D52-A039-3F5BAC57ACFA", "A534791D-0C81-4DFC-83D1-03801DDBB446", "3B7A16B8-2A24-49D2-AD85-E7BA3F4E5700", "97F1E465-AA14-4D62-A514-A85EA1A8AACB", "195933C9-F363-4C76-B6EE-55EC06FFE651", "B212C2AD-E291-41C1-ABBC-79C7496BFC55", "D4AE743A-390C-43A3-B45C-90781E8DC115", "43BEB178-38C9-4CBB-B3B9-A22EBEA6BBF9" };
 
         /// <summary>
         /// 六位员工国定假日不扣出勤奖：王明欽,陳藝鈴,蘇嘉鴻,王乙蓉,陳政瑋,林家菁 2016年6月7日11:58:43：改为员工编号“J”开头的都不扣
