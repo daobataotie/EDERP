@@ -608,65 +608,75 @@ namespace Book.UI.Hr.Salary.Salaryset
                 }
                 else       //底薪 新版只有月薪，无日薪
                 {
-                    if (emp.IsMonthSalary)     //底薪，月薪员工用月薪-未出勤扣减
-                    {
-                        //if (emp.IsMigrantWorker)
-                        //{
-                        //    if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
-                        //    {
-                        //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + MigrantWorkerLeaveDays + totalDay - _ms.mDutyDateCount + WeekendDays), 0);
-                        //        this.AttendDays = _ms.mDutyDateCount - MigrantWorkerLeaveDays - WeekendDays - Kuangzhi;
-                        //    }
-                        //    else
-                        //    {
-                        //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + MigrantWorkerLeaveDays + totalDay - _ms.mDutyDateCount), 0);
-                        //        this.AttendDays = _ms.mDutyDateCount - MigrantWorkerLeaveDays - Kuangzhi;
-                        //    }
+                    //if (emp.IsMonthSalary)     //底薪，月薪员工用月薪-未出勤扣减
+                    //{
+                    //    //if (emp.IsMigrantWorker)
+                    //    //{
+                    //    //    if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
+                    //    //    {
+                    //    //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + MigrantWorkerLeaveDays + totalDay - _ms.mDutyDateCount + WeekendDays), 0);
+                    //    //        this.AttendDays = _ms.mDutyDateCount - MigrantWorkerLeaveDays - WeekendDays - Kuangzhi;
+                    //    //    }
+                    //    //    else
+                    //    //    {
+                    //    //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + MigrantWorkerLeaveDays + totalDay - _ms.mDutyDateCount), 0);
+                    //    //        this.AttendDays = _ms.mDutyDateCount - MigrantWorkerLeaveDays - Kuangzhi;
+                    //    //    }
 
-                        //}
-                        //else
-                        //{
-                        if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
-                        {
-                            _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors + WeekendDays), 0);
-                            this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - WeekendDays - Kuangzhi;
-                        }
-                        else
-                        {
-                            _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors), 0);
-                            this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - Kuangzhi;
-                        }
-                        //}
+                    //    //}
+                    //    //else
+                    //    //{
+                    //    if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
+                    //    {
+                    //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors + WeekendDays), 0);
+                    //        this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - WeekendDays - Kuangzhi;
+                    //    }
+                    //    else
+                    //    {
+                    //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors), 0);
+                    //        this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - Kuangzhi;
+                    //    }
+                    //    //}
+                    //}
+                    //else                     //不是月薪为  日薪*实际出勤天数
+                    //{
+                    //    //if (emp.IsMigrantWorker)
+                    //    //{
+                    //    //    if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
+                    //    //    {
+                    //    //        this.AttendDays = _ms.mDutyDateCount - MigrantWorkerLeaveDays - WeekendDays - Kuangzhi;
+                    //    //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay * (this.AttendDays) / 30, 0);
+                    //    //    }
+                    //    //    else
+                    //    //    {
+                    //    //        this.AttendDays = _ms.mDutyDateCount - MigrantWorkerLeaveDays - Kuangzhi;
+                    //    //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay * (this.AttendDays) / 30, 0);
+                    //    //    }//_ms.mDutyDateCount区别于totalDay的地方在于离职后_ms.mDutyDateCount不会增加，记录的是实际出勤次数
+                    //    //}
+                    //    //else
+                    //    //{
+                    //    if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
+                    //    {
+                    //        this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - WeekendDays - Kuangzhi;
+                    //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay * (this.AttendDays) / 30, 0);
+                    //    }
+                    //    else
+                    //    {
+                    //        this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - Kuangzhi;
+                    //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay * (this.AttendDays) / 30, 0);
+                    //    }
+                    //    //}//底薪 新版只有月薪，无日薪
+
+                    //}
+                    if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
+                    {
+                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors + WeekendDays), 0);
+                        this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - WeekendDays - Kuangzhi;
                     }
-                    else                     //不是月薪为  日薪*实际出勤天数
+                    else
                     {
-                        //if (emp.IsMigrantWorker)
-                        //{
-                        //    if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
-                        //    {
-                        //        this.AttendDays = _ms.mDutyDateCount - MigrantWorkerLeaveDays - WeekendDays - Kuangzhi;
-                        //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay * (this.AttendDays) / 30, 0);
-                        //    }
-                        //    else
-                        //    {
-                        //        this.AttendDays = _ms.mDutyDateCount - MigrantWorkerLeaveDays - Kuangzhi;
-                        //        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay * (this.AttendDays) / 30, 0);
-                        //    }//_ms.mDutyDateCount区别于totalDay的地方在于离职后_ms.mDutyDateCount不会增加，记录的是实际出勤次数
-                        //}
-                        //else
-                        //{
-                        if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
-                        {
-                            this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - WeekendDays - Kuangzhi;
-                            _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay * (this.AttendDays) / 30, 0);
-                        }
-                        else
-                        {
-                            this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - Kuangzhi;
-                            _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay * (this.AttendDays) / 30, 0);
-                        }
-                        //}//底薪 新版只有月薪，无日薪
-
+                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors), 0);
+                        this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - Kuangzhi;
                     }
                 }
                 if (VPerson.specialEmp.Contains(emp.EmployeeId))
