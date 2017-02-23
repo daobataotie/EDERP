@@ -387,8 +387,11 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
                     //员工编号为J开头，并且是国定假日给出勤奖
-                    if (emp.IDNo.Contains("J") && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    if (emp.IDNo.ToUpper().StartsWith("J") && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    {
                         hasPayDays++;
+                        gnDays++;
+                    }
                     if (_ms.mNote.Contains("曠職") || _ms.mNote.Contains("病假") || _ms.mNote.Contains("事假") || _ms.mNote.Contains("婚假") || _ms.mNote.Contains("喪假") || _ms.mNote.Contains("無薪假") || _ms.mNote.Contains("特殊休(有薪)") || _ms.mNote.Contains("公傷假") || _ms.mNote.Contains("週六休假") || _ms.mNote.Contains("產假") || _ms.mNote.Contains("選舉假") || _ms.mNote.Contains("產檢假") || _ms.mNote.Contains("過年大掃除") || _ms.mNote.Contains("陪產假") || _ms.mNote.Contains("國定假日補休") || _ms.mNote.Contains("颱風假") || _ms.mNote.Contains("育嬰假") || _ms.mNote.Contains("隔周休假") || _ms.mNote.Contains("留職停薪") || _ms.mNote.Contains("補休年假"))
                     {
                         //TimeBonus++;

@@ -39,6 +39,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="AuditState" column="AuditState" />
       <result property="AuditEmpId" column="AuditEmpId" />
       <result property="Special" column="Special"/>
+      <result property="ShipmentDate" column="ShipmentDate"/>
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="ConveyanceMethod" column="ConveyanceMethodId" lazyLoad="false" select="ConveyanceMethod.select_by_primary_key" />
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
@@ -168,7 +169,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AuditEmpId],
 				[OtherChargeMoney],
 				[OtherChargeNote],
-        [Special]
+        [Special],
+        [ShipmentDate]
 			FROM
 				[dbo].[InvoiceXS]
 			WHERE
@@ -254,7 +256,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AuditEmpId],
 				[OtherChargeMoney],
 				[OtherChargeNote],
-        [Special]
+        [Special],
+        [ShipmentDate]
 			) 
 			VALUES 
 			(
@@ -290,7 +293,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#AuditEmpId#,
 				#OtherChargeMoney#,
 				#OtherChargeNote#,
-        #Special#
+        #Special#,
+        #ShipmentDate#
 			)
              ]]>
     </insert>
@@ -329,7 +333,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AuditEmpId] = #AuditEmpId#,
 				[OtherChargeMoney]=#OtherChargeMoney#,
 				[OtherChargeNote]=#OtherChargeNote#,
-        [Special]=#Special#
+        [Special]=#Special#,
+        [ShipmentDate]=#ShipmentDate#
 			WHERE
 				[InvoiceId] = #InvoiceId#
                     ]]>

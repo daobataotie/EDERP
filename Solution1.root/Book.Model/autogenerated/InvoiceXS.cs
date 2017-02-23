@@ -465,5 +465,15 @@ namespace Book.Model
 
         public readonly static string PRO_Special = "Special";
         #endregion
+
+        private DateTime? _shipmentDate;
+
+        public DateTime? ShipmentDate
+        {
+            get { return _shipmentDate; }
+            set { _shipmentDate = value; }
+        }
+
+        public static readonly string PRO_ShipmentDate = "ShipmentDate";
     }
 }

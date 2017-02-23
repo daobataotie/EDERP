@@ -393,7 +393,7 @@ namespace Book.BL
                 //客户产品价格
                 Model.CustomerProductPrice customerProducrPrice = new Book.Model.CustomerProductPrice();
                 customerProducrPrice.CustomerId = customerProducts.CustomerId;
-                customerProducrPrice.ProductId = customerProducts.ProductId;
+                //customerProducrPrice.ProductId = customerProducts.ProductId;
                 customerProducrPrice.UpdateTime = DateTime.Now;
                 customerProducrPrice.CustomerProductsId = customerProducts.PrimaryKeyId;
                 customerProductPriceAccessor.UpdateByCustomerProductsId(customerProducrPrice);

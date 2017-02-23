@@ -258,7 +258,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             double gezhouxiu = 0;
             //公假 ，年假，出差 天数
             double gnDays = 0;
-            //J,O周六天数
+            //周六天数
             int saturdays = 0;
             foreach (Model.HrDailyEmployeeAttendInfo attend in this._hrManager.SelectByEmpMonth(emp, hryear, hrmonth))
             {
@@ -354,8 +354,11 @@ namespace Book.UI.Hr.Salary.Salaryset
                         halfSpecialBonus += Convert.ToDouble(attend.SpecialBonus);
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
-                    if (emp.IDNo.Contains("J") && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    if (emp.IDNo.ToUpper().StartsWith("J") && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    {
                         hasPayDays++;
+                        gnDays++;
+                    }
                     if (_ms.mNote.Contains("曠職") || _ms.mNote.Contains("病假") || _ms.mNote.Contains("事假") || _ms.mNote.Contains("婚假") || _ms.mNote.Contains("喪假") || _ms.mNote.Contains("無薪假") || _ms.mNote.Contains("特殊休(有薪)") || _ms.mNote.Contains("公傷假") || _ms.mNote.Contains("週六休假") || _ms.mNote.Contains("產假") || _ms.mNote.Contains("選舉假") || _ms.mNote.Contains("產檢假") || _ms.mNote.Contains("過年大掃除") || _ms.mNote.Contains("陪產假") || _ms.mNote.Contains("國定假日補休") || _ms.mNote.Contains("颱風假") || _ms.mNote.Contains("育嬰假") || _ms.mNote.Contains("隔周休假") || _ms.mNote.Contains("留職停薪") || _ms.mNote.Contains("補休年假"))
                     {
                         //TimeBonus++;
@@ -543,8 +546,8 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
                     //}
 
-                    //2017年1月24日 設定的年終值/（當月天數-當月星期天數）* 該員實際出勤天數(公假 年假應算出勤)=年終，半天不算
-                    //以O, J 开头的员工 設定的年終值/（當月天數-當月星期6，日天數）* 該員實際出勤天數(公假 年假應算出勤)=年終
+                    //2017-1-24 設定的年終值/（當月天數-當月星期6，日天數）* 該員實際出勤天數(公假 年假 出差應算出勤)=年終
+                    //2017-2-16 J开头的员工 設定的年終值/（當月天數-當月星期6，日天數）* 該員實際出勤天數(公假 年假 出差 国定假日應算出勤)=年終
                     //if (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))
                     _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (attendDays + gnDays), 0);
                     // else
@@ -1195,8 +1198,11 @@ namespace Book.UI.Hr.Salary.Salaryset
                         halfSpecialBonus += Convert.ToDouble(attend.SpecialBonus);
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
-                    if (emp.IDNo.Contains("J") && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    if (emp.IDNo.ToUpper().StartsWith("J") && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    {
                         hasPayDays++;
+                        gnDays++;
+                    }
                     //if (_ms.mNote.Contains("曠職") || _ms.mNote.Contains("病假") || _ms.mNote.Contains("事假") || _ms.mNote.Contains("婚假") || _ms.mNote.Contains("喪假") || _ms.mNote.Contains("無薪假") || _ms.mNote.Contains("特殊休(有薪)") || _ms.mNote.Contains("婚假") || _ms.mNote.Contains("喪假") || _ms.mNote.Contains("產假") || _ms.mNote.Contains("選舉假") || _ms.mNote.Contains("產檢假") || _ms.mNote.Contains("過年大掃除") || _ms.mNote.Contains("陪產假"))
                     //{
                     //    TimeBonus++;

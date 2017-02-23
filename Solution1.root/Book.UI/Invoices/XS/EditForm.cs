@@ -263,6 +263,8 @@ namespace Book.UI.Invoices.XS
             invoice.TaxCaluType = this.comboBoxEditInvoiceKslb.SelectedIndex;
             this.Invoice.AuditState = this.saveAuditState;
             invoice.Special = this.checkEditSpecial.Checked;
+            if (this.date_Shipment.EditValue != null)
+                invoice.ShipmentDate = this.date_Shipment.DateTime;
 
             switch (this.action)
             {
@@ -322,6 +324,7 @@ namespace Book.UI.Invoices.XS
             invoice.InvoiceId = this.invoiceManager.GetNewId();
             invoice.Details = new List<Model.InvoiceXSDetail>();
             invoice.Employee0 = BL.V.ActiveOperator.Employee;
+            invoice.ShipmentDate = DateTime.Now;
             invoice.Setdetails.Clear();
             dic.Clear();
             if (this.invoicexo != null)
@@ -467,7 +470,7 @@ namespace Book.UI.Invoices.XS
             this.textEditAuditState.Text = this.Invoice.AuditStateName;
             this.checkEditSpecial.Checked = Convert.ToBoolean(invoice.Special);
             this.bindingSourceDetail.DataSource = invoice.Details;
-
+            this.date_Shipment.EditValue = invoice.ShipmentDate;
             //  this.textEditCustomerInvoiceXOId.Text = xo == null ? "" : xo.CustomerInvoiceXOId;
             //this.bindingSourceProduct.DataSource = this.customerProductsManager.Select(this.buttonEditCompany.EditValue as Model.Customer);
             // this.bindingSourceProduct.DataSource = this.productManager.Select(this.newChooseXScustomer.EditValue as Model.Customer);

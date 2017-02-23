@@ -40,6 +40,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.newChooseContorlAuditEmp.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
             this.action = "view";
+
+            var jiShuBiaoZhun = new BL.SettingManager().SelectByName("CSAJiShuBiaoZhun");
+            foreach (var item in jiShuBiaoZhun)
+            {
+                comboBoxEdit1.Properties.Items.Add(item.SettingCurrentValue);
+            }
+            comboBoxEdit1.SelectedIndex = 0;
         }
 
         int sign = 0;
@@ -110,8 +117,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ReportDate = DateTime.Now.Date;
             this._PCExportReportANSI.ExpType = "CSA";
 
-            var jiShuBiaoZhun = new BL.SettingManager().SelectByName("CSAJiShuBiaoZhun").FirstOrDefault();
-            this._PCExportReportANSI.CSAJiShuBiaoZhun = jiShuBiaoZhun == null ? "CSA Z94.3-2015" : jiShuBiaoZhun.SettingCurrentValue; 
+            //var jiShuBiaoZhun = new BL.SettingManager().SelectByName("CSAJiShuBiaoZhun").FirstOrDefault();
+            //this._PCExportReportANSI.CSAJiShuBiaoZhun = jiShuBiaoZhun == null ? "CSA Z94.3-2015" : jiShuBiaoZhun.SettingCurrentValue; 
 
             //为了打印固定格式
             this._PCExportReportANSI.ShouCeShu1 = 2;
@@ -153,7 +160,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.Customer = (this.NccCustomer.EditValue as Model.Customer);
             this._PCExportReportANSI.Mirrorlens = this.memoMirrorlens.EditValue == null ? null : this.memoMirrorlens.EditValue.ToString();
             this._PCExportReportANSI.ReportDate = this.DateReportDate.EditValue == null ? DateTime.Now : this.DateReportDate.DateTime;
-            this._PCExportReportANSI.CSAJiShuBiaoZhun = this.label25.Text;
+            //this._PCExportReportANSI.CSAJiShuBiaoZhun = this.label25.Text;
+            this._PCExportReportANSI.CSAJiShuBiaoZhun = this.comboBoxEdit1.SelectedText;
 
             if (this._PCExportReportANSI.Customer != null)
             {
@@ -277,7 +285,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             this.lookUpEditUnit.EditValue = this._PCExportReportANSI.ProductUnitId;
 
-            this.label25.Text = string.IsNullOrEmpty(this._PCExportReportANSI.CSAJiShuBiaoZhun) ? "CSA Z94.3-07" : this._PCExportReportANSI.CSAJiShuBiaoZhun;
+            this.comboBoxEdit1.Text = string.IsNullOrEmpty(this._PCExportReportANSI.CSAJiShuBiaoZhun) ? "CSA Z94.3-07" : this._PCExportReportANSI.CSAJiShuBiaoZhun;
         }
 
         //列印

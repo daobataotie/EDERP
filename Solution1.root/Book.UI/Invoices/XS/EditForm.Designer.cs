@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.checkEditSpecial = new DevExpress.XtraEditors.CheckEdit();
             this.btn_GetNewPrice = new DevExpress.XtraEditors.SimpleButton();
@@ -96,6 +96,7 @@
             this.gridColumnVersion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -148,7 +149,8 @@
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItemInvoice = new DevExpress.XtraBars.BarButtonItem();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.date_Shipment = new DevExpress.XtraEditors.DateEdit();
+            this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -227,6 +229,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -250,6 +255,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.date_Shipment);
             this.layoutControl1.Controls.Add(this.checkEditSpecial);
             this.layoutControl1.Controls.Add(this.btn_GetNewPrice);
             this.layoutControl1.Controls.Add(this.btnPlus);
@@ -422,10 +428,10 @@
             this.spinEditInvoiceTaxRate.Name = "spinEditInvoiceTaxRate";
             this.spinEditInvoiceTaxRate.Properties.AutoHeight = ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.AutoHeight")));
             this.spinEditInvoiceTaxRate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons1"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons2"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons3"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons4"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons8")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons9"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons10"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons11"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons12"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons13"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons14"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons15"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons16"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons17")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons18"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons19"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons20"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons21"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons22"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons23"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons24"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons25"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons26")))),
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons27"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons28"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons29"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons30"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons31"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons32"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons33"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons34"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons35"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons1"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons2"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons3"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons4"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons8")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons9"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons10"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons11"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons12"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons13"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons14"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons15"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons16"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons17")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons18"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons19"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons20"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons21"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons22"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons23"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons24"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons25"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons26")))),
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons27"))), resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons28"), ((int)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons29"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons30"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons31"))), ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons32"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons33"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, resources.GetString("spinEditInvoiceTaxRate.Properties.Buttons34"), null, null, ((bool)(resources.GetObject("spinEditInvoiceTaxRate.Properties.Buttons35"))))});
             this.spinEditInvoiceTaxRate.Properties.DisplayFormat.FormatString = "0.00";
             this.spinEditInvoiceTaxRate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.spinEditInvoiceTaxRate.Properties.EditFormat.FormatString = "0.00";
@@ -848,6 +854,12 @@
             resources.ApplyResources(this.gridColumn5, "gridColumn5");
             this.gridColumn5.Name = "gridColumn5";
             // 
+            // gridColumn6
+            // 
+            resources.ApplyResources(this.gridColumn6, "gridColumn6");
+            this.gridColumn6.FieldName = "XTquantity";
+            this.gridColumn6.Name = "gridColumn6";
+            // 
             // repositoryItemSpinEdit2
             // 
             resources.ApplyResources(this.repositoryItemSpinEdit2, "repositoryItemSpinEdit2");
@@ -877,7 +889,8 @@
             this.layoutControlItem32,
             this.layoutControlItem19,
             this.layoutControlItem10,
-            this.layoutControlItem35});
+            this.layoutControlItem35,
+            this.layoutControlItem36});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.CustomSize;
@@ -1043,7 +1056,7 @@
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(326, 25);
+            this.layoutControlItem2.Size = new System.Drawing.Size(254, 25);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(80, 20);
             // 
             // layoutControlItem1
@@ -1052,9 +1065,9 @@
             this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem1.Control = this.textEditInvoiceId;
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
-            this.layoutControlItem1.Location = new System.Drawing.Point(326, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(491, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(285, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(209, 25);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(55, 20);
             // 
             // layoutControlItem7
@@ -1063,9 +1076,9 @@
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.Control = this.buttonEditDepot;
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(611, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(700, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(354, 25);
+            this.layoutControlItem7.Size = new System.Drawing.Size(265, 25);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(55, 20);
             // 
             // layoutControlItem5
@@ -1074,16 +1087,16 @@
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(325, 25);
+            this.layoutControlItem5.Size = new System.Drawing.Size(254, 25);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(80, 20);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.comboBoxConveyanceMethodId;
             resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(610, 50);
+            this.layoutControlItem11.Location = new System.Drawing.Point(492, 50);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(281, 25);
+            this.layoutControlItem11.Size = new System.Drawing.Size(208, 25);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(55, 20);
             // 
             // layoutControlItem6
@@ -1092,26 +1105,26 @@
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(263, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(254, 25);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(80, 21);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.buttonEditEmployee;
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
-            this.layoutControlItem3.Location = new System.Drawing.Point(493, 25);
+            this.layoutControlItem3.Location = new System.Drawing.Point(491, 25);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(218, 25);
+            this.layoutControlItem3.Size = new System.Drawing.Size(209, 25);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(55, 20);
             // 
             // layoutControlItem24
             // 
             this.layoutControlItem24.Control = this.calcInvoiceAllowance;
             resources.ApplyResources(this.layoutControlItem24, "layoutControlItem24");
-            this.layoutControlItem24.Location = new System.Drawing.Point(325, 50);
+            this.layoutControlItem24.Location = new System.Drawing.Point(254, 50);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(285, 25);
-            this.layoutControlItem24.TextSize = new System.Drawing.Size(50, 20);
+            this.layoutControlItem24.Size = new System.Drawing.Size(238, 25);
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(60, 20);
             // 
             // layoutControlItem28
             // 
@@ -1146,27 +1159,29 @@
             // 
             this.layoutControlItem19.Control = this.textEditSongHuoAddress;
             resources.ApplyResources(this.layoutControlItem19, "layoutControlItem19");
-            this.layoutControlItem19.Location = new System.Drawing.Point(711, 25);
+            this.layoutControlItem19.Location = new System.Drawing.Point(700, 25);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(254, 25);
+            this.layoutControlItem19.Size = new System.Drawing.Size(265, 25);
             this.layoutControlItem19.TextSize = new System.Drawing.Size(80, 20);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.newChooseXScustomer;
             resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(263, 25);
+            this.layoutControlItem10.Location = new System.Drawing.Point(254, 25);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(230, 25);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(55, 20);
+            this.layoutControlItem10.Size = new System.Drawing.Size(237, 25);
+            this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(60, 14);
+            this.layoutControlItem10.TextToControlDistance = 5;
             // 
             // layoutControlItem35
             // 
             this.layoutControlItem35.Control = this.checkEditSpecial;
             resources.ApplyResources(this.layoutControlItem35, "layoutControlItem35");
-            this.layoutControlItem35.Location = new System.Drawing.Point(891, 50);
+            this.layoutControlItem35.Location = new System.Drawing.Point(700, 50);
             this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(74, 25);
+            this.layoutControlItem35.Size = new System.Drawing.Size(265, 25);
             this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem35.TextToControlDistance = 0;
             this.layoutControlItem35.TextVisible = false;
@@ -1338,11 +1353,28 @@
             this.barButtonItemInvoice.Name = "barButtonItemInvoice";
             this.barButtonItemInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemInvoice_ItemClick);
             // 
-            // gridColumn6
+            // date_Shipment
             // 
-            resources.ApplyResources(this.gridColumn6, "gridColumn6");
-            this.gridColumn6.FieldName = "XTquantity";
-            this.gridColumn6.Name = "gridColumn6";
+            this.date_Shipment.EditValue = null;
+            resources.ApplyResources(this.date_Shipment, "date_Shipment");
+            this.date_Shipment.MenuManager = this.barManager1;
+            this.date_Shipment.Name = "date_Shipment";
+            this.date_Shipment.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEdit1.Properties.Buttons"))))});
+            this.date_Shipment.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.date_Shipment.StyleController = this.layoutControl1;
+            // 
+            // layoutControlItem36
+            // 
+            this.layoutControlItem36.Control = this.date_Shipment;
+            resources.ApplyResources(this.layoutControlItem36, "layoutControlItem36");
+            this.layoutControlItem36.Location = new System.Drawing.Point(254, 0);
+            this.layoutControlItem36.Name = "layoutControlItem36";
+            this.layoutControlItem36.Size = new System.Drawing.Size(237, 25);
+            this.layoutControlItem36.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem36.TextSize = new System.Drawing.Size(60, 14);
+            this.layoutControlItem36.TextToControlDistance = 5;
             // 
             // EditForm
             // 
@@ -1432,6 +1464,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1553,5 +1588,7 @@
         private DevExpress.XtraEditors.CheckEdit checkEditSpecial;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraEditors.DateEdit date_Shipment;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem36;
     }
 }
