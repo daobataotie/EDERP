@@ -45,6 +45,14 @@ namespace Book.UI.produceManager.PronoteHeader
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.newChooseWorkHorse.Choose = new Settings.ProduceManager.Workhouselog.ChooseWorkHouse();
             this.bindingSourceMachine.DataSource = new BL.PronoteMachineManager().Select();
+
+            System.Data.DataTable dt = this.GetExcelData();
+            if (dt.Rows != null && dt.Rows.Count > 0)
+            {
+                this.lbl_Status.ForeColor = Color.Red;
+            }
+            else
+                this.lbl_Status.ForeColor = Color.Green;
         }
 
         public Model.PronoteHeader SelectItem
@@ -329,16 +337,8 @@ namespace Book.UI.produceManager.PronoteHeader
             ro.ShowPreviewDialog();
         }
 
-        private void btn_Excel_Click(object sender, EventArgs e)
+        private System.Data.DataTable GetExcelData()
         {
-            Type objClassType = null;
-            objClassType = Type.GetTypeFromProgID("Excel.Application");
-            if (objClassType == null)
-            {
-                MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
-                return;
-            }
-
             DateTime startTime = global::Helper.DateTimeParse.NullDate;
             DateTime endTime = global::Helper.DateTimeParse.EndDate;
             if (this.dateEditStartDate.EditValue != null)
@@ -351,6 +351,20 @@ namespace Book.UI.produceManager.PronoteHeader
             }
 
             System.Data.DataTable dt = pronoteHeaderManager.GetExcelData(startTime, endTime);
+            return dt;
+        }
+
+        private void btn_Excel_Click(object sender, EventArgs e)
+        {
+            Type objClassType = null;
+            objClassType = Type.GetTypeFromProgID("Excel.Application");
+            if (objClassType == null)
+            {
+                MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
+                return;
+            }
+
+            System.Data.DataTable dt = this.GetExcelData();
             if (dt == null || dt.Rows.Count == 0)
             {
                 MessageBox.Show("無數據！", "提示！", MessageBoxButtons.OK);
@@ -404,6 +418,17 @@ namespace Book.UI.produceManager.PronoteHeader
                 MessageBox.Show("Excel未生成完畢，請勿操作，并重新點擊按鈕生成數據！", "提示！", MessageBoxButtons.OK);
                 return;
             }
+        }
+
+        private void dateEditStartDate_EditValueChanged(object sender, EventArgs e)
+        {
+            System.Data.DataTable dt = this.GetExcelData();
+            if (dt.Rows != null && dt.Rows.Count > 0)
+            {
+                this.lbl_Status.ForeColor = Color.Red;
+            }
+            else
+                this.lbl_Status.ForeColor = Color.Green;
         }
     }
 }

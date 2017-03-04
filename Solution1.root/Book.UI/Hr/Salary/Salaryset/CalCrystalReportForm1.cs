@@ -387,7 +387,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
                     //员工编号为J开头，并且是国定假日给出勤奖
-                    if (emp.IDNo.ToUpper().StartsWith("J") && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    if ((emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
                     {
                         hasPayDays++;
                         gnDays++;
@@ -580,9 +580,18 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //2017年1月24日 設定的年終值/（當月天數-當月星期天數）* 該員實際出勤天數(公假 年假應算出勤)=年終，半天不算
                     //以O, J 开头的员工 設定的年終值/（當月天數-當月星期6，日天數）* 該員實際出勤天數(公假 年假應算出勤)=年終
                     //if (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))
-                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (attendDays + gnDays), 0);
+                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (attendDays + gnDays), 0);
                     //else
                     //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + gnDays), 0);
+                    /*2017-3-4  
+                     * 普：設定的年終值/（30-六日天数）*（30-六日天数-国定假日天数-请假天数）
+                     * J,O：設定的年終值/（30-六日天数）*（30-六日天数-请假天数）
+                     * 公假 年假 出差 不算請假
+                     * 请假天数算法：月总天数-六日天数-全勤天数-公假，年假，出差天数-国定假日天数
+                     * 总算法：年终值/(30-六日天数)*（30-月总天数+全勤天数+公假，年假，出差天数+【国假天数】）
+                     * J,O 的 gnDays 已经加上了国假天数
+                     */
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
                 } //责任津贴   新版改为出勤奖金 改为 年终
                 _ms.DutyPayTotal = mStrToDouble(dx_dr["DutyPay"]);
                 _ms.mGivenDays = mStrToDouble(dx_dr["HolidayBonusGivenDays"]);  //年假(补休)天数

@@ -35,6 +35,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.date_Shipment = new DevExpress.XtraEditors.DateEdit();
             this.checkEditSpecial = new DevExpress.XtraEditors.CheckEdit();
             this.btn_GetNewPrice = new DevExpress.XtraEditors.SimpleButton();
             this.btnPlus = new DevExpress.XtraEditors.SimpleButton();
@@ -127,6 +128,7 @@
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSourceProduct = new System.Windows.Forms.BindingSource(this.components);
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -149,11 +151,11 @@
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItemInvoice = new DevExpress.XtraBars.BarButtonItem();
-            this.date_Shipment = new DevExpress.XtraEditors.DateEdit();
-            this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditSpecial.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditOtherChargeNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditOtherChargeMoneyset.Properties)).BeginInit();
@@ -214,6 +216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
@@ -229,9 +232,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -287,6 +287,18 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(118, 249, 250, 350);
             this.layoutControl1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignMode.CustomSize;
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // date_Shipment
+            // 
+            this.date_Shipment.EditValue = null;
+            resources.ApplyResources(this.date_Shipment, "date_Shipment");
+            this.date_Shipment.MenuManager = this.barManager1;
+            this.date_Shipment.Name = "date_Shipment";
+            this.date_Shipment.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("date_Shipment.Properties.Buttons"))))});
+            this.date_Shipment.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.date_Shipment.StyleController = this.layoutControl1;
             // 
             // checkEditSpecial
             // 
@@ -1186,6 +1198,17 @@
             this.layoutControlItem35.TextToControlDistance = 0;
             this.layoutControlItem35.TextVisible = false;
             // 
+            // layoutControlItem36
+            // 
+            this.layoutControlItem36.Control = this.date_Shipment;
+            resources.ApplyResources(this.layoutControlItem36, "layoutControlItem36");
+            this.layoutControlItem36.Location = new System.Drawing.Point(254, 0);
+            this.layoutControlItem36.Name = "layoutControlItem36";
+            this.layoutControlItem36.Size = new System.Drawing.Size(237, 25);
+            this.layoutControlItem36.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem36.TextSize = new System.Drawing.Size(60, 14);
+            this.layoutControlItem36.TextToControlDistance = 5;
+            // 
             // emptySpaceItem5
             // 
             resources.ApplyResources(this.emptySpaceItem5, "emptySpaceItem5");
@@ -1353,29 +1376,6 @@
             this.barButtonItemInvoice.Name = "barButtonItemInvoice";
             this.barButtonItemInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemInvoice_ItemClick);
             // 
-            // date_Shipment
-            // 
-            this.date_Shipment.EditValue = null;
-            resources.ApplyResources(this.date_Shipment, "date_Shipment");
-            this.date_Shipment.MenuManager = this.barManager1;
-            this.date_Shipment.Name = "date_Shipment";
-            this.date_Shipment.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEdit1.Properties.Buttons"))))});
-            this.date_Shipment.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.date_Shipment.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem36
-            // 
-            this.layoutControlItem36.Control = this.date_Shipment;
-            resources.ApplyResources(this.layoutControlItem36, "layoutControlItem36");
-            this.layoutControlItem36.Location = new System.Drawing.Point(254, 0);
-            this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(237, 25);
-            this.layoutControlItem36.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem36.TextSize = new System.Drawing.Size(60, 14);
-            this.layoutControlItem36.TextToControlDistance = 5;
-            // 
             // EditForm
             // 
             this.AllowDrop = true;
@@ -1389,6 +1389,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEditSpecial.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditOtherChargeNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditOtherChargeMoneyset.Properties)).EndInit();
@@ -1449,6 +1451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
@@ -1464,9 +1467,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_Shipment.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             this.ResumeLayout(false);
 
         }
