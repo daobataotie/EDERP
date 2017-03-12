@@ -997,6 +997,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "ChoosePronoteHeaderDetailsForm";
             this.Load += new System.EventHandler(this.ChoosePronoteHeaderDetailsForm_Load);
+            this.Shown += new System.EventHandler(this.ChoosePronoteHeaderDetailsForm_Shown);
             this.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
     <ReferencePath>G:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\;G:\Program Files (x86)\Business Objects\Common\2.8\managed\C:\Program Files (x86)\Business Objects\Common\2.8\managed\C:\Program Files\Business Objects\Common\2.8\managed\</ReferencePath>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <PublishUrlHistory>D:\Debug121015\</PublishUrlHistory>
     <InstallUrlHistory>
     </InstallUrlHistory>

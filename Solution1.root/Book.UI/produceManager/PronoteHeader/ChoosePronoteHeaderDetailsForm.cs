@@ -32,6 +32,7 @@ namespace Book.UI.produceManager.PronoteHeader
         private int flag = 0;
         private int type = -1;   //0，非生產入库，1生产入库 生产入库时查询前部门转入 前部门合计等数量
         //默认能多选
+        private int isLoad = 0;
 
         public ChoosePronoteHeaderDetailsForm()
         {
@@ -388,7 +389,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 excel.get_Range(excel.Cells[1, 5], excel.Cells[1, 5]).ColumnWidth = 50;
                 excel.Cells[1, 1] = "加工單號";
                 excel.Cells[1, 2] = "客戶訂單號";
-                excel.Cells[1, 3] = "最慢交期";
+                excel.Cells[1, 3] = "射出日期";
                 excel.Cells[1, 4] = "交貨日期";
                 excel.Cells[1, 5] = "貨品名稱";
                 excel.Cells[1, 6] = "生產數量";
@@ -422,13 +423,21 @@ namespace Book.UI.produceManager.PronoteHeader
 
         private void dateEditStartDate_EditValueChanged(object sender, EventArgs e)
         {
-            System.Data.DataTable dt = this.GetExcelData();
-            if (dt.Rows != null && dt.Rows.Count > 0)
+            if (isLoad == 1)
             {
-                this.lbl_Status.ForeColor = Color.Red;
+                System.Data.DataTable dt = this.GetExcelData();
+                if (dt.Rows != null && dt.Rows.Count > 0)
+                {
+                    this.lbl_Status.ForeColor = Color.Red;
+                }
+                else
+                    this.lbl_Status.ForeColor = Color.Green;
             }
-            else
-                this.lbl_Status.ForeColor = Color.Green;
+        }
+
+        private void ChoosePronoteHeaderDetailsForm_Shown(object sender, EventArgs e)
+        {
+            isLoad = 1;
         }
     }
 }
