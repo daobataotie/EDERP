@@ -32,7 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ASEditForm2017));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.sp_Low = new DevExpress.XtraEditors.SpinEdit();
+            this.checkLow = new DevExpress.XtraEditors.CheckEdit();
             this.label59 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,7 +74,6 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.sp_ScatterNum = new DevExpress.XtraEditors.SpinEdit();
-            this.label12 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.sp_PrismaticVDwnNum = new DevExpress.XtraEditors.SpinEdit();
             this.label44 = new System.Windows.Forms.Label();
@@ -79,7 +88,6 @@
             this.spinQtyTest = new DevExpress.XtraEditors.SpinEdit();
             this.label39 = new System.Windows.Forms.Label();
             this.sp_PrismaticHInNum = new DevExpress.XtraEditors.SpinEdit();
-            this.label38 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.sp_ThemalNum = new DevExpress.XtraEditors.SpinEdit();
@@ -105,7 +113,6 @@
             this.checkPrismaticVUp = new DevExpress.XtraEditors.CheckEdit();
             this.label26 = new System.Windows.Forms.Label();
             this.checkPrismaticVDwn = new DevExpress.XtraEditors.CheckEdit();
-            this.label25 = new System.Windows.Forms.Label();
             this.spinRefractivePower = new DevExpress.XtraEditors.SpinEdit();
             this.label23 = new System.Windows.Forms.Label();
             this.checkScatter = new DevExpress.XtraEditors.CheckEdit();
@@ -124,7 +131,6 @@
             this.bindingSourceUnit = new System.Windows.Forms.BindingSource(this.components);
             this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
             this.newChooseContorlAuditEmp = new Book.UI.Invoices.NewChooseContorl();
-            this.label58 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.DateReportDate = new DevExpress.XtraEditors.DateEdit();
             this.NccTestPerson = new Book.UI.Invoices.NewChooseContorl();
@@ -144,7 +150,6 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem83 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem84 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem85 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem49 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -155,17 +160,16 @@
             this.BarBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintAlan = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintPPE = new DevExpress.XtraBars.BarButtonItem();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_Low.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkLow.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_MarkingsNum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_CorrsionNum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_IgnitionNum.Properties)).BeginInit();
@@ -217,13 +221,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem83)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem84)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem85)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem86)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -250,11 +255,11 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.comboBoxEdit1);
             this.layoutControl1.Controls.Add(this.panelControl1);
             this.layoutControl1.Controls.Add(this.lookUpEditUnit);
             this.layoutControl1.Controls.Add(this.txt_AuditState);
             this.layoutControl1.Controls.Add(this.newChooseContorlAuditEmp);
-            this.layoutControl1.Controls.Add(this.label58);
             this.layoutControl1.Controls.Add(this.label57);
             this.layoutControl1.Controls.Add(this.DateReportDate);
             this.layoutControl1.Controls.Add(this.NccTestPerson);
@@ -271,6 +276,8 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.sp_Low);
+            this.panelControl1.Controls.Add(this.checkLow);
             this.panelControl1.Controls.Add(this.label59);
             this.panelControl1.Controls.Add(this.label64);
             this.panelControl1.Controls.Add(this.label63);
@@ -367,11 +374,80 @@
             resources.ApplyResources(this.panelControl1, "panelControl1");
             this.panelControl1.Name = "panelControl1";
             // 
+            // sp_Low
+            // 
+            resources.ApplyResources(this.sp_Low, "sp_Low");
+            this.sp_Low.MenuManager = this.barManager1;
+            this.sp_Low.Name = "sp_Low";
+            this.sp_Low.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.sp_Low.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            // 
+            // checkLow
+            // 
+            resources.ApplyResources(this.checkLow, "checkLow");
+            this.checkLow.MenuManager = this.barManager1;
+            this.checkLow.Name = "checkLow";
+            this.checkLow.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkLow.Properties.Appearance.BorderColor")));
+            this.checkLow.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkLow.Properties.Caption = resources.GetString("checkLow.Properties.Caption");
+            // 
             // label59
             // 
             this.label59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.label59, "label59");
             this.label59.Name = "label59";
+            // 
+            // label64
+            // 
+            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label64, "label64");
+            this.label64.Name = "label64";
+            // 
+            // label63
+            // 
+            this.label63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label63, "label63");
+            this.label63.Name = "label63";
+            // 
+            // label62
+            // 
+            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label62, "label62");
+            this.label62.Name = "label62";
+            // 
+            // label61
+            // 
+            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label61, "label61");
+            this.label61.Name = "label61";
+            // 
+            // label60
+            // 
+            this.label60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label60, "label60");
+            this.label60.Name = "label60";
+            this.label60.Tag = "ASZSCJSL";
+            // 
+            // label38
+            // 
+            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.Name = "label38";
+            // 
+            // label25
+            // 
+            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // label12
+            // 
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            this.label12.Tag = "ASNRX";
+            this.label12.Click += new System.EventHandler(this.ChildFrmLable_Click);
             // 
             // label1
             // 
@@ -607,14 +683,6 @@
             this.sp_ScatterNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             // 
-            // label12
-            // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            this.label12.Tag = "ASNRX";
-            this.label12.Click += new System.EventHandler(this.ChildFrmLable_Click);
-            // 
             // label45
             // 
             this.label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -720,12 +788,6 @@
             this.sp_PrismaticHInNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_PrismaticHInNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
-            // label38
-            // 
-            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.Name = "label38";
             // 
             // label19
             // 
@@ -892,12 +954,6 @@
             this.checkPrismaticVDwn.Name = "checkPrismaticVDwn";
             this.checkPrismaticVDwn.Properties.Caption = resources.GetString("checkPrismaticVDwn.Properties.Caption");
             // 
-            // label25
-            // 
-            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
-            // 
             // spinRefractivePower
             // 
             resources.ApplyResources(this.spinRefractivePower, "spinRefractivePower");
@@ -1039,11 +1095,6 @@
             resources.ApplyResources(this.newChooseContorlAuditEmp, "newChooseContorlAuditEmp");
             this.newChooseContorlAuditEmp.Name = "newChooseContorlAuditEmp";
             // 
-            // label58
-            // 
-            resources.ApplyResources(this.label58, "label58");
-            this.label58.Name = "label58";
-            // 
             // label57
             // 
             resources.ApplyResources(this.label57, "label57");
@@ -1127,12 +1178,12 @@
             this.layoutControlItem8,
             this.layoutControlItem9,
             this.layoutControlItem83,
-            this.layoutControlItem84,
             this.layoutControlItem7,
             this.layoutControlItem85,
             this.emptySpaceItem49,
             this.layoutControlItem86,
-            this.layoutControlItem101});
+            this.layoutControlItem101,
+            this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1126, 609);
@@ -1217,21 +1268,10 @@
             resources.ApplyResources(this.layoutControlItem83, "layoutControlItem83");
             this.layoutControlItem83.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem83.Name = "layoutControlItem83";
-            this.layoutControlItem83.Size = new System.Drawing.Size(87, 25);
+            this.layoutControlItem83.Size = new System.Drawing.Size(91, 25);
             this.layoutControlItem83.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem83.TextToControlDistance = 0;
             this.layoutControlItem83.TextVisible = false;
-            // 
-            // layoutControlItem84
-            // 
-            this.layoutControlItem84.Control = this.label58;
-            resources.ApplyResources(this.layoutControlItem84, "layoutControlItem84");
-            this.layoutControlItem84.Location = new System.Drawing.Point(87, 50);
-            this.layoutControlItem84.Name = "layoutControlItem84";
-            this.layoutControlItem84.Size = new System.Drawing.Size(233, 25);
-            this.layoutControlItem84.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem84.TextToControlDistance = 0;
-            this.layoutControlItem84.TextVisible = false;
             // 
             // layoutControlItem7
             // 
@@ -1317,36 +1357,25 @@
             this.barPrintPPE.Name = "barPrintPPE";
             this.barPrintPPE.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPrintPPE_ItemClick);
             // 
-            // label60
+            // comboBoxEdit1
             // 
-            this.label60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label60, "label60");
-            this.label60.Name = "label60";
-            this.label60.Tag = "ASZSCJSL";
+            resources.ApplyResources(this.comboBoxEdit1, "comboBoxEdit1");
+            this.comboBoxEdit1.MenuManager = this.barManager1;
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit2.Properties.Buttons"))))});
+            this.comboBoxEdit1.StyleController = this.layoutControl1;
             // 
-            // label61
+            // layoutControlItem11
             // 
-            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label61, "label61");
-            this.label61.Name = "label61";
-            // 
-            // label62
-            // 
-            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label62, "label62");
-            this.label62.Name = "label62";
-            // 
-            // label63
-            // 
-            this.label63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label63, "label63");
-            this.label63.Name = "label63";
-            // 
-            // label64
-            // 
-            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label64, "label64");
-            this.label64.Name = "label64";
+            this.layoutControlItem11.Control = this.comboBoxEdit1;
+            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
+            this.layoutControlItem11.Location = new System.Drawing.Point(91, 50);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(229, 25);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextToControlDistance = 0;
+            this.layoutControlItem11.TextVisible = false;
             // 
             // ASEditForm2017
             // 
@@ -1362,6 +1391,8 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sp_Low.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkLow.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_MarkingsNum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_CorrsionNum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_IgnitionNum.Properties)).EndInit();
@@ -1413,13 +1444,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem83)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem84)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem85)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem86)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem101)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1520,10 +1552,8 @@
         private System.Windows.Forms.Label label54;
         private DevExpress.XtraBars.BarButtonItem BarBtnCutomerOrder;
         private DevExpress.XtraBars.BarButtonItem BarBtnSearch;
-        private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label57;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem83;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem84;
         private DevExpress.XtraEditors.TextEdit txt_AuditState;
         private Book.UI.Invoices.NewChooseContorl newChooseContorlAuditEmp;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
@@ -1556,5 +1586,9 @@
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label64;
+        private DevExpress.XtraEditors.SpinEdit sp_Low;
+        private DevExpress.XtraEditors.CheckEdit checkLow;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

@@ -740,6 +740,9 @@ namespace Book.UI
 
             //ANSI2015外销报告
             operations.Add("produceManager.PCExportReportANSI.ANSI2015", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.ANSI2015", form); });
+
+            //AS2017外销报告
+            operations.Add("produceManager.PCExportReportANSI.ASEditForm2017", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.ASEditForm2017", form); });
         }
 
         static Form CreateForm(string formTypeName)

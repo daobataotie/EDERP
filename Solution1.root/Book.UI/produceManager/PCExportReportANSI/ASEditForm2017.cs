@@ -37,6 +37,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.newChooseContorlAuditEmp.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
             this.action = "view";
+
+            var jiShuBiaoZhun = new BL.SettingManager().SelectByName("ASJiShuBiaoZhun");
+            foreach (var item in jiShuBiaoZhun)
+            {
+                comboBoxEdit1.Properties.Items.Add(item.SettingCurrentValue);
+            }
+            comboBoxEdit1.SelectedIndex = 0;
         }
 
         int sign = 0;
@@ -225,6 +232,15 @@ namespace Book.UI.produceManager.PCExportReportANSI
             else
                 this._PCExportReportANSI.ShouCeShu17 = Convert.ToDouble(this.sp_MarkingsNum.Value);
 
+
+            //New Add
+            this._PCExportReportANSI.LowImpact = this.checkLow.Checked;
+            if (this.sp_Low.EditValue == null || this.sp_Low.Value == 0)
+                this._PCExportReportANSI.ShouCeShu1 = null;
+            else
+                this._PCExportReportANSI.ShouCeShu1 = Convert.ToDouble(this.sp_Low.Value);
+            this._PCExportReportANSI.CSAJiShuBiaoZhun = this.comboBoxEdit1.SelectedText;
+
             switch (this.action)
             {
                 case "insert":
@@ -282,7 +298,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             tag = 0;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
-            ASRO r = new ASRO(this._PCExportReportANSI, tag);
+            ASRO2017 r = new ASRO2017(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {
@@ -395,6 +411,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.newChooseContorlAuditEmp.EditValue = this._PCExportReportANSI.AuditEmp;
             this.txt_AuditState.EditValue = this.GetAuditName(this._PCExportReportANSI.AuditState);
             this.lookUpEditUnit.EditValue = this._PCExportReportANSI.ProductUnitId;
+
+            //New Add
+            this.checkLow.Checked = this._PCExportReportANSI.LowImpact.HasValue ? this._PCExportReportANSI.LowImpact.Value : false;
+            this.sp_Low.EditValue = this._PCExportReportANSI.ShouCeShu1.HasValue ? this._PCExportReportANSI.ShouCeShu1.Value : 0;
+            this.comboBoxEdit1.Text = string.IsNullOrEmpty(this._PCExportReportANSI.CSAJiShuBiaoZhun) ? "Tested against AS/NZS 1337.1:2010 " : this._PCExportReportANSI.CSAJiShuBiaoZhun;
         }
 
         //搜索

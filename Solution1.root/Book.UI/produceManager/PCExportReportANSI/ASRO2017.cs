@@ -29,10 +29,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             }
             else
                 this.lbl_Signature.Text = new BL.SettingManager().SelectByName("ASWANSignature").Count < 1 ? "" : new BL.SettingManager().SelectByName("ASWANSignature")[0].SettingCurrentValue;
+
             this.xrLabel2.Text = "ASSEMBLED EYE PROTECTORS-QUALITY CONTROL TESE TEPORT";
             this.LbModelNo.Text = _PCExportReportANSI.Product == null ? null : _PCExportReportANSI.Product.CustomerProductName;
             //this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
-            this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("dd-MMM-yy", new System.Globalization.CultureInfo("en-us"));
+            this.xrLabel7.Text ="Issue date : "+ (_PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("MMM£¬yyyy", new System.Globalization.CultureInfo("en-us")));
+            this.xrLabel13.Text = string.IsNullOrEmpty(_PCExportReportANSI.CSAJiShuBiaoZhun) ? "Tested against AS/NZS 1337.1:2010 " : _PCExportReportANSI.CSAJiShuBiaoZhun;
 
             this.LbQtyTest.Text = (_PCExportReportANSI.QuYangShu2.HasValue ? _PCExportReportANSI.QuYangShu2.Value.ToString() : "0") + "PCS";
             this.LbBuyer.Text += "   " + (_PCExportReportANSI.Customer == null ? null : _PCExportReportANSI.Customer.CustomerName);
@@ -49,6 +51,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? "(" + _PCExportReportANSI.RefractivePower.Value.ToString("0.00") + ") 2" : "(0.00) 2";
             this.CheckScatter.Checked = _PCExportReportANSI.ScatterLight.HasValue ? _PCExportReportANSI.ScatterLight.Value : false;
             this.CheckMdeium.Checked = _PCExportReportANSI.MediumImpact.HasValue ? _PCExportReportANSI.MediumImpact.Value : false;
+            this.CheckLow.Checked = _PCExportReportANSI.LowImpact.HasValue ? _PCExportReportANSI.LowImpact.Value : false;
             this.CheckHigh.Checked = _PCExportReportANSI.HighImpact.HasValue ? _PCExportReportANSI.HighImpact.Value : false;
             this.CheckExtraHigh.Checked = _PCExportReportANSI.ExtraHighImpact.HasValue ? _PCExportReportANSI.ExtraHighImpact.Value : false;
             this.CheckPemer.Checked = _PCExportReportANSI.PermertrationTest.HasValue ? _PCExportReportANSI.PermertrationTest.Value : false;
@@ -73,6 +76,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbl12.Text = _PCExportReportANSI.ShouCeShu15.HasValue ? _PCExportReportANSI.ShouCeShu15.Value.ToString() : "";
             this.lbl13.Text = _PCExportReportANSI.ShouCeShu16.HasValue ? _PCExportReportANSI.ShouCeShu16.Value.ToString() : "";
             this.lbl14.Text = _PCExportReportANSI.ShouCeShu17.HasValue ? _PCExportReportANSI.ShouCeShu17.Value.ToString() : "";
+
+            this.xrLabel8.Text = _PCExportReportANSI.ShouCeShu1.HasValue ? _PCExportReportANSI.ShouCeShu1.Value.ToString() : "";
 
         }
 

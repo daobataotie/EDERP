@@ -2357,6 +2357,16 @@ namespace Book.Model
         }
 
         public readonly static string PRO_CSAJiShuBiaoZhun = "CSAJiShuBiaoZhun";
+
+        private bool? _LowImpact;
+
+        public bool? LowImpact
+        {
+            get { return _LowImpact; }
+            set { _LowImpact = value; }
+        }
+
+        public readonly static string PRO_LowImpact = "LowImpact";
     }
 }
     
