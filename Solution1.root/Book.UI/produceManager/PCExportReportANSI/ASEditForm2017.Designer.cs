@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ASEditForm2017));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.sp_Low = new DevExpress.XtraEditors.SpinEdit();
             this.checkLow = new DevExpress.XtraEditors.CheckEdit();
@@ -155,17 +156,17 @@
             this.emptySpaceItem49 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem86 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem101 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem16 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.BarBtnCutomerOrder = new DevExpress.XtraBars.BarButtonItem();
             this.BarBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintAlan = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintPPE = new DevExpress.XtraBars.BarButtonItem();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sp_Low.Properties)).BeginInit();
@@ -226,9 +227,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem86)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem101)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -273,6 +273,15 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(702, 275, 250, 233);
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // comboBoxEdit1
+            // 
+            resources.ApplyResources(this.comboBoxEdit1, "comboBoxEdit1");
+            this.comboBoxEdit1.MenuManager = this.barManager1;
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit1.Properties.Buttons"))))});
+            this.comboBoxEdit1.StyleController = this.layoutControl1;
             // 
             // panelControl1
             // 
@@ -1321,6 +1330,17 @@
             this.layoutControlItem101.TextToControlDistance = 0;
             this.layoutControlItem101.TextVisible = false;
             // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.comboBoxEdit1;
+            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
+            this.layoutControlItem11.Location = new System.Drawing.Point(91, 50);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(229, 25);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextToControlDistance = 0;
+            this.layoutControlItem11.TextVisible = false;
+            // 
             // emptySpaceItem16
             // 
             resources.ApplyResources(this.emptySpaceItem16, "emptySpaceItem16");
@@ -1357,26 +1377,6 @@
             this.barPrintPPE.Name = "barPrintPPE";
             this.barPrintPPE.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPrintPPE_ItemClick);
             // 
-            // comboBoxEdit1
-            // 
-            resources.ApplyResources(this.comboBoxEdit1, "comboBoxEdit1");
-            this.comboBoxEdit1.MenuManager = this.barManager1;
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit2.Properties.Buttons"))))});
-            this.comboBoxEdit1.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.comboBoxEdit1;
-            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(91, 50);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(229, 25);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextToControlDistance = 0;
-            this.layoutControlItem11.TextVisible = false;
-            // 
             // ASEditForm2017
             // 
             resources.ApplyResources(this, "$this");
@@ -1389,6 +1389,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sp_Low.Properties)).EndInit();
@@ -1449,9 +1450,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem86)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem101)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).EndInit();
             this.ResumeLayout(false);
 
         }

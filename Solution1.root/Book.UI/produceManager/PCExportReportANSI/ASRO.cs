@@ -29,7 +29,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             }
             else
                 this.lbl_Signature.Text = new BL.SettingManager().SelectByName("ASWANSignature").Count < 1 ? "" : new BL.SettingManager().SelectByName("ASWANSignature")[0].SettingCurrentValue;
-            this.xrLabel2.Text = "ASSEMBLED EYE PROTECTORS-QUALITY CONTROL TESE TEPORT";
+            this.xrLabel2.Text = "ASSEMBLED EYE PROTECTORS-QUALITY CONTROL TEST TEPORT";
             this.LbModelNo.Text = _PCExportReportANSI.Product == null ? null : _PCExportReportANSI.Product.CustomerProductName;
             //this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
             this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("dd-MMM-yy", new System.Globalization.CultureInfo("en-us"));

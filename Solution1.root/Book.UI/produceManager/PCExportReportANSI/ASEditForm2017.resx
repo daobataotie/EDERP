@@ -445,7 +445,7 @@
   <data name="comboBoxEdit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 62</value>
   </data>
-  <data name="comboBoxEdit2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+  <data name="comboBoxEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="comboBoxEdit1.Size" type="System.Drawing.Size, System.Drawing">
@@ -3566,6 +3566,12 @@ To Corrsion
   <data name="&gt;&gt;layoutControlItem101.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;emptySpaceItem16.Name" xml:space="preserve">
     <value>emptySpaceItem16</value>
   </data>
@@ -3595,12 +3601,6 @@ To Corrsion
   </data>
   <data name="&gt;&gt;barPrintPPE.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
-    <value>layoutControlItem11</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ASEditForm2017</value>

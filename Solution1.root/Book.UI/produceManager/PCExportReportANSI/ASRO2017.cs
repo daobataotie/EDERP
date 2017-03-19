@@ -30,9 +30,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             else
                 this.lbl_Signature.Text = new BL.SettingManager().SelectByName("ASWANSignature").Count < 1 ? "" : new BL.SettingManager().SelectByName("ASWANSignature")[0].SettingCurrentValue;
 
-            this.xrLabel2.Text = "ASSEMBLED EYE PROTECTORS-QUALITY CONTROL TESE TEPORT";
+            this.xrLabel2.Text = "Assembled Eye protectors ¨C Quality Control Test Report";
             this.LbModelNo.Text = _PCExportReportANSI.Product == null ? null : _PCExportReportANSI.Product.CustomerProductName;
-            //this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
+            this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
             this.xrLabel7.Text ="Issue date : "+ (_PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("MMM£¬yyyy", new System.Globalization.CultureInfo("en-us")));
             this.xrLabel13.Text = string.IsNullOrEmpty(_PCExportReportANSI.CSAJiShuBiaoZhun) ? "Tested against AS/NZS 1337.1:2010 " : _PCExportReportANSI.CSAJiShuBiaoZhun;
 
