@@ -401,7 +401,8 @@ namespace Book.UI.produceManager.MRSHeader
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            return new RO1(mrsheader.MRSHeaderId);
+            //return new RO1(mrsheader.MRSHeaderId);
+            return new RO1Update(mrsheader.MRSHeaderId);
         }
 
         protected override void MoveNext()
@@ -862,7 +863,7 @@ namespace Book.UI.produceManager.MRSHeader
                             pronoteHeader.InvoiceType = "1";
                         else if (this.mrsheader.SourceType == "5")
                             pronoteHeader.InvoiceType = "2";
-                        pronoteHeader.Materialprocessum=produceMaterialdetailsManager.SelectMaterialprocessum(_mrsdetail.MRSdetailsId);
+                        pronoteHeader.Materialprocessum = produceMaterialdetailsManager.SelectMaterialprocessum(_mrsdetail.MRSdetailsId);
 
                         // if (!string.IsNullOrEmpty(tableCode()))
                         //审核
@@ -992,6 +993,8 @@ namespace Book.UI.produceManager.MRSHeader
                                     pronoteProceduresDetail.ProceduresNo = technologydetails.TechnologydetailsNo;
                                     pronoteProceduresDetail.ProceduresId = technologydetails.ProceduresId;
                                     pronoteProceduresDetail.WorkHouseId = technologydetails.WorkHouseId;
+                                    if (tedetail.IndexOf(technologydetails) == 0)
+                                        pronoteProceduresDetail.PronoteProceduresDate = _mrsdetail.JiaoHuoDate;
                                     if (technologydetails.Procedures != null)
                                     {
                                         pronoteProceduresDetail.IsOtherProduceOther = technologydetails.IsOtherProduceOther;

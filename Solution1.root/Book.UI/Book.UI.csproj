@@ -4567,6 +4567,14 @@
       <DependentUpon>SelectMrsHeaderAndDetails.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\MRSHeader\RO1Update.resx">
+      <DependentUpon>RO1Update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\MRSHeader\RO1Update.zh-CHT.resx">
+      <DependentUpon>RO1Update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ANSI2015.resx">
       <DependentUpon>ANSI2015.cs</DependentUpon>
     </EmbeddedResource>
@@ -11611,6 +11619,12 @@
     </Compile>
     <Compile Include="produceManager\MouldCategory\ProductMouldSizeList.Designer.cs">
       <DependentUpon>ProductMouldSizeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\MRSHeader\RO1Update.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\MRSHeader\RO1Update.Designer.cs">
+      <DependentUpon>RO1Update.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\ANSI2015.cs">
       <SubType>Form</SubType>
