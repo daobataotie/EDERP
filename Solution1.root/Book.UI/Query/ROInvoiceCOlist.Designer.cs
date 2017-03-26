@@ -83,6 +83,7 @@ namespace Book.UI.Query
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1});
             resources.ApplyResources(this.PageHeader, "PageHeader");
+            this.PageHeader.Controls.SetChildIndex(this.xrLabelPrintDate, 0);
             this.PageHeader.Controls.SetChildIndex(this.xrLabelDateRange, 0);
             this.PageHeader.Controls.SetChildIndex(this.xrLabelReportName, 0);
             this.PageHeader.Controls.SetChildIndex(this.xrTable1, 0);
@@ -94,23 +95,30 @@ namespace Book.UI.Query
             this.xrlblTotalJinE,
             this.xrLabel11,
             this.xrlblTotalShuliang});
-            resources.ApplyResources(this.ReportFooter, "ReportFooter");
             this.ReportFooter.Expanded = true;
-            // 
-            // PageFooter
-            // 
-            resources.ApplyResources(this.PageFooter, "PageFooter");
+            resources.ApplyResources(this.ReportFooter, "ReportFooter");
             // 
             // xrLabelDateRange
             // 
-            resources.ApplyResources(this.xrLabelDateRange, "xrLabelDateRange");
             this.xrLabelDateRange.StylePriority.UseTextAlignment = false;
             // 
             // xrLabelReportName
             // 
-            resources.ApplyResources(this.xrLabelReportName, "xrLabelReportName");
             this.xrLabelReportName.StylePriority.UseFont = false;
             this.xrLabelReportName.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabelCompanyInfoName
+            // 
+            this.xrLabelCompanyInfoName.StylePriority.UseFont = false;
+            this.xrLabelCompanyInfoName.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabelPrintDate
+            // 
+            this.xrLabelPrintDate.StylePriority.UseTextAlignment = false;
+            // 
+            // xrPageInfo1
+            // 
+            this.xrPageInfo1.StylePriority.UseTextAlignment = false;
             // 
             // TopMargin
             // 
@@ -315,6 +323,8 @@ namespace Book.UI.Query
             // 
             resources.ApplyResources(this.TCshangpingbianhao, "TCshangpingbianhao");
             this.TCshangpingbianhao.Name = "TCshangpingbianhao";
+            this.TCshangpingbianhao.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 254F);
+            this.TCshangpingbianhao.StylePriority.UsePadding = false;
             this.TCshangpingbianhao.StylePriority.UseTextAlignment = false;
             this.TCshangpingbianhao.Weight = 0.30699908286126021;
             // 
