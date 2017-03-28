@@ -131,7 +131,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PayRate.Width" type="System.Int32, mscorlib">
-    <value>150</value>
+    <value>115</value>
   </data>
   <metadata name="IsCountToPunish.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -145,6 +145,9 @@
   <data name="coldoAttendance.HeaderText" xml:space="preserve">
     <value>是否考勤</value>
   </data>
+  <data name="coldoAttendance.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
   <metadata name="LeaveTypeId.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -154,6 +157,15 @@
   <data name="LeaveTypeId.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <metadata name="Priority.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Priority.HeaderText" xml:space="preserve">
+    <value>優先級</value>
+  </data>
+  <data name="Priority.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>287, 16</value>
   </metadata>
@@ -162,7 +174,7 @@
     <value>0, 51</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>479, 372</value>
+    <value>540, 372</value>
   </data>
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -196,7 +208,7 @@
     <value>0, 0</value>
   </data>
   <data name="barDockControlTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>479, 47</value>
+    <value>540, 47</value>
   </data>
   <data name="&gt;&gt;barDockControlTop.Name" xml:space="preserve">
     <value>barDockControlTop</value>
@@ -217,7 +229,7 @@
     <value>0, 430</value>
   </data>
   <data name="barDockControlBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>479, 0</value>
+    <value>540, 0</value>
   </data>
   <data name="&gt;&gt;barDockControlBottom.Name" xml:space="preserve">
     <value>barDockControlBottom</value>
@@ -256,7 +268,7 @@
     <value>Right</value>
   </data>
   <data name="barDockControlRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>479, 47</value>
+    <value>540, 47</value>
   </data>
   <data name="barDockControlRight.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 383</value>
@@ -280,7 +292,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>479, 430</value>
+    <value>540, 430</value>
   </data>
   <data name="textEdit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>464, 15</value>
@@ -311,6 +323,42 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>休假类别</value>
+  </data>
+  <data name="&gt;&gt;LeaveTypeName.Name" xml:space="preserve">
+    <value>LeaveTypeName</value>
+  </data>
+  <data name="&gt;&gt;LeaveTypeName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PayRate.Name" xml:space="preserve">
+    <value>PayRate</value>
+  </data>
+  <data name="&gt;&gt;PayRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IsCountToPunish.Name" xml:space="preserve">
+    <value>IsCountToPunish</value>
+  </data>
+  <data name="&gt;&gt;IsCountToPunish.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;coldoAttendance.Name" xml:space="preserve">
+    <value>coldoAttendance</value>
+  </data>
+  <data name="&gt;&gt;coldoAttendance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LeaveTypeId.Name" xml:space="preserve">
+    <value>LeaveTypeId</value>
+  </data>
+  <data name="&gt;&gt;LeaveTypeId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Priority.Name" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="&gt;&gt;Priority.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;bindingSource1.Name" xml:space="preserve">
     <value>bindingSource1</value>
@@ -348,36 +396,6 @@
   <data name="&gt;&gt;barButtonItemSave.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;LeaveTypeName.Name" xml:space="preserve">
-    <value>LeaveTypeName</value>
-  </data>
-  <data name="&gt;&gt;LeaveTypeName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PayRate.Name" xml:space="preserve">
-    <value>PayRate</value>
-  </data>
-  <data name="&gt;&gt;PayRate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IsCountToPunish.Name" xml:space="preserve">
-    <value>IsCountToPunish</value>
-  </data>
-  <data name="&gt;&gt;IsCountToPunish.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;coldoAttendance.Name" xml:space="preserve">
-    <value>coldoAttendance</value>
-  </data>
-  <data name="&gt;&gt;coldoAttendance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LeaveTypeId.Name" xml:space="preserve">
-    <value>LeaveTypeId</value>
-  </data>
-  <data name="&gt;&gt;LeaveTypeId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>LeaveTypeForm</value>
   </data>
@@ -399,27 +417,27 @@
         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
-        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
+        BQAAALMEAAACrwQAAIlQTkcNChoKAAAADUlIRFIAAAAYAAAAGAgGAAAA4Hc9+AAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAABCVJREFUSEuVlblvG0cYxb8/IAeRKoBduEmvLl3CLk0K/wEO4DJFoHQpUhlJbbgLojiG
+        DCQxggSBYse6rIOiblm3LFIUJUrmIS5liaZWlEiR3J2X9y1Fimv6XOBhgZn5fm9m9s2sOI4jrusGXGO6
+        jTEFCu+i0bxBx6zBlYVmW4GsW8pUdsPgEzb2tha+SazDxN4xZMhA5l3IqtvsI+ueMlsNrjmuu8E33kZZ
+        u4RkMolEIoHO2CFkjQbLF/1kLfB9rWngOG5XreYcUnidtm0Hn4+5uByqYjZlIZ1Oo3MjD1mhwaLbOtZS
+        ZsPgIzasVas1vE62bePHxWN8MOVANlzczx4hk8mgM0qDJRpwm1rHK1PZavBFpVLF2dnL9ShVw/beASzL
+        QrFYRDDJPY+0GERosECDOddXp0xlS61W+75cruBF5ewKvpnkbO8BX8Zq3kfVpyNB2BMa7NUNrj8pQB6z
+        bca0MZStBjdLpTOHQkNdazV82I16QmIughnjwfUJRF38kqsgn897Bp8un0IYU5kyzfpzOcp+qYH8RDhT
+        IdtUnAapC4Pnjs607BkM7u7j8nwVMk2DyVcYnJ1VTu3jE7RKfqaBwrcoXQH3vfFozq2TMr6Olzhz9hMe
+        4PbIuPExVMqWUqmEw/yRT3KbBgrfpLglwd0Lg+5DAjU1/KjBiMHyCRBcpcGYaeMoW4rFU1i5Q5/kDg0U
+        zjjKOkE7BrsVguIEMY4BZv6WBeRKwHSO7ctsH+XKXuAoW2y7yAOT80nu0kDhjKOe0gBT42WdcbxKkwID
+        1bML/L51brBEg2HTxlG2FAo2dnbTPslvLFC4gvWUEn6FRqFjIGEDXVFgKFN/6yqCvOjkkWnjKFuec6/i
+        20lsbj1tSv5ggcJ5gWmabmQNMmf1GevMFawzb65gnuMHjI+hTGWLZR1gaSWK2OYOorEEIhvbkD9ZcA4P
+        bhrsl4HbceDfp3Wozl7f61zRVd1/wqXPeLXKUJYylS3JVBZ9gxMIhecwO7eCpdUo5C8W6DngxwzGDE5q
+        wK8EzjwDbq4Ba3ngxg4PXagOf3/AwXfT+16tMpSlTGVLMplFz4MRT32D4xgOzUD+YSHhmpjgRj2i/3HW
+        91NAqMDrYo79esoHDT4bOcLfk+sIT8x7tcpo8JQtKV67/XRT9Q6M42F/GNLDYv2JnGf9Gfc/zrxfp5nG
+        UeEfPyrjh5E4hkZmMDg0hd7+eq0yGjxlSyptYXh01id5QAjheoF1rBh080MGeBV4cMbxq6EUekYeEz7t
+        GQyPqvwMlbIlnclxeQs+yUOC9PjzApMJiqdU4R2jNu6EI23jXyVlS2Yvh+nZFZ+kvwUeNngvVMO3E5m2
+        cW+SsiWb3cficsQnPTQNeHDSxthSrG3M20jZYuUOvPy26lK4ikuTVdxd3WvrexdZuQP8DwB/rEXYjFsJ
+        AAAAAElFTkSuQmCCCw==
 </value>
   </data>
   <data name="barButtonItemSave.Caption" xml:space="preserve">

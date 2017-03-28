@@ -21,6 +21,8 @@ namespace Book.DA
         bool IsExitsName(string typeid, string typename);
 
         double SelectPayRateByName(string Name);
+
+        IList<Model.LeaveType> SelectByPriority();
     }
 }
 

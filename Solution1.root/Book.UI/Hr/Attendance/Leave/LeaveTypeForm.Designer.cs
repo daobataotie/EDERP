@@ -30,7 +30,14 @@ namespace Book.UI.Hr.Attendance.Leave
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeaveTypeForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.LeaveTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PayRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsCountToPunish = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.coldoAttendance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.LeaveTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -42,11 +49,6 @@ namespace Book.UI.Hr.Attendance.Leave
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.barButtonItemSave = new DevExpress.XtraBars.BarButtonItem();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.LeaveTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PayRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsCountToPunish = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.coldoAttendance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.LeaveTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -63,11 +65,51 @@ namespace Book.UI.Hr.Attendance.Leave
             this.PayRate,
             this.IsCountToPunish,
             this.coldoAttendance,
-            this.LeaveTypeId});
+            this.LeaveTypeId,
+            this.Priority});
             this.dataGridView1.DataSource = this.bindingSource1;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView1_CellValidating);
+            // 
+            // LeaveTypeName
+            // 
+            this.LeaveTypeName.DataPropertyName = "LeaveTypeName";
+            resources.ApplyResources(this.LeaveTypeName, "LeaveTypeName");
+            this.LeaveTypeName.Name = "LeaveTypeName";
+            // 
+            // PayRate
+            // 
+            this.PayRate.DataPropertyName = "PayRate";
+            resources.ApplyResources(this.PayRate, "PayRate");
+            this.PayRate.Name = "PayRate";
+            // 
+            // IsCountToPunish
+            // 
+            this.IsCountToPunish.DataPropertyName = "IsCountToPunish";
+            resources.ApplyResources(this.IsCountToPunish, "IsCountToPunish");
+            this.IsCountToPunish.Name = "IsCountToPunish";
+            // 
+            // coldoAttendance
+            // 
+            this.coldoAttendance.DataPropertyName = "doAttendance";
+            resources.ApplyResources(this.coldoAttendance, "coldoAttendance");
+            this.coldoAttendance.Name = "coldoAttendance";
+            // 
+            // LeaveTypeId
+            // 
+            this.LeaveTypeId.DataPropertyName = "LeaveTypeId";
+            resources.ApplyResources(this.LeaveTypeId, "LeaveTypeId");
+            this.LeaveTypeId.Name = "LeaveTypeId";
+            // 
+            // Priority
+            // 
+            this.Priority.DataPropertyName = "PriorityValue";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Priority.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.Priority, "Priority");
+            this.Priority.Name = "Priority";
             // 
             // barManager1
             // 
@@ -140,36 +182,6 @@ namespace Book.UI.Hr.Attendance.Leave
             resources.ApplyResources(this.textEdit1, "textEdit1");
             this.textEdit1.Name = "textEdit1";
             // 
-            // LeaveTypeName
-            // 
-            this.LeaveTypeName.DataPropertyName = "LeaveTypeName";
-            resources.ApplyResources(this.LeaveTypeName, "LeaveTypeName");
-            this.LeaveTypeName.Name = "LeaveTypeName";
-            // 
-            // PayRate
-            // 
-            this.PayRate.DataPropertyName = "PayRate";
-            resources.ApplyResources(this.PayRate, "PayRate");
-            this.PayRate.Name = "PayRate";
-            // 
-            // IsCountToPunish
-            // 
-            this.IsCountToPunish.DataPropertyName = "IsCountToPunish";
-            resources.ApplyResources(this.IsCountToPunish, "IsCountToPunish");
-            this.IsCountToPunish.Name = "IsCountToPunish";
-            // 
-            // coldoAttendance
-            // 
-            this.coldoAttendance.DataPropertyName = "doAttendance";
-            resources.ApplyResources(this.coldoAttendance, "coldoAttendance");
-            this.coldoAttendance.Name = "coldoAttendance";
-            // 
-            // LeaveTypeId
-            // 
-            this.LeaveTypeId.DataPropertyName = "LeaveTypeId";
-            resources.ApplyResources(this.LeaveTypeId, "LeaveTypeId");
-            this.LeaveTypeId.Name = "LeaveTypeId";
-            // 
             // LeaveTypeForm
             // 
             resources.ApplyResources(this, "$this");
@@ -210,5 +222,6 @@ namespace Book.UI.Hr.Attendance.Leave
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsCountToPunish;
         private System.Windows.Forms.DataGridViewCheckBoxColumn coldoAttendance;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeaveTypeId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
     }
 }

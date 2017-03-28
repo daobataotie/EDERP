@@ -13,5 +13,14 @@
       SELECT abs(PayRate) FROM LeaveType WHERE LeaveType.LeaveTypeName=#value#
       ]]>
     </select>
+
+    <select id="SelectByPriority" resultMap="LeaveTypeResult">
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[LeaveType]
+                			                   
+  ORDER BY case when PriorityValue is null then 999999999 end
+			]]>
+    </select>
   </statements>
 </sqlMap>

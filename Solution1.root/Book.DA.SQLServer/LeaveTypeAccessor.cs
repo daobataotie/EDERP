@@ -49,14 +49,15 @@ namespace Book.DA.SQLServer
 
             SqlConnection con = new SqlConnection(sqlmapper.DataSource.ConnectionString);
             SqlDataAdapter adapter = new SqlDataAdapter();
-            adapter.UpdateCommand = new SqlCommand("update LeaveType set UpdateTime=getdate(),LeaveTypeName=@LeaveTypeName,PayRate=@PayRate,IsCountToPunish=@IsCountToPunish,doAttendance=@doAttendance where LeaveTypeId=@LeaveTypeId", con);
+            adapter.UpdateCommand = new SqlCommand("update LeaveType set UpdateTime=getdate(),LeaveTypeName=@LeaveTypeName,PayRate=@PayRate,IsCountToPunish=@IsCountToPunish,doAttendance=@doAttendance,PriorityValue=@PriorityValue where LeaveTypeId=@LeaveTypeId", con);
             SqlParameter[] parameters = new SqlParameter[] 
             {   
                 new SqlParameter("@LeaveTypeName",SqlDbType.VarChar,50,"LeaveTypeName"),
                 new SqlParameter("@PayRate",SqlDbType.Float,0,"PayRate"),
                 new SqlParameter("@IsCountToPunish",SqlDbType.Bit,0,"IsCountToPunish"),
                 new SqlParameter("@LeaveTypeId",SqlDbType.VarChar,50,"LeaveTypeId"),
-                new SqlParameter("@doAttendance",SqlDbType.Bit,0,"doAttendance")
+                new SqlParameter("@doAttendance",SqlDbType.Bit,0,"doAttendance"),
+                new SqlParameter("@PriorityValue",SqlDbType.Int,0,"PriorityValue")
             };
             adapter.UpdateCommand.Parameters.AddRange(parameters);
             adapter.InsertCommand = new SqlCommand("insert into LeaveType(LeaveTypeId,InsertTime,LeaveTypeName,PayRate,IsCountToPunish,doAttendance) values(newid(),getdate(),@LeaveTypeName,@PayRate,@IsCountToPunish,@doAttendance)", con);
@@ -86,6 +87,11 @@ namespace Book.DA.SQLServer
         public double SelectPayRateByName(string Name)
         {
             return sqlmapper.QueryForObject<double>("LeaveType.SelectPayRateByName", Name);
+        }
+
+        public IList<Model.LeaveType> SelectByPriority()
+        {
+            return sqlmapper.QueryForList<Model.LeaveType>("LeaveType.SelectByPriority", null);
         }
     }
 }

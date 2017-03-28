@@ -76,6 +76,11 @@ namespace Book.BL
         {
             return accessor.SelectPayRateByName(Name);
         }
+
+        public IList<Model.LeaveType> SelectByPriority()
+        {
+            return accessor.SelectByPriority();
+        }
     }
 }
 

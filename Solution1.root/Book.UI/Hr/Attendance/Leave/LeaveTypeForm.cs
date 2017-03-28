@@ -86,5 +86,17 @@ namespace Book.UI.Hr.Attendance.Leave
 
 
         }
+
+        private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                int i = 0;
+                if (!int.TryParse(e.FormattedValue.ToString(), out i))
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = "ÕˆÝ”Èë”µ×Ö";
+                else
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = null;
+            }
+        }
     }
 }

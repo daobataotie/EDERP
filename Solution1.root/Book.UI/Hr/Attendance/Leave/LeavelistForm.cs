@@ -49,7 +49,8 @@ namespace Book.UI.Hr.Attendance.Leave
 
             this.bs_Employees.DataSource = this.empm.SelectOnActive();
             _employee = (this.bs_Employees.DataSource as IList<Model.Employee>)[0];
-            this.bindingSourcetype.DataSource = this.leaveTypeM.Select();
+            //this.bindingSourcetype.DataSource = this.leaveTypeM.Select();
+            this.bindingSourcetype.DataSource = this.leaveTypeM.SelectByPriority();
             this.repositoryItemLookUpEdit1.DataSource = this.deprtmentManger.Select();
 
             //默认加上本年与前一年
