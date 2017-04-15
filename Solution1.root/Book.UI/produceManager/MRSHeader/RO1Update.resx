@@ -487,7 +487,7 @@
     <value>新細明體, 9.75pt, style=Bold</value>
   </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
-    <value>已分配量</value>
+    <value>領料量</value>
   </data>
   <data name="xrTableRow1.Dpi" type="System.Single, mscorlib">
     <value>254</value>

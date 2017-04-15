@@ -121,6 +121,10 @@
   <data name="xrTable3.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1.87522876, 0</value>
+  </data>
   <data name="TC_Id.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -151,8 +155,15 @@
   <data name="TC_Unit.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="tcOutQuantity.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="xrTableRow3.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrTable3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1996.06213, 63.5</value>
   </data>
   <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrTable3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
@@ -161,13 +172,11 @@
   <data name="Detail.HeightF" type="System.Single, mscorlib">
     <value>63.5</value>
   </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="ReportTitle.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 4.037221E-05</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ReportTitle.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1915.9165, 68.00001</value>
+    <value>1987.354, 68.00001</value>
   </data>
   <data name="xrLabelSupplierId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>929.649841, 67.99997</value>
@@ -188,7 +197,7 @@
     <value>254</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 144.4584</value>
+    <value>1.87524414, 144.4584</value>
   </data>
   <data name="xrTableCell13.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -250,8 +259,17 @@
   <data name="xrTableCell17.Text" xml:space="preserve">
     <value>單位</value>
   </data>
+  <data name="xrTableCell20.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell20.Text" xml:space="preserve">
+    <value>出庫量</value>
+  </data>
   <data name="xrTableRow2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="xrTable2.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1996.06213, 63.5</value>
   </data>
   <data name="xrTable2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -266,13 +284,22 @@
     <value>日期區間：</value>
   </data>
   <data name="xrLabelDates.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1389.47864, 68.0000458</value>
+    <value>1460.91614, 67.99997</value>
   </data>
   <data name="xrLabelDates.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>526.437866, 50.0000153</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
     <value>207.9584</value>
+  </data>
+  <data name="ReportName.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1987.354, 83</value>
+  </data>
+  <data name="topMarginBand1.HeightF" type="System.Single, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="bottomMarginBand1.HeightF" type="System.Single, mscorlib">
+    <value>75</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>

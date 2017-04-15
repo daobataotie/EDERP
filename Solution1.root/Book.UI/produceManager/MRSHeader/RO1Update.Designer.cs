@@ -44,6 +44,7 @@
             this.xrTableMRSdetailsQuantity = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableProductUnit = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableStock = new DevExpress.XtraReports.UI.XRTableCell();
+            this.tcJiaoqi = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableWorkHouseNext = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableMaterialDistributioned = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
@@ -67,6 +68,7 @@
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabelMRSHeaderId = new DevExpress.XtraReports.UI.XRLabel();
@@ -95,8 +97,6 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.tcJiaoqi = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -235,6 +235,12 @@
             this.xrTableStock.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrTableStock.StylePriority.UsePadding = false;
             this.xrTableStock.Weight = 0.057140316268527162;
+            // 
+            // tcJiaoqi
+            // 
+            resources.ApplyResources(this.tcJiaoqi, "tcJiaoqi");
+            this.tcJiaoqi.Name = "tcJiaoqi";
+            this.tcJiaoqi.Weight = 0.13575846538483624;
             // 
             // xrTableWorkHouseNext
             // 
@@ -439,6 +445,13 @@
             this.xrTableCell9.StylePriority.UseFont = false;
             this.xrTableCell9.Weight = 0.057301389186864851;
             // 
+            // xrTableCell2
+            // 
+            resources.ApplyResources(this.xrTableCell2, "xrTableCell2");
+            this.xrTableCell2.Name = "xrTableCell2";
+            this.xrTableCell2.StylePriority.UseFont = false;
+            this.xrTableCell2.Weight = 0.1361414228970621;
+            // 
             // xrTableCell10
             // 
             resources.ApplyResources(this.xrTableCell10, "xrTableCell10");
@@ -642,19 +655,6 @@
             // 
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
-            // 
-            // xrTableCell2
-            // 
-            resources.ApplyResources(this.xrTableCell2, "xrTableCell2");
-            this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.StylePriority.UseFont = false;
-            this.xrTableCell2.Weight = 0.1361414228970621;
-            // 
-            // tcJiaoqi
-            // 
-            resources.ApplyResources(this.tcJiaoqi, "tcJiaoqi");
-            this.tcJiaoqi.Name = "tcJiaoqi";
-            this.tcJiaoqi.Weight = 0.13575846538483624;
             // 
             // RO1Update
             // 

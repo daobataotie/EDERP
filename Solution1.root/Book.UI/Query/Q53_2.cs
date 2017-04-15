@@ -47,6 +47,7 @@ namespace Book.UI.Query
             this.TC_InQuantity.DataBindings.Add("Text", this.DataSource, "InDepotCount");
             this.TC_CancelQuantity.DataBindings.Add("Text", this.DataSource, "CancelQuantity");
             this.TC_Unit.DataBindings.Add("Text", this.DataSource, "ProductUnit");
+            this.tcOutQuantity.DataBindings.Add("Text", this.DataSource, "ProduceInDepotQuantity");
         }
 
     }

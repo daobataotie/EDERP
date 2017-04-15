@@ -13,6 +13,7 @@ namespace Book.UI.produceManager.MRSHeader
         private BL.MRSdetailsManager mRSdetailsManager = new Book.BL.MRSdetailsManager();
         private BL.InvoiceXOManager invoiceXOManager = new Book.BL.InvoiceXOManager();
         private BL.MPSheaderManager mPSheaderManager = new Book.BL.MPSheaderManager();
+        private BL.ProduceMaterialdetailsManager produceMaterialdetailsManager = new Book.BL.ProduceMaterialdetailsManager();
 
         private Model.MRSHeader mRSheader;
         public RO1Update(string mRSheaderId)
@@ -25,6 +26,10 @@ namespace Book.UI.produceManager.MRSHeader
 
             // this.mRSheader.Details = this.mRSdetailsManager.Select(this.mRSheader);          
 
+            foreach (var item in this.mRSheader.Details)
+            {
+                item.Materialprocessum = produceMaterialdetailsManager.SelectMaterialprocessum(item.MRSdetailsId);
+            }
 
             this.DataSource = this.mRSheader.Details;
 
@@ -87,7 +92,9 @@ namespace Book.UI.produceManager.MRSHeader
             this.xrRichText1.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
             //this.xrTableStock.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_MRSStockQuantity, "{0:0.####}");
             this.xrTableStock.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_StocksQuantity);
-            this.xrTableMaterialDistributioned.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProduceMaterialDistributioned, "{0:0.####}");
+            //this.xrTableMaterialDistributioned.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProduceMaterialDistributioned, "{0:0.####}");   原為“已分配量”
+            this.xrTableMaterialDistributioned.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_Materialprocessum, "{0:0.####}");
+
             this.xrLabeOtherFenPei.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_OtherMaterialDistributioned, "{0:0.####}");
             //this.xrTableSullier.DataBindings.Add("Text", this.DataSource, "Supplier." + Model.Supplier.PROPERTY_SUPPLIERSHORTNAME);
             this.xrLabelJiaoQi.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_JiaoHuoDate, "{0:yyyy-MM-dd}");

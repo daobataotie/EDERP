@@ -128,7 +128,7 @@ namespace Book.UI.produceManager.ProduceMaterial
                 xoid = new BL.MPSheaderManager().Get(List[0].MPSheaderId).InvoiceXOId;
             }
             else if (List[0].MRSHeader.MPSheaderId != null)
-                xoid = new BL.MPSheaderManager().Get(List[0].MRSHeader.MPSheaderId).InvoiceXOId;
+                xoid = new BL.MPSheaderManager().Get(List[0].MRSHeader.MPSheaderId) == null ? null : new BL.MPSheaderManager().Get(List[0].MRSHeader.MPSheaderId).InvoiceXOId;
             this.comboBoxEdit1.SelectedIndex = 1;
             this.textEditPronoteHeaderID.EditValue = List[0].MRSHeaderId;
             if (!string.IsNullOrEmpty(xoid))

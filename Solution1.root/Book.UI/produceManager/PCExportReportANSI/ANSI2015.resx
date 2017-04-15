@@ -120,18 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="BarBtnCutomerOrder.Caption" xml:space="preserve">
-    <value>客户订单</value>
-  </data>
-  <data name="BarBtnSearch.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="barPrintAlan.Caption" xml:space="preserve">
-    <value>打印ALAN</value>
-  </data>
-  <data name="barPrintPPE.Caption" xml:space="preserve">
-    <value>打印PPE</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -441,11 +429,35 @@
         PiydRVvthbEShq0tdS1YP1XNB1WKv8rxjMwZjD8BORXH707ETOoAAAAASUVORK5CYIIL
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="comboBoxEdit1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 62</value>
+  </data>
+  <data name="comboBoxEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="comboBoxEdit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 21</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="comboBoxEdit1.TabIndex" type="System.Int32, mscorlib">
+    <value>205</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEdit1.Name" xml:space="preserve">
+    <value>comboBoxEdit1</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEdit1.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEdit1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="panel1.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="memoTrans.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 78</value>
   </data>
@@ -2981,7 +2993,7 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lookUpEditUnit.Location" type="System.Drawing.Point, System.Drawing">
     <value>791, 37</value>
@@ -3017,7 +3029,7 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lookUpEditUnit.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txt_AuditState.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 87</value>
@@ -3038,7 +3050,7 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_AuditState.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="newChooseContorlAuditEmp.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 87</value>
@@ -3059,33 +3071,6 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseContorlAuditEmp.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label64.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 62</value>
-  </data>
-  <data name="label64.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 21</value>
-  </data>
-  <data name="label64.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="label64.Text" xml:space="preserve">
-    <value>ANSI Z87.1-2015</value>
-  </data>
-  <data name="label64.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label64.Name" xml:space="preserve">
-    <value>label64</value>
-  </data>
-  <data name="&gt;&gt;label64.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label64.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;label64.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="label63.Location" type="System.Drawing.Point, System.Drawing">
@@ -3352,12 +3337,6 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
   <data name="layoutControlItem89.Text" xml:space="preserve">
     <value>layoutControlItem89</value>
   </data>
-  <data name="layoutControlItem90.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem90</value>
-  </data>
-  <data name="layoutControlItem90.Text" xml:space="preserve">
-    <value>layoutControlItem90</value>
-  </data>
   <data name="layoutControlItem104.CustomizationFormText" xml:space="preserve">
     <value>审核人：</value>
   </data>
@@ -3388,6 +3367,12 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
   <data name="layoutControlItem7.Text" xml:space="preserve">
     <value>layoutControlItem7</value>
   </data>
+  <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="layoutControlItem10.Text" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
   </data>
@@ -3411,6 +3396,18 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
   </data>
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="BarBtnCutomerOrder.Caption" xml:space="preserve">
+    <value>客户订单</value>
+  </data>
+  <data name="BarBtnSearch.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barPrintAlan.Caption" xml:space="preserve">
+    <value>打印ALAN</value>
+  </data>
+  <data name="barPrintPPE.Caption" xml:space="preserve">
+    <value>打印PPE</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3523,12 +3520,6 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
   <data name="&gt;&gt;layoutControlItem89.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem90.Name" xml:space="preserve">
-    <value>layoutControlItem90</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem90.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem104.Name" xml:space="preserve">
     <value>layoutControlItem104</value>
   </data>
@@ -3557,6 +3548,12 @@ Base Out Imbalance ≦0.5 Vertical Imbalance≦0.25
     <value>layoutControlItem7</value>
   </data>
   <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;BarBtnCutomerOrder.Name" xml:space="preserve">

@@ -35,6 +35,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.newChooseContorlAuditEmp.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
             this.action = "view";
+
+            var jiShuBiaoZhun = new BL.SettingManager().SelectByName("ANSI2015JiShuBiaoZhun");
+            foreach (var item in jiShuBiaoZhun)
+            {
+                comboBoxEdit1.Properties.Items.Add(item.SettingCurrentValue);
+            }
+            comboBoxEdit1.SelectedIndex = 0;
         }
 
         int sign = 0;
@@ -128,6 +135,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.Customer = (this.NccCustomer.EditValue as Model.Customer);
             this._PCExportReportANSI.ReportDate = this.DateReportDate.EditValue == null ? DateTime.Now : this.DateReportDate.DateTime;
             this._PCExportReportANSI.Clearlens = this.memoTrans.EditValue == null ? "" : this.memoTrans.EditValue.ToString();
+
+            this._PCExportReportANSI.CSAJiShuBiaoZhun = this.comboBoxEdit1.SelectedText;
 
             if (this._PCExportReportANSI.Customer != null)
             {
@@ -298,6 +307,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.txt_AuditState.EditValue = this.GetAuditName(this._PCExportReportANSI.AuditState);
 
             this.lookUpEditUnit.EditValue = this._PCExportReportANSI.ProductUnitId;
+
+            this.comboBoxEdit1.Text = string.IsNullOrEmpty(this._PCExportReportANSI.CSAJiShuBiaoZhun) ? "ANSI Z87.1-2015" : this._PCExportReportANSI.CSAJiShuBiaoZhun;
         }
 
         //列印
@@ -360,9 +371,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
                 this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
 
-              this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.AmountTest;
-              
-                this._PCExportReportANSI.QuYangShu1 = this._PCExportReportANSI.QuYangShu14 = 100;
+                this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.PanDing7 = this._PCExportReportANSI.PanDing8 = this._PCExportReportANSI.PanDing9 = this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.PanDingShu12 = this._PCExportReportANSI.PanDingShu13 = this._PCExportReportANSI.PanDingShu15 = this._PCExportReportANSI.PanDingShu16 = this._PCExportReportANSI.PanDingShu17 = this._PCExportReportANSI.PanDingShu18 = this._PCExportReportANSI.AmountTest;
+
+              this._PCExportReportANSI.QuYangShu1 = this._PCExportReportANSI.QuYangShu14 = this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.PanDingShu14 = 100;
 
                 #endregion
             }
@@ -466,6 +477,95 @@ namespace Book.UI.produceManager.PCExportReportANSI
             r.ShowPreviewDialog();
         }
 
+        private void spe_Quyang1_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding1.EditValue = spe_Quyang1.EditValue;
+        }
+
+        private void spe_Quyang2_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding2.EditValue = spe_Quyang2.EditValue;
+        }
+
+        private void spe_Quyang3_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding3.EditValue = spe_Quyang3.EditValue;
+        }
+
+        private void spe_Quyang4_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding4.EditValue = spe_Quyang4.EditValue;
+        }
+
+        private void spe_Quyang5_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding5.EditValue = spe_Quyang5.EditValue;
+        }
+
+        private void spe_Quyang6_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding6.EditValue = spe_Quyang6.EditValue;
+        }
+
+        private void spe_Quyang7_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding7.EditValue = spe_Quyang7.EditValue;
+        }
+
+        private void spe_Quyang8_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding8.EditValue = spe_Quyang8.EditValue;
+        }
+
+        private void spe_Quyang9_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding9.EditValue = spe_Quyang9.EditValue;
+        }
+
+        private void spe_Quyang10_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding10.EditValue = spe_Quyang10.EditValue;
+        }
+
+        private void spe_Quyang11_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding11.EditValue = spe_Quyang11.EditValue;
+        }
+
+        private void spe_Quyang12_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding12.EditValue = spe_Quyang12.EditValue;
+        }
+
+        private void spe_Quyang13_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding13.EditValue = spe_Quyang13.EditValue;
+        }
+
+        private void spe_Quyang14_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding14.EditValue = spe_Quyang14.EditValue;
+        }
+
+        private void spe_Quyang15_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding15.EditValue = spe_Quyang15.EditValue;
+        }
+
+        private void spe_Quyang16_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding16.EditValue = spe_Quyang16.EditValue;
+        }
+
+        private void spe_Quyang17_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding17.EditValue = spe_Quyang17.EditValue;
+        }
+
+        private void spe_Quyang18_EditValueChanged(object sender, EventArgs e)
+        {
+            this.spe_Panding18.EditValue = spe_Quyang18.EditValue;
+        }
     }
 
 }

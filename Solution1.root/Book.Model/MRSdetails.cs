@@ -216,6 +216,7 @@ namespace Book.Model
             set { _SupplierShortName = value; }
         }
 
+        public double Materialprocessum { get; set; }
 
         /// <summary>
         /// 分配数量总计
@@ -232,5 +233,7 @@ namespace Book.Model
         public readonly static string PRO_ProductFPSLsum = "ProductFPSLsum";
 
         public readonly static string PRO_SupplierShortName = "SupplierShortName";
+
+        public readonly static string PRO_Materialprocessum = "Materialprocessum";
     }
 }
