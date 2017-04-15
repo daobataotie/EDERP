@@ -40,7 +40,9 @@ namespace Book.UI.Query
             this.TCkehu.DataBindings.Add("Text", this.DataSource, "Invoice.Customer." + Model.Customer.PRO_CustomerFullName);
             this.TCkehudingdanhao.DataBindings.Add("Text", this.DataSource, "Invoice." + Model.InvoiceCO.PRO_InvoiceCustomXOId);
             this.TCriqi.DataBindings.Add("Text", this.DataSource, "Invoice." + Model.InvoiceCO.PROPERTY_INVOICEDATE, "{0:yyyy-MM-dd}");
-            this.TCshangpingbianhao.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
+            //this.TCshangpingbianhao.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id); Ô­žé ÉÌÆ·¾ŽÌ–
+            this.TCshangpingbianhao.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_InvoiceXOYjrq, "{0:yyyy-MM-dd}");
+
             this.TCshangpingmingcheng.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             this.TCshuliang.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_OrderQuantity);
             this.TCyujiaoriqi.DataBindings.Add("Text", this.DataSource, "Invoice." + Model.InvoiceCO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");

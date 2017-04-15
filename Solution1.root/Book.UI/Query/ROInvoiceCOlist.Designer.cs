@@ -195,13 +195,13 @@ namespace Book.UI.Query
             // 
             resources.ApplyResources(this.xrTableCell7, "xrTableCell7");
             this.xrTableCell7.Name = "xrTableCell7";
-            this.xrTableCell7.Weight = 0.23711869141303485;
+            this.xrTableCell7.Weight = 0.25182463030618563;
             // 
             // xrTableCell2
             // 
             resources.ApplyResources(this.xrTableCell2, "xrTableCell2");
             this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Weight = 0.30699908286126021;
+            this.xrTableCell2.Weight = 0.29229314396810946;
             // 
             // xrTableCell10
             // 
@@ -317,7 +317,7 @@ namespace Book.UI.Query
             // 
             resources.ApplyResources(this.TCyujiaoriqi, "TCyujiaoriqi");
             this.TCyujiaoriqi.Name = "TCyujiaoriqi";
-            this.TCyujiaoriqi.Weight = 0.23711886103366361;
+            this.TCyujiaoriqi.Weight = 0.25182496954744316;
             // 
             // TCshangpingbianhao
             // 
@@ -326,7 +326,7 @@ namespace Book.UI.Query
             this.TCshangpingbianhao.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 254F);
             this.TCshangpingbianhao.StylePriority.UsePadding = false;
             this.TCshangpingbianhao.StylePriority.UseTextAlignment = false;
-            this.TCshangpingbianhao.Weight = 0.30699908286126021;
+            this.TCshangpingbianhao.Weight = 0.29229297434748069;
             // 
             // TCshangpingmingcheng
             // 

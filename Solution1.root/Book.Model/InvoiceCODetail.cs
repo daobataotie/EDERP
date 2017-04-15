@@ -159,6 +159,8 @@ namespace Book.Model
 
         public DateTime? InvoiceYjrq { get { return this.Invoice.InvoiceYjrq; } }
 
+        public DateTime? InvoiceXOYjrq { get; set; }
+
         private string _CustomerInvoiceXOId;
 
         public string CustomerInvoiceXOId
@@ -166,5 +168,9 @@ namespace Book.Model
             get { return _CustomerInvoiceXOId; }
             set { _CustomerInvoiceXOId = value; }
         }
+
+        public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";
+
+        public readonly static string PRO_InvoiceXOYjrq = "InvoiceXOYjrq";
     }
 }
