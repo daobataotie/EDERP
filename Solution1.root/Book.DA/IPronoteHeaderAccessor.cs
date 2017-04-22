@@ -40,6 +40,6 @@ namespace Book.DA
         Model.PronoteHeader mGetPrev(Model.PronoteHeader p);
         Model.PronoteHeader mGetNext(Model.PronoteHeader p);
 
-        DataTable GetExcelData(DateTime startDate, DateTime endDate);
+        DataTable GetExcelData(DateTime startDate, DateTime endDate, string workHouseId);
     }
 }

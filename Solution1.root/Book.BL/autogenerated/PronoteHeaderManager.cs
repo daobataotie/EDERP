@@ -96,9 +96,9 @@ namespace Book.BL
             return accessor.ExistsPrimary(id);
         }
 
-        public DataTable GetExcelData(DateTime startDate, DateTime endDate)
+        public DataTable GetExcelData(DateTime startDate, DateTime endDate, string workHouseId)
         {
-            return accessor.GetExcelData(startDate, endDate);
+            return accessor.GetExcelData(startDate, endDate, workHouseId);
         }
     }
 }

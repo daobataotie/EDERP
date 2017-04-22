@@ -342,6 +342,8 @@ namespace Book.UI.produceManager.PronoteHeader
         {
             DateTime startTime = global::Helper.DateTimeParse.NullDate;
             DateTime endTime = global::Helper.DateTimeParse.EndDate;
+            string workHouseId = (this.newChooseWorkHorse.EditValue as Model.WorkHouse) == null ? null : (this.newChooseWorkHorse.EditValue as Model.WorkHouse).WorkHouseId;
+
             if (this.dateEditStartDate.EditValue != null)
             {
                 startTime = this.dateEditStartDate.DateTime;
@@ -351,7 +353,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 endTime = this.dateEditEndDate.DateTime;
             }
 
-            System.Data.DataTable dt = pronoteHeaderManager.GetExcelData(startTime, endTime);
+            System.Data.DataTable dt = pronoteHeaderManager.GetExcelData(startTime, endTime, workHouseId);
             return dt;
         }
 

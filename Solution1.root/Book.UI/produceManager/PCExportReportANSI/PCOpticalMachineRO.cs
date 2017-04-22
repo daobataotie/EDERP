@@ -23,39 +23,39 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             if (PCOpticalMachineList[0] != null)
             {
-                this.TCLA.Text = PCOpticalMachineList[0].LeftA.HasValue ? PCOpticalMachineList[0].LeftA.ToString() : "";
-                this.TCLC.Text = PCOpticalMachineList[0].LeftC.HasValue ? PCOpticalMachineList[0].LeftC.ToString() : "";
-                this.TCLS.Text = PCOpticalMachineList[0].LeftS.HasValue ? PCOpticalMachineList[0].LeftS.ToString() : "";
-                this.TCLLevelNum.Text = PCOpticalMachineList[0].LeftLevelNum.HasValue ? PCOpticalMachineList[0].LeftLevelNum.ToString() : "";
+                this.TCLA.Text = PCOpticalMachineList[0].LeftA.HasValue ? PCOpticalMachineList[0].LeftA.Value.ToString() : "";
+                this.TCLC.Text = PCOpticalMachineList[0].LeftC.HasValue ? PCOpticalMachineList[0].LeftC.Value.ToString("0.00") : "";
+                this.TCLS.Text = PCOpticalMachineList[0].LeftS.HasValue ? PCOpticalMachineList[0].LeftS.Value.ToString("0.00") : "";
+                this.TCLLevelNum.Text = PCOpticalMachineList[0].LeftLevelNum.HasValue ? PCOpticalMachineList[0].LeftLevelNum.Value.ToString("0.00") : "";
                 this.TCLLevelJudge.Text = PCOpticalMachineList[0].LeftLevelJudge;
-                this.TCLVerticalNum.Text = PCOpticalMachineList[0].LeftVerticalNum.HasValue ? PCOpticalMachineList[0].LeftVerticalNum.ToString() : "";
+                this.TCLVerticalNum.Text = PCOpticalMachineList[0].LeftVerticalNum.HasValue ? PCOpticalMachineList[0].LeftVerticalNum.Value.ToString("0.00") : "";
                 this.TCLVerticalJudge.Text = PCOpticalMachineList[0].LeftVerticalJudge;
 
-                this.TCRA.Text = PCOpticalMachineList[0].RightA.HasValue ? PCOpticalMachineList[0].RightA.ToString() : "";
-                this.TCRC.Text = PCOpticalMachineList[0].RightC.HasValue ? PCOpticalMachineList[0].RightC.ToString() : "";
-                this.TCRS.Text = PCOpticalMachineList[0].RightS.HasValue ? PCOpticalMachineList[0].RightS.ToString() : "";
-                this.TCRLevelNum.Text = PCOpticalMachineList[0].RightLevelNum.HasValue ? PCOpticalMachineList[0].RightLevelNum.ToString() : "";
+                this.TCRA.Text = PCOpticalMachineList[0].RightA.HasValue ? PCOpticalMachineList[0].RightA.Value.ToString() : "";
+                this.TCRC.Text = PCOpticalMachineList[0].RightC.HasValue ? PCOpticalMachineList[0].RightC.Value.ToString("0.00") : "";
+                this.TCRS.Text = PCOpticalMachineList[0].RightS.HasValue ? PCOpticalMachineList[0].RightS.Value.ToString("0.00") : "";
+                this.TCRLevelNum.Text = PCOpticalMachineList[0].RightLevelNum.HasValue ? PCOpticalMachineList[0].RightLevelNum.Value.ToString("0.00") : "";
                 this.TCRLevelJudge.Text = PCOpticalMachineList[0].RightLevelJudge;
-                this.TCRVerticalNum.Text = PCOpticalMachineList[0].RightVerticalNum.HasValue ? PCOpticalMachineList[0].RightVerticalNum.ToString() : "";
+                this.TCRVerticalNum.Text = PCOpticalMachineList[0].RightVerticalNum.HasValue ? PCOpticalMachineList[0].RightVerticalNum.Value.ToString("0.00") : "";
                 this.TCRVerticalJudge.Text = PCOpticalMachineList[0].RightVerticalJudge;
             }
 
             if (PCOpticalMachineList[1] != null)
             {
-                this.TCLA2.Text = PCOpticalMachineList[1].LeftA.HasValue ? PCOpticalMachineList[1].LeftA.ToString() : "";
-                this.TCLC2.Text = PCOpticalMachineList[1].LeftC.HasValue ? PCOpticalMachineList[1].LeftC.ToString() : "";
-                this.TCLS2.Text = PCOpticalMachineList[1].LeftS.HasValue ? PCOpticalMachineList[1].LeftS.ToString() : "";
-                this.TCLLevelNum2.Text = PCOpticalMachineList[1].LeftLevelNum.HasValue ? PCOpticalMachineList[1].LeftLevelNum.ToString() : "";
+                this.TCLA2.Text = PCOpticalMachineList[1].LeftA.HasValue ? PCOpticalMachineList[1].LeftA.Value.ToString() : "";
+                this.TCLC2.Text = PCOpticalMachineList[1].LeftC.HasValue ? PCOpticalMachineList[1].LeftC.Value.ToString("0.00") : "";
+                this.TCLS2.Text = PCOpticalMachineList[1].LeftS.HasValue ? PCOpticalMachineList[1].LeftS.Value.ToString("0.00") : "";
+                this.TCLLevelNum2.Text = PCOpticalMachineList[1].LeftLevelNum.HasValue ? PCOpticalMachineList[1].LeftLevelNum.Value.ToString("0.00") : "";
                 this.TCLLevelJudge2.Text = PCOpticalMachineList[1].LeftLevelJudge;
-                this.TCLVerticalNum2.Text = PCOpticalMachineList[1].LeftVerticalNum.HasValue ? PCOpticalMachineList[1].LeftVerticalNum.ToString() : "";
+                this.TCLVerticalNum2.Text = PCOpticalMachineList[1].LeftVerticalNum.HasValue ? PCOpticalMachineList[1].LeftVerticalNum.Value.ToString("0.00") : "";
                 this.TCLVerticalJudge2.Text = PCOpticalMachineList[1].LeftVerticalJudge;
 
-                this.TCRA2.Text = PCOpticalMachineList[1].RightA.HasValue ? PCOpticalMachineList[1].RightA.ToString() : "";
-                this.TCRC2.Text = PCOpticalMachineList[1].RightC.HasValue ? PCOpticalMachineList[1].RightC.ToString() : "";
-                this.TCRS2.Text = PCOpticalMachineList[1].RightS.HasValue ? PCOpticalMachineList[1].RightS.ToString() : "";
-                this.TCRLevelNum2.Text = PCOpticalMachineList[1].RightLevelNum.HasValue ? PCOpticalMachineList[1].RightLevelNum.ToString() : "";
+                this.TCRA2.Text = PCOpticalMachineList[1].RightA.HasValue ? PCOpticalMachineList[1].RightA.Value.ToString() : "";
+                this.TCRC2.Text = PCOpticalMachineList[1].RightC.HasValue ? PCOpticalMachineList[1].RightC.Value.ToString("0.00") : "";
+                this.TCRS2.Text = PCOpticalMachineList[1].RightS.HasValue ? PCOpticalMachineList[1].RightS.Value.ToString("0.00") : "";
+                this.TCRLevelNum2.Text = PCOpticalMachineList[1].RightLevelNum.HasValue ? PCOpticalMachineList[1].RightLevelNum.Value.ToString("0.00") : "";
                 this.TCRLevelJudge2.Text = PCOpticalMachineList[1].RightLevelJudge;
-                this.TCRVerticalNum2.Text = PCOpticalMachineList[1].RightVerticalNum.HasValue ? PCOpticalMachineList[1].RightVerticalNum.ToString() : "";
+                this.TCRVerticalNum2.Text = PCOpticalMachineList[1].RightVerticalNum.HasValue ? PCOpticalMachineList[1].RightVerticalNum.Value.ToString("0.00") : "";
                 this.TCRVerticalJudge2.Text = PCOpticalMachineList[1].RightVerticalJudge;
             }
 
