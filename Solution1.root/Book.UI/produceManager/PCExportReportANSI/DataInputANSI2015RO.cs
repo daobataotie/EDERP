@@ -6,14 +6,14 @@ using DevExpress.XtraReports.UI;
 
 namespace Book.UI.produceManager.PCExportReportANSI
 {
-    public partial class DataInputASRO : DevExpress.XtraReports.UI.XtraReport
+    public partial class DataInputANSI2015RO : DevExpress.XtraReports.UI.XtraReport
     {
-        public DataInputASRO()
+        public DataInputANSI2015RO()
         {
             InitializeComponent();
         }
 
-        public DataInputASRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI AS)
+        public DataInputANSI2015RO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI pcExportReportANSI)
             : this()
         {
             if (pcDataInput == null)
@@ -23,11 +23,18 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TCTSQuantity.Text = pcDataInput.PCPerspectiveList.Count.ToString();
             this.TCTSEmployee.Text = pcDataInput.Employee2 == null ? "" : pcDataInput.Employee2.ToString();
 
-            if (AS != null)
-                this.xrSubreportAS.ReportSource = new ASRO (AS, 0);
+            if (pcExportReportANSI != null)
+                this.xrSubreportANSI.ReportSource = new ANSI2015RO(pcExportReportANSI, 0);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
             this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
         }
+
+        private void DataInputANSIRO_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            //RO ro = this.xrSubreportANSI.ReportSource as RO;
+            //ro.ANSI = pcExportReportANSI;
+        }
+
     }
 }

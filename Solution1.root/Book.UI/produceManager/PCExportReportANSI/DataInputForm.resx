@@ -436,34 +436,13 @@
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="newChooseContorlEmployee.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 62</value>
-  </data>
-  <data name="newChooseContorlEmployee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 21</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="newChooseContorlEmployee.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;newChooseContorlEmployee.Name" xml:space="preserve">
-    <value>newChooseContorlEmployee</value>
-  </data>
-  <data name="&gt;&gt;newChooseContorlEmployee.Type" xml:space="preserve">
-    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;newChooseContorlEmployee.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;newChooseContorlEmployee.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="txt_Customer.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 62</value>
   </data>
   <data name="txt_Customer.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 21</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txt_Customer.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
@@ -477,13 +456,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Customer.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="txt_ProductName.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 37</value>
   </data>
   <data name="txt_ProductName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 21</value>
+    <value>248, 21</value>
   </data>
   <data name="txt_ProductName.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -498,7 +477,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_ProductName.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="cob_CheckStandard.Location" type="System.Drawing.Point, System.Drawing">
     <value>365, 37</value>
@@ -518,6 +497,15 @@
   <data name="cob_CheckStandard.Properties.Items3" xml:space="preserve">
     <value>AS/NZS</value>
   </data>
+  <data name="cob_CheckStandard.Properties.Items4" xml:space="preserve">
+    <value>ANSI2015</value>
+  </data>
+  <data name="cob_CheckStandard.Properties.Items5" xml:space="preserve">
+    <value>ANSI2015/CSA2015</value>
+  </data>
+  <data name="cob_CheckStandard.Properties.Items6" xml:space="preserve">
+    <value>AS2017</value>
+  </data>
   <data name="cob_CheckStandard.Size" type="System.Drawing.Size, System.Drawing">
     <value>225, 21</value>
   </data>
@@ -534,7 +522,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;cob_CheckStandard.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="txt_InvoiceCusId.Location" type="System.Drawing.Point, System.Drawing">
     <value>365, 12</value>
@@ -555,7 +543,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_InvoiceCusId.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="spe_TestQuantity.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -579,7 +567,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spe_TestQuantity.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="txt_PronoteHeaderId.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 12</value>
@@ -600,7 +588,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PronoteHeaderId.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="date_PCDataInputDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 12</value>
@@ -609,7 +597,7 @@
     <value>Combo</value>
   </data>
   <data name="date_PCDataInputDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 21</value>
+    <value>248, 21</value>
   </data>
   <data name="date_PCDataInputDate.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -624,13 +612,34 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_PCDataInputDate.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 87</value>
   </data>
+  <data name="ncc_Tester1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 2</value>
+  </data>
+  <data name="ncc_Tester1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>844, 21</value>
+  </data>
+  <data name="ncc_Tester1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester1.Name" xml:space="preserve">
+    <value>ncc_Tester1</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester1.Type" xml:space="preserve">
+    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester1.Parent" xml:space="preserve">
+    <value>layoutControl2</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="btn_PCOpticalMachineRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 386</value>
+    <value>453, 393</value>
   </data>
   <data name="btn_PCOpticalMachineRemove.Size" type="System.Drawing.Size, System.Drawing">
     <value>445, 22</value>
@@ -651,13 +660,13 @@
     <value>layoutControl2</value>
   </data>
   <data name="&gt;&gt;btn_PCOpticalMachineRemove.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btn_PCOpticalMachineADD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 386</value>
+    <value>2, 393</value>
   </data>
   <data name="btn_PCOpticalMachineADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 22</value>
+    <value>447, 22</value>
   </data>
   <data name="btn_PCOpticalMachineADD.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -675,13 +684,13 @@
     <value>layoutControl2</value>
   </data>
   <data name="&gt;&gt;btn_PCOpticalMachineADD.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="bindingSourcePCOpticalMachine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>303, 17</value>
   </metadata>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
+    <value>2, 26</value>
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>编号</value>
@@ -945,7 +954,7 @@
     <value>光學機</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>895, 380</value>
+    <value>896, 363</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -960,7 +969,7 @@
     <value>layoutControl2</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -990,11 +999,17 @@
   <data name="layoutControlItem15.Text" xml:space="preserve">
     <value>layoutControlItem15</value>
   </data>
+  <data name="layoutControlItem29.CustomizationFormText" xml:space="preserve">
+    <value>測試員：</value>
+  </data>
+  <data name="layoutControlItem29.Text" xml:space="preserve">
+    <value>測試員：</value>
+  </data>
   <data name="layoutControlGroup2.Text" xml:space="preserve">
     <value>layoutControlGroup2</value>
   </data>
   <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>899, 410</value>
+    <value>900, 417</value>
   </data>
   <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1015,7 +1030,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>899, 410</value>
+    <value>900, 417</value>
   </data>
   <data name="xtraTabPage1.Text" xml:space="preserve">
     <value>光学机</value>
@@ -1033,16 +1048,37 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>905, 438</value>
+    <value>906, 445</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
+  <data name="ncc_Tester2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 2</value>
+  </data>
+  <data name="ncc_Tester2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>844, 21</value>
+  </data>
+  <data name="ncc_Tester2.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester2.Name" xml:space="preserve">
+    <value>ncc_Tester2</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester2.Type" xml:space="preserve">
+    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester2.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="btn_PCDefinitionRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 376</value>
+    <value>449, 262</value>
   </data>
   <data name="btn_PCDefinitionRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 22</value>
+    <value>449, 22</value>
   </data>
   <data name="btn_PCDefinitionRemove.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1060,13 +1096,13 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;btn_PCDefinitionRemove.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btn_PCDefinitionADD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 376</value>
+    <value>2, 262</value>
   </data>
   <data name="btn_PCDefinitionADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 22</value>
+    <value>443, 22</value>
   </data>
   <data name="btn_PCDefinitionADD.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1084,13 +1120,13 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;btn_PCDefinitionADD.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btn_PCLaserMachineADD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 193</value>
+    <value>2, 133</value>
   </data>
   <data name="btn_PCLaserMachineADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 22</value>
+    <value>440, 22</value>
   </data>
   <data name="btn_PCLaserMachineADD.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1108,13 +1144,13 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;btn_PCLaserMachineADD.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <metadata name="bindingSourcePCLaserMachine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>549, 17</value>
   </metadata>
   <data name="gridControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>2, 26</value>
   </data>
   <data name="gridColumn16.Caption" xml:space="preserve">
     <value>编号</value>
@@ -1198,7 +1234,7 @@
     <value>雷射儀</value>
   </data>
   <data name="gridControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>875, 177</value>
+    <value>896, 103</value>
   </data>
   <data name="gridControl2.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1213,13 +1249,13 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;gridControl2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <metadata name="bindingSourcePCDefinition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>784, 17</value>
   </metadata>
   <data name="gridControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 219</value>
+    <value>2, 159</value>
   </data>
   <data name="gridColumn22.Caption" xml:space="preserve">
     <value>编号</value>
@@ -1324,7 +1360,7 @@
     <value>清晰折射度/清晰可看見</value>
   </data>
   <data name="gridControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>875, 153</value>
+    <value>896, 99</value>
   </data>
   <data name="gridControl3.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1339,13 +1375,13 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;gridControl3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btn_PCLaserMachineRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 193</value>
+    <value>446, 133</value>
   </data>
   <data name="btn_PCLaserMachineRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>435, 22</value>
+    <value>452, 22</value>
   </data>
   <data name="btn_PCLaserMachineRemove.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -1363,244 +1399,13 @@
     <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;btn_PCLaserMachineRemove.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="layoutControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="layoutControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="layoutControlGroup3.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlGroup3</value>
-  </data>
-  <data name="layoutControlItem8.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem8</value>
-  </data>
-  <data name="layoutControlItem8.Text" xml:space="preserve">
-    <value>layoutControlItem8</value>
-  </data>
-  <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem9</value>
-  </data>
-  <data name="layoutControlItem9.Text" xml:space="preserve">
-    <value>layoutControlItem9</value>
-  </data>
-  <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem16</value>
-  </data>
-  <data name="layoutControlItem16.Text" xml:space="preserve">
-    <value>layoutControlItem16</value>
-  </data>
-  <data name="layoutControlItem17.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem17</value>
-  </data>
-  <data name="layoutControlItem17.Text" xml:space="preserve">
-    <value>layoutControlItem17</value>
-  </data>
-  <data name="layoutControlItem18.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem18</value>
-  </data>
-  <data name="layoutControlItem18.Text" xml:space="preserve">
-    <value>layoutControlItem18</value>
-  </data>
-  <data name="layoutControlItem19.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem19</value>
-  </data>
-  <data name="layoutControlItem19.Text" xml:space="preserve">
-    <value>layoutControlItem19</value>
-  </data>
-  <data name="layoutControlGroup3.Text" xml:space="preserve">
-    <value>layoutControlGroup3</value>
-  </data>
-  <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>899, 410</value>
-  </data>
-  <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="layoutControl3.Text" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Name" xml:space="preserve">
-    <value>layoutControl3</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.Parent" xml:space="preserve">
-    <value>xtraTabPage2</value>
-  </data>
-  <data name="&gt;&gt;layoutControl3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>899, 410</value>
-  </data>
-  <data name="xtraTabPage2.Text" xml:space="preserve">
-    <value>雷射仪/清晰折射度/清晰可看见</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Name" xml:space="preserve">
-    <value>xtraTabPage2</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Type" xml:space="preserve">
-    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.Parent" xml:space="preserve">
-    <value>xtraTabControl1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btn_PCEuropeOpticalRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 386</value>
-  </data>
-  <data name="btn_PCEuropeOpticalRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 22</value>
-  </data>
-  <data name="btn_PCEuropeOpticalRemove.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="btn_PCEuropeOpticalRemove.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="&gt;&gt;btn_PCEuropeOpticalRemove.Name" xml:space="preserve">
-    <value>btn_PCEuropeOpticalRemove</value>
-  </data>
-  <data name="&gt;&gt;btn_PCEuropeOpticalRemove.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btn_PCEuropeOpticalRemove.Parent" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;btn_PCEuropeOpticalRemove.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btn_PCEuropeOpticalADD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 386</value>
-  </data>
-  <data name="btn_PCEuropeOpticalADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 22</value>
-  </data>
-  <data name="btn_PCEuropeOpticalADD.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="btn_PCEuropeOpticalADD.Text" xml:space="preserve">
-    <value>+</value>
-  </data>
-  <data name="&gt;&gt;btn_PCEuropeOpticalADD.Name" xml:space="preserve">
-    <value>btn_PCEuropeOpticalADD</value>
-  </data>
-  <data name="&gt;&gt;btn_PCEuropeOpticalADD.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btn_PCEuropeOpticalADD.Parent" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;btn_PCEuropeOpticalADD.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btn_PCHazeRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>681, 200</value>
-  </data>
-  <data name="btn_PCHazeRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 22</value>
-  </data>
-  <data name="btn_PCHazeRemove.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="btn_PCHazeRemove.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="&gt;&gt;btn_PCHazeRemove.Name" xml:space="preserve">
-    <value>btn_PCHazeRemove</value>
-  </data>
-  <data name="&gt;&gt;btn_PCHazeRemove.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btn_PCHazeRemove.Parent" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;btn_PCHazeRemove.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btn_PCHazeADD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 200</value>
-  </data>
-  <data name="btn_PCHazeADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
-  </data>
-  <data name="btn_PCHazeADD.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="btn_PCHazeADD.Text" xml:space="preserve">
-    <value>+</value>
-  </data>
-  <data name="&gt;&gt;btn_PCHazeADD.Name" xml:space="preserve">
-    <value>btn_PCHazeADD</value>
-  </data>
-  <data name="&gt;&gt;btn_PCHazeADD.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btn_PCHazeADD.Parent" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;btn_PCHazeADD.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="btn_PCPerspectiveRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 200</value>
-  </data>
-  <data name="btn_PCPerspectiveRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="btn_PCPerspectiveRemove.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="btn_PCPerspectiveRemove.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="&gt;&gt;btn_PCPerspectiveRemove.Name" xml:space="preserve">
-    <value>btn_PCPerspectiveRemove</value>
-  </data>
-  <data name="&gt;&gt;btn_PCPerspectiveRemove.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btn_PCPerspectiveRemove.Parent" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;btn_PCPerspectiveRemove.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="btn_PCPerspectiveADD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 200</value>
-  </data>
-  <data name="btn_PCPerspectiveADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="btn_PCPerspectiveADD.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="btn_PCPerspectiveADD.Text" xml:space="preserve">
-    <value>+</value>
-  </data>
-  <data name="&gt;&gt;btn_PCPerspectiveADD.Name" xml:space="preserve">
-    <value>btn_PCPerspectiveADD</value>
-  </data>
-  <data name="&gt;&gt;btn_PCPerspectiveADD.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btn_PCPerspectiveADD.Parent" xml:space="preserve">
-    <value>layoutControl4</value>
-  </data>
-  <data name="&gt;&gt;btn_PCPerspectiveADD.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <metadata name="bindingSourcePCEuropeOptical.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>200, 55</value>
+    <value>17, 55</value>
   </metadata>
   <data name="gridControl6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 226</value>
+    <value>2, 288</value>
   </data>
   <data name="gridColumn37.Caption" xml:space="preserve">
     <value>编号</value>
@@ -1918,7 +1723,7 @@
     <value>歐規光學測試</value>
   </data>
   <data name="gridControl6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>895, 156</value>
+    <value>896, 101</value>
   </data>
   <data name="gridControl6.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1930,16 +1735,292 @@
     <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridControl6.Parent" xml:space="preserve">
-    <value>layoutControl4</value>
+    <value>layoutControl3</value>
   </data>
   <data name="&gt;&gt;gridControl6.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
+  </data>
+  <data name="btn_PCEuropeOpticalADD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 393</value>
+  </data>
+  <data name="btn_PCEuropeOpticalADD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>445, 22</value>
+  </data>
+  <data name="btn_PCEuropeOpticalADD.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btn_PCEuropeOpticalADD.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btn_PCEuropeOpticalADD.Name" xml:space="preserve">
+    <value>btn_PCEuropeOpticalADD</value>
+  </data>
+  <data name="&gt;&gt;btn_PCEuropeOpticalADD.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_PCEuropeOpticalADD.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;btn_PCEuropeOpticalADD.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btn_PCEuropeOpticalRemove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>451, 393</value>
+  </data>
+  <data name="btn_PCEuropeOpticalRemove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>447, 22</value>
+  </data>
+  <data name="btn_PCEuropeOpticalRemove.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btn_PCEuropeOpticalRemove.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btn_PCEuropeOpticalRemove.Name" xml:space="preserve">
+    <value>btn_PCEuropeOpticalRemove</value>
+  </data>
+  <data name="&gt;&gt;btn_PCEuropeOpticalRemove.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_PCEuropeOpticalRemove.Parent" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;btn_PCEuropeOpticalRemove.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="layoutControl3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="layoutControlGroup3.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlGroup3</value>
+  </data>
+  <data name="layoutControlItem8.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="layoutControlItem8.Text" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="layoutControlItem9.Text" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem16</value>
+  </data>
+  <data name="layoutControlItem16.Text" xml:space="preserve">
+    <value>layoutControlItem16</value>
+  </data>
+  <data name="layoutControlItem17.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem17</value>
+  </data>
+  <data name="layoutControlItem17.Text" xml:space="preserve">
+    <value>layoutControlItem17</value>
+  </data>
+  <data name="layoutControlItem18.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem18</value>
+  </data>
+  <data name="layoutControlItem18.Text" xml:space="preserve">
+    <value>layoutControlItem18</value>
+  </data>
+  <data name="layoutControlItem19.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem19</value>
+  </data>
+  <data name="layoutControlItem19.Text" xml:space="preserve">
+    <value>layoutControlItem19</value>
+  </data>
+  <data name="layoutControlItem12.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem12</value>
+  </data>
+  <data name="layoutControlItem12.Text" xml:space="preserve">
+    <value>layoutControlItem12</value>
+  </data>
+  <data name="layoutControlItem24.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem24</value>
+  </data>
+  <data name="layoutControlItem24.Text" xml:space="preserve">
+    <value>layoutControlItem24</value>
+  </data>
+  <data name="layoutControlItem25.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem25</value>
+  </data>
+  <data name="layoutControlItem25.Text" xml:space="preserve">
+    <value>layoutControlItem25</value>
+  </data>
+  <data name="layoutControlItem28.CustomizationFormText" xml:space="preserve">
+    <value>測試員：</value>
+  </data>
+  <data name="layoutControlItem28.Text" xml:space="preserve">
+    <value>測試員：</value>
+  </data>
+  <data name="layoutControlGroup3.Text" xml:space="preserve">
+    <value>layoutControlGroup3</value>
+  </data>
+  <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>900, 417</value>
+  </data>
+  <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl3.Text" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Name" xml:space="preserve">
+    <value>layoutControl3</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.Parent" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;layoutControl3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>900, 417</value>
+  </data>
+  <data name="xtraTabPage2.Text" xml:space="preserve">
+    <value>雷射仪/清晰折射度/清晰可看见/欧规光学测试</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Name" xml:space="preserve">
+    <value>xtraTabPage2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ncc_Tester3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 2</value>
+  </data>
+  <data name="ncc_Tester3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>844, 21</value>
+  </data>
+  <data name="ncc_Tester3.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester3.Name" xml:space="preserve">
+    <value>ncc_Tester3</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester3.Type" xml:space="preserve">
+    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester3.Parent" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;ncc_Tester3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btn_PCHazeRemove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>682, 393</value>
+  </data>
+  <data name="btn_PCHazeRemove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 22</value>
+  </data>
+  <data name="btn_PCHazeRemove.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btn_PCHazeRemove.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btn_PCHazeRemove.Name" xml:space="preserve">
+    <value>btn_PCHazeRemove</value>
+  </data>
+  <data name="&gt;&gt;btn_PCHazeRemove.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_PCHazeRemove.Parent" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;btn_PCHazeRemove.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btn_PCHazeADD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>450, 393</value>
+  </data>
+  <data name="btn_PCHazeADD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 22</value>
+  </data>
+  <data name="btn_PCHazeADD.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btn_PCHazeADD.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btn_PCHazeADD.Name" xml:space="preserve">
+    <value>btn_PCHazeADD</value>
+  </data>
+  <data name="&gt;&gt;btn_PCHazeADD.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_PCHazeADD.Parent" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;btn_PCHazeADD.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btn_PCPerspectiveRemove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 393</value>
+  </data>
+  <data name="btn_PCPerspectiveRemove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 22</value>
+  </data>
+  <data name="btn_PCPerspectiveRemove.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btn_PCPerspectiveRemove.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btn_PCPerspectiveRemove.Name" xml:space="preserve">
+    <value>btn_PCPerspectiveRemove</value>
+  </data>
+  <data name="&gt;&gt;btn_PCPerspectiveRemove.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_PCPerspectiveRemove.Parent" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;btn_PCPerspectiveRemove.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btn_PCPerspectiveADD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 393</value>
+  </data>
+  <data name="btn_PCPerspectiveADD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 22</value>
+  </data>
+  <data name="btn_PCPerspectiveADD.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btn_PCPerspectiveADD.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btn_PCPerspectiveADD.Name" xml:space="preserve">
+    <value>btn_PCPerspectiveADD</value>
+  </data>
+  <data name="&gt;&gt;btn_PCPerspectiveADD.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_PCPerspectiveADD.Parent" xml:space="preserve">
+    <value>layoutControl4</value>
+  </data>
+  <data name="&gt;&gt;btn_PCPerspectiveADD.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <metadata name="bindingSourcePCPerspective.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>996, 17</value>
   </metadata>
   <data name="gridControl4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
+    <value>2, 26</value>
   </data>
   <data name="gridColumn34.Caption" xml:space="preserve">
     <value>编号</value>
@@ -1978,7 +2059,7 @@
     <value>透視率</value>
   </data>
   <data name="gridControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 194</value>
+    <value>447, 363</value>
   </data>
   <data name="gridControl4.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1993,13 +2074,13 @@
     <value>layoutControl4</value>
   </data>
   <data name="&gt;&gt;gridControl4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <metadata name="bindingSourcePCHaze.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 55</value>
+    <value>1217, 17</value>
   </metadata>
   <data name="gridControl5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 2</value>
+    <value>453, 26</value>
   </data>
   <data name="gridColumn31.Caption" xml:space="preserve">
     <value>编号</value>
@@ -2038,7 +2119,7 @@
     <value>霧度</value>
   </data>
   <data name="gridControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>445, 194</value>
+    <value>445, 363</value>
   </data>
   <data name="gridControl5.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -2053,7 +2134,7 @@
     <value>layoutControl4</value>
   </data>
   <data name="&gt;&gt;gridControl5.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="layoutControl4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2075,24 +2156,6 @@
   </data>
   <data name="layoutControlItem21.Text" xml:space="preserve">
     <value>layoutControlItem21</value>
-  </data>
-  <data name="layoutControlItem12.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem12</value>
-  </data>
-  <data name="layoutControlItem12.Text" xml:space="preserve">
-    <value>layoutControlItem12</value>
-  </data>
-  <data name="layoutControlItem24.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem24</value>
-  </data>
-  <data name="layoutControlItem24.Text" xml:space="preserve">
-    <value>layoutControlItem24</value>
-  </data>
-  <data name="layoutControlItem25.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem25</value>
-  </data>
-  <data name="layoutControlItem25.Text" xml:space="preserve">
-    <value>layoutControlItem25</value>
   </data>
   <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem10</value>
@@ -2118,11 +2181,17 @@
   <data name="layoutControlItem23.Text" xml:space="preserve">
     <value>layoutControlItem23</value>
   </data>
+  <data name="layoutControlItem27.CustomizationFormText" xml:space="preserve">
+    <value>測試員：</value>
+  </data>
+  <data name="layoutControlItem27.Text" xml:space="preserve">
+    <value>測試員：</value>
+  </data>
   <data name="layoutControlGroup4.Text" xml:space="preserve">
     <value>layoutControlGroup4</value>
   </data>
   <data name="layoutControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>899, 410</value>
+    <value>900, 417</value>
   </data>
   <data name="layoutControl4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2143,10 +2212,10 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>899, 410</value>
+    <value>900, 417</value>
   </data>
   <data name="xtraTabPage3.Text" xml:space="preserve">
-    <value>透视率/雾度/欧规光学测试</value>
+    <value>透视率/雾度</value>
   </data>
   <data name="&gt;&gt;xtraTabPage3.Name" xml:space="preserve">
     <value>xtraTabPage3</value>
@@ -2170,7 +2239,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2229,12 +2298,6 @@
   <data name="emptySpaceItem1.Text" xml:space="preserve">
     <value>emptySpaceItem1</value>
   </data>
-  <data name="layoutControlItem27.CustomizationFormText" xml:space="preserve">
-    <value>測試員：</value>
-  </data>
-  <data name="layoutControlItem27.Text" xml:space="preserve">
-    <value>測試員：</value>
-  </data>
   <data name="layoutControlItem26.CustomizationFormText" xml:space="preserve">
     <value>客戶：</value>
   </data>
@@ -2245,7 +2308,7 @@
     <value>layoutControlGroup1</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>929, 537</value>
+    <value>930, 544</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2272,7 +2335,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>929, 584</value>
+    <value>930, 591</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>数据输入页</value>
@@ -2523,6 +2586,12 @@
   <data name="&gt;&gt;layoutControlItem15.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">
+    <value>layoutControlItem29</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem29.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;bindingSourcePCLaserMachine.Name" xml:space="preserve">
     <value>bindingSourcePCLaserMachine</value>
   </data>
@@ -2702,48 +2771,6 @@
   </data>
   <data name="&gt;&gt;gridColumn30.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlGroup3.Name" xml:space="preserve">
-    <value>layoutControlGroup3</value>
-  </data>
-  <data name="&gt;&gt;layoutControlGroup3.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
-    <value>layoutControlItem8</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
-    <value>layoutControlItem9</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem16.Name" xml:space="preserve">
-    <value>layoutControlItem16</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem16.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem17.Name" xml:space="preserve">
-    <value>layoutControlItem17</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem17.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem18.Name" xml:space="preserve">
-    <value>layoutControlItem18</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem18.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem19.Name" xml:space="preserve">
-    <value>layoutControlItem19</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem19.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;bindingSourcePCEuropeOptical.Name" xml:space="preserve">
     <value>bindingSourcePCEuropeOptical</value>
@@ -3003,6 +3030,72 @@
   <data name="&gt;&gt;repositoryItemSpinEdit20.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlGroup3.Name" xml:space="preserve">
+    <value>layoutControlGroup3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlGroup3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlGroup, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem16.Name" xml:space="preserve">
+    <value>layoutControlItem16</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem16.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem17.Name" xml:space="preserve">
+    <value>layoutControlItem17</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem17.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem18.Name" xml:space="preserve">
+    <value>layoutControlItem18</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem18.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem19.Name" xml:space="preserve">
+    <value>layoutControlItem19</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem19.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Name" xml:space="preserve">
+    <value>layoutControlItem12</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem24.Name" xml:space="preserve">
+    <value>layoutControlItem24</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem24.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem25.Name" xml:space="preserve">
+    <value>layoutControlItem25</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem25.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem28.Name" xml:space="preserve">
+    <value>layoutControlItem28</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem28.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;bindingSourcePCPerspective.Name" xml:space="preserve">
     <value>bindingSourcePCPerspective</value>
   </data>
@@ -3111,24 +3204,6 @@
   <data name="&gt;&gt;layoutControlItem21.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem12.Name" xml:space="preserve">
-    <value>layoutControlItem12</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem24.Name" xml:space="preserve">
-    <value>layoutControlItem24</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem24.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem25.Name" xml:space="preserve">
-    <value>layoutControlItem25</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem25.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
     <value>layoutControlItem10</value>
   </data>
@@ -3151,6 +3226,12 @@
     <value>layoutControlItem23</value>
   </data>
   <data name="&gt;&gt;layoutControlItem23.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem27.Name" xml:space="preserve">
+    <value>layoutControlItem27</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem27.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
@@ -3206,12 +3287,6 @@
   </data>
   <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem27.Name" xml:space="preserve">
-    <value>layoutControlItem27</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem27.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem26.Name" xml:space="preserve">
     <value>layoutControlItem26</value>

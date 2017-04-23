@@ -21,7 +21,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             this.TCTSData.Text = pcDataInput.PCDataInputDate.HasValue ? pcDataInput.PCDataInputDate.Value.ToString("yyyy-MM-dd") : "";
             this.TCTSQuantity.Text = pcDataInput.PCPerspectiveList.Count.ToString();
-            this.TCTSEmployee.Text = pcDataInput.Employee == null ? "" : pcDataInput.Employee.ToString();
+            this.TCTSEmployee.Text = pcDataInput.Employee2 == null ? "" : pcDataInput.Employee2.ToString();
 
             if (ANSI != null)
                 this.xrSubreportANSI.ReportSource = new RO(ANSI, 0);

@@ -4684,6 +4684,15 @@
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ISOOutPutFile.zh-CHT.resx">
       <DependentUpon>ISOOutPutFile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputANSI2015RO.resx">
+      <DependentUpon>DataInputANSI2015RO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputCSA2015RO.resx">
+      <DependentUpon>DataInputCSA2015RO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputAS2017RO.resx">
+      <DependentUpon>DataInputAS2017RO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFinishCheck\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -11757,6 +11766,24 @@
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\ISOOutPutFile.Designer.cs">
       <DependentUpon>ISOOutPutFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015RO.Designer.cs">
+      <DependentUpon>DataInputANSI2015RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputCSA2015RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputCSA2015RO.Designer.cs">
+      <DependentUpon>DataInputCSA2015RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputAS2017RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputAS2017RO.Designer.cs">
+      <DependentUpon>DataInputAS2017RO.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCImpactCheck\EditForm.cs">
       <SubType>Form</SubType>

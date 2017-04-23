@@ -19,7 +19,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             this.TCDate.Text = pcDataInput.PCDataInputDate.HasValue ? pcDataInput.PCDataInputDate.Value.ToString("yyyy-MM-dd") : "";
             this.TCTestQuantity.Text = pcHazeList.Count.ToString();
-            this.TCEmployee.Text = pcDataInput.Employee == null ? "" : pcDataInput.Employee.ToString();
+            this.TCEmployee.Text = pcDataInput.Employee3 == null ? "" : pcDataInput.Employee3.ToString();
 
             foreach (var item in pcHazeList)
             {

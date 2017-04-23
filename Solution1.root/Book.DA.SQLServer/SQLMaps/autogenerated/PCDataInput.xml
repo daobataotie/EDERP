@@ -18,9 +18,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="CustomerShortName" column="CustomerShortName"/>
       <result property="OrderQuantity" column="OrderQuantity"/>
       <result property="EmployeeId" column="EmployeeId"/>
+      <result property="EmployeeId2" column="EmployeeId2"/>
+      <result property="EmployeeId3" column="EmployeeId3"/>
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
       <result property="PronoteHeader" column="PronoteHeaderId" lazyLoad="false" select="PronoteHeader.select_by_primary_key" />
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key"/>
+      <result property="Employee2" column="EmployeeId2" lazyLoad="false" select="Employee.select_by_primary_key"/>
+      <result property="Employee3" column="EmployeeId3" lazyLoad="false" select="Employee.select_by_primary_key"/>
     </resultMap>
   </resultMaps>
 
@@ -119,7 +123,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime],
         [CustomerShortName],
 			  [OrderQuantity],
-        [EmployeeId]
+        [EmployeeId],
+        [EmployeeId2],
+        [EmployeeId3]
 			FROM
 				[dbo].[PCDataInput]
 			WHERE
@@ -184,7 +190,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime],
         [CustomerShortName],
 			  [OrderQuantity],
-        [EmployeeId]
+        [EmployeeId],
+        [EmployeeId2],
+        [EmployeeId3]
 			) 
 			VALUES 
 			(
@@ -199,7 +207,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#UpdateTime#,
         #CustomerShortName#,
 			  #OrderQuantity#,
-        #EmployeeId#
+        #EmployeeId#,
+        #EmployeeId2#,
+        #EmployeeId3#
 			)
              ]]>
     </insert>
@@ -217,7 +227,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[UpdateTime] = #UpdateTime#,
         [CustomerShortName]=#CustomerShortName#,
 			  [OrderQuantity]=#OrderQuantity#,
-        [EmployeeId]=#EmployeeId#
+        [EmployeeId]=#EmployeeId#,
+        [EmployeeId2]=#EmployeeId2#,
+        [EmployeeId3]=#EmployeeId3#
 			WHERE
 				[PCDataInputId] = #PCDataInputId#
                     ]]>

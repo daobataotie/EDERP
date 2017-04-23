@@ -21,7 +21,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             this.invalidValueExceptions.Add(Model.PCDataInput.PRO_CheckStandard, new AA(Properties.Resources.CheckStandard, this.cob_CheckStandard));
             this.action = "view";
-            this.newChooseContorlEmployee.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            //this.newChooseContorlEmployee.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.ncc_Tester1.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.ncc_Tester2.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.ncc_Tester3.Choose = new Settings.BasicData.Employees.ChooseEmployee();
         }
 
         public DataInputForm(string PCDataInputId)
@@ -116,7 +119,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.cob_CheckStandard.EditValue = this._PCDataInput.CheckStandard;
             this.txt_ProductName.Text = this._PCDataInput.Product == null ? "" : this._PCDataInput.Product.ToString();
             this.txt_Customer.Text = this._PCDataInput.CustomerShortName;
-            this.newChooseContorlEmployee.EditValue = this._PCDataInput.Employee;
+            //this.newChooseContorlEmployee.EditValue = this._PCDataInput.Employee;
+            this.ncc_Tester1.EditValue = this._PCDataInput.Employee;
+            this.ncc_Tester2.EditValue = this._PCDataInput.Employee2;
+            this.ncc_Tester3.EditValue = this._PCDataInput.Employee3;
 
             this.bindingSourcePCOpticalMachine.DataSource = this._PCDataInput.PCOpticalMachineList;
             this.bindingSourcePCLaserMachine.DataSource = this._PCDataInput.PCLaserMachineList;
@@ -173,7 +179,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCDataInput.TestQuantity = this.spe_TestQuantity.Value;
             this._PCDataInput.CheckStandard = this.cob_CheckStandard.Text;
             this._PCDataInput.CustomerShortName = this.txt_Customer.Text;
-            this._PCDataInput.EmployeeId = this.newChooseContorlEmployee.EditValue == null ? null : (this.newChooseContorlEmployee.EditValue as Model.Employee).EmployeeId;
+            //this._PCDataInput.EmployeeId = this.newChooseContorlEmployee.EditValue == null ? null : (this.newChooseContorlEmployee.EditValue as Model.Employee).EmployeeId;
+            this._PCDataInput.EmployeeId = this.ncc_Tester1.EditValue == null ? null : (this.ncc_Tester1.EditValue as Model.Employee).EmployeeId;
+            this._PCDataInput.EmployeeId2 = this.ncc_Tester2.EditValue == null ? null : (this.ncc_Tester2.EditValue as Model.Employee).EmployeeId;
+            this._PCDataInput.EmployeeId3 = this.ncc_Tester3.EditValue == null ? null : (this.ncc_Tester3.EditValue as Model.Employee).EmployeeId;
 
             switch (this.action)
             {
@@ -414,6 +423,24 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     Model.PCExportReportANSI aso = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "AS");
                     DataInputASRO asro = new DataInputASRO(this._PCDataInput, aso);
                     asro.ShowPreviewDialog();
+                    break;
+
+                    //2017年4月23日17:20:39 添加
+                case "ANSI2015":
+                    Model.PCExportReportANSI ansi20151 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
+                    DataInputANSI2015RO ansi2015ro = new DataInputANSI2015RO(this._PCDataInput, ansi20151);
+                    ansi2015ro.ShowPreviewDialog();
+                    break;
+                case "ANSI2015/CSA2015":
+                    Model.PCExportReportANSI ansi20152 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
+                    Model.PCExportReportANSI csa20152 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CSA");
+                    DataInputCSA2015RO csa2015ro = new DataInputCSA2015RO(this._PCDataInput, ansi20152, csa20152);
+                    csa2015ro.ShowPreviewDialog();
+                    break;
+                case "AS2017":
+                    Model.PCExportReportANSI aso2017 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "AS");
+                    DataInputAS2017RO as2017ro = new DataInputAS2017RO(this._PCDataInput, aso2017);
+                    as2017ro.ShowPreviewDialog();
                     break;
             }
         }

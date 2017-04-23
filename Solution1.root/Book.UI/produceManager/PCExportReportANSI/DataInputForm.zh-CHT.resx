@@ -427,7 +427,7 @@
     <value>光學機</value>
   </data>
   <data name="xtraTabPage2.Text" xml:space="preserve">
-    <value>雷射儀/清晰折射度/清晰可看見</value>
+    <value>雷射儀/清晰折射度/清晰可看見/歐規光學測試</value>
   </data>
   <data name="gridColumn37.Caption" xml:space="preserve">
     <value>編號</value>
@@ -439,7 +439,7 @@
     <value>編號</value>
   </data>
   <data name="xtraTabPage3.Text" xml:space="preserve">
-    <value>透視率/霧度/歐規光學測試</value>
+    <value>透視率/霧度</value>
   </data>
   <data name="layoutControlItem2.Text" xml:space="preserve">
     <value>加工單號：</value>

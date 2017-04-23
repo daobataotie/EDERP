@@ -55,6 +55,10 @@ namespace Book.Model
 
         private string _employeeId;
 
+        private string _employeeId2;
+
+        private string _employeeId3;
+
         /// <summary>
         /// 
         /// </summary>
@@ -75,6 +79,10 @@ namespace Book.Model
         private PronoteHeader _pronoteHeader;
 
         private Employee _employee;
+
+        private Employee _employee2;
+
+        private Employee _employee3;
 
         #endregion
 
@@ -203,6 +211,18 @@ namespace Book.Model
             set { _employeeId = value; }
         }
 
+        public string EmployeeId2
+        {
+            get { return _employeeId2; }
+            set { _employeeId2 = value; }
+        }
+
+        public string EmployeeId3
+        {
+            get { return _employeeId3; }
+            set { _employeeId3 = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -270,6 +290,18 @@ namespace Book.Model
             set { _employee = value; }
         }
 
+        public Employee Employee2
+        {
+            get { return _employee2; }
+            set { _employee2 = value; }
+        }
+
+        public Employee Employee3
+        {
+            get { return _employee3; }
+            set { _employee3 = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -320,6 +352,8 @@ namespace Book.Model
         public readonly static string PRO_OrderQuantity = "OrderQuantity";
 
         public readonly static string PRO_EmployeeId = "EmployeeId";
+        public readonly static string PRO_EmployeeId2 = "EmployeeId2";
+        public readonly static string PRO_EmployeeId3 = "EmployeeId3";
         #endregion
     }
 }

@@ -6,14 +6,14 @@ using DevExpress.XtraReports.UI;
 
 namespace Book.UI.produceManager.PCExportReportANSI
 {
-    public partial class DataInputASRO : DevExpress.XtraReports.UI.XtraReport
+    public partial class DataInputAS2017RO : DevExpress.XtraReports.UI.XtraReport
     {
-        public DataInputASRO()
+        public DataInputAS2017RO()
         {
             InitializeComponent();
         }
 
-        public DataInputASRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI AS)
+        public DataInputAS2017RO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI AS)
             : this()
         {
             if (pcDataInput == null)
@@ -24,7 +24,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TCTSEmployee.Text = pcDataInput.Employee2 == null ? "" : pcDataInput.Employee2.ToString();
 
             if (AS != null)
-                this.xrSubreportAS.ReportSource = new ASRO (AS, 0);
+                this.xrSubreportAS.ReportSource = new ASRO2017(AS, 0);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
             this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
