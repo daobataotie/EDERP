@@ -36,6 +36,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_OrderQuantity = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl6 = new DevExpress.XtraReports.UI.XRLabel();
@@ -164,7 +165,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbOrderNo = new DevExpress.XtraReports.UI.XRLabel();
             this.LbBuyer = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.lbl_OrderQuantity = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -216,6 +217,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPictureBox1,
             this.lbl_OrderQuantity,
             this.xrLabel4,
             this.xrLabel3,
@@ -297,6 +299,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbBuyer});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
+            // 
+            // lbl_OrderQuantity
+            // 
+            this.lbl_OrderQuantity.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            resources.ApplyResources(this.lbl_OrderQuantity, "lbl_OrderQuantity");
+            this.lbl_OrderQuantity.Name = "lbl_OrderQuantity";
+            this.lbl_OrderQuantity.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_OrderQuantity.StylePriority.UseBorders = false;
+            this.lbl_OrderQuantity.StylePriority.UseFont = false;
+            this.lbl_OrderQuantity.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel4
             // 
@@ -1391,15 +1403,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             // 
-            // lbl_OrderQuantity
+            // xrPictureBox1
             // 
-            this.lbl_OrderQuantity.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            resources.ApplyResources(this.lbl_OrderQuantity, "lbl_OrderQuantity");
-            this.lbl_OrderQuantity.Name = "lbl_OrderQuantity";
-            this.lbl_OrderQuantity.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_OrderQuantity.StylePriority.UseBorders = false;
-            this.lbl_OrderQuantity.StylePriority.UseFont = false;
-            this.lbl_OrderQuantity.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.Name = "xrPictureBox1";
             // 
             // ASRO
             // 
@@ -1561,5 +1569,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel lbl_OrderQuantity;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
     }
 }

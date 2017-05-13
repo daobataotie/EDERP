@@ -11,10 +11,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
         public JISRO2(Model.PCExportReportANSI _PCExportReportANSI, int tag)
         {
             InitializeComponent();
+            this.xrPictureBox1.Visible = false;
 
             if (tag == 1)
             {
                 this.lbl_Signature.Text = new BL.SettingManager().SelectByName("ALANSignature").Count < 1 ? "" : new BL.SettingManager().SelectByName("ALANSignature")[0].SettingCurrentValue;
+
+                this.xrPictureBox1.Visible = true;
             }
             else if (tag == 2)
             {

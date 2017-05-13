@@ -121,6 +121,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbFinJudgeHCOSTE = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel132 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbFinTestHCOSTE = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -145,6 +146,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPictureBox1,
             this.lbl_Signature,
             this.xrLabel3,
             this.xrLabel163,
@@ -1208,6 +1210,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbFinTestHCOSTE.StylePriority.UsePadding = false;
             this.lbFinTestHCOSTE.StylePriority.UseTextAlignment = false;
             // 
+            // xrPictureBox1
+            // 
+            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            // 
             // JISRO2
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1319,5 +1327,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRLabel lbFinTestHCOSTE;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel lbl_Signature;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
     }
 }

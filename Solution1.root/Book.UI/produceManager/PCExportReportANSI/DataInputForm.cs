@@ -344,6 +344,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     Model.PCFinishCheck pcFinishCheck = (new BL.PCFinishCheckManager()).SelectByPronoteHeader(pronoteHeader.PronoteHeaderID);
                     if (pcFinishCheck != null)
                     {
+                        this.ncc_Tester1.EditValue = pcFinishCheck.Employee0;
                         this.spe_TestQuantity.EditValue = pcFinishCheck.PCFinishCheckCount;
 
                         IList<Model.OpticsTest> opticsTestList = new BL.OpticsTestManager().FSelect(pcFinishCheck.PCFinishCheckID);
@@ -443,6 +444,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     as2017ro.ShowPreviewDialog();
                     break;
             }
+        }
+
+        protected override string tableCode()
+        {
+            return "PCDataInput" + "," + this._PCDataInput.PCDataInputId;
         }
     }
 }

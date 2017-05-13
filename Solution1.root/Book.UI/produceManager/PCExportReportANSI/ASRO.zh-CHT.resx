@@ -118,19 +118,42 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_OrderQuantity.Dpi" type="System.Single, mscorlib">
+  <data name="xrPictureBox1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_OrderQuantity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt, style=Bold, Underline</value>
+  <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAI4AAAAgCAIAAABLidfBAAAABGdBTUEAALGPC/xhBQAAA2tJREFUaEPt
+        WVuSwjAM41w9UM/T0/QyHIYlbR62LCemwwKdqf6IX5KVwM7s7XHhJLisOg0uq06Dy6rTYGzVfZ2nm8S0
+        3HMoivtSOrxe+89Y58zMwecJZ0Z2cOBVtUVXvCDAVM9rjnwdRBjBR80SlMzc0BfgYbPoMn7Eq9F7yviW
+        U3ZNEauoqIAEUTev7cNHxXuIvagPXytJym4p8FvliBptXBnVvy/fwMirb5AUnMj4kVUdRV0xwqjNU/z8
+        cxAEE75DMm+bDx9YBQIUOmpk2Zb2c48KYG7kD5LsWiUETMtq3pcnR/lrnBrc1/DtLonvWOrrTumKgaaE
+        mK6cRcf3rBLdU2cY5o1jIqATh+lfQEpe8D4AM7nrlMPTrYnrEpmkm2+VnLAVmqtH2WliQadw86gOqtwr
+        Xev4GAc4rVOtUudVESFVL+lSQdLMswqHJEQk6Zw9QZyNzPVGqToI5hibHALOcmtVopFmxMlYQJcOEQ6O
+        VWyMHWQa6uu+h8UZMUq19CfJSohtRYYZm8URLdV5OUceqjKVHdEFEdzsE9QqtXHBAJx4QnfEeCqtZ2S4
+        zhcJrFGBVYsnG9TiOrDFhKhhlHPEqZx3QJfvYYWyCjsFIHURIvWIjIZ0kcF2X8LUFwu6b4JjThU2uVqX
+        HNGFEUaiWRXcAUI0xQ7lvmeySYLPu0VwLTtyPMoyaBWZJSg2mLF+/yO6TIiRyFbxNiFU0thDq9mjlUI/
+        2e4mxz2e8wIBunAD0o574N8QyD+my1GrUV6VtwPAtCyWdF5Lb16O1SMzTiYzLnucs0wxHB6yirSTPBRw
+        ACDXHdOFAU5C/FZhgaOWcN4zTcBY2DraJpleDkwz/X8mma3rKkJWuSwcsF03pJHHdMU2X62KOZvg7asv
+        RHckPQSeVCkdO6GKitNvIIRDDjv0uVUSni6ockh4v1U9zoxPyifSG6Chr2lPpITgUNmBDXsCMgyHgb9l
+        /NbaENyL36DLY75ZRes7MPm3aVoo/x1sBTRVJFJOchHIEQsGGp6AtXYLWvfC0ak+pEseujSSVbp6LDFB
+        EIUC3Y25VCHV2sTWSMRKCWXZ+sVE1Aldlk8IoiVVcsf6A7pKTYe4+LPiggd1+9Iy1cHI53fhsioC9YQk
+        PmVTwmVVEMat2HfsG3FZdRpcVp0Gl1UnwePxB5K4acfdd1GYAAAAAElFTkSuQmCC
+</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="lbl_OrderQuantity.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 185.1024</value>
+  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2352.64478, 1407.47644</value>
   </data>
-  <data name="lbl_OrderQuantity.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>814.9167, 58.4200058</value>
+  <data name="xrPictureBox1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>375.7085, 84.6665039</value>
+  </data>
+  <data name="lbl_OrderQuantity.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbl_OrderQuantity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt, style=Bold, Underline</value>
   </data>
   <data name="lbl_OrderQuantity.Text" xml:space="preserve">
     <value>ORDER QTY(訂單數量):</value>
@@ -466,11 +489,17 @@
   <data name="xrTable1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
+  <data name="lbl_Signature.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2266.31323, 1492.143</value>
+  </data>
   <data name="xrLabel87.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2175.37573, 720.9332</value>
   </data>
   <data name="xrLabel87.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>134.937012, 565.6825</value>
+  </data>
+  <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2386.541, 1394.24731</value>
   </data>
   <data name="lbl14.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -600,6 +629,9 @@
   </data>
   <data name="lbl1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel83.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2495.52051, 1547.91711</value>
   </data>
   <data name="xrLabel83.Text" xml:space="preserve">
     <value>R7–08–03–C</value>
@@ -773,6 +805,6 @@
     <value>BUYER(客戶):</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>1618.4375</value>
+    <value>1598.39966</value>
   </data>
 </root>

@@ -192,6 +192,36 @@
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
     <value>213.125076</value>
   </data>
+  <data name="xrPictureBox1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAI4AAAAgCAIAAABLidfBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAANrSURBVGhD7VlbksIwDONcPVDP09P0MhyGJW0etiwnpsMCnan+iF+SlcDO7O1x4SS4rDoNLqtO
+        g8uq02Bs1X2dp5vEtNxzKIr7Ujq8XvvPWOfMzMHnCWdGdnDgVbVFV7wgwFTPa458HUQYwUfNEpTM3NAX
+        4GGz6DJ+xKvRe8r4llN2TRGrqKiABFE3r+3DR8V7iL2oD18rScpuKfBb5YgabVwZ1b8v38DIq2+QFJzI
+        +JFVHUVdMcKozVP8/HMQBBO+QzJvmw8fWAUCFDpqZNmW9nOPCmBu5A+S7FolBEzLat6XJ0f5a5wa3Nfw
+        7S6J71jq607pioGmhJiunEXH96wS3VNnGOaNYyKgE4fpX0BKXvA+ADO565TD062J6xKZpJtvlZywFZqr
+        R9lpYkGncPOoDqrcK13r+BgHOK1TrVLnVREhVS/pUkHSzLMKhyREJOmcPUGcjcz1Rqk6COYYmxwCznJr
+        VaKRZsTJWECXDhEOjlVsjB1kGurrvofFGTFKtfQnyUqIbUWGGZvFES3VeTlHHqoylR3RBRHc7BPUKrVx
+        wQCceEJ3xHgqrWdkuM4XCaxRgVWLJxvU4jqwxYSoYZRzxKmcd0CX72GFsgo7BSB1ESL1iIyGdJHBdl/C
+        1BcLum+CY04VNrlalxzRhRFGolkV3AFCNMUO5b5nskmCz7tFcC07cjzKMmgVmSUoNpixfv8jukyIkchW
+        8TYhVNLYQ6vZo5VCP9nuJsc9nvMCAbpwA9KOe+DfEMg/pstRq1FelbcDwLQslnReS29ejtUjM04mMy57
+        nLNMMRwesoq0kzwUcAAg1x3ThQFOQvxWYYGjlnDeM03AWNg62iaZXg5MM/1/Jpmt6ypCVrksHLBdN6SR
+        x3TFNl+tijmb4O2rL0R3JD0EnlQpHTuhiorTbyCEQw479LlVEp4uqHJIeL9VPc6MT8on0hugoa9pT6SE
+        4FDZgQ17AjIMh4G/ZfzW2hDci9+gy2O+WUXrOzD5t2laKP8dbAU0VSRSTnIRyBELBhqegLV2C1r3wtGp
+        PqRLHro0klW6eiwxQRCFAt2NuVQh1drE1kjESgll2frFRNQJXZZPCKIlVXLH+gO6Sk2HuPiz4oIHdfvS
+        MtXByOd34bIqAvWEJD5lU8JlVRDGrdh37BtxWXUaXFadBpdVJ8Hj8QeSuGnH3XdRmAAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1494.72778, 2086.45947</value>
+  </data>
+  <data name="xrPictureBox1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>375.7085, 84.6665039</value>
+  </data>
   <data name="xrTable1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -1562,7 +1592,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrLabel118.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1424.27112, 2110.27173</value>
+    <value>1424.27112, 2036.18835</value>
   </data>
   <data name="xrLabel118.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>551.7289, 50.270752</value>

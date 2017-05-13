@@ -469,6 +469,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             tag = 2;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
             JISRO r = new JISRO(this._PCExportReportANSI, tag);
+            JISRO2 r2 = new JISRO2(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {
@@ -484,7 +485,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     catch (Exception ex) { MessageBox.Show(ex.ToString()); }
                 }
             }
-            r.ShowPreviewDialog();
+            r.ShowPreview();
+            r2.ShowPreview();
         }
 
         private void barPrintALAN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -492,6 +494,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             tag = 1;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
             JISRO r = new JISRO(this._PCExportReportANSI, tag);
+            JISRO2 r2 = new JISRO2(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {
@@ -507,7 +510,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     catch (Exception ex) { MessageBox.Show(ex.ToString()); }
                 }
             }
-            r.ShowPreviewDialog();
+            r.ShowPreview();
+            r2.ShowPreview();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

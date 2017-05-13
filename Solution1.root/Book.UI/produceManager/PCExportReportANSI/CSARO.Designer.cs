@@ -109,6 +109,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbClearJudge = new DevExpress.XtraReports.UI.XRLabel();
             this.LbClearTestAmount = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -171,6 +172,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPictureBox1,
             this.lbl_Signature,
             this.xrLabel121,
             this.xrLabel118,
@@ -239,10 +241,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.xrLabel119, "xrLabel119");
             this.xrLabel119.Multiline = true;
             this.xrLabel119.Name = "xrLabel119";
-            this.xrLabel119.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel119.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 254F);
             this.xrLabel119.StylePriority.UseBackColor = false;
             this.xrLabel119.StylePriority.UseBorders = false;
             this.xrLabel119.StylePriority.UseFont = false;
+            this.xrLabel119.StylePriority.UsePadding = false;
             this.xrLabel119.StylePriority.UseTextAlignment = false;
             // 
             // xrTable7
@@ -873,6 +876,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             // 
+            // xrPictureBox1
+            // 
+            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            // 
             // CSARO
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -980,5 +989,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell22;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell23;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
     }
 }

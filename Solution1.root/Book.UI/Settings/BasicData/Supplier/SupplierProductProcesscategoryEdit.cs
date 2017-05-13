@@ -104,6 +104,8 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.bsPriceAndRange.DataSource = this._priceRangeList;
             this.grdConSupProductPric.RefreshDataSource();
 
+            this.date_Create.EditValue = this._SupplierProduct.InsertTime;
+            this.date_Update.EditValue = this._SupplierProduct.UpdateTime;
 
             base.Refresh();
 

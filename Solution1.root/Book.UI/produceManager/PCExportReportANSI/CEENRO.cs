@@ -11,6 +11,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         public CEENRO()
         {
             InitializeComponent();
+            this.xrPictureBox1.Visible = false;
         }
 
         public CEENRO(Model.PCExportReportANSI _PCExportReportANSI, int tag)
@@ -20,6 +21,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             {
                 this.xrLabel1.Text = "ALAN    SAFETY    COMPANY.";
                 this.lbl_Signature.Text = new BL.SettingManager().SelectByName("ALANSignature").Count < 1 ? "" : new BL.SettingManager().SelectByName("ALANSignature")[0].SettingCurrentValue;
+                this.xrPictureBox1.Visible = true;
             }
             else if (tag == 2)
             {

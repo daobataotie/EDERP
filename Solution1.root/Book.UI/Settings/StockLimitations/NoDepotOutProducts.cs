@@ -55,13 +55,13 @@ namespace Book.UI.Settings.StockLimitations
             r.ShowPreviewDialog();
         }
 
-        private void GetLastDepotoutDate(DataTable dt)
-        {
-            dt.Columns.Add("LastDepotoutDate", typeof(string));
-            //foreach (DataRow item in dt.Rows)
-            //{
-            //    item["LastDepotoutDate"] = this.stockManager.GetLastDepotoutDate(item["productid"].ToString());
-            //}
-        }
+        //private void GetLastDepotoutDate(DataTable dt)
+        //{
+        //    dt.Columns.Add("LastDepotoutDate", typeof(string));
+        //    //foreach (DataRow item in dt.Rows)
+        //    //{
+        //    //    item["LastDepotoutDate"] = this.stockManager.GetLastDepotoutDate(item["productid"].ToString());
+        //    //}
+        //}
     }
 }

@@ -138,6 +138,32 @@
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
     <value>120.52095</value>
   </data>
+  <data name="xrPictureBox1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAI4AAAAgCAIAAABLidfBAAAABGdBTUEAALGPC/xhBQAAA2tJREFUaEPt
+        WVuSwjAM41w9UM/T0/QyHIYlbR62LCemwwKdqf6IX5KVwM7s7XHhJLisOg0uq06Dy6rTYGzVfZ2nm8S0
+        3HMoivtSOrxe+89Y58zMwecJZ0Z2cOBVtUVXvCDAVM9rjnwdRBjBR80SlMzc0BfgYbPoMn7Eq9F7yviW
+        U3ZNEauoqIAEUTev7cNHxXuIvagPXytJym4p8FvliBptXBnVvy/fwMirb5AUnMj4kVUdRV0xwqjNU/z8
+        cxAEE75DMm+bDx9YBQIUOmpk2Zb2c48KYG7kD5LsWiUETMtq3pcnR/lrnBrc1/DtLonvWOrrTumKgaaE
+        mK6cRcf3rBLdU2cY5o1jIqATh+lfQEpe8D4AM7nrlMPTrYnrEpmkm2+VnLAVmqtH2WliQadw86gOqtwr
+        Xev4GAc4rVOtUudVESFVL+lSQdLMswqHJEQk6Zw9QZyNzPVGqToI5hibHALOcmtVopFmxMlYQJcOEQ6O
+        VWyMHWQa6uu+h8UZMUq19CfJSohtRYYZm8URLdV5OUceqjKVHdEFEdzsE9QqtXHBAJx4QnfEeCqtZ2S4
+        zhcJrFGBVYsnG9TiOrDFhKhhlHPEqZx3QJfvYYWyCjsFIHURIvWIjIZ0kcF2X8LUFwu6b4JjThU2uVqX
+        HNGFEUaiWRXcAUI0xQ7lvmeySYLPu0VwLTtyPMoyaBWZJSg2mLF+/yO6TIiRyFbxNiFU0thDq9mjlUI/
+        2e4mxz2e8wIBunAD0o574N8QyD+my1GrUV6VtwPAtCyWdF5Lb16O1SMzTiYzLnucs0wxHB6yirSTPBRw
+        ACDXHdOFAU5C/FZhgaOWcN4zTcBY2DraJpleDkwz/X8mma3rKkJWuSwcsF03pJHHdMU2X62KOZvg7asv
+        RHckPQSeVCkdO6GKitNvIIRDDjv0uVUSni6ockh4v1U9zoxPyifSG6Chr2lPpITgUNmBDXsCMgyHgb9l
+        /NbaENyL36DLY75ZRes7MPm3aVoo/x1sBTRVJFJOchHIEQsGGp6AtXYLWvfC0ak+pEseujSSVbp6LDFB
+        EIUC3Y25VCHV2sTWSMRKCWXZ+sVE1Aldlk8IoiVVcsf6A7pKTYe4+LPiggd1+9Iy1cHI53fhsioC9YQk
+        PmVTwmVVEMat2HfsG3FZdRpcVp0Gl1UnwePxB5K4acfdd1GYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2430.559, 1563.69</value>
+  </data>
   <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9pt</value>
   </data>
@@ -455,10 +481,7 @@
     <value>775.227661, 79.58655</value>
   </data>
   <data name="lbl_Signature.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1809.65308, 1654.50317</value>
-  </data>
-  <data name="lbl_Signature.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>2340.605, 1648.35645</value>
   </data>
   <data name="xrLabel87.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9pt</value>
@@ -469,20 +492,11 @@
   <data name="xrLabel87.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>159.87085, 874.2933</value>
   </data>
-  <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1926.852, 1641.274</value>
-  </data>
-  <data name="xrLine1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="xrLabel103.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1926.852, 1593.4375</value>
+    <value>2485.499, 1515.85339</value>
   </data>
   <data name="xrLabel103.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>307.41626, 47.8365479</value>
-  </data>
-  <data name="xrLabel103.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="lbl14.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9pt</value>
@@ -695,10 +709,10 @@
     <value>52.91797, 139.911346</value>
   </data>
   <data name="xrLabel83.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2549.62476, 1543.3783</value>
+    <value>2549.62476, 1704.13062</value>
   </data>
   <data name="xrLabel83.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>306.916748, 50.0592041</value>
+    <value>306.916748, 48.0568848</value>
   </data>
   <data name="xrLabel83.Text" xml:space="preserve">
     <value>R7–08–05</value>
@@ -1103,6 +1117,6 @@ steel Rod.</value>
     <value>BUYER:</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>1712.5</value>
+    <value>1752.1875</value>
   </data>
 </root>

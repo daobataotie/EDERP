@@ -1272,10 +1272,6 @@
     <Compile Include="produceManager\PCDoubleImpactCheck\RO.Designer.cs">
       <DependentUpon>RO.cs</DependentUpon>
     </Compile>
-    <Compile Include="produceManager\PCExportReportANSI\ASRO.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="produceManager\PCExportReportANSI\ASRO.designer.cs" />
     <Compile Include="produceManager\PCFinishCheck\EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -4590,8 +4586,12 @@
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ASEditForm2017.zh-CHT.resx">
       <DependentUpon>ASEditForm2017.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO.resx" />
-    <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO.zh-CHT.resx" />
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO.resx">
+      <DependentUpon>ASRO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO.zh-CHT.resx">
+      <DependentUpon>ASRO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO2017.resx">
       <DependentUpon>ASRO2017.cs</DependentUpon>
     </EmbeddedResource>
@@ -11652,6 +11652,12 @@
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\ASEditForm2017.Designer.cs">
       <DependentUpon>ASEditForm2017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\ASRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\ASRO.designer.cs">
+      <DependentUpon>ASRO.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\ASRO2017.cs">
       <SubType>Component</SubType>
