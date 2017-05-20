@@ -36,6 +36,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -156,7 +157,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbOrderId = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -317,6 +317,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbOrderId});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
+            // 
+            // xrPictureBox1
+            // 
+            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.Name = "xrPictureBox1";
             // 
             // xrTable1
             // 
@@ -1579,12 +1585,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // 
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
-            // 
-            // xrPictureBox1
-            // 
-            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.Name = "xrPictureBox1";
             // 
             // ANSI2015RO
             // 

@@ -197,23 +197,22 @@
   </data>
   <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAI4AAAAgCAIAAABLidfBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAANrSURBVGhD7VlbksIwDONcPVDP09P0MhyGJW0etiwnpsMCnan+iF+SlcDO7O1x4SS4rDoNLqtO
-        g8uq02Bs1X2dp5vEtNxzKIr7Ujq8XvvPWOfMzMHnCWdGdnDgVbVFV7wgwFTPa458HUQYwUfNEpTM3NAX
-        4GGz6DJ+xKvRe8r4llN2TRGrqKiABFE3r+3DR8V7iL2oD18rScpuKfBb5YgabVwZ1b8v38DIq2+QFJzI
-        +JFVHUVdMcKozVP8/HMQBBO+QzJvmw8fWAUCFDpqZNmW9nOPCmBu5A+S7FolBEzLat6XJ0f5a5wa3Nfw
-        7S6J71jq607pioGmhJiunEXH96wS3VNnGOaNYyKgE4fpX0BKXvA+ADO565TD062J6xKZpJtvlZywFZqr
-        R9lpYkGncPOoDqrcK13r+BgHOK1TrVLnVREhVS/pUkHSzLMKhyREJOmcPUGcjcz1Rqk6COYYmxwCznJr
-        VaKRZsTJWECXDhEOjlVsjB1kGurrvofFGTFKtfQnyUqIbUWGGZvFES3VeTlHHqoylR3RBRHc7BPUKrVx
-        wQCceEJ3xHgqrWdkuM4XCaxRgVWLJxvU4jqwxYSoYZRzxKmcd0CX72GFsgo7BSB1ESL1iIyGdJHBdl/C
-        1BcLum+CY04VNrlalxzRhRFGolkV3AFCNMUO5b5nskmCz7tFcC07cjzKMmgVmSUoNpixfv8jukyIkchW
-        8TYhVNLYQ6vZo5VCP9nuJsc9nvMCAbpwA9KOe+DfEMg/pstRq1FelbcDwLQslnReS29ejtUjM04mMy57
-        nLNMMRwesoq0kzwUcAAg1x3ThQFOQvxWYYGjlnDeM03AWNg62iaZXg5MM/1/Jpmt6ypCVrksHLBdN6SR
-        x3TFNl+tijmb4O2rL0R3JD0EnlQpHTuhiorTbyCEQw479LlVEp4uqHJIeL9VPc6MT8on0hugoa9pT6SE
-        4FDZgQ17AjIMh4G/ZfzW2hDci9+gy2O+WUXrOzD5t2laKP8dbAU0VSRSTnIRyBELBhqegLV2C1r3wtGp
-        PqRLHro0klW6eiwxQRCFAt2NuVQh1drE1kjESgll2frFRNQJXZZPCKIlVXLH+gO6Sk2HuPiz4oIHdfvS
-        MtXByOd34bIqAvWEJD5lU8JlVRDGrdh37BtxWXUaXFadBpdVJ8Hj8QeSuGnH3XdRmAAAAABJRU5ErkJg
-        gg==
+        iVBORw0KGgoAAAANSUhEUgAAAI4AAAAgCAIAAABLidfBAAAABGdBTUEAALGPC/xhBQAAA2tJREFUaEPt
+        WVuSwjAM41w9UM/T0/QyHIYlbR62LCemwwKdqf6IX5KVwM7s7XHhJLisOg0uq06Dy6rTYGzVfZ2nm8S0
+        3HMoivtSOrxe+89Y58zMwecJZ0Z2cOBVtUVXvCDAVM9rjnwdRBjBR80SlMzc0BfgYbPoMn7Eq9F7yviW
+        U3ZNEauoqIAEUTev7cNHxXuIvagPXytJym4p8FvliBptXBnVvy/fwMirb5AUnMj4kVUdRV0xwqjNU/z8
+        cxAEE75DMm+bDx9YBQIUOmpk2Zb2c48KYG7kD5LsWiUETMtq3pcnR/lrnBrc1/DtLonvWOrrTumKgaaE
+        mK6cRcf3rBLdU2cY5o1jIqATh+lfQEpe8D4AM7nrlMPTrYnrEpmkm2+VnLAVmqtH2WliQadw86gOqtwr
+        Xev4GAc4rVOtUudVESFVL+lSQdLMswqHJEQk6Zw9QZyNzPVGqToI5hibHALOcmtVopFmxMlYQJcOEQ6O
+        VWyMHWQa6uu+h8UZMUq19CfJSohtRYYZm8URLdV5OUceqjKVHdEFEdzsE9QqtXHBAJx4QnfEeCqtZ2S4
+        zhcJrFGBVYsnG9TiOrDFhKhhlHPEqZx3QJfvYYWyCjsFIHURIvWIjIZ0kcF2X8LUFwu6b4JjThU2uVqX
+        HNGFEUaiWRXcAUI0xQ7lvmeySYLPu0VwLTtyPMoyaBWZJSg2mLF+/yO6TIiRyFbxNiFU0thDq9mjlUI/
+        2e4mxz2e8wIBunAD0o574N8QyD+my1GrUV6VtwPAtCyWdF5Lb16O1SMzTiYzLnucs0wxHB6yirSTPBRw
+        ACDXHdOFAU5C/FZhgaOWcN4zTcBY2DraJpleDkwz/X8mma3rKkJWuSwcsF03pJHHdMU2X62KOZvg7asv
+        RHckPQSeVCkdO6GKitNvIIRDDjv0uVUSni6ockh4v1U9zoxPyifSG6Chr2lPpITgUNmBDXsCMgyHgb9l
+        /NbaENyL36DLY75ZRes7MPm3aVoo/x1sBTRVJFJOchHIEQsGGp6AtXYLWvfC0ak+pEseujSSVbp6LDFB
+        EIUC3Y25VCHV2sTWSMRKCWXZ+sVE1Aldlk8IoiVVcsf6A7pKTYe4+LPiggd1+9Iy1cHI53fhsioC9YQk
+        PmVTwmVVEMat2HfsG3FZdRpcVp0Gl1UnwePxB5K4acfdd1GYAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
@@ -238,7 +237,7 @@
     <value>605.2525, 116.627808</value>
   </data>
   <data name="xrLabel42.Text" xml:space="preserve">
-    <value>Variations in Luminous Transmittance (7.2.1.3) (可見光透光率差異化)</value>
+    <value>Luminous Transmission Rate (%) (5.1.2)                (可見光透視率)</value>
   </data>
   <data name="xrLabel42.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -1462,7 +1461,7 @@
     <value>605.2533, 119.274048</value>
   </data>
   <data name="xrLabel57.Text" xml:space="preserve">
-    <value>Luminous Transmission Rate (%) (5.1.2)                (可見光透視率)</value>
+    <value>Variations in Luminous Transmittance (7.2.1.3) (可見光透光率差異化)</value>
   </data>
   <data name="xrLabel57.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -1576,8 +1575,7 @@
     <value>551.7284, 55.5622559</value>
   </data>
   <data name="xrLabel121.Text" xml:space="preserve">
-    <value>R7-08-03-R
-</value>
+    <value>R7-08-03-R-2</value>
   </data>
   <data name="xrLabel121.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleRight</value>
