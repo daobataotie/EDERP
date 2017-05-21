@@ -80,6 +80,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 return new JISEditForm();
             else if (this.Text.Contains("ANSI2015"))
                 return new ANSI2015();
+            else if (this.Text.Contains("XJASTM"))
+                return new XuejingASTMForm();
+            else if (this.Text.Contains("XJEN"))
+                return new XuejingENForm();
+
             else
                 return new EditForm();
         }

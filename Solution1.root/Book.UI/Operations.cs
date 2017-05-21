@@ -743,6 +743,12 @@ namespace Book.UI
 
             //AS2017外销报告
             operations.Add("produceManager.PCExportReportANSI.ASEditForm2017", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.ASEditForm2017", form); });
+
+            //雪鏡專用ASTM外銷報告
+            operations.Add("produceManager.PCExportReportANSI.XuejingASTMForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.XuejingASTMForm", form); });
+
+            //雪鏡專用EN外銷報告
+            operations.Add("produceManager.PCExportReportANSI.XuejingENForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.XuejingENForm", form); });
         }
 
         static Form CreateForm(string formTypeName)
