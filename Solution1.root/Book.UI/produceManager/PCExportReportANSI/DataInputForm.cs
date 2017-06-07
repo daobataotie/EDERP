@@ -131,6 +131,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.bindingSourcePCHaze.DataSource = this._PCDataInput.PCHazeList;
             this.bindingSourcePCEuropeOptical.DataSource = this._PCDataInput.PCEuropeOpticalList;
 
+            this.sp_OrderQuantity.EditValue = this._PCDataInput.OrderQuantity.HasValue ? this._PCDataInput.OrderQuantity.Value : 0;
+
             base.Refresh();
 
             switch (this.action)
@@ -183,6 +185,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCDataInput.EmployeeId = this.ncc_Tester1.EditValue == null ? null : (this.ncc_Tester1.EditValue as Model.Employee).EmployeeId;
             this._PCDataInput.EmployeeId2 = this.ncc_Tester2.EditValue == null ? null : (this.ncc_Tester2.EditValue as Model.Employee).EmployeeId;
             this._PCDataInput.EmployeeId3 = this.ncc_Tester3.EditValue == null ? null : (this.ncc_Tester3.EditValue as Model.Employee).EmployeeId;
+
+            this._PCDataInput.OrderQuantity = this.sp_OrderQuantity.Value;
 
             switch (this.action)
             {
@@ -347,10 +351,15 @@ namespace Book.UI.produceManager.PCExportReportANSI
                         this.ncc_Tester1.EditValue = pcFinishCheck.Employee0;
                         this.spe_TestQuantity.EditValue = pcFinishCheck.PCFinishCheckCount;
 
+                        this.sp_OrderQuantity.EditValue = pcFinishCheck.PCFinishCheckInCoiunt;
+
                         IList<Model.OpticsTest> opticsTestList = new BL.OpticsTestManager().FSelect(pcFinishCheck.PCFinishCheckID);
                         foreach (var opticsTest in opticsTestList)
                         {
                             Model.PCOpticalMachine pCOpticalMachine = new Book.Model.PCOpticalMachine();
+
+                            pCOpticalMachine.NoId = opticsTest.ManualId;
+
                             pCOpticalMachine.PCOpticalMachineId = Guid.NewGuid().ToString();
                             pCOpticalMachine.LeftA = Convert.ToDecimal(opticsTest.LattrA);
                             pCOpticalMachine.LeftC = Convert.ToDecimal(opticsTest.LattrC);
@@ -426,7 +435,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     asro.ShowPreviewDialog();
                     break;
 
-                    //2017年4月23日17:20:39 添加
+                //2017年4月23日17:20:39 添加
                 case "ANSI2015":
                     Model.PCExportReportANSI ansi20151 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
                     DataInputANSI2015RO ansi2015ro = new DataInputANSI2015RO(this._PCDataInput, ansi20151);

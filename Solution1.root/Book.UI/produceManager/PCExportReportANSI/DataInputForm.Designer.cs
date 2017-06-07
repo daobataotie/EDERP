@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataInputForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.sp_OrderQuantity = new DevExpress.XtraEditors.SpinEdit();
             this.txt_Customer = new DevExpress.XtraEditors.TextEdit();
             this.txt_ProductName = new DevExpress.XtraEditors.TextEdit();
             this.cob_CheckStandard = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -220,12 +221,14 @@
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barPronoteHeader = new DevExpress.XtraBars.BarButtonItem();
             this.barMadeReport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_OrderQuantity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Customer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ProductName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cob_CheckStandard.Properties)).BeginInit();
@@ -348,6 +351,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -370,6 +374,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.sp_OrderQuantity);
             this.layoutControl1.Controls.Add(this.txt_Customer);
             this.layoutControl1.Controls.Add(this.txt_ProductName);
             this.layoutControl1.Controls.Add(this.cob_CheckStandard);
@@ -381,6 +386,16 @@
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // sp_OrderQuantity
+            // 
+            resources.ApplyResources(this.sp_OrderQuantity, "sp_OrderQuantity");
+            this.sp_OrderQuantity.MenuManager = this.barManager1;
+            this.sp_OrderQuantity.Name = "sp_OrderQuantity";
+            this.sp_OrderQuantity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.sp_OrderQuantity.Properties.ReadOnly = true;
+            this.sp_OrderQuantity.StyleController = this.layoutControl1;
             // 
             // txt_Customer
             // 
@@ -1899,7 +1914,8 @@
             this.layoutControlItem6,
             this.layoutControlItem13,
             this.emptySpaceItem1,
-            this.layoutControlItem26});
+            this.layoutControlItem26,
+            this.layoutControlItem30});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(930, 544);
@@ -1974,9 +1990,9 @@
             // emptySpaceItem1
             // 
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
-            this.emptySpaceItem1.Location = new System.Drawing.Point(277, 50);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(582, 50);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(633, 25);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(328, 25);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem26
@@ -1987,6 +2003,15 @@
             this.layoutControlItem26.Name = "layoutControlItem26";
             this.layoutControlItem26.Size = new System.Drawing.Size(277, 25);
             this.layoutControlItem26.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // layoutControlItem30
+            // 
+            this.layoutControlItem30.Control = this.sp_OrderQuantity;
+            resources.ApplyResources(this.layoutControlItem30, "layoutControlItem30");
+            this.layoutControlItem30.Location = new System.Drawing.Point(277, 50);
+            this.layoutControlItem30.Name = "layoutControlItem30";
+            this.layoutControlItem30.Size = new System.Drawing.Size(305, 25);
+            this.layoutControlItem30.TextSize = new System.Drawing.Size(72, 14);
             // 
             // barPronoteHeader
             // 
@@ -2013,6 +2038,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sp_OrderQuantity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Customer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ProductName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cob_CheckStandard.Properties)).EndInit();
@@ -2135,6 +2161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2333,5 +2360,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
         private Book.UI.Invoices.NewChooseContorl ncc_Tester3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
+        private DevExpress.XtraEditors.SpinEdit sp_OrderQuantity;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
     }
 }

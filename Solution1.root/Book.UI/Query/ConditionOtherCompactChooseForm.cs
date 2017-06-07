@@ -174,5 +174,10 @@ namespace Book.UI.Query
                 return;
             }
         }
+
+        private void newChooseSupplier1_EditValueChanged(object sender, EventArgs e)
+        {
+            this.newChooseSupplier2.EditValue = this.newChooseSupplier1.EditValue;
+        }
     }
 }

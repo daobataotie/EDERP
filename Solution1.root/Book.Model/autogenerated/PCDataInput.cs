@@ -51,7 +51,7 @@ namespace Book.Model
 
         private string _customerShortName;
 
-        private double? _orderQuantity;
+        private decimal? _orderQuantity;
 
         private string _employeeId;
 
@@ -199,7 +199,7 @@ namespace Book.Model
             set { _customerShortName = value; }
         }
 
-        public double? OrderQuantity
+        public decimal? OrderQuantity
         {
             get { return _orderQuantity; }
             set { _orderQuantity = value; }

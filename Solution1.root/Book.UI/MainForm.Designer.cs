@@ -298,6 +298,7 @@
             this.barButtonItem441 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem450 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem485 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem486 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem476 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem472 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem479 = new DevExpress.XtraBars.BarButtonItem();
@@ -645,7 +646,6 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.barButtonItem486 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -3437,6 +3437,13 @@
             this.barButtonItem485.Name = "barButtonItem485";
             this.barButtonItem485.Tag = "produceManager.PCExportReportANSI.XuejingASTMForm";
             // 
+            // barButtonItem486
+            // 
+            resources.ApplyResources(this.barButtonItem486, "barButtonItem486");
+            this.barButtonItem486.Id = 646;
+            this.barButtonItem486.Name = "barButtonItem486";
+            this.barButtonItem486.Tag = "produceManager.PCExportReportANSI.XuejingENForm";
+            // 
             // barButtonItem476
             // 
             resources.ApplyResources(this.barButtonItem476, "barButtonItem476");
@@ -6114,13 +6121,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // barButtonItem486
-            // 
-            resources.ApplyResources(this.barButtonItem486, "barButtonItem486");
-            this.barButtonItem486.Id = 646;
-            this.barButtonItem486.Name = "barButtonItem486";
-            this.barButtonItem486.Tag = "produceManager.PCExportReportANSI.XuejingENForm";
             // 
             // MainForm
             // 

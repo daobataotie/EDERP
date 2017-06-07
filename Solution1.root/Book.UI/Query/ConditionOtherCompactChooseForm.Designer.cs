@@ -92,6 +92,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton()});
             // 
             // labelControl2
@@ -102,6 +104,8 @@
             // 
             resources.ApplyResources(this.dateEditStartDate, "dateEditStartDate");
             this.dateEditStartDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
@@ -189,6 +193,7 @@
             this.newChooseSupplier1.EditValue = null;
             resources.ApplyResources(this.newChooseSupplier1, "newChooseSupplier1");
             this.newChooseSupplier1.Name = "newChooseSupplier1";
+            this.newChooseSupplier1.EditValueChanged += new System.EventHandler(this.newChooseSupplier1_EditValueChanged);
             // 
             // newChooseSupplier2
             // 

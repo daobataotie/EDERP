@@ -354,7 +354,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                         halfSpecialBonus += Convert.ToDouble(attend.SpecialBonus);
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
-                    if ((emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
                     {
                         hasPayDays++;
                         gnDays++;
@@ -560,6 +560,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                      * 总算法：年终值/(30-六日天数)*（30-月总天数+全勤天数+公假，年假，出差天数+【国假天数】）
                      * J,O 的 gnDays 已经加上了国假天数
                      */
+                    //2017-6-5 改O和普通员工一样，只有J才不扣国定假日
                     _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
 
                 } //责任津贴   新版改为出勤奖金 后改为 伙食津贴  现改为  津贴. 改 年终
@@ -1208,7 +1209,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                         halfSpecialBonus += Convert.ToDouble(attend.SpecialBonus);
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
-                    if ((emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
                     {
                         hasPayDays++;
                         gnDays++;

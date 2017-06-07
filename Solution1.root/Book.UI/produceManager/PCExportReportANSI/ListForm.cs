@@ -80,9 +80,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 return new JISEditForm();
             else if (this.Text.Contains("ANSI2015"))
                 return new ANSI2015();
-            else if (this.Text.Contains("XJASTM"))
+            else if (this.Text.Contains("ASTM"))
                 return new XuejingASTMForm();
-            else if (this.Text.Contains("XJEN"))
+            else if (this.Text.Contains("EN174"))
                 return new XuejingENForm();
 
             else
@@ -97,7 +97,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         protected override Book.UI.Settings.BasicData.BaseEditForm GetEditForm(object[] args)
         {
             Type type;
-            if (this.Text.Contains("AS"))
+            if (this.Text.Contains("AS") && !this.Text.Contains("ASTM"))
             {
                 type = typeof(ASEditForm);
                 return (ASEditForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
@@ -121,6 +121,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
             {
                 type = typeof(ANSI2015);
                 return (ANSI2015)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
+            }
+            else if (this.Text.Contains("ASTM"))
+            {
+                type = typeof(XuejingASTMForm);
+                return (XuejingASTMForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
+            }
+            else if (this.Text.Contains("EN174"))
+            {
+                type = typeof(XuejingENForm);
+                return (XuejingENForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
             }
             else
             {

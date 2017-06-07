@@ -435,14 +435,38 @@
         PiydRVvthbEShq0tdS1YP1XNB1WKv8rxjMwZjD8BORXH707ETOoAAAAASUVORK5CYIIL
 </value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="sp_OrderQuantity.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="sp_OrderQuantity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 62</value>
+  </data>
+  <data name="sp_OrderQuantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 21</value>
+  </data>
+  <data name="sp_OrderQuantity.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;sp_OrderQuantity.Name" xml:space="preserve">
+    <value>sp_OrderQuantity</value>
+  </data>
+  <data name="&gt;&gt;sp_OrderQuantity.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;sp_OrderQuantity.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;sp_OrderQuantity.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="txt_Customer.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 62</value>
   </data>
   <data name="txt_Customer.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txt_Customer.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
@@ -456,7 +480,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Customer.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txt_ProductName.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 37</value>
@@ -477,7 +501,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_ProductName.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="cob_CheckStandard.Location" type="System.Drawing.Point, System.Drawing">
     <value>365, 37</value>
@@ -522,7 +546,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;cob_CheckStandard.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txt_InvoiceCusId.Location" type="System.Drawing.Point, System.Drawing">
     <value>365, 12</value>
@@ -543,7 +567,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_InvoiceCusId.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="spe_TestQuantity.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -567,7 +591,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spe_TestQuantity.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="txt_PronoteHeaderId.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 12</value>
@@ -588,7 +612,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_PronoteHeaderId.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="date_PCDataInputDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>670, 12</value>
@@ -612,7 +636,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_PCDataInputDate.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 87</value>
@@ -2239,7 +2263,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2303,6 +2327,12 @@
   </data>
   <data name="layoutControlItem26.Text" xml:space="preserve">
     <value>客戶：</value>
+  </data>
+  <data name="layoutControlItem30.CustomizationFormText" xml:space="preserve">
+    <value>訂單數量：</value>
+  </data>
+  <data name="layoutControlItem30.Text" xml:space="preserve">
+    <value>訂單數量：</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -3292,6 +3322,12 @@
     <value>layoutControlItem26</value>
   </data>
   <data name="&gt;&gt;layoutControlItem26.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem30.Name" xml:space="preserve">
+    <value>layoutControlItem30</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem30.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barPronoteHeader.Name" xml:space="preserve">

@@ -19,11 +19,11 @@ namespace Book.UI.Query
         public ROInvoiceCOlist(ConditionCO condition)
             : this()
         {
-            DateTime start = condition.StartDate;
-            DateTime end = condition.EndDate;
+            DateTime? start = condition.StartInvoiceDate;
+            DateTime? end = condition.EndInvoiceDate;
 
             this.xrLabelReportName.Text = Properties.Resources.InvoiceCODetail;
-            this.xrLabelDateRange.Text = string.Format(Properties.Resources.DateRange, start.ToString("yyyy-MM-dd"), end.ToString("yyyy/MM/dd"));
+            this.xrLabelDateRange.Text = string.Format(Properties.Resources.DateRange, (start.HasValue ? start.Value.ToString("yyyy-MM-dd") : ""), (end.HasValue ? end.Value.ToString("yyyy/MM/dd") : ""));
 
             IList<Model.InvoiceCODetail> Details = this.invoicecomanager.Select(condition.COStartId, condition.COEndId, condition.SupplierStart, condition.SupplierEnd, condition.StartInvoiceDate, condition.EndInvoiceDate, condition.ProductStart, condition.ProductEnd, condition.CusXOId, condition.StartJHDate, condition.EndJHDate, condition.InvoiceFlag, condition.EmpStart, condition.EmpEnd);
 

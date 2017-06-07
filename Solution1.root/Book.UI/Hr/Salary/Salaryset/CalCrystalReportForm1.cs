@@ -97,7 +97,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                     _drT["OtherPunish"] = _ms.mOtherPunish;
                     _drT["BonusTotal"] = _ms.BonusTotal;
                     _drT["ShouldPay"] = _ms.mShouldPay;
-                    _drT["LatePunish"] = _ms.mLatePunish.ToString("N0");
+                    _drT["LatePunish"] = _ms.mLatePunish;
                     _drT["LateCount"] = _ms.mLateCount;
                     _drT["TotalLateInMinute"] = _ms.mTotalLateInMinute;
                     _drT["TotalLateInHour"] = _ms.mTotalLateInHour;
@@ -202,7 +202,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                     _drT["OtherPunish"] = _ms.mOtherPunish;
                     _drT["BonusTotal"] = _ms.BonusTotal;
                     _drT["ShouldPay"] = _ms.mShouldPay;
-                    _drT["LatePunish"] = _ms.mLatePunish.ToString("N0");
+                    _drT["LatePunish"] = _ms.mLatePunish;
                     _drT["LateCount"] = _ms.mLateCount;
                     _drT["TotalLateInMinute"] = _ms.mTotalLateInMinute;
                     _drT["TotalLateInHour"] = _ms.mTotalLateInHour;
@@ -387,7 +387,7 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
                     //员工编号为J开头，并且是国定假日给出勤奖
-                    if ((emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
                     {
                         hasPayDays++;
                         gnDays++;
