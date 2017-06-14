@@ -151,7 +151,6 @@
             this.layoutControlItem89 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem104 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem105 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem106 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -159,6 +158,8 @@
             this.BarBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintAlan = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintPPE = new DevExpress.XtraBars.BarButtonItem();
+            this.cob_Singnature = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -224,10 +225,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem89)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem105)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem106)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Singnature.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -254,6 +256,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cob_Singnature);
             this.layoutControl1.Controls.Add(this.comboBoxEdit1);
             this.layoutControl1.Controls.Add(this.panel1);
             this.layoutControl1.Controls.Add(this.lookUpEditUnit);
@@ -1196,10 +1199,10 @@
             this.layoutControlItem89,
             this.layoutControlItem104,
             this.layoutControlItem105,
-            this.emptySpaceItem10,
             this.layoutControlItem106,
             this.layoutControlItem7,
-            this.layoutControlItem10});
+            this.layoutControlItem10,
+            this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(888, 614);
@@ -1309,14 +1312,6 @@
             this.layoutControlItem105.Size = new System.Drawing.Size(278, 25);
             this.layoutControlItem105.TextSize = new System.Drawing.Size(84, 14);
             // 
-            // emptySpaceItem10
-            // 
-            resources.ApplyResources(this.emptySpaceItem10, "emptySpaceItem10");
-            this.emptySpaceItem10.Location = new System.Drawing.Point(542, 75);
-            this.emptySpaceItem10.Name = "emptySpaceItem10";
-            this.emptySpaceItem10.Size = new System.Drawing.Size(326, 25);
-            this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem106
             // 
             this.layoutControlItem106.Control = this.lookUpEditUnit;
@@ -1377,6 +1372,25 @@
             this.barPrintPPE.Id = 17;
             this.barPrintPPE.Name = "barPrintPPE";
             this.barPrintPPE.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPrintPPE_ItemClick);
+            // 
+            // cob_Singnature
+            // 
+            resources.ApplyResources(this.cob_Singnature, "cob_Singnature");
+            this.cob_Singnature.MenuManager = this.barManager1;
+            this.cob_Singnature.Name = "cob_Singnature";
+            this.cob_Singnature.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit2.Properties.Buttons"))))});
+            this.cob_Singnature.StyleController = this.layoutControl1;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.cob_Singnature;
+            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
+            this.layoutControlItem11.Location = new System.Drawing.Point(542, 75);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(326, 25);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(84, 14);
+            this.layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // ANSI2015
             // 
@@ -1450,10 +1464,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem89)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem105)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem106)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Singnature.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1486,7 +1501,6 @@
         private Book.UI.Invoices.NewChooseContorl newChooseContorlAuditEmp;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem104;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem105;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
         private DevExpress.XtraEditors.LookUpEdit lookUpEditUnit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem106;
         private System.Windows.Forms.BindingSource bindingSourceUnit;
@@ -1589,5 +1603,7 @@
         private DevExpress.XtraEditors.MemoEdit memoTrans;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.ComboBoxEdit cob_Singnature;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

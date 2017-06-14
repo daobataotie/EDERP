@@ -21,6 +21,8 @@ namespace Book.DA
         Book.Model.Operators GetByOperatorName(string operatorName);
 
         IList<Book.Model.Operators> SelectOrderByName();
+
+        void DeleteByEmployeeId(string id);
     }
 }
 

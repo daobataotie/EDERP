@@ -70,8 +70,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
         /// <returns></returns>
         protected override Book.UI.Settings.BasicData.BaseEditForm GetEditForm()
         {
-            if (this.Text.Contains("AS"))
+            if (this.Text.Contains("AS") && !this.Text.Contains("ASTM") && !this.Text.Contains("2017"))
                 return new ASEditForm();
+            else if (this.Text.Contains("2017"))
+                return new ASEditForm2017();
             else if (this.Text.Contains("CEEN"))
                 return new CEENEditsForm();
             else if (this.Text.Contains("CSA"))
@@ -97,10 +99,15 @@ namespace Book.UI.produceManager.PCExportReportANSI
         protected override Book.UI.Settings.BasicData.BaseEditForm GetEditForm(object[] args)
         {
             Type type;
-            if (this.Text.Contains("AS") && !this.Text.Contains("ASTM"))
+            if (this.Text.Contains("AS") && !this.Text.Contains("ASTM") && !this.Text.Contains("2017"))
             {
                 type = typeof(ASEditForm);
                 return (ASEditForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
+            }
+            else if (this.Text.Contains("2017"))
+            {
+                type = typeof(ASEditForm2017);
+                return (ASEditForm2017)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
             }
             else if (this.Text.Contains("CEEN"))
             {
@@ -143,9 +150,14 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             Model.PCExportReportANSI model = new Book.Model.PCExportReportANSI();
             model = this.bindingSource1.Current as Model.PCExportReportANSI;
-            if (this.Text.Contains("AS"))
+            if (this.Text.Contains("AS") && !this.Text.Contains("ASTM") && !this.Text.Contains("2017"))
             {
                 ASEditForm f = new ASEditForm(model);
+                f.ShowDialog();
+            }
+            else if (this.Text.Contains("2017"))
+            {
+                ASEditForm2017 f = new ASEditForm2017(model);
                 f.ShowDialog();
             }
             else if (this.Text.Contains("CEEN"))
@@ -166,6 +178,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
             else if (this.Text.Contains("ANSI2015"))
             {
                 ANSI2015 f = new ANSI2015(model);
+                f.ShowDialog();
+            }
+            else if (this.Text.Contains("ASTM"))
+            {
+                XuejingASTMForm f = new XuejingASTMForm(model);
+                f.ShowDialog();
+            }
+            else if (this.Text.Contains("EN174"))
+            {
+                XuejingENForm f = new XuejingENForm(model);
                 f.ShowDialog();
             }
             else

@@ -42,6 +42,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 comboBoxEdit1.Properties.Items.Add(item.SettingCurrentValue);
             }
             comboBoxEdit1.SelectedIndex = 0;
+
+            var signature = new BL.SettingManager().SelectByName("ALANSignature");
+            foreach (var item in jiShuBiaoZhun)
+            {
+                cob_Singnature.Properties.Items.Add(item.SettingCurrentValue);
+            }
+            cob_Singnature.SelectedIndex = 0;
         }
 
         int sign = 0;
@@ -246,6 +253,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             //this.SpinTestAmount.Enabled = false;
             this.TxtProduct.Enabled = false;
             this.TxtCustomersId.Enabled = false;
+            this.cob_Singnature.Enabled = true;
         }
 
         //控件赋值
@@ -373,7 +381,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
                 this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.PanDing7 = this._PCExportReportANSI.PanDing8 = this._PCExportReportANSI.PanDing9 = this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.PanDingShu12 = this._PCExportReportANSI.PanDingShu13 = this._PCExportReportANSI.PanDingShu15 = this._PCExportReportANSI.PanDingShu16 = this._PCExportReportANSI.PanDingShu17 = this._PCExportReportANSI.PanDingShu18 = this._PCExportReportANSI.AmountTest;
 
-              this._PCExportReportANSI.QuYangShu1 = this._PCExportReportANSI.QuYangShu14 = this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.PanDingShu14 = 100;
+                this._PCExportReportANSI.QuYangShu1 = this._PCExportReportANSI.QuYangShu14 = this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.PanDingShu14 = 100;
 
                 #endregion
             }

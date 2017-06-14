@@ -23,13 +23,14 @@ namespace Book.UI.Settings.StockLimitations
             //GetLastDepotoutDate(this.dt);
             this.bindingSource1.DataSource = dt;
             this.label1.Text = this.bindingSource1.Count.ToString() + " 項";
-            if (BL.Settings.NoDepotOutProducts == "1")
-                this.checkEdit1.Checked = true;
-            else
-                this.checkEdit1.Checked = false;
+            //if (BL.Settings.NoDepotOutProducts == "1")
+            //    this.checkEdit1.Checked = true;
+            //else
+            //    this.checkEdit1.Checked = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.year = 1;
             this.newChooseContorl1.Choose = new Settings.BasicData.ProductCategories.ChooseProductCategories();
+            //checkEdit1.Visible = false;
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
@@ -41,13 +42,13 @@ namespace Book.UI.Settings.StockLimitations
             this.year = Convert.ToDouble(this.txt_Years.Text == "" ? null : this.txt_Years.Text);
         }
 
-        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (this.checkEdit1.Checked)
-                new BL.SettingManager().Update("NoDepotOutProducts", "1");
-            else
-                new BL.SettingManager().Update("NoDepotOutProducts", "2");
-        }
+        //private void checkEdit1_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    if (this.checkEdit1.Checked)
+        //        new BL.SettingManager().Update("NoDepotOutProducts", "1");
+        //    else
+        //        new BL.SettingManager().Update("NoDepotOutProducts", "2");
+        //}
 
         private void btn_Print_Click(object sender, EventArgs e)
         {

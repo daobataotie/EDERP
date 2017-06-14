@@ -120,6 +120,19 @@ namespace Book.UI.produceManager.PCParameterSet
             dr["SettingName"] = "ANSI2015外銷報告技術標準";
             da.Rows.Add(dr);
 
+            dr = da.NewRow();
+            dr["SettingSetId"] = "ALANSignature";
+            dr["SettingName"] = "ALAN外销报告署名";
+            da.Rows.Add(dr);
+            dr = da.NewRow();
+            dr["SettingSetId"] = "PPESignature";
+            dr["SettingName"] = "PPE外销报告署名";
+            da.Rows.Add(dr);
+            dr = da.NewRow();
+            dr["SettingSetId"] = "ASWANSignature";
+            dr["SettingName"] = "ASWAN外销报告署名";
+            da.Rows.Add(dr);
+
             this._detail = this.settingManager.SelectTagOrderDefault("PCISO");
             this.requireValueExceptions.Add(Model.Setting.PRO_SettingName, new AA(Properties.Resources.NameIsNotNull, this.gridControl1));
 

@@ -36,6 +36,11 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForList<Book.Model.Operators>("Operators.selectOrderByName", null);
         }
+
+        public void DeleteByEmployeeId(string id)
+        {
+            sqlmapper.Delete("Operators.DeleteByEmployeeId",id);
+        }
         #endregion
     }
 }

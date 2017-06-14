@@ -147,7 +147,7 @@
     <value>12, 426</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 20</value>
+    <value>733, 20</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -166,30 +166,6 @@
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="checkEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>456, 426</value>
-  </data>
-  <data name="checkEdit1.Properties.Caption" xml:space="preserve">
-    <value>开启项目时自动弹窗</value>
-  </data>
-  <data name="checkEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>289, 19</value>
-  </data>
-  <data name="checkEdit1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;checkEdit1.Name" xml:space="preserve">
-    <value>checkEdit1</value>
-  </data>
-  <data name="&gt;&gt;checkEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;checkEdit1.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;checkEdit1.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>95, 12</value>
@@ -217,7 +193,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="newChooseContorl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>389, 12</value>
@@ -238,7 +214,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseContorl1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="txt_Years.Location" type="System.Drawing.Point, System.Drawing">
     <value>41, 12</value>
@@ -259,7 +235,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Years.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="btn_Search.Location" type="System.Drawing.Point, System.Drawing">
     <value>583, 12</value>
@@ -283,7 +259,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_Search.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -379,7 +355,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -419,12 +395,6 @@
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>layoutControlItem5</value>
-  </data>
-  <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem6</value>
-  </data>
-  <data name="layoutControlItem6.Text" xml:space="preserve">
-    <value>layoutControlItem6</value>
   </data>
   <data name="layoutControlItem7.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem7</value>
@@ -556,12 +526,6 @@
     <value>layoutControlItem5</value>
   </data>
   <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
-    <value>layoutControlItem6</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">

@@ -136,7 +136,11 @@ namespace Book.BL
 
                 if (employee.EmployeeLeaveDate != null || joinOld.Value.Date != employee.EmployeeJoinDate.Value.Date)
                 {
-
+                    if (employee.EmployeeLeaveDate != null)  //删除对应的ERP账号
+                    {
+                        BL.OperatorsManager om = new OperatorsManager();
+                        om.DeleteByEmployeeId(employee.EmployeeId);
+                    }
 
                     //已經自動考勤過了，所以必需再重新考勤,到职日期调后,之前记录也删除
                     //如果 大于旧 到职日 并且旧的  已经考勤过  删除 新的之前  考勤记录

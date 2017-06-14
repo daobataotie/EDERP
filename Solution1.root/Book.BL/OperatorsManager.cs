@@ -85,5 +85,10 @@ namespace Book.BL
         {
             return accessor.SelectOrderByName();
         }
+
+        public void DeleteByEmployeeId(string id)
+        {
+            accessor.DeleteByEmployeeId(id);
+        }
     }
 }

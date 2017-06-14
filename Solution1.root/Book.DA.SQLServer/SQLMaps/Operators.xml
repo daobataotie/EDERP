@@ -15,5 +15,9 @@
 	<select id="selectOrderByName"  resultMap="OperatorsResult">
     SELECT * FROM Operators WHERE Employeeid IN (SELECT EmployeeId FROM Employee WHERE EmployeeLeaveDate IS NULL) ORDER BY OperatorName asc
   </select>
+
+    <delete id="DeleteByEmployeeId" parameterClass="string">
+      delete from Operators where EmployeeId=#value#
+    </delete>
   </statements>
 </sqlMap>
