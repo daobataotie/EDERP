@@ -153,6 +153,7 @@ namespace Book.UI.AccountPayable.AcOtherShouldPayment
             this.AcOtherShouldPayment.AcOtherShouldPaymentDate = DateTime.Now;
             this.AcOtherShouldPayment.Employee = BL.V.ActiveOperator.Employee;
             this.AcOtherShouldPayment.InvoiceTaxrate = 5;
+            this.AcOtherShouldPayment.AdvancePayableDate = DateTime.Now;
 
             //添加详细
             this.AddDataRows();
