@@ -1441,7 +1441,7 @@ namespace Book.UI.Invoices.CG
             foreach (var detail in invoicecg.Details)
             {
                 detail.InvoiceCGDetailTaxPrice = 0;
-                detail.InvoiceCGDetailTax = (detail.InvoiceCGDetailPrice.HasValue ? detail.InvoiceCGDetailPrice.Value : 0 )* Convert.ToDecimal(detail.InvoiceCGDetailQuantity) * Convert.ToDecimal(string.IsNullOrEmpty(this.spinEditInvoiceTaxRate.Text) ? "0" : this.spinEditInvoiceTaxRate.Text) / 100;
+                detail.InvoiceCGDetailTax = (detail.InvoiceCGDetailPrice.HasValue ? detail.InvoiceCGDetailPrice.Value : 0) * Convert.ToDecimal(detail.InvoiceCGDetailQuantity) * Convert.ToDecimal(string.IsNullOrEmpty(this.spinEditInvoiceTaxRate.Text) ? "0" : this.spinEditInvoiceTaxRate.Text) / 100;
                 detail.InvoiceCGDetailTax = this.GetDecimal(detail.InvoiceCGDetailTax.Value, BL.V.SetDataFormat.CGJEXiao.Value);
                 detail.InvoiceCGDetailTaxMoney = detail.InvoiceCGDetailTax + detail.InvoiceCGDetailMoney;
             }
