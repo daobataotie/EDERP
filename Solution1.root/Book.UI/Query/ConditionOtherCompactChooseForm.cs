@@ -140,31 +140,36 @@ namespace Book.UI.Query
                 excel.Rows.RowHeight = 20;
 
                 #region 表頭
-                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 7]).Borders.LineStyle = XlLineStyle.xlContinuous;
-                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 7]).HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 9]).Borders.LineStyle = XlLineStyle.xlContinuous;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 9]).HorizontalAlignment = XlHAlign.xlHAlignLeft;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).ColumnWidth = 18;
-                excel.get_Range(excel.Cells[1, 3], excel.Cells[1, 3]).ColumnWidth = 18;
+                excel.get_Range(excel.Cells[1, 4], excel.Cells[1, 4]).ColumnWidth = 18;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 10]).Font.Size = 12;
-                excel.get_Range(excel.Cells[1, 4], excel.Cells[1, 4]).ColumnWidth = 50;
+                excel.get_Range(excel.Cells[1, 5], excel.Cells[1, 6]).ColumnWidth = 40;
+                
                 excel.Cells[1, 1] = "編號";
-                excel.Cells[1, 2] = "最慢交期";
-                excel.Cells[1, 3] = "客戶訂單號";
-                excel.Cells[1, 4] = "貨品名稱";
-                excel.Cells[1, 5] = "數量";
-                excel.Cells[1, 6] = "進貨數量";
-                excel.Cells[1, 7] = "單位";
+                excel.Cells[1, 2] = "交期";
+                excel.Cells[1, 3] = "訂單預交日期";
+                excel.Cells[1, 4] = "客戶訂單號";
+                excel.Cells[1, 5] = "廠商";
+                excel.Cells[1, 6] = "貨品名稱";
+                excel.Cells[1, 7] = "數量";
+                excel.Cells[1, 8] = "進貨數量";
+                excel.Cells[1, 9] = "單位";
                 #endregion
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     excel.Cells[i + 2, 1] = dt.Rows[i]["ProduceOtherCompactId"] == null ? "" : dt.Rows[i]["ProduceOtherCompactId"].ToString();
                     excel.Cells[i + 2, 2] = dt.Rows[i]["LastDate"] == null ? "" : dt.Rows[i]["LastDate"].ToString();
-                    excel.Cells[i + 2, 3] = dt.Rows[i]["CustomerInvoiceXOId"] == null ? "" : dt.Rows[i]["CustomerInvoiceXOId"].ToString();
-                    excel.Cells[i + 2, 4] = dt.Rows[i]["ProductName"] == null ? "" : dt.Rows[i]["ProductName"].ToString();
-                    excel.Cells[i + 2, 5] = dt.Rows[i]["OtherCompactCount"] == null ? "" : dt.Rows[i]["OtherCompactCount"].ToString();
-                    excel.Cells[i + 2, 6] = dt.Rows[i]["ArrivalInQuantity"] == null ? "" : dt.Rows[i]["ArrivalInQuantity"].ToString();
-                    excel.Cells[i + 2, 7] = dt.Rows[i]["ProductUnit"] == null ? "" : dt.Rows[i]["ProductUnit"].ToString();
+                    excel.Cells[i + 2, 3] = dt.Rows[i]["InvoiceYjrq"] == null ? "" : dt.Rows[i]["InvoiceYjrq"].ToString();
+                    excel.Cells[i + 2, 4] = dt.Rows[i]["CustomerInvoiceXOId"] == null ? "" : dt.Rows[i]["CustomerInvoiceXOId"].ToString();
+                    excel.Cells[i + 2, 5] = dt.Rows[i]["SupplierFullName"] == null ? "" : dt.Rows[i]["SupplierFullName"].ToString();
+                    excel.Cells[i + 2, 6] = dt.Rows[i]["ProductName"] == null ? "" : dt.Rows[i]["ProductName"].ToString();
+                    excel.Cells[i + 2, 7] = dt.Rows[i]["OtherCompactCount"] == null ? "" : dt.Rows[i]["OtherCompactCount"].ToString();
+                    excel.Cells[i + 2, 8] = dt.Rows[i]["ArrivalInQuantity"] == null ? "" : dt.Rows[i]["ArrivalInQuantity"].ToString();
+                    excel.Cells[i + 2, 9] = dt.Rows[i]["ProductUnit"] == null ? "" : dt.Rows[i]["ProductUnit"].ToString();
                 }
                 excel.Visible = true;
             }
