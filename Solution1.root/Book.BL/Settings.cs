@@ -14,10 +14,10 @@ namespace Book.BL
         /// <summary>
         /// 生產入庫.委外加工單.委外入庫.採購單.進庫單.商品.單價只有會計1.會計.老闆娘.業務.我.經理助理.業務會計.倉庫主管.可以看的到.其他人不可以看到.
         /// </summary>
-        public static IList<string> authorityOperationId
-        {
-            get { return operationRoleManager.GetAuthorityOperetionId(); }
-        }
+        //public static IList<string> authorityOperationId
+        //{
+        //    get { return operationRoleManager.GetAuthorityOperetionId(); }
+        //}
 
         #endregion
 

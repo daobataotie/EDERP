@@ -649,10 +649,35 @@ namespace Book.Model
 
         private bool? _IsPOCPrice;
 
+        /// <summary>
+        /// 委外合同單價
+        /// </summary>
         public bool? IsPOCPrice
         {
             get { return _IsPOCPrice; }
             set { _IsPOCPrice = value; }
+        }
+
+        private bool? _IsPODPrice;
+
+        /// <summary>
+        /// 委外入庫單價
+        /// </summary>
+        public bool? IsPODPrice
+        {
+            get { return _IsPODPrice; }
+            set { _IsPODPrice = value; }
+        }
+
+        private bool? _IsPIDPrice;
+
+        /// <summary>
+        /// 生產入庫單價
+        /// </summary>
+        public bool? IsPIDPrice
+        {
+            get { return _IsPIDPrice; }
+            set { _IsPIDPrice = value; }
         }
 	}
 }

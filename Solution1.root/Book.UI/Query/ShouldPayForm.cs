@@ -20,11 +20,13 @@ namespace Book.UI.Query
         BL.AtBillsIncomeManager AtBillsIncomeManager = new Book.BL.AtBillsIncomeManager();
         BL.AtSummonManager atSummonManager = new Book.BL.AtSummonManager();
         BL.AtSummonDetailManager atSummonDetailManager = new Book.BL.AtSummonDetailManager();
+        BL.ShouldPayAccountDetailManager detailManager = new Book.BL.ShouldPayAccountDetailManager();
         private BL.InvoiceCGDetailManager invoicecgmanager = new Book.BL.InvoiceCGDetailManager();
         DataTable dt = new DataTable();
         IList<Model.AtAccountSubject> subjectList;
         IList<Model.AtBillsIncome> atBillsIncomeList = new List<Model.AtBillsIncome>();
         Model.ShouldPayAccountCondition shouldPayAccountCondition;
+
 
         int flag = 0;
         public ShouldPayForm()
@@ -724,6 +726,28 @@ namespace Book.UI.Query
                     }
                     this.spe_PMTotal.EditValue = pmtotal;
                 }
+
+                //自动增加发票。规则：自动拉取 上月 对应的厂商的，修改会双向同时修改。比如本月是6月，应付账款明细表日期为4.26-5.25，拉取5.1-5.31号所有该厂商的发票
+                if (this.nccSupplier.EditValue == null)
+                    MessageBox.Show("廠商為空不能自動拉取發票", this.Text, MessageBoxButtons.OK);
+                else
+                {
+                    shouldPayAccount.Detail.Clear();
+                    DateTime startDate = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month, 1));
+                    DateTime endDate = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month, DateTime.DaysInMonth(DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month)));
+                    var fpList = detailManager.GetByDateRangeAndSupplier(startDate, endDate.AddDays(1).AddSeconds(-1), (this.nccSupplier.EditValue as Model.Supplier).SupplierId);
+                    if (fpList != null)
+                    {
+                        fpList.ToList().ForEach(fp =>
+                            {
+                                fp.ShouldPayAccountId = shouldPayAccount.ShouldPayAccountId;
+                                shouldPayAccount.Detail.Add(fp);
+                            });
+                        this.gridControl2.RefreshDataSource();
+                        this.CountFP();
+                    }
+                }
+
             }
         }
 
@@ -936,8 +960,12 @@ namespace Book.UI.Query
                     this.atSummondetail = new Book.Model.AtSummonDetail();
                     atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
                     atSummondetail.Lending = "貸";
-                    if (this.subjectList.Any(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))))
-                        atSummondetail.SubjectId = this.subjectList.First(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))).SubjectId;
+                    try
+                    {
+                        if (this.subjectList.Any(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))))
+                            atSummondetail.SubjectId = this.subjectList.First(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))).SubjectId;
+                    }
+                    catch { }
                     atSummondetail.AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
                     this.atSummon.Details.Add(atSummondetail);
 

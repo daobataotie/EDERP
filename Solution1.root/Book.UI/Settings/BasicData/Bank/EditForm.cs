@@ -71,6 +71,7 @@ namespace Book.UI.Settings.BasicData.Bank
             this.bank.BankName = textEditName.Text;
 
             this.bank.Description = textEditDescription.Text;
+            this.bank.OrderId = Convert.ToInt32(spe_OrderID.Value);
             switch (this.action)
             {
                 case "insert":
@@ -96,6 +97,7 @@ namespace Book.UI.Settings.BasicData.Bank
             this.textEditName.Text = this.bank.BankName;
             this.textEditDescription.Text = this.bank.Description;
             this.txt_Id.Text = this.bank.Id;
+            this.spe_OrderID.EditValue = this.bank.OrderId;
 
             switch (this.action)
             {

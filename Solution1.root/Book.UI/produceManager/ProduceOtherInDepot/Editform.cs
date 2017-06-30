@@ -49,15 +49,32 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             this.EmpAudit.Choose = new ChooseEmployee();
             // this.newChooseWorkHorseId.Choose = new Settings.ProduceManager.Workhouselog.ChooseWorkHouse();
 
-            if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
+            //if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
+            //{
+            //    this.gridColProcessPrice.Visible = true;
+            //    this.ColProduceMoney.Visible = true;
+            //}
+            //else
+            //{
+            //    this.gridColProcessPrice.Visible = false;
+            //    this.ColProduceMoney.Visible = false;
+            //}
+            this.gridColProcessPrice.Visible = false;
+            this.ColProduceMoney.Visible = false;
+
+            IList<Model.Role> roleList = BL.V.RoleList;
+            if (roleList != null && roleList.Count > 0)
             {
-                this.gridColProcessPrice.Visible = true;
-                this.ColProduceMoney.Visible = true;
-            }
-            else
-            {
-                this.gridColProcessPrice.Visible = false;
-                this.ColProduceMoney.Visible = false;
+                for (int i = 0; i < roleList.Count; i++)
+                {
+                    if (roleList[i].IsPODPrice == true)
+                    {
+                        this.gridColProcessPrice.Visible = true;
+                        this.ColProduceMoney.Visible = true;
+
+                        break;
+                    }
+                }
             }
         }
 

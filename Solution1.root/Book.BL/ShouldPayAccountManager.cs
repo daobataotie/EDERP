@@ -54,7 +54,11 @@ namespace Book.BL
                 accessor.Insert(shouldPayAccount);
                 foreach (var item in shouldPayAccount.Detail)
                 {
-                    detailmanager.Insert(item);
+                    //2017年6月24日20:06:45  改為可以先建立發票，打應付賬款明細表時自動拉出對應的發票，對已這部分已存在的要修改不是增加
+                    if (detailmanager.ExistsPrimary(item.ShouldPayAccountDetailId))
+                        detailmanager.Update(item);
+                    else
+                        detailmanager.Insert(item);
                 }
                 BL.V.CommitTransaction();
             }

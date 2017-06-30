@@ -68,15 +68,31 @@ namespace Book.UI.Invoices.CG
             this.EmpAudit.Choose = new ChooseEmployee();
             this.bindingSourceUnit.DataSource = new BL.ProductUnitManager().Select();
 
-            if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
+            //if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
+            //{
+            //    this.colInvoiceCGDetailPrice.Visible = true;
+            //    this.colInvoiceCGDetailMoney.Visible = true;
+            //}
+            //else
+            //{
+            //    this.colInvoiceCGDetailPrice.Visible = false;
+            //    this.colInvoiceCGDetailMoney.Visible = false;
+            //}
+            this.colInvoiceCGDetailPrice.Visible = false;
+            this.colInvoiceCGDetailMoney.Visible = false;
+
+            IList<Model.Role> roleList = BL.V.RoleList;
+            if (roleList != null && roleList.Count > 0)
             {
-                this.colInvoiceCGDetailPrice.Visible = true;
-                this.colInvoiceCGDetailMoney.Visible = true;
-            }
-            else
-            {
-                this.colInvoiceCGDetailPrice.Visible = false;
-                this.colInvoiceCGDetailMoney.Visible = false;
+                for (int i = 0; i < roleList.Count; i++)
+                {
+                    if (roleList[i].IsCOPrice == true)
+                    {
+                        this.colInvoiceCGDetailPrice.Visible = true;
+                        this.colInvoiceCGDetailMoney.Visible = true;
+                        break;
+                    }
+                }
             }
         }
 
@@ -145,34 +161,34 @@ namespace Book.UI.Invoices.CG
             //this.bindingSourceProductId.DataSource = productManager.SelectNotCustomer();
 
             //判断操作人员角色权限
-            Model.Role mRole = this.SelectOperatorKeyTag(BL.V.ActiveOperator);
-            if (mRole != null)
-            {
-                if (mRole.IsCOJinHuoJinE == false)
-                {
-                    this.colInvoiceCGDetailPrice.Visible = false;
-                    this.colInvoiceCGDetailMoney.Visible = false;
-                    this.colInvoiceCGDetailTaxPrice.Visible = false;
-                    this.colInvoiceCGDetailTax.Visible = false;
-                    this.colInvoiceCGDetailTaxMoney.Visible = false;
-                    this.gridColumnZR.Visible = false;
-                }
+            //Model.Role mRole = this.SelectOperatorKeyTag(BL.V.ActiveOperator);
+            //if (mRole != null)
+            //{
+            //    if (mRole.IsCOJinHuoJinE == false)
+            //    {
+            //        this.colInvoiceCGDetailPrice.Visible = false;
+            //        this.colInvoiceCGDetailMoney.Visible = false;
+            //        this.colInvoiceCGDetailTaxPrice.Visible = false;
+            //        this.colInvoiceCGDetailTax.Visible = false;
+            //        this.colInvoiceCGDetailTaxMoney.Visible = false;
+            //        this.gridColumnZR.Visible = false;
+            //    }
 
-                if (mRole.IsCOJiaoYiMingXi == false && mRole.IsCOFaPiaoZiLiao == false && mRole.IsCOXiangGuanZiLiao == false && mRole.IsCOZhangKuanZiLiao == false)
-                {
-                    //this.xtraTabControl1.Hide();
-                    //this.xtraTabControl1.Visible = false;
-                    //this.xtraTabControl1.Height = 0;
-                    this.xtraTabControl1.Dispose();
-                }
-                else
-                {
-                    this.xTabPageJYMX.PageVisible = mRole.IsCOJiaoYiMingXi.HasValue ? mRole.IsCOJiaoYiMingXi.Value : false;
-                    this.xTabPageFPZL.PageVisible = mRole.IsCOFaPiaoZiLiao.HasValue ? mRole.IsCOFaPiaoZiLiao.Value : false;
-                    this.xTabPageZKZL.PageVisible = mRole.IsCOZhangKuanZiLiao.HasValue ? mRole.IsCOZhangKuanZiLiao.Value : false;
-                    this.xTabPageXGZL.PageVisible = mRole.IsCOXiangGuanZiLiao.HasValue ? mRole.IsCOXiangGuanZiLiao.Value : false;
-                }
-            }
+            //    if (mRole.IsCOJiaoYiMingXi == false && mRole.IsCOFaPiaoZiLiao == false && mRole.IsCOXiangGuanZiLiao == false && mRole.IsCOZhangKuanZiLiao == false)
+            //    {
+            //        //this.xtraTabControl1.Hide();
+            //        //this.xtraTabControl1.Visible = false;
+            //        //this.xtraTabControl1.Height = 0;
+            //        this.xtraTabControl1.Dispose();
+            //    }
+            //    else
+            //    {
+            //        this.xTabPageJYMX.PageVisible = mRole.IsCOJiaoYiMingXi.HasValue ? mRole.IsCOJiaoYiMingXi.Value : false;
+            //        this.xTabPageFPZL.PageVisible = mRole.IsCOFaPiaoZiLiao.HasValue ? mRole.IsCOFaPiaoZiLiao.Value : false;
+            //        this.xTabPageZKZL.PageVisible = mRole.IsCOZhangKuanZiLiao.HasValue ? mRole.IsCOZhangKuanZiLiao.Value : false;
+            //        this.xTabPageXGZL.PageVisible = mRole.IsCOXiangGuanZiLiao.HasValue ? mRole.IsCOXiangGuanZiLiao.Value : false;
+            //    }
+            //}
         }
 
         protected override string tableCode()

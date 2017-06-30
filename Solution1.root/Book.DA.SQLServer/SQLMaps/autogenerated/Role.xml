@@ -32,6 +32,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="IsXOJinHuoJinE" column="IsXOJinHuoJinE" />
       <result property="IsCOJinHuoJinE" column="IsCOJinHuoJinE" />
       <result property="IsPOCPrice" column="IsPOCPrice"/>
+      <result property="IsPODPrice" column="IsPODPrice"/>
+      <result property="IsPIDPrice" column="IsPIDPrice"/>
     </resultMap>
   </resultMaps>
 
@@ -144,7 +146,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[IsCOXiangGuanZiLiao],
 				[IsXOJinHuoJinE],
 				[IsCOJinHuoJinE],
-        [IsPOCPrice]
+        [IsPOCPrice],
+        [IsPODPrice],
+        [IsPIDPrice]
 			FROM
 				[dbo].[Role]
 			WHERE
@@ -224,7 +228,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[IsCOXiangGuanZiLiao],
 				[IsXOJinHuoJinE],
 				[IsCOJinHuoJinE],
-        [IsPOCPrice]
+        [IsPOCPrice],
+        [IsPODPrice],
+        [IsPIDPrice]
 			) 
 			VALUES 
 			(
@@ -253,7 +259,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#IsCOXiangGuanZiLiao#,
 				#IsXOJinHuoJinE#,
 				#IsCOJinHuoJinE#,
-        #IsPOCPrice#
+        #IsPOCPrice#,
+        #IsPODPrice#,
+        #IsPIDPrice#
 			)
              ]]>
     </insert>
@@ -285,7 +293,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[IsCOXiangGuanZiLiao] = #IsCOXiangGuanZiLiao#,
 				[IsXOJinHuoJinE] = #IsXOJinHuoJinE#,
 				[IsCOJinHuoJinE] = #IsCOJinHuoJinE#,
-        [IsPOCPrice]=#IsPOCPrice#
+        [IsPOCPrice]=#IsPOCPrice#,
+        [IsPODPrice]=#IsPODPrice#,
+        [IsPIDPrice]=#IsPIDPrice#
 			WHERE
 				[RoleId] = #RoleId#
                     ]]>

@@ -55,15 +55,31 @@ namespace Book.UI.produceManager.ProduceInDepot
             //    this.bindingSourceProductId.DataSource = this.productManager.DataReaderBind<Model.Product>(sql, null, CommandType.Text); 
             this.EmpAudit.Choose = new ChooseEmployee();
 
-            if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
+            //if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
+            //{
+            //    this.ColProduceInDepotPrice.Visible = true;
+            //    this.ColProduceMoney.Visible = true;
+            //}
+            //else
+            //{
+            //    this.ColProduceInDepotPrice.Visible = false;
+            //    this.ColProduceMoney.Visible = false;
+            //}
+            this.ColProduceInDepotPrice.Visible = false;
+            this.ColProduceMoney.Visible = false;
+
+            IList<Model.Role> roleList = BL.V.RoleList;
+            if (roleList != null && roleList.Count > 0)
             {
-                this.ColProduceInDepotPrice.Visible = true;
-                this.ColProduceMoney.Visible = true;
-            }
-            else
-            {
-                this.ColProduceInDepotPrice.Visible = false;
-                this.ColProduceMoney.Visible = false;
+                for (int i = 0; i < roleList.Count; i++)
+                {
+                    if (roleList[i].IsPIDPrice == true)
+                    {
+                        this.ColProduceInDepotPrice.Visible = true;
+                        this.ColProduceMoney.Visible = true; 
+                        break;
+                    }
+                }
             }
         }
 

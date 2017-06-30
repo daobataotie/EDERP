@@ -52,18 +52,18 @@ namespace Book.UI.Invoices.CO
             this.bindingSourceWorkHouse.DataSource = new BL.WorkHouseManager().Select();
             this.action = "view";
 
-            if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
-            {
-                this.colInvoiceCODetailMoney.Visible = true;
-                this.colInvoiceCODetailPrice.Visible = true;
-            }
-            else
-            {
-                this.colInvoiceCODetailMoney.Visible = false;
-                this.colInvoiceCODetailPrice.Visible = false;
-            }
+            //if (BL.Settings.authorityOperationId.Contains(BL.V.ActiveOperator.OperatorsId))
+            //{
+            //    this.colInvoiceCODetailMoney.Visible = true;
+            //    this.colInvoiceCODetailPrice.Visible = true;
+            //}
+            //else
+            //{
+            //    this.colInvoiceCODetailMoney.Visible = false;
+            //    this.colInvoiceCODetailPrice.Visible = false;
+            //}
         }
-        
+
         private Model.InvoiceXO _invoiceXO;
         public EditForm(Model.InvoiceXO invoiceXO)
             : this()
@@ -110,7 +110,7 @@ namespace Book.UI.Invoices.CO
             //string sql = "SELECT productid,id,productname FROM product WHERE IsCustomerProduct IS NULL OR IsCustomerProduct =0";
             //this.bindingSource2.DataSource = this.productManager.DataReaderBind<Model.Product>(sql, null, CommandType.Text);
             // this.bindingSource2.DataSource = this.productManager.SelectNotCustomer();
-            // GetCo();
+            GetCo();
         }
 
         protected override string tableCode()
@@ -1092,13 +1092,13 @@ namespace Book.UI.Invoices.CO
                 if (co2 == 1)
                 {
                     this.colInvoiceCODetailQuantity.Visible = true;
-                    this.colInvoiceCODetailMoney.Visible = true;
+                    //this.colInvoiceCODetailMoney.Visible = true;
                     co2 = 0;
                 }
                 else
                 {
                     this.colInvoiceCODetailQuantity.Visible = false;
-                    this.colInvoiceCODetailMoney.Visible = false;
+                    //this.colInvoiceCODetailMoney.Visible = false;
                 }
             }
         }

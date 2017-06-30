@@ -50,7 +50,8 @@ namespace Book.Model
 		private string _description;
 
         private string _id;
-		 
+
+        private int _orderId;
 		#endregion
 		
 		#region Properties
@@ -165,6 +166,13 @@ namespace Book.Model
             get { return _id; }
             set { _id = value; }
         }
+
+        public int OrderId
+        {
+            get { return _orderId; }
+            set { _orderId = value; }
+        }
+
 	
 		/// <summary>
 		/// 编号
@@ -202,6 +210,8 @@ namespace Book.Model
 		public readonly static string PROPERTY_DESCRIPTION = "Description";
 
         public readonly static string PROPERTY_Id = "Id";
+
+        public readonly static string PROPERTY_OrderId = "OrderId";
 		#endregion
 	}
 }

@@ -20,8 +20,17 @@ namespace Book.UI.Query
             this.newChooseSupEnd.Choose = new Settings.BasicData.Supplier.ChooseSupplier();
             this.nccEmployeeStart.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.nccEmployeeEnd.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            this.dateEditStartDate.DateTime = DateTime.Now.Date.AddMonths(-1);
-            this.dateEditEndDate.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
+            //this.dateEditStartDate.DateTime = DateTime.Now.Date.AddMonths(-1);
+            //this.dateEditEndDate.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
+
+            this.dateEditStartDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-2).Year, DateTime.Now.AddMonths(-2).Month, 26));
+            this.dateEditEndDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}",DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month, 25));
+        }
+
+        protected override void Init()
+        {
+            this.dateEditStartDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-2).Year, DateTime.Now.AddMonths(-2).Month, 26));
+            this.dateEditEndDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month, 25));
         }
 
         public override Condition Condition
@@ -53,7 +62,7 @@ namespace Book.UI.Query
                 this.condition.EndInvoiceDate = this.dateEditEndDate.DateTime;
             }
             else
-                 this.condition.EndInvoiceDate=global::Helper.DateTimeParse.EndDate;
+                this.condition.EndInvoiceDate = global::Helper.DateTimeParse.EndDate;
 
             if (global::Helper.DateTimeParse.DateTimeEquls(this.dateEditJHDate1.DateTime, new DateTime()))
             {

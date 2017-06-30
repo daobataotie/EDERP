@@ -25,19 +25,19 @@ namespace Book.UI.Settings.Privileges.Roles
             this.bindingSourceGrid.CurrentChanged += new EventHandler(bindingSourceGrid_CurrentChanged);
             this.gridView2.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(gridView2_CellValueChanging);
 
-            DataTable da=new DataTable();
-            DataColumn dc=new DataColumn("id",typeof(string));
+            DataTable da = new DataTable();
+            DataColumn dc = new DataColumn("id", typeof(string));
             da.Columns.Add(dc);
-            DataColumn dc1=new DataColumn("pName",typeof(string));
+            DataColumn dc1 = new DataColumn("pName", typeof(string));
             da.Columns.Add(dc1);
             DataRow dr;
-            for (int i = 0; i <=int.Parse( System.Configuration.ConfigurationManager.AppSettings["AuditMaxRank"].ToString()); i++)
+            for (int i = 0; i <= int.Parse(System.Configuration.ConfigurationManager.AppSettings["AuditMaxRank"].ToString()); i++)
             {
-                dr=da.NewRow();
+                dr = da.NewRow();
                 dr[0] = i;
                 if (i == 0) dr[1] = "無";
-                else 
-                dr[1]=i.ToString()+"审";
+                else
+                    dr[1] = i.ToString() + "审";
                 da.Rows.Add(dr);
             }
 
@@ -143,6 +143,10 @@ namespace Book.UI.Settings.Privileges.Roles
                 this.checkEditIsXOZhangKuanZiLiao.Checked = r.IsXOZhangKuanZiLiao.HasValue ? r.IsXOZhangKuanZiLiao.Value : false;
                 this.checkEditIsXOXiangGuanZiLiao.Checked = r.IsXOXiangGuanZiLiao.HasValue ? r.IsXOXiangGuanZiLiao.Value : false;
                 this.checkEditIsXOJinHuoJinE.Checked = r.IsXOJinHuoJinE.HasValue ? r.IsXOJinHuoJinE.Value : false;
+
+                this.checkEditWWPrice.Checked = r.IsPOCPrice.HasValue ? r.IsPOCPrice.Value : false;
+                this.checkEditOtherIndepotPrice.Checked = r.IsPODPrice.HasValue ? r.IsPODPrice.Value : false;
+                this.checkEditPIDPrice.Checked = r.IsPIDPrice.HasValue ? r.IsPIDPrice.Value : false;
             }
         }
 
@@ -173,6 +177,8 @@ namespace Book.UI.Settings.Privileges.Roles
                 r.IsXOJinHuoJinE = this.checkEditIsXOJinHuoJinE.Checked;
 
                 r.IsPOCPrice = this.checkEditWWPrice.Checked;
+                r.IsPODPrice = this.checkEditOtherIndepotPrice.Checked;
+                r.IsPIDPrice = this.checkEditPIDPrice.Checked;
 
                 roleManager.Update(r);
                 BL.V.RoleList = roleManager.Select(BL.V.ActiveOperator.OperatorsId);

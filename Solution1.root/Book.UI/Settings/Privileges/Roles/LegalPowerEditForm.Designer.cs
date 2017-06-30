@@ -40,7 +40,7 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
-            this.checkEditWWPrice = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEditOtherIndepotPrice = new DevExpress.XtraEditors.CheckEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItemSave = new DevExpress.XtraBars.BarButtonItem();
@@ -49,6 +49,7 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.checkEditWWPrice = new DevExpress.XtraEditors.CheckEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
             this.checkEditIsCOJinHuoJinE = new DevExpress.XtraEditors.CheckEdit();
@@ -118,6 +119,7 @@
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -127,6 +129,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.checkEditPIDPrice = new DevExpress.XtraEditors.CheckEdit();
+            this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -139,9 +143,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditWWPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditOtherIndepotPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditWWPrice.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
             this.layoutControl4.SuspendLayout();
@@ -200,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -209,39 +215,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditPIDPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
             // 
-            this.splitContainerControl1.AccessibleDescription = null;
-            this.splitContainerControl1.AccessibleName = null;
             resources.ApplyResources(this.splitContainerControl1, "splitContainerControl1");
             this.splitContainerControl1.Name = "splitContainerControl1";
-            resources.ApplyResources(this.splitContainerControl1.Panel1, "splitContainerControl1.Panel1");
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl2);
-            resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
+            resources.ApplyResources(this.splitContainerControl1.Panel1, "splitContainerControl1.Panel1");
             this.splitContainerControl1.Panel2.Controls.Add(this.layoutControl3);
+            resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
             this.splitContainerControl1.SplitterPosition = 252;
             // 
             // layoutControl2
             // 
-            this.layoutControl2.AccessibleDescription = null;
-            this.layoutControl2.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl2, "layoutControl2");
-            this.layoutControl2.BackgroundImage = null;
             this.layoutControl2.Controls.Add(this.listBoxControl1);
             this.layoutControl2.Controls.Add(this.treeList2);
-            this.layoutControl2.Font = null;
+            resources.ApplyResources(this.layoutControl2, "layoutControl2");
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
             // 
             // listBoxControl1
             // 
-            this.listBoxControl1.AccessibleDescription = null;
-            this.listBoxControl1.AccessibleName = null;
-            resources.ApplyResources(this.listBoxControl1, "listBoxControl1");
-            this.listBoxControl1.BackgroundImage = null;
             this.listBoxControl1.DataSource = this.bindingSourceRole;
+            resources.ApplyResources(this.listBoxControl1, "listBoxControl1");
             this.listBoxControl1.Name = "listBoxControl1";
             this.listBoxControl1.StyleController = this.layoutControl2;
             // 
@@ -251,13 +250,9 @@
             // 
             // treeList2
             // 
-            this.treeList2.AccessibleDescription = null;
-            this.treeList2.AccessibleName = null;
-            resources.ApplyResources(this.treeList2, "treeList2");
-            this.treeList2.BackgroundImage = null;
             this.treeList2.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.treeListColumn2});
-            this.treeList2.Font = null;
+            resources.ApplyResources(this.treeList2, "treeList2");
             this.treeList2.Name = "treeList2";
             this.treeList2.OptionsBehavior.Editable = false;
             this.treeList2.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeList2_FocusedNodeChanged);
@@ -306,10 +301,8 @@
             // 
             // layoutControl3
             // 
-            this.layoutControl3.AccessibleDescription = null;
-            this.layoutControl3.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl3, "layoutControl3");
-            this.layoutControl3.BackgroundImage = null;
+            this.layoutControl3.Controls.Add(this.checkEditPIDPrice);
+            this.layoutControl3.Controls.Add(this.checkEditOtherIndepotPrice);
             this.layoutControl3.Controls.Add(this.checkEditWWPrice);
             this.layoutControl3.Controls.Add(this.groupBox1);
             this.layoutControl3.Controls.Add(this.checkEditIsSalaryViewCalc);
@@ -321,24 +314,17 @@
             this.layoutControl3.Controls.Add(this.checkEditIsStockCount);
             this.layoutControl3.Controls.Add(this.checkEditIsXOQuantity);
             this.layoutControl3.Controls.Add(this.gridControl2);
-            this.layoutControl3.Font = null;
+            resources.ApplyResources(this.layoutControl3, "layoutControl3");
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup3;
             // 
-            // checkEditWWPrice
+            // checkEditOtherIndepotPrice
             // 
-            resources.ApplyResources(this.checkEditWWPrice, "checkEditWWPrice");
-            this.checkEditWWPrice.BackgroundImage = null;
-            this.checkEditWWPrice.MenuManager = this.barManager1;
-            this.checkEditWWPrice.Name = "checkEditWWPrice";
-            this.checkEditWWPrice.Properties.AccessibleDescription = null;
-            this.checkEditWWPrice.Properties.AccessibleName = null;
-            this.checkEditWWPrice.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditWWPrice.Properties.AutoHeight")));
-            this.checkEditWWPrice.Properties.Caption = resources.GetString("checkEditWWPrice.Properties.Caption");
-            this.checkEditWWPrice.Properties.DisplayValueChecked = resources.GetString("checkEditWWPrice.Properties.DisplayValueChecked");
-            this.checkEditWWPrice.Properties.DisplayValueGrayed = resources.GetString("checkEditWWPrice.Properties.DisplayValueGrayed");
-            this.checkEditWWPrice.Properties.DisplayValueUnchecked = resources.GetString("checkEditWWPrice.Properties.DisplayValueUnchecked");
-            this.checkEditWWPrice.StyleController = this.layoutControl3;
+            resources.ApplyResources(this.checkEditOtherIndepotPrice, "checkEditOtherIndepotPrice");
+            this.checkEditOtherIndepotPrice.MenuManager = this.barManager1;
+            this.checkEditOtherIndepotPrice.Name = "checkEditOtherIndepotPrice";
+            this.checkEditOtherIndepotPrice.Properties.Caption = resources.GetString("checkEditOtherIndepotPrice.Properties.Caption");
+            this.checkEditOtherIndepotPrice.StyleController = this.layoutControl3;
             // 
             // barManager1
             // 
@@ -367,8 +353,6 @@
             // 
             // barButtonItemSave
             // 
-            this.barButtonItemSave.AccessibleDescription = null;
-            this.barButtonItemSave.AccessibleName = null;
             resources.ApplyResources(this.barButtonItemSave, "barButtonItemSave");
             this.barButtonItemSave.Id = 0;
             this.barButtonItemSave.ImageIndex = 0;
@@ -377,66 +361,46 @@
             // 
             // barDockControlTop
             // 
-            this.barDockControlTop.AccessibleDescription = null;
-            this.barDockControlTop.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
-            this.barDockControlTop.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlTop.Appearance.GradientMode")));
-            this.barDockControlTop.Appearance.Image = null;
             this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Font = null;
+            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
             // 
             // barDockControlBottom
             // 
-            this.barDockControlBottom.AccessibleDescription = null;
-            this.barDockControlBottom.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
-            this.barDockControlBottom.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlBottom.Appearance.GradientMode")));
-            this.barDockControlBottom.Appearance.Image = null;
             this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Font = null;
+            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
             // 
             // barDockControlLeft
             // 
-            this.barDockControlLeft.AccessibleDescription = null;
-            this.barDockControlLeft.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
-            this.barDockControlLeft.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlLeft.Appearance.GradientMode")));
-            this.barDockControlLeft.Appearance.Image = null;
             this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Font = null;
+            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
             // 
             // barDockControlRight
             // 
-            this.barDockControlRight.AccessibleDescription = null;
-            this.barDockControlRight.AccessibleName = null;
-            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
-            this.barDockControlRight.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlRight.Appearance.GradientMode")));
-            this.barDockControlRight.Appearance.Image = null;
             this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Font = null;
+            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
             // 
             // imageCollection1
             // 
             resources.ApplyResources(this.imageCollection1, "imageCollection1");
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
             // 
+            // checkEditWWPrice
+            // 
+            resources.ApplyResources(this.checkEditWWPrice, "checkEditWWPrice");
+            this.checkEditWWPrice.MenuManager = this.barManager1;
+            this.checkEditWWPrice.Name = "checkEditWWPrice";
+            this.checkEditWWPrice.Properties.Caption = resources.GetString("checkEditWWPrice.Properties.Caption");
+            this.checkEditWWPrice.StyleController = this.layoutControl3;
+            // 
             // groupBox1
             // 
-            this.groupBox1.AccessibleDescription = null;
-            this.groupBox1.AccessibleName = null;
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.BackgroundImage = null;
             this.groupBox1.Controls.Add(this.layoutControl4);
-            this.groupBox1.Font = null;
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // layoutControl4
             // 
-            this.layoutControl4.AccessibleDescription = null;
-            this.layoutControl4.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl4, "layoutControl4");
-            this.layoutControl4.BackgroundImage = null;
             this.layoutControl4.Controls.Add(this.checkEditIsCOJinHuoJinE);
             this.layoutControl4.Controls.Add(this.checkEditIsXOXiangGuanZiLiao);
             this.layoutControl4.Controls.Add(this.checkEditIsCOXiangGuanZiLiao);
@@ -447,158 +411,88 @@
             this.layoutControl4.Controls.Add(this.checkEditIsCOJiaoYiMingXi);
             this.layoutControl4.Controls.Add(this.checkEditIsXOFaPiaoZiLiao);
             this.layoutControl4.Controls.Add(this.checkEditIsXOJinHuoJinE);
-            this.layoutControl4.Font = null;
+            resources.ApplyResources(this.layoutControl4, "layoutControl4");
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.Root = this.layoutControlGroup4;
             // 
             // checkEditIsCOJinHuoJinE
             // 
             resources.ApplyResources(this.checkEditIsCOJinHuoJinE, "checkEditIsCOJinHuoJinE");
-            this.checkEditIsCOJinHuoJinE.BackgroundImage = null;
             this.checkEditIsCOJinHuoJinE.MenuManager = this.barManager1;
             this.checkEditIsCOJinHuoJinE.Name = "checkEditIsCOJinHuoJinE";
-            this.checkEditIsCOJinHuoJinE.Properties.AccessibleDescription = null;
-            this.checkEditIsCOJinHuoJinE.Properties.AccessibleName = null;
-            this.checkEditIsCOJinHuoJinE.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsCOJinHuoJinE.Properties.AutoHeight")));
             this.checkEditIsCOJinHuoJinE.Properties.Caption = resources.GetString("checkEditIsCOJinHuoJinE.Properties.Caption");
-            this.checkEditIsCOJinHuoJinE.Properties.DisplayValueChecked = resources.GetString("checkEditIsCOJinHuoJinE.Properties.DisplayValueChecked");
-            this.checkEditIsCOJinHuoJinE.Properties.DisplayValueGrayed = resources.GetString("checkEditIsCOJinHuoJinE.Properties.DisplayValueGrayed");
-            this.checkEditIsCOJinHuoJinE.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsCOJinHuoJinE.Properties.DisplayValueUnchecked");
             this.checkEditIsCOJinHuoJinE.StyleController = this.layoutControl4;
             // 
             // checkEditIsXOXiangGuanZiLiao
             // 
             resources.ApplyResources(this.checkEditIsXOXiangGuanZiLiao, "checkEditIsXOXiangGuanZiLiao");
-            this.checkEditIsXOXiangGuanZiLiao.BackgroundImage = null;
             this.checkEditIsXOXiangGuanZiLiao.MenuManager = this.barManager1;
             this.checkEditIsXOXiangGuanZiLiao.Name = "checkEditIsXOXiangGuanZiLiao";
-            this.checkEditIsXOXiangGuanZiLiao.Properties.AccessibleDescription = null;
-            this.checkEditIsXOXiangGuanZiLiao.Properties.AccessibleName = null;
-            this.checkEditIsXOXiangGuanZiLiao.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsXOXiangGuanZiLiao.Properties.AutoHeight")));
             this.checkEditIsXOXiangGuanZiLiao.Properties.Caption = resources.GetString("checkEditIsXOXiangGuanZiLiao.Properties.Caption");
-            this.checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueChecked = resources.GetString("checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueChecked");
-            this.checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueGrayed = resources.GetString("checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueGrayed");
-            this.checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsXOXiangGuanZiLiao.Properties.DisplayValueUnchecked");
             this.checkEditIsXOXiangGuanZiLiao.StyleController = this.layoutControl4;
             // 
             // checkEditIsCOXiangGuanZiLiao
             // 
             resources.ApplyResources(this.checkEditIsCOXiangGuanZiLiao, "checkEditIsCOXiangGuanZiLiao");
-            this.checkEditIsCOXiangGuanZiLiao.BackgroundImage = null;
             this.checkEditIsCOXiangGuanZiLiao.MenuManager = this.barManager1;
             this.checkEditIsCOXiangGuanZiLiao.Name = "checkEditIsCOXiangGuanZiLiao";
-            this.checkEditIsCOXiangGuanZiLiao.Properties.AccessibleDescription = null;
-            this.checkEditIsCOXiangGuanZiLiao.Properties.AccessibleName = null;
-            this.checkEditIsCOXiangGuanZiLiao.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsCOXiangGuanZiLiao.Properties.AutoHeight")));
             this.checkEditIsCOXiangGuanZiLiao.Properties.Caption = resources.GetString("checkEditIsCOXiangGuanZiLiao.Properties.Caption");
-            this.checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueChecked = resources.GetString("checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueChecked");
-            this.checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueGrayed = resources.GetString("checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueGrayed");
-            this.checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsCOXiangGuanZiLiao.Properties.DisplayValueUnchecked");
             this.checkEditIsCOXiangGuanZiLiao.StyleController = this.layoutControl4;
             // 
             // checkEditIsXOZhangKuanZiLiao
             // 
             resources.ApplyResources(this.checkEditIsXOZhangKuanZiLiao, "checkEditIsXOZhangKuanZiLiao");
-            this.checkEditIsXOZhangKuanZiLiao.BackgroundImage = null;
             this.checkEditIsXOZhangKuanZiLiao.MenuManager = this.barManager1;
             this.checkEditIsXOZhangKuanZiLiao.Name = "checkEditIsXOZhangKuanZiLiao";
-            this.checkEditIsXOZhangKuanZiLiao.Properties.AccessibleDescription = null;
-            this.checkEditIsXOZhangKuanZiLiao.Properties.AccessibleName = null;
-            this.checkEditIsXOZhangKuanZiLiao.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsXOZhangKuanZiLiao.Properties.AutoHeight")));
             this.checkEditIsXOZhangKuanZiLiao.Properties.Caption = resources.GetString("checkEditIsXOZhangKuanZiLiao.Properties.Caption");
-            this.checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueChecked = resources.GetString("checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueChecked");
-            this.checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueGrayed = resources.GetString("checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueGrayed");
-            this.checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsXOZhangKuanZiLiao.Properties.DisplayValueUnchecked");
             this.checkEditIsXOZhangKuanZiLiao.StyleController = this.layoutControl4;
             // 
             // checkEditIsCOZhangKuanZiLiao
             // 
             resources.ApplyResources(this.checkEditIsCOZhangKuanZiLiao, "checkEditIsCOZhangKuanZiLiao");
-            this.checkEditIsCOZhangKuanZiLiao.BackgroundImage = null;
             this.checkEditIsCOZhangKuanZiLiao.MenuManager = this.barManager1;
             this.checkEditIsCOZhangKuanZiLiao.Name = "checkEditIsCOZhangKuanZiLiao";
-            this.checkEditIsCOZhangKuanZiLiao.Properties.AccessibleDescription = null;
-            this.checkEditIsCOZhangKuanZiLiao.Properties.AccessibleName = null;
-            this.checkEditIsCOZhangKuanZiLiao.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsCOZhangKuanZiLiao.Properties.AutoHeight")));
             this.checkEditIsCOZhangKuanZiLiao.Properties.Caption = resources.GetString("checkEditIsCOZhangKuanZiLiao.Properties.Caption");
-            this.checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueChecked = resources.GetString("checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueChecked");
-            this.checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueGrayed = resources.GetString("checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueGrayed");
-            this.checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsCOZhangKuanZiLiao.Properties.DisplayValueUnchecked");
             this.checkEditIsCOZhangKuanZiLiao.StyleController = this.layoutControl4;
             // 
             // checkEditIsCOFaPiaoZiLiao
             // 
             resources.ApplyResources(this.checkEditIsCOFaPiaoZiLiao, "checkEditIsCOFaPiaoZiLiao");
-            this.checkEditIsCOFaPiaoZiLiao.BackgroundImage = null;
             this.checkEditIsCOFaPiaoZiLiao.MenuManager = this.barManager1;
             this.checkEditIsCOFaPiaoZiLiao.Name = "checkEditIsCOFaPiaoZiLiao";
-            this.checkEditIsCOFaPiaoZiLiao.Properties.AccessibleDescription = null;
-            this.checkEditIsCOFaPiaoZiLiao.Properties.AccessibleName = null;
-            this.checkEditIsCOFaPiaoZiLiao.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsCOFaPiaoZiLiao.Properties.AutoHeight")));
             this.checkEditIsCOFaPiaoZiLiao.Properties.Caption = resources.GetString("checkEditIsCOFaPiaoZiLiao.Properties.Caption");
-            this.checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueChecked = resources.GetString("checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueChecked");
-            this.checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueGrayed = resources.GetString("checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueGrayed");
-            this.checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsCOFaPiaoZiLiao.Properties.DisplayValueUnchecked");
             this.checkEditIsCOFaPiaoZiLiao.StyleController = this.layoutControl4;
             // 
             // checkEditIsXOJiaoYiMingXi
             // 
             resources.ApplyResources(this.checkEditIsXOJiaoYiMingXi, "checkEditIsXOJiaoYiMingXi");
-            this.checkEditIsXOJiaoYiMingXi.BackgroundImage = null;
             this.checkEditIsXOJiaoYiMingXi.MenuManager = this.barManager1;
             this.checkEditIsXOJiaoYiMingXi.Name = "checkEditIsXOJiaoYiMingXi";
-            this.checkEditIsXOJiaoYiMingXi.Properties.AccessibleDescription = null;
-            this.checkEditIsXOJiaoYiMingXi.Properties.AccessibleName = null;
-            this.checkEditIsXOJiaoYiMingXi.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsXOJiaoYiMingXi.Properties.AutoHeight")));
             this.checkEditIsXOJiaoYiMingXi.Properties.Caption = resources.GetString("checkEditIsXOJiaoYiMingXi.Properties.Caption");
-            this.checkEditIsXOJiaoYiMingXi.Properties.DisplayValueChecked = resources.GetString("checkEditIsXOJiaoYiMingXi.Properties.DisplayValueChecked");
-            this.checkEditIsXOJiaoYiMingXi.Properties.DisplayValueGrayed = resources.GetString("checkEditIsXOJiaoYiMingXi.Properties.DisplayValueGrayed");
-            this.checkEditIsXOJiaoYiMingXi.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsXOJiaoYiMingXi.Properties.DisplayValueUnchecked");
             this.checkEditIsXOJiaoYiMingXi.StyleController = this.layoutControl4;
             // 
             // checkEditIsCOJiaoYiMingXi
             // 
             resources.ApplyResources(this.checkEditIsCOJiaoYiMingXi, "checkEditIsCOJiaoYiMingXi");
-            this.checkEditIsCOJiaoYiMingXi.BackgroundImage = null;
             this.checkEditIsCOJiaoYiMingXi.MenuManager = this.barManager1;
             this.checkEditIsCOJiaoYiMingXi.Name = "checkEditIsCOJiaoYiMingXi";
-            this.checkEditIsCOJiaoYiMingXi.Properties.AccessibleDescription = null;
-            this.checkEditIsCOJiaoYiMingXi.Properties.AccessibleName = null;
-            this.checkEditIsCOJiaoYiMingXi.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsCOJiaoYiMingXi.Properties.AutoHeight")));
             this.checkEditIsCOJiaoYiMingXi.Properties.Caption = resources.GetString("checkEditIsCOJiaoYiMingXi.Properties.Caption");
-            this.checkEditIsCOJiaoYiMingXi.Properties.DisplayValueChecked = resources.GetString("checkEditIsCOJiaoYiMingXi.Properties.DisplayValueChecked");
-            this.checkEditIsCOJiaoYiMingXi.Properties.DisplayValueGrayed = resources.GetString("checkEditIsCOJiaoYiMingXi.Properties.DisplayValueGrayed");
-            this.checkEditIsCOJiaoYiMingXi.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsCOJiaoYiMingXi.Properties.DisplayValueUnchecked");
             this.checkEditIsCOJiaoYiMingXi.StyleController = this.layoutControl4;
             // 
             // checkEditIsXOFaPiaoZiLiao
             // 
             resources.ApplyResources(this.checkEditIsXOFaPiaoZiLiao, "checkEditIsXOFaPiaoZiLiao");
-            this.checkEditIsXOFaPiaoZiLiao.BackgroundImage = null;
             this.checkEditIsXOFaPiaoZiLiao.MenuManager = this.barManager1;
             this.checkEditIsXOFaPiaoZiLiao.Name = "checkEditIsXOFaPiaoZiLiao";
-            this.checkEditIsXOFaPiaoZiLiao.Properties.AccessibleDescription = null;
-            this.checkEditIsXOFaPiaoZiLiao.Properties.AccessibleName = null;
-            this.checkEditIsXOFaPiaoZiLiao.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsXOFaPiaoZiLiao.Properties.AutoHeight")));
             this.checkEditIsXOFaPiaoZiLiao.Properties.Caption = resources.GetString("checkEditIsXOFaPiaoZiLiao.Properties.Caption");
-            this.checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueChecked = resources.GetString("checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueChecked");
-            this.checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueGrayed = resources.GetString("checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueGrayed");
-            this.checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsXOFaPiaoZiLiao.Properties.DisplayValueUnchecked");
             this.checkEditIsXOFaPiaoZiLiao.StyleController = this.layoutControl4;
             // 
             // checkEditIsXOJinHuoJinE
             // 
             resources.ApplyResources(this.checkEditIsXOJinHuoJinE, "checkEditIsXOJinHuoJinE");
-            this.checkEditIsXOJinHuoJinE.BackgroundImage = null;
             this.checkEditIsXOJinHuoJinE.MenuManager = this.barManager1;
             this.checkEditIsXOJinHuoJinE.Name = "checkEditIsXOJinHuoJinE";
-            this.checkEditIsXOJinHuoJinE.Properties.AccessibleDescription = null;
-            this.checkEditIsXOJinHuoJinE.Properties.AccessibleName = null;
-            this.checkEditIsXOJinHuoJinE.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsXOJinHuoJinE.Properties.AutoHeight")));
             this.checkEditIsXOJinHuoJinE.Properties.Caption = resources.GetString("checkEditIsXOJinHuoJinE.Properties.Caption");
-            this.checkEditIsXOJinHuoJinE.Properties.DisplayValueChecked = resources.GetString("checkEditIsXOJinHuoJinE.Properties.DisplayValueChecked");
-            this.checkEditIsXOJinHuoJinE.Properties.DisplayValueGrayed = resources.GetString("checkEditIsXOJinHuoJinE.Properties.DisplayValueGrayed");
-            this.checkEditIsXOJinHuoJinE.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsXOJinHuoJinE.Properties.DisplayValueUnchecked");
             this.checkEditIsXOJinHuoJinE.StyleController = this.layoutControl4;
             // 
             // layoutControlGroup4
@@ -737,142 +631,71 @@
             // checkEditIsSalaryViewCalc
             // 
             resources.ApplyResources(this.checkEditIsSalaryViewCalc, "checkEditIsSalaryViewCalc");
-            this.checkEditIsSalaryViewCalc.BackgroundImage = null;
             this.checkEditIsSalaryViewCalc.MenuManager = this.barManager1;
             this.checkEditIsSalaryViewCalc.Name = "checkEditIsSalaryViewCalc";
-            this.checkEditIsSalaryViewCalc.Properties.AccessibleDescription = null;
-            this.checkEditIsSalaryViewCalc.Properties.AccessibleName = null;
-            this.checkEditIsSalaryViewCalc.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsSalaryViewCalc.Properties.AutoHeight")));
             this.checkEditIsSalaryViewCalc.Properties.Caption = resources.GetString("checkEditIsSalaryViewCalc.Properties.Caption");
-            this.checkEditIsSalaryViewCalc.Properties.DisplayValueChecked = resources.GetString("checkEditIsSalaryViewCalc.Properties.DisplayValueChecked");
-            this.checkEditIsSalaryViewCalc.Properties.DisplayValueGrayed = resources.GetString("checkEditIsSalaryViewCalc.Properties.DisplayValueGrayed");
-            this.checkEditIsSalaryViewCalc.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsSalaryViewCalc.Properties.DisplayValueUnchecked");
             this.checkEditIsSalaryViewCalc.StyleController = this.layoutControl3;
             // 
             // checkEditIsEmployeeBasicInfo
             // 
             resources.ApplyResources(this.checkEditIsEmployeeBasicInfo, "checkEditIsEmployeeBasicInfo");
-            this.checkEditIsEmployeeBasicInfo.BackgroundImage = null;
             this.checkEditIsEmployeeBasicInfo.MenuManager = this.barManager1;
             this.checkEditIsEmployeeBasicInfo.Name = "checkEditIsEmployeeBasicInfo";
-            this.checkEditIsEmployeeBasicInfo.Properties.AccessibleDescription = null;
-            this.checkEditIsEmployeeBasicInfo.Properties.AccessibleName = null;
-            this.checkEditIsEmployeeBasicInfo.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsEmployeeBasicInfo.Properties.AutoHeight")));
             this.checkEditIsEmployeeBasicInfo.Properties.Caption = resources.GetString("checkEditIsEmployeeBasicInfo.Properties.Caption");
-            this.checkEditIsEmployeeBasicInfo.Properties.DisplayValueChecked = resources.GetString("checkEditIsEmployeeBasicInfo.Properties.DisplayValueChecked");
-            this.checkEditIsEmployeeBasicInfo.Properties.DisplayValueGrayed = resources.GetString("checkEditIsEmployeeBasicInfo.Properties.DisplayValueGrayed");
-            this.checkEditIsEmployeeBasicInfo.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsEmployeeBasicInfo.Properties.DisplayValueUnchecked");
             this.checkEditIsEmployeeBasicInfo.StyleController = this.layoutControl3;
             // 
             // checkEditIsCOCount
             // 
             resources.ApplyResources(this.checkEditIsCOCount, "checkEditIsCOCount");
-            this.checkEditIsCOCount.BackgroundImage = null;
             this.checkEditIsCOCount.MenuManager = this.barManager1;
             this.checkEditIsCOCount.Name = "checkEditIsCOCount";
-            this.checkEditIsCOCount.Properties.AccessibleDescription = null;
-            this.checkEditIsCOCount.Properties.AccessibleName = null;
-            this.checkEditIsCOCount.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsCOCount.Properties.AutoHeight")));
             this.checkEditIsCOCount.Properties.Caption = resources.GetString("checkEditIsCOCount.Properties.Caption");
-            this.checkEditIsCOCount.Properties.DisplayValueChecked = resources.GetString("checkEditIsCOCount.Properties.DisplayValueChecked");
-            this.checkEditIsCOCount.Properties.DisplayValueGrayed = resources.GetString("checkEditIsCOCount.Properties.DisplayValueGrayed");
-            this.checkEditIsCOCount.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsCOCount.Properties.DisplayValueUnchecked");
             this.checkEditIsCOCount.StyleController = this.layoutControl3;
             // 
             // checkEditIsXOPrice
             // 
             resources.ApplyResources(this.checkEditIsXOPrice, "checkEditIsXOPrice");
-            this.checkEditIsXOPrice.BackgroundImage = null;
             this.checkEditIsXOPrice.MenuManager = this.barManager1;
             this.checkEditIsXOPrice.Name = "checkEditIsXOPrice";
-            this.checkEditIsXOPrice.Properties.AccessibleDescription = null;
-            this.checkEditIsXOPrice.Properties.AccessibleName = null;
-            this.checkEditIsXOPrice.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsXOPrice.Properties.AutoHeight")));
             this.checkEditIsXOPrice.Properties.Caption = resources.GetString("checkEditIsXOPrice.Properties.Caption");
-            this.checkEditIsXOPrice.Properties.DisplayValueChecked = resources.GetString("checkEditIsXOPrice.Properties.DisplayValueChecked");
-            this.checkEditIsXOPrice.Properties.DisplayValueGrayed = resources.GetString("checkEditIsXOPrice.Properties.DisplayValueGrayed");
-            this.checkEditIsXOPrice.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsXOPrice.Properties.DisplayValueUnchecked");
             this.checkEditIsXOPrice.StyleController = this.layoutControl3;
             // 
             // checkEditIsCOPrice
             // 
             resources.ApplyResources(this.checkEditIsCOPrice, "checkEditIsCOPrice");
-            this.checkEditIsCOPrice.BackgroundImage = null;
             this.checkEditIsCOPrice.MenuManager = this.barManager1;
             this.checkEditIsCOPrice.Name = "checkEditIsCOPrice";
-            this.checkEditIsCOPrice.Properties.AccessibleDescription = null;
-            this.checkEditIsCOPrice.Properties.AccessibleName = null;
-            this.checkEditIsCOPrice.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsCOPrice.Properties.AutoHeight")));
             this.checkEditIsCOPrice.Properties.Caption = resources.GetString("checkEditIsCOPrice.Properties.Caption");
-            this.checkEditIsCOPrice.Properties.DisplayValueChecked = resources.GetString("checkEditIsCOPrice.Properties.DisplayValueChecked");
-            this.checkEditIsCOPrice.Properties.DisplayValueGrayed = resources.GetString("checkEditIsCOPrice.Properties.DisplayValueGrayed");
-            this.checkEditIsCOPrice.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsCOPrice.Properties.DisplayValueUnchecked");
             this.checkEditIsCOPrice.StyleController = this.layoutControl3;
             // 
             // checkEditIsProductCost
             // 
             resources.ApplyResources(this.checkEditIsProductCost, "checkEditIsProductCost");
-            this.checkEditIsProductCost.BackgroundImage = null;
             this.checkEditIsProductCost.MenuManager = this.barManager1;
             this.checkEditIsProductCost.Name = "checkEditIsProductCost";
-            this.checkEditIsProductCost.Properties.AccessibleDescription = null;
-            this.checkEditIsProductCost.Properties.AccessibleName = null;
-            this.checkEditIsProductCost.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsProductCost.Properties.AutoHeight")));
             this.checkEditIsProductCost.Properties.Caption = resources.GetString("checkEditIsProductCost.Properties.Caption");
-            this.checkEditIsProductCost.Properties.DisplayValueChecked = resources.GetString("checkEditIsProductCost.Properties.DisplayValueChecked");
-            this.checkEditIsProductCost.Properties.DisplayValueGrayed = resources.GetString("checkEditIsProductCost.Properties.DisplayValueGrayed");
-            this.checkEditIsProductCost.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsProductCost.Properties.DisplayValueUnchecked");
             this.checkEditIsProductCost.StyleController = this.layoutControl3;
             // 
             // checkEditIsStockCount
             // 
             resources.ApplyResources(this.checkEditIsStockCount, "checkEditIsStockCount");
-            this.checkEditIsStockCount.BackgroundImage = null;
             this.checkEditIsStockCount.MenuManager = this.barManager1;
             this.checkEditIsStockCount.Name = "checkEditIsStockCount";
-            this.checkEditIsStockCount.Properties.AccessibleDescription = null;
-            this.checkEditIsStockCount.Properties.AccessibleName = null;
-            this.checkEditIsStockCount.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsStockCount.Properties.AutoHeight")));
             this.checkEditIsStockCount.Properties.Caption = resources.GetString("checkEditIsStockCount.Properties.Caption");
-            this.checkEditIsStockCount.Properties.DisplayValueChecked = resources.GetString("checkEditIsStockCount.Properties.DisplayValueChecked");
-            this.checkEditIsStockCount.Properties.DisplayValueGrayed = resources.GetString("checkEditIsStockCount.Properties.DisplayValueGrayed");
-            this.checkEditIsStockCount.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsStockCount.Properties.DisplayValueUnchecked");
             this.checkEditIsStockCount.StyleController = this.layoutControl3;
             // 
             // checkEditIsXOQuantity
             // 
             resources.ApplyResources(this.checkEditIsXOQuantity, "checkEditIsXOQuantity");
-            this.checkEditIsXOQuantity.BackgroundImage = null;
             this.checkEditIsXOQuantity.MenuManager = this.barManager1;
             this.checkEditIsXOQuantity.Name = "checkEditIsXOQuantity";
-            this.checkEditIsXOQuantity.Properties.AccessibleDescription = null;
-            this.checkEditIsXOQuantity.Properties.AccessibleName = null;
-            this.checkEditIsXOQuantity.Properties.AutoHeight = ((bool)(resources.GetObject("checkEditIsXOQuantity.Properties.AutoHeight")));
             this.checkEditIsXOQuantity.Properties.Caption = resources.GetString("checkEditIsXOQuantity.Properties.Caption");
-            this.checkEditIsXOQuantity.Properties.DisplayValueChecked = resources.GetString("checkEditIsXOQuantity.Properties.DisplayValueChecked");
-            this.checkEditIsXOQuantity.Properties.DisplayValueGrayed = resources.GetString("checkEditIsXOQuantity.Properties.DisplayValueGrayed");
-            this.checkEditIsXOQuantity.Properties.DisplayValueUnchecked = resources.GetString("checkEditIsXOQuantity.Properties.DisplayValueUnchecked");
             this.checkEditIsXOQuantity.StyleController = this.layoutControl3;
             // 
             // gridControl2
             // 
-            this.gridControl2.AccessibleDescription = null;
-            this.gridControl2.AccessibleName = null;
-            resources.ApplyResources(this.gridControl2, "gridControl2");
-            this.gridControl2.BackgroundImage = null;
             this.gridControl2.DataSource = this.bindingSourceGrid;
-            this.gridControl2.EmbeddedNavigator.AccessibleDescription = null;
-            this.gridControl2.EmbeddedNavigator.AccessibleName = null;
-            this.gridControl2.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("gridControl2.EmbeddedNavigator.AllowHtmlTextInToolTip")));
-            this.gridControl2.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("gridControl2.EmbeddedNavigator.Anchor")));
-            this.gridControl2.EmbeddedNavigator.BackgroundImage = null;
-            this.gridControl2.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("gridControl2.EmbeddedNavigator.BackgroundImageLayout")));
-            this.gridControl2.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl2.EmbeddedNavigator.ImeMode")));
-            this.gridControl2.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl2.EmbeddedNavigator.TextLocation")));
-            this.gridControl2.EmbeddedNavigator.ToolTip = resources.GetString("gridControl2.EmbeddedNavigator.ToolTip");
-            this.gridControl2.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl2.EmbeddedNavigator.ToolTipIconType")));
-            this.gridControl2.EmbeddedNavigator.ToolTipTitle = resources.GetString("gridControl2.EmbeddedNavigator.ToolTipTitle");
-            this.gridControl2.Font = null;
+            resources.ApplyResources(this.gridControl2, "gridControl2");
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.MenuManager = this.barManager1;
             this.gridControl2.Name = "gridControl2";
@@ -893,7 +716,6 @@
             // 
             // gridView2
             // 
-            resources.ApplyResources(this.gridView2, "gridView2");
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.colSelectRowAll,
@@ -927,8 +749,6 @@
             // 
             // RICEselectAll
             // 
-            this.RICEselectAll.AccessibleDescription = null;
-            this.RICEselectAll.AccessibleName = null;
             resources.ApplyResources(this.RICEselectAll, "RICEselectAll");
             this.RICEselectAll.Name = "RICEselectAll";
             this.RICEselectAll.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -942,8 +762,6 @@
             // 
             // repositoryItemCheckEdit1
             // 
-            this.repositoryItemCheckEdit1.AccessibleDescription = null;
-            this.repositoryItemCheckEdit1.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit1, "repositoryItemCheckEdit1");
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -957,8 +775,6 @@
             // 
             // repositoryItemCheckEdit2
             // 
-            this.repositoryItemCheckEdit2.AccessibleDescription = null;
-            this.repositoryItemCheckEdit2.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit2, "repositoryItemCheckEdit2");
             this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             this.repositoryItemCheckEdit2.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -972,8 +788,6 @@
             // 
             // repositoryItemCheckEdit3
             // 
-            this.repositoryItemCheckEdit3.AccessibleDescription = null;
-            this.repositoryItemCheckEdit3.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit3, "repositoryItemCheckEdit3");
             this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
             this.repositoryItemCheckEdit3.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -987,8 +801,6 @@
             // 
             // repositoryItemCheckEdit4
             // 
-            this.repositoryItemCheckEdit4.AccessibleDescription = null;
-            this.repositoryItemCheckEdit4.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit4, "repositoryItemCheckEdit4");
             this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
             this.repositoryItemCheckEdit4.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -1002,8 +814,6 @@
             // 
             // repositoryItemCheckEdit5
             // 
-            this.repositoryItemCheckEdit5.AccessibleDescription = null;
-            this.repositoryItemCheckEdit5.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit5, "repositoryItemCheckEdit5");
             this.repositoryItemCheckEdit5.Name = "repositoryItemCheckEdit5";
             this.repositoryItemCheckEdit5.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -1017,8 +827,6 @@
             // 
             // repositoryItemCheckEdit6
             // 
-            this.repositoryItemCheckEdit6.AccessibleDescription = null;
-            this.repositoryItemCheckEdit6.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit6, "repositoryItemCheckEdit6");
             this.repositoryItemCheckEdit6.Name = "repositoryItemCheckEdit6";
             this.repositoryItemCheckEdit6.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -1032,8 +840,6 @@
             // 
             // repositoryItemCheckEdit7
             // 
-            this.repositoryItemCheckEdit7.AccessibleDescription = null;
-            this.repositoryItemCheckEdit7.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit7, "repositoryItemCheckEdit7");
             this.repositoryItemCheckEdit7.Name = "repositoryItemCheckEdit7";
             this.repositoryItemCheckEdit7.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -1046,8 +852,6 @@
             // 
             // repositoryItemCheckEdit8
             // 
-            this.repositoryItemCheckEdit8.AccessibleDescription = null;
-            this.repositoryItemCheckEdit8.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit8, "repositoryItemCheckEdit8");
             this.repositoryItemCheckEdit8.Name = "repositoryItemCheckEdit8";
             this.repositoryItemCheckEdit8.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -1061,8 +865,6 @@
             // 
             // repositoryItemCheckEdit9
             // 
-            this.repositoryItemCheckEdit9.AccessibleDescription = null;
-            this.repositoryItemCheckEdit9.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit9, "repositoryItemCheckEdit9");
             this.repositoryItemCheckEdit9.Name = "repositoryItemCheckEdit9";
             this.repositoryItemCheckEdit9.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -1076,8 +878,6 @@
             // 
             // repositoryItemLookUpEdit1
             // 
-            this.repositoryItemLookUpEdit1.AccessibleDescription = null;
-            this.repositoryItemLookUpEdit1.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemLookUpEdit1, "repositoryItemLookUpEdit1");
             this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit1.Buttons"))))});
@@ -1103,7 +903,9 @@
             this.layoutControlItem11,
             this.layoutControlItem13,
             this.layoutControlItem14,
-            this.layoutControlItem25});
+            this.layoutControlItem25,
+            this.layoutControlItem26,
+            this.layoutControlItem27});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(574, 479);
@@ -1226,41 +1028,33 @@
             resources.ApplyResources(this.layoutControlItem25, "layoutControlItem25");
             this.layoutControlItem25.Location = new System.Drawing.Point(0, 319);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(554, 23);
+            this.layoutControlItem25.Size = new System.Drawing.Size(139, 23);
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextToControlDistance = 0;
             this.layoutControlItem25.TextVisible = false;
             // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.checkEditOtherIndepotPrice;
+            resources.ApplyResources(this.layoutControlItem26, "layoutControlItem26");
+            this.layoutControlItem26.Location = new System.Drawing.Point(139, 319);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.Size = new System.Drawing.Size(142, 23);
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem26.TextToControlDistance = 0;
+            this.layoutControlItem26.TextVisible = false;
+            // 
             // layoutControl1
             // 
-            this.layoutControl1.AccessibleDescription = null;
-            this.layoutControl1.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl1, "layoutControl1");
-            this.layoutControl1.BackgroundImage = null;
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.treeList1);
-            this.layoutControl1.Font = null;
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
             // gridControl1
             // 
-            this.gridControl1.AccessibleDescription = null;
-            this.gridControl1.AccessibleName = null;
             resources.ApplyResources(this.gridControl1, "gridControl1");
-            this.gridControl1.BackgroundImage = null;
-            this.gridControl1.EmbeddedNavigator.AccessibleDescription = null;
-            this.gridControl1.EmbeddedNavigator.AccessibleName = null;
-            this.gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip")));
-            this.gridControl1.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("gridControl1.EmbeddedNavigator.Anchor")));
-            this.gridControl1.EmbeddedNavigator.BackgroundImage = null;
-            this.gridControl1.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("gridControl1.EmbeddedNavigator.BackgroundImageLayout")));
-            this.gridControl1.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl1.EmbeddedNavigator.ImeMode")));
-            this.gridControl1.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl1.EmbeddedNavigator.TextLocation")));
-            this.gridControl1.EmbeddedNavigator.ToolTip = resources.GetString("gridControl1.EmbeddedNavigator.ToolTip");
-            this.gridControl1.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl1.EmbeddedNavigator.ToolTipIconType")));
-            this.gridControl1.EmbeddedNavigator.ToolTipTitle = resources.GetString("gridControl1.EmbeddedNavigator.ToolTipTitle");
-            this.gridControl1.Font = null;
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
@@ -1269,20 +1063,15 @@
             // 
             // gridView1
             // 
-            resources.ApplyResources(this.gridView1, "gridView1");
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // treeList1
             // 
-            this.treeList1.AccessibleDescription = null;
-            this.treeList1.AccessibleName = null;
-            resources.ApplyResources(this.treeList1, "treeList1");
-            this.treeList1.BackgroundImage = null;
             this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.treeListColumn1});
-            this.treeList1.Font = null;
+            resources.ApplyResources(this.treeList1, "treeList1");
             this.treeList1.Name = "treeList1";
             // 
             // treeListColumn1
@@ -1335,10 +1124,27 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(531, 33);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // checkEditPIDPrice
+            // 
+            resources.ApplyResources(this.checkEditPIDPrice, "checkEditPIDPrice");
+            this.checkEditPIDPrice.MenuManager = this.barManager1;
+            this.checkEditPIDPrice.Name = "checkEditPIDPrice";
+            this.checkEditPIDPrice.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
+            this.checkEditPIDPrice.StyleController = this.layoutControl3;
+            // 
+            // layoutControlItem27
+            // 
+            this.layoutControlItem27.Control = this.checkEditPIDPrice;
+            resources.ApplyResources(this.layoutControlItem27, "layoutControlItem27");
+            this.layoutControlItem27.Location = new System.Drawing.Point(281, 319);
+            this.layoutControlItem27.Name = "layoutControlItem27";
+            this.layoutControlItem27.Size = new System.Drawing.Size(273, 23);
+            this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem27.TextToControlDistance = 0;
+            this.layoutControlItem27.TextVisible = false;
+            // 
             // LegalPowerEditForm
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerControl1);
@@ -1346,7 +1152,6 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Icon = null;
             this.Name = "LegalPowerEditForm";
             this.Load += new System.EventHandler(this.LegalPowerEditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
@@ -1361,9 +1166,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEditWWPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditOtherIndepotPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditWWPrice.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
             this.layoutControl4.ResumeLayout(false);
@@ -1422,6 +1228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -1431,6 +1238,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEditPIDPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1534,6 +1343,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.CheckEdit checkEditWWPrice;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
+        private DevExpress.XtraEditors.CheckEdit checkEditOtherIndepotPrice;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem26;
+        private DevExpress.XtraEditors.CheckEdit checkEditPIDPrice;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem27;
 
     }
 }
