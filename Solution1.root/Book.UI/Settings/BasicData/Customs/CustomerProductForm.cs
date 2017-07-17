@@ -371,7 +371,7 @@ namespace Book.UI.Settings.BasicData.Customs
                     this.newChooseContorlProduct.Properties.Buttons[0].Visible = true;
                     this.newChooseContorlCustomer.ButtonReadOnly = false;
                     this.newChooseContorlCustomer.ShowButton = true;
-
+                    this.newChooseContorlProduct.Enabled = true;
                     //this.textEditBarCode.Properties.ReadOnly = false;
                     this.textEditProductName.Properties.ReadOnly = false;
                     //this.textEditVersion.Properties.ReadOnly = false;
@@ -422,13 +422,15 @@ namespace Book.UI.Settings.BasicData.Customs
 
                     break;
                 case "update":
-                    this.textEditCreator.Text = BL.V.ActiveOperator.OperatorName;
-                    this._customer = this._customerProduct.Customer;
-                    // this.textEditCustomerProductId.Properties.ReadOnly = false;
-                    this.newChooseContorlProduct.Properties.ReadOnly = false;
-                    this.newChooseContorlProduct.Properties.Buttons[0].Visible = true;
-                    this.newChooseContorlCustomer.ButtonReadOnly = false;
-                    this.newChooseContorlCustomer.ShowButton = true;
+                    //this.textEditCreator.Text = BL.V.ActiveOperator.OperatorName;
+                    //this._customer = this._customerProduct.Customer;
+                    //// this.textEditCustomerProductId.Properties.ReadOnly = false;
+                    //this.newChooseContorlProduct.Properties.ReadOnly = false;
+                    //this.newChooseContorlProduct.Properties.Buttons[0].Visible = true;
+                    //this.newChooseContorlCustomer.ButtonReadOnly = false;
+                    //this.newChooseContorlCustomer.ShowButton = true;
+                    //update情况下 母件商品不能在被修改
+                    this.newChooseContorlProduct.Enabled = false;
 
                     // this.textEditBarCode.Properties.ReadOnly = false;
                     this.textEditProductName.Properties.ReadOnly = false;

@@ -55,7 +55,10 @@ namespace Book.UI.Query
 
         public override void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            //this.DialogResult = DialogResult.OK;
+            Form f = this.GetEditForm(new object[] { this.bindingSource1.Current });
+            if (f != null)
+                f.ShowDialog();
         }
     }
 }

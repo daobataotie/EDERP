@@ -871,6 +871,7 @@ namespace Book.UI.Query
             }
         }
 
+        //查询
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ShouldPayFormList f = new ShouldPayFormList();

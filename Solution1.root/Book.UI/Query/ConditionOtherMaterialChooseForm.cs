@@ -41,8 +41,8 @@ namespace Book.UI.Query
                 this.condition = new ConditionOtherMaterial();
             this.condition.StartDate = this.dateEditStartDate.EditValue == null ? global::Helper.DateTimeParse.NullDate : this.dateEditStartDate.DateTime;
             this.condition.EndDate = this.dateEditEndDate.EditValue == null ? System.DateTime.Now : this.dateEditEndDate.DateTime;
-            this.condition.SupplierId1 = this.newChooseContorlSupplier1.EditValue == null ? null : (this.newChooseContorlSupplier1.EditValue as Model.Supplier).SupplierId;
-            this.condition.SupplierId2 = this.newChooseContorlSupplier2.EditValue == null ? null : (this.newChooseContorlSupplier2.EditValue as Model.Supplier).SupplierId;
+            this.condition.SupplierId1 = this.newChooseContorlSupplier1.EditValue == null ? null : (this.newChooseContorlSupplier1.EditValue as Model.Supplier).Id;
+            this.condition.SupplierId2 = this.newChooseContorlSupplier2.EditValue == null ? null : (this.newChooseContorlSupplier2.EditValue as Model.Supplier).Id;
             this.condition.ProduceOtherCompactId1 = this.buttonEditProduceOtherCompactId1.EditValue == null ? null : this.buttonEditProduceOtherCompactId1.Text;
             this.condition.ProduceOtherCompactId2 = this.buttonEditProduceOtherCompactId2.EditValue == null ? null : this.buttonEditProduceOtherCompactId2.Text;
             this.condition.ProductId1 = this.StartProductId.EditValue as Model.Product == null ? null : (this.StartProductId.EditValue as Model.Product).Id;
@@ -82,6 +82,11 @@ namespace Book.UI.Query
             Invoices.ChooseProductForm form = new Invoices.ChooseProductForm();
             if (form.ShowDialog(this) == DialogResult.OK)
                 this.EndProductId.EditValue = form.SelectedItem as Model.Product;
+        }
+
+        private void newChooseContorlSupplier1_EditValueChanged(object sender, EventArgs e)
+        {
+            this.newChooseContorlSupplier2.EditValue = this.newChooseContorlSupplier1.EditValue;
         }
     }
 }

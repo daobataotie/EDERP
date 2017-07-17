@@ -88,31 +88,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.AccessibleDescription = null;
-            this.labelControl1.AccessibleName = null;
             resources.ApplyResources(this.labelControl1, "labelControl1");
             // 
             // dateEditEndDate
             // 
             resources.ApplyResources(this.dateEditEndDate, "dateEditEndDate");
-            this.dateEditEndDate.BackgroundImage = null;
-            this.dateEditEndDate.Properties.AccessibleDescription = null;
-            this.dateEditEndDate.Properties.AccessibleName = null;
-            this.dateEditEndDate.Properties.AutoHeight = ((bool)(resources.GetObject("dateEditEndDate.Properties.AutoHeight")));
-            this.dateEditEndDate.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("dateEditEndDate.Properties.Mask.AutoComplete")));
-            this.dateEditEndDate.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("dateEditEndDate.Properties.Mask.BeepOnError")));
-            this.dateEditEndDate.Properties.Mask.EditMask = resources.GetString("dateEditEndDate.Properties.Mask.EditMask");
-            this.dateEditEndDate.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("dateEditEndDate.Properties.Mask.IgnoreMaskBlank")));
-            this.dateEditEndDate.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("dateEditEndDate.Properties.Mask.MaskType")));
-            this.dateEditEndDate.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("dateEditEndDate.Properties.Mask.PlaceHolder")));
-            this.dateEditEndDate.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("dateEditEndDate.Properties.Mask.SaveLiteral")));
-            this.dateEditEndDate.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("dateEditEndDate.Properties.Mask.ShowPlaceHolders")));
-            this.dateEditEndDate.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("dateEditEndDate.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.dateEditEndDate.Properties.NullValuePrompt = resources.GetString("dateEditEndDate.Properties.NullValuePrompt");
-            this.dateEditEndDate.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("dateEditEndDate.Properties.NullValuePromptShowForEmptyValue")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.AccessibleDescription = null;
-            this.dateEditEndDate.Properties.VistaTimeProperties.AccessibleName = null;
-            this.dateEditEndDate.Properties.VistaTimeProperties.AutoHeight = ((bool)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.AutoHeight")));
             this.dateEditEndDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
@@ -141,46 +121,16 @@
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.Mask.AutoComplete")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.BeepOnError = ((bool)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.Mask.BeepOnError")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.EditMask = resources.GetString("dateEditEndDate.Properties.VistaTimeProperties.Mask.EditMask");
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.Mask.MaskType")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.PlaceHolder = ((char)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.Mask.PlaceHolder")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.SaveLiteral = ((bool)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.Mask.SaveLiteral")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat")));
-            this.dateEditEndDate.Properties.VistaTimeProperties.NullValuePrompt = resources.GetString("dateEditEndDate.Properties.VistaTimeProperties.NullValuePrompt");
-            this.dateEditEndDate.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("dateEditEndDate.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue")));
             // 
             // labelControl2
             // 
-            this.labelControl2.AccessibleDescription = null;
-            this.labelControl2.AccessibleName = null;
             resources.ApplyResources(this.labelControl2, "labelControl2");
             // 
             // dateEditStartDate
             // 
             resources.ApplyResources(this.dateEditStartDate, "dateEditStartDate");
-            this.dateEditStartDate.BackgroundImage = null;
-            this.dateEditStartDate.Properties.AccessibleDescription = null;
-            this.dateEditStartDate.Properties.AccessibleName = null;
-            this.dateEditStartDate.Properties.AutoHeight = ((bool)(resources.GetObject("dateEditStartDate.Properties.AutoHeight")));
-            this.dateEditStartDate.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("dateEditStartDate.Properties.Mask.AutoComplete")));
-            this.dateEditStartDate.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("dateEditStartDate.Properties.Mask.BeepOnError")));
-            this.dateEditStartDate.Properties.Mask.EditMask = resources.GetString("dateEditStartDate.Properties.Mask.EditMask");
-            this.dateEditStartDate.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("dateEditStartDate.Properties.Mask.IgnoreMaskBlank")));
-            this.dateEditStartDate.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("dateEditStartDate.Properties.Mask.MaskType")));
-            this.dateEditStartDate.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("dateEditStartDate.Properties.Mask.PlaceHolder")));
-            this.dateEditStartDate.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("dateEditStartDate.Properties.Mask.SaveLiteral")));
-            this.dateEditStartDate.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("dateEditStartDate.Properties.Mask.ShowPlaceHolders")));
-            this.dateEditStartDate.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("dateEditStartDate.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.dateEditStartDate.Properties.NullValuePrompt = resources.GetString("dateEditStartDate.Properties.NullValuePrompt");
-            this.dateEditStartDate.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("dateEditStartDate.Properties.NullValuePromptShowForEmptyValue")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.AccessibleDescription = null;
-            this.dateEditStartDate.Properties.VistaTimeProperties.AccessibleName = null;
-            this.dateEditStartDate.Properties.VistaTimeProperties.AutoHeight = ((bool)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.AutoHeight")));
             this.dateEditStartDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
@@ -209,60 +159,32 @@
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(),
+            new DevExpress.XtraEditors.Controls.EditorButton(),
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.Mask.AutoComplete")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.BeepOnError = ((bool)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.Mask.BeepOnError")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.EditMask = resources.GetString("dateEditStartDate.Properties.VistaTimeProperties.Mask.EditMask");
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.Mask.MaskType")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.PlaceHolder = ((char)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.Mask.PlaceHolder")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.SaveLiteral = ((bool)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.Mask.SaveLiteral")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat")));
-            this.dateEditStartDate.Properties.VistaTimeProperties.NullValuePrompt = resources.GetString("dateEditStartDate.Properties.VistaTimeProperties.NullValuePrompt");
-            this.dateEditStartDate.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("dateEditStartDate.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" +
-                    "")));
             // 
             // simpleButtonOK
             // 
-            this.simpleButtonOK.AccessibleDescription = null;
-            this.simpleButtonOK.AccessibleName = null;
             resources.ApplyResources(this.simpleButtonOK, "simpleButtonOK");
-            this.simpleButtonOK.BackgroundImage = null;
             // 
             // simpleButtonCancel
             // 
-            this.simpleButtonCancel.AccessibleDescription = null;
-            this.simpleButtonCancel.AccessibleName = null;
             resources.ApplyResources(this.simpleButtonCancel, "simpleButtonCancel");
-            this.simpleButtonCancel.BackgroundImage = null;
             // 
             // newChooseContorlSupplier1
             // 
-            this.newChooseContorlSupplier1.AccessibleDescription = null;
-            this.newChooseContorlSupplier1.AccessibleName = null;
-            resources.ApplyResources(this.newChooseContorlSupplier1, "newChooseContorlSupplier1");
-            this.newChooseContorlSupplier1.BackgroundImage = null;
             this.newChooseContorlSupplier1.EditValue = null;
-            this.newChooseContorlSupplier1.Font = null;
+            resources.ApplyResources(this.newChooseContorlSupplier1, "newChooseContorlSupplier1");
             this.newChooseContorlSupplier1.Name = "newChooseContorlSupplier1";
+            this.newChooseContorlSupplier1.EditValueChanged += new System.EventHandler(this.newChooseContorlSupplier1_EditValueChanged);
             // 
             // newChooseContorlSupplier2
             // 
-            this.newChooseContorlSupplier2.AccessibleDescription = null;
-            this.newChooseContorlSupplier2.AccessibleName = null;
-            resources.ApplyResources(this.newChooseContorlSupplier2, "newChooseContorlSupplier2");
-            this.newChooseContorlSupplier2.BackgroundImage = null;
             this.newChooseContorlSupplier2.EditValue = null;
-            this.newChooseContorlSupplier2.Font = null;
+            resources.ApplyResources(this.newChooseContorlSupplier2, "newChooseContorlSupplier2");
             this.newChooseContorlSupplier2.Name = "newChooseContorlSupplier2";
             // 
             // layoutControl1
             // 
-            this.layoutControl1.AccessibleDescription = null;
-            this.layoutControl1.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl1, "layoutControl1");
-            this.layoutControl1.BackgroundImage = null;
             this.layoutControl1.Controls.Add(this.EndProductId);
             this.layoutControl1.Controls.Add(this.StartProductId);
             this.layoutControl1.Controls.Add(this.buttonEditProduceOtherCompactId2);
@@ -270,130 +192,50 @@
             this.layoutControl1.Controls.Add(this.txt_InvoiceCusId);
             this.layoutControl1.Controls.Add(this.newChooseContorlSupplier1);
             this.layoutControl1.Controls.Add(this.newChooseContorlSupplier2);
-            this.layoutControl1.Font = null;
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
             // EndProductId
             // 
             resources.ApplyResources(this.EndProductId, "EndProductId");
-            this.EndProductId.BackgroundImage = null;
-            this.EndProductId.EditValue = null;
             this.EndProductId.Name = "EndProductId";
-            this.EndProductId.Properties.AccessibleDescription = null;
-            this.EndProductId.Properties.AccessibleName = null;
-            this.EndProductId.Properties.AutoHeight = ((bool)(resources.GetObject("EndProductId.Properties.AutoHeight")));
             this.EndProductId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.EndProductId.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("EndProductId.Properties.Mask.AutoComplete")));
-            this.EndProductId.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("EndProductId.Properties.Mask.BeepOnError")));
-            this.EndProductId.Properties.Mask.EditMask = resources.GetString("EndProductId.Properties.Mask.EditMask");
-            this.EndProductId.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("EndProductId.Properties.Mask.IgnoreMaskBlank")));
-            this.EndProductId.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("EndProductId.Properties.Mask.MaskType")));
-            this.EndProductId.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("EndProductId.Properties.Mask.PlaceHolder")));
-            this.EndProductId.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("EndProductId.Properties.Mask.SaveLiteral")));
-            this.EndProductId.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("EndProductId.Properties.Mask.ShowPlaceHolders")));
-            this.EndProductId.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("EndProductId.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.EndProductId.Properties.NullValuePrompt = resources.GetString("EndProductId.Properties.NullValuePrompt");
-            this.EndProductId.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("EndProductId.Properties.NullValuePromptShowForEmptyValue")));
             this.EndProductId.StyleController = this.layoutControl1;
             this.EndProductId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.EndProductId_ButtonClick);
             // 
             // StartProductId
             // 
             resources.ApplyResources(this.StartProductId, "StartProductId");
-            this.StartProductId.BackgroundImage = null;
-            this.StartProductId.EditValue = null;
             this.StartProductId.Name = "StartProductId";
-            this.StartProductId.Properties.AccessibleDescription = null;
-            this.StartProductId.Properties.AccessibleName = null;
-            this.StartProductId.Properties.AutoHeight = ((bool)(resources.GetObject("StartProductId.Properties.AutoHeight")));
             this.StartProductId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.StartProductId.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("StartProductId.Properties.Mask.AutoComplete")));
-            this.StartProductId.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("StartProductId.Properties.Mask.BeepOnError")));
-            this.StartProductId.Properties.Mask.EditMask = resources.GetString("StartProductId.Properties.Mask.EditMask");
-            this.StartProductId.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("StartProductId.Properties.Mask.IgnoreMaskBlank")));
-            this.StartProductId.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("StartProductId.Properties.Mask.MaskType")));
-            this.StartProductId.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("StartProductId.Properties.Mask.PlaceHolder")));
-            this.StartProductId.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("StartProductId.Properties.Mask.SaveLiteral")));
-            this.StartProductId.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("StartProductId.Properties.Mask.ShowPlaceHolders")));
-            this.StartProductId.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("StartProductId.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.StartProductId.Properties.NullValuePrompt = resources.GetString("StartProductId.Properties.NullValuePrompt");
-            this.StartProductId.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("StartProductId.Properties.NullValuePromptShowForEmptyValue")));
             this.StartProductId.StyleController = this.layoutControl1;
             this.StartProductId.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.StartProductId_ButtonClick);
             // 
             // buttonEditProduceOtherCompactId2
             // 
             resources.ApplyResources(this.buttonEditProduceOtherCompactId2, "buttonEditProduceOtherCompactId2");
-            this.buttonEditProduceOtherCompactId2.BackgroundImage = null;
-            this.buttonEditProduceOtherCompactId2.EditValue = null;
             this.buttonEditProduceOtherCompactId2.Name = "buttonEditProduceOtherCompactId2";
-            this.buttonEditProduceOtherCompactId2.Properties.AccessibleDescription = null;
-            this.buttonEditProduceOtherCompactId2.Properties.AccessibleName = null;
-            this.buttonEditProduceOtherCompactId2.Properties.AutoHeight = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.AutoHeight")));
             this.buttonEditProduceOtherCompactId2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.Mask.AutoComplete")));
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.Mask.BeepOnError")));
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.EditMask = resources.GetString("buttonEditProduceOtherCompactId2.Properties.Mask.EditMask");
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.Mask.IgnoreMaskBlank")));
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.Mask.MaskType")));
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.Mask.PlaceHolder")));
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.Mask.SaveLiteral")));
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.Mask.ShowPlaceHolders")));
-            this.buttonEditProduceOtherCompactId2.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.buttonEditProduceOtherCompactId2.Properties.NullValuePrompt = resources.GetString("buttonEditProduceOtherCompactId2.Properties.NullValuePrompt");
-            this.buttonEditProduceOtherCompactId2.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId2.Properties.NullValuePromptShowForEmptyValue")));
             this.buttonEditProduceOtherCompactId2.StyleController = this.layoutControl1;
             this.buttonEditProduceOtherCompactId2.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit1_ButtonClick);
             // 
             // buttonEditProduceOtherCompactId1
             // 
             resources.ApplyResources(this.buttonEditProduceOtherCompactId1, "buttonEditProduceOtherCompactId1");
-            this.buttonEditProduceOtherCompactId1.BackgroundImage = null;
-            this.buttonEditProduceOtherCompactId1.EditValue = null;
             this.buttonEditProduceOtherCompactId1.Name = "buttonEditProduceOtherCompactId1";
-            this.buttonEditProduceOtherCompactId1.Properties.AccessibleDescription = null;
-            this.buttonEditProduceOtherCompactId1.Properties.AccessibleName = null;
-            this.buttonEditProduceOtherCompactId1.Properties.AutoHeight = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.AutoHeight")));
             this.buttonEditProduceOtherCompactId1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.Mask.AutoComplete")));
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.Mask.BeepOnError")));
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.EditMask = resources.GetString("buttonEditProduceOtherCompactId1.Properties.Mask.EditMask");
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.Mask.IgnoreMaskBlank")));
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.Mask.MaskType")));
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.Mask.PlaceHolder")));
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.Mask.SaveLiteral")));
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.Mask.ShowPlaceHolders")));
-            this.buttonEditProduceOtherCompactId1.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.buttonEditProduceOtherCompactId1.Properties.NullValuePrompt = resources.GetString("buttonEditProduceOtherCompactId1.Properties.NullValuePrompt");
-            this.buttonEditProduceOtherCompactId1.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("buttonEditProduceOtherCompactId1.Properties.NullValuePromptShowForEmptyValue")));
             this.buttonEditProduceOtherCompactId1.StyleController = this.layoutControl1;
             this.buttonEditProduceOtherCompactId1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEditProduceOtherCompactId1_ButtonClick);
             // 
             // txt_InvoiceCusId
             // 
             resources.ApplyResources(this.txt_InvoiceCusId, "txt_InvoiceCusId");
-            this.txt_InvoiceCusId.BackgroundImage = null;
-            this.txt_InvoiceCusId.EditValue = null;
             this.txt_InvoiceCusId.Name = "txt_InvoiceCusId";
-            this.txt_InvoiceCusId.Properties.AccessibleDescription = null;
-            this.txt_InvoiceCusId.Properties.AccessibleName = null;
-            this.txt_InvoiceCusId.Properties.AutoHeight = ((bool)(resources.GetObject("txt_InvoiceCusId.Properties.AutoHeight")));
-            this.txt_InvoiceCusId.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txt_InvoiceCusId.Properties.Mask.AutoComplete")));
-            this.txt_InvoiceCusId.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txt_InvoiceCusId.Properties.Mask.BeepOnError")));
-            this.txt_InvoiceCusId.Properties.Mask.EditMask = resources.GetString("txt_InvoiceCusId.Properties.Mask.EditMask");
-            this.txt_InvoiceCusId.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txt_InvoiceCusId.Properties.Mask.IgnoreMaskBlank")));
-            this.txt_InvoiceCusId.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txt_InvoiceCusId.Properties.Mask.MaskType")));
-            this.txt_InvoiceCusId.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txt_InvoiceCusId.Properties.Mask.PlaceHolder")));
-            this.txt_InvoiceCusId.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txt_InvoiceCusId.Properties.Mask.SaveLiteral")));
-            this.txt_InvoiceCusId.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txt_InvoiceCusId.Properties.Mask.ShowPlaceHolders")));
-            this.txt_InvoiceCusId.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txt_InvoiceCusId.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txt_InvoiceCusId.Properties.NullValuePrompt = resources.GetString("txt_InvoiceCusId.Properties.NullValuePrompt");
-            this.txt_InvoiceCusId.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txt_InvoiceCusId.Properties.NullValuePromptShowForEmptyValue")));
             this.txt_InvoiceCusId.StyleController = this.layoutControl1;
             // 
             // layoutControlGroup1
@@ -561,12 +403,9 @@
             // 
             // ConditionOtherMaterialChooseForm
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Icon = null;
             this.Name = "ConditionOtherMaterialChooseForm";
             this.Controls.SetChildIndex(this.simpleButtonCancel, 0);
             this.Controls.SetChildIndex(this.simpleButtonOK, 0);

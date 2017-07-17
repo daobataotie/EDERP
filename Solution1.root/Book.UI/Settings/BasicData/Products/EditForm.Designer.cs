@@ -547,6 +547,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem172 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabproduceMaterial = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl17 = new DevExpress.XtraLayout.LayoutControl();
+            this.dateEditProduceMaterialEnd = new DevExpress.XtraEditors.DateEdit();
             this.dateEditProduceMaterialStart = new DevExpress.XtraEditors.DateEdit();
             this.simpleButtonProduceMaterial = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl7 = new DevExpress.XtraGrid.GridControl();
@@ -564,6 +565,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem173 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem174 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem175 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem176 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSourceProduct = new System.Windows.Forms.BindingSource(this.components);
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.ProductCost0TextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -588,8 +590,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemList = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem161 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dateEditProduceMaterialEnd = new DevExpress.XtraEditors.DateEdit();
-            this.layoutControlItem176 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -1054,6 +1055,8 @@ namespace Book.UI.Settings.BasicData.Products
             this.xtraTabproduceMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl17)).BeginInit();
             this.layoutControl17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialEnd.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialEnd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialStart.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialStart.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).BeginInit();
@@ -1063,6 +1066,7 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem173)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem174)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem175)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem176)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
@@ -1074,9 +1078,6 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem161)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialEnd.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialEnd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem176)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -6341,7 +6342,8 @@ namespace Book.UI.Settings.BasicData.Products
             this.gridColumn39,
             this.gridColumn41,
             this.gridColumn42,
-            this.gridColumn40});
+            this.gridColumn40,
+            this.gridColumn55});
             this.gridView6.GridControl = this.gridControl6;
             this.gridView6.Name = "gridView6";
             this.gridView6.OptionsView.ColumnAutoWidth = false;
@@ -6471,6 +6473,18 @@ namespace Book.UI.Settings.BasicData.Products
             resources.ApplyResources(this.layoutControl17, "layoutControl17");
             this.layoutControl17.Name = "layoutControl17";
             this.layoutControl17.Root = this.layoutControlGroup18;
+            // 
+            // dateEditProduceMaterialEnd
+            // 
+            this.dateEditProduceMaterialEnd.EditValue = null;
+            resources.ApplyResources(this.dateEditProduceMaterialEnd, "dateEditProduceMaterialEnd");
+            this.dateEditProduceMaterialEnd.MenuManager = this.barManager1;
+            this.dateEditProduceMaterialEnd.Name = "dateEditProduceMaterialEnd";
+            this.dateEditProduceMaterialEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEditProduceMaterialEnd.Properties.Buttons"))))});
+            this.dateEditProduceMaterialEnd.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.dateEditProduceMaterialEnd.StyleController = this.layoutControl17;
             // 
             // dateEditProduceMaterialStart
             // 
@@ -6611,6 +6625,15 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem175.Name = "layoutControlItem175";
             this.layoutControlItem175.Size = new System.Drawing.Size(237, 26);
             this.layoutControlItem175.TextSize = new System.Drawing.Size(60, 14);
+            // 
+            // layoutControlItem176
+            // 
+            this.layoutControlItem176.Control = this.dateEditProduceMaterialEnd;
+            resources.ApplyResources(this.layoutControlItem176, "layoutControlItem176");
+            this.layoutControlItem176.Location = new System.Drawing.Point(237, 0);
+            this.layoutControlItem176.Name = "layoutControlItem176";
+            this.layoutControlItem176.Size = new System.Drawing.Size(226, 26);
+            this.layoutControlItem176.TextSize = new System.Drawing.Size(60, 14);
             // 
             // dataLayoutControl1
             // 
@@ -6799,26 +6822,11 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem161.TextSize = new System.Drawing.Size(76, 14);
             this.layoutControlItem161.TextToControlDistance = 5;
             // 
-            // dateEditProduceMaterialEnd
+            // gridColumn55
             // 
-            this.dateEditProduceMaterialEnd.EditValue = null;
-            resources.ApplyResources(this.dateEditProduceMaterialEnd, "dateEditProduceMaterialEnd");
-            this.dateEditProduceMaterialEnd.MenuManager = this.barManager1;
-            this.dateEditProduceMaterialEnd.Name = "dateEditProduceMaterialEnd";
-            this.dateEditProduceMaterialEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEdit1.Properties.Buttons"))))});
-            this.dateEditProduceMaterialEnd.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEditProduceMaterialEnd.StyleController = this.layoutControl17;
-            // 
-            // layoutControlItem176
-            // 
-            this.layoutControlItem176.Control = this.dateEditProduceMaterialEnd;
-            resources.ApplyResources(this.layoutControlItem176, "layoutControlItem176");
-            this.layoutControlItem176.Location = new System.Drawing.Point(237, 0);
-            this.layoutControlItem176.Name = "layoutControlItem176";
-            this.layoutControlItem176.Size = new System.Drawing.Size(226, 26);
-            this.layoutControlItem176.TextSize = new System.Drawing.Size(60, 14);
+            resources.ApplyResources(this.gridColumn55, "gridColumn55");
+            this.gridColumn55.FieldName = "Description";
+            this.gridColumn55.Name = "gridColumn55";
             // 
             // EditForm
             // 
@@ -7294,6 +7302,8 @@ namespace Book.UI.Settings.BasicData.Products
             this.xtraTabproduceMaterial.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl17)).EndInit();
             this.layoutControl17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialEnd.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialEnd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialStart.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialStart.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).EndInit();
@@ -7303,6 +7313,7 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem173)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem174)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem175)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem176)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
@@ -7314,9 +7325,6 @@ namespace Book.UI.Settings.BasicData.Products
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem161)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialEnd.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditProduceMaterialEnd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem176)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7883,5 +7891,6 @@ namespace Book.UI.Settings.BasicData.Products
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
         private DevExpress.XtraEditors.DateEdit dateEditProduceMaterialEnd;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem176;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
     }
 }
