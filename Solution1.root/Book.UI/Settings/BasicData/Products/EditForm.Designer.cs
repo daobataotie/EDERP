@@ -540,6 +540,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup17 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem169 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem170 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -561,6 +562,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup18 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem173 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem174 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -590,7 +592,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemList = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem161 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -6402,6 +6403,12 @@ namespace Book.UI.Settings.BasicData.Products
             this.gridColumn40.FieldName = "JiaoQi";
             this.gridColumn40.Name = "gridColumn40";
             // 
+            // gridColumn55
+            // 
+            resources.ApplyResources(this.gridColumn55, "gridColumn55");
+            this.gridColumn55.FieldName = "Description";
+            this.gridColumn55.Name = "gridColumn55";
+            // 
             // layoutControlGroup17
             // 
             resources.ApplyResources(this.layoutControlGroup17, "layoutControlGroup17");
@@ -6525,9 +6532,11 @@ namespace Book.UI.Settings.BasicData.Products
             this.gridColumn47,
             this.gridColumn48,
             this.gridColumn49,
-            this.gridColumn54});
+            this.gridColumn54,
+            this.gridColumn56});
             this.gridView7.GridControl = this.gridControl7;
             this.gridView7.Name = "gridView7";
+            this.gridView7.OptionsView.ColumnAutoWidth = false;
             // 
             // gridColumn43
             // 
@@ -6578,6 +6587,12 @@ namespace Book.UI.Settings.BasicData.Products
             resources.ApplyResources(this.gridColumn54, "gridColumn54");
             this.gridColumn54.FieldName = "ProductStock";
             this.gridColumn54.Name = "gridColumn54";
+            // 
+            // gridColumn56
+            // 
+            resources.ApplyResources(this.gridColumn56, "gridColumn56");
+            this.gridColumn56.FieldName = "CustomerInvoiceXOId";
+            this.gridColumn56.Name = "gridColumn56";
             // 
             // layoutControlGroup18
             // 
@@ -6821,12 +6836,6 @@ namespace Book.UI.Settings.BasicData.Products
             this.layoutControlItem161.Size = new System.Drawing.Size(360, 25);
             this.layoutControlItem161.TextSize = new System.Drawing.Size(76, 14);
             this.layoutControlItem161.TextToControlDistance = 5;
-            // 
-            // gridColumn55
-            // 
-            resources.ApplyResources(this.gridColumn55, "gridColumn55");
-            this.gridColumn55.FieldName = "Description";
-            this.gridColumn55.Name = "gridColumn55";
             // 
             // EditForm
             // 
@@ -7892,5 +7901,6 @@ namespace Book.UI.Settings.BasicData.Products
         private DevExpress.XtraEditors.DateEdit dateEditProduceMaterialEnd;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem176;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
     }
 }
