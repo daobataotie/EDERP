@@ -573,7 +573,7 @@ namespace Book.UI.Query
         //查询应付账款明细表
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            Book.UI.Query.ConditionCOChooseForm f = new ConditionCOChooseForm();
+            Book.UI.Query.ConditionCOChooseForm f = new ConditionCOChooseForm(1);
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 ConditionCO condition = f.Condition as ConditionCO;

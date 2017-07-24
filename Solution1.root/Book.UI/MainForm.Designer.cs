@@ -646,6 +646,7 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.barButtonItem487 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -1264,10 +1265,11 @@
             this.barButtonItem483,
             this.barButtonItem484,
             this.barButtonItem485,
-            this.barButtonItem486});
+            this.barButtonItem486,
+            this.barButtonItem487});
             this.barManager1.LargeImages = this.imageCollection1;
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 647;
+            this.barManager1.MaxItemId = 648;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
             this.barManager1.StatusBar = this.bar3;
@@ -3273,7 +3275,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem439),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem440),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem441),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem450)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem450),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem487)});
             this.barSubItem90.Name = "barSubItem90";
             // 
             // barButtonItem420
@@ -6122,6 +6125,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // barButtonItem487
+            // 
+            resources.ApplyResources(this.barButtonItem487, "barButtonItem487");
+            this.barButtonItem487.Id = 647;
+            this.barButtonItem487.Name = "barButtonItem487";
+            this.barButtonItem487.Tag = "produceManager.PCExportReportANSI.JISEditForm";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -6761,6 +6771,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem483;
         private DevExpress.XtraBars.BarButtonItem barButtonItem484;
         private DevExpress.XtraBars.BarButtonItem barButtonItem485;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem486;        
+        private DevExpress.XtraBars.BarButtonItem barButtonItem486;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem487;        
     }
 }

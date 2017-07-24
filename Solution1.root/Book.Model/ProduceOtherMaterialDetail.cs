@@ -41,5 +41,15 @@ namespace Book.Model
         public string ProduceOtherMaterialDesc { get; set; }
 
         public string SupplierShortName { get; set; }
+
+
+
+        public DateTime? JiaoQi { get; set; }
+
+        public DateTime? InvoiceYjrq { get; set; }
+
+        public string CustomerInvoiceXOId { get; set; }
+
+        public string ProductName { get; set; }
 	}
 }

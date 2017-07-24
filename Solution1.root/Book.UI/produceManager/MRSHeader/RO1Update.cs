@@ -92,8 +92,9 @@ namespace Book.UI.produceManager.MRSHeader
             this.xrRichText1.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
             //this.xrTableStock.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_MRSStockQuantity, "{0:0.####}");
             this.xrTableStock.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_StocksQuantity);
-            //this.xrTableMaterialDistributioned.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProduceMaterialDistributioned, "{0:0.####}");   原為“已分配量”
-            this.xrTableMaterialDistributioned.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_Materialprocessum, "{0:0.####}");
+            this.xrTableMaterialDistributioned.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProduceMaterialDistributioned, "{0:0.####}");   //原為“已分配量”
+            //this.xrTableMaterialDistributioned.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_Materialprocessum, "{0:0.####}");
+            this.lbl_lingliaoliang.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_Materialprocessum, "{0:0.####}");
 
             this.xrLabeOtherFenPei.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_OtherMaterialDistributioned, "{0:0.####}");
             this.xrTableSullier.DataBindings.Add("Text", this.DataSource, "Supplier." + Model.Supplier.PROPERTY_SUPPLIERSHORTNAME);

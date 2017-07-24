@@ -915,6 +915,9 @@
   <data name="barButtonItem450.Caption" xml:space="preserve">
     <value>详细测试查询</value>
   </data>
+  <data name="barButtonItem487.Caption" xml:space="preserve">
+    <value>JIS外銷報告</value>
+  </data>
   <data name="barButtonItem485.Caption" xml:space="preserve">
     <value>雪鏡專用ASTM 外銷報告</value>
   </data>
@@ -5370,6 +5373,12 @@
   </data>
   <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem487.Name" xml:space="preserve">
+    <value>barButtonItem487</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem487.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

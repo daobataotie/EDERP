@@ -13,6 +13,7 @@ namespace Book.UI.Query
     {
         private ConditionCO condition;
 
+        int flag = 0;
         public ConditionCOChooseForm()
         {
             InitializeComponent();
@@ -20,17 +21,34 @@ namespace Book.UI.Query
             this.newChooseSupEnd.Choose = new Settings.BasicData.Supplier.ChooseSupplier();
             this.nccEmployeeStart.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.nccEmployeeEnd.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            //this.dateEditStartDate.DateTime = DateTime.Now.Date.AddMonths(-1);
-            //this.dateEditEndDate.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
 
-            this.dateEditStartDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-2).Year, DateTime.Now.AddMonths(-2).Month, 26));
-            this.dateEditEndDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}",DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month, 25));
+            this.dateEditStartDate.DateTime = DateTime.Now.Date.AddMonths(-1);
+            this.dateEditEndDate.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
+        }
+
+        public ConditionCOChooseForm(int i)
+            : this()
+        {
+            this.flag = i;
+            if (this.flag == 1)
+            {
+                this.dateEditStartDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-2).Year, DateTime.Now.AddMonths(-2).Month, 26));
+                this.dateEditEndDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month, 25));
+            }
         }
 
         protected override void Init()
         {
-            this.dateEditStartDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-2).Year, DateTime.Now.AddMonths(-2).Month, 26));
-            this.dateEditEndDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month, 25));
+            if (this.flag == 1)
+            {
+                this.dateEditStartDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-2).Year, DateTime.Now.AddMonths(-2).Month, 26));
+                this.dateEditEndDate.DateTime = DateTime.Parse(string.Format("{0}-{1}-{2}", DateTime.Now.AddMonths(-1).Year, DateTime.Now.AddMonths(-1).Month, 25));
+            }
+            else
+            {
+                this.dateEditStartDate.DateTime = DateTime.Now.Date.AddMonths(-1);
+                this.dateEditEndDate.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
+            }
         }
 
         public override Condition Condition

@@ -118,18 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="xrLabelJiaoQi.Dpi" type="System.Single, mscorlib">
+  <data name="lbl_lingliaoliang.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="xrLabelJiaoQi.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>545.7374, 58.2500763</value>
+  <data name="lbl_lingliaoliang.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1801.48291, 58.2500763</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_lingliaoliang.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>115.07959, 58.24984</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lbl_lingliaoliang.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel14.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1635.45251, 58.2500763</value>
+  </data>
+  <data name="xrLabel14.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>166.0304, 58.24984</value>
+  </data>
+  <data name="xrLabel14.Text" xml:space="preserve">
+    <value>領料量：</value>
+  </data>
+  <data name="xrLabel14.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabelJiaoQi.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabelJiaoQi.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>466.362427, 58.2500763</value>
+  </data>
   <data name="xrLabelJiaoQi.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>215.69873, 58.2499161</value>
   </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabelJiaoQi.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
@@ -140,7 +167,7 @@
     <value>224.499985, 58.2499962</value>
   </data>
   <data name="xrLabeOtherFenPei.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>200.716476, 58.2499962</value>
+    <value>113.403976, 58.2499962</value>
   </data>
   <data name="xrLabeOtherFenPei.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -173,7 +200,7 @@
     <value>254</value>
   </data>
   <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>761.436157, 58.2499962</value>
+    <value>687.492737, 58.2499962</value>
   </data>
   <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>195.636292, 58.2499161</value>
@@ -236,19 +263,19 @@
     <value>254</value>
   </data>
   <data name="xrRichText1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>957.0724, 58.2499962</value>
+    <value>883.128967, 58.2499962</value>
   </data>
   <data name="xrRichText1.SerializableRtfString" xml:space="preserve">
     <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAH0ADQAKAHsADQAKAFwAYwBvAGwAbwByAHQAYgBsAA0ACgA7AA0ACgBcAHIAZQBkADAAXABnAHIAZQBlAG4AMABcAGIAbAB1AGUAMAA7AA0ACgBcAHIAZQBkADAAXABnAHIAZQBlAG4AMABcAGIAbAB1AGUAMgA1ADUAOwANAAoAfQANAAoAewBcAHMAZQBjAHQAZABcAHAAYQByAGQAXABwAGwAYQBpAG4AXABxAGwAXABwAGEAcgB9AA0ACgB9AA0ACgA=</value>
   </data>
   <data name="xrRichText1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>971.9276, 58.2499962</value>
+    <value>752.323547, 58.2499962</value>
   </data>
   <data name="xrLabel7.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>425.216461, 58.2499962</value>
+    <value>345.841461, 58.2499962</value>
   </data>
   <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>120.520966, 58.2499962</value>
@@ -499,7 +526,7 @@
     <value>新細明體, 9.75pt, style=Bold</value>
   </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
-    <value>領料量</value>
+    <value>已分配</value>
   </data>
   <data name="xrTableRow1.Dpi" type="System.Single, mscorlib">
     <value>254</value>

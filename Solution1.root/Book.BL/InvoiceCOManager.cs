@@ -346,7 +346,8 @@ namespace Book.BL
                                 Model.Product product = productAccessor.Get(detail.ProductId);
                                 //product.OrderOnWayQuantity -= detail.NoArrivalQuantity;
                                 product.OrderOnWayQuantity = Convert.ToDouble(product.OrderOnWayQuantity) - Convert.ToDouble(detail.NoArrivalQuantity);
-                                product.OrderOnWayQuantity = product.OrderOnWayQuantity <= 0 ? 0 : product.OrderOnWayQuantity;
+                                //2017年7月24日00:05:51：可以为负，否则会导致不准
+                                //product.OrderOnWayQuantity = product.OrderOnWayQuantity <= 0 ? 0 : product.OrderOnWayQuantity;
                                 productManager.update(product);
                                 //  invoiceCODetailAccessor.Update(detail);
                             }

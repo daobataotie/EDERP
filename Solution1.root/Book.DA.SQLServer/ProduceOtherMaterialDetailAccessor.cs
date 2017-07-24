@@ -98,5 +98,38 @@ namespace Book.DA.SQLServer
             sql.Append(" order by po.ProduceOtherMaterialId");
             return this.DataReaderBind<Model.ProduceOtherMaterialDetail>(sql.ToString(), null, CommandType.Text);
         }
+
+        public IList<Model.ProduceOtherMaterialDetail> SelectDetailByCondition(DateTime startdate, DateTime enddate, string supperId1, string supperId2, string cid1, string cid2, string StartpId, string EndpId, string invoiceCusID)
+        {
+            StringBuilder sb = new StringBuilder("select s.SupplierShortName,pm.ProduceOtherCompactId,pcd.JiaoQi,xo.InvoiceYjrq,xo.CustomerInvoiceXOId,p.ProductName,sum(isnull(pmd.InvoiceUseQuantity,0)) as InvoiceUseQuantity,pmd.ProductUnit from ProduceOtherMaterialDetail pmd left join ProduceOtherMaterial pm on pmd.ProduceOtherMaterialId=pm.ProduceOtherMaterialId left join ProduceOtherCompact poc on poc.ProduceOtherCompactId=pm.ProduceOtherCompactId left join InvoiceXO xo on xo.InvoiceId=poc.InvoiceXOId left join ProduceOtherCompactDetail pcd on pmd.ParentProductId=pcd.ProductId and poc.ProduceOtherCompactId=pcd.ProduceOtherCompactId left join Product p on p.ProductId=pmd.ProductId left join Supplier s on s.SupplierId=pm.SupplierId where pm.ProduceOtherMaterialDate  between '" + startdate.ToString("yyyy-MM-dd") + "' and '" + enddate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            if (!string.IsNullOrEmpty(supperId1) || !string.IsNullOrEmpty(supperId2))
+            {
+                if (!string.IsNullOrEmpty(supperId1) && !string.IsNullOrEmpty(supperId2))
+                    sb.Append(" and s.Id between '" + supperId1 + "' and '" + supperId1 + "'");
+                else
+                    sb.Append(" and s.Id=" + (string.IsNullOrEmpty(supperId1) ? supperId2 : supperId1));
+            }
+            if (!string.IsNullOrEmpty(cid1) || !string.IsNullOrEmpty(cid2))
+            {
+                if (!string.IsNullOrEmpty(cid1) && !string.IsNullOrEmpty(cid2))
+                    sb.Append(" and pm.ProduceOtherCompactId between '" + cid1 + "' and '" + cid2 + "'");
+                else
+                    sb.Append(" and pm.ProduceOtherCompactId=" + (string.IsNullOrEmpty(cid1) ? cid2 : cid1));
+            }
+            if (!string.IsNullOrEmpty(StartpId) || !string.IsNullOrEmpty(EndpId))
+            {
+                if (!string.IsNullOrEmpty(StartpId) && !string.IsNullOrEmpty(EndpId))
+                    sb.Append(" and p.Id between '" + StartpId + "' and '" + EndpId + "'");
+                else
+                    sb.Append(" and p.Id=" + (string.IsNullOrEmpty(StartpId) ? EndpId : StartpId));
+            }
+            if (!string.IsNullOrEmpty(invoiceCusID))
+            {
+                sb.Append(" and xo.CustomerInvoiceXOId='" + invoiceCusID + "'");
+            }
+            sb.Append(" group by s.SupplierShortName,pm.ProduceOtherCompactId,pcd.JiaoQi,xo.InvoiceYjrq,xo.CustomerInvoiceXOId,p.ProductName,pmd.ProductUnit order by pm.ProduceOtherCompactId ");
+
+            return DataReaderBind<Model.ProduceOtherMaterialDetail>(sb.ToString(), null, CommandType.Text);
+        }
     }
 }

@@ -79,6 +79,11 @@ namespace Book.BL
         {
             return accessor.SelectByConditionRange(startdate, enddate, supperId1, supperId2, cid1, cid2, StartpId, EndpId, invoiceCusID);
         }
+
+        public IList<Model.ProduceOtherMaterialDetail> SelectDetailByCondition(DateTime startdate, DateTime enddate, string supperId1, string supperId2, string cid1, string cid2, string StartpId, string EndpId, string invoiceCusID)
+        {
+            return accessor.SelectDetailByCondition(startdate, enddate, supperId1, supperId2, cid1, cid2, StartpId, EndpId, invoiceCusID);
+        }
     }
 }
 

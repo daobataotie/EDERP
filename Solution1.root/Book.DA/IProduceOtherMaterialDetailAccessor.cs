@@ -24,6 +24,7 @@ namespace Book.DA
         Model.ProduceOtherMaterialDetail SelectByPidHidPosId(string productId, string produceOtherMaterialId, string depotPositionId);
         IList<Model.ProduceOtherMaterialDetail> SelectForDistributioned(string productid, DateTime InsertTime);
         IList<Model.ProduceOtherMaterialDetail> SelectByConditionRange(DateTime startdate, DateTime enddate, string supperId1, string supperId2, string cid1, string cid2, string StartpId, string EndpId, string invoiceCusID);
+        IList<Model.ProduceOtherMaterialDetail> SelectDetailByCondition(DateTime startdate, DateTime enddate, string supperId1, string supperId2, string cid1, string cid2, string StartpId, string EndpId, string invoiceCusID);
     }
 }
 

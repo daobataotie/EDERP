@@ -84,8 +84,9 @@ namespace Book.BL
                                     produceOtherMaterialDetailAccessor.Update(produceOtherMaterialDetail);
                                     UpdateInvoiceXOFlagT(produceOtherMaterialDetail.ProduceOtherMaterial);
                                     product.OtherMaterialDistributioned = Convert.ToDouble(product.OtherMaterialDistributioned) + Convert.ToDouble(depotOutDetails.DepotOutDetailQuantity);
-                                    if (product.OtherMaterialDistributioned < 0)
-                                        product.OtherMaterialDistributioned = 0;
+                                    //2017年7月24日00:41:34 ： 可以为负,否则会导致不准
+                                    //if (product.OtherMaterialDistributioned < 0)
+                                    //    product.OtherMaterialDistributioned = 0;
 
                                     //更新与该商品有关的单据的已分配数量
                                     IList<Model.ProduceOtherMaterialDetail> polist = produceOtherMaterialDetailAccessor.SelectForDistributioned(produceOtherMaterialDetail.ProductId, produceOtherMaterialDetail.ProduceOtherMaterial.InsertTime.Value);
@@ -152,8 +153,9 @@ namespace Book.BL
                                     UpdateInvoiceXOFlag(produceMaterialDetail.ProduceMaterial);
                                     //已分配数量
                                     product.ProduceMaterialDistributioned = Convert.ToDouble(product.ProduceMaterialDistributioned) + Convert.ToDouble(depotOutDetails.DepotOutDetailQuantity);
-                                    if (product.ProduceMaterialDistributioned < 0)
-                                        product.ProduceMaterialDistributioned = 0;
+                                    //2017年7月24日00:41:34 ： 可以为负,否则会导致不准
+                                    //if (product.ProduceMaterialDistributioned < 0)
+                                    //    product.ProduceMaterialDistributioned = 0;
 
                                     //更新与该商品有关的单据的已分配数量
                                     IList<Model.ProduceOtherMaterialDetail> polist = produceOtherMaterialDetailAccessor.SelectForDistributioned(produceMaterialDetail.ProductId, produceMaterialDetail.ProduceMaterial.InsertTime.Value);
@@ -241,8 +243,9 @@ namespace Book.BL
                         {
                             //委外已分配数量
                             product.OtherMaterialDistributioned = product.OtherMaterialDistributioned == null ? 0 : product.OtherMaterialDistributioned - Convert.ToDouble(depotOutDetails.DepotOutDetailQuantity);
-                            if (product.OtherMaterialDistributioned < 0)
-                                product.OtherMaterialDistributioned = 0;
+                            //2017年7月24日00:41:34 ： 可以为负,否则会导致不准
+                            //if (product.OtherMaterialDistributioned < 0)
+                            //    product.OtherMaterialDistributioned = 0;
                             //  productManager.update(product);
 
                         }
@@ -314,8 +317,9 @@ namespace Book.BL
                         {
                             //已分配数量
                             product.ProduceMaterialDistributioned = Convert.ToDouble(product.ProduceMaterialDistributioned) - Convert.ToDouble(depotOutDetails.DepotOutDetailQuantity);
-                            if (product.ProduceMaterialDistributioned < 0)
-                                product.ProduceMaterialDistributioned = 0;
+                            //2017年7月24日00:41:34 ： 可以为负,否则会导致不准
+                            //if (product.ProduceMaterialDistributioned < 0)
+                            //    product.ProduceMaterialDistributioned = 0;
                             //  productManager.update(product);
 
                         }
@@ -530,8 +534,9 @@ namespace Book.BL
                             }
                             produceMaterialDetailsAccessor.Update(produceMaterialDetail);
                             product.ProduceMaterialDistributioned = Convert.ToDouble(product.ProduceMaterialDistributioned) + Convert.ToDouble(item.DepotOutDetailQuantity);
-                            if (product.ProduceMaterialDistributioned < 0)
-                                product.ProduceMaterialDistributioned = 0;
+                            //2017年7月24日00:41:34 ： 可以为负,否则会导致不准
+                            //if (product.ProduceMaterialDistributioned < 0)
+                            //    product.ProduceMaterialDistributioned = 0;
 
                             //更新与该商品有关的单据的已分配数量
                             IList<Model.ProduceOtherMaterialDetail> polist = produceOtherMaterialDetailAccessor.SelectForDistributioned(produceMaterialDetail.ProductId, produceMaterialDetail.ProduceMaterial.InsertTime.Value);
@@ -580,8 +585,9 @@ namespace Book.BL
                                 }
                                 produceOtherMaterialDetailAccessor.Update(produceOtherMaterialDetail);
                                 product.OtherMaterialDistributioned = Convert.ToDouble(item.Product.OtherMaterialDistributioned) + Convert.ToDouble(item.DepotOutDetailQuantity);
-                                if (product.OtherMaterialDistributioned < 0)
-                                    product.OtherMaterialDistributioned = 0;
+                                //2017年7月24日00:41:34 ： 可以为负,否则会导致不准
+                                //if (product.OtherMaterialDistributioned < 0)
+                                //    product.OtherMaterialDistributioned = 0;
 
                                 //更新与该商品有关的单据的已分配数量
                                 IList<Model.ProduceOtherMaterialDetail> polist = produceOtherMaterialDetailAccessor.SelectForDistributioned(produceOtherMaterialDetail.ProductId, produceOtherMaterialDetail.ProduceOtherMaterial.InsertTime.Value);
@@ -677,8 +683,9 @@ namespace Book.BL
                                 UpdateInvoiceXOFlagT(produceOtherMaterialDetail.ProduceOtherMaterial);
 
                                 detail.Product.OtherMaterialDistributioned = Convert.ToDouble(detail.Product.OtherMaterialDistributioned) - Convert.ToDouble(detail.DepotOutDetailQuantity);
-                                if (detail.Product.OtherMaterialDistributioned < 0)
-                                    detail.Product.OtherMaterialDistributioned = 0;
+                                //2017年7月24日00:41:34 ： 可以为负,否则会导致不准
+                                //if (detail.Product.OtherMaterialDistributioned < 0)
+                                //    detail.Product.OtherMaterialDistributioned = 0;
 
                                 //更新与该商品有关的单据的已分配数量
                                 IList<Model.ProduceOtherMaterialDetail> polist = produceOtherMaterialDetailAccessor.SelectForDistributioned(produceOtherMaterialDetail.ProductId, produceOtherMaterialDetail.ProduceOtherMaterial.InsertTime.Value);
@@ -746,8 +753,9 @@ namespace Book.BL
                                 produceMaterialDetailsAccessor.Update(produceMaterialDetail);
                                 UpdateInvoiceXOFlag(produceMaterialDetail.ProduceMaterial);
                                 detail.Product.ProduceMaterialDistributioned = Convert.ToDouble(detail.Product.ProduceMaterialDistributioned) - Convert.ToDouble(detail.DepotOutDetailQuantity);
-                                if (detail.Product.ProduceMaterialDistributioned < 0)
-                                    detail.Product.ProduceMaterialDistributioned = 0;
+                                //2017年7月24日00:41:34 ： 可以为负,否则会导致不准
+                                //if (detail.Product.ProduceMaterialDistributioned < 0)
+                                //    detail.Product.ProduceMaterialDistributioned = 0;
 
                                 //更新与该商品有关的单据的已分配数量
                                 IList<Model.ProduceOtherMaterialDetail> polist = produceOtherMaterialDetailAccessor.SelectForDistributioned(produceMaterialDetail.ProductId, produceMaterialDetail.ProduceMaterial.InsertTime.Value);
