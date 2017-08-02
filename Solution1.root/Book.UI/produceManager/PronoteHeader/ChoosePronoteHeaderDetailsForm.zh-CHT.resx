@@ -226,4 +226,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>選擇通知單</value>
   </data>
+  <data name="btn_Excel" xml:space="preserve">
+    <value>射出交期預期</value>
+  </data>
 </root>

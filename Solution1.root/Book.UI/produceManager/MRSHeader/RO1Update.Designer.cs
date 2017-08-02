@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO1Update));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.lbl_lingliaoliang = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelJiaoQi = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabeOtherFenPei = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
@@ -99,8 +101,6 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbl_lingliaoliang = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -122,6 +122,20 @@
             resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // lbl_lingliaoliang
+            // 
+            resources.ApplyResources(this.lbl_lingliaoliang, "lbl_lingliaoliang");
+            this.lbl_lingliaoliang.Name = "lbl_lingliaoliang";
+            this.lbl_lingliaoliang.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_lingliaoliang.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel14
+            // 
+            resources.ApplyResources(this.xrLabel14, "xrLabel14");
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel14.StylePriority.UseTextAlignment = false;
             // 
             // xrLabelJiaoQi
             // 
@@ -676,20 +690,6 @@
             // 
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
-            // 
-            // xrLabel14
-            // 
-            resources.ApplyResources(this.xrLabel14, "xrLabel14");
-            this.xrLabel14.Name = "xrLabel14";
-            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel14.StylePriority.UseTextAlignment = false;
-            // 
-            // lbl_lingliaoliang
-            // 
-            resources.ApplyResources(this.lbl_lingliaoliang, "lbl_lingliaoliang");
-            this.lbl_lingliaoliang.Name = "lbl_lingliaoliang";
-            this.lbl_lingliaoliang.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.lbl_lingliaoliang.StylePriority.UseTextAlignment = false;
             // 
             // RO1Update
             // 

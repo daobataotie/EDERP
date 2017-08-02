@@ -15,9 +15,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrPictureBox1.Visible = false;
         }
 
-        public ASRO2017(Model.PCExportReportANSI _PCExportReportANSI, int tag)
+        public ASRO2017(Model.PCExportReportANSI _PCExportReportANSI, int tag, bool? showApprove)
             : this()
         {
+            if (showApprove.HasValue && !showApprove.Value)
+                this.xrPanel1.Visible = false;
+
             if (tag == 1)
             {
                 this.xrLabel1.Text = "ALAN    SAFETY    COMPANY.";
@@ -36,7 +39,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel2.Text = "Assembled Eye protectors – Quality Control Test Report";
             this.LbModelNo.Text = _PCExportReportANSI.Product == null ? null : _PCExportReportANSI.Product.CustomerProductName;
             this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
-            this.xrLabel7.Text ="Issue date : "+ (_PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("MMM，yyyy", new System.Globalization.CultureInfo("en-us")));
+            this.xrLabel7.Text = "Issue date : " + (_PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("MMM，yyyy", new System.Globalization.CultureInfo("en-us")));
             this.xrLabel13.Text = string.IsNullOrEmpty(_PCExportReportANSI.CSAJiShuBiaoZhun) ? "Tested against AS/NZS 1337.1:2010 " : _PCExportReportANSI.CSAJiShuBiaoZhun;
 
             this.LbQtyTest.Text = (_PCExportReportANSI.QuYangShu2.HasValue ? _PCExportReportANSI.QuYangShu2.Value.ToString() : "0") + "PCS";
@@ -62,6 +65,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.CheckCorrosion.Checked = _PCExportReportANSI.Corrsion.HasValue ? _PCExportReportANSI.Corrsion.Value : false;
             this.CheckMarkings.Checked = _PCExportReportANSI.Markings.HasValue ? _PCExportReportANSI.Markings.Value : false;
             this.LbTester.Text = _PCExportReportANSI.Employee == null ? null : _PCExportReportANSI.Employee.ToString();
+            this.xrLabel4.Text = _PCExportReportANSI.AuditEmp == null ? null : _PCExportReportANSI.AuditEmp.ToString();
 
             //对外观，加热，坐标等判定新增的 测试数量
 

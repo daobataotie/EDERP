@@ -1319,5 +1319,44 @@ namespace Book.UI.produceManager.ProduceMaterial
             cp.Dispose();
             GC.Collect();
         }
+
+        private void btn_Invoicexo_Click(object sender, EventArgs e)
+        {
+            Book.UI.produceManager.createProduce.EditForm f = new Book.UI.produceManager.createProduce.EditForm("co");
+            if (f.ShowDialog(this) != DialogResult.OK) return;
+            if (f.SelectList == null || f.SelectList.Count == 0) return;
+
+            this.comboBoxEdit1.SelectedIndex = 2;
+            this._produceMaterial.InvoiceXOId = f.SelectList[0].InvoiceId;
+            this.textEditPronoteHeaderID.Text = f.SelectList[0].InvoiceId;
+            this.textEditCustomerXOId.Text = f.SelectList[0].Invoice.CustomerInvoiceXOId;
+            this.calcEditInvoiceSum.Value = Convert.ToDecimal(f.SelectList.Sum(I => I.InvoiceXODetailQuantity));
+            this.textEditPiHao.Text = f.SelectList[0].Invoice.CustomerLotNumber;
+            foreach (Model.InvoiceXODetail xodetail in f.SelectList)
+            {
+                Model.ProduceMaterialdetails detail = new Book.Model.ProduceMaterialdetails();
+                detail.ProduceMaterialdetailsID = Guid.NewGuid().ToString();
+                detail.Inumber = this._produceMaterial.Details.Count + 1;
+
+                if (xodetail.Product != null)
+                {
+                    detail.Product = xodetail.Product;
+                    detail.ProductId = xodetail.Product.ProductId;
+                    detail.ProductStock = xodetail.Product.StocksQuantity;
+                    detail.ProductSpecification = xodetail.Product.ProductSpecification;
+                    if (xodetail.Product.DepotUnit != null)
+                        detail.ProductUnit = xodetail.Product.DepotUnit.CnName;
+                    detail.Distributioned = detail.Product.ProduceMaterialDistributioned;
+                }
+                detail.InvoiceXOId = xodetail.InvoiceId;
+                detail.InvoiceXODetailId = xodetail.InvoiceXODetailId;
+                detail.Materialprocessum = xodetail.InvoiceXODetailQuantity;
+                detail.MPSDetailsSum = xodetail.InvoiceXODetailQuantity;
+                detail.ProduceMaterialID = this._produceMaterial.ProduceMaterialID;
+                this._produceMaterial.Details.Add(detail);
+            }
+            this.gridControl1.RefreshDataSource();
+            f.SelectList.Clear();
+        }
     }
 }

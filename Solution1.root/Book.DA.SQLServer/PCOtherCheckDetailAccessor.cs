@@ -44,11 +44,14 @@ namespace Book.DA.SQLServer
             string startDate = StartDate.ToString("yyyy-MM-dd");
             string endDate = EndDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss");
             StringBuilder sql = new StringBuilder();
-            sql.Append("select p.PCOtherCheckId,p.PCOtherCheckDate,pd.InvoiceCusXOId,e.EmployeeName,s.SupplierFullName,pd.PCOtherCheckDetailDesc1 from PCOtherCheckDetail pd left join PCOtherCheck p on pd.PCOtherCheckId=p.PCOtherCheckId left join Employee e on p.Employee0Id=e.EmployeeId left join Supplier s on s.SupplierId=p.SupplierId where p.PCOtherCheckDate between '" + startDate + "' and '" + endDate + "'");
+            sql.Append("select p.PCOtherCheckId,p.PCOtherCheckDate,pd.InvoiceCusXOId,e.EmployeeName,s.SupplierFullName,pd.PCOtherCheckDetailDesc1,isnull((select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from InvoiceCO where InvoiceId=pd.PCOtherCheckDetailDesc1)),'') +isnull((select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from ProduceOtherCompact where ProduceOtherCompactId=pd.PCOtherCheckDetailDesc1)),'') as CusXOID from PCOtherCheckDetail pd left join PCOtherCheck p on pd.PCOtherCheckId=p.PCOtherCheckId left join Employee e on p.Employee0Id=e.EmployeeId left join Supplier s on s.SupplierId=p.SupplierId where p.PCOtherCheckDate between '" + startDate + "' and '" + endDate + "'");
             if (product != null)
                 sql.Append(" and pd.ProductId='" + product.ProductId + "'");
             if (!string.IsNullOrEmpty(CusXOId))
-                sql.Append(" and pd.InvoiceCusXOId='" + CusXOId + "'");
+            {
+                //sql.Append(" and pd.InvoiceCusXOId='" + CusXOId + "'");
+                sql.Append(" and (PCOtherCheckDetailDesc1 in ( select InvoiceId from InvoiceCO  where InvoiceXOId in (select InvoiceId from InvoiceXO where CustomerInvoiceXOId='" + CusXOId + "')) or PCOtherCheckDetailDesc1 in (select ProduceOtherCompactId from ProduceOtherCompact where InvoiceXOId in (select InvoiceId from InvoiceXO where CustomerInvoiceXOId='" + CusXOId + "')))");
+            }
 
             return this.DataReaderBind<Model.PCOtherCheckDetail>(sql.ToString(), null, CommandType.Text);
         }

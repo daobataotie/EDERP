@@ -1,10 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sqlMap namespace="PCOtherCheckDetail" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <resultMaps>
+    <resultMap id="PCOtherCheckDetailResult2" class="PCOtherCheckDetail">
+      <result property="PCOtherCheckDetailId" column="PCOtherCheckDetailId" />
+      <result property="ProductId" column="ProductId" />
+      <result property="PCOtherCheckId" column="PCOtherCheckId" />
+      <result property="ProceduresId" column="ProceduresId" />
+      <result property="PCOtherCheckDetailQuantity" column="PCOtherCheckDetailQuantity" />
+      <result property="ProductUnit" column="ProductUnit" />
+      <result property="PerspectiveRate" column="PerspectiveRate" />
+      <result property="DeliveryDate" column="DeliveryDate" />
+      <result property="OutQuantity" column="OutQuantity" />
+      <result property="InQuantity" column="InQuantity" />
+      <result property="Determinant" column="Determinant" />
+      <!--<result property="PCOtherCheckDetailDesc" column="PCOtherCheckDetailDesc" />-->
+      <result property="FromInvoiceID" column="FromInvoiceID" />
+      <result property="FromInvoiceDetailID" column="FromInvoiceDetailID" />
+      <result property="PCOtherCheckDetailFromPC" column="PCOtherCheckDetailFromPC" />
+      <result property="PCOtherCheckDetailDesc1" column="PCOtherCheckDetailDesc1" />
+      <result property="InvoiceCusXOId" column="InvoiceCusXOId"/>
+      <result property="CusXOID" column="CusXOID"/>
+      <result property="PCOtherCheck" column="PCOtherCheckId" lazyLoad="false" select="PCOtherCheck.select_by_primary_key" />
+      <result property="Procedures" column="ProceduresId" lazyLoad="false" select="Procedures.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+    </resultMap>
+  </resultMaps>
+
   <statements>
-    <select id="select_byPCOtherCheckId" resultMap="PCOtherCheckDetailResult" parameterClass="string">
+    <select id="select_byPCOtherCheckId" resultMap="PCOtherCheckDetailResult2" parameterClass="string">
       <![CDATA[
-      SELECT * FROM PCOtherCheckDetail WHERE PCOtherCheckDetail.PCOtherCheckId = #value#
+      SELECT *,isnull((select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from InvoiceCO where InvoiceId=PCOtherCheckDetail.PCOtherCheckDetailDesc1)),'')+isnull((select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from ProduceOtherCompact where ProduceOtherCompactId=PCOtherCheckDetail.PCOtherCheckDetailDesc1)),'') as CusXOID FROM PCOtherCheckDetail WHERE PCOtherCheckDetail.PCOtherCheckId = #value#
       ]]>
     </select>
 

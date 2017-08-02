@@ -100,7 +100,9 @@ namespace Book.UI.produceManager.MRSHeader
             this.xrTableSullier.DataBindings.Add("Text", this.DataSource, "Supplier." + Model.Supplier.PROPERTY_SUPPLIERSHORTNAME);
             this.xrLabelJiaoQi.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_JiaoHuoDate, "{0:yyyy-MM-dd}");
             this.xrTableWorkHouseNext.DataBindings.Add("Text", this.DataSource, "WorkHouseNext." + Model.WorkHouse.PROPERTY_WORKHOUSENAME);
-            this.tcJiaoqi.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_JiaoHuoDate, "{0:yyyy-MM-dd}");
+            //this.tcJiaoqi.DataBindings.Add("Text", this.DataSource, Model.MRSdetails.PRO_JiaoHuoDate, "{0:yyyy-MM-dd}");
+            //原为交期 改为 已定未入量
+            this.tcJiaoqi.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_OrderOnWayQuantity, "{0:0.####}");
         }
     }
 }

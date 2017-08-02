@@ -24,7 +24,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TCTSEmployee.Text = pcDataInput.Employee2 == null ? "" : pcDataInput.Employee2.ToString();
 
             if (AS != null)
-                this.xrSubreportAS.ReportSource = new ASRO (AS, 0);
+                this.xrSubreportAS.ReportSource = new ASRO (AS, 0,false);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
             this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);

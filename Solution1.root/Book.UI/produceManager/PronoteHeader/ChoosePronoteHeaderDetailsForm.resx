@@ -129,7 +129,7 @@
     <value>77</value>
   </data>
   <data name="btn_Excel.Text" xml:space="preserve">
-    <value>生成Excel</value>
+    <value>射出交期预期</value>
   </data>
   <data name="&gt;&gt;btn_Excel.Name" xml:space="preserve">
     <value>btn_Excel</value>
@@ -144,7 +144,7 @@
     <value>4</value>
   </data>
   <data name="simpleButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 115</value>
+    <value>714, 89</value>
   </data>
   <data name="simpleButton3.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 22</value>
@@ -166,30 +166,6 @@
   </data>
   <data name="&gt;&gt;simpleButton3.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="btn_Print.Location" type="System.Drawing.Point, System.Drawing">
-    <value>714, 89</value>
-  </data>
-  <data name="btn_Print.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 22</value>
-  </data>
-  <data name="btn_Print.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="btn_Print.Text" xml:space="preserve">
-    <value>射出工作单</value>
-  </data>
-  <data name="&gt;&gt;btn_Print.Name" xml:space="preserve">
-    <value>btn_Print</value>
-  </data>
-  <data name="&gt;&gt;btn_Print.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btn_Print.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;btn_Print.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="lookUpEditMachine.Location" type="System.Drawing.Point, System.Drawing">
     <value>507, 87</value>
@@ -229,7 +205,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lookUpEditMachine.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="lbl_Status.Location" type="System.Drawing.Point, System.Drawing">
     <value>690, 63</value>
@@ -257,7 +233,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lbl_Status.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="date_JiaohuoStart.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 88</value>
@@ -284,7 +260,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_JiaohuoStart.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="date_JiaohuoEnd.Location" type="System.Drawing.Point, System.Drawing">
     <value>312, 88</value>
@@ -311,6 +287,30 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_JiaohuoEnd.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btn_Print.Location" type="System.Drawing.Point, System.Drawing">
+    <value>714, 115</value>
+  </data>
+  <data name="btn_Print.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="btn_Print.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="btn_Print.Text" xml:space="preserve">
+    <value>射出工作单</value>
+  </data>
+  <data name="&gt;&gt;btn_Print.Name" xml:space="preserve">
+    <value>btn_Print</value>
+  </data>
+  <data name="&gt;&gt;btn_Print.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_Print.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btn_Print.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="checkEditZizhiBCP.Location" type="System.Drawing.Point, System.Drawing">
@@ -1522,10 +1522,10 @@
   <data name="&gt;&gt;emptySpaceItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem27.Name" xml:space="preserve">
-    <value>layoutControlItem27</value>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem27.Type" xml:space="preserve">
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
@@ -1534,10 +1534,10 @@
   <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
-    <value>layoutControlItem8</value>
+  <data name="&gt;&gt;layoutControlItem28.Name" xml:space="preserve">
+    <value>layoutControlItem28</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+  <data name="&gt;&gt;layoutControlItem28.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem30.Name" xml:space="preserve">
@@ -1546,16 +1546,16 @@
   <data name="&gt;&gt;layoutControlItem30.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem28.Name" xml:space="preserve">
-    <value>layoutControlItem28</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem28.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">
     <value>layoutControlItem29</value>
   </data>
   <data name="&gt;&gt;layoutControlItem29.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem27.Name" xml:space="preserve">
+    <value>layoutControlItem27</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem27.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem12.Name" xml:space="preserve">

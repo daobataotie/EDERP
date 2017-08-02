@@ -373,10 +373,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
                 this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
 
-                this._PCExportReportANSI.ShouCeShu1 =  this._PCExportReportANSI.ShouCeShu10 = this._PCExportReportANSI.ShouCeShu11  = this._PCExportReportANSI.AmountTest;
+                //this._PCExportReportANSI.ShouCeShu1 =  
+                this._PCExportReportANSI.ShouCeShu1 = this._PCExportReportANSI.PanDing1 = 100;
+                this._PCExportReportANSI.ShouCeShu10 = this._PCExportReportANSI.ShouCeShu11  = this._PCExportReportANSI.AmountTest;
                 //this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.ShouCeShu7 = this._PCExportReportANSI.ShouCeShu8 = this._PCExportReportANSI.ShouCeShu9 == this._PCExportReportANSI.ShouCeShu12
 
-                this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.AmountTest;
+                //this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.AmountTest;
                 //this._PCExportReportANSI.QuYangShu1 = _PCExportReportANSIDetail.qCEENCONSTRUCTION;
                 //this._PCExportReportANSI.PanDing2 = _PCExportReportANSIDetail.pCEENQMDS;
                 //this._PCExportReportANSI.QuYangShu2 = _PCExportReportANSIDetail.qCEENQMDS;

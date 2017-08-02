@@ -14,9 +14,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrPictureBox1.Visible = false;
         }
 
-        public ASRO(Model.PCExportReportANSI _PCExportReportANSI, int tag)
+        public ASRO(Model.PCExportReportANSI _PCExportReportANSI, int tag, bool? showApprove)
             : this()
         {
+            if (showApprove.HasValue && !showApprove.Value)
+                this.xrPanel1.Visible = false;
+
             if (tag == 1)
             {
                 this.xrLabel1.Text = "ALAN    SAFETY    COMPANY.";
@@ -58,6 +61,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.CheckCorrosion.Checked = _PCExportReportANSI.Corrsion.HasValue ? _PCExportReportANSI.Corrsion.Value : false;
             this.CheckMarkings.Checked = _PCExportReportANSI.Markings.HasValue ? _PCExportReportANSI.Markings.Value : false;
             this.LbTester.Text = _PCExportReportANSI.Employee == null ? null : _PCExportReportANSI.Employee.ToString();
+            this.xrLabel4.Text = _PCExportReportANSI.AuditEmp == null ? null : _PCExportReportANSI.AuditEmp.ToString();
 
             //对外观，加热，坐标等判定新增的 测试数量
 

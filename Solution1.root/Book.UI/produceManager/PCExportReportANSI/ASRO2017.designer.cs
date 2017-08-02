@@ -174,6 +174,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbOrderNo = new DevExpress.XtraReports.UI.XRLabel();
             this.LbBuyer = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -225,7 +226,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox1,
+            this.xrPanel1,
             this.xrLabel11,
             this.xrLabel10,
             this.xrLabel9,
@@ -243,9 +244,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTable2,
             this.xrTable1,
             this.xrLabel31,
-            this.lbl_Signature,
             this.xrLabel87,
-            this.xrLabel103,
             this.lbl14,
             this.xrLabel95,
             this.lbl13,
@@ -1569,6 +1568,15 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             // 
+            // xrPanel1
+            // 
+            this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel103,
+            this.xrPictureBox1,
+            this.lbl_Signature});
+            resources.ApplyResources(this.xrPanel1, "xrPanel1");
+            this.xrPanel1.Name = "xrPanel1";
+            // 
             // ASRO2017
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1738,5 +1746,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        private DevExpress.XtraReports.UI.XRPanel xrPanel1;
     }
 }

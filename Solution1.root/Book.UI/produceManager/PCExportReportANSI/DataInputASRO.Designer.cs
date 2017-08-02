@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrSubreportProductTest = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreportPCOpticalMachine = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrSubreportAS = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrSubreportPCHaze = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable9 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.TCTSData = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCTSQuantity = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCTSEmployee = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrSubreportPCHaze = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrSubreportProductTest = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrSubreportPCOpticalMachine = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrSubreportAS = new DevExpress.XtraReports.UI.XRSubreport();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -75,104 +75,36 @@
             this.xrLabel4,
             this.xrSubreportAS});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 1095.587F;
+            this.Detail.HeightF = 1974.004F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // TopMargin
+            // xrSubreportPCHaze
             // 
-            this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 0F;
-            this.TopMargin.Name = "TopMargin";
-            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrSubreportPCHaze.Dpi = 254F;
+            this.xrSubreportPCHaze.LocationFloat = new DevExpress.Utils.PointFloat(31.74996F, 1751.542F);
+            this.xrSubreportPCHaze.Name = "xrSubreportPCHaze";
+            this.xrSubreportPCHaze.SizeF = new System.Drawing.SizeF(1963.417F, 95.46155F);
             // 
-            // BottomMargin
+            // xrLabel6
             // 
-            this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 80F;
-            this.BottomMargin.Name = "BottomMargin";
-            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrSubreportProductTest
-            // 
-            this.xrSubreportProductTest.Dpi = 254F;
-            this.xrSubreportProductTest.LocationFloat = new DevExpress.Utils.PointFloat(25.00001F, 272.9442F);
-            this.xrSubreportProductTest.Name = "xrSubreportProductTest";
-            this.xrSubreportProductTest.SizeF = new System.Drawing.SizeF(1963.417F, 95.46164F);
-            // 
-            // xrSubreportPCOpticalMachine
-            // 
-            this.xrSubreportPCOpticalMachine.Dpi = 254F;
-            this.xrSubreportPCOpticalMachine.LocationFloat = new DevExpress.Utils.PointFloat(25.00001F, 381F);
-            this.xrSubreportPCOpticalMachine.Name = "xrSubreportPCOpticalMachine";
-            this.xrSubreportPCOpticalMachine.SizeF = new System.Drawing.SizeF(1963.417F, 95.46173F);
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.Dpi = 254F;
-            this.xrLabel2.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 198.6491F);
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(1988.417F, 74.29501F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "Product Test Report/成品測試報告";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel1
-            // 
-            this.xrLabel1.Dpi = 254F;
-            this.xrLabel1.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 127F);
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(1988.417F, 71.64914F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "ALAN SAFETY/亦達光學股份有限公司";
-            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrSubreportAS
-            // 
-            this.xrSubreportAS.Dpi = 254F;
-            this.xrSubreportAS.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreportAS.Name = "xrSubreportAS";
-            this.xrSubreportAS.SizeF = new System.Drawing.SizeF(1988.417F, 95.46167F);
-            // 
-            // xrLabel4
-            // 
-            this.xrLabel4.Dpi = 254F;
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(31.75F, 571.5F);
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(457.7292F, 58.41998F);
-            this.xrLabel4.StylePriority.UseTextAlignment = false;
-            this.xrLabel4.Text = "REF：Section 7.1.2";
-            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel7
-            // 
-            this.xrLabel7.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel7.Dpi = 254F;
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(31.75F, 809.8366F);
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(1907.855F, 47.83667F);
-            this.xrLabel7.StylePriority.UseBorders = false;
-            this.xrLabel7.StylePriority.UseTextAlignment = false;
-            this.xrLabel7.Text = "(請參照光譜分析儀測試報告)";
-            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel6.Dpi = 254F;
+            this.xrLabel6.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(854.6042F, 1915.584F);
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(317.4998F, 58.42004F);
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.StylePriority.UseTextAlignment = false;
+            this.xrLabel6.Text = "ALAN SAFETY";
+            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrTable9
             // 
             this.xrTable9.BackColor = System.Drawing.Color.Silver;
             this.xrTable9.Dpi = 254F;
-            this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(31.75F, 635F);
+            this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(31.74996F, 1513.417F);
             this.xrTable9.Name = "xrTable9";
             this.xrTable9.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow9});
@@ -224,11 +156,50 @@
             this.xrTableCell18.Text = "Determination";
             this.xrTableCell18.Weight = 1.6121250302564061;
             // 
+            // xrLabel7
+            // 
+            this.xrLabel7.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel7.Dpi = 254F;
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(31.74996F, 1688.254F);
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(1907.855F, 47.83667F);
+            this.xrLabel7.StylePriority.UseBorders = false;
+            this.xrLabel7.StylePriority.UseTextAlignment = false;
+            this.xrLabel7.Text = "(請參照光譜分析儀測試報告)";
+            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel5
+            // 
+            this.xrLabel5.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
+                        | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrLabel5.Dpi = 254F;
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(31.74996F, 1640.417F);
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(1907.855F, 47.83667F);
+            this.xrLabel5.StylePriority.UseBorders = false;
+            this.xrLabel5.StylePriority.UseTextAlignment = false;
+            this.xrLabel5.Text = "Please See The Lens Certification Report of Spectrophotometer";
+            this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.Dpi = 254F;
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(31.74996F, 1386.417F);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(1140.354F, 58.41998F);
+            this.xrLabel3.StylePriority.UseTextAlignment = false;
+            this.xrLabel3.Text = "Luminous Transmittace & UV380 Transmittace(透視率與UV穿透率)";
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
             // xrTable1
             // 
             this.xrTable1.BackColor = System.Drawing.Color.Transparent;
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(31.75F, 698.5F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(31.74996F, 1576.917F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
@@ -278,50 +249,79 @@
             this.xrTableCell4.Text = "Pass";
             this.xrTableCell4.Weight = 1.6121250302564061;
             // 
-            // xrLabel3
+            // xrLabel2
             // 
-            this.xrLabel3.Dpi = 254F;
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(31.75F, 508F);
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(1140.354F, 58.41998F);
-            this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "Luminous Transmittace & UV380 Transmittace(透視率與UV穿透率)";
-            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel2.Dpi = 254F;
+            this.xrLabel2.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1077.066F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(1988.417F, 74.29501F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "Product Test Report/成品測試報告";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel5
+            // xrLabel1
             // 
-            this.xrLabel5.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrLabel5.Dpi = 254F;
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(31.75F, 762F);
-            this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(1907.855F, 47.83667F);
-            this.xrLabel5.StylePriority.UseBorders = false;
-            this.xrLabel5.StylePriority.UseTextAlignment = false;
-            this.xrLabel5.Text = "Please See The Lens Certification Report of Spectrophotometer";
-            this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrLabel1.Dpi = 254F;
+            this.xrLabel1.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Bold);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1005.417F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(1988.417F, 71.64914F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            this.xrLabel1.Text = "ALAN SAFETY/亦達光學股份有限公司";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel6
+            // xrSubreportProductTest
             // 
-            this.xrLabel6.Dpi = 254F;
-            this.xrLabel6.Font = new System.Drawing.Font("新細明體", 12F);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(854.6042F, 1037.167F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(317.4998F, 58.42004F);
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.StylePriority.UseTextAlignment = false;
-            this.xrLabel6.Text = "ALAN SAFETY";
-            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrSubreportProductTest.Dpi = 254F;
+            this.xrSubreportProductTest.LocationFloat = new DevExpress.Utils.PointFloat(24.99997F, 1151.361F);
+            this.xrSubreportProductTest.Name = "xrSubreportProductTest";
+            this.xrSubreportProductTest.SizeF = new System.Drawing.SizeF(1963.417F, 95.46164F);
             // 
-            // xrSubreportPCHaze
+            // xrSubreportPCOpticalMachine
             // 
-            this.xrSubreportPCHaze.Dpi = 254F;
-            this.xrSubreportPCHaze.LocationFloat = new DevExpress.Utils.PointFloat(31.75F, 873.125F);
-            this.xrSubreportPCHaze.Name = "xrSubreportPCHaze";
-            this.xrSubreportPCHaze.SizeF = new System.Drawing.SizeF(1963.417F, 95.46155F);
+            this.xrSubreportPCOpticalMachine.Dpi = 254F;
+            this.xrSubreportPCOpticalMachine.LocationFloat = new DevExpress.Utils.PointFloat(24.99997F, 1259.417F);
+            this.xrSubreportPCOpticalMachine.Name = "xrSubreportPCOpticalMachine";
+            this.xrSubreportPCOpticalMachine.SizeF = new System.Drawing.SizeF(1963.417F, 95.46173F);
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.Dpi = 254F;
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(31.74996F, 1449.917F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(457.7292F, 58.41998F);
+            this.xrLabel4.StylePriority.UseTextAlignment = false;
+            this.xrLabel4.Text = "REF：Section 7.1.2";
+            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrSubreportAS
+            // 
+            this.xrSubreportAS.Dpi = 254F;
+            this.xrSubreportAS.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreportAS.Name = "xrSubreportAS";
+            this.xrSubreportAS.SizeF = new System.Drawing.SizeF(1988.417F, 95.46167F);
+            // 
+            // TopMargin
+            // 
+            this.TopMargin.Dpi = 254F;
+            this.TopMargin.HeightF = 0F;
+            this.TopMargin.Name = "TopMargin";
+            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // BottomMargin
+            // 
+            this.BottomMargin.Dpi = 254F;
+            this.BottomMargin.HeightF = 80F;
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // DataInputASRO
             // 

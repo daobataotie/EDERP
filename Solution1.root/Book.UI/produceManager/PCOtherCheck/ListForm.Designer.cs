@@ -115,7 +115,7 @@
             // InvoiceCusXOId
             // 
             resources.ApplyResources(this.InvoiceCusXOId, "InvoiceCusXOId");
-            this.InvoiceCusXOId.FieldName = "InvoiceCusXOId";
+            this.InvoiceCusXOId.FieldName = "CusXOID";
             this.InvoiceCusXOId.Name = "InvoiceCusXOId";
             this.InvoiceCusXOId.OptionsColumn.AllowEdit = false;
             // 

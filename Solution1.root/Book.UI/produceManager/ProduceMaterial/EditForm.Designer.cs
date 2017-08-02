@@ -109,6 +109,8 @@
             this.barButtonItemQuery = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_Invoicexo = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -162,6 +164,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -195,6 +198,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btn_Invoicexo);
             this.layoutControl1.Controls.Add(this.textEditAuditState);
             this.layoutControl1.Controls.Add(this.textEditPiHao);
             this.layoutControl1.Controls.Add(this.sBMRP);
@@ -260,7 +264,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit1.Properties.Buttons"))))});
             this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
             resources.GetString("comboBoxEdit1.Properties.Items"),
-            resources.GetString("comboBoxEdit1.Properties.Items1")});
+            resources.GetString("comboBoxEdit1.Properties.Items1"),
+            resources.GetString("comboBoxEdit1.Properties.Items2")});
             this.comboBoxEdit1.StyleController = this.layoutControl1;
             // 
             // calcEditInvoiceSum
@@ -633,7 +638,8 @@
             this.layoutControlItem1,
             this.layoutControlItem14,
             this.layoutControlItem18,
-            this.layoutControlItem20});
+            this.layoutControlItem20,
+            this.layoutControlItem21});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(976, 389);
@@ -795,9 +801,9 @@
             // emptySpaceItem3
             // 
             resources.ApplyResources(this.emptySpaceItem3, "emptySpaceItem3");
-            this.emptySpaceItem3.Location = new System.Drawing.Point(343, 75);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(524, 75);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(613, 26);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(432, 26);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
@@ -910,6 +916,24 @@
             this.layoutControlItem19.TextSize = new System.Drawing.Size(76, 14);
             this.layoutControlItem19.TextToControlDistance = 5;
             // 
+            // btn_Invoicexo
+            // 
+            resources.ApplyResources(this.btn_Invoicexo, "btn_Invoicexo");
+            this.btn_Invoicexo.Name = "btn_Invoicexo";
+            this.btn_Invoicexo.StyleController = this.layoutControl1;
+            this.btn_Invoicexo.Click += new System.EventHandler(this.btn_Invoicexo_Click);
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.btn_Invoicexo;
+            resources.ApplyResources(this.layoutControlItem21, "layoutControlItem21");
+            this.layoutControlItem21.Location = new System.Drawing.Point(343, 75);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(181, 26);
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem21.TextToControlDistance = 0;
+            this.layoutControlItem21.TextVisible = false;
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -971,6 +995,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1056,5 +1081,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraGrid.Columns.GridColumn ColCusProductId;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private DevExpress.XtraEditors.SimpleButton btn_Invoicexo;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
     }
 }

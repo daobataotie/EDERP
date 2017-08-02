@@ -341,11 +341,12 @@
             resources.ApplyResources(this.PCOtherCheckDetailDesc1, "PCOtherCheckDetailDesc1");
             this.PCOtherCheckDetailDesc1.FieldName = "PCOtherCheckDetailDesc1";
             this.PCOtherCheckDetailDesc1.Name = "PCOtherCheckDetailDesc1";
+            this.PCOtherCheckDetailDesc1.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn1
             // 
             resources.ApplyResources(this.gridColumn1, "gridColumn1");
-            this.gridColumn1.FieldName = "InvoiceCusXOId";
+            this.gridColumn1.FieldName = "CusXOID";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             // 
