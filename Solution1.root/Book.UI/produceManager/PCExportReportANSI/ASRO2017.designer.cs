@@ -36,7 +36,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrLabel103 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.lbl_Signature = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
@@ -106,9 +109,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbl_Signature = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel87 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel103 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel95 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl13 = new DevExpress.XtraReports.UI.XRLabel();
@@ -174,7 +175,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbOrderNo = new DevExpress.XtraReports.UI.XRLabel();
             this.LbBuyer = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -312,11 +312,35 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             // 
+            // xrPanel1
+            // 
+            this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel103,
+            this.xrPictureBox1,
+            this.lbl_Signature});
+            resources.ApplyResources(this.xrPanel1, "xrPanel1");
+            this.xrPanel1.Name = "xrPanel1";
+            // 
+            // xrLabel103
+            // 
+            resources.ApplyResources(this.xrLabel103, "xrLabel103");
+            this.xrLabel103.Name = "xrLabel103";
+            this.xrLabel103.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel103.StylePriority.UseFont = false;
+            this.xrLabel103.StylePriority.UseTextAlignment = false;
+            // 
             // xrPictureBox1
             // 
             resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
             this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
             this.xrPictureBox1.Name = "xrPictureBox1";
+            // 
+            // lbl_Signature
+            // 
+            resources.ApplyResources(this.lbl_Signature, "lbl_Signature");
+            this.lbl_Signature.Name = "lbl_Signature";
+            this.lbl_Signature.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Signature.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel11
             // 
@@ -854,13 +878,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel31.StylePriority.UseFont = false;
             this.xrLabel31.StylePriority.UseTextAlignment = false;
             // 
-            // lbl_Signature
-            // 
-            resources.ApplyResources(this.lbl_Signature, "lbl_Signature");
-            this.lbl_Signature.Name = "lbl_Signature";
-            this.lbl_Signature.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_Signature.StylePriority.UseTextAlignment = false;
-            // 
             // xrLabel87
             // 
             this.xrLabel87.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
@@ -873,14 +890,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel87.StylePriority.UseBorders = false;
             this.xrLabel87.StylePriority.UseFont = false;
             this.xrLabel87.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel103
-            // 
-            resources.ApplyResources(this.xrLabel103, "xrLabel103");
-            this.xrLabel103.Name = "xrLabel103";
-            this.xrLabel103.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel103.StylePriority.UseFont = false;
-            this.xrLabel103.StylePriority.UseTextAlignment = false;
             // 
             // lbl14
             // 
@@ -1567,15 +1576,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // 
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
-            // 
-            // xrPanel1
-            // 
-            this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel103,
-            this.xrPictureBox1,
-            this.lbl_Signature});
-            resources.ApplyResources(this.xrPanel1, "xrPanel1");
-            this.xrPanel1.Name = "xrPanel1";
             // 
             // ASRO2017
             // 

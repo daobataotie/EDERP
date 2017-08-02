@@ -39,7 +39,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel2.Text = "Assembled Eye protectors ¨C Quality Control Test Report";
             this.LbModelNo.Text = _PCExportReportANSI.Product == null ? null : _PCExportReportANSI.Product.CustomerProductName;
             this.LbTestDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
-            this.xrLabel7.Text = "Issue date : " + (_PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("MMM£¬yyyy", new System.Globalization.CultureInfo("en-us")));
+            //this.xrLabel7.Text = "Issue date : " + (_PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("MMM£¬yyyy", new System.Globalization.CultureInfo("en-us")));  ÈÕÆÚ¹Ì¶¨
             this.xrLabel13.Text = string.IsNullOrEmpty(_PCExportReportANSI.CSAJiShuBiaoZhun) ? "Tested against AS/NZS 1337.1:2010 " : _PCExportReportANSI.CSAJiShuBiaoZhun;
 
             this.LbQtyTest.Text = (_PCExportReportANSI.QuYangShu2.HasValue ? _PCExportReportANSI.QuYangShu2.Value.ToString() : "0") + "PCS";

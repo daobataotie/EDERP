@@ -176,12 +176,6 @@
   <data name="xrPanel1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrPanel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2309.102, 1515.85339</value>
-  </data>
-  <data name="xrPanel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>547.439453, 188.277222</value>
-  </data>
   <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9pt</value>
   </data>
@@ -277,10 +271,10 @@
     <value>MiddleLeft</value>
   </data>
   <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>682.6247, 1545.60059</value>
+    <value>1446.64929, 1545.60059</value>
   </data>
   <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>296.333374, 47.8369141</value>
+    <value>271.8993, 47.8369141</value>
   </data>
   <data name="xrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -289,7 +283,7 @@
     <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>473.605377, 1545.60059</value>
+    <value>1237.63, 1545.60059</value>
   </data>
   <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>209.019287, 47.8369141</value>
@@ -727,7 +721,7 @@
     <value>R7–08–05</value>
   </data>
   <data name="xrLabel81.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1039.81287, 1543.3783</value>
+    <value>1754.188, 1543.3783</value>
   </data>
   <data name="xrLabel81.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>545.041748, 47.836792</value>
@@ -739,10 +733,10 @@
     <value>MiddleLeft</value>
   </data>
   <data name="LbTester.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>123.844505, 1545.60059</value>
+    <value>121.708214, 1545.60059</value>
   </data>
   <data name="LbTester.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>296.3334, 47.8369141</value>
+    <value>1078.67261, 47.8369141</value>
   </data>
   <data name="xrLabel79.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2.64583325, 1545.60059</value>
@@ -1105,7 +1099,7 @@ steel Rod.</value>
     <value>521.2295, 45.190834</value>
   </data>
   <data name="xrLabel7.Text" xml:space="preserve">
-    <value />
+    <value>Issue date : Jan, 2017 </value>
   </data>
   <data name="LbOrderNo.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 62.2065544</value>

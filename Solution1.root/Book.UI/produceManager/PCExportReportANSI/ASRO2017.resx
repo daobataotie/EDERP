@@ -491,6 +491,9 @@
   <data name="xrTableCell44.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrLabel72.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="xrTableCell2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -1239,9 +1242,6 @@ Dislodgement.</value>
   <data name="xrLabel90.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2310.313, 429.0476</value>
   </data>
-  <data name="CheckMdeium.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1815.04065, 431.375</value>
-  </data>
   <data name="xrLabel95.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2651.624, 429.046478</value>
   </data>
@@ -1337,8 +1337,8 @@ Dislodgement.</value>
   <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>739.2455, 148.387451</value>
   </data>
-  <data name="xrLabel72.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="lbl2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2533.59473, 1095.69678</value>
   </data>
   <data name="CheckPriVDwn.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1400,8 +1400,8 @@ Dislodgement.</value>
   <data name="lbl7.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>120.97168, 355.3734</value>
   </data>
-  <data name="lbl2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2533.59473, 1095.69678</value>
+  <data name="CheckMdeium.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1815.04065, 431.375</value>
   </data>
   <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>2810.374, 69.00338</value>
