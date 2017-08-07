@@ -106,6 +106,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ExportReportId = this._PCExportReportANSIManager.GetId();
             this._PCExportReportANSI.ReportDate = DateTime.Now.Date;
             this._PCExportReportANSI.ExpType = "XJEN";
+
+            this._PCExportReportANSI.Employee = BL.V.ActiveOperator.Employee;
+            this._PCExportReportANSI.EmployeeId = BL.V.ActiveOperator.EmployeeId;
         }
 
         protected override void Delete()

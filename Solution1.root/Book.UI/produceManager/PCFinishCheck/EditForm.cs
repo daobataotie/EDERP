@@ -163,8 +163,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             this._PCFC.PCFinishCheckID = this._PCFCManager.GetId();
             this._PCFC.PCFinishCheckDate = DateTime.Now.Date;
             this._PCFC.PCFinishCheckCount = 1;  //默认抽检数量为1
-            //this._PCFC.Employee0 = BL.V.ActiveOperator.Employee;
-            //this._PCFC.Employee0Id = BL.V.ActiveOperator.EmployeeId;
+            this._PCFC.Employee0 = BL.V.ActiveOperator.Employee;
+            this._PCFC.Employee0Id = BL.V.ActiveOperator.EmployeeId;
         }
 
         protected override void Save()

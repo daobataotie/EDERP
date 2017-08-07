@@ -2367,6 +2367,60 @@ namespace Book.Model
         }
 
         public readonly static string PRO_LowImpact = "LowImpact";
+
+        private string _employeeId2;
+
+        public string EmployeeId2
+        {
+            get { return _employeeId2; }
+            set { _employeeId2 = value; }
+        }
+
+        private Employee _employee2;
+
+        public Employee Employee2
+        {
+            get { return _employee2; }
+            set { _employee2 = value; }
+        }
+
+        public readonly static string PRO_EmployeeId2 = "EmployeeId2";
+
+        private string _employeeId3;
+
+        public string EmployeeId3
+        {
+            get { return _employeeId3; }
+            set { _employeeId3 = value; }
+        }
+
+        private Employee _employee3;
+
+        public Employee Employee3
+        {
+            get { return _employee3; }
+            set { _employee3 = value; }
+        }
+
+        public readonly static string PRO_EmployeeId3 = "EmployeeId3";
+
+        private string _employeeId4;
+
+        public string EmployeeId4
+        {
+            get { return _employeeId4; }
+            set { _employeeId4 = value; }
+        }
+
+        private Employee _employee4;
+
+        public Employee Employee4
+        {
+            get { return _employee4; }
+            set { _employee4 = value; }
+        }
+
+        public readonly static string PRO_EmployeeId4 = "EmployeeId4";
     }
 }
     

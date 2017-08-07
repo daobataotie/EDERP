@@ -72,6 +72,9 @@ namespace Book.UI.produceManager.PCOpticsCheck
             this._PCOPC.PCOpticsCheckId = this._PCOCManager.GetId();
             this._PCOPC.PCOpticsCheckDate = DateTime.Now.Date;
             this._PCOPC.PCOpticsCheckQuantity = 1;  //默认检测数量为1
+            this._PCOPC.Employee = BL.V.ActiveOperator.Employee;
+            this._PCOPC.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
         }
 
         public override void Refresh()

@@ -71,6 +71,9 @@ namespace Book.UI.produceManager.PCPenetrateCheck
             this._PCPC.PCPenetrateCheckId = this._PCPCManager.GetId();
             this._PCPC.PCPenetrateCheckDate = DateTime.Now;
             this._PCPC.PCPenetrateCheckQuantity = 1;    //默认检测数量为1
+
+            this._PCPC.Employee = BL.V.ActiveOperator.Employee;
+            this._PCPC.EmployeeId = BL.V.ActiveOperator.EmployeeId;
         }
 
         public override void Refresh()

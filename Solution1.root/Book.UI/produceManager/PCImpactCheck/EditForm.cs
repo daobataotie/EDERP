@@ -73,8 +73,8 @@ namespace Book.UI.produceManager.PCImpactCheck
             this._PCIC.PCFromType = -1;
             this._PCIC.PCImpactCheckQuantity = 1;       //默认抽检数量为1
 
-            //this._PCIC.Employee = BL.V.ActiveOperator.Employee;
-            //this._PCIC.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+            this._PCIC.Employee = BL.V.ActiveOperator.Employee;
+            this._PCIC.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 
             //初始化一条详细
             this._PCIC.Details = new List<Model.PCImpactCheckDetail>();

@@ -106,6 +106,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ReportDate = DateTime.Now.Date;
             this._PCExportReportANSI.ExpType = "CEEN";
 
+            this._PCExportReportANSI.Employee = BL.V.ActiveOperator.Employee;
+            this._PCExportReportANSI.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
             this._PCExportReportANSI.ShouCeShu2 = 2;
             this._PCExportReportANSI.ShouCeShu3 = 2;
             this._PCExportReportANSI.ShouCeShu4 = 2;

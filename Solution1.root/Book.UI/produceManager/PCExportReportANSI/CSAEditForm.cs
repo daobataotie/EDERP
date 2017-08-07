@@ -116,7 +116,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ExportReportId = this._PCExportReportANSIManager.GetId();
             this._PCExportReportANSI.ReportDate = DateTime.Now.Date;
             this._PCExportReportANSI.ExpType = "CSA";
-
+            
+            this._PCExportReportANSI.Employee = BL.V.ActiveOperator.Employee;
+            this._PCExportReportANSI.EmployeeId = BL.V.ActiveOperator.EmployeeId;
             //var jiShuBiaoZhun = new BL.SettingManager().SelectByName("CSAJiShuBiaoZhun").FirstOrDefault();
             //this._PCExportReportANSI.CSAJiShuBiaoZhun = jiShuBiaoZhun == null ? "CSA Z94.3-2015" : jiShuBiaoZhun.SettingCurrentValue; 
 

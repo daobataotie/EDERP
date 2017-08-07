@@ -95,7 +95,8 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this._pcdic.PCDoubleImpactCheckDate = DateTime.Now.Date;
             this._pcdic.PCDoubleImpactCheckType = 0;
             this._pcdic.PCDoubleImpactCheckCount = 1;   //默认抽检数量为1
-            //this._pcdic.Employee = BL.V.ActiveOperator.Employee;
+            this._pcdic.Employee = BL.V.ActiveOperator.Employee;
+            this._pcdic.EmployeeId = BL.V.ActiveOperator.EmployeeId;
             //初始化一条详细
             this._pcdic.Detail = new List<Model.PCDoubleImpactCheckDetail>();
             this.AddDataRows();

@@ -69,6 +69,8 @@ namespace Book.UI.produceManager.PCFogCheck
             this._pcfog.PCFogCheckId = this._pcfogManager.GetId();
             this._pcfog.PCFogCheckDate = DateTime.Now.Date;
             this._pcfog.PCFogCheckQuantity = 1;     //默认检测数量为1
+            this._pcfog.Employee = BL.V.ActiveOperator.Employee;
+            this._pcfog.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 
             this._pcfog.Details = new List<Model.PCFogCheckDetail>();
             Model.PCFogCheckDetail pcfcd = new Book.Model.PCFogCheckDetail();

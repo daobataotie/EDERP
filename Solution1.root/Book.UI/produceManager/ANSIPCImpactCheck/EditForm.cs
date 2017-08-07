@@ -125,8 +125,8 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
             this._ansipcic.ANSIPCImpactCheckID = this._ansipcicManager.GetId();
             this._ansipcic.ANSIPCImpactCheckDate = DateTime.Now.Date;
             this._ansipcic.ANSIPCImpactCheckCount = 1;  //检测数量默认为1
-            //this._ansipcic.Employee = BL.V.ActiveOperator.Employee;
-            //this._ansipcic.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+            this._ansipcic.Employee = BL.V.ActiveOperator.Employee;
+            this._ansipcic.EmployeeId = BL.V.ActiveOperator.EmployeeId;
             //初始化添加一条详细
             this._ansipcic.Details = new List<Model.ANSIPCImpactCheckDetail>();
             this.AddDataRows();

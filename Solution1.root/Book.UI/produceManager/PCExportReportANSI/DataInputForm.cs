@@ -101,6 +101,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCDataInput.PCDataInputId = Guid.NewGuid().ToString();
             this._PCDataInput.PCDataInputDate = DateTime.Now;
             this.action = "insert";
+
         }
 
         public override void Refresh()

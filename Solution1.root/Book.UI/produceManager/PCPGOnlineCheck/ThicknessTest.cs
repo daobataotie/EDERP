@@ -41,6 +41,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this._ThicknessTest.ThicknessTestId = this._ThicknessTestManager.GetId();
             this._ThicknessTest.PCPGOnlineCheckDetailId = this._PCPGOnlineCheckDetailId;
             this._ThicknessTest.ThicknessTestDate = DateTime.Now;
+            this._ThicknessTest.Employee = BL.V.ActiveOperator.Employee;
+            this._ThicknessTest.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 
             this._ThicknessTest.Details = new List<Model.ThicknessTestDetails>();
             for (int i = 1; i < 9; i++)

@@ -71,8 +71,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this._pcpgoc.PCPGOnlineCheckId = this._pcpgocManager.GetId();
             this._pcpgoc.PCPGOnlineCheckDate = DateTime.Now.Date;
             this._pcpgoc.PCPGOnlineCheckType = -1;
-            //this._pcpgoc.Employee = BL.V.ActiveOperator.Employee;
-            //this._pcpgoc.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+            this._pcpgoc.Employee = BL.V.ActiveOperator.Employee;
+            this._pcpgoc.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 
             //初始化一条详细
             this._pcpgoc.Details = new List<Model.PCPGOnlineCheckDetail>();

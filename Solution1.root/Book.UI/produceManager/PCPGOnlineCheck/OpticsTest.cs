@@ -69,6 +69,9 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this._OpticsTest.RattrA = 180;
             this._OpticsTest.LattrC = 0;
             this._OpticsTest.RattrC = 0;
+
+            this._OpticsTest.Employee = BL.V.ActiveOperator.Employee;
+            this._OpticsTest.EmployeeId = BL.V.ActiveOperator.EmployeeId;
         }
 
         protected override void Delete()

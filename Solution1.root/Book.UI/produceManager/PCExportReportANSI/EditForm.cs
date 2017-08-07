@@ -80,6 +80,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._pcExpANSI.ReportDate = DateTime.Now.Date;
             this._pcExpANSI.ExpType = "ANSI";
 
+            this._pcExpANSI.Employee = BL.V.ActiveOperator.Employee;
+            this._pcExpANSI.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
             this._pcExpANSI.PanDing1 = 2;
             this._pcExpANSI.PanDing2 = 2;
             this._pcExpANSI.PanDing3 = 1;
