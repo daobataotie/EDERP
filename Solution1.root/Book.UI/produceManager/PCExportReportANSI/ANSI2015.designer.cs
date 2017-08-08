@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ANSI2015));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cob_Singnature = new DevExpress.XtraEditors.ComboBoxEdit();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel1 = new System.Windows.Forms.Panel();
             this.memoTrans = new DevExpress.XtraEditors.MemoEdit();
@@ -154,16 +155,22 @@
             this.layoutControlItem106 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.BarBtnCutomerOrder = new DevExpress.XtraBars.BarButtonItem();
             this.BarBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintAlan = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintPPE = new DevExpress.XtraBars.BarButtonItem();
-            this.cob_Singnature = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.NccTestPerson2 = new Book.UI.Invoices.NewChooseContorl();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.NccTestPerson3 = new Book.UI.Invoices.NewChooseContorl();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.NccTestPerson4 = new Book.UI.Invoices.NewChooseContorl();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Singnature.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoTrans.Properties)).BeginInit();
@@ -228,8 +235,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem106)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cob_Singnature.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -256,6 +265,9 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.NccTestPerson4);
+            this.layoutControl1.Controls.Add(this.NccTestPerson3);
+            this.layoutControl1.Controls.Add(this.NccTestPerson2);
             this.layoutControl1.Controls.Add(this.cob_Singnature);
             this.layoutControl1.Controls.Add(this.comboBoxEdit1);
             this.layoutControl1.Controls.Add(this.panel1);
@@ -275,6 +287,15 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1146, 344, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // cob_Singnature
+            // 
+            resources.ApplyResources(this.cob_Singnature, "cob_Singnature");
+            this.cob_Singnature.MenuManager = this.barManager1;
+            this.cob_Singnature.Name = "cob_Singnature";
+            this.cob_Singnature.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_Singnature.Properties.Buttons"))))});
+            this.cob_Singnature.StyleController = this.layoutControl1;
             // 
             // comboBoxEdit1
             // 
@@ -1202,10 +1223,13 @@
             this.layoutControlItem106,
             this.layoutControlItem7,
             this.layoutControlItem10,
-            this.layoutControlItem11});
+            this.layoutControlItem11,
+            this.layoutControlItem12,
+            this.layoutControlItem13,
+            this.layoutControlItem14});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(888, 614);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(888, 645);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -1327,9 +1351,9 @@
             // 
             this.layoutControlItem7.Control = this.panel1;
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 100);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 124);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(868, 494);
+            this.layoutControlItem7.Size = new System.Drawing.Size(868, 501);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
             this.layoutControlItem7.TextVisible = false;
@@ -1344,6 +1368,16 @@
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextToControlDistance = 0;
             this.layoutControlItem10.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.cob_Singnature;
+            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
+            this.layoutControlItem11.Location = new System.Drawing.Point(542, 75);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(326, 25);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(84, 14);
+            this.layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // BarBtnCutomerOrder
             // 
@@ -1373,24 +1407,50 @@
             this.barPrintPPE.Name = "barPrintPPE";
             this.barPrintPPE.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPrintPPE_ItemClick);
             // 
-            // cob_Singnature
+            // NccTestPerson2
             // 
-            resources.ApplyResources(this.cob_Singnature, "cob_Singnature");
-            this.cob_Singnature.MenuManager = this.barManager1;
-            this.cob_Singnature.Name = "cob_Singnature";
-            this.cob_Singnature.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit2.Properties.Buttons"))))});
-            this.cob_Singnature.StyleController = this.layoutControl1;
+            this.NccTestPerson2.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson2, "NccTestPerson2");
+            this.NccTestPerson2.Name = "NccTestPerson2";
             // 
-            // layoutControlItem11
+            // layoutControlItem12
             // 
-            this.layoutControlItem11.Control = this.cob_Singnature;
-            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(542, 75);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(326, 25);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(84, 14);
-            this.layoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            this.layoutControlItem12.Control = this.NccTestPerson2;
+            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 100);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(264, 24);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(84, 14);
+            // 
+            // NccTestPerson3
+            // 
+            this.NccTestPerson3.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson3, "NccTestPerson3");
+            this.NccTestPerson3.Name = "NccTestPerson3";
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.NccTestPerson3;
+            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
+            this.layoutControlItem13.Location = new System.Drawing.Point(264, 100);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(278, 24);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(84, 14);
+            // 
+            // NccTestPerson4
+            // 
+            this.NccTestPerson4.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson4, "NccTestPerson4");
+            this.NccTestPerson4.Name = "NccTestPerson4";
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.NccTestPerson4;
+            resources.ApplyResources(this.layoutControlItem14, "layoutControlItem14");
+            this.layoutControlItem14.Location = new System.Drawing.Point(542, 100);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(326, 24);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(84, 14);
             // 
             // ANSI2015
             // 
@@ -1403,6 +1463,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Singnature.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.memoTrans.Properties)).EndInit();
@@ -1467,8 +1528,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem106)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cob_Singnature.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1605,5 +1668,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraEditors.ComboBoxEdit cob_Singnature;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private Book.UI.Invoices.NewChooseContorl NccTestPerson4;
+        private Book.UI.Invoices.NewChooseContorl NccTestPerson3;
+        private Book.UI.Invoices.NewChooseContorl NccTestPerson2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
     }
 }

@@ -37,6 +37,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             this.NccCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.NccTestPerson.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.NccTestPerson2.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.NccTestPerson3.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            this.NccTestPerson4.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.newChooseContorlAuditEmp.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
             this.action = "view";
@@ -174,6 +177,21 @@ namespace Book.UI.produceManager.PCExportReportANSI
             {
                 this._PCExportReportANSI.EmployeeId = this._PCExportReportANSI.Employee.EmployeeId;
             }
+            this._PCExportReportANSI.Employee2 = (this.NccTestPerson2.EditValue as Model.Employee);
+            if (this._PCExportReportANSI.Employee2 != null)
+            {
+                this._PCExportReportANSI.EmployeeId2 = this._PCExportReportANSI.Employee2.EmployeeId;
+            }
+            this._PCExportReportANSI.Employee3 = (this.NccTestPerson3.EditValue as Model.Employee);
+            if (this._PCExportReportANSI.Employee3 != null)
+            {
+                this._PCExportReportANSI.EmployeeId3 = this._PCExportReportANSI.Employee3.EmployeeId;
+            }
+            this._PCExportReportANSI.Employee4 = (this.NccTestPerson4.EditValue as Model.Employee);
+            if (this._PCExportReportANSI.Employee4 != null)
+            {
+                this._PCExportReportANSI.EmployeeId4 = this._PCExportReportANSI.Employee4.EmployeeId;
+            }
 
             this._PCExportReportANSI.Product = (this.TxtProduct.EditValue as Model.Product);
             if (this._PCExportReportANSI.Product != null)
@@ -254,6 +272,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TxtCustomersId.Text = this._PCExportReportANSI.InvoiceCusXOId;
             this.NccCustomer.EditValue = this._PCExportReportANSI.Customer;
             this.NccTestPerson.EditValue = this._PCExportReportANSI.Employee;
+            this.NccTestPerson2.EditValue = this._PCExportReportANSI.Employee2;
+            this.NccTestPerson3.EditValue = this._PCExportReportANSI.Employee3;
+            this.NccTestPerson4.EditValue = this._PCExportReportANSI.Employee4;
             this.SpinOrderAmount.EditValue = this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.Value : 0;
             this.SpinTestAmount.EditValue = this._PCExportReportANSI.AmountTest.HasValue ? this._PCExportReportANSI.AmountTest.Value : 0;
             this.DateReportDate.EditValue = this._PCExportReportANSI.ReportDate.Value;

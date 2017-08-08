@@ -1664,7 +1664,7 @@
     <value>2.00345087, 137.583328</value>
   </data>
   <data name="xrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>488.231018, 51.9399719</value>
+    <value>467.70578, 51.9399872</value>
   </data>
   <data name="xrLabel13.Text" xml:space="preserve">
     <value>Technician(執行測試員)：</value>
@@ -1676,10 +1676,10 @@
     <value>254</value>
   </data>
   <data name="LbTesrPerson.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>490.234375, 137.583328</value>
+    <value>469.709229, 137.583328</value>
   </data>
   <data name="LbTesrPerson.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>497.4157, 51.9399719</value>
+    <value>517.940857, 51.9399872</value>
   </data>
   <data name="LbTesrPerson.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -1694,7 +1694,7 @@
     <value>0, 222.25</value>
   </data>
   <data name="xrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>488.2301, 51.9399719</value>
+    <value>469.709259, 51.9399719</value>
   </data>
   <data name="xrLabel19.Text" xml:space="preserve">
     <value>Report Date(測試報告日期)  ：
@@ -1708,10 +1708,10 @@
     <value>254</value>
   </data>
   <data name="LbReportDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>488.230225, 222.25</value>
+    <value>469.709229, 222.25</value>
   </data>
   <data name="LbReportDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>497.416443, 51.9399719</value>
+    <value>515.9373, 51.9399719</value>
   </data>
   <data name="LbReportDate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -1820,7 +1820,7 @@
     <value>0, 68.79159</value>
   </data>
   <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>490.2345, 51.93998</value>
+    <value>469.709259, 51.93998</value>
   </data>
   <data name="xrLabel9.Text" xml:space="preserve">
     <value>Product(客户型号)：
@@ -1834,10 +1834,10 @@
     <value>254</value>
   </data>
   <data name="LbProduct.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>490.234436, 68.79159</value>
+    <value>469.709229, 68.79159</value>
   </data>
   <data name="LbProduct.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>497.415527, 51.93998</value>
+    <value>517.940735, 51.93998</value>
   </data>
   <data name="LbProduct.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -1852,7 +1852,7 @@
     <value>2.00345087, 0.0008074443</value>
   </data>
   <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>488.230225, 51.93998</value>
+    <value>467.70578, 51.93998</value>
   </data>
   <data name="xrLabel7.Text" xml:space="preserve">
     <value>P.O. # (Lot)(訂單號碼)：
@@ -1866,10 +1866,10 @@
     <value>254</value>
   </data>
   <data name="LbOrderId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>490.233643, 0.0008074443</value>
+    <value>469.709229, 0.0008074443</value>
   </data>
   <data name="LbOrderId.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>497.4154, 51.93998</value>
+    <value>517.9398, 51.93998</value>
   </data>
   <data name="LbOrderId.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>

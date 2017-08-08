@@ -1469,8 +1469,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbTesrPerson.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             resources.ApplyResources(this.LbTesrPerson, "LbTesrPerson");
             this.LbTesrPerson.Name = "LbTesrPerson";
-            this.LbTesrPerson.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.LbTesrPerson.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 0, 0, 254F);
             this.LbTesrPerson.StylePriority.UseBorders = false;
+            this.LbTesrPerson.StylePriority.UsePadding = false;
             this.LbTesrPerson.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel19

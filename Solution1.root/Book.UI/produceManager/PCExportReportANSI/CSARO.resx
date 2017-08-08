@@ -727,6 +727,9 @@ Base out≦0.75 prism dioptre.</value>
   <data name="LbTesrPerson.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>503.75, 51.94</value>
   </data>
+  <data name="LbTesrPerson.Text" xml:space="preserve">
+    <value>測試是 / 馮紹峰 / 都放壞 / 防結的</value>
+  </data>
   <data name="LbTesrPerson.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
