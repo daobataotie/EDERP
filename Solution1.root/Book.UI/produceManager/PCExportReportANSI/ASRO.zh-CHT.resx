@@ -118,58 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="xrPictureBox1.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAI4AAAAgCAIAAABLidfBAAAABGdBTUEAALGPC/xhBQAAA2tJREFUaEPt
-        WVuSwjAM41w9UM/T0/QyHIYlbR62LCemwwKdqf6IX5KVwM7s7XHhJLisOg0uq06Dy6rTYGzVfZ2nm8S0
-        3HMoivtSOrxe+89Y58zMwecJZ0Z2cOBVtUVXvCDAVM9rjnwdRBjBR80SlMzc0BfgYbPoMn7Eq9F7yviW
-        U3ZNEauoqIAEUTev7cNHxXuIvagPXytJym4p8FvliBptXBnVvy/fwMirb5AUnMj4kVUdRV0xwqjNU/z8
-        cxAEE75DMm+bDx9YBQIUOmpk2Zb2c48KYG7kD5LsWiUETMtq3pcnR/lrnBrc1/DtLonvWOrrTumKgaaE
-        mK6cRcf3rBLdU2cY5o1jIqATh+lfQEpe8D4AM7nrlMPTrYnrEpmkm2+VnLAVmqtH2WliQadw86gOqtwr
-        Xev4GAc4rVOtUudVESFVL+lSQdLMswqHJEQk6Zw9QZyNzPVGqToI5hibHALOcmtVopFmxMlYQJcOEQ6O
-        VWyMHWQa6uu+h8UZMUq19CfJSohtRYYZm8URLdV5OUceqjKVHdEFEdzsE9QqtXHBAJx4QnfEeCqtZ2S4
-        zhcJrFGBVYsnG9TiOrDFhKhhlHPEqZx3QJfvYYWyCjsFIHURIvWIjIZ0kcF2X8LUFwu6b4JjThU2uVqX
-        HNGFEUaiWRXcAUI0xQ7lvmeySYLPu0VwLTtyPMoyaBWZJSg2mLF+/yO6TIiRyFbxNiFU0thDq9mjlUI/
-        2e4mxz2e8wIBunAD0o574N8QyD+my1GrUV6VtwPAtCyWdF5Lb16O1SMzTiYzLnucs0wxHB6yirSTPBRw
-        ACDXHdOFAU5C/FZhgaOWcN4zTcBY2DraJpleDkwz/X8mma3rKkJWuSwcsF03pJHHdMU2X62KOZvg7asv
-        RHckPQSeVCkdO6GKitNvIIRDDjv0uVUSni6ockh4v1U9zoxPyifSG6Chr2lPpITgUNmBDXsCMgyHgb9l
-        /NbaENyL36DLY75ZRes7MPm3aVoo/x1sBTRVJFJOchHIEQsGGp6AtXYLWvfC0ak+pEseujSSVbp6LDFB
-        EIUC3Y25VCHV2sTWSMRKCWXZ+sVE1Aldlk8IoiVVcsf6A7pKTYe4+LPiggd1+9Iy1cHI53fhsioC9YQk
-        PmVTwmVVEMat2HfsG3FZdRpcVp0Gl1UnwePxB5K4acfdd1GYAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>132.291992, 71.4360352</value>
-  </data>
-  <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>166.188171, 58.20691</value>
-  </data>
-  <data name="lbl_Signature.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>97.8977661, 156.102539</value>
-  </data>
-  <data name="xrLabel103.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>166.188232, 0.000122070313</value>
-  </data>
-  <data name="xrLabel103.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>307.4165, 58.2067871</value>
-  </data>
-  <data name="xrPanel1.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrPanel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2175.37573, 1336.04041</value>
-  </data>
-  <data name="xrPanel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>636.624, 211.876709</value>
-  </data>
   <data name="lbl_OrderQuantity.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbl_OrderQuantity.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt, style=Bold, Underline</value>
   </data>
@@ -180,6 +132,7 @@
   <data name="lbl_OrderQuantity.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>933.9788, 1336.04016</value>
   </data>
@@ -643,7 +596,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel83.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2495.52051, 1547.91711</value>
+    <value>2495.51953, 1500.50366</value>
   </data>
   <data name="xrLabel83.Text" xml:space="preserve">
     <value>R7–08–03–C</value>
@@ -816,7 +769,36 @@
   <data name="LbBuyer.Text" xml:space="preserve">
     <value>BUYER(客戶):</value>
   </data>
+  <data name="lbl_Signature.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2310.31982, 1434.14612</value>
+  </data>
+  <data name="xrPictureBox1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAI4AAAAgCAIAAABLidfBAAAABGdBTUEAALGPC/xhBQAAA2tJREFUaEPt
+        WVuSwjAM41w9UM/T0/QyHIYlbR62LCemwwKdqf6IX5KVwM7s7XHhJLisOg0uq06Dy6rTYGzVfZ2nm8S0
+        3HMoivtSOrxe+89Y58zMwecJZ0Z2cOBVtUVXvCDAVM9rjnwdRBjBR80SlMzc0BfgYbPoMn7Eq9F7yviW
+        U3ZNEauoqIAEUTev7cNHxXuIvagPXytJym4p8FvliBptXBnVvy/fwMirb5AUnMj4kVUdRV0xwqjNU/z8
+        cxAEE75DMm+bDx9YBQIUOmpk2Zb2c48KYG7kD5LsWiUETMtq3pcnR/lrnBrc1/DtLonvWOrrTumKgaaE
+        mK6cRcf3rBLdU2cY5o1jIqATh+lfQEpe8D4AM7nrlMPTrYnrEpmkm2+VnLAVmqtH2WliQadw86gOqtwr
+        Xev4GAc4rVOtUudVESFVL+lSQdLMswqHJEQk6Zw9QZyNzPVGqToI5hibHALOcmtVopFmxMlYQJcOEQ6O
+        VWyMHWQa6uu+h8UZMUq19CfJSohtRYYZm8URLdV5OUceqjKVHdEFEdzsE9QqtXHBAJx4QnfEeCqtZ2S4
+        zhcJrFGBVYsnG9TiOrDFhKhhlHPEqZx3QJfvYYWyCjsFIHURIvWIjIZ0kcF2X8LUFwu6b4JjThU2uVqX
+        HNGFEUaiWRXcAUI0xQ7lvmeySYLPu0VwLTtyPMoyaBWZJSg2mLF+/yO6TIiRyFbxNiFU0thDq9mjlUI/
+        2e4mxz2e8wIBunAD0o574N8QyD+my1GrUV6VtwPAtCyWdF5Lb16O1SMzTiYzLnucs0wxHB6yirSTPBRw
+        ACDXHdOFAU5C/FZhgaOWcN4zTcBY2DraJpleDkwz/X8mma3rKkJWuSwcsF03pJHHdMU2X62KOZvg7asv
+        RHckPQSeVCkdO6GKitNvIIRDDjv0uVUSni6ockh4v1U9zoxPyifSG6Chr2lPpITgUNmBDXsCMgyHgb9l
+        /NbaENyL36DLY75ZRes7MPm3aVoo/x1sBTRVJFJOchHIEQsGGp6AtXYLWvfC0ak+pEseujSSVbp6LDFB
+        EIUC3Y25VCHV2sTWSMRKCWXZ+sVE1Aldlk8IoiVVcsf6A7pKTYe4+LPiggd1+9Iy1cHI53fhsioC9YQk
+        PmVTwmVVEMat2HfsG3FZdRpcVp0Gl1UnwePxB5K4acfdd1GYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2402.91577, 1336.04016</value>
+  </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>1598.39966</value>
+    <value>1550.98621</value>
   </data>
 </root>

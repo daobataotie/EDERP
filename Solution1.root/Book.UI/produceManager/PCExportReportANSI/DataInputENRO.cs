@@ -13,7 +13,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             InitializeComponent();
         }
 
-        public DataInputENRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI EN)
+        public DataInputENRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI EN,int tag)
             : this()
         {
             if (pcDataInput == null)
@@ -24,7 +24,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TCTSEmployee.Text = pcDataInput.Employee2 == null ? "" : pcDataInput.Employee2.ToString();
 
             if (EN != null)
-                this.xrSubreportEN.ReportSource = new CEENRO (EN, 0);
+                this.xrSubreportEN.ReportSource = new CEENRO (EN, tag);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
         }

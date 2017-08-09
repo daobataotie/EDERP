@@ -15,16 +15,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrPictureBox1.Visible = false;
         }
 
-        public ASRO2017(Model.PCExportReportANSI _PCExportReportANSI, int tag, bool? showApprove)
+        public ASRO2017(Model.PCExportReportANSI _PCExportReportANSI, int tag)
             : this()
         {
-            if (showApprove.HasValue && !showApprove.Value)
-                this.xrPanel1.Visible = false;
-
             if (tag == 1)
             {
                 this.xrLabel1.Text = "ALAN    SAFETY    COMPANY.";
-
                 this.lbl_Signature.Text = new BL.SettingManager().SelectByName("ALANSignature").Count < 1 ? "" : new BL.SettingManager().SelectByName("ALANSignature")[0].SettingCurrentValue;
                 this.xrPictureBox1.Visible = true;
             }
@@ -86,6 +82,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             this.xrLabel8.Text = _PCExportReportANSI.ShouCeShu1.HasValue ? _PCExportReportANSI.ShouCeShu1.Value.ToString() : "";
 
+            //this.xrLabel81.Text += " " + DateTime.Now.ToString("yyyy-MM-dd");
         }
 
     }

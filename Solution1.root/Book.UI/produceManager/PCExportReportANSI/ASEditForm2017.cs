@@ -178,7 +178,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             if (this._PCExportReportANSI.AuditEmp != null)
             {
                 this._PCExportReportANSI.AuditEmpId = this._PCExportReportANSI.AuditEmp.EmployeeId;
-                this._PCExportReportANSI.AuditState = (int)global::Helper.InvoiceAudit.Audited;
+                //this._PCExportReportANSI.AuditState = (int)global::Helper.InvoiceAudit.Audited;
             }
 
             this._PCExportReportANSI.ProductBatchNo = this.txtBatchNo.Text;
@@ -324,7 +324,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             tag = 0;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
-            ASRO2017 r = new ASRO2017(this._PCExportReportANSI, tag, true);
+            ASRO2017 r = new ASRO2017(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {
@@ -501,7 +501,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             tag = 1;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
-            ASRO2017 r = new ASRO2017(this._PCExportReportANSI, tag, true);
+            ASRO2017 r = new ASRO2017(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {
@@ -524,7 +524,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             tag = 2;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
-            ASRO2017 r = new ASRO2017(this._PCExportReportANSI, tag, true);
+            ASRO2017 r = new ASRO2017(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {

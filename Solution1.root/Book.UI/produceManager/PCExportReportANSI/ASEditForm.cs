@@ -284,7 +284,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             tag = 0;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
-            ASRO r = new ASRO(this._PCExportReportANSI, tag, true);
+            ASRO r = new ASRO(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {
@@ -453,7 +453,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             tag = 1;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
-            ASRO r = new ASRO(this._PCExportReportANSI, tag, true);
+            ASRO r = new ASRO(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {
@@ -476,7 +476,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             tag = 2;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
-            ASRO r = new ASRO(this._PCExportReportANSI, tag, true);
+            ASRO r = new ASRO(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {

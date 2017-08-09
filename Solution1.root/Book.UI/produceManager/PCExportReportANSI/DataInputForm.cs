@@ -159,6 +159,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.txt_PronoteHeaderId.Properties.ReadOnly = true;
             this.txt_InvoiceCusId.Properties.ReadOnly = true;
             this.txt_Customer.Properties.ReadOnly = true;
+            this.radioGroup1.Properties.ReadOnly = false;
         }
 
         protected override void Save()
@@ -416,41 +417,41 @@ namespace Book.UI.produceManager.PCExportReportANSI
             {
                 case "ANSI":
                     Model.PCExportReportANSI ansi1 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI");
-                    DataInputANSIRO ansiro = new DataInputANSIRO(this._PCDataInput, ansi1);
+                    DataInputANSIRO ansiro = new DataInputANSIRO(this._PCDataInput, ansi1,this.radioGroup1.SelectedIndex);
                     ansiro.ShowPreviewDialog();
                     break;
                 case "ANSI/CSA":
                     Model.PCExportReportANSI ansi2 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI");
                     Model.PCExportReportANSI csa2 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CSA");
-                    DataInputCSARO csaro = new DataInputCSARO(this._PCDataInput, ansi2, csa2);
+                    DataInputCSARO csaro = new DataInputCSARO(this._PCDataInput, ansi2, csa2, this.radioGroup1.SelectedIndex);
                     csaro.ShowPreviewDialog();
                     break;
                 case "EN":
                     Model.PCExportReportANSI en = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CEEN");
-                    DataInputENRO enro = new DataInputENRO(this._PCDataInput, en);
+                    DataInputENRO enro = new DataInputENRO(this._PCDataInput, en, this.radioGroup1.SelectedIndex);
                     enro.ShowPreviewDialog();
                     break;
                 case "AS/NZS":
                     Model.PCExportReportANSI aso = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "AS");
-                    DataInputASRO asro = new DataInputASRO(this._PCDataInput, aso);
+                    DataInputASRO asro = new DataInputASRO(this._PCDataInput, aso, this.radioGroup1.SelectedIndex);
                     asro.ShowPreviewDialog();
                     break;
 
                 //2017年4月23日17:20:39 添加
                 case "ANSI2015":
                     Model.PCExportReportANSI ansi20151 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
-                    DataInputANSI2015RO ansi2015ro = new DataInputANSI2015RO(this._PCDataInput, ansi20151);
+                    DataInputANSI2015RO ansi2015ro = new DataInputANSI2015RO(this._PCDataInput, ansi20151, this.radioGroup1.SelectedIndex);
                     ansi2015ro.ShowPreviewDialog();
                     break;
                 case "ANSI2015/CSA2015":
                     Model.PCExportReportANSI ansi20152 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
                     Model.PCExportReportANSI csa20152 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CSA");
-                    DataInputCSA2015RO csa2015ro = new DataInputCSA2015RO(this._PCDataInput, ansi20152, csa20152);
+                    DataInputCSA2015RO csa2015ro = new DataInputCSA2015RO(this._PCDataInput, ansi20152, csa20152, this.radioGroup1.SelectedIndex);
                     csa2015ro.ShowPreviewDialog();
                     break;
                 case "AS2017":
                     Model.PCExportReportANSI aso2017 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "AS");
-                    DataInputAS2017RO as2017ro = new DataInputAS2017RO(this._PCDataInput, aso2017);
+                    DataInputAS2017RO as2017ro = new DataInputAS2017RO(this._PCDataInput, aso2017, this.radioGroup1.SelectedIndex);
                     as2017ro.ShowPreviewDialog();
                     break;
             }

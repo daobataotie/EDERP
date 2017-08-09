@@ -14,12 +14,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrPictureBox1.Visible = false;
         }
 
-        public ASRO(Model.PCExportReportANSI _PCExportReportANSI, int tag, bool? showApprove)
+        public ASRO(Model.PCExportReportANSI _PCExportReportANSI, int tag)
             : this()
         {
-            if (showApprove.HasValue && !showApprove.Value)
-                this.xrPanel1.Visible = false;
-
             if (tag == 1)
             {
                 this.xrLabel1.Text = "ALAN    SAFETY    COMPANY.";

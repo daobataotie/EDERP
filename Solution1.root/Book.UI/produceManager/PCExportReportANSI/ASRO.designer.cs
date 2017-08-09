@@ -37,6 +37,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.lbl_Signature = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_OrderQuantity = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
@@ -97,10 +98,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbl_Signature = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel87 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrLabel103 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel95 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl13 = new DevExpress.XtraReports.UI.XRLabel();
@@ -166,7 +164,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbOrderNo = new DevExpress.XtraReports.UI.XRLabel();
             this.LbBuyer = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -218,7 +215,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPanel1,
             this.lbl_OrderQuantity,
             this.xrLabel4,
             this.xrLabel3,
@@ -294,7 +290,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel13,
             this.xrLabel7,
             this.LbOrderNo,
-            this.LbBuyer});
+            this.LbBuyer,
+            this.lbl_Signature,
+            this.xrPictureBox1});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             // 
@@ -303,6 +301,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
             this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
             this.xrPictureBox1.Name = "xrPictureBox1";
+            // 
+            // lbl_Signature
+            // 
+            resources.ApplyResources(this.lbl_Signature, "lbl_Signature");
+            this.lbl_Signature.Name = "lbl_Signature";
+            this.lbl_Signature.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Signature.StylePriority.UseTextAlignment = false;
             // 
             // lbl_OrderQuantity
             // 
@@ -744,13 +749,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel31.StylePriority.UseFont = false;
             this.xrLabel31.StylePriority.UseTextAlignment = false;
             // 
-            // lbl_Signature
-            // 
-            resources.ApplyResources(this.lbl_Signature, "lbl_Signature");
-            this.lbl_Signature.Name = "lbl_Signature";
-            this.lbl_Signature.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_Signature.StylePriority.UseTextAlignment = false;
-            // 
             // xrLabel87
             // 
             this.xrLabel87.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
@@ -762,23 +760,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel87.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel87.StylePriority.UseBorders = false;
             this.xrLabel87.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLine1
-            // 
-            this.xrLine1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            resources.ApplyResources(this.xrLine1, "xrLine1");
-            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.xrLine1.LineWidth = 3;
-            this.xrLine1.Name = "xrLine1";
-            this.xrLine1.StylePriority.UseBorderDashStyle = false;
-            // 
-            // xrLabel103
-            // 
-            resources.ApplyResources(this.xrLabel103, "xrLabel103");
-            this.xrLabel103.Name = "xrLabel103";
-            this.xrLabel103.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel103.StylePriority.UseFont = false;
-            this.xrLabel103.StylePriority.UseTextAlignment = false;
             // 
             // lbl14
             // 
@@ -1407,16 +1388,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             // 
-            // xrPanel1
-            // 
-            this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox1,
-            this.xrLine1,
-            this.lbl_Signature,
-            this.xrLabel103});
-            resources.ApplyResources(this.xrPanel1, "xrPanel1");
-            this.xrPanel1.Name = "xrPanel1";
-            // 
             // ASRO
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1513,8 +1484,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRLabel xrLabel90;
         private DevExpress.XtraReports.UI.XRLabel lbl11;
         private DevExpress.XtraReports.UI.XRLabel xrLabel88;
-        private DevExpress.XtraReports.UI.XRLine xrLine1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel103;
         private DevExpress.XtraReports.UI.XRLabel xrLabel87;
         private DevExpress.XtraReports.UI.XRLabel lbl_Signature;
         private DevExpress.XtraReports.UI.XRLabel xrLabel31;
@@ -1578,6 +1547,5 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel lbl_OrderQuantity;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
-        private DevExpress.XtraReports.UI.XRPanel xrPanel1;
     }
 }
