@@ -1056,6 +1056,7 @@ namespace Book.UI.produceManager.PronoteHeader
             //}
             // else
             // {
+         
 
             SelectProduceMaterial form = new SelectProduceMaterial(this.pronoteHeader);
             if (form.ShowDialog(this) == DialogResult.OK)
@@ -1766,6 +1767,12 @@ namespace Book.UI.produceManager.PronoteHeader
             //IList<Model.PronotedetailsMaterial> detail = from n in this.pronoteHeader.DetailsMaterial
             //             where n.Checkeds == true
             //             select n;
+            if (this.pronoteHeader.IsClose.HasValue && this.pronoteHeader.IsClose.Value)
+            {
+                MessageBox.Show( "已結案，不能生成領料單", this.Text,MessageBoxButtons.OK);
+                return;
+            }
+
             IList<Model.PronotedetailsMaterial> detail = this.pronoteHeader.DetailsMaterial.Where(n => n.Checkeds == true).ToList();
             if (detail == null || detail.Count() == 0)
             {

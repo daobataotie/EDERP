@@ -16,6 +16,7 @@ namespace Book.UI.produceManager.PCFinishCheck
         BL.ProduceOtherInDepotManager _poim = new Book.BL.ProduceOtherInDepotManager();
         BL.OpticsTestManager _OpticsTestManager = new Book.BL.OpticsTestManager();
         Model.PCFinishCheck _PCFC = null;
+        IList<Model.OpticsTest> ListOpticsTest;
         int Def_select = 2;
 
         public EditForm()
@@ -165,6 +166,9 @@ namespace Book.UI.produceManager.PCFinishCheck
             this._PCFC.PCFinishCheckCount = 1;  //默认抽检数量为1
             this._PCFC.Employee0 = BL.V.ActiveOperator.Employee;
             this._PCFC.Employee0Id = BL.V.ActiveOperator.EmployeeId;
+
+            //清空複製的光學測試信息
+            ListOpticsTest.Clear();
         }
 
         protected override void Save()
@@ -231,6 +235,18 @@ namespace Book.UI.produceManager.PCFinishCheck
                     sqlJudge = "SELECT p1.InvoiceCusXOId FROM PCFinishCheck p1 WHERE p1.InvoiceCusXOId = '" + strCusXoId + "' AND p1.PCFinishCheckID NOT IN ( SELECT TOP 1 p2.PCFinishCheckID FROM PCFinishCheck p2)";
                     this._PCFCManager.Update(this._PCFC);
                     break;
+            }
+
+            if (ListOpticsTest != null)
+            {
+                foreach (var item in ListOpticsTest)
+                {
+                    item.OpticsTestId = this._OpticsTestManager.GetId();
+                    item.OptiscTestDate = DateTime.Now;
+                    item.PCFinishCheckId = _PCFC.PCFinishCheckID;
+                    this._OpticsTestManager.Insert(item);
+                }
+                ListOpticsTest.Clear();
             }
         }
 
@@ -410,14 +426,7 @@ namespace Book.UI.produceManager.PCFinishCheck
             model.AttrCJBZ = this._PCFC.AttrCJBZ.HasValue ? this._PCFC.AttrCJBZ.Value : Def_select;
             model.AttrDGBLTest = this._PCFC.AttrDGBLTest.HasValue ? this._PCFC.AttrDGBLTest.Value : Def_select;
 
-            IList<Model.OpticsTest> ListOpticsTest = this._OpticsTestManager.FSelect(this._PCFC.PCFinishCheckID);
-            foreach (var item in ListOpticsTest)
-            {
-                item.OpticsTestId = this._OpticsTestManager.GetId();
-                item.OptiscTestDate = DateTime.Now;
-                item.PCFinishCheckId = model.PCFinishCheckID;
-                this._OpticsTestManager.Insert(item);
-            }
+            ListOpticsTest = this._OpticsTestManager.FSelect(this._PCFC.PCFinishCheckID);
 
             this._PCFC = model;
             this.action = "insert";

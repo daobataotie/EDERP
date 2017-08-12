@@ -457,6 +457,18 @@ namespace Book.UI.produceManager.ProduceMaterial
                 {
                     this._produceMaterial = this.produceMaterialManager.GetDetails(_produceMaterial.ProduceMaterialID);
                 }
+                if (this.action == "update")
+                {
+                    if (this._produceMaterial.SourceType == 0)
+                    {
+                        Model.PronoteHeader pronoteHeader = new BL.PronoteHeaderManager().Get(this._produceMaterial.InvoiceId);
+                        if (pronoteHeader != null && pronoteHeader.IsClose.HasValue && pronoteHeader.IsClose.Value)
+                        {
+                            MessageBox.Show("對應的加工單已結案，不能修改領料單", this.Text, MessageBoxButtons.OK);
+                            return;
+                        }
+                    }
+                }
             }
 
             if (this.produceMaterialManager.IsDepotOut(this._produceMaterial.ProduceMaterialID) && this.action == "update")
@@ -569,6 +581,7 @@ namespace Book.UI.produceManager.ProduceMaterial
 
         protected override void MoveNext()
         {
+            this.action = "view";
             Model.ProduceMaterial produceMaterial = this.produceMaterialManager.GetNext(this._produceMaterial);
             if (produceMaterial == null)
                 throw new InvalidOperationException(Properties.Resources.ErrorNoMoreRows);
@@ -577,6 +590,7 @@ namespace Book.UI.produceManager.ProduceMaterial
 
         protected override void MovePrev()
         {
+            this.action = "view";
             Model.ProduceMaterial produceMaterial = this.produceMaterialManager.GetPrev(this._produceMaterial);
             if (produceMaterial == null)
                 throw new InvalidOperationException(Properties.Resources.ErrorNoMoreRows);
@@ -585,11 +599,13 @@ namespace Book.UI.produceManager.ProduceMaterial
 
         protected override void MoveFirst()
         {
+            this.action = "view";
             this._produceMaterial = this.produceMaterialManager.Get(this.produceMaterialManager.GetFirst() == null ? "" : this.produceMaterialManager.GetFirst().ProduceMaterialID);
         }
 
         protected override void MoveLast()
         {
+            this.action = "view";
             if (LastFlag == 1) { LastFlag = 0; return; }
             // if (produceMaterial == null)
             {

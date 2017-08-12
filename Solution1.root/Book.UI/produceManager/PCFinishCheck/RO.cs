@@ -3,12 +3,15 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
+using System.Collections.Generic;
 
 namespace Book.UI.produceManager.PCFinishCheck
 {
     public partial class RO : DevExpress.XtraReports.UI.XtraReport
     {
         string _PCFinishCheckId;
+        IList<Model.OpticsTest> listOpticsTest = new List<Model.OpticsTest>();
+
         public RO(Model.PCFinishCheck _pcfc)
         {
             InitializeComponent();
@@ -41,10 +44,13 @@ namespace Book.UI.produceManager.PCFinishCheck
             if (_pcfc.PronoteHeader != null)
             {
                 Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(_pcfc.PronoteHeader.InvoiceXOId);
-                this.lbl_TestStandard.Text = xo.xocustomer.CheckedStandard;
-                this.lbl_CustomerName.Text = xo.Customer.CustomerFullName;
-                this.lbl_InvoiceXOCustomer.Text = xo.xocustomer.CustomerFullName;
-                this.lbl_JHDate.Text = xo.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
+                if (xo != null)
+                {
+                    this.lbl_TestStandard.Text = xo.xocustomer.CheckedStandard;
+                    this.lbl_CustomerName.Text = xo.Customer.CustomerFullName;
+                    this.lbl_InvoiceXOCustomer.Text = xo.xocustomer.CustomerFullName;
+                    this.lbl_JHDate.Text = xo.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
+                }
             }
 
             //details
@@ -70,7 +76,11 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.lblSLDNHWXTMTBSFZQ.Text = Trans(_pcfc.AttrSLDNHWXTMSFZQ);
             this.TCAttrDGBLTest.Text = Trans(_pcfc.AttrDGBLTest);
 
-            this.xrSubreportGX.ReportSource = new PCPGOnlineCheck.subReportGX("PCFinishCheck");
+            listOpticsTest = new BL.OpticsTestManager().FSelect(this._PCFinishCheckId);
+            if (listOpticsTest != null && listOpticsTest.Count > 0)
+                this.xrSubreportGX.ReportSource = new PCPGOnlineCheck.subReportGX("PCFinishCheck");
+            else
+                this.Detail.Visible = false;
 
         }
 
@@ -100,8 +110,11 @@ namespace Book.UI.produceManager.PCFinishCheck
 
         private void subReportGX_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-            PCPGOnlineCheck.subReportGX subGX = this.xrSubreportGX.ReportSource as PCPGOnlineCheck.subReportGX;
-            subGX._PCPGOnlineCheckDetailId = this._PCFinishCheckId;
+            if (listOpticsTest != null && listOpticsTest.Count > 0)
+            {
+                PCPGOnlineCheck.subReportGX subGX = this.xrSubreportGX.ReportSource as PCPGOnlineCheck.subReportGX;
+                subGX._PCPGOnlineCheckDetailId = this._PCFinishCheckId;
+            }
         }
     }
 }

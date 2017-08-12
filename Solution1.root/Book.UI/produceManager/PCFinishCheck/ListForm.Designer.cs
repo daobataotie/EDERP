@@ -149,7 +149,7 @@
             // WorkHouse
             // 
             resources.ApplyResources(this.WorkHouse, "WorkHouse");
-            this.WorkHouse.FieldName = "WorkHouse";
+            this.WorkHouse.FieldName = "Workhousename";
             this.WorkHouse.Name = "WorkHouse";
             this.WorkHouse.OptionsColumn.AllowEdit = false;
             // 
@@ -163,7 +163,7 @@
             // Product
             // 
             resources.ApplyResources(this.Product, "Product");
-            this.Product.FieldName = "Product";
+            this.Product.FieldName = "ProductName";
             this.Product.Name = "Product";
             this.Product.OptionsColumn.AllowEdit = false;
             // 
@@ -184,14 +184,14 @@
             // Employee0
             // 
             resources.ApplyResources(this.Employee0, "Employee0");
-            this.Employee0.FieldName = "Employee0";
+            this.Employee0.FieldName = "Employee0Name";
             this.Employee0.Name = "Employee0";
             this.Employee0.OptionsColumn.AllowEdit = false;
             // 
             // Employee1
             // 
             resources.ApplyResources(this.Employee1, "Employee1");
-            this.Employee1.FieldName = "Employee1";
+            this.Employee1.FieldName = "Employee1Name";
             this.Employee1.Name = "Employee1";
             this.Employee1.OptionsColumn.AllowEdit = false;
             // 

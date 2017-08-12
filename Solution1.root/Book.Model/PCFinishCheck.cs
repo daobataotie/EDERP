@@ -14,6 +14,12 @@ namespace Book.Model
     [Serializable]
     public partial class PCFinishCheck
     {
+        public string Workhousename { get; set; }
 
+        public string ProductName { get; set; }
+
+        public string Employee0Name { get; set; }
+
+        public string Employee1Name { get; set; }
     }
 }

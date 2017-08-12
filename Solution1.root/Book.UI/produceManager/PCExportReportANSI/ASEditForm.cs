@@ -271,7 +271,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             }
 
             this.TxtOrderId.Properties.ReadOnly = true;
-            this.SpinOrderAmount.Enabled = false;
+            //this.SpinOrderAmount.Enabled = false;
             //this.SpinTestAmount.Enabled = false;
             this.TxtCustomersId.Enabled = false;
             this.TxtProduct.Enabled = false;

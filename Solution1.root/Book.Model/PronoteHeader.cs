@@ -180,6 +180,8 @@ namespace Book.Model
 
         public string PronoteMachineId { get; set; }
 
+        public DateTime? Shechudata { get; set; }
+
 
         public readonly static string PRO_CustomerCheckStandard = "CustomerCheckStandard";
         public readonly static string PRO_InvoiceId = "InvoiceId";

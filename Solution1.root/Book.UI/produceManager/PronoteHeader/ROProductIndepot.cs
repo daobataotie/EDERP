@@ -26,9 +26,10 @@ namespace Book.UI.produceManager.PronoteHeader
             this.lblPrintDate.Text += DateTime.Now.Date;
             this.TCPronoteHeaderId.DataBindings.Add("Text", this.DataSource, "PronoteHeaderID");
             this.TCCusXOId.DataBindings.Add("Text", this.DataSource, "CustomerInvoiceXOId");
+            this.TC_ShechuJiaoqi.DataBindings.Add("Text", this.DataSource, "Shechudata", "{0:yyyy-MM-dd}");
             this.TCJiaohuoDate.DataBindings.Add("Text", this.DataSource, "DateHelp");
             this.TCProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
-            this.TCProduceQuantity.DataBindings.Add("Text",this.DataSource,"DetailsSum");
+            this.TCProduceQuantity.DataBindings.Add("Text", this.DataSource, "DetailsSum");
             this.TCUpDepartmentPass.DataBindings.Add("Text", this.DataSource, "ProduceTransferQuantity");
             this.TCNumHejiProduce.DataBindings.Add("Text", this.DataSource, "HeJiProceduresSum");
             this.TCNumPass.DataBindings.Add("Text", this.DataSource, "HeJiCheckOutSum");

@@ -360,6 +360,8 @@ namespace Book.UI.Settings.BasicData.Customs
 
                 //修改人
                 this.newChooseUpdateEmployee.EditValue = this._customerProduct.UpdateEmployee;
+                this.dateEditAdd.EditValue = this._customerProduct.InsertTime;
+                this.dateEditUpdate.EditValue = this._customerProduct.UpdateTime;
             }
 
             switch (this.action)
@@ -545,7 +547,10 @@ namespace Book.UI.Settings.BasicData.Customs
                     break;
             }
             base.Refresh();
-
+            this.textEditCreator.Enabled = false;
+            this.newChooseUpdateEmployee.Enabled = false;
+            this.dateEditAdd.Enabled = false;
+            this.dateEditUpdate.Enabled = false;
         }
 
         protected override void Save()
@@ -614,8 +619,6 @@ namespace Book.UI.Settings.BasicData.Customs
             this._customerProduct.Caiji = Convert.ToDouble(this.spinBoxCaiJi.Text);
             this._customerProduct.PackingSpecification = Convert.ToDouble(this.spinBoxPackingNum.Text);
 
-            //修改人
-            this._customerProduct.UpdateEmployeeId = this.newChooseUpdateEmployee.EditValue == null ? null : (this.newChooseUpdateEmployee.EditValue as Model.Employee).EmployeeId;
 
             switch (this.action)
             {
@@ -625,6 +628,8 @@ namespace Book.UI.Settings.BasicData.Customs
                     this.customerProductsManager.Insert(this._customerProduct);
                     break;
                 case "update":
+                    //修改人
+                    this._customerProduct.UpdateEmployeeId = BL.V.ActiveOperator.EmployeeId;
                     this.customerProductsManager.Update(this._customerProduct);
                     break;
             }

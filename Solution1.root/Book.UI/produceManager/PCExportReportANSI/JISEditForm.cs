@@ -255,7 +255,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             }
 
             this.TxtOrderId.Properties.ReadOnly = true;
-            this.SpinOrderAmount.Enabled = false;
+            //this.SpinOrderAmount.Enabled = false;
             //受测数量即取样标准可以由客户自己修改
             //this.SpinTestAmount.Enabled = false;
             this.TxtProduct.Enabled = false;

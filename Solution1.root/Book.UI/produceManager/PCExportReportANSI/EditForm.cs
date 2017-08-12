@@ -283,7 +283,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.txtPCExportReportId.Properties.ReadOnly = true;
             this.txtCusXOid.Enabled = false;
             this.btnEditProduct.Enabled = false;
-            this.spinEditDDSL.Enabled = false;
+            //this.spinEditDDSL.Enabled = false;
         }
 
         //列印

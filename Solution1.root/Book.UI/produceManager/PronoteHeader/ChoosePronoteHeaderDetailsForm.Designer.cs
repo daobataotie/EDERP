@@ -459,7 +459,6 @@
             resources.ApplyResources(this.gridColumn6, "gridColumn6");
             this.gridColumn6.FieldName = "ProductName";
             this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.OptionsColumn.AllowEdit = false;
             // 
             // gridColumnCusProName
             // 

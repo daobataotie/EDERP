@@ -120,6 +120,12 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
+  <data name="barBtn_Search.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>複製</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -636,10 +642,10 @@
     <value>11</value>
   </data>
   <data name="btnGetPronoteHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 87</value>
+    <value>703, 87</value>
   </data>
   <data name="btnGetPronoteHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>181, 22</value>
   </data>
   <data name="btnGetPronoteHeader.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -711,7 +717,7 @@
     <value>目視檢驗</value>
   </data>
   <data name="chkMuShiJianYan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 19</value>
+    <value>72, 19</value>
   </data>
   <data name="chkMuShiJianYan.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -2103,6 +2109,12 @@
   <data name="layoutControlItem43.Text" xml:space="preserve">
     <value>单位：</value>
   </data>
+  <data name="emptySpaceItem3.CustomizationFormText" xml:space="preserve">
+    <value>emptySpaceItem3</value>
+  </data>
+  <data name="emptySpaceItem3.Text" xml:space="preserve">
+    <value>emptySpaceItem3</value>
+  </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
   </data>
@@ -2133,17 +2145,11 @@
   <data name="emptySpaceItem4.Text" xml:space="preserve">
     <value>emptySpaceItem4</value>
   </data>
-  <data name="barBtn_Search.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
   <data name="barButtonItem2.Caption" xml:space="preserve">
     <value>搜索</value>
   </data>
   <data name="barButtonItem1.Caption" xml:space="preserve">
     <value>搜索</value>
-  </data>
-  <data name="barButtonItem3.Caption" xml:space="preserve">
-    <value>複製</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2433,12 +2439,6 @@
   <data name="&gt;&gt;layoutControlItem41.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem43.Name" xml:space="preserve">
-    <value>layoutControlItem43</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem43.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem42.Name" xml:space="preserve">
     <value>layoutControlItem42</value>
   </data>
@@ -2469,17 +2469,23 @@
   <data name="&gt;&gt;layoutControlItem36.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
+    <value>emptySpaceItem1</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutControlItem44.Name" xml:space="preserve">
     <value>layoutControlItem44</value>
   </data>
   <data name="&gt;&gt;layoutControlItem44.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
-    <value>emptySpaceItem1</value>
+  <data name="&gt;&gt;layoutControlItem43.Name" xml:space="preserve">
+    <value>layoutControlItem43</value>
   </data>
-  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;layoutControlItem43.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;emptySpaceItem4.Name" xml:space="preserve">
     <value>emptySpaceItem4</value>
@@ -2510,6 +2516,12 @@
   </data>
   <data name="&gt;&gt;barButtonItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem3.Name" xml:space="preserve">
+    <value>emptySpaceItem3</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

@@ -630,6 +630,7 @@
             this.dateEditUpdate.Name = "dateEditUpdate";
             this.dateEditUpdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEditUpdate.Properties.Buttons"))))});
+            this.dateEditUpdate.Properties.ReadOnly = true;
             this.dateEditUpdate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateEditUpdate.StyleController = this.layoutControl1;
@@ -642,6 +643,7 @@
             this.dateEditAdd.Name = "dateEditAdd";
             this.dateEditAdd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEditAdd.Properties.Buttons"))))});
+            this.dateEditAdd.Properties.ReadOnly = true;
             this.dateEditAdd.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateEditAdd.StyleController = this.layoutControl1;

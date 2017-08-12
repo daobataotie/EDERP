@@ -73,7 +73,8 @@ namespace Book.DA.SQLServer
             //{
             //    sql.Append(", (select top 1 PronoteProceduresDate from PronoteProceduresDetail u  where  u.PronoteHeaderID=a.PronoteHeaderID and u.WorkHouseId='" + workhouseIndepot + "'  order by PronoteProceduresDate ) as PronoteProceduresDate");
             //}
-            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo) as PronoteMachineId");
+            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
+            sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
             sql.Append(",b.ProductName,b.id, b.CustomerProductName  FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
 
             sql.Append("  where    PronoteDate between @startdate and @enddate  ");
@@ -174,6 +175,8 @@ namespace Book.DA.SQLServer
             //{
             //    sql.Append(", (select top 1 PronoteProceduresDate from PronoteProceduresDetail u  where  u.PronoteHeaderID=a.PronoteHeaderID and u.WorkHouseId='" + workhouseIndepot + "'  order by PronoteProceduresDate ) as PronoteProceduresDate");
             //}
+            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
+            sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
             sql.Append(",b.ProductName,b.id, b.CustomerProductName, b.ProductDescription as ProductDesc,a.Chakuang,a.Paihe,a.Moshu,a.Materialprocessum  FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
 
             sql.Append("  where    PronoteDate between @startdate and @enddate  ");
@@ -258,6 +261,8 @@ namespace Book.DA.SQLServer
             //{
             //    sql.Append(", (select top 1 PronoteProceduresDate from PronoteProceduresDetail u  where  u.PronoteHeaderID=a.PronoteHeaderID and u.WorkHouseId='" + workhouseIndepot + "'  order by PronoteProceduresDate ) as PronoteProceduresDate");
             //}
+            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
+            sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
             sql.Append(",b.ProductName,b.id, b.CustomerProductName FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
 
 

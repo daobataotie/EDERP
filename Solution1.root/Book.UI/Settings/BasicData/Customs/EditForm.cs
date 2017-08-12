@@ -286,6 +286,9 @@ namespace Book.UI.Settings.BasicData.Customs
             //this._customer.Marks = this.customerMarksManager.SelectByCustomerId(this._customer.CustomerId);
             //this.bindingSourceCustomerMarks.DataSource = this._customer.Marks;
 
+            this.txt_Create.Text = this._customer.EmployeeCreatorId;
+            this.txt_Update.Text = this._customer.EmployeeChangeId;
+
             //switch (this.action)
             //{
             //    case "insert":

@@ -37,11 +37,11 @@
             this.bindingSourceUnit = new System.Windows.Forms.BindingSource(this.components);
             this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
             this.newChooseContorlAuditEmp = new Book.UI.Invoices.NewChooseContorl();
-            this.txt_AnnualRing = new DevExpress.XtraEditors.TextEdit();
             this.linkLabelGuangxue = new System.Windows.Forms.LinkLabel();
             this.txtCustomerProductName = new DevExpress.XtraEditors.TextEdit();
             this.txtPronoteHeaderId = new DevExpress.XtraEditors.TextEdit();
             this.btnGetPronoteHeader = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_AnnualRing = new DevExpress.XtraEditors.TextEdit();
             this.DE_JYDRQ = new DevExpress.XtraEditors.DateEdit();
             this.chkMuShiJianYan = new DevExpress.XtraEditors.CheckEdit();
             this.txtPCFinishCheckDesc = new DevExpress.XtraEditors.MemoEdit();
@@ -117,19 +117,20 @@
             this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem42 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.barBtn_Search = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -139,9 +140,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_AnnualRing.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerProductName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPronoteHeaderId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_AnnualRing.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DE_JYDRQ.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DE_JYDRQ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkMuShiJianYan.Properties)).BeginInit();
@@ -211,15 +212,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -345,13 +347,6 @@
             resources.ApplyResources(this.newChooseContorlAuditEmp, "newChooseContorlAuditEmp");
             this.newChooseContorlAuditEmp.Name = "newChooseContorlAuditEmp";
             // 
-            // txt_AnnualRing
-            // 
-            resources.ApplyResources(this.txt_AnnualRing, "txt_AnnualRing");
-            this.txt_AnnualRing.MenuManager = this.barManager1;
-            this.txt_AnnualRing.Name = "txt_AnnualRing";
-            this.txt_AnnualRing.StyleController = this.layoutControl1;
-            // 
             // linkLabelGuangxue
             // 
             resources.ApplyResources(this.linkLabelGuangxue, "linkLabelGuangxue");
@@ -379,6 +374,13 @@
             this.btnGetPronoteHeader.Name = "btnGetPronoteHeader";
             this.btnGetPronoteHeader.StyleController = this.layoutControl1;
             this.btnGetPronoteHeader.Click += new System.EventHandler(this.btnGetPronoteHeader_Click);
+            // 
+            // txt_AnnualRing
+            // 
+            resources.ApplyResources(this.txt_AnnualRing, "txt_AnnualRing");
+            this.txt_AnnualRing.MenuManager = this.barManager1;
+            this.txt_AnnualRing.Name = "txt_AnnualRing";
+            this.txt_AnnualRing.StyleController = this.layoutControl1;
             // 
             // DE_JYDRQ
             // 
@@ -758,7 +760,8 @@
             this.layoutControlItem36,
             this.emptySpaceItem1,
             this.layoutControlItem44,
-            this.layoutControlItem43});
+            this.layoutControlItem43,
+            this.emptySpaceItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(896, 523);
@@ -1152,17 +1155,6 @@
             this.layoutControlItem41.TextSize = new System.Drawing.Size(60, 14);
             this.layoutControlItem41.TextToControlDistance = 5;
             // 
-            // layoutControlItem43
-            // 
-            this.layoutControlItem43.Control = this.lookUpEditUnit;
-            resources.ApplyResources(this.layoutControlItem43, "layoutControlItem43");
-            this.layoutControlItem43.Location = new System.Drawing.Point(692, 50);
-            this.layoutControlItem43.Name = "layoutControlItem43";
-            this.layoutControlItem43.Size = new System.Drawing.Size(184, 25);
-            this.layoutControlItem43.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem43.TextSize = new System.Drawing.Size(36, 14);
-            this.layoutControlItem43.TextToControlDistance = 5;
-            // 
             // layoutControlItem42
             // 
             this.layoutControlItem42.Control = this.radio_AttrDGBLTest;
@@ -1197,7 +1189,7 @@
             resources.ApplyResources(this.layoutControlItem38, "layoutControlItem38");
             this.layoutControlItem38.Location = new System.Drawing.Point(446, 75);
             this.layoutControlItem38.Name = "layoutControlItem38";
-            this.layoutControlItem38.Size = new System.Drawing.Size(246, 26);
+            this.layoutControlItem38.Size = new System.Drawing.Size(76, 26);
             this.layoutControlItem38.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem38.TextToControlDistance = 0;
             this.layoutControlItem38.TextVisible = false;
@@ -1206,12 +1198,20 @@
             // 
             this.layoutControlItem36.Control = this.btnGetPronoteHeader;
             resources.ApplyResources(this.layoutControlItem36, "layoutControlItem36");
-            this.layoutControlItem36.Location = new System.Drawing.Point(692, 75);
+            this.layoutControlItem36.Location = new System.Drawing.Point(691, 75);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(184, 26);
+            this.layoutControlItem36.Size = new System.Drawing.Size(185, 26);
             this.layoutControlItem36.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem36.TextToControlDistance = 0;
             this.layoutControlItem36.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
+            this.emptySpaceItem1.Location = new System.Drawing.Point(227, 75);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(219, 26);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem44
             // 
@@ -1224,13 +1224,16 @@
             this.layoutControlItem44.TextSize = new System.Drawing.Size(36, 14);
             this.layoutControlItem44.TextToControlDistance = 5;
             // 
-            // emptySpaceItem1
+            // layoutControlItem43
             // 
-            resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
-            this.emptySpaceItem1.Location = new System.Drawing.Point(227, 75);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(219, 26);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem43.Control = this.lookUpEditUnit;
+            resources.ApplyResources(this.layoutControlItem43, "layoutControlItem43");
+            this.layoutControlItem43.Location = new System.Drawing.Point(692, 50);
+            this.layoutControlItem43.Name = "layoutControlItem43";
+            this.layoutControlItem43.Size = new System.Drawing.Size(184, 25);
+            this.layoutControlItem43.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+            this.layoutControlItem43.TextSize = new System.Drawing.Size(36, 14);
+            this.layoutControlItem43.TextToControlDistance = 5;
             // 
             // emptySpaceItem4
             // 
@@ -1267,6 +1270,14 @@
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
+            // emptySpaceItem3
+            // 
+            resources.ApplyResources(this.emptySpaceItem3, "emptySpaceItem3");
+            this.emptySpaceItem3.Location = new System.Drawing.Point(522, 75);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(169, 26);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1283,9 +1294,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_AnnualRing.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerProductName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPronoteHeaderId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_AnnualRing.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DE_JYDRQ.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DE_JYDRQ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkMuShiJianYan.Properties)).EndInit();
@@ -1355,15 +1366,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1470,5 +1482,6 @@
         private DevExpress.XtraEditors.TextEdit txt_Pihao;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
     }
 }
