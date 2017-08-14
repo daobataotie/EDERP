@@ -750,6 +750,9 @@ namespace Book.UI
 
             //雪鏡專用EN外銷報告
             operations.Add("produceManager.PCExportReportANSI.XuejingENForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.XuejingENForm", form); });
+
+            //會計年度薪資表
+            operations.Add("Hr.Salary.Salaryset.AnnualSalaryForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Salary.Salaryset.AnnualSalaryForm", form); });
         }
 
         static Form CreateForm(string formTypeName)

@@ -4289,6 +4289,9 @@
     <EmbeddedResource Include="Hr\Salary\Salaryset\PrintMonthSalary.resx">
       <DependentUpon>PrintMonthSalary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Salary\Salaryset\AnnualSalaryForm.resx">
+      <DependentUpon>AnnualSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -11431,6 +11434,12 @@
     </Compile>
     <Compile Include="Hr\Salary\Salaryset\PrintMonthSalary.Designer.cs">
       <DependentUpon>PrintMonthSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Salary\Salaryset\AnnualSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Salary\Salaryset\AnnualSalaryForm.Designer.cs">
+      <DependentUpon>AnnualSalaryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoices\CO\EditForm.cs">
       <SubType>Form</SubType>

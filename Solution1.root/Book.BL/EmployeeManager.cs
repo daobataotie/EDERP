@@ -419,6 +419,25 @@ namespace Book.BL
         }
 
         /// <summary>
+        /// 根据年份查询 符合 當年发薪资的人员
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public IList<Model.Employee> SelectHrDailyAttendByMonth(DateTime date)
+        {
+            var h = accessor.SelectHrDailyAttendByMonth(date);
+            IList<Model.Employee> a = new List<Model.Employee>();
+            IList<Model.Employee> o = new List<Model.Employee>();
+            IList<Model.Employee> i = new List<Model.Employee>();
+
+            a = h.Where(E => (E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'A' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'H') ||( E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'a' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'h')).ToList();
+            o = h.Where(E => E.IDNo.Substring(0, 1).ToCharArray()[0] == 'O' || E.IDNo.Substring(0, 1).ToCharArray()[0] == 'o').ToList();
+            i = h.Where(E => (E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'I' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'Z') || (E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'i' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'z') && E.IDNo.Substring(0, 1).ToCharArray()[0] != 'O' && E.IDNo.Substring(0, 1).ToCharArray()[0] != 'o').ToList();
+
+            return a.Union(o).Union(i).ToList();
+        }
+
+        /// <summary>
         /// 更新出勤记录查出员工列表
         /// </summary>
         /// <param name="CheckDateTime"></param>

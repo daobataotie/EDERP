@@ -1017,6 +1017,9 @@
   <data name="barButtonItem480.Caption" xml:space="preserve">
     <value>列印月薪資</value>
   </data>
+  <data name="barButtonItem488.Caption" xml:space="preserve">
+    <value>會計年度薪資表</value>
+  </data>
   <data name="barSubItem59.Caption" xml:space="preserve">
     <value>财务管理</value>
   </data>
@@ -3316,6 +3319,12 @@
   <data name="&gt;&gt;barButtonItem450.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barButtonItem487.Name" xml:space="preserve">
+    <value>barButtonItem487</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem487.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;barButtonItem485.Name" xml:space="preserve">
     <value>barButtonItem485</value>
   </data>
@@ -5374,10 +5383,10 @@
   <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barButtonItem487.Name" xml:space="preserve">
-    <value>barButtonItem487</value>
+  <data name="&gt;&gt;barButtonItem488.Name" xml:space="preserve">
+    <value>barButtonItem488</value>
   </data>
-  <data name="&gt;&gt;barButtonItem487.Type" xml:space="preserve">
+  <data name="&gt;&gt;barButtonItem488.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

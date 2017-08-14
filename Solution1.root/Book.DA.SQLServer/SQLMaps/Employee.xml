@@ -210,6 +210,17 @@
         convert(int,'1'+substring(idno,2,2)))+substring(idno,4,len(idno)) end ) else idno end) 
 			]]>
     </select>
+    <select id="select_HrDailyAttendInfoByMonth" resultMap="EmployeeResult" parameterClass="datetime">
+      <![CDATA[
+      SELECT e.* FROM Employee e where e.EmployeeId  in(select h.EmployeeId from HrDailyEmployeeAttendInfo h where 
+      year(h.DutyDate)=YEAR(#value#)) 
+	    ORDER BY (case when left(idno,1) like '[A-Za-z]'  
+        then (case when convert(int,substring(idno,2,2)) between 30 and 99 
+        then left(idno,1)+cast(1911+convert(int,substring(idno,2,2)) as varchar(10))+
+        substring(idno,4,len(idno)) else left(idno,1)+convert(varchar(10),1911+
+        convert(int,'1'+substring(idno,2,2)))+substring(idno,4,len(idno)) end ) else idno end) 
+			]]>
+    </select>
     <select id="DailyEmployeeAttendInfo_EmpList" parameterClass="DateTime" resultMap="EmployeeResult">
       <![CDATA[
 	    SELECT * FROM Employee

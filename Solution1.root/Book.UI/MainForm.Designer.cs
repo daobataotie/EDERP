@@ -297,6 +297,7 @@
             this.barButtonItem440 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem441 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem450 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem487 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem485 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem486 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem476 = new DevExpress.XtraBars.BarButtonItem();
@@ -646,7 +647,7 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.barButtonItem487 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem488 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -1266,10 +1267,11 @@
             this.barButtonItem484,
             this.barButtonItem485,
             this.barButtonItem486,
-            this.barButtonItem487});
+            this.barButtonItem487,
+            this.barButtonItem488});
             this.barManager1.LargeImages = this.imageCollection1;
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 648;
+            this.barManager1.MaxItemId = 649;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
             this.barManager1.StatusBar = this.bar3;
@@ -3433,6 +3435,13 @@
             this.barButtonItem450.Name = "barButtonItem450";
             this.barButtonItem450.Tag = "produceManager.PCExportReportANSI.ListDetail-JIS";
             // 
+            // barButtonItem487
+            // 
+            resources.ApplyResources(this.barButtonItem487, "barButtonItem487");
+            this.barButtonItem487.Id = 647;
+            this.barButtonItem487.Name = "barButtonItem487";
+            this.barButtonItem487.Tag = "produceManager.PCExportReportANSI.JISEditForm";
+            // 
             // barButtonItem485
             // 
             resources.ApplyResources(this.barButtonItem485, "barButtonItem485");
@@ -3658,7 +3667,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem217),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem218),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonItem238, false),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem480)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem480),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem488)});
             this.barSubItem68.Name = "barSubItem68";
             // 
             // barButtonItem217
@@ -6125,12 +6135,12 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // barButtonItem487
+            // barButtonItem488
             // 
-            resources.ApplyResources(this.barButtonItem487, "barButtonItem487");
-            this.barButtonItem487.Id = 647;
-            this.barButtonItem487.Name = "barButtonItem487";
-            this.barButtonItem487.Tag = "produceManager.PCExportReportANSI.JISEditForm";
+            resources.ApplyResources(this.barButtonItem488, "barButtonItem488");
+            this.barButtonItem488.Id = 648;
+            this.barButtonItem488.Name = "barButtonItem488";
+            this.barButtonItem488.Tag = "Hr.Salary.Salaryset.AnnualSalaryForm";
             // 
             // MainForm
             // 
@@ -6772,6 +6782,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem484;
         private DevExpress.XtraBars.BarButtonItem barButtonItem485;
         private DevExpress.XtraBars.BarButtonItem barButtonItem486;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem487;        
+        private DevExpress.XtraBars.BarButtonItem barButtonItem487;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem488;        
     }
 }

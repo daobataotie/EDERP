@@ -230,6 +230,16 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.Employee>("Employee.select_HrDailyAttendInfoByDay", date.Date);
         }
 
+        /// <summary>
+        /// 根据年份查询 符合 當年发薪资的人员
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public IList<Model.Employee> SelectHrDailyAttendByMonth(DateTime date)
+        {
+            return sqlmapper.QueryForList<Model.Employee>("Employee.select_HrDailyAttendInfoByMonth", date.Date);
+        }
+
         public IList<Model.Employee> DailyEmployeeAttendInfo_EmpList(DateTime CheckDatetime)
         {
             return sqlmapper.QueryForList<Model.Employee>("Employee.DailyEmployeeAttendInfo_EmpList", CheckDatetime);

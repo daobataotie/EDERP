@@ -93,6 +93,8 @@ namespace Book.DA
         IList<Model.Employee> SelectHrDailyAttendO(DateTime date);
 
         IList<Model.Employee> SelectHrDailyAttendI(DateTime date);
+
+        IList<Model.Employee> SelectHrDailyAttendByMonth(DateTime date);
     }
 }
 
