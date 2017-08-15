@@ -902,9 +902,10 @@ namespace Book.UI.Query
 
         private void CountFP()
         {
-            this.spe_FPMoneyTotal.EditValue = this.shouldPayAccount.Detail.Sum(d => d.FPMoney);
-            this.spe_FPTaxTotal.EditValue = this.shouldPayAccount.Detail.Sum(d => d.FPTax);
-            this.spe_FPTotalHeji.EditValue = this.shouldPayAccount.Detail.Sum(d => d.FPTotalMoney);
+            this.spe_FPMoneyTotal.EditValue = global::Helper.DateTimeParse.GetSiSheWuRu(Convert.ToDecimal(this.shouldPayAccount.Detail.Sum(d => d.FPMoney)), 0);
+            this.spe_FPTaxTotal.EditValue = global::Helper.DateTimeParse.GetSiSheWuRu(Convert.ToDecimal(this.shouldPayAccount.Detail.Sum(d => d.FPTax)), 0);
+            //this.spe_FPTotalHeji.EditValue = this.shouldPayAccount.Detail.Sum(d => d.FPTotalMoney);
+            this.spe_FPTotalHeji.EditValue = this.spe_FPMoneyTotal.Value + this.spe_FPTaxTotal.Value;
         }
 
         //应付票据

@@ -136,8 +136,10 @@ namespace Book.UI.Accounting.YPFP
 
         private void spe_Money_EditValueChanged(object sender, EventArgs e)
         {
-            this.spe_Tax.EditValue = Convert.ToDouble(this.spe_Money.Value) * 0.05;
-            this.spe_TotalMoney.EditValue = Convert.ToDouble(this.spe_Money.Value) * 1.05;
+            this.spe_Money.EditValue = global::Helper.DateTimeParse.GetSiSheWuRu(Convert.ToDouble(this.spe_Money.Value), 0);
+            this.spe_Tax.EditValue = global::Helper.DateTimeParse.GetSiSheWuRu(Convert.ToDouble(this.spe_Money.Value) * 0.05, 0);
+            //this.spe_TotalMoney.EditValue = Convert.ToDouble(this.spe_Money.Value) * 1.05;
+            this.spe_TotalMoney.EditValue = Convert.ToDouble(this.spe_Money.Value) + Convert.ToDouble(this.spe_Tax.Value);
         }
 
         private void spe_Tax_EditValueChanged(object sender, EventArgs e)
