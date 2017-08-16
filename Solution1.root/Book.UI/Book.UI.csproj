@@ -4282,6 +4282,9 @@
       <DependentUpon>YearLeaveList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Salary\Salaryset\AnnualSalaryRO.resx">
+      <DependentUpon>AnnualSalaryRO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hr\Salary\Salaryset\CrystalReport3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport3.cs</LastGenOutput>
@@ -11418,6 +11421,12 @@
     </Compile>
     <Compile Include="Hr\Attendance\Leave\YearLeaveList.Designer.cs">
       <DependentUpon>YearLeaveList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Salary\Salaryset\AnnualSalaryRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Hr\Salary\Salaryset\AnnualSalaryRO.Designer.cs">
+      <DependentUpon>AnnualSalaryRO.cs</DependentUpon>
     </Compile>
     <Compile Include="Hr\Salary\Salaryset\CrystalReport3.cs">
       <DependentUpon>CrystalReport3.rpt</DependentUpon>

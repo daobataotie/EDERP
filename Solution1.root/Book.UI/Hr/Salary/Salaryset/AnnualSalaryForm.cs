@@ -19,9 +19,9 @@ namespace Book.UI.Hr.Salary.Salaryset
         protected BL.EmployeeManager employeeManager = new Book.BL.EmployeeManager();
         private BL.HrDailyEmployeeAttendInfoManager _hrManager = new Book.BL.HrDailyEmployeeAttendInfoManager();
         private BL.AnnualHolidayManager annualHolidayManager = new Book.BL.AnnualHolidayManager();
-        private MonthSalaryClass _ms;
         double AttendDays = 0;
         double KuangzhiFactor = 0;
+        List<HelperEmp> heList = new List<HelperEmp>();
 
         public AnnualSalaryForm()
         {
@@ -57,10 +57,27 @@ namespace Book.UI.Hr.Salary.Salaryset
 
         private void btn_PrintTotal_Click(object sender, EventArgs e)
         {
+            this.gridView2.PostEditor();
+            this.gridView2.UpdateCurrentRow();
+
+            this.heList.Clear();
+            HelperEmp he;
             foreach (var emp in _emplist)
             {
+                he = new HelperEmp();
+                he.Employee = emp;
 
+                for (int i = 1; i <= 12; i++)
+                {
+                    this.hrmonth = i;
+                    he.MSList.Add(this.GetEmpSalary(emp));
+                }
+
+                heList.Add(he);
             }
+
+            AnnualSalaryRO ro = new AnnualSalaryRO(this.heList, this.hryear.ToString());
+            ro.ShowPreviewDialog();
         }
 
         private void btn_PrintSelected_Click(object sender, EventArgs e)
@@ -75,11 +92,28 @@ namespace Book.UI.Hr.Salary.Salaryset
             }
             else
             {
+                this.heList.Clear();
+                HelperEmp he;
+                foreach (var emp in list)
+                {
+                    he = new HelperEmp();
+                    he.Employee = emp;
 
+                    for (int i = 1; i <= 12; i++)
+                    {
+                        this.hrmonth = i;
+                        he.MSList.Add(this.GetEmpSalary(emp));
+                    }
+
+                    heList.Add(he);
+                }
+
+                AnnualSalaryRO ro = new AnnualSalaryRO(this.heList, this.hryear.ToString());
+                ro.ShowPreviewDialog();
             }
         }
 
-        private void GetEmpSalary(Model.Employee emp)
+        private MonthSalaryClass GetEmpSalary(Model.Employee emp)
         {
             int mTemp = 0;
             int mHicount = 0;
@@ -87,6 +121,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             double mLateHalfCount = 0;
             StringBuilder strBU = new StringBuilder();
             int totalDay = DateTime.DaysInMonth(hryear, hrmonth);
+            MonthSalaryClass _ms;
             //////////////////////////////////////////////////////////////////
             _ms = new MonthSalaryClass();
             _ms.mIdentifyDate = new DateTime(hryear, hrmonth, 1);
@@ -301,64 +336,63 @@ namespace Book.UI.Hr.Salary.Salaryset
             //判断是否给发时数补贴
             onWorkHours += attendDays * 7.5;
             #endregion
+
             #region 取薪资计算
-            //DataSet dsms = this.monthlySalaryManager.getMonthlySummaryFee(emp.EmployeeId, _ms.mIdentifyDate, hryear, hrmonth);
-            //if (dsms.Tables[0].Rows.Count > 0)
-            //{
-            //    DataRow dr = dsms.Tables[0].Rows[0];
-            //    //if (emp.IsMigrantWorker)
-            //    //    _ms.mLunchFee = 0;
-            //    //else
-            //    _ms.mLunchFee = mStrToDouble(dr["LunchFee"]);                                 //午餐費m
-            //    _ms.mOverTimeFee = mStrToDouble(dr["OverTimeFee"]);                           //加班費
-            //    _ms.mGeneralOverTime = mStrToDouble(dr["GeneralOverTime"]);                   //平日加班(時數)
-            //    _ms.mHolidayOverTime = mStrToDouble(dr["HolidayOverTime"]);                   //假日加班(時數)
-            //    _ms.GeneralOverTimeCountBig = mStrToDouble(dr["GeneralOverTimeCountBig"]);    //平日加班2小时之外(時數)
-            //    _ms.GeneralOverTimeCountSmall = mStrToDouble(dr["GeneralOverTimeCountSmall"]);//平日加班2小时以下(時數)
-            //    _ms.HolidayOverTimeCountBig = mStrToDouble(dr["HolidayOverTimeCountBig"]);    //假日加班2小时之外(時數)
-            //    _ms.HolidayOverTimeCountSmall = mStrToDouble(dr["HolidayOverTimeCountSmall"]);//假日加班2小时以下(時數)
-            //    _ms.mLateCount = mStrToDouble(dr["LateCount"]);                               //遲到次數
-            //    _ms.mTotalLateInMinute = mStrToDouble(dr["TotalLateInMinute"]);               //總遲到（分）
-            //    _ms.mOverTimeBonus = mStrToDouble(dr["OverTimeBonus"]);                       //加班津貼
-            //    _ms.mSpecialBonus = mStrToDouble(dr["SpecialBonus"]);                         //中夜班津貼
-            //    //_ms.mDaysFactor = mStrToDouble(dr["DaysFactor"]);                           //總日基數
-            //    _ms.mMonthFactor = mStrToDouble(dr["MonthFactor"]);                           //總月基數
-            //    _ms.mDutyDateCount = mStrToDouble(dr["DutyDateCount"]);                       //總出勤記錄數
-            //    _ms.mLeaveDate = (dr["LeaveDate"] == null || dr["LeaveDate"].ToString() == "") ? global::Helper.DateTimeParse.NullDate : Convert.ToDateTime(dr["LeaveDate"].ToString());                                               //离职日期
-            //    _ms.mPunishLeaveCount = mStrToDouble(dr["PunishLeaveCount"]);                 //倒扣款假總數
-            //    _ms.mLeaveCount = mStrToDouble(dr["LeaveCount"]);                             //請假總數
-            //    _ms.mAbsentCount = mStrToDouble(dr["AbsentCount"]);                           //曠工總數
-            //    _ms.mTotalHoliday = mStrToDouble(dr["TotalHoliday"]);                         //該月總例假數
-            //    _ms.mLoanFee = mStrToDouble(dr["LoanFee"]);                                   //借支
-            //    // int WuXinCount = Int32.Parse(dr["WuXinCount"].ToString());
-            //    //考勤 不满一月  日基数 = 日基数-实际假数-扣款请假天数-旷职-无薪假      //矿工待处理  
-            //    //if (_ms.mDutyDateCount < totalDay)
-            //    //    _ms.mDaysFactor = _ms.mDaysFactor - _ms.mTotalHoliday;
-            //    //    if (_ms.mDutyDateCount < totalDay && _ms.mLeaveDate != global::Helper.DateTimeParse.NullDate && _ms.mLeaveDate.ToString() != "")             //總出勤記錄數
-            //    //        _ms.mDaysFactor = _ms.mMonthFactor - _ms.mTotalHoliday - _ms.mPunishLeaveCount - _ms.mAbsentCount - WuXinCount;
-            //    //    else if ((_ms.mLeaveDate == global::Helper.DateTimeParse.NullDate || _ms.mLeaveDate.ToString() == "") && _ms.mDutyDateCount < totalDay)
-            //    //        _ms.mDaysFactor = _ms.mMonthFactor - _ms.mTotalHoliday - _ms.mPunishLeaveCount - _ms.mAbsentCount - WuXinCount;
-            //}
-            //else
-            //{
-            //    _ms.mLoanFee = 0;
-            //    _ms.mLunchFee = 0;
-            //    _ms.mOverTimeFee = 0;
-            //    _ms.mGeneralOverTime = 0;
-            //    _ms.mHolidayOverTime = 0;
-            //    _ms.mLateCount = 0;
-            //    _ms.mTotalLateInMinute = 0;
-            //    _ms.mOverTimeBonus = 0;
-            //    _ms.mSpecialBonus = 0;
-            //    //_ms.mDaysFactor = 0;
-            //    _ms.mMonthFactor = 0;
-            //    _ms.mDutyDateCount = 0;
-            //    _ms.mPunishLeaveCount = 0;
-            //    _ms.mLeaveCount = 0;
-            //    _ms.mTotalHoliday = 0;
-            //}
-            //dsms.Clear();
+            DataSet dsms = this.monthlySalaryManager.getMonthlySummaryFee(emp.EmployeeId, _ms.mIdentifyDate, hryear, hrmonth);
+            if (dsms.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = dsms.Tables[0].Rows[0];
+                _ms.mLunchFee = mStrToDouble(dr["LunchFee"]);                                 //午餐費m
+                _ms.mOverTimeFee = mStrToDouble(dr["OverTimeFee"]);                           //加班費
+                _ms.mGeneralOverTime = mStrToDouble(dr["GeneralOverTime"]);                   //平日加班(時數)
+                _ms.mHolidayOverTime = mStrToDouble(dr["HolidayOverTime"]);                   //假日加班(時數)
+                _ms.GeneralOverTimeCountBig = mStrToDouble(dr["GeneralOverTimeCountBig"]);    //平日加班2小时之外(時數)
+                _ms.GeneralOverTimeCountSmall = mStrToDouble(dr["GeneralOverTimeCountSmall"]);//平日加班2小时以下(時數)
+                _ms.HolidayOverTimeCountBig = mStrToDouble(dr["HolidayOverTimeCountBig"]);    //假日加班2小时之外(時數)
+                _ms.HolidayOverTimeCountSmall = mStrToDouble(dr["HolidayOverTimeCountSmall"]);//假日加班2小时以下(時數)
+                _ms.mLateCount = mStrToDouble(dr["LateCount"]);                               //遲到次數
+                _ms.mTotalLateInMinute = mStrToDouble(dr["TotalLateInMinute"]);               //總遲到（分）
+                _ms.mOverTimeBonus = mStrToDouble(dr["OverTimeBonus"]);                       //加班津貼
+                _ms.mSpecialBonus = mStrToDouble(dr["SpecialBonus"]);                         //中夜班津貼
+                //_ms.mDaysFactor = mStrToDouble(dr["DaysFactor"]);                           //總日基數
+                _ms.mMonthFactor = mStrToDouble(dr["MonthFactor"]);                           //總月基數
+                _ms.mDutyDateCount = mStrToDouble(dr["DutyDateCount"]);                       //總出勤記錄數
+                _ms.mLeaveDate = (dr["LeaveDate"] == null || dr["LeaveDate"].ToString() == "") ? global::Helper.DateTimeParse.NullDate : Convert.ToDateTime(dr["LeaveDate"].ToString());                                               //离职日期
+                _ms.mPunishLeaveCount = mStrToDouble(dr["PunishLeaveCount"]);                 //倒扣款假總數
+                _ms.mLeaveCount = mStrToDouble(dr["LeaveCount"]);                             //請假總數
+                _ms.mAbsentCount = mStrToDouble(dr["AbsentCount"]);                           //曠工總數
+                _ms.mTotalHoliday = mStrToDouble(dr["TotalHoliday"]);                         //該月總例假數
+                _ms.mLoanFee = mStrToDouble(dr["LoanFee"]);                                   //借支
+                // int WuXinCount = Int32.Parse(dr["WuXinCount"].ToString());
+                //考勤 不满一月  日基数 = 日基数-实际假数-扣款请假天数-旷职-无薪假      //矿工待处理  
+                //if (_ms.mDutyDateCount < totalDay)
+                //    _ms.mDaysFactor = _ms.mDaysFactor - _ms.mTotalHoliday;
+                //    if (_ms.mDutyDateCount < totalDay && _ms.mLeaveDate != global::Helper.DateTimeParse.NullDate && _ms.mLeaveDate.ToString() != "")             //總出勤記錄數
+                //        _ms.mDaysFactor = _ms.mMonthFactor - _ms.mTotalHoliday - _ms.mPunishLeaveCount - _ms.mAbsentCount - WuXinCount;
+                //    else if ((_ms.mLeaveDate == global::Helper.DateTimeParse.NullDate || _ms.mLeaveDate.ToString() == "") && _ms.mDutyDateCount < totalDay)
+                //        _ms.mDaysFactor = _ms.mMonthFactor - _ms.mTotalHoliday - _ms.mPunishLeaveCount - _ms.mAbsentCount - WuXinCount;
+            }
+            else
+            {
+                _ms.mLoanFee = 0;
+                _ms.mLunchFee = 0;
+                _ms.mOverTimeFee = 0;
+                _ms.mGeneralOverTime = 0;
+                _ms.mHolidayOverTime = 0;
+                _ms.mLateCount = 0;
+                _ms.mTotalLateInMinute = 0;
+                _ms.mOverTimeBonus = 0;
+                _ms.mSpecialBonus = 0;
+                //_ms.mDaysFactor = 0;
+                _ms.mMonthFactor = 0;
+                _ms.mDutyDateCount = 0;
+                _ms.mPunishLeaveCount = 0;
+                _ms.mLeaveCount = 0;
+                _ms.mTotalHoliday = 0;
+            }
+            dsms.Clear();
             #endregion
+
             #region 底薪
             DataSet dx_ds = this.monthlySalaryManager.getMonthlySalary(emp.EmployeeId, _ms.mIdentifyDate);//只有一行记录,故取第一行即可.
             if (dx_ds.Tables[0].Rows.Count > 0)
@@ -393,14 +427,11 @@ namespace Book.UI.Hr.Salary.Salaryset
                     else
                         _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors), 0);
                 }
-                if (VPerson.specialEmp.Contains(emp.EmployeeId))
-                {
-                    _ms.TimeBonus = 0;
-                    _ms.mSpecialBonus = 0;
-                }
 
             }
             #endregion
+
+            return _ms;
         }
 
         private double mStrToDouble(object o)
@@ -423,5 +454,18 @@ namespace Book.UI.Hr.Salary.Salaryset
                 return b1 / a1;
             }
         }
+    }
+
+    public class HelperEmp
+    {
+        public HelperEmp()
+        {
+            if (this.MSList == null)
+                this.MSList = new List<MonthSalaryClass>();
+        }
+
+        public Model.Employee Employee { get; set; }
+
+        public List<MonthSalaryClass> MSList { get; set; }
     }
 }
