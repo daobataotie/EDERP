@@ -11425,7 +11425,7 @@
     <Compile Include="Hr\Salary\Salaryset\AnnualSalaryRO.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Hr\Salary\Salaryset\AnnualSalaryRO.Designer.cs">
+    <Compile Include="Hr\Salary\Salaryset\AnnualSalaryRO.designer.cs">
       <DependentUpon>AnnualSalaryRO.cs</DependentUpon>
     </Compile>
     <Compile Include="Hr\Salary\Salaryset\CrystalReport3.cs">
