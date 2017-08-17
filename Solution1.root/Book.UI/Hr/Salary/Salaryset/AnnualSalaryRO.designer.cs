@@ -131,12 +131,16 @@ namespace Book.UI.Hr.Salary.Salaryset
             // 
             // xrTable1
             // 
+            this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(465.6667F, 436.5625F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(182.5625F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(762F, 63.5F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(762F, 280.8816F);
+            this.xrTable1.StylePriority.UseBorders = false;
+            this.xrTable1.StylePriority.UseTextAlignment = false;
+            this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrTableRow1
             // 
@@ -199,7 +203,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             // 
             this.lblName.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
             this.lblName.Dpi = 254F;
-            this.lblName.LocationFloat = new DevExpress.Utils.PointFloat(10.58333F, 58.41996F);
+            this.lblName.LocationFloat = new DevExpress.Utils.PointFloat(10.58331F, 58.41996F);
             this.lblName.Name = "lblName";
             this.lblName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.lblName.SizeF = new System.Drawing.SizeF(171.9792F, 222.4617F);
@@ -230,7 +234,6 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.lblQKStandard.SizeF = new System.Drawing.SizeF(171.9792F, 58.42F);
             this.lblQKStandard.StylePriority.UseBorders = false;
             this.lblQKStandard.StylePriority.UseTextAlignment = false;
-            this.lblQKStandard.Text = "xrLabel3";
             this.lblQKStandard.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel8
