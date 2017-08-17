@@ -38,8 +38,8 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblName = new DevExpress.XtraReports.UI.XRLabel();
@@ -47,12 +47,35 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.lblQKStandard = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblFYNumber = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblIDNo2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo7 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo5 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo10 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblIDNo9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrTable2,
             this.lblFYNumber,
             this.xrLabel8,
             this.lblQKStandard,
@@ -133,11 +156,11 @@ namespace Book.UI.Hr.Salary.Salaryset
             // 
             this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(182.5625F, 0F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(182.5625F, 3.051758E-05F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(762F, 280.8816F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(582F, 280.8816F);
             this.xrTable1.StylePriority.UseBorders = false;
             this.xrTable1.StylePriority.UseTextAlignment = false;
             this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
@@ -146,8 +169,16 @@ namespace Book.UI.Hr.Salary.Salaryset
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell1,
-            this.xrTableCell2,
-            this.xrTableCell3});
+            this.lblIDNo1,
+            this.lblIDNo2,
+            this.lblIDNo3,
+            this.lblIDNo4,
+            this.lblIDNo5,
+            this.lblIDNo6,
+            this.lblIDNo7,
+            this.lblIDNo8,
+            this.lblIDNo9,
+            this.lblIDNo10});
             this.xrTableRow1.Dpi = 254F;
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 1;
@@ -156,22 +187,24 @@ namespace Book.UI.Hr.Salary.Salaryset
             // 
             this.xrTableCell1.Dpi = 254F;
             this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Text = "xrTableCell1";
-            this.xrTableCell1.Weight = 1;
+            this.xrTableCell1.Text = "身份證統一編號";
+            this.xrTableCell1.Weight = 0.32283464566929132;
             // 
-            // xrTableCell2
+            // lblIDNo4
             // 
-            this.xrTableCell2.Dpi = 254F;
-            this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Text = "xrTableCell2";
-            this.xrTableCell2.Weight = 1;
+            this.lblIDNo4.Dpi = 254F;
+            this.lblIDNo4.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo4.Name = "lblIDNo4";
+            this.lblIDNo4.StylePriority.UseFont = false;
+            this.lblIDNo4.Weight = 0.19685039370078741;
             // 
-            // xrTableCell3
+            // lblIDNo8
             // 
-            this.xrTableCell3.Dpi = 254F;
-            this.xrTableCell3.Name = "xrTableCell3";
-            this.xrTableCell3.Text = "xrTableCell3";
-            this.xrTableCell3.Weight = 1;
+            this.lblIDNo8.Dpi = 254F;
+            this.lblIDNo8.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo8.Name = "lblIDNo8";
+            this.lblIDNo8.StylePriority.UseFont = false;
+            this.lblIDNo8.Weight = 0.19685039370078744;
             // 
             // xrLabel3
             // 
@@ -179,7 +212,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.xrLabel3.Dpi = 254F;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(10.58333F, 0F);
             this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(171.9792F, 58.42F);
             this.xrLabel3.StylePriority.UseBorders = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
@@ -215,7 +248,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             // 
             this.xrLabel6.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
             this.xrLabel6.Dpi = 254F;
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(1111.25F, 307.7632F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(1981.729F, 477.0965F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(171.9792F, 58.42F);
@@ -261,6 +294,188 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.lblFYNumber.StylePriority.UseTextAlignment = false;
             this.lblFYNumber.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
+            // lblIDNo2
+            // 
+            this.lblIDNo2.Dpi = 254F;
+            this.lblIDNo2.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo2.Name = "lblIDNo2";
+            this.lblIDNo2.StylePriority.UseFont = false;
+            this.lblIDNo2.Weight = 0.19685039370078741;
+            // 
+            // lblIDNo3
+            // 
+            this.lblIDNo3.Dpi = 254F;
+            this.lblIDNo3.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo3.Name = "lblIDNo3";
+            this.lblIDNo3.StylePriority.UseFont = false;
+            this.lblIDNo3.Weight = 0.19685039370078739;
+            // 
+            // lblIDNo1
+            // 
+            this.lblIDNo1.Dpi = 254F;
+            this.lblIDNo1.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo1.Name = "lblIDNo1";
+            this.lblIDNo1.StylePriority.UseFont = false;
+            this.lblIDNo1.Weight = 0.19685039370078741;
+            // 
+            // lblIDNo6
+            // 
+            this.lblIDNo6.Dpi = 254F;
+            this.lblIDNo6.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo6.Name = "lblIDNo6";
+            this.lblIDNo6.StylePriority.UseFont = false;
+            this.lblIDNo6.Weight = 0.19685039370078739;
+            // 
+            // lblIDNo7
+            // 
+            this.lblIDNo7.Dpi = 254F;
+            this.lblIDNo7.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo7.Name = "lblIDNo7";
+            this.lblIDNo7.StylePriority.UseFont = false;
+            this.lblIDNo7.Weight = 0.19685039370078739;
+            // 
+            // lblIDNo5
+            // 
+            this.lblIDNo5.Dpi = 254F;
+            this.lblIDNo5.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo5.Name = "lblIDNo5";
+            this.lblIDNo5.StylePriority.UseFont = false;
+            this.lblIDNo5.Weight = 0.19685039370078739;
+            // 
+            // lblIDNo10
+            // 
+            this.lblIDNo10.Dpi = 254F;
+            this.lblIDNo10.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo10.Name = "lblIDNo10";
+            this.lblIDNo10.StylePriority.UseFont = false;
+            this.lblIDNo10.Weight = 0.19685039370078739;
+            // 
+            // lblIDNo9
+            // 
+            this.lblIDNo9.Dpi = 254F;
+            this.lblIDNo9.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblIDNo9.Name = "lblIDNo9";
+            this.lblIDNo9.StylePriority.UseFont = false;
+            this.lblIDNo9.Weight = 0.19685039370078744;
+            // 
+            // xrTable2
+            // 
+            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)));
+            this.xrTable2.Dpi = 254F;
+            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(764.5627F, 0F);
+            this.xrTable2.Name = "xrTable2";
+            this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.xrTableRow2});
+            this.xrTable2.SizeF = new System.Drawing.SizeF(2099.229F, 58.42001F);
+            this.xrTable2.StylePriority.UseBorders = false;
+            this.xrTable2.StylePriority.UseTextAlignment = false;
+            this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrTableRow2
+            // 
+            this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell2,
+            this.xrTableCell3,
+            this.xrTableCell4,
+            this.xrTableCell5,
+            this.xrTableCell6,
+            this.xrTableCell7,
+            this.xrTableCell8,
+            this.xrTableCell9,
+            this.xrTableCell10,
+            this.xrTableCell11,
+            this.xrTableCell12});
+            this.xrTableRow2.Dpi = 254F;
+            this.xrTableRow2.Name = "xrTableRow2";
+            this.xrTableRow2.Weight = 1;
+            // 
+            // xrTableCell2
+            // 
+            this.xrTableCell2.Dpi = 254F;
+            this.xrTableCell2.Name = "xrTableCell2";
+            this.xrTableCell2.Text = "身份證統一編號";
+            this.xrTableCell2.Weight = 0.28116807653126058;
+            // 
+            // xrTableCell3
+            // 
+            this.xrTableCell3.Dpi = 254F;
+            this.xrTableCell3.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell3.Name = "xrTableCell3";
+            this.xrTableCell3.StylePriority.UseFont = false;
+            this.xrTableCell3.Weight = 0.19685039370078741;
+            // 
+            // xrTableCell4
+            // 
+            this.xrTableCell4.Dpi = 254F;
+            this.xrTableCell4.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell4.Name = "xrTableCell4";
+            this.xrTableCell4.StylePriority.UseFont = false;
+            this.xrTableCell4.Weight = 0.19685039370078741;
+            // 
+            // xrTableCell5
+            // 
+            this.xrTableCell5.Dpi = 254F;
+            this.xrTableCell5.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell5.Name = "xrTableCell5";
+            this.xrTableCell5.StylePriority.UseFont = false;
+            this.xrTableCell5.Weight = 0.19685039370078739;
+            // 
+            // xrTableCell6
+            // 
+            this.xrTableCell6.Dpi = 254F;
+            this.xrTableCell6.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell6.Name = "xrTableCell6";
+            this.xrTableCell6.StylePriority.UseFont = false;
+            this.xrTableCell6.Weight = 0.19685039370078741;
+            // 
+            // xrTableCell7
+            // 
+            this.xrTableCell7.Dpi = 254F;
+            this.xrTableCell7.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell7.Name = "xrTableCell7";
+            this.xrTableCell7.StylePriority.UseFont = false;
+            this.xrTableCell7.Weight = 0.19685039370078739;
+            // 
+            // xrTableCell8
+            // 
+            this.xrTableCell8.Dpi = 254F;
+            this.xrTableCell8.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell8.Name = "xrTableCell8";
+            this.xrTableCell8.StylePriority.UseFont = false;
+            this.xrTableCell8.Weight = 0.19685039370078739;
+            // 
+            // xrTableCell9
+            // 
+            this.xrTableCell9.Dpi = 254F;
+            this.xrTableCell9.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell9.Name = "xrTableCell9";
+            this.xrTableCell9.StylePriority.UseFont = false;
+            this.xrTableCell9.Weight = 0.19685039370078739;
+            // 
+            // xrTableCell10
+            // 
+            this.xrTableCell10.Dpi = 254F;
+            this.xrTableCell10.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell10.Name = "xrTableCell10";
+            this.xrTableCell10.StylePriority.UseFont = false;
+            this.xrTableCell10.Weight = 0.19685039370078744;
+            // 
+            // xrTableCell11
+            // 
+            this.xrTableCell11.Dpi = 254F;
+            this.xrTableCell11.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell11.Name = "xrTableCell11";
+            this.xrTableCell11.StylePriority.UseFont = false;
+            this.xrTableCell11.Weight = 0.19685039370078744;
+            // 
+            // xrTableCell12
+            // 
+            this.xrTableCell12.Dpi = 254F;
+            this.xrTableCell12.Font = new System.Drawing.Font("新細明體", 12F);
+            this.xrTableCell12.Name = "xrTableCell12";
+            this.xrTableCell12.StylePriority.UseFont = false;
+            this.xrTableCell12.Weight = 0.19685039370078739;
+            // 
             // AnnualSalaryRO
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -278,6 +493,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.SnapGridSize = 31.75F;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -301,7 +517,28 @@ namespace Book.UI.Hr.Salary.Salaryset
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo4;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo8;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo1;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo2;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo3;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo5;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo6;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo7;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo9;
+        private DevExpress.XtraReports.UI.XRTableCell lblIDNo10;
+        private DevExpress.XtraReports.UI.XRTable xrTable2;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
     }
 }
