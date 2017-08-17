@@ -73,19 +73,22 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.lblMonthSalaryTotal = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
             this.lblAnnualBonus = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell19 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell20 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell21 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell22 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell23 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary5 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary7 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary11 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell24 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell25 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell26 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell27 = new DevExpress.XtraReports.UI.XRTableCell();
             this.lblMonthSalary12 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary6 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary8 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblMonthSalary10 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -513,14 +516,17 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.lblMonthSalaryTotal,
             this.xrTableCell14,
             this.lblAnnualBonus,
-            this.xrTableCell16,
-            this.xrTableCell17,
-            this.xrTableCell18,
-            this.xrTableCell19,
-            this.xrTableCell20,
-            this.xrTableCell21,
-            this.xrTableCell22,
-            this.xrTableCell23,
+            this.lblMonthSalary1,
+            this.lblMonthSalary2,
+            this.lblMonthSalary3,
+            this.lblMonthSalary4,
+            this.lblMonthSalary5,
+            this.lblMonthSalary6,
+            this.lblMonthSalary7,
+            this.lblMonthSalary8,
+            this.lblMonthSalary9,
+            this.lblMonthSalary10,
+            this.lblMonthSalary11,
             this.lblMonthSalary12});
             this.xrTableRow3.Dpi = 254F;
             this.xrTableRow3.Name = "xrTableRow3";
@@ -547,63 +553,55 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.lblAnnualBonus.Name = "lblAnnualBonus";
             this.lblAnnualBonus.Weight = 0.182070812019627;
             // 
-            // xrTableCell16
+            // lblMonthSalary1
             // 
-            this.xrTableCell16.Dpi = 254F;
-            this.xrTableCell16.Font = new System.Drawing.Font("新細明體", 9.75F);
-            this.xrTableCell16.Name = "xrTableCell16";
-            this.xrTableCell16.StylePriority.UseFont = false;
-            this.xrTableCell16.Text = "1 月 份";
-            this.xrTableCell16.Weight = 0.14092406129673568;
+            this.lblMonthSalary1.Dpi = 254F;
+            this.lblMonthSalary1.Font = new System.Drawing.Font("新細明體", 9.75F);
+            this.lblMonthSalary1.Name = "lblMonthSalary1";
+            this.lblMonthSalary1.StylePriority.UseFont = false;
+            this.lblMonthSalary1.Weight = 0.14092406129673568;
             // 
-            // xrTableCell17
+            // lblMonthSalary2
             // 
-            this.xrTableCell17.Dpi = 254F;
-            this.xrTableCell17.Name = "xrTableCell17";
-            this.xrTableCell17.Text = "xrTableCell9";
-            this.xrTableCell17.Weight = 0.14092406129673568;
+            this.lblMonthSalary2.Dpi = 254F;
+            this.lblMonthSalary2.Name = "lblMonthSalary2";
+            this.lblMonthSalary2.Weight = 0.14092406129673568;
             // 
-            // xrTableCell18
+            // lblMonthSalary3
             // 
-            this.xrTableCell18.Dpi = 254F;
-            this.xrTableCell18.Name = "xrTableCell18";
-            this.xrTableCell18.Text = "xrTableCell6";
-            this.xrTableCell18.Weight = 0.14092406129673568;
+            this.lblMonthSalary3.Dpi = 254F;
+            this.lblMonthSalary3.Name = "lblMonthSalary3";
+            this.lblMonthSalary3.Weight = 0.14092406129673568;
             // 
-            // xrTableCell19
+            // lblMonthSalary4
             // 
-            this.xrTableCell19.Dpi = 254F;
-            this.xrTableCell19.Name = "xrTableCell19";
-            this.xrTableCell19.Text = "xrTableCell10";
-            this.xrTableCell19.Weight = 0.14092406129673568;
+            this.lblMonthSalary4.Dpi = 254F;
+            this.lblMonthSalary4.Name = "lblMonthSalary4";
+            this.lblMonthSalary4.Weight = 0.14092406129673568;
             // 
-            // xrTableCell20
+            // lblMonthSalary5
             // 
-            this.xrTableCell20.Dpi = 254F;
-            this.xrTableCell20.Name = "xrTableCell20";
-            this.xrTableCell20.Text = "xrTableCell4";
-            this.xrTableCell20.Weight = 0.28184811923891906;
+            this.lblMonthSalary5.Dpi = 254F;
+            this.lblMonthSalary5.Name = "lblMonthSalary5";
+            this.lblMonthSalary5.Weight = 0.14092405961945953;
             // 
-            // xrTableCell21
+            // lblMonthSalary7
             // 
-            this.xrTableCell21.Dpi = 254F;
-            this.xrTableCell21.Name = "xrTableCell21";
-            this.xrTableCell21.Text = "xrTableCell7";
-            this.xrTableCell21.Weight = 0.28184811923891906;
+            this.lblMonthSalary7.Dpi = 254F;
+            this.lblMonthSalary7.Name = "lblMonthSalary7";
+            this.lblMonthSalary7.Weight = 0.14092405961945953;
             // 
-            // xrTableCell22
+            // lblMonthSalary9
             // 
-            this.xrTableCell22.Dpi = 254F;
-            this.xrTableCell22.Name = "xrTableCell22";
-            this.xrTableCell22.Text = "xrTableCell5";
-            this.xrTableCell22.Weight = 0.28243431731367891;
+            this.lblMonthSalary9.Dpi = 254F;
+            this.lblMonthSalary9.Name = "lblMonthSalary9";
+            this.lblMonthSalary9.Weight = 0.14121715865683945;
             // 
-            // xrTableCell23
+            // lblMonthSalary11
             // 
-            this.xrTableCell23.Dpi = 254F;
-            this.xrTableCell23.Name = "xrTableCell23";
-            this.xrTableCell23.Text = "xrTableCell8";
-            this.xrTableCell23.Weight = 0.14121715865683945;
+            this.lblMonthSalary11.Dpi = 254F;
+            this.lblMonthSalary11.Name = "lblMonthSalary11";
+            this.lblMonthSalary11.Weight = 0.14121715865683945;
             // 
             // xrTableCell24
             // 
@@ -644,6 +642,24 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.lblMonthSalary12.Name = "lblMonthSalary12";
             this.lblMonthSalary12.StylePriority.UseBorders = false;
             this.lblMonthSalary12.Weight = 0.14121715865683945;
+            // 
+            // lblMonthSalary6
+            // 
+            this.lblMonthSalary6.Dpi = 254F;
+            this.lblMonthSalary6.Name = "lblMonthSalary6";
+            this.lblMonthSalary6.Weight = 0.14092405961945953;
+            // 
+            // lblMonthSalary8
+            // 
+            this.lblMonthSalary8.Dpi = 254F;
+            this.lblMonthSalary8.Name = "lblMonthSalary8";
+            this.lblMonthSalary8.Weight = 0.14092405961945953;
+            // 
+            // lblMonthSalary10
+            // 
+            this.lblMonthSalary10.Dpi = 254F;
+            this.lblMonthSalary10.Name = "lblMonthSalary10";
+            this.lblMonthSalary10.Weight = 0.14121715865683945;
             // 
             // AnnualSalaryRO
             // 
@@ -710,14 +726,14 @@ namespace Book.UI.Hr.Salary.Salaryset
         private DevExpress.XtraReports.UI.XRTableCell lblMonthSalaryTotal;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell14;
         private DevExpress.XtraReports.UI.XRTableCell lblAnnualBonus;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell18;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell19;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell20;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell21;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell22;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell23;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary1;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary2;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary3;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary4;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary5;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary7;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary9;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary11;
         private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary12;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
@@ -728,5 +744,8 @@ namespace Book.UI.Hr.Salary.Salaryset
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell26;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell27;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary6;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary8;
+        private DevExpress.XtraReports.UI.XRTableCell lblMonthSalary10;
     }
 }
