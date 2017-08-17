@@ -19,7 +19,6 @@ namespace Book.UI.Hr.Salary.Salaryset
         protected BL.EmployeeManager employeeManager = new Book.BL.EmployeeManager();
         private BL.HrDailyEmployeeAttendInfoManager _hrManager = new Book.BL.HrDailyEmployeeAttendInfoManager();
         private BL.AnnualHolidayManager annualHolidayManager = new Book.BL.AnnualHolidayManager();
-        double AttendDays = 0;
         double KuangzhiFactor = 0;
         List<HelperEmp> heList = new List<HelperEmp>();
 
@@ -113,6 +112,53 @@ namespace Book.UI.Hr.Salary.Salaryset
                     }
                     #endregion
                 }
+
+                #region 加總
+                he.MonthSalary1 = he.MonthSalaryClass1.mBasePay + he.MonthSalaryClass1.mDutyPay + he.MonthSalaryClass1.mAnnualHolidayFee;
+                he.MonthSalary2 = he.MonthSalaryClass2.mBasePay + he.MonthSalaryClass2.mDutyPay + he.MonthSalaryClass2.mAnnualHolidayFee;
+                he.MonthSalary3 = he.MonthSalaryClass3.mBasePay + he.MonthSalaryClass3.mDutyPay + he.MonthSalaryClass3.mAnnualHolidayFee;
+                he.MonthSalary4 = he.MonthSalaryClass4.mBasePay + he.MonthSalaryClass4.mDutyPay + he.MonthSalaryClass4.mAnnualHolidayFee;
+                he.MonthSalary5 = he.MonthSalaryClass5.mBasePay + he.MonthSalaryClass5.mDutyPay + he.MonthSalaryClass5.mAnnualHolidayFee;
+                he.MonthSalary6 = he.MonthSalaryClass6.mBasePay + he.MonthSalaryClass6.mDutyPay + he.MonthSalaryClass6.mAnnualHolidayFee;
+                he.MonthSalary7 = he.MonthSalaryClass7.mBasePay + he.MonthSalaryClass7.mDutyPay + he.MonthSalaryClass7.mAnnualHolidayFee;
+                he.MonthSalary8 = he.MonthSalaryClass8.mBasePay + he.MonthSalaryClass8.mDutyPay + he.MonthSalaryClass8.mAnnualHolidayFee;
+                he.MonthSalary9 = he.MonthSalaryClass9.mBasePay + he.MonthSalaryClass9.mDutyPay + he.MonthSalaryClass9.mAnnualHolidayFee;
+                he.MonthSalary10 = he.MonthSalaryClass10.mBasePay + he.MonthSalaryClass10.mDutyPay + he.MonthSalaryClass10.mAnnualHolidayFee;
+                he.MonthSalary11 = he.MonthSalaryClass11.mBasePay + he.MonthSalaryClass11.mDutyPay + he.MonthSalaryClass11.mAnnualHolidayFee;
+                he.MonthSalary12 = he.MonthSalaryClass12.mBasePay + he.MonthSalaryClass12.mDutyPay + he.MonthSalaryClass12.mAnnualHolidayFee;
+                he.MonthSalaryTotal = he.MonthSalary1 + he.MonthSalary2 + he.MonthSalary3 + he.MonthSalary4 + he.MonthSalary5 + he.MonthSalary6 + he.MonthSalary7 + he.MonthSalary8 + he.MonthSalary9 + he.MonthSalary10 + he.MonthSalary11 + he.MonthSalary12;
+
+                he.KouKuan1 = he.MonthSalaryClass1.mLatePunish + he.MonthSalaryClass1.mJiuYuanKouJiao + he.MonthSalaryClass1.mOtherPunish;
+                he.KouKuan2 = he.MonthSalaryClass2.mLatePunish + he.MonthSalaryClass2.mJiuYuanKouJiao + he.MonthSalaryClass2.mOtherPunish;
+                he.KouKuan3 = he.MonthSalaryClass3.mLatePunish + he.MonthSalaryClass3.mJiuYuanKouJiao + he.MonthSalaryClass3.mOtherPunish;
+                he.KouKuan4 = he.MonthSalaryClass4.mLatePunish + he.MonthSalaryClass4.mJiuYuanKouJiao + he.MonthSalaryClass4.mOtherPunish;
+                he.KouKuan5 = he.MonthSalaryClass5.mLatePunish + he.MonthSalaryClass5.mJiuYuanKouJiao + he.MonthSalaryClass5.mOtherPunish;
+                he.KouKuan6 = he.MonthSalaryClass6.mLatePunish + he.MonthSalaryClass6.mJiuYuanKouJiao + he.MonthSalaryClass6.mOtherPunish;
+                he.KouKuan7 = he.MonthSalaryClass7.mLatePunish + he.MonthSalaryClass7.mJiuYuanKouJiao + he.MonthSalaryClass7.mOtherPunish;
+                he.KouKuan8 = he.MonthSalaryClass8.mLatePunish + he.MonthSalaryClass8.mJiuYuanKouJiao + he.MonthSalaryClass8.mOtherPunish;
+                he.KouKuan9 = he.MonthSalaryClass9.mLatePunish + he.MonthSalaryClass9.mJiuYuanKouJiao + he.MonthSalaryClass9.mOtherPunish;
+                he.KouKuan10 = he.MonthSalaryClass10.mLatePunish + he.MonthSalaryClass10.mJiuYuanKouJiao + he.MonthSalaryClass10.mOtherPunish;
+                he.KouKuan11 = he.MonthSalaryClass11.mLatePunish + he.MonthSalaryClass11.mJiuYuanKouJiao + he.MonthSalaryClass11.mOtherPunish;
+                he.KouKuan12 = he.MonthSalaryClass12.mLatePunish + he.MonthSalaryClass12.mJiuYuanKouJiao + he.MonthSalaryClass12.mOtherPunish;
+                he.KouKuanTotal = he.KouKuan1 + he.KouKuan2 + he.KouKuan3 + he.KouKuan4 + he.KouKuan5 + he.KouKuan6 + he.KouKuan7 + he.KouKuan8 + he.KouKuan9 + he.KouKuan10 + he.KouKuan11 + he.KouKuan12;
+
+                he.LunchFeeTotal = he.MonthSalaryClass1.mLunchFee + he.MonthSalaryClass2.mLunchFee + he.MonthSalaryClass3.mLunchFee + he.MonthSalaryClass4.mLunchFee + he.MonthSalaryClass5.mLunchFee + he.MonthSalaryClass6.mLunchFee + he.MonthSalaryClass7.mLunchFee + he.MonthSalaryClass8.mLunchFee + he.MonthSalaryClass9.mLunchFee + he.MonthSalaryClass10.mLunchFee + he.MonthSalaryClass11.mLunchFee + he.MonthSalaryClass12.mLunchFee;
+
+                he.OverFee1 = he.MonthSalaryClass1.mGeneralOverTimeFee + he.MonthSalaryClass1.mHolidayOverTimeFee;
+                he.OverFee2 = he.MonthSalaryClass2.mGeneralOverTimeFee + he.MonthSalaryClass2.mHolidayOverTimeFee;
+                he.OverFee3 = he.MonthSalaryClass3.mGeneralOverTimeFee + he.MonthSalaryClass3.mHolidayOverTimeFee;
+                he.OverFee4 = he.MonthSalaryClass4.mGeneralOverTimeFee + he.MonthSalaryClass4.mHolidayOverTimeFee;
+                he.OverFee5 = he.MonthSalaryClass5.mGeneralOverTimeFee + he.MonthSalaryClass5.mHolidayOverTimeFee;
+                he.OverFee6 = he.MonthSalaryClass6.mGeneralOverTimeFee + he.MonthSalaryClass6.mHolidayOverTimeFee;
+                he.OverFee7 = he.MonthSalaryClass7.mGeneralOverTimeFee + he.MonthSalaryClass7.mHolidayOverTimeFee;
+                he.OverFee8 = he.MonthSalaryClass8.mGeneralOverTimeFee + he.MonthSalaryClass8.mHolidayOverTimeFee;
+                he.OverFee9 = he.MonthSalaryClass9.mGeneralOverTimeFee + he.MonthSalaryClass9.mHolidayOverTimeFee;
+                he.OverFee10 = he.MonthSalaryClass10.mGeneralOverTimeFee + he.MonthSalaryClass10.mHolidayOverTimeFee;
+                he.OverFee11 = he.MonthSalaryClass11.mGeneralOverTimeFee + he.MonthSalaryClass11.mHolidayOverTimeFee;
+                he.OverFee12 = he.MonthSalaryClass12.mGeneralOverTimeFee + he.MonthSalaryClass12.mHolidayOverTimeFee;
+                he.OverFeeTotal = he.OverFee1 + he.OverFee2 + he.OverFee3 + he.OverFee4 + he.OverFee5 + he.OverFee6 + he.OverFee7 + he.OverFee8 + he.OverFee9 + he.OverFee10 + he.OverFee11 + he.OverFee12;
+
+                #endregion
 
                 heList.Add(he);
             }
@@ -493,6 +539,8 @@ namespace Book.UI.Hr.Salary.Salaryset
 
                 _ms.mGivenDays = mStrToDouble(dx_dr["HolidayBonusGivenDays"]);  //年假(补休)天数
                 _ms.mAnnualHolidayFee = this.GetSiSheWuRu(_ms.mMonthlyPay / 30 * _ms.mGivenDays, 0);         //年假(补休)金额，2016年3月2日16:06:28改为固定除以30天
+                _ms.mOtherPunish = mStrToDouble(dx_dr["OtherPunish"]); //其它扣款
+                _ms.mJiuYuanKouJiao = mStrToDouble(dx_dr["JiuYuanKouJiao"]); //就源扣缴
 
                 if (VPerson.specialEmp.Contains(emp.EmployeeId))
                 {
@@ -511,6 +559,75 @@ namespace Book.UI.Hr.Salary.Salaryset
                 }
 
             }
+            #endregion
+
+            #region 迟到扣款
+            int mIcount = 0;  //和小于10分 次数小于3次
+            if ((_ms.mTotalLateInMinute > 10 || _ms.mLateCount > 2) && !VPerson.vipPerson.Contains(emp.EmployeeId) && !VPerson.specialEmp.Contains(emp.EmployeeId))
+            {
+                string[] strs = new string[31];
+                IList<int> a = new List<int>();
+
+                if (strBU.Length > 0)
+                    strs = strBU.ToString(0, strBU.Length - 1).Split('|');
+                for (int i = 0; i < strs.Length; i++)
+                {
+                    if (strs[i] != null)
+                    {
+                        if (strs[i] == "0")
+                            continue;
+                        else
+                            a.Add(Int32.Parse(strs[i]));
+                    }
+                }
+
+                int temp = 0;
+                for (int i = 0; i < a.Count; i++)
+                {
+                    for (int j = i + 1; j < a.Count; j++)
+                    {
+                        if (a[i] > a[j])
+                        {
+                            temp = a[i];
+                            a[i] = a[j];
+                            a[j] = temp;
+                        }
+
+                    }
+                }
+                int sum = 0;
+                int m;
+                for (m = 0; m < a.Count; m++)
+                {
+                    sum = sum + a[m];
+                    if (sum > 10)
+                        break;
+                }
+                if (m > 2)
+                {
+                    m = 2;
+                }
+                mIcount = m;
+                _ms.mTotalLateInHour = (_ms.mLateCount - mIcount - mHicount) * 0.5 + mLateHalfCount;
+                _ms.mLatePunish = global::Helper.DateTimeParse.GetSiSheWuRu(_ms.mTotalLateInHour * _ms.mMonthlyPay / 30 / 8, 0);
+            }
+            else
+            {
+                _ms.mTotalLateInHour = 0;
+                _ms.mLatePunish = 0;
+                mIcount = (int)_ms.mLateCount;  // 10分钟内 3次之内 用于全勤奖
+            }
+            #endregion
+
+            #region 假日&平日加班算法修改 2013年4月26日15:09:41 陈宁
+            if (!VPerson.specialEmp.Contains(emp.EmployeeId))
+            {
+                //平日加班 小于2小时 为 时薪*1.33*加班小时,超出2小时部分 为 时薪*1.66*加班小时
+                _ms.mGeneralOverTimeFee = GetSiSheWuRu((_ms.mMonthlyPay / 30 / 8) * (_ms.GeneralOverTimeCountSmall * 1.334 + _ms.GeneralOverTimeCountBig * 1.667), 0);
+                //假日加班 一律 为时薪 两倍.
+                _ms.mHolidayOverTimeFee = GetSiSheWuRu(((_ms.mMonthlyPay / 30 / 8) * 3 / 2) * _ms.mHolidayOverTime, 0);
+            }
+
             #endregion
 
             return _ms;
@@ -565,5 +682,85 @@ namespace Book.UI.Hr.Salary.Salaryset
         public MonthSalaryClass MonthSalaryClass11 { get; set; }
 
         public MonthSalaryClass MonthSalaryClass12 { get; set; }
+
+        public double MonthSalary1 { get; set; }
+
+        public double MonthSalary2 { get; set; }
+
+        public double MonthSalary3 { get; set; }
+
+        public double MonthSalary4 { get; set; }
+
+        public double MonthSalary5 { get; set; }
+
+        public double MonthSalary6 { get; set; }
+
+        public double MonthSalary7 { get; set; }
+
+        public double MonthSalary8 { get; set; }
+
+        public double MonthSalary9 { get; set; }
+
+        public double MonthSalary10 { get; set; }
+
+        public double MonthSalary11 { get; set; }
+
+        public double MonthSalary12 { get; set; }
+
+        public double MonthSalaryTotal { get; set; }
+
+        public double KouKuan1 { get; set; }
+
+        public double KouKuan2 { get; set; }
+
+        public double KouKuan3 { get; set; }
+
+        public double KouKuan4 { get; set; }
+
+        public double KouKuan5 { get; set; }
+
+        public double KouKuan6 { get; set; }
+
+        public double KouKuan7 { get; set; }
+
+        public double KouKuan8 { get; set; }
+
+        public double KouKuan9 { get; set; }
+
+        public double KouKuan10 { get; set; }
+
+        public double KouKuan11 { get; set; }
+
+        public double KouKuan12 { get; set; }
+
+        public double KouKuanTotal { get; set; }
+
+        public double LunchFeeTotal { get; set; }
+
+        public double OverFee1 { get; set; }
+
+        public double OverFee2 { get; set; }
+
+        public double OverFee3 { get; set; }
+
+        public double OverFee4 { get; set; }
+
+        public double OverFee5 { get; set; }
+
+        public double OverFee6 { get; set; }
+
+        public double OverFee7 { get; set; }
+
+        public double OverFee8 { get; set; }
+
+        public double OverFee9 { get; set; }
+
+        public double OverFee10 { get; set; }
+
+        public double OverFee11 { get; set; }
+
+        public double OverFee12 { get; set; }
+
+        public double OverFeeTotal { get; set; }
     }
 }
