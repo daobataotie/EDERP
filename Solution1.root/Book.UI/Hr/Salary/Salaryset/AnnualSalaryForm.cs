@@ -70,7 +70,48 @@ namespace Book.UI.Hr.Salary.Salaryset
                 for (int i = 1; i <= 12; i++)
                 {
                     this.hrmonth = i;
-                    he.MSList.Add(this.GetEmpSalary(emp));
+
+                    #region 賦值
+                    switch (i)
+                    {
+                        case 1:
+                            he.MonthSalaryClass1 = this.GetEmpSalary(emp);
+                            break;
+                        case 2:
+                            he.MonthSalaryClass2 = this.GetEmpSalary(emp);
+                            break;
+                        case 3:
+                            he.MonthSalaryClass3 = this.GetEmpSalary(emp);
+                            break;
+                        case 4:
+                            he.MonthSalaryClass4 = this.GetEmpSalary(emp);
+                            break;
+                        case 5:
+                            he.MonthSalaryClass5 = this.GetEmpSalary(emp);
+                            break;
+                        case 6:
+                            he.MonthSalaryClass6 = this.GetEmpSalary(emp);
+                            break;
+                        case 7:
+                            he.MonthSalaryClass7 = this.GetEmpSalary(emp);
+                            break;
+                        case 8:
+                            he.MonthSalaryClass8 = this.GetEmpSalary(emp);
+                            break;
+                        case 9:
+                            he.MonthSalaryClass9 = this.GetEmpSalary(emp);
+                            break;
+                        case 10:
+                            he.MonthSalaryClass10 = this.GetEmpSalary(emp);
+                            break;
+                        case 11:
+                            he.MonthSalaryClass11 = this.GetEmpSalary(emp);
+                            break;
+                        case 12:
+                            he.MonthSalaryClass12 = this.GetEmpSalary(emp);
+                            break;
+                    }
+                    #endregion
                 }
 
                 heList.Add(he);
@@ -102,7 +143,48 @@ namespace Book.UI.Hr.Salary.Salaryset
                     for (int i = 1; i <= 12; i++)
                     {
                         this.hrmonth = i;
-                        he.MSList.Add(this.GetEmpSalary(emp));
+
+                        #region 賦值
+                        switch (i)
+                        {
+                            case 1:
+                                he.MonthSalaryClass1 = this.GetEmpSalary(emp);
+                                break;
+                            case 2:
+                                he.MonthSalaryClass2 = this.GetEmpSalary(emp);
+                                break;
+                            case 3:
+                                he.MonthSalaryClass3 = this.GetEmpSalary(emp);
+                                break;
+                            case 4:
+                                he.MonthSalaryClass4 = this.GetEmpSalary(emp);
+                                break;
+                            case 5:
+                                he.MonthSalaryClass5 = this.GetEmpSalary(emp);
+                                break;
+                            case 6:
+                                he.MonthSalaryClass6 = this.GetEmpSalary(emp);
+                                break;
+                            case 7:
+                                he.MonthSalaryClass7 = this.GetEmpSalary(emp);
+                                break;
+                            case 8:
+                                he.MonthSalaryClass8 = this.GetEmpSalary(emp);
+                                break;
+                            case 9:
+                                he.MonthSalaryClass9 = this.GetEmpSalary(emp);
+                                break;
+                            case 10:
+                                he.MonthSalaryClass10 = this.GetEmpSalary(emp);
+                                break;
+                            case 11:
+                                he.MonthSalaryClass11 = this.GetEmpSalary(emp);
+                                break;
+                            case 12:
+                                he.MonthSalaryClass12 = this.GetEmpSalary(emp);
+                                break;
+                        }
+                        #endregion
                     }
 
                     heList.Add(he);
@@ -458,14 +540,30 @@ namespace Book.UI.Hr.Salary.Salaryset
 
     public class HelperEmp
     {
-        public HelperEmp()
-        {
-            if (this.MSList == null)
-                this.MSList = new List<MonthSalaryClass>();
-        }
-
         public Model.Employee Employee { get; set; }
 
-        public List<MonthSalaryClass> MSList { get; set; }
+        public MonthSalaryClass MonthSalaryClass1 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass2 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass3 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass4 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass5 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass6 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass7 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass8 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass9 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass10 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass11 { get; set; }
+
+        public MonthSalaryClass MonthSalaryClass12 { get; set; }
     }
 }
