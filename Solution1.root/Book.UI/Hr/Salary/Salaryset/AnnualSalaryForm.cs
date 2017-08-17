@@ -233,6 +233,53 @@ namespace Book.UI.Hr.Salary.Salaryset
                         #endregion
                     }
 
+                    #region 加總
+                    he.MonthSalary1 = he.MonthSalaryClass1.mBasePay + he.MonthSalaryClass1.mDutyPay + he.MonthSalaryClass1.mAnnualHolidayFee;
+                    he.MonthSalary2 = he.MonthSalaryClass2.mBasePay + he.MonthSalaryClass2.mDutyPay + he.MonthSalaryClass2.mAnnualHolidayFee;
+                    he.MonthSalary3 = he.MonthSalaryClass3.mBasePay + he.MonthSalaryClass3.mDutyPay + he.MonthSalaryClass3.mAnnualHolidayFee;
+                    he.MonthSalary4 = he.MonthSalaryClass4.mBasePay + he.MonthSalaryClass4.mDutyPay + he.MonthSalaryClass4.mAnnualHolidayFee;
+                    he.MonthSalary5 = he.MonthSalaryClass5.mBasePay + he.MonthSalaryClass5.mDutyPay + he.MonthSalaryClass5.mAnnualHolidayFee;
+                    he.MonthSalary6 = he.MonthSalaryClass6.mBasePay + he.MonthSalaryClass6.mDutyPay + he.MonthSalaryClass6.mAnnualHolidayFee;
+                    he.MonthSalary7 = he.MonthSalaryClass7.mBasePay + he.MonthSalaryClass7.mDutyPay + he.MonthSalaryClass7.mAnnualHolidayFee;
+                    he.MonthSalary8 = he.MonthSalaryClass8.mBasePay + he.MonthSalaryClass8.mDutyPay + he.MonthSalaryClass8.mAnnualHolidayFee;
+                    he.MonthSalary9 = he.MonthSalaryClass9.mBasePay + he.MonthSalaryClass9.mDutyPay + he.MonthSalaryClass9.mAnnualHolidayFee;
+                    he.MonthSalary10 = he.MonthSalaryClass10.mBasePay + he.MonthSalaryClass10.mDutyPay + he.MonthSalaryClass10.mAnnualHolidayFee;
+                    he.MonthSalary11 = he.MonthSalaryClass11.mBasePay + he.MonthSalaryClass11.mDutyPay + he.MonthSalaryClass11.mAnnualHolidayFee;
+                    he.MonthSalary12 = he.MonthSalaryClass12.mBasePay + he.MonthSalaryClass12.mDutyPay + he.MonthSalaryClass12.mAnnualHolidayFee;
+                    he.MonthSalaryTotal = he.MonthSalary1 + he.MonthSalary2 + he.MonthSalary3 + he.MonthSalary4 + he.MonthSalary5 + he.MonthSalary6 + he.MonthSalary7 + he.MonthSalary8 + he.MonthSalary9 + he.MonthSalary10 + he.MonthSalary11 + he.MonthSalary12;
+
+                    he.KouKuan1 = he.MonthSalaryClass1.mLatePunish + he.MonthSalaryClass1.mJiuYuanKouJiao + he.MonthSalaryClass1.mOtherPunish;
+                    he.KouKuan2 = he.MonthSalaryClass2.mLatePunish + he.MonthSalaryClass2.mJiuYuanKouJiao + he.MonthSalaryClass2.mOtherPunish;
+                    he.KouKuan3 = he.MonthSalaryClass3.mLatePunish + he.MonthSalaryClass3.mJiuYuanKouJiao + he.MonthSalaryClass3.mOtherPunish;
+                    he.KouKuan4 = he.MonthSalaryClass4.mLatePunish + he.MonthSalaryClass4.mJiuYuanKouJiao + he.MonthSalaryClass4.mOtherPunish;
+                    he.KouKuan5 = he.MonthSalaryClass5.mLatePunish + he.MonthSalaryClass5.mJiuYuanKouJiao + he.MonthSalaryClass5.mOtherPunish;
+                    he.KouKuan6 = he.MonthSalaryClass6.mLatePunish + he.MonthSalaryClass6.mJiuYuanKouJiao + he.MonthSalaryClass6.mOtherPunish;
+                    he.KouKuan7 = he.MonthSalaryClass7.mLatePunish + he.MonthSalaryClass7.mJiuYuanKouJiao + he.MonthSalaryClass7.mOtherPunish;
+                    he.KouKuan8 = he.MonthSalaryClass8.mLatePunish + he.MonthSalaryClass8.mJiuYuanKouJiao + he.MonthSalaryClass8.mOtherPunish;
+                    he.KouKuan9 = he.MonthSalaryClass9.mLatePunish + he.MonthSalaryClass9.mJiuYuanKouJiao + he.MonthSalaryClass9.mOtherPunish;
+                    he.KouKuan10 = he.MonthSalaryClass10.mLatePunish + he.MonthSalaryClass10.mJiuYuanKouJiao + he.MonthSalaryClass10.mOtherPunish;
+                    he.KouKuan11 = he.MonthSalaryClass11.mLatePunish + he.MonthSalaryClass11.mJiuYuanKouJiao + he.MonthSalaryClass11.mOtherPunish;
+                    he.KouKuan12 = he.MonthSalaryClass12.mLatePunish + he.MonthSalaryClass12.mJiuYuanKouJiao + he.MonthSalaryClass12.mOtherPunish;
+                    he.KouKuanTotal = he.KouKuan1 + he.KouKuan2 + he.KouKuan3 + he.KouKuan4 + he.KouKuan5 + he.KouKuan6 + he.KouKuan7 + he.KouKuan8 + he.KouKuan9 + he.KouKuan10 + he.KouKuan11 + he.KouKuan12;
+
+                    he.LunchFeeTotal = he.MonthSalaryClass1.mLunchFee + he.MonthSalaryClass2.mLunchFee + he.MonthSalaryClass3.mLunchFee + he.MonthSalaryClass4.mLunchFee + he.MonthSalaryClass5.mLunchFee + he.MonthSalaryClass6.mLunchFee + he.MonthSalaryClass7.mLunchFee + he.MonthSalaryClass8.mLunchFee + he.MonthSalaryClass9.mLunchFee + he.MonthSalaryClass10.mLunchFee + he.MonthSalaryClass11.mLunchFee + he.MonthSalaryClass12.mLunchFee;
+
+                    he.OverFee1 = he.MonthSalaryClass1.mGeneralOverTimeFee + he.MonthSalaryClass1.mHolidayOverTimeFee;
+                    he.OverFee2 = he.MonthSalaryClass2.mGeneralOverTimeFee + he.MonthSalaryClass2.mHolidayOverTimeFee;
+                    he.OverFee3 = he.MonthSalaryClass3.mGeneralOverTimeFee + he.MonthSalaryClass3.mHolidayOverTimeFee;
+                    he.OverFee4 = he.MonthSalaryClass4.mGeneralOverTimeFee + he.MonthSalaryClass4.mHolidayOverTimeFee;
+                    he.OverFee5 = he.MonthSalaryClass5.mGeneralOverTimeFee + he.MonthSalaryClass5.mHolidayOverTimeFee;
+                    he.OverFee6 = he.MonthSalaryClass6.mGeneralOverTimeFee + he.MonthSalaryClass6.mHolidayOverTimeFee;
+                    he.OverFee7 = he.MonthSalaryClass7.mGeneralOverTimeFee + he.MonthSalaryClass7.mHolidayOverTimeFee;
+                    he.OverFee8 = he.MonthSalaryClass8.mGeneralOverTimeFee + he.MonthSalaryClass8.mHolidayOverTimeFee;
+                    he.OverFee9 = he.MonthSalaryClass9.mGeneralOverTimeFee + he.MonthSalaryClass9.mHolidayOverTimeFee;
+                    he.OverFee10 = he.MonthSalaryClass10.mGeneralOverTimeFee + he.MonthSalaryClass10.mHolidayOverTimeFee;
+                    he.OverFee11 = he.MonthSalaryClass11.mGeneralOverTimeFee + he.MonthSalaryClass11.mHolidayOverTimeFee;
+                    he.OverFee12 = he.MonthSalaryClass12.mGeneralOverTimeFee + he.MonthSalaryClass12.mHolidayOverTimeFee;
+                    he.OverFeeTotal = he.OverFee1 + he.OverFee2 + he.OverFee3 + he.OverFee4 + he.OverFee5 + he.OverFee6 + he.OverFee7 + he.OverFee8 + he.OverFee9 + he.OverFee10 + he.OverFee11 + he.OverFee12;
+
+                    #endregion
+
                     heList.Add(he);
                 }
 

@@ -50,7 +50,47 @@ namespace Book.UI.Hr.Salary.Salaryset
             this.lblMonthSalary12.DataBindings.Add("Text", DataSource, "MonthSalary12");
             this.lblMonthSalaryTotal.DataBindings.Add("Text", DataSource, "MonthSalaryTotal");
 
+            this.lblKouKuan1.DataBindings.Add("Text", DataSource, "KouKuan1");
+            this.lblKouKuan2.DataBindings.Add("Text", DataSource, "KouKuan2");
+            this.lblKouKuan3.DataBindings.Add("Text", DataSource, "KouKuan3");
+            this.lblKouKuan4.DataBindings.Add("Text", DataSource, "KouKuan4");
+            this.lblKouKuan5.DataBindings.Add("Text", DataSource, "KouKuan5");
+            this.lblKouKuan6.DataBindings.Add("Text", DataSource, "KouKuan6");
+            this.lblKouKuan7.DataBindings.Add("Text", DataSource, "KouKuan7");
+            this.lblKouKuan8.DataBindings.Add("Text", DataSource, "KouKuan8");
+            this.lblKouKuan9.DataBindings.Add("Text", DataSource, "KouKuan9");
+            this.lblKouKuan10.DataBindings.Add("Text", DataSource, "KouKuan10");
+            this.lblKouKuan11.DataBindings.Add("Text", DataSource, "KouKuan11");
+            this.lblKouKuan12.DataBindings.Add("Text", DataSource, "KouKuan12");
+            this.lblKouKuanTotal.DataBindings.Add("Text", DataSource, "KouKuanTotal");
 
+            this.lblLunchFee1.DataBindings.Add("Text", DataSource, "MonthSalaryClass1.mLunchFee");
+            this.lblLunchFee2.DataBindings.Add("Text", DataSource, "MonthSalaryClass2.mLunchFee");
+            this.lblLunchFee3.DataBindings.Add("Text", DataSource, "MonthSalaryClass3.mLunchFee");
+            this.lblLunchFee4.DataBindings.Add("Text", DataSource, "MonthSalaryClass4.mLunchFee");
+            this.lblLunchFee5.DataBindings.Add("Text", DataSource, "MonthSalaryClass5.mLunchFee");
+            this.lblLunchFee6.DataBindings.Add("Text", DataSource, "MonthSalaryClass6.mLunchFee");
+            this.lblLunchFee7.DataBindings.Add("Text", DataSource, "MonthSalaryClass7.mLunchFee");
+            this.lblLunchFee8.DataBindings.Add("Text", DataSource, "MonthSalaryClass8.mLunchFee");
+            this.lblLunchFee9.DataBindings.Add("Text", DataSource, "MonthSalaryClass9.mLunchFee");
+            this.lblLunchFee10.DataBindings.Add("Text", DataSource, "MonthSalaryClass10.mLunchFee");
+            this.lblLunchFee11.DataBindings.Add("Text", DataSource, "MonthSalaryClass11.mLunchFee");
+            this.lblLunchFee12.DataBindings.Add("Text", DataSource, "MonthSalaryClass12.mLunchFee");
+            this.lblLunchFeeTotal.DataBindings.Add("Text", DataSource, "LunchFeeTotal");
+
+            this.lblOverFee1.DataBindings.Add("Text", DataSource, "OverFee1");
+            this.lblOverFee2.DataBindings.Add("Text", DataSource, "OverFee2");
+            this.lblOverFee3.DataBindings.Add("Text", DataSource, "OverFee3");
+            this.lblOverFee4.DataBindings.Add("Text", DataSource, "OverFee4");
+            this.lblOverFee5.DataBindings.Add("Text", DataSource, "OverFee5");
+            this.lblOverFee6.DataBindings.Add("Text", DataSource, "OverFee6");
+            this.lblOverFee7.DataBindings.Add("Text", DataSource, "OverFee7");
+            this.lblOverFee8.DataBindings.Add("Text", DataSource, "OverFee8");
+            this.lblOverFee9.DataBindings.Add("Text", DataSource, "OverFee9");
+            this.lblOverFee10.DataBindings.Add("Text", DataSource, "OverFee10");
+            this.lblOverFee11.DataBindings.Add("Text", DataSource, "OverFee11");
+            this.lblOverFee12.DataBindings.Add("Text", DataSource, "OverFee12");
+            this.lblOverFeeTotal.DataBindings.Add("Text", DataSource, "OverFeeTotal");
         }
     }
 }
