@@ -168,7 +168,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             this._PCFC.Employee0Id = BL.V.ActiveOperator.EmployeeId;
 
             //清空複製的光學測試信息
-            ListOpticsTest.Clear();
+            if (ListOpticsTest != null)
+                ListOpticsTest.Clear();
         }
 
         protected override void Save()
