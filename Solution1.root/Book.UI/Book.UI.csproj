@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ECCEF5A5-BC9A-4CA4-9879-A8E1B170F7B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -99,28 +99,32 @@
       <HintPath>..\..\WinApp\ERP20111008\Solution1\新建文件夹\Ibatis.DataMapper.1.6.2.bin\Castle.DynamicProxy.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\文档设计\水晶报表\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
     <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
-      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\文档设计\水晶报表\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
-      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\文档设计\水晶报表\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\文档设计\水晶报表\CrystalDecisions.ReportSource.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\文档设计\水晶报表\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.VSDesigner, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
     <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\文档设计\水晶报表\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <Private>True</Private>

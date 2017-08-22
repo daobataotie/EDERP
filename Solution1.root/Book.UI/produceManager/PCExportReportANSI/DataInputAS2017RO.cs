@@ -21,7 +21,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             this.TCTSData.Text = pcDataInput.PCDataInputDate.HasValue ? pcDataInput.PCDataInputDate.Value.ToString("yyyy-MM-dd") : "";
             this.TCTSQuantity.Text = pcDataInput.PCPerspectiveList.Count.ToString();
-            this.TCTSEmployee.Text = pcDataInput.Employee2 == null ? "" : pcDataInput.Employee2.ToString();
+            this.TCTSEmployee.Text = pcDataInput.Employee3 == null ? "" : pcDataInput.Employee3.ToString();
 
             if (AS != null)
                 this.xrSubreportAS.ReportSource = new ASRO2017(AS, tag);
