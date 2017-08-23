@@ -84,6 +84,17 @@ namespace Book.Model
 
         public string CustomerProductName { get; set; }
 
+        public string CustomProduct
+        {
+            get
+            {
+                string s = string.Empty;
+                if (this.Product != null)
+                    s = this.Product.CustomerProductName;
+                return s;
+            }
+        }
+
         public readonly static string PRO_InvoiceDate = "InvoiceDate";
 
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";

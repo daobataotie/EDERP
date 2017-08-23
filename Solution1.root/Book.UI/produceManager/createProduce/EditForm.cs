@@ -124,13 +124,13 @@ namespace Book.UI.produceManager.createProduce
                     //    e.DisplayText = Convert.ToDateTime(detail.Invoice.InvoieDate).ToString("yyyy/MM/dd"); ;
                     //    break;
                     case "gridColumnUnit":
-                        e.DisplayText = detail.InvoiceProductUnit; ;
+                        e.DisplayText = detail.InvoiceProductUnit; 
                         break;
                     //case "gridColumn3":
                     //    e.DisplayText = detail.Invoice.InvoiceYjrq == null ? "" : Convert.ToDateTime(detail.Invoice.InvoiceYjrq).ToString("yyyy/MM/dd");
                     //    break;
                     case "gridColumnCustomProduct":
-                        e.DisplayText = detail.Product.CustomerProductName;
+                        //e.DisplayText = detail.Product.CustomerProductName;
                         break;
                     case "gridColumnSupplier":
                         e.DisplayText = detail.Product.Supplier == null ? string.Empty : detail.Product.Supplier.ToString();
