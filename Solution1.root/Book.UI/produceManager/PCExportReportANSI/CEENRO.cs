@@ -37,6 +37,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbTestAmount.Text = (_PCExportReportANSI.AmountTest.HasValue ? _PCExportReportANSI.AmountTest.ToString() : "0") + "PCS";
             this.LbTesrPerson.Text = (_PCExportReportANSI.Employee == null ? null : _PCExportReportANSI.Employee.ToString()) + (_PCExportReportANSI.Employee2 == null ? null : " / " + _PCExportReportANSI.Employee2.ToString()) + (_PCExportReportANSI.Employee3 == null ? null : " / " + _PCExportReportANSI.Employee3.ToString()) + (_PCExportReportANSI.Employee4 == null ? null : " / " + _PCExportReportANSI.Employee4.ToString());
             //this.LbReportDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToShortDateString();
+            this.lblTraceabilityMarking.Text = _PCExportReportANSI.TraceMarking;
             this.LbReportDate.Text = _PCExportReportANSI.ReportDate == null ? null : _PCExportReportANSI.ReportDate.Value.ToString("dd/MM/yyyy");
             this.LbClearlens.Text = _PCExportReportANSI.Clearlens == null ? null : _PCExportReportANSI.Clearlens.ToString();
             this.LbClearlens.Multiline = true;
@@ -48,6 +49,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             //this.xrTableCell39.Text = (_PCExportReportANSI.PanDing6.HasValue ? _PCExportReportANSI.PanDing6.ToString() : "0") + "PASS";
             //this.lbTraceability.Text = _PCExportReportANSI.TraceMarking == null ? null : _PCExportReportANSI.TraceMarking.ToString();
             //this.xrLabel31.Text = "6mm dia.Steel ball at " + _PCExportReportANSI.CeShiSuLi + this.xrLabel31.Text;
+            this.xrLabel31.Text = "6mm dia. Steel ball at " + _PCExportReportANSI.Protectionone +" + 1.5/-0 m/s or "+_PCExportReportANSI.Protectiontwo+"(+5)FPS. "+ this.xrLabel31.Text;
 
             this.LbTestCS.Text = (_PCExportReportANSI.ShouCeShu1.HasValue ? _PCExportReportANSI.ShouCeShu1.ToString() : "0") + "OF";
             this.LbTestSp.Text = (_PCExportReportANSI.ShouCeShu2.HasValue ? _PCExportReportANSI.ShouCeShu2.ToString() : "0") + "OF";

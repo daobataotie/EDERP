@@ -120,18 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="BarBtnCutomerOrder.Caption" xml:space="preserve">
-    <value>客户订单</value>
-  </data>
-  <data name="BarBtnSearch.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="barPrintAlan.Caption" xml:space="preserve">
-    <value>打印ALAN</value>
-  </data>
-  <data name="barPrintPPE.Caption" xml:space="preserve">
-    <value>打印PPE</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -1058,6 +1046,18 @@
   </data>
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="BarBtnCutomerOrder.Caption" xml:space="preserve">
+    <value>客户订单</value>
+  </data>
+  <data name="BarBtnSearch.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barPrintAlan.Caption" xml:space="preserve">
+    <value>打印ALAN</value>
+  </data>
+  <data name="barPrintPPE.Caption" xml:space="preserve">
+    <value>打印PPE</value>
   </data>
   <data name="emptySpaceItem15.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem15</value>
@@ -3905,6 +3905,24 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
   <data name="&gt;&gt;emptySpaceItem16.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Name" xml:space="preserve">
+    <value>layoutControlItem12</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;BarBtnCutomerOrder.Name" xml:space="preserve">
     <value>BarBtnCutomerOrder</value>
   </data>
@@ -3934,24 +3952,6 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
   </data>
   <data name="&gt;&gt;emptySpaceItem15.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
-    <value>layoutControlItem10</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
-    <value>layoutControlItem11</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem12.Name" xml:space="preserve">
-    <value>layoutControlItem12</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CEENEditsForm</value>
