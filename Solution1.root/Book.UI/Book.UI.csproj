@@ -101,9 +101,6 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\文档设计\水晶报表\CrystalDecisions.Enterprise.Framework.dll</HintPath>
@@ -118,9 +115,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CrystalDecisions.VSDesigner, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
@@ -211,9 +205,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="System">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core">
@@ -3515,9 +3507,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ConditionForm.zh-CHT.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\EditFormo.resx">
       <DependentUpon>EditFormo.cs</DependentUpon>
@@ -3537,39 +3531,51 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ROList.resx">
       <DependentUpon>ROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtBillsIncome\ROList.zh-CHT.resx">
       <DependentUpon>ROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\ROList.resx">
       <DependentUpon>ROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtCashAccount\ROList.zh-CHT.resx">
       <DependentUpon>ROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtDepreciationDetail\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -3589,9 +3595,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\ConditionForm.zh-CHT.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\List.resx">
       <DependentUpon>List.cs</DependentUpon>
@@ -3655,18 +3663,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO1.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO2.resx">
       <DependentUpon>RO2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO3.resx">
       <DependentUpon>RO3.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\RO4.resx">
       <DependentUpon>RO4.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\BankBill\BackleToCashForm.resx">
       <DependentUpon>BackleToCashForm.cs</DependentUpon>
@@ -3770,9 +3783,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\CashCreditSlipRO.resx">
       <DependentUpon>CashCreditSlipRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\CashCreditSlipRO.zh-CHT.resx">
       <DependentUpon>CashCreditSlipRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\Report\ConditionAdiaryChooseForm.resx">
       <DependentUpon>ConditionAdiaryChooseForm.cs</DependentUpon>
@@ -4100,15 +4115,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\YPFP\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcbeginAccountPayable\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -4220,21 +4239,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcInvoiceXOBill\BillIdSetForm.resx">
       <DependentUpon>BillIdSetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcInvoiceXOBill\BillIdSetForm.zh-CHT.resx">
       <DependentUpon>BillIdSetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcInvoiceXOBill\FPRO.resx">
       <DependentUpon>FPRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountPayable\AcInvoiceXOBill\FPRO1.resx">
       <DependentUpon>FPRO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AnnualCarryoverForm.resx">
       <DependentUpon>AnnualCarryoverForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AnnualCarryoverForm.zh-CHT.resx">
       <DependentUpon>AnnualCarryoverForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomsClearance\BGHandbookForm.resx">
       <DependentUpon>BGHandbookForm.cs</DependentUpon>
@@ -4286,6 +4311,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hr\Salary\Salaryset\AnnualSalaryRO.resx">
       <DependentUpon>AnnualSalaryRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Hr\Salary\Salaryset\CrystalReport3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -4301,21 +4327,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hr\Salary\Salaryset\PrintMonthSalary.resx">
       <DependentUpon>PrintMonthSalary.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Hr\Salary\Salaryset\AnnualSalaryForm.resx">
       <DependentUpon>AnnualSalaryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\EditForm.zh-CHS.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CO\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\CT\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\PT\ConditionPT.resx">
       <DependentUpon>ConditionPT.cs</DependentUpon>
@@ -4395,21 +4427,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XO\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XO\EditForm.sq.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XO\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XO\R02.en.resx">
       <DependentUpon>R02.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XT\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\XT\ConditionForm.zh-CHT.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoices\ZG\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
@@ -4589,78 +4627,103 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ANSI2015.resx">
       <DependentUpon>ANSI2015.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ANSI2015.zh-CHT.resx">
       <DependentUpon>ANSI2015.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ANSI2015RO.resx">
       <DependentUpon>ANSI2015RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ASEditForm2017.resx">
       <DependentUpon>ASEditForm2017.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ASEditForm2017.zh-CHT.resx">
       <DependentUpon>ASEditForm2017.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO.resx">
       <DependentUpon>ASRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO.zh-CHT.resx">
       <DependentUpon>ASRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO2017.resx">
       <DependentUpon>ASRO2017.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ASRO2017.zh-CHT.resx">
       <DependentUpon>ASRO2017.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\CEENRO.resx">
       <DependentUpon>CEENRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\CEENRO.zh-CHT.resx">
       <DependentUpon>CEENRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\CSARO.resx">
       <DependentUpon>CSARO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\CSARO.zh-CHT.resx">
       <DependentUpon>CSARO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputASRO.resx">
       <DependentUpon>DataInputASRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputCSARO.resx">
       <DependentUpon>DataInputCSARO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputANSIRO.resx">
       <DependentUpon>DataInputANSIRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputENRO.resx">
       <DependentUpon>DataInputENRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputForm.resx">
       <DependentUpon>DataInputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputForm.zh-CHT.resx">
       <DependentUpon>DataInputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputListForm.resx">
       <DependentUpon>DataInputListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\PCHazeRO.resx">
       <DependentUpon>PCHazeRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\PCOpticalMachineRO.resx">
       <DependentUpon>PCOpticalMachineRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ProductTestRO.resx">
       <DependentUpon>ProductTestRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISEditForm.resx">
       <DependentUpon>JISEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISEditForm.zh-CHT.resx">
       <DependentUpon>JISEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISOutPutFile.resx">
       <DependentUpon>JISOutPutFile.cs</DependentUpon>
@@ -4668,30 +4731,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISOutPutFile.zh-CHT.resx">
       <DependentUpon>JISOutPutFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISOutPutFileHelp.resx">
       <DependentUpon>JISOutPutFileHelp.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISOutPutFileHelp.zh-CHT.resx">
       <DependentUpon>JISOutPutFileHelp.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISRO.resx">
       <DependentUpon>JISRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISRO.zh-CHT.resx">
       <DependentUpon>JISRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISRO2.resx">
       <DependentUpon>JISRO2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\JISRO2.zh-CHT.resx">
       <DependentUpon>JISRO2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ISOOutPutFile.resx">
       <DependentUpon>ISOOutPutFile.cs</DependentUpon>
@@ -4699,15 +4771,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ISOOutPutFile.zh-CHT.resx">
       <DependentUpon>ISOOutPutFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputANSI2015RO.resx">
       <DependentUpon>DataInputANSI2015RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputCSA2015RO.resx">
       <DependentUpon>DataInputCSA2015RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputAS2017RO.resx">
       <DependentUpon>DataInputAS2017RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\XuejingASTMForm.resx">
       <DependentUpon>XuejingASTMForm.cs</DependentUpon>
@@ -4715,6 +4791,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\XuejingASTMRO.resx">
       <DependentUpon>XuejingASTMRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\XuejingENForm.resx">
       <DependentUpon>XuejingENForm.cs</DependentUpon>
@@ -4722,72 +4799,103 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\XuejingENRO.resx">
       <DependentUpon>XuejingENRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputANSI2015ENRO.resx">
+      <DependentUpon>DataInputANSI2015ENRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputANSI2015ENASRO.resx">
+      <DependentUpon>DataInputANSI2015ENASRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFinishCheck\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCImpactCheck\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCImpactCheck\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCImpactCheck\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\RelationXOForm.resx">
       <DependentUpon>RelationXOForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\RelationXOForm.zh-CHT.resx">
       <DependentUpon>RelationXOForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCInputCheck\SearchForm.zh-CHT.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCMouldOnlineCheck\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCMouldOnlineCheck\EditForm.zh-CHT.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCMouldOnlineCheck\ListFrom.resx">
       <DependentUpon>ListFrom.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCMouldOnlineCheck\ListFrom.zh-CHT.resx">
       <DependentUpon>ListFrom.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCMouldOnlineCheck\Ro.resx">
       <DependentUpon>Ro.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCMouldOnlineCheck\Ro.zh-CHT.resx">
       <DependentUpon>Ro.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCPGOnlineCheck\Ro.resx">
       <DependentUpon>Ro.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCPGOnlineCheck\Ro.zh-CHT.resx">
       <DependentUpon>Ro.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCPGOnlineCheck\RoList.resx">
       <DependentUpon>RoList.cs</DependentUpon>
@@ -4811,15 +4919,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherExitMaterial\ChooseOtherExitMaterial.resx">
       <DependentUpon>ChooseOtherExitMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherExitMaterial\ChooseOtherExitMaterial.zh-CHT.resx">
       <DependentUpon>ChooseOtherExitMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherMaterial\ChooseForm.resx">
       <DependentUpon>ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherMaterial\ChooseForm.zh-CHT.resx">
       <DependentUpon>ChooseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProductOnlineCheck\Editform.resx">
       <DependentUpon>Editform.cs</DependentUpon>
@@ -5016,12 +5128,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ConditionPCInputCheckForm.resx">
       <DependentUpon>ConditionPCInputCheckForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ConditionPCInputCheckForm.zh-CHT.resx">
       <DependentUpon>ConditionPCInputCheckForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ConditionPCMouldCheckForm.resx">
       <DependentUpon>ConditionPCMouldCheckForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ConditionProductMould.zh-CHT.resx">
       <DependentUpon>ConditionProductMould.cs</DependentUpon>
@@ -5041,15 +5156,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\CTList.resx">
       <DependentUpon>CTList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\CTList.zh-CHT.resx">
       <DependentUpon>CTList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\FormFP.resx">
       <DependentUpon>FormFP.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\FormFP.zh-CHT.resx">
       <DependentUpon>FormFP.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\InDepotDetail.resx">
       <DependentUpon>InDepotDetail.cs</DependentUpon>
@@ -5081,12 +5200,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\Q53_2.zh-CHT.resx">
       <DependentUpon>Q53_2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\Q54Update.zh-CHT.resx">
       <DependentUpon>Q54Update.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROFP.resx">
       <DependentUpon>ROFP.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceCGlistBiao.zh-CHT.resx">
       <DependentUpon>ROInvoiceCGlistBiao.cs</DependentUpon>
@@ -5094,9 +5216,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceCGlistSub.resx">
       <DependentUpon>ROInvoiceCGlistSub.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceCGlistSub.zh-CHT.resx">
       <DependentUpon>ROInvoiceCGlistSub.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXSlistBiao.resx">
       <DependentUpon>ROInvoiceXSlistBiao.cs</DependentUpon>
@@ -7588,6 +7712,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROInvoiceXSlistBiaoSub.resx">
       <DependentUpon>ROInvoiceXSlistBiaoSub.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ROJD_PronoteHeader.resx">
       <DependentUpon>ROJD_PronoteHeader.cs</DependentUpon>
@@ -7615,18 +7740,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayForm.zh-CHT.resx">
       <DependentUpon>ShouldPayForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayFormList.resx">
       <DependentUpon>ShouldPayFormList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayFormList.zh-CHT.resx">
       <DependentUpon>ShouldPayFormList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayFormSearch.resx">
       <DependentUpon>ShouldPayFormSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayFormSearch.zh-CHT.resx">
       <DependentUpon>ShouldPayFormSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\SupplierTransactionsRank.resx">
       <DependentUpon>SupplierTransactionsRank.cs</DependentUpon>
@@ -7662,6 +7792,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\ShouldPayForm.resx">
       <DependentUpon>ShouldPayForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\OutDepotDetail2.resx">
       <DependentUpon>OutDepotDetail2.cs</DependentUpon>
@@ -7793,9 +7924,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\AddFP.resx">
       <DependentUpon>AddFP.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\AnnualShipment.resx">
       <DependentUpon>AnnualShipment.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
@@ -7871,6 +8004,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\CustomerProduct.resx">
       <DependentUpon>CustomerProduct.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\CustomerProductForm.resx">
       <DependentUpon>CustomerProductForm.cs</DependentUpon>
@@ -7910,18 +8044,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\RO1.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\RO1.zh-CHT.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ROCustomerProductPrice.resx">
       <DependentUpon>ROCustomerProductPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ROCustomerProductPrice.zh-CHT.resx">
       <DependentUpon>ROCustomerProductPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\AnnualShipmentByCustomer.resx">
       <DependentUpon>AnnualShipmentByCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Depots\AddDepotpositionForm.resx">
       <DependentUpon>AddDepotpositionForm.cs</DependentUpon>
@@ -7941,9 +8080,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Employees\AttendanceJJDays.resx">
       <DependentUpon>AttendanceJJDays.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Employees\AttendanceJJDays.zh-CHT.resx">
       <DependentUpon>AttendanceJJDays.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Employees\ChooseEmployeeForm.resx">
       <SubType>Designer</SubType>
@@ -9922,9 +10063,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\RO1.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\RO1.zh-CHT.resx">
       <DependentUpon>RO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\ROSupplierProcesscategory.resx">
       <DependentUpon>ROSupplierProcesscategory.cs</DependentUpon>
@@ -10380,9 +10523,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\StockCheckConditionForm.resx">
       <DependentUpon>StockCheckConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\StockCheckConditionForm.zh-CHT.resx">
       <DependentUpon>StockCheckConditionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\StockLimitations\StockCheckForm.resx">
       <DependentUpon>StockCheckForm.cs</DependentUpon>
@@ -11863,6 +12008,18 @@
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\XuejingENRO.Designer.cs">
       <DependentUpon>XuejingENRO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015ENRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015ENRO.Designer.cs">
+      <DependentUpon>DataInputANSI2015ENRO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015ENASRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015ENASRO.Designer.cs">
+      <DependentUpon>DataInputANSI2015ENASRO.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCImpactCheck\EditForm.cs">
       <SubType>Form</SubType>
