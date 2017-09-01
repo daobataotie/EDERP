@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ECCEF5A5-BC9A-4CA4-9879-A8E1B170F7B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -4625,6 +4625,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\CSARO.zh-CHT.resx">
       <DependentUpon>CSARO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputANSI2015ENASRO.resx">
+      <DependentUpon>DataInputANSI2015ENASRO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputANSI2015ENRO.resx">
+      <DependentUpon>DataInputANSI2015ENRO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\DataInputASRO.resx">
       <DependentUpon>DataInputASRO.cs</DependentUpon>
@@ -11725,6 +11731,18 @@
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\CSARO.Designer.cs">
       <DependentUpon>CSARO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015ENASRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015ENASRO.Designer.cs">
+      <DependentUpon>DataInputANSI2015ENASRO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015ENRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\DataInputANSI2015ENRO.Designer.cs">
+      <DependentUpon>DataInputANSI2015ENRO.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\DataInputASRO.cs">
       <SubType>Component</SubType>
