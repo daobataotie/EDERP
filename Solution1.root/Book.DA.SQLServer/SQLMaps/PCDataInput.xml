@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <sqlMap namespace="PCDataInput" xmlns="http://ibatis.apache.org/mapping" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
+  <statements>
+    <select id="SelectByCondition" resultMap="PCDataInputResult" parameterClass="Map">
+      select * from PCDataInput where PCDataInputDate between #StartDate# and #EndDate#  $SQL$
+    </select>
+  </statements>
 </sqlMap>

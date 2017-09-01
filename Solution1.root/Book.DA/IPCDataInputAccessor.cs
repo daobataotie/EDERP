@@ -16,5 +16,6 @@ namespace Book.DA
     /// </summary>
     public partial interface IPCDataInputAccessor : IAccessor
     {
+        IList<Model.PCDataInput> SelectByCondition(DateTime startDate, DateTime endDate, string PNTId, string CusXOId, string ProductId);
     }
 }

@@ -31,21 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CEENEditsForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.NccTestPerson4 = new Book.UI.Invoices.NewChooseContorl();
+            this.NccTestPerson3 = new Book.UI.Invoices.NewChooseContorl();
+            this.NccTestPerson2 = new Book.UI.Invoices.NewChooseContorl();
             this.lookUpEditUnit = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSourceUnit = new System.Windows.Forms.BindingSource(this.components);
-            this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
             this.newChooseContorlAuditEmp = new Book.UI.Invoices.NewChooseContorl();
             this.textTraceMarking = new DevExpress.XtraEditors.TextEdit();
             this.label64 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
+            this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
             this.DateReportDate = new DevExpress.XtraEditors.DateEdit();
             this.NccTestPerson = new Book.UI.Invoices.NewChooseContorl();
             this.SpinTestAmount = new DevExpress.XtraEditors.SpinEdit();
             this.SpinOrderAmount = new DevExpress.XtraEditors.SpinEdit();
             this.NccCustomer = new Book.UI.Invoices.NewChooseContorl();
             this.TxtCustomersId = new DevExpress.XtraEditors.TextEdit();
-            this.TxtOrderId = new DevExpress.XtraEditors.TextEdit();
             this.TxtProduct = new DevExpress.XtraEditors.TextEdit();
+            this.TxtOrderId = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -76,6 +79,9 @@
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem16 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.BarBtnCutomerOrder = new DevExpress.XtraBars.BarButtonItem();
             this.BarBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintAlan = new DevExpress.XtraBars.BarButtonItem();
@@ -101,6 +107,7 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -173,28 +180,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.NccTestPerson2 = new Book.UI.Invoices.NewChooseContorl();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NccTestPerson3 = new Book.UI.Invoices.NewChooseContorl();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NccTestPerson4 = new Book.UI.Invoices.NewChooseContorl();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTraceMarking.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinOrderAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCustomersId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtOrderId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtProduct.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtOrderId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -225,6 +225,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textProtectiontwo.Properties)).BeginInit();
@@ -254,9 +257,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPrism.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestConstruction.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -305,13 +305,29 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1146, 344, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
+            // NccTestPerson4
+            // 
+            this.NccTestPerson4.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson4, "NccTestPerson4");
+            this.NccTestPerson4.Name = "NccTestPerson4";
+            // 
+            // NccTestPerson3
+            // 
+            this.NccTestPerson3.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson3, "NccTestPerson3");
+            this.NccTestPerson3.Name = "NccTestPerson3";
+            // 
+            // NccTestPerson2
+            // 
+            this.NccTestPerson2.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson2, "NccTestPerson2");
+            this.NccTestPerson2.Name = "NccTestPerson2";
+            // 
             // lookUpEditUnit
             // 
             resources.ApplyResources(this.lookUpEditUnit, "lookUpEditUnit");
             this.lookUpEditUnit.MenuManager = this.barManager1;
             this.lookUpEditUnit.Name = "lookUpEditUnit";
-            this.lookUpEditUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lookUpEditUnit.Properties.Buttons"))))});
             this.lookUpEditUnit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lookUpEditUnit.Properties.Columns"), resources.GetString("lookUpEditUnit.Properties.Columns1"))});
             this.lookUpEditUnit.Properties.DataSource = this.bindingSourceUnit;
@@ -319,13 +335,6 @@
             this.lookUpEditUnit.Properties.NullText = resources.GetString("lookUpEditUnit.Properties.NullText");
             this.lookUpEditUnit.Properties.ValueMember = "ProductUnitId";
             this.lookUpEditUnit.StyleController = this.layoutControl1;
-            // 
-            // txt_AuditState
-            // 
-            resources.ApplyResources(this.txt_AuditState, "txt_AuditState");
-            this.txt_AuditState.MenuManager = this.barManager1;
-            this.txt_AuditState.Name = "txt_AuditState";
-            this.txt_AuditState.StyleController = this.layoutControl1;
             // 
             // newChooseContorlAuditEmp
             // 
@@ -350,14 +359,19 @@
             resources.ApplyResources(this.label63, "label63");
             this.label63.Name = "label63";
             // 
+            // txt_AuditState
+            // 
+            resources.ApplyResources(this.txt_AuditState, "txt_AuditState");
+            this.txt_AuditState.MenuManager = this.barManager1;
+            this.txt_AuditState.Name = "txt_AuditState";
+            this.txt_AuditState.StyleController = this.layoutControl1;
+            // 
             // DateReportDate
             // 
             this.DateReportDate.EditValue = null;
             resources.ApplyResources(this.DateReportDate, "DateReportDate");
             this.DateReportDate.MenuManager = this.barManager1;
             this.DateReportDate.Name = "DateReportDate";
-            this.DateReportDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("DateReportDate.Properties.Buttons"))))});
             this.DateReportDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DateReportDate.StyleController = this.layoutControl1;
@@ -399,19 +413,19 @@
             this.TxtCustomersId.Name = "TxtCustomersId";
             this.TxtCustomersId.StyleController = this.layoutControl1;
             // 
-            // TxtOrderId
-            // 
-            resources.ApplyResources(this.TxtOrderId, "TxtOrderId");
-            this.TxtOrderId.MenuManager = this.barManager1;
-            this.TxtOrderId.Name = "TxtOrderId";
-            this.TxtOrderId.StyleController = this.layoutControl1;
-            // 
             // TxtProduct
             // 
             resources.ApplyResources(this.TxtProduct, "TxtProduct");
             this.TxtProduct.MenuManager = this.barManager1;
             this.TxtProduct.Name = "TxtProduct";
             this.TxtProduct.StyleController = this.layoutControl1;
+            // 
+            // TxtOrderId
+            // 
+            resources.ApplyResources(this.TxtOrderId, "TxtOrderId");
+            this.TxtOrderId.MenuManager = this.barManager1;
+            this.TxtOrderId.Name = "TxtOrderId";
+            this.TxtOrderId.StyleController = this.layoutControl1;
             // 
             // layoutControlGroup1
             // 
@@ -712,6 +726,33 @@
             this.emptySpaceItem16.Size = new System.Drawing.Size(228, 285);
             this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.NccTestPerson2;
+            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 100);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(260, 24);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(110, 14);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.NccTestPerson3;
+            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
+            this.layoutControlItem11.Location = new System.Drawing.Point(260, 100);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(287, 24);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(110, 14);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.NccTestPerson4;
+            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
+            this.layoutControlItem12.Location = new System.Drawing.Point(547, 100);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(322, 24);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(110, 14);
+            // 
             // BarBtnCutomerOrder
             // 
             resources.ApplyResources(this.BarBtnCutomerOrder, "BarBtnCutomerOrder");
@@ -963,6 +1004,12 @@
             this.label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.label49, "label49");
             this.label49.Name = "label49";
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // label48
             // 
@@ -1503,57 +1550,6 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // NccTestPerson2
-            // 
-            this.NccTestPerson2.EditValue = null;
-            resources.ApplyResources(this.NccTestPerson2, "NccTestPerson2");
-            this.NccTestPerson2.Name = "NccTestPerson2";
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.NccTestPerson2;
-            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 100);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(260, 24);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(110, 14);
-            // 
-            // NccTestPerson3
-            // 
-            this.NccTestPerson3.EditValue = null;
-            resources.ApplyResources(this.NccTestPerson3, "NccTestPerson3");
-            this.NccTestPerson3.Name = "NccTestPerson3";
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.NccTestPerson3;
-            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(260, 100);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(287, 24);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(110, 14);
-            // 
-            // NccTestPerson4
-            // 
-            this.NccTestPerson4.EditValue = null;
-            resources.ApplyResources(this.NccTestPerson4, "NccTestPerson4");
-            this.NccTestPerson4.Name = "NccTestPerson4";
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.NccTestPerson4;
-            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
-            this.layoutControlItem12.Location = new System.Drawing.Point(547, 100);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(322, 24);
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(110, 14);
-            // 
             // CEENEditsForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1569,15 +1565,15 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTraceMarking.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinOrderAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCustomersId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtOrderId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtProduct.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtOrderId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -1608,6 +1604,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textProtectiontwo.Properties)).EndInit();
@@ -1637,9 +1636,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPrism.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestConstruction.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -175,6 +175,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
             this.LbJudgeCS = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.lblTraceabilityMarking = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable11)).BeginInit();
@@ -236,6 +238,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel6,
+            this.lblTraceabilityMarking,
             this.xrPictureBox1,
             this.lbl_Signature,
             this.xrLabel121,
@@ -638,6 +642,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel31.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrLabel31.StylePriority.UseBorders = false;
             this.xrLabel31.StylePriority.UseFont = false;
+            this.xrLabel31.StylePriority.UseTextAlignment = false;
             // 
             // xrTableCell55
             // 
@@ -1625,6 +1630,24 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             // 
+            // lblTraceabilityMarking
+            // 
+            this.lblTraceabilityMarking.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            resources.ApplyResources(this.lblTraceabilityMarking, "lblTraceabilityMarking");
+            this.lblTraceabilityMarking.Name = "lblTraceabilityMarking";
+            this.lblTraceabilityMarking.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lblTraceabilityMarking.StylePriority.UseBorders = false;
+            this.lblTraceabilityMarking.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel6
+            // 
+            resources.ApplyResources(this.xrLabel6, "xrLabel6");
+            this.xrLabel6.Multiline = true;
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.StylePriority.UseTextAlignment = false;
+            // 
             // CEENRO
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1804,5 +1827,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell15;
         private DevExpress.XtraReports.UI.XRLabel LbJudgeSP;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.UI.XRLabel lblTraceabilityMarking;
     }
 }

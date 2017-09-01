@@ -192,6 +192,38 @@
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
     <value>213.125076</value>
   </data>
+  <data name="xrLabel6.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt, style=Bold</value>
+  </data>
+  <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2.00345087, 285.75</value>
+  </data>
+  <data name="xrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>467.064362, 51.9399719</value>
+  </data>
+  <data name="xrLabel6.Text" xml:space="preserve">
+    <value>Traceability Marking：
+
+</value>
+  </data>
+  <data name="xrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lblTraceabilityMarking.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblTraceabilityMarking.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>469.070923, 285.75</value>
+  </data>
+  <data name="lblTraceabilityMarking.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>518.582336, 51.9399719</value>
+  </data>
+  <data name="lblTraceabilityMarking.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
   <data name="xrPictureBox1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -581,7 +613,7 @@
 High speed particies</value>
   </data>
   <data name="xrTableCell53.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>TopLeft</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="xrLabel31.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -597,6 +629,9 @@ High speed particies</value>
   </data>
   <data name="xrLabel31.Text" xml:space="preserve">
     <value> No contact with eye of headform. No parts or fragments ejected from protector that could contact eye of headform. </value>
+  </data>
+  <data name="xrLabel31.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="xrTableCell54.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -681,7 +716,7 @@ High speed particies</value>
 Robustness</value>
   </data>
   <data name="xrTableCell47.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>TopLeft</value>
+    <value>MiddleLeft</value>
   </data>
   <data name="xrTableCell48.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1376,7 +1411,7 @@ dioptre</value>
     <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 203.729416</value>
+    <value>2.00345087, 145.521072</value>
   </data>
   <data name="xrLabel15.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>467.0643, 51.9400024</value>
@@ -1393,7 +1428,7 @@ dioptre</value>
     <value>254</value>
   </data>
   <data name="LbOrderAmount.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>467.06427, 203.729416</value>
+    <value>469.0677, 145.521072</value>
   </data>
   <data name="LbOrderAmount.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>518.5856, 51.9399719</value>
@@ -1408,7 +1443,7 @@ dioptre</value>
     <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 288.395844</value>
+    <value>2.00339031, 211.666672</value>
   </data>
   <data name="xrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>467.064362, 51.9399719</value>
@@ -1425,7 +1460,7 @@ dioptre</value>
     <value>254</value>
   </data>
   <data name="LbTesrPerson.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>467.0675, 288.395844</value>
+    <value>469.0709, 211.666672</value>
   </data>
   <data name="LbTesrPerson.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>518.582336, 51.9399719</value>
@@ -1440,7 +1475,7 @@ dioptre</value>
     <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1009.45526, 288.395844</value>
+    <value>1011.45862, 211.666672</value>
   </data>
   <data name="xrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>444.495483, 51.9399719</value>
@@ -1457,7 +1492,7 @@ dioptre</value>
     <value>254</value>
   </data>
   <data name="LbReportDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1453.95093, 288.395844</value>
+    <value>1455.95447, 211.666672</value>
   </data>
   <data name="LbReportDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>545.0432, 51.9400024</value>
@@ -1472,7 +1507,7 @@ dioptre</value>
     <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1009.45447, 203.729416</value>
+    <value>1011.45789, 145.521072</value>
   </data>
   <data name="xrLabel17.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>444.4964, 51.9400024</value>
@@ -1489,7 +1524,7 @@ dioptre</value>
     <value>254</value>
   </data>
   <data name="LbTestAmount.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1453.95093, 203.729416</value>
+    <value>1455.95447, 145.521072</value>
   </data>
   <data name="LbTestAmount.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>545.043457, 51.9400024</value>
@@ -1568,7 +1603,7 @@ dioptre</value>
     <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1009.45868, 116.416588</value>
+    <value>1011.46136, 79.3749161</value>
   </data>
   <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>444.4922, 51.93998</value>
@@ -1585,7 +1620,7 @@ dioptre</value>
     <value>254</value>
   </data>
   <data name="LbProduct.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1453.95081, 116.416588</value>
+    <value>1455.95349, 79.3749161</value>
   </data>
   <data name="LbProduct.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>545.042847, 51.9399872</value>
@@ -1600,7 +1635,7 @@ dioptre</value>
     <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0.000746885955, 116.416588</value>
+    <value>2.00345087, 79.3749161</value>
   </data>
   <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>467.063538, 51.93998</value>
@@ -1617,7 +1652,7 @@ dioptre</value>
     <value>254</value>
   </data>
   <data name="LbOrderId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>467.06427, 116.416588</value>
+    <value>469.067, 79.3749161</value>
   </data>
   <data name="LbOrderId.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>518.582153, 51.93998</value>

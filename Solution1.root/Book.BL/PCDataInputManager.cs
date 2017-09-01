@@ -205,5 +205,10 @@ namespace Book.BL
             if (string.IsNullOrEmpty(model.CheckStandard))
                 throw new Helper.InvalidValueException(Model.PCDataInput.PRO_CheckStandard);
         }
+
+        public IList<Model.PCDataInput> SelectByCondition(DateTime startDate, DateTime endDate, string PNTId, string CusXOId, string ProductId)
+        {
+            return accessor.SelectByCondition(startDate, endDate, PNTId, CusXOId, ProductId);
+        }
     }
 }

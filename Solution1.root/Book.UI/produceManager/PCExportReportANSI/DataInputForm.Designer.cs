@@ -225,6 +225,8 @@
             this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barPronoteHeader = new DevExpress.XtraBars.BarButtonItem();
             this.barMadeReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -360,18 +362,21 @@
             // 
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barPronoteHeader,
-            this.barMadeReport});
-            this.barManager1.MaxItemId = 17;
+            this.barMadeReport,
+            this.barButtonItem1,
+            this.barBtnSearch});
+            this.barManager1.MaxItemId = 19;
             // 
             // imageCollection1
             // 
-            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            //this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
             // 
             // bar1
             // 
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barPronoteHeader),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barMadeReport)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barMadeReport),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnSearch)});
             this.bar1.OptionsBar.UseWholeRow = true;
             // 
             // layoutControl1
@@ -430,8 +435,6 @@
             resources.ApplyResources(this.cob_CheckStandard, "cob_CheckStandard");
             this.cob_CheckStandard.MenuManager = this.barManager1;
             this.cob_CheckStandard.Name = "cob_CheckStandard";
-            this.cob_CheckStandard.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_CheckStandard.Properties.Buttons"))))});
             this.cob_CheckStandard.Properties.Items.AddRange(new object[] {
             resources.GetString("cob_CheckStandard.Properties.Items"),
             resources.GetString("cob_CheckStandard.Properties.Items1"),
@@ -439,7 +442,9 @@
             resources.GetString("cob_CheckStandard.Properties.Items3"),
             resources.GetString("cob_CheckStandard.Properties.Items4"),
             resources.GetString("cob_CheckStandard.Properties.Items5"),
-            resources.GetString("cob_CheckStandard.Properties.Items6")});
+            resources.GetString("cob_CheckStandard.Properties.Items6"),
+            resources.GetString("cob_CheckStandard.Properties.Items7"),
+            resources.GetString("cob_CheckStandard.Properties.Items8")});
             this.cob_CheckStandard.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cob_CheckStandard.StyleController = this.layoutControl1;
             // 
@@ -474,8 +479,6 @@
             resources.ApplyResources(this.date_PCDataInputDate, "date_PCDataInputDate");
             this.date_PCDataInputDate.MenuManager = this.barManager1;
             this.date_PCDataInputDate.Name = "date_PCDataInputDate";
-            this.date_PCDataInputDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("date_PCDataInputDate.Properties.Buttons"))))});
             this.date_PCDataInputDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.date_PCDataInputDate.StyleController = this.layoutControl1;
@@ -688,8 +691,6 @@
             // repositoryItemComboBox2
             // 
             resources.ApplyResources(this.repositoryItemComboBox2, "repositoryItemComboBox2");
-            this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemComboBox2.Buttons"))))});
             this.repositoryItemComboBox2.Items.AddRange(new object[] {
             resources.GetString("repositoryItemComboBox2.Items"),
             resources.GetString("repositoryItemComboBox2.Items1")});
@@ -720,8 +721,6 @@
             // repositoryItemComboBox4
             // 
             resources.ApplyResources(this.repositoryItemComboBox4, "repositoryItemComboBox4");
-            this.repositoryItemComboBox4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemComboBox4.Buttons"))))});
             this.repositoryItemComboBox4.Items.AddRange(new object[] {
             resources.GetString("repositoryItemComboBox4.Items"),
             resources.GetString("repositoryItemComboBox4.Items1")});
@@ -752,8 +751,6 @@
             // repositoryItemComboBox3
             // 
             resources.ApplyResources(this.repositoryItemComboBox3, "repositoryItemComboBox3");
-            this.repositoryItemComboBox3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemComboBox3.Buttons"))))});
             this.repositoryItemComboBox3.Items.AddRange(new object[] {
             resources.GetString("repositoryItemComboBox3.Items"),
             resources.GetString("repositoryItemComboBox3.Items1")});
@@ -784,8 +781,6 @@
             // repositoryItemComboBox5
             // 
             resources.ApplyResources(this.repositoryItemComboBox5, "repositoryItemComboBox5");
-            this.repositoryItemComboBox5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemComboBox5.Buttons"))))});
             this.repositoryItemComboBox5.Items.AddRange(new object[] {
             resources.GetString("repositoryItemComboBox5.Items"),
             resources.GetString("repositoryItemComboBox5.Items1")});
@@ -810,7 +805,7 @@
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(900, 413);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(919, 413);
             this.layoutControlGroup2.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup2.TextVisible = false;
             // 
@@ -820,7 +815,7 @@
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(900, 363);
+            this.layoutControlItem7.Size = new System.Drawing.Size(919, 363);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
             this.layoutControlItem7.TextVisible = false;
@@ -831,7 +826,7 @@
             resources.ApplyResources(this.layoutControlItem14, "layoutControlItem14");
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 387);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(451, 26);
+            this.layoutControlItem14.Size = new System.Drawing.Size(461, 26);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextToControlDistance = 0;
             this.layoutControlItem14.TextVisible = false;
@@ -840,9 +835,9 @@
             // 
             this.layoutControlItem15.Control = this.btn_PCOpticalMachineRemove;
             resources.ApplyResources(this.layoutControlItem15, "layoutControlItem15");
-            this.layoutControlItem15.Location = new System.Drawing.Point(451, 387);
+            this.layoutControlItem15.Location = new System.Drawing.Point(461, 387);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(449, 26);
+            this.layoutControlItem15.Size = new System.Drawing.Size(458, 26);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextToControlDistance = 0;
             this.layoutControlItem15.TextVisible = false;
@@ -853,7 +848,7 @@
             resources.ApplyResources(this.layoutControlItem29, "layoutControlItem29");
             this.layoutControlItem29.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(900, 24);
+            this.layoutControlItem29.Size = new System.Drawing.Size(919, 24);
             this.layoutControlItem29.TextSize = new System.Drawing.Size(48, 14);
             // 
             // xtraTabPage2
@@ -1006,8 +1001,6 @@
             // repositoryItemComboBox1
             // 
             resources.ApplyResources(this.repositoryItemComboBox1, "repositoryItemComboBox1");
-            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemComboBox1.Buttons"))))});
             this.repositoryItemComboBox1.Items.AddRange(new object[] {
             resources.GetString("repositoryItemComboBox1.Items"),
             resources.GetString("repositoryItemComboBox1.Items1")});
@@ -1932,7 +1925,7 @@
             this.layoutControlItem31});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(930, 544);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(949, 544);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -1940,9 +1933,9 @@
             // 
             this.layoutControlItem1.Control = this.date_PCDataInputDate;
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
-            this.layoutControlItem1.Location = new System.Drawing.Point(582, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(594, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(328, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(335, 25);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem2
@@ -1951,7 +1944,7 @@
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(277, 25);
+            this.layoutControlItem2.Size = new System.Drawing.Size(283, 25);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem3
@@ -1960,34 +1953,34 @@
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(277, 25);
+            this.layoutControlItem3.Size = new System.Drawing.Size(283, 25);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txt_InvoiceCusId;
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
-            this.layoutControlItem4.Location = new System.Drawing.Point(277, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(283, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(305, 25);
+            this.layoutControlItem4.Size = new System.Drawing.Size(311, 25);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.cob_CheckStandard;
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
-            this.layoutControlItem5.Location = new System.Drawing.Point(277, 25);
+            this.layoutControlItem5.Location = new System.Drawing.Point(283, 25);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(305, 25);
+            this.layoutControlItem5.Size = new System.Drawing.Size(311, 25);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txt_ProductName;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(582, 25);
+            this.layoutControlItem6.Location = new System.Drawing.Point(594, 25);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(328, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(335, 25);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem13
@@ -1996,7 +1989,7 @@
             resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 79);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(910, 445);
+            this.layoutControlItem13.Size = new System.Drawing.Size(929, 445);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextToControlDistance = 0;
             this.layoutControlItem13.TextVisible = false;
@@ -2007,25 +2000,25 @@
             resources.ApplyResources(this.layoutControlItem26, "layoutControlItem26");
             this.layoutControlItem26.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(277, 29);
+            this.layoutControlItem26.Size = new System.Drawing.Size(283, 29);
             this.layoutControlItem26.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.sp_OrderQuantity;
             resources.ApplyResources(this.layoutControlItem30, "layoutControlItem30");
-            this.layoutControlItem30.Location = new System.Drawing.Point(277, 50);
+            this.layoutControlItem30.Location = new System.Drawing.Point(283, 50);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(305, 29);
+            this.layoutControlItem30.Size = new System.Drawing.Size(311, 29);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.radioGroup1;
             resources.ApplyResources(this.layoutControlItem31, "layoutControlItem31");
-            this.layoutControlItem31.Location = new System.Drawing.Point(582, 50);
+            this.layoutControlItem31.Location = new System.Drawing.Point(594, 50);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(328, 29);
+            this.layoutControlItem31.Size = new System.Drawing.Size(335, 29);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(72, 14);
             // 
             // barPronoteHeader
@@ -2041,6 +2034,19 @@
             this.barMadeReport.Id = 16;
             this.barMadeReport.Name = "barMadeReport";
             this.barMadeReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barMadeReport_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
+            this.barButtonItem1.Id = 17;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barBtnSearch
+            // 
+            resources.ApplyResources(this.barBtnSearch, "barBtnSearch");
+            this.barBtnSearch.Id = 18;
+            this.barBtnSearch.Name = "barBtnSearch";
+            this.barBtnSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnSearch_ItemClick);
             // 
             // DataInputForm
             // 
@@ -2379,5 +2385,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barBtnSearch;
     }
 }
