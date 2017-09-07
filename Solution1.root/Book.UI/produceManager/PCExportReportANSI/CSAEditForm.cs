@@ -119,11 +119,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ExportReportId = this._PCExportReportANSIManager.GetId();
             this._PCExportReportANSI.ReportDate = DateTime.Now.Date;
             this._PCExportReportANSI.ExpType = "CSA";
-            
+
             this._PCExportReportANSI.Employee = BL.V.ActiveOperator.Employee;
             this._PCExportReportANSI.EmployeeId = BL.V.ActiveOperator.EmployeeId;
-            //var jiShuBiaoZhun = new BL.SettingManager().SelectByName("CSAJiShuBiaoZhun").FirstOrDefault();
-            //this._PCExportReportANSI.CSAJiShuBiaoZhun = jiShuBiaoZhun == null ? "CSA Z94.3-2015" : jiShuBiaoZhun.SettingCurrentValue; 
+            this._PCExportReportANSI.CSAJiShuBiaoZhun = (this.comboBoxEdit1.Properties.Items.Count == 0 ? null : this.comboBoxEdit1.Properties.Items[0].ToString());
+
 
             //为了打印固定格式
             this._PCExportReportANSI.ShouCeShu1 = 2;
