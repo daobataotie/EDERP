@@ -2421,6 +2421,17 @@ namespace Book.Model
         }
 
         public readonly static string PRO_EmployeeId4 = "EmployeeId4";
+
+        private bool? _isShowGX2;
+
+        public bool? IsShowGX2
+        {
+            get { return _isShowGX2; }
+            set { _isShowGX2 = value; }
+        }
+
+        public readonly static string PRO_IsShowGX2 = "IsShowGX2";
+
     }
 }
     
