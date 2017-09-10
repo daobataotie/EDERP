@@ -248,7 +248,7 @@
 </value>
   </data>
   <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1518.70837, 2115.56348</value>
+    <value>1521.35413, 2046.77185</value>
   </data>
   <data name="xrPictureBox1.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>375.7085, 84.6665039</value>
@@ -263,7 +263,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="lbl_Signature.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1424.27112, 2200.23</value>
+    <value>1426.917, 2131.43848</value>
   </data>
   <data name="lbl_Signature.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>551.7289, 55.5622559</value>
@@ -281,7 +281,7 @@
     <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel121.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1424.27112, 2263.73</value>
+    <value>1426.917, 2187.00073</value>
   </data>
   <data name="xrLabel121.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>551.7284, 55.5622559</value>
@@ -303,7 +303,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrLabel118.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1421.62524, 2065.29248</value>
+    <value>1424.27112, 1996.50085</value>
   </data>
   <data name="xrLabel118.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>551.7289, 50.270752</value>
@@ -321,7 +321,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 1918.23047</value>
+    <value>2.0037334, 1877.43811</value>
   </data>
   <data name="xrTableCell70.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -408,7 +408,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 1822.9801</value>
+    <value>2.0037334, 1782.18787</value>
   </data>
   <data name="xrTableCell64.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -495,7 +495,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 1727.7301</value>
+    <value>2.0037334, 1686.93787</value>
   </data>
   <data name="xrTableCell58.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -588,7 +588,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 1502.834</value>
+    <value>0, 1463.14648</value>
   </data>
   <data name="xrTableCell52.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -691,7 +691,7 @@ High speed particies</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 1312.334</value>
+    <value>0, 1272.64648</value>
   </data>
   <data name="xrTableCell46.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -782,7 +782,7 @@ the center of the support tube</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 1217.084</value>
+    <value>0, 1177.39648</value>
   </data>
   <data name="xrTableCell40.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -845,7 +845,7 @@ the center of the support tube</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="LbJudgeSQ.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 0.000122070313</value>
+    <value>0.000122070313, 0.000122070313</value>
   </data>
   <data name="LbJudgeSQ.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>295.910645, 95.25</value>
@@ -869,7 +869,7 @@ the center of the support tube</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 1100.667</value>
+    <value>0, 1060.97949</value>
   </data>
   <data name="xrTableCell34.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -968,7 +968,7 @@ the center of the support tube</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 878.417</value>
+    <value>0, 838.7295</value>
   </data>
   <data name="xrTableCell28.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1093,7 +1093,7 @@ dioptre</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 783.1667</value>
+    <value>0, 743.4792</value>
   </data>
   <data name="xrTableCell22.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1180,7 +1180,7 @@ dioptre</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 687.9167</value>
+    <value>0, 648.2292</value>
   </data>
   <data name="xrTableCell16.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1264,7 +1264,7 @@ dioptre</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 592.666748</value>
+    <value>0, 552.9792</value>
   </data>
   <data name="xrTableCell10.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1348,7 +1348,7 @@ dioptre</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 402.166656</value>
+    <value>0, 362.479156</value>
   </data>
   <data name="xrTableCell1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1667,7 +1667,7 @@ dioptre</value>
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 497.416748</value>
+    <value>0, 457.729248</value>
   </data>
   <data name="xrTableCell7.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1751,7 +1751,7 @@ dioptre</value>
     <value>254</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>2319.29224</value>
+    <value>2242.563</value>
   </data>
   <data name="PageFooter.Dpi" type="System.Single, mscorlib">
     <value>254</value>
