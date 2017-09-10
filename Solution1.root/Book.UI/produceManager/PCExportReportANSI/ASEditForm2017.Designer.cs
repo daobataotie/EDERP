@@ -428,7 +428,9 @@
             this.spinRefractivePower.MenuManager = this.barManager1;
             this.spinRefractivePower.Name = "spinRefractivePower";
             this.spinRefractivePower.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("spinRefractivePower.Properties.Appearance.BorderColor")));
+            this.spinRefractivePower.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("spinRefractivePower.Properties.Appearance.Font")));
             this.spinRefractivePower.Properties.Appearance.Options.UseBorderColor = true;
+            this.spinRefractivePower.Properties.Appearance.Options.UseFont = true;
             this.spinRefractivePower.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.spinRefractivePower.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -439,7 +441,9 @@
             this.che_IsShowGX2.MenuManager = this.barManager1;
             this.che_IsShowGX2.Name = "che_IsShowGX2";
             this.che_IsShowGX2.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("che_IsShowGX2.Properties.Appearance.BorderColor")));
+            this.che_IsShowGX2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("che_IsShowGX2.Properties.Appearance.Font")));
             this.che_IsShowGX2.Properties.Appearance.Options.UseBorderColor = true;
+            this.che_IsShowGX2.Properties.Appearance.Options.UseFont = true;
             this.che_IsShowGX2.Properties.Caption = resources.GetString("che_IsShowGX2.Properties.Caption");
             // 
             // sp_Low
@@ -447,6 +451,8 @@
             resources.ApplyResources(this.sp_Low, "sp_Low");
             this.sp_Low.MenuManager = this.barManager1;
             this.sp_Low.Name = "sp_Low";
+            this.sp_Low.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_Low.Properties.Appearance.Font")));
+            this.sp_Low.Properties.Appearance.Options.UseFont = true;
             this.sp_Low.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_Low.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -457,7 +463,9 @@
             this.checkLow.MenuManager = this.barManager1;
             this.checkLow.Name = "checkLow";
             this.checkLow.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkLow.Properties.Appearance.BorderColor")));
+            this.checkLow.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkLow.Properties.Appearance.Font")));
             this.checkLow.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkLow.Properties.Appearance.Options.UseFont = true;
             this.checkLow.Properties.Caption = resources.GetString("checkLow.Properties.Caption");
             // 
             // label59
@@ -562,6 +570,8 @@
             resources.ApplyResources(this.sp_MarkingsNum, "sp_MarkingsNum");
             this.sp_MarkingsNum.MenuManager = this.barManager1;
             this.sp_MarkingsNum.Name = "sp_MarkingsNum";
+            this.sp_MarkingsNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_MarkingsNum.Properties.Appearance.Font")));
+            this.sp_MarkingsNum.Properties.Appearance.Options.UseFont = true;
             this.sp_MarkingsNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_MarkingsNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -579,6 +589,8 @@
             resources.ApplyResources(this.sp_CorrsionNum, "sp_CorrsionNum");
             this.sp_CorrsionNum.MenuManager = this.barManager1;
             this.sp_CorrsionNum.Name = "sp_CorrsionNum";
+            this.sp_CorrsionNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_CorrsionNum.Properties.Appearance.Font")));
+            this.sp_CorrsionNum.Properties.Appearance.Options.UseFont = true;
             this.sp_CorrsionNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_CorrsionNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -596,6 +608,8 @@
             resources.ApplyResources(this.sp_IgnitionNum, "sp_IgnitionNum");
             this.sp_IgnitionNum.MenuManager = this.barManager1;
             this.sp_IgnitionNum.Name = "sp_IgnitionNum";
+            this.sp_IgnitionNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_IgnitionNum.Properties.Appearance.Font")));
+            this.sp_IgnitionNum.Properties.Appearance.Options.UseFont = true;
             this.sp_IgnitionNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_IgnitionNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -625,6 +639,8 @@
             resources.ApplyResources(this.sp_PemertrationNum, "sp_PemertrationNum");
             this.sp_PemertrationNum.MenuManager = this.barManager1;
             this.sp_PemertrationNum.Name = "sp_PemertrationNum";
+            this.sp_PemertrationNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_PemertrationNum.Properties.Appearance.Font")));
+            this.sp_PemertrationNum.Properties.Appearance.Options.UseFont = true;
             this.sp_PemertrationNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_PemertrationNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -654,6 +670,8 @@
             resources.ApplyResources(this.sp_ExtraHighNum, "sp_ExtraHighNum");
             this.sp_ExtraHighNum.MenuManager = this.barManager1;
             this.sp_ExtraHighNum.Name = "sp_ExtraHighNum";
+            this.sp_ExtraHighNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_ExtraHighNum.Properties.Appearance.Font")));
+            this.sp_ExtraHighNum.Properties.Appearance.Options.UseFont = true;
             this.sp_ExtraHighNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_ExtraHighNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -683,6 +701,8 @@
             resources.ApplyResources(this.sp_HighNum, "sp_HighNum");
             this.sp_HighNum.MenuManager = this.barManager1;
             this.sp_HighNum.Name = "sp_HighNum";
+            this.sp_HighNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_HighNum.Properties.Appearance.Font")));
+            this.sp_HighNum.Properties.Appearance.Options.UseFont = true;
             this.sp_HighNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_HighNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -712,6 +732,8 @@
             resources.ApplyResources(this.sp_MediumNum, "sp_MediumNum");
             this.sp_MediumNum.MenuManager = this.barManager1;
             this.sp_MediumNum.Name = "sp_MediumNum";
+            this.sp_MediumNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_MediumNum.Properties.Appearance.Font")));
+            this.sp_MediumNum.Properties.Appearance.Options.UseFont = true;
             this.sp_MediumNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_MediumNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -747,6 +769,8 @@
             resources.ApplyResources(this.sp_ScatterNum, "sp_ScatterNum");
             this.sp_ScatterNum.MenuManager = this.barManager1;
             this.sp_ScatterNum.Name = "sp_ScatterNum";
+            this.sp_ScatterNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_ScatterNum.Properties.Appearance.Font")));
+            this.sp_ScatterNum.Properties.Appearance.Options.UseFont = true;
             this.sp_ScatterNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_ScatterNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -762,6 +786,8 @@
             resources.ApplyResources(this.sp_PrismaticVDwnNum, "sp_PrismaticVDwnNum");
             this.sp_PrismaticVDwnNum.MenuManager = this.barManager1;
             this.sp_PrismaticVDwnNum.Name = "sp_PrismaticVDwnNum";
+            this.sp_PrismaticVDwnNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_PrismaticVDwnNum.Properties.Appearance.Font")));
+            this.sp_PrismaticVDwnNum.Properties.Appearance.Options.UseFont = true;
             this.sp_PrismaticVDwnNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_PrismaticVDwnNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -791,6 +817,8 @@
             resources.ApplyResources(this.sp_PrismaticVUpNum, "sp_PrismaticVUpNum");
             this.sp_PrismaticVUpNum.MenuManager = this.barManager1;
             this.sp_PrismaticVUpNum.Name = "sp_PrismaticVUpNum";
+            this.sp_PrismaticVUpNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_PrismaticVUpNum.Properties.Appearance.Font")));
+            this.sp_PrismaticVUpNum.Properties.Appearance.Options.UseFont = true;
             this.sp_PrismaticVUpNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_PrismaticVUpNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -806,6 +834,8 @@
             resources.ApplyResources(this.sp_PrismaticHOutNum, "sp_PrismaticHOutNum");
             this.sp_PrismaticHOutNum.MenuManager = this.barManager1;
             this.sp_PrismaticHOutNum.Name = "sp_PrismaticHOutNum";
+            this.sp_PrismaticHOutNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_PrismaticHOutNum.Properties.Appearance.Font")));
+            this.sp_PrismaticHOutNum.Properties.Appearance.Options.UseFont = true;
             this.sp_PrismaticHOutNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_PrismaticHOutNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -822,7 +852,9 @@
             this.txtBatchNo.MenuManager = this.barManager1;
             this.txtBatchNo.Name = "txtBatchNo";
             this.txtBatchNo.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("txtBatchNo.Properties.Appearance.BorderColor")));
+            this.txtBatchNo.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtBatchNo.Properties.Appearance.Font")));
             this.txtBatchNo.Properties.Appearance.Options.UseBorderColor = true;
+            this.txtBatchNo.Properties.Appearance.Options.UseFont = true;
             this.txtBatchNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             // 
             // label40
@@ -837,7 +869,9 @@
             this.spinQtyTest.MenuManager = this.barManager1;
             this.spinQtyTest.Name = "spinQtyTest";
             this.spinQtyTest.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("spinQtyTest.Properties.Appearance.BorderColor")));
+            this.spinQtyTest.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("spinQtyTest.Properties.Appearance.Font")));
             this.spinQtyTest.Properties.Appearance.Options.UseBorderColor = true;
+            this.spinQtyTest.Properties.Appearance.Options.UseFont = true;
             this.spinQtyTest.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.spinQtyTest.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -853,6 +887,8 @@
             resources.ApplyResources(this.sp_PrismaticHInNum, "sp_PrismaticHInNum");
             this.sp_PrismaticHInNum.MenuManager = this.barManager1;
             this.sp_PrismaticHInNum.Name = "sp_PrismaticHInNum";
+            this.sp_PrismaticHInNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_PrismaticHInNum.Properties.Appearance.Font")));
+            this.sp_PrismaticHInNum.Properties.Appearance.Options.UseFont = true;
             this.sp_PrismaticHInNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_PrismaticHInNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -873,6 +909,8 @@
             resources.ApplyResources(this.sp_ThemalNum, "sp_ThemalNum");
             this.sp_ThemalNum.MenuManager = this.barManager1;
             this.sp_ThemalNum.Name = "sp_ThemalNum";
+            this.sp_ThemalNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_ThemalNum.Properties.Appearance.Font")));
+            this.sp_ThemalNum.Properties.Appearance.Options.UseFont = true;
             this.sp_ThemalNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_ThemalNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -894,6 +932,8 @@
             resources.ApplyResources(this.sp_VisualNum, "sp_VisualNum");
             this.sp_VisualNum.MenuManager = this.barManager1;
             this.sp_VisualNum.Name = "sp_VisualNum";
+            this.sp_VisualNum.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sp_VisualNum.Properties.Appearance.Font")));
+            this.sp_VisualNum.Properties.Appearance.Options.UseFont = true;
             this.sp_VisualNum.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.sp_VisualNum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -934,7 +974,9 @@
             this.checkVisualTest.MenuManager = this.barManager1;
             this.checkVisualTest.Name = "checkVisualTest";
             this.checkVisualTest.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkVisualTest.Properties.Appearance.BorderColor")));
+            this.checkVisualTest.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkVisualTest.Properties.Appearance.Font")));
             this.checkVisualTest.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkVisualTest.Properties.Appearance.Options.UseFont = true;
             this.checkVisualTest.Properties.Caption = resources.GetString("checkVisualTest.Properties.Caption");
             // 
             // checkThemal
@@ -943,7 +985,9 @@
             this.checkThemal.MenuManager = this.barManager1;
             this.checkThemal.Name = "checkThemal";
             this.checkThemal.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkThemal.Properties.Appearance.BorderColor")));
+            this.checkThemal.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkThemal.Properties.Appearance.Font")));
             this.checkThemal.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkThemal.Properties.Appearance.Options.UseFont = true;
             this.checkThemal.Properties.Caption = resources.GetString("checkThemal.Properties.Caption");
             // 
             // label31
@@ -957,6 +1001,8 @@
             resources.ApplyResources(this.checkPrismaticHIn, "checkPrismaticHIn");
             this.checkPrismaticHIn.MenuManager = this.barManager1;
             this.checkPrismaticHIn.Name = "checkPrismaticHIn";
+            this.checkPrismaticHIn.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkPrismaticHIn.Properties.Appearance.Font")));
+            this.checkPrismaticHIn.Properties.Appearance.Options.UseFont = true;
             this.checkPrismaticHIn.Properties.Caption = resources.GetString("checkPrismaticHIn.Properties.Caption");
             // 
             // label30
@@ -970,6 +1016,8 @@
             resources.ApplyResources(this.checkPrismaticHOut, "checkPrismaticHOut");
             this.checkPrismaticHOut.MenuManager = this.barManager1;
             this.checkPrismaticHOut.Name = "checkPrismaticHOut";
+            this.checkPrismaticHOut.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkPrismaticHOut.Properties.Appearance.Font")));
+            this.checkPrismaticHOut.Properties.Appearance.Options.UseFont = true;
             this.checkPrismaticHOut.Properties.Caption = resources.GetString("checkPrismaticHOut.Properties.Caption");
             // 
             // label29
@@ -1007,6 +1055,8 @@
             resources.ApplyResources(this.checkPrismaticVUp, "checkPrismaticVUp");
             this.checkPrismaticVUp.MenuManager = this.barManager1;
             this.checkPrismaticVUp.Name = "checkPrismaticVUp";
+            this.checkPrismaticVUp.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkPrismaticVUp.Properties.Appearance.Font")));
+            this.checkPrismaticVUp.Properties.Appearance.Options.UseFont = true;
             this.checkPrismaticVUp.Properties.Caption = resources.GetString("checkPrismaticVUp.Properties.Caption");
             // 
             // label26
@@ -1020,6 +1070,8 @@
             resources.ApplyResources(this.checkPrismaticVDwn, "checkPrismaticVDwn");
             this.checkPrismaticVDwn.MenuManager = this.barManager1;
             this.checkPrismaticVDwn.Name = "checkPrismaticVDwn";
+            this.checkPrismaticVDwn.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkPrismaticVDwn.Properties.Appearance.Font")));
+            this.checkPrismaticVDwn.Properties.Appearance.Options.UseFont = true;
             this.checkPrismaticVDwn.Properties.Caption = resources.GetString("checkPrismaticVDwn.Properties.Caption");
             // 
             // label23
@@ -1034,7 +1086,9 @@
             this.checkScatter.MenuManager = this.barManager1;
             this.checkScatter.Name = "checkScatter";
             this.checkScatter.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkScatter.Properties.Appearance.BorderColor")));
+            this.checkScatter.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkScatter.Properties.Appearance.Font")));
             this.checkScatter.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkScatter.Properties.Appearance.Options.UseFont = true;
             this.checkScatter.Properties.Caption = resources.GetString("checkScatter.Properties.Caption");
             // 
             // label22
@@ -1055,7 +1109,9 @@
             this.checkMedium.MenuManager = this.barManager1;
             this.checkMedium.Name = "checkMedium";
             this.checkMedium.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkMedium.Properties.Appearance.BorderColor")));
+            this.checkMedium.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkMedium.Properties.Appearance.Font")));
             this.checkMedium.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkMedium.Properties.Appearance.Options.UseFont = true;
             this.checkMedium.Properties.Caption = resources.GetString("checkMedium.Properties.Caption");
             // 
             // label20
@@ -1070,7 +1126,9 @@
             this.checkHigh.MenuManager = this.barManager1;
             this.checkHigh.Name = "checkHigh";
             this.checkHigh.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkHigh.Properties.Appearance.BorderColor")));
+            this.checkHigh.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkHigh.Properties.Appearance.Font")));
             this.checkHigh.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkHigh.Properties.Appearance.Options.UseFont = true;
             this.checkHigh.Properties.Caption = resources.GetString("checkHigh.Properties.Caption");
             // 
             // label24
@@ -1085,7 +1143,9 @@
             this.checkExtraHigh.MenuManager = this.barManager1;
             this.checkExtraHigh.Name = "checkExtraHigh";
             this.checkExtraHigh.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkExtraHigh.Properties.Appearance.BorderColor")));
+            this.checkExtraHigh.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkExtraHigh.Properties.Appearance.Font")));
             this.checkExtraHigh.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkExtraHigh.Properties.Appearance.Options.UseFont = true;
             this.checkExtraHigh.Properties.Caption = resources.GetString("checkExtraHigh.Properties.Caption");
             // 
             // checkPemertration
@@ -1094,7 +1154,9 @@
             this.checkPemertration.MenuManager = this.barManager1;
             this.checkPemertration.Name = "checkPemertration";
             this.checkPemertration.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkPemertration.Properties.Appearance.BorderColor")));
+            this.checkPemertration.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkPemertration.Properties.Appearance.Font")));
             this.checkPemertration.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkPemertration.Properties.Appearance.Options.UseFont = true;
             this.checkPemertration.Properties.Caption = resources.GetString("checkPemertration.Properties.Caption");
             // 
             // checkIgnition
@@ -1103,7 +1165,9 @@
             this.checkIgnition.MenuManager = this.barManager1;
             this.checkIgnition.Name = "checkIgnition";
             this.checkIgnition.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkIgnition.Properties.Appearance.BorderColor")));
+            this.checkIgnition.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkIgnition.Properties.Appearance.Font")));
             this.checkIgnition.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkIgnition.Properties.Appearance.Options.UseFont = true;
             this.checkIgnition.Properties.Caption = resources.GetString("checkIgnition.Properties.Caption");
             // 
             // checkCorrsion
@@ -1112,7 +1176,9 @@
             this.checkCorrsion.MenuManager = this.barManager1;
             this.checkCorrsion.Name = "checkCorrsion";
             this.checkCorrsion.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkCorrsion.Properties.Appearance.BorderColor")));
+            this.checkCorrsion.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkCorrsion.Properties.Appearance.Font")));
             this.checkCorrsion.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkCorrsion.Properties.Appearance.Options.UseFont = true;
             this.checkCorrsion.Properties.Caption = resources.GetString("checkCorrsion.Properties.Caption");
             // 
             // checkMarkings
@@ -1121,7 +1187,9 @@
             this.checkMarkings.MenuManager = this.barManager1;
             this.checkMarkings.Name = "checkMarkings";
             this.checkMarkings.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkMarkings.Properties.Appearance.BorderColor")));
+            this.checkMarkings.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkMarkings.Properties.Appearance.Font")));
             this.checkMarkings.Properties.Appearance.Options.UseBorderColor = true;
+            this.checkMarkings.Properties.Appearance.Options.UseFont = true;
             this.checkMarkings.Properties.Caption = resources.GetString("checkMarkings.Properties.Caption");
             // 
             // lookUpEditUnit
@@ -1245,7 +1313,7 @@
             this.layoutControlItem13});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1132, 633);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1130, 622);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -1255,14 +1323,14 @@
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(321, 29);
+            this.layoutControlItem1.Size = new System.Drawing.Size(320, 29);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.TxtProduct;
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
-            this.layoutControlItem2.Location = new System.Drawing.Point(321, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(320, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(321, 29);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(105, 18);
@@ -1271,9 +1339,9 @@
             // 
             this.layoutControlItem3.Control = this.TxtCustomersId;
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
-            this.layoutControlItem3.Location = new System.Drawing.Point(642, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(641, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(470, 29);
+            this.layoutControlItem3.Size = new System.Drawing.Size(469, 29);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem4
@@ -1282,14 +1350,14 @@
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 29);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(321, 29);
+            this.layoutControlItem4.Size = new System.Drawing.Size(320, 29);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.SpinOrderAmount;
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
-            this.layoutControlItem5.Location = new System.Drawing.Point(321, 29);
+            this.layoutControlItem5.Location = new System.Drawing.Point(320, 29);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(321, 29);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(105, 18);
@@ -1298,9 +1366,9 @@
             // 
             this.layoutControlItem6.Control = this.SpinTestAmount;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(642, 29);
+            this.layoutControlItem6.Location = new System.Drawing.Point(641, 29);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(258, 29);
+            this.layoutControlItem6.Size = new System.Drawing.Size(257, 29);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem9
@@ -1309,7 +1377,7 @@
             resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
             this.layoutControlItem9.Location = new System.Drawing.Point(321, 58);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(321, 29);
+            this.layoutControlItem9.Size = new System.Drawing.Size(320, 29);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem83
@@ -1327,7 +1395,7 @@
             // 
             this.layoutControlItem86.Control = this.lookUpEditUnit;
             resources.ApplyResources(this.layoutControlItem86, "layoutControlItem86");
-            this.layoutControlItem86.Location = new System.Drawing.Point(900, 29);
+            this.layoutControlItem86.Location = new System.Drawing.Point(898, 29);
             this.layoutControlItem86.Name = "layoutControlItem86";
             this.layoutControlItem86.Size = new System.Drawing.Size(212, 29);
             this.layoutControlItem86.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -1338,9 +1406,9 @@
             // 
             this.layoutControlItem101.Control = this.panelControl1;
             resources.ApplyResources(this.layoutControlItem101, "layoutControlItem101");
-            this.layoutControlItem101.Location = new System.Drawing.Point(0, 116);
+            this.layoutControlItem101.Location = new System.Drawing.Point(0, 114);
             this.layoutControlItem101.Name = "layoutControlItem101";
-            this.layoutControlItem101.Size = new System.Drawing.Size(1112, 497);
+            this.layoutControlItem101.Size = new System.Drawing.Size(1110, 488);
             this.layoutControlItem101.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem101.TextToControlDistance = 0;
             this.layoutControlItem101.TextVisible = false;
@@ -1362,23 +1430,23 @@
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 87);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(277, 29);
+            this.layoutControlItem8.Size = new System.Drawing.Size(277, 27);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.newChooseContorlAuditEmp;
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(642, 58);
+            this.layoutControlItem7.Location = new System.Drawing.Point(641, 58);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(258, 29);
+            this.layoutControlItem7.Size = new System.Drawing.Size(257, 29);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem85
             // 
             this.layoutControlItem85.Control = this.txt_AuditState;
             resources.ApplyResources(this.layoutControlItem85, "layoutControlItem85");
-            this.layoutControlItem85.Location = new System.Drawing.Point(900, 58);
+            this.layoutControlItem85.Location = new System.Drawing.Point(898, 58);
             this.layoutControlItem85.Name = "layoutControlItem85";
             this.layoutControlItem85.Size = new System.Drawing.Size(212, 29);
             this.layoutControlItem85.TextSize = new System.Drawing.Size(105, 18);
@@ -1389,25 +1457,25 @@
             resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
             this.layoutControlItem10.Location = new System.Drawing.Point(277, 87);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(283, 29);
+            this.layoutControlItem10.Size = new System.Drawing.Size(282, 27);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.NccTestPerson3;
             resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
-            this.layoutControlItem12.Location = new System.Drawing.Point(560, 87);
+            this.layoutControlItem12.Location = new System.Drawing.Point(559, 87);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(285, 29);
+            this.layoutControlItem12.Size = new System.Drawing.Size(284, 27);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(105, 18);
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.NccTestPerson4;
             resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
-            this.layoutControlItem13.Location = new System.Drawing.Point(845, 87);
+            this.layoutControlItem13.Location = new System.Drawing.Point(843, 87);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(267, 29);
+            this.layoutControlItem13.Size = new System.Drawing.Size(267, 27);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(105, 18);
             // 
             // emptySpaceItem16
