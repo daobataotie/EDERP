@@ -199,6 +199,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.Markings = this.checkMarkings.Checked;
             this._PCExportReportANSI.RefractivePower = this.spinRefractivePower.EditValue == null ? 0 : double.Parse(this.spinRefractivePower.EditValue.ToString());
             this._PCExportReportANSI.ProductUnitId = this.lookUpEditUnit.EditValue == null ? null : this.lookUpEditUnit.EditValue.ToString();
+            this._PCExportReportANSI.IsShowGX2 = this.che_IsShowGX2.Checked;
 
             //对外观，加热，坐标等判定新增的 测试数量
             if (this.sp_VisualNum.EditValue == null || this.sp_VisualNum.Value == 0)
@@ -412,6 +413,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.checkPrismaticHOut.Checked = this._PCExportReportANSI.PrismaticPowerHOut.HasValue ? this._PCExportReportANSI.PrismaticPowerHOut.Value : false;
             this.checkPrismaticVDwn.Checked = this._PCExportReportANSI.PrismaticPowerVDwn.HasValue ? this._PCExportReportANSI.PrismaticPowerVDwn.Value : false;
             this.checkPrismaticVUp.Checked = this._PCExportReportANSI.PrismaticPowerVUp.HasValue ? this._PCExportReportANSI.PrismaticPowerVUp.Value : false;
+            this.che_IsShowGX2.Checked = this._PCExportReportANSI.IsShowGX2.HasValue ? this._PCExportReportANSI.IsShowGX2.Value : false;
             this.checkScatter.Checked = this._PCExportReportANSI.ScatterLight.HasValue ? this._PCExportReportANSI.ScatterLight.Value : false;
             this.checkMedium.Checked = this._PCExportReportANSI.MediumImpact.HasValue ? this._PCExportReportANSI.MediumImpact.Value : false;
             this.checkHigh.Checked = this._PCExportReportANSI.HighImpact.HasValue ? this._PCExportReportANSI.HighImpact.Value : false;

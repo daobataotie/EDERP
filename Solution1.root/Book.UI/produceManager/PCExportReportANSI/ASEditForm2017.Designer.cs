@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ASEditForm2017));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.NccTestPerson4 = new Book.UI.Invoices.NewChooseContorl();
+            this.NccTestPerson3 = new Book.UI.Invoices.NewChooseContorl();
+            this.NccTestPerson2 = new Book.UI.Invoices.NewChooseContorl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.sp_Low = new DevExpress.XtraEditors.SpinEdit();
@@ -148,25 +151,23 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem83 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem85 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem86 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem101 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem85 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem16 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.BarBtnCutomerOrder = new DevExpress.XtraBars.BarButtonItem();
             this.BarBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintAlan = new DevExpress.XtraBars.BarButtonItem();
             this.barPrintPPE = new DevExpress.XtraBars.BarButtonItem();
-            this.NccTestPerson2 = new Book.UI.Invoices.NewChooseContorl();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NccTestPerson3 = new Book.UI.Invoices.NewChooseContorl();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NccTestPerson4 = new Book.UI.Invoices.NewChooseContorl();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.che_IsShowGX2 = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -224,18 +225,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem83)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem85)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem86)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem101)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem85)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.che_IsShowGX2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -284,17 +286,34 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(702, 275, 250, 233);
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
+            // NccTestPerson4
+            // 
+            this.NccTestPerson4.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson4, "NccTestPerson4");
+            this.NccTestPerson4.Name = "NccTestPerson4";
+            // 
+            // NccTestPerson3
+            // 
+            this.NccTestPerson3.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson3, "NccTestPerson3");
+            this.NccTestPerson3.Name = "NccTestPerson3";
+            // 
+            // NccTestPerson2
+            // 
+            this.NccTestPerson2.EditValue = null;
+            resources.ApplyResources(this.NccTestPerson2, "NccTestPerson2");
+            this.NccTestPerson2.Name = "NccTestPerson2";
+            // 
             // comboBoxEdit1
             // 
             resources.ApplyResources(this.comboBoxEdit1, "comboBoxEdit1");
             this.comboBoxEdit1.MenuManager = this.barManager1;
             this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit1.Properties.Buttons"))))});
             this.comboBoxEdit1.StyleController = this.layoutControl1;
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.che_IsShowGX2);
             this.panelControl1.Controls.Add(this.sp_Low);
             this.panelControl1.Controls.Add(this.checkLow);
             this.panelControl1.Controls.Add(this.label59);
@@ -1091,8 +1110,6 @@
             resources.ApplyResources(this.lookUpEditUnit, "lookUpEditUnit");
             this.lookUpEditUnit.MenuManager = this.barManager1;
             this.lookUpEditUnit.Name = "lookUpEditUnit";
-            this.lookUpEditUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lookUpEditUnit.Properties.Buttons"))))});
             this.lookUpEditUnit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lookUpEditUnit.Properties.Columns"), resources.GetString("lookUpEditUnit.Properties.Columns1"))});
             this.lookUpEditUnit.Properties.DataSource = this.bindingSourceUnit;
@@ -1125,8 +1142,6 @@
             resources.ApplyResources(this.DateReportDate, "DateReportDate");
             this.DateReportDate.MenuManager = this.barManager1;
             this.DateReportDate.Name = "DateReportDate";
-            this.DateReportDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("DateReportDate.Properties.Buttons"))))});
             this.DateReportDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DateReportDate.StyleController = this.layoutControl1;
@@ -1265,15 +1280,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(256, 25);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(84, 14);
             // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.NccTestPerson;
-            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 75);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(276, 25);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(84, 14);
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.DateReportDate;
@@ -1293,24 +1299,6 @@
             this.layoutControlItem83.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem83.TextToControlDistance = 0;
             this.layoutControlItem83.TextVisible = false;
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.newChooseContorlAuditEmp;
-            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(639, 50);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(256, 25);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(84, 14);
-            // 
-            // layoutControlItem85
-            // 
-            this.layoutControlItem85.Control = this.txt_AuditState;
-            resources.ApplyResources(this.layoutControlItem85, "layoutControlItem85");
-            this.layoutControlItem85.Location = new System.Drawing.Point(895, 50);
-            this.layoutControlItem85.Name = "layoutControlItem85";
-            this.layoutControlItem85.Size = new System.Drawing.Size(211, 25);
-            this.layoutControlItem85.TextSize = new System.Drawing.Size(84, 14);
             // 
             // layoutControlItem86
             // 
@@ -1344,6 +1332,60 @@
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextToControlDistance = 0;
             this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.NccTestPerson;
+            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 75);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(276, 25);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(84, 14);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.newChooseContorlAuditEmp;
+            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
+            this.layoutControlItem7.Location = new System.Drawing.Point(639, 50);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(256, 25);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(84, 14);
+            // 
+            // layoutControlItem85
+            // 
+            this.layoutControlItem85.Control = this.txt_AuditState;
+            resources.ApplyResources(this.layoutControlItem85, "layoutControlItem85");
+            this.layoutControlItem85.Location = new System.Drawing.Point(895, 50);
+            this.layoutControlItem85.Name = "layoutControlItem85";
+            this.layoutControlItem85.Size = new System.Drawing.Size(211, 25);
+            this.layoutControlItem85.TextSize = new System.Drawing.Size(84, 14);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.NccTestPerson2;
+            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
+            this.layoutControlItem10.Location = new System.Drawing.Point(276, 75);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(282, 25);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(84, 14);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.NccTestPerson3;
+            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
+            this.layoutControlItem12.Location = new System.Drawing.Point(558, 75);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(283, 25);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(84, 14);
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.NccTestPerson4;
+            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
+            this.layoutControlItem13.Location = new System.Drawing.Point(841, 75);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(265, 25);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(84, 14);
             // 
             // emptySpaceItem16
             // 
@@ -1381,50 +1423,14 @@
             this.barPrintPPE.Name = "barPrintPPE";
             this.barPrintPPE.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPrintPPE_ItemClick);
             // 
-            // NccTestPerson2
+            // che_IsShowGX2
             // 
-            this.NccTestPerson2.EditValue = null;
-            resources.ApplyResources(this.NccTestPerson2, "NccTestPerson2");
-            this.NccTestPerson2.Name = "NccTestPerson2";
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.NccTestPerson2;
-            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(276, 75);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(282, 25);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(84, 14);
-            // 
-            // NccTestPerson3
-            // 
-            this.NccTestPerson3.EditValue = null;
-            resources.ApplyResources(this.NccTestPerson3, "NccTestPerson3");
-            this.NccTestPerson3.Name = "NccTestPerson3";
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.NccTestPerson3;
-            resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
-            this.layoutControlItem12.Location = new System.Drawing.Point(558, 75);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(283, 25);
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(84, 14);
-            // 
-            // NccTestPerson4
-            // 
-            this.NccTestPerson4.EditValue = null;
-            resources.ApplyResources(this.NccTestPerson4, "NccTestPerson4");
-            this.NccTestPerson4.Name = "NccTestPerson4";
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.NccTestPerson4;
-            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
-            this.layoutControlItem13.Location = new System.Drawing.Point(841, 75);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(265, 25);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(84, 14);
+            resources.ApplyResources(this.che_IsShowGX2, "che_IsShowGX2");
+            this.che_IsShowGX2.MenuManager = this.barManager1;
+            this.che_IsShowGX2.Name = "che_IsShowGX2";
+            this.che_IsShowGX2.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("checkEdit1.Properties.Appearance.BorderColor")));
+            this.che_IsShowGX2.Properties.Appearance.Options.UseBorderColor = true;
+            this.che_IsShowGX2.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
             // 
             // ASEditForm2017
             // 
@@ -1491,18 +1497,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem83)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem85)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem86)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem101)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem85)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.che_IsShowGX2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1646,5 +1653,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraEditors.CheckEdit che_IsShowGX2;
     }
 }
