@@ -41,7 +41,6 @@
             this.label64 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
-            this.DateReportDate = new DevExpress.XtraEditors.DateEdit();
             this.NccTestPerson = new Book.UI.Invoices.NewChooseContorl();
             this.SpinTestAmount = new DevExpress.XtraEditors.SpinEdit();
             this.SpinOrderAmount = new DevExpress.XtraEditors.SpinEdit();
@@ -56,7 +55,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -180,7 +178,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            this.DateReportDate = new DevExpress.XtraEditors.DateEdit();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -188,8 +187,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTraceMarking.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinOrderAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCustomersId.Properties)).BeginInit();
@@ -202,7 +199,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
@@ -257,32 +253,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPrism.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestConstruction.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
-            // 
-            // barManager1
-            // 
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.BarBtnCutomerOrder,
-            this.BarBtnSearch,
-            this.barPrintAlan,
-            this.barPrintPPE});
-            this.barManager1.MaxItemId = 18;
             // 
             // imageCollection1
             // 
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
             // 
-            // bar1
-            // 
-            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.BarBtnCutomerOrder),
-            new DevExpress.XtraBars.LinkPersistInfo(this.BarBtnSearch),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barPrintAlan),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barPrintPPE)});
-            this.bar1.OptionsBar.UseWholeRow = true;
-            // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.DateReportDate);
             this.layoutControl1.Controls.Add(this.NccTestPerson4);
             this.layoutControl1.Controls.Add(this.NccTestPerson3);
             this.layoutControl1.Controls.Add(this.NccTestPerson2);
@@ -292,7 +274,6 @@
             this.layoutControl1.Controls.Add(this.label64);
             this.layoutControl1.Controls.Add(this.label63);
             this.layoutControl1.Controls.Add(this.txt_AuditState);
-            this.layoutControl1.Controls.Add(this.DateReportDate);
             this.layoutControl1.Controls.Add(this.NccTestPerson);
             this.layoutControl1.Controls.Add(this.SpinTestAmount);
             this.layoutControl1.Controls.Add(this.SpinOrderAmount);
@@ -366,16 +347,6 @@
             this.txt_AuditState.Name = "txt_AuditState";
             this.txt_AuditState.StyleController = this.layoutControl1;
             // 
-            // DateReportDate
-            // 
-            this.DateReportDate.EditValue = null;
-            resources.ApplyResources(this.DateReportDate, "DateReportDate");
-            this.DateReportDate.MenuManager = this.barManager1;
-            this.DateReportDate.Name = "DateReportDate";
-            this.DateReportDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DateReportDate.StyleController = this.layoutControl1;
-            // 
             // NccTestPerson
             // 
             this.NccTestPerson.EditValue = null;
@@ -439,7 +410,6 @@
             this.layoutControlItem5,
             this.layoutControlItem6,
             this.layoutControlItem8,
-            this.layoutControlItem9,
             this.emptySpaceItem2,
             this.emptySpaceItem1,
             this.emptySpaceItem3,
@@ -464,7 +434,8 @@
             this.emptySpaceItem16,
             this.layoutControlItem10,
             this.layoutControlItem11,
-            this.layoutControlItem12});
+            this.layoutControlItem12,
+            this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(889, 609);
@@ -524,15 +495,6 @@
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(287, 29);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.DateReportDate;
-            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
-            this.layoutControlItem9.Location = new System.Drawing.Point(547, 58);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(322, 29);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(133, 18);
             // 
             // emptySpaceItem2
             // 
@@ -1562,6 +1524,27 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
+            // DateReportDate
+            // 
+            this.DateReportDate.EditValue = null;
+            resources.ApplyResources(this.DateReportDate, "DateReportDate");
+            this.DateReportDate.MenuManager = this.barManager1;
+            this.DateReportDate.Name = "DateReportDate";
+            this.DateReportDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEdit1.Properties.Buttons"))))});
+            this.DateReportDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.DateReportDate.StyleController = this.layoutControl1;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.DateReportDate;
+            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
+            this.layoutControlItem9.Location = new System.Drawing.Point(547, 58);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(322, 29);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(133, 18);
+            // 
             // CEENEditsForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1571,7 +1554,6 @@
             this.Name = "CEENEditsForm";
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -1579,8 +1561,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textTraceMarking.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinOrderAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCustomersId.Properties)).EndInit();
@@ -1593,7 +1573,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
@@ -1648,6 +1627,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPrism.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestConstruction.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateReportDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1668,10 +1650,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.SpinEdit SpinTestAmount;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraEditors.DateEdit DateReportDate;
         private Book.UI.Invoices.NewChooseContorl NccTestPerson;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
@@ -1804,5 +1784,7 @@
         private Book.UI.Invoices.NewChooseContorl NccTestPerson3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.DateEdit DateReportDate;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
     }
 }

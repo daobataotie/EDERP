@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>198, 17</value>
-  </metadata>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -432,6 +429,31 @@
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="DateReportDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 70</value>
+  </data>
+  <data name="dateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="DateReportDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DateReportDate.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="&gt;&gt;DateReportDate.Name" xml:space="preserve">
+    <value>DateReportDate</value>
+  </data>
+  <data name="&gt;&gt;DateReportDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DateReportDate.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;DateReportDate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="NccTestPerson4.Location" type="System.Drawing.Point, System.Drawing">
     <value>696, 128</value>
   </data>
@@ -442,7 +464,6 @@
   <data name="NccTestPerson4.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NccTestPerson4.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
   </data>
@@ -456,7 +477,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;NccTestPerson4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="NccTestPerson3.Location" type="System.Drawing.Point, System.Drawing">
     <value>409, 128</value>
@@ -480,7 +501,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;NccTestPerson3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="NccTestPerson2.Location" type="System.Drawing.Point, System.Drawing">
     <value>149, 128</value>
@@ -504,7 +525,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;NccTestPerson2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lookUpEditUnit.Location" type="System.Drawing.Point, System.Drawing">
     <value>808, 41</value>
@@ -537,7 +558,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lookUpEditUnit.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="newChooseContorlAuditEmp.Location" type="System.Drawing.Point, System.Drawing">
     <value>149, 99</value>
@@ -561,7 +582,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseContorlAuditEmp.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="textTraceMarking.Location" type="System.Drawing.Point, System.Drawing">
     <value>409, 12</value>
@@ -582,7 +603,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textTraceMarking.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label64.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 70</value>
@@ -609,7 +630,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;label64.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label63.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 70</value>
@@ -633,7 +654,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;label63.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="txt_AuditState.Location" type="System.Drawing.Point, System.Drawing">
     <value>409, 99</value>
@@ -654,27 +675,6 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_AuditState.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="DateReportDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>696, 70</value>
-  </data>
-  <data name="DateReportDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 25</value>
-  </data>
-  <data name="DateReportDate.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;DateReportDate.Name" xml:space="preserve">
-    <value>DateReportDate</value>
-  </data>
-  <data name="&gt;&gt;DateReportDate.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;DateReportDate.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;DateReportDate.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="NccTestPerson.Location" type="System.Drawing.Point, System.Drawing">
@@ -845,30 +845,6 @@
   <data name="layoutControlGroup1.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup1</value>
   </data>
-  <data name="layoutControlGroup1.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>889, 609</value>
-  </data>
-  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="layoutControl1.Text" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
     <value>质检编号：</value>
   </data>
@@ -904,12 +880,6 @@
   </data>
   <data name="layoutControlItem8.Text" xml:space="preserve">
     <value>测试员：</value>
-  </data>
-  <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
-    <value>报告日期：</value>
-  </data>
-  <data name="layoutControlItem9.Text" xml:space="preserve">
-    <value>报告日期：</value>
   </data>
   <data name="emptySpaceItem2.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem2</value>
@@ -1060,6 +1030,36 @@
   </data>
   <data name="layoutControlItem12.Text" xml:space="preserve">
     <value>測試員4：</value>
+  </data>
+  <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
+    <value>報告日期：</value>
+  </data>
+  <data name="layoutControlItem9.Text" xml:space="preserve">
+    <value>報告日期：</value>
+  </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>889, 609</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="layoutControl1.Text" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="BarBtnCutomerOrder.Caption" xml:space="preserve">
     <value>客户订单</value>
@@ -3706,35 +3706,11 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
   <data name="$this.Text" xml:space="preserve">
     <value>CEEN外销报告</value>
   </data>
-  <data name="&gt;&gt;barManager1.Name" xml:space="preserve">
-    <value>barManager1</value>
-  </data>
-  <data name="&gt;&gt;barManager1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;imageCollection1.Name" xml:space="preserve">
     <value>imageCollection1</value>
   </data>
   <data name="&gt;&gt;imageCollection1.Type" xml:space="preserve">
     <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItemFirst.Name" xml:space="preserve">
-    <value>barButtonItemFirst</value>
-  </data>
-  <data name="&gt;&gt;barButtonItemFirst.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItemPrint.Name" xml:space="preserve">
-    <value>barButtonItemPrint</value>
-  </data>
-  <data name="&gt;&gt;barButtonItemPrint.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
-    <value>bar1</value>
-  </data>
-  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Bar, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;bindingSourceUnit.Name" xml:space="preserve">
     <value>bindingSourceUnit</value>
@@ -3782,12 +3758,6 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>layoutControlItem8</value>
   </data>
   <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
-    <value>layoutControlItem9</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;emptySpaceItem2.Name" xml:space="preserve">
@@ -3969,6 +3939,12 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
   </data>
   <data name="&gt;&gt;emptySpaceItem15.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CEENEditsForm</value>
