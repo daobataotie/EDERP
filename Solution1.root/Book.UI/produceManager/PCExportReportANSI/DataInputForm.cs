@@ -333,7 +333,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         //选择加工单
         private void barPronoteHeader_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm pronoForm = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm(0, true);
+            Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm pronoForm = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm(3, true);
             if (pronoForm.ShowDialog(this) == DialogResult.OK)
             {
                 Model.PronoteHeader pronoteHeader = pronoForm.SelectItem;
@@ -472,15 +472,17 @@ namespace Book.UI.produceManager.PCExportReportANSI
             }
         }
 
-        protected override string tableCode()
-        {
-            return "PCDataInput" + "," + this._PCDataInput.PCDataInputId;
-        }
-
+        //查询
         private void barBtnSearch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             DataInputListForm listform = new DataInputListForm();
             listform.ShowDialog(this);
         }
+
+        protected override string tableCode()
+        {
+            return "PCDataInput" + "," + this._PCDataInput.PCDataInputId;
+        }
+
     }
 }

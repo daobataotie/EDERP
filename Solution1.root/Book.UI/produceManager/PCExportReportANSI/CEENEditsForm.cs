@@ -342,7 +342,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             tag = 0;
             bool canSave = (DialogResult.OK == MessageBox.Show("是否將打印文件上傳至服務器(pdf格式)", "操作提示", MessageBoxButtons.OKCancel));
-            CEENRO r = new CEENRO(this._PCExportReportANSI,tag);
+            CEENRO r = new CEENRO(this._PCExportReportANSI, tag);
             //r.ShowPreviewDialog();
             if (canSave)
             {
@@ -399,7 +399,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
                 //this._PCExportReportANSI.ShouCeShu1 =  
                 this._PCExportReportANSI.ShouCeShu1 = this._PCExportReportANSI.PanDing1 = 100;
-                this._PCExportReportANSI.ShouCeShu10 = this._PCExportReportANSI.ShouCeShu11  = this._PCExportReportANSI.AmountTest;
+                this._PCExportReportANSI.ShouCeShu10 = this._PCExportReportANSI.ShouCeShu11 = this._PCExportReportANSI.AmountTest;
                 //this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.ShouCeShu7 = this._PCExportReportANSI.ShouCeShu8 = this._PCExportReportANSI.ShouCeShu9 == this._PCExportReportANSI.ShouCeShu12
 
                 //this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.AmountTest;
@@ -534,10 +534,70 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
         }
 
-        private void SpinTestMarking_EditValueChanged(object sender, EventArgs e)
-        {
 
+        #region Value Change
+
+        private void SpinTestConstruction_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeConstruction.EditValue = this.SpinTestConstruction.EditValue;
         }
+
+        private void SpinTestSp_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeSp.EditValue = this.SpinTestSp.EditValue;
+        }
+
+        private void SpinTestAst_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeAst.EditValue = this.SpinTestAst.EditValue;
+        }
+
+        private void SpinTestPrism_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgePrism.EditValue = this.SpinTestPrism.EditValue;
+        }
+
+        private void SpinTestDiffrence_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeDiffrence.EditValue = this.SpinTestDiffrence.EditValue;
+        }
+
+        private void SpinTestTrans_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeTrans.EditValue = this.SpinTestTrans.EditValue;
+        }
+
+        private void SpinTestSurface_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeSurface.EditValue = this.SpinTestSurface.EditValue;
+        }
+
+        private void SpinTestRobustness_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeRobustness.EditValue = this.SpinTestRobustness.EditValue;
+        }
+
+        private void SpinTestHighSpeed_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeHighSpeed.EditValue = this.SpinTestHighSpeed.EditValue;
+        }
+
+        private void SpinTestMarking_EditValueChanged_1(object sender, EventArgs e)
+        {
+            this.SpinJudgeMarking.EditValue = this.SpinTestMarking.EditValue;
+        }
+
+        private void SpinTestInformation_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeInformation.EditValue = this.SpinTestInformation.EditValue;
+        }
+
+        private void SpinTestInternal_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SpinJudgeInternal.EditValue = this.SpinTestInternal.EditValue;
+        }
+
+        #endregion
     }
 
 }

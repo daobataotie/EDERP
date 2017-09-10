@@ -79,7 +79,7 @@ namespace Book.UI.produceManager.PronoteHeader
         public ChoosePronoteHeaderDetailsForm(int type, bool IsZuzhuang)
             : this()
         {
-            this.type = type;
+            this.type = type; //3 数据输入页
             this.newChooseWorkHorse.Enabled = false;
             this.checkEditZizhiZZ.Checked = IsZuzhuang;
             // this.pronoteHeader.Details = PronotedetailsManager.Select();
@@ -237,6 +237,8 @@ namespace Book.UI.produceManager.PronoteHeader
                 DetailList = this.pronoteHeaderManager.GetByDateZJ(startTime, endTime, this.newChooseCustomer.EditValue as Model.Customer, this.textEditCusXOId.Text, this.buttonEditPro1.EditValue as Model.Product, null, null, this.workHouseIndepot == null ? null : this.workHouseIndepot.WorkHouseId, this.checkEdit1.Checked, this.TXTproNameKey.Text, this.TXTproCusNameKey.Text, this.txtpronoteHeaderIdKey.Text, this.sign, this.checkEditZizhi.Checked, this.checkEditZizhiZZ.Checked, this.checkEditZizhiBCP.Checked);
             else if (type == 1) //生产入库
                 DetailList = this.pronoteHeaderManager.GetByDate(startTime, endTime, this.newChooseCustomer.EditValue as Model.Customer, this.textEditCusXOId.Text, this.buttonEditPro1.EditValue as Model.Product, null, null, this.workHouseIndepot == null ? null : this.workHouseIndepot.WorkHouseId, this.checkEdit1.Checked, this.TXTproNameKey.Text, this.TXTproCusNameKey.Text, this.txtpronoteHeaderIdKey.Text, this.checkEditZizhi.Checked, this.checkEditZizhiZZ.Checked, this.checkEditZizhiBCP.Checked, JiaohuoDateStart, JiaohuoDateEnd, this.lookUpEditMachine.EditValue == null ? "" : this.lookUpEditMachine.EditValue.ToString());
+            else if (type == 3) //生产入库
+                DetailList = this.pronoteHeaderManager.GetByDateDI(startTime, endTime, this.newChooseCustomer.EditValue as Model.Customer, this.textEditCusXOId.Text, this.buttonEditPro1.EditValue as Model.Product, null, null, this.workHouseIndepot == null ? null : this.workHouseIndepot.WorkHouseId, this.checkEdit1.Checked, this.TXTproNameKey.Text, this.TXTproCusNameKey.Text, this.txtpronoteHeaderIdKey.Text, this.checkEditZizhi.Checked, this.checkEditZizhiZZ.Checked, this.checkEditZizhiBCP.Checked);
             else
             {
                 this.workHouseIndepot = this.newChooseWorkHorse.EditValue as Model.WorkHouse;

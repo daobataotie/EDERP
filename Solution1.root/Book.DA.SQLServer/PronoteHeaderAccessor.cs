@@ -306,6 +306,75 @@ namespace Book.DA.SQLServer
             return this.DataReaderBind<Model.PronoteHeader>(sql.ToString(), parames, CommandType.Text);
         }
 
+        //数据输入页 选择加工单
+        public IList<Book.Model.PronoteHeader> GetByDateDI(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5)
+        {
+            SqlParameter[] parames = { new SqlParameter("@startdate", DbType.DateTime), new SqlParameter("@enddate", DbType.DateTime), new SqlParameter("@xocustomerId", DbType.String), new SqlParameter("@CustomerInvoiceXOId", DbType.String), new SqlParameter("@productid", DbType.String) };
+            parames[0].Value = startDate;
+            parames[1].Value = endDate;
+            if (customer != null)
+                parames[2].Value = customer.CustomerId;
+            else
+                parames[2].Value = DBNull.Value;
+            if (!string.IsNullOrEmpty(cusxoid))
+                parames[3].Value = cusxoid;
+            else
+                parames[3].Value = DBNull.Value; ;
+            if (product != null)
+                parames[4].Value = product.ProductId;
+            else
+                parames[4].Value = DBNull.Value;
+            StringBuilder sql = new StringBuilder();
+            sql.Append("SELECT  w.Workhousename as WorkHouseNextName,a.Checkeds,a.IsClose,a.InvoiceXOId,a.PronoteHeaderID,a.InvoiceCusId,a.InvoiceXODetailQuantity,a.PronoteDate,a.Pronotedesc,a.MRSHeaderId,a.MRSdetailsId, a.DetailsSum,a.ProductId,a.ProductUnit,a.InvoiceXODetailQuantity");
+            sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee0Id) as Employee0Name, (select  EmployeeName from employee where employee.employeeid=a.Employee1Id) as Employee1Name");
+            sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee2Id) as Employee2Name ");
+            sql.Append(" , (SELECT sum(CheckOutSum)  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID and  WorkHouseId = (select WorkHouseId from WorkHouse where WorkHousename = '射出' )) AS ProduceTransferQuantity");
+            sql.Append(",  i.CustomerInvoiceXOId,i.InvoiceYjrq as PronoteProceduresDate, (SELECT CheckedStandard FROM Customer c WHERE c.CustomerId = i.xocustomerId) as CustomerCheckStandard");
+            sql.Append(", (SELECT CustomerShortName FROM Customer c WHERE c.CustomerId = i.xocustomerId) as CustomerShortName");
+            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
+            sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
+            sql.Append(",b.ProductName,b.id, b.CustomerProductName FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
+            
+            sql.Append("  where    PronoteDate between @startdate and @enddate  ");
+            if (!string.IsNullOrEmpty(cusxoid))
+                sql.Append(" and   i.CustomerInvoiceXOId  like '%'+@CustomerInvoiceXOId+'%'");
+            if (customer != null)
+                sql.Append(" and  i.xocustomerId=@xocustomerId");
+            if (product != null)
+                sql.Append(" and  a.productid=@productid");
+            if (!string.IsNullOrEmpty(PronoteHeaderIdStart) && !string.IsNullOrEmpty(PronoteHeaderIdEnd))
+                sql.Append(" and  a.PronoteHeaderID between '" + PronoteHeaderIdStart + "' and '" + PronoteHeaderIdEnd + "'");
+            if (jiean) // 只显示未结案
+                sql.Append(" and  a.IsClose=0");
+            if (!string.IsNullOrEmpty(proNameKey)) // 商品名称关键字
+                sql.Append(" and b.ProductName like '%" + proNameKey + "%'");
+            if (!string.IsNullOrEmpty(proCusNameKey)) //客户型号名称关键字
+                sql.Append(" and b.CustomerProductName like '%" + proCusNameKey + "%'");
+            if (!string.IsNullOrEmpty(pronoteHeaderIdKey)) // 加工单号关键字
+                sql.Append(" and a.PronoteHeaderID like '%" + pronoteHeaderIdKey + "%'");
+            //2017年9月11日00:43:22
+            sql.Append(" and a.PronoteHeaderID not in (select PronoteHeaderId from PCDataInput)"); //数据输入也 只能拉一次 PNT
+           
+            //三种自制条件
+            if (sourcetype0 && sourcetype4 && !sourcetype5)
+                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4'))");
+            else if (sourcetype0 && sourcetype5 && !sourcetype4)
+                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5'))");
+            else if (sourcetype4 && sourcetype5 && !sourcetype0)
+                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5'))");
+            else if (sourcetype0 && !sourcetype5 && !sourcetype4)
+                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0'))");
+            else if (sourcetype4 && !sourcetype0 && !sourcetype5)
+                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4'))");
+            else if (sourcetype5 && !sourcetype0 && !sourcetype4)
+                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5'))");
+            else if (sourcetype0 && sourcetype4 && sourcetype5)
+                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5'))");
+
+            sql.Append(" order by a.PronoteHeaderID desc ");
+            return this.DataReaderBind<Model.PronoteHeader>(sql.ToString(), parames, CommandType.Text);
+        }
+
         public IList<Book.Model.PronoteHeader> Select(string customerStart, string customerEnd, DateTime dateStart, DateTime dateEnd, string CusXOId)
         {
             Hashtable ht = new Hashtable();

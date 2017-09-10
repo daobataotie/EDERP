@@ -402,6 +402,11 @@ namespace Book.BL
         {
             return accessor.GetByDateZJ(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sign, sourcetype0, sourcetype4, sourcetype5);
         }
+
+        public IList<Book.Model.PronoteHeader> GetByDateDI(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey,  bool sourcetype0, bool sourcetype4, bool sourcetype5)
+        {
+            return accessor.GetByDateDI(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5);
+        }
         public void UpdateHeaderIsClseByXOId(string InvoiceXOId, bool isclose)
         {
             accessor.UpdateHeaderIsClseByXOId(InvoiceXOId, isclose);

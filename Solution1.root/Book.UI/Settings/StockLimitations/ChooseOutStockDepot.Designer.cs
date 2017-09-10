@@ -94,6 +94,7 @@
             // 
             resources.ApplyResources(this.gridControl1, "gridControl1");
             this.gridControl1.DataSource = this.bindingSource1;
+            this.gridControl1.EmbeddedNavigator.Margin = ((System.Windows.Forms.Padding)(resources.GetObject("gridControl1.EmbeddedNavigator.Margin")));
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
             // 
@@ -226,9 +227,9 @@
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(152, 26);
+            this.layoutControlItem1.Size = new System.Drawing.Size(152, 29);
             this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 18);
             this.layoutControlItem1.TextToControlDistance = 5;
             // 
             // layoutControlItem2
@@ -237,9 +238,9 @@
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
             this.layoutControlItem2.Location = new System.Drawing.Point(152, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(163, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(163, 29);
             this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(52, 14);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(65, 18);
             this.layoutControlItem2.TextToControlDistance = 5;
             // 
             // layoutControlItem3
@@ -248,7 +249,7 @@
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Location = new System.Drawing.Point(787, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(76, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(76, 29);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
@@ -259,7 +260,7 @@
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
             this.layoutControlItem4.Location = new System.Drawing.Point(540, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(247, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(247, 29);
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(52, 14);
             this.layoutControlItem4.TextToControlDistance = 5;
@@ -270,40 +271,40 @@
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(315, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(225, 26);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(84, 14);
+            this.layoutControlItem5.Size = new System.Drawing.Size(225, 29);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(105, 18);
             // 
             // emptySpaceItem1
             // 
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 26);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 29);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(863, 369);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(863, 363);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             resources.ApplyResources(this.emptySpaceItem3, "emptySpaceItem3");
-            this.emptySpaceItem3.Location = new System.Drawing.Point(644, 395);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(644, 392);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(219, 26);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(219, 29);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             resources.ApplyResources(this.emptySpaceItem2, "emptySpaceItem2");
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 395);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 392);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(110, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(110, 29);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.checkAll;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(110, 395);
+            this.layoutControlItem6.Location = new System.Drawing.Point(110, 392);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(58, 26);
+            this.layoutControlItem6.Size = new System.Drawing.Size(58, 29);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
             this.layoutControlItem6.TextVisible = false;
@@ -320,9 +321,9 @@
             // 
             this.layoutControlItem7.Control = this.btn_Print;
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(547, 395);
+            this.layoutControlItem7.Location = new System.Drawing.Point(547, 392);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(97, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(97, 29);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
             this.layoutControlItem7.TextVisible = false;
@@ -330,9 +331,9 @@
             // emptySpaceItem5
             // 
             resources.ApplyResources(this.emptySpaceItem5, "emptySpaceItem5");
-            this.emptySpaceItem5.Location = new System.Drawing.Point(168, 395);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(168, 392);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(379, 26);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(379, 29);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // gridColumnDepotOutId
@@ -396,7 +397,6 @@
             resources.ApplyResources(this.gridColumn3, "gridColumn3");
             this.gridColumn3.FieldName = "Pihao";
             this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn4
             // 

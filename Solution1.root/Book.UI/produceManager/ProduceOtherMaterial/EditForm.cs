@@ -221,7 +221,7 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
                     this.barButtonItem1.Enabled = true;
                     break;
                 case "view":
-                    this.gridView1.OptionsBehavior.Editable = false;
+                    //this.gridView1.OptionsBehavior.Editable = false;
                     this.barButtonItem1.Enabled = false;
                     break;
             }

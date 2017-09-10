@@ -123,6 +123,12 @@
   <data name="barButtonItem2.Caption" xml:space="preserve">
     <value>生成外銷報告</value>
   </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>選擇加工單</value>
+  </data>
+  <data name="barButtonItem4.Caption" xml:space="preserve">
+    <value>查詢</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -440,7 +446,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="radioGroup1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>800, 70</value>
+    <value>852, 70</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="radioGroup1.Properties.Items" type="System.Int32, mscorlib">
@@ -462,7 +468,7 @@
     <value>PPE</value>
   </data>
   <data name="radioGroup1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 29</value>
+    <value>323, 29</value>
   </data>
   <data name="radioGroup1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -483,10 +489,10 @@
     <value>0</value>
   </data>
   <data name="sp_OrderQuantity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 70</value>
+    <value>462, 70</value>
   </data>
   <data name="sp_OrderQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 25</value>
+    <value>292, 25</value>
   </data>
   <data name="sp_OrderQuantity.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -507,7 +513,7 @@
     <value>106, 70</value>
   </data>
   <data name="txt_Customer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 25</value>
+    <value>258, 25</value>
   </data>
   <data name="txt_Customer.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -525,10 +531,10 @@
     <value>6</value>
   </data>
   <data name="txt_ProductName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>800, 41</value>
+    <value>852, 41</value>
   </data>
   <data name="txt_ProductName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 25</value>
+    <value>323, 25</value>
   </data>
   <data name="txt_ProductName.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -546,7 +552,7 @@
     <value>7</value>
   </data>
   <data name="cob_CheckStandard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 41</value>
+    <value>462, 41</value>
   </data>
   <data name="cob_CheckStandard.Properties.Items" xml:space="preserve">
     <value>ANSI</value>
@@ -576,7 +582,7 @@
     <value>ANSI2015/EN/AS2017</value>
   </data>
   <data name="cob_CheckStandard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 25</value>
+    <value>292, 25</value>
   </data>
   <data name="cob_CheckStandard.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -594,10 +600,10 @@
     <value>8</value>
   </data>
   <data name="txt_InvoiceCusId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>437, 12</value>
+    <value>462, 12</value>
   </data>
   <data name="txt_InvoiceCusId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 25</value>
+    <value>292, 25</value>
   </data>
   <data name="txt_InvoiceCusId.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -621,7 +627,7 @@
     <value>106, 41</value>
   </data>
   <data name="spe_TestQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 25</value>
+    <value>258, 25</value>
   </data>
   <data name="spe_TestQuantity.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -642,7 +648,7 @@
     <value>106, 12</value>
   </data>
   <data name="txt_PronoteHeaderId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 25</value>
+    <value>258, 25</value>
   </data>
   <data name="txt_PronoteHeaderId.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -660,10 +666,10 @@
     <value>11</value>
   </data>
   <data name="date_PCDataInputDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>800, 12</value>
+    <value>852, 12</value>
   </data>
   <data name="date_PCDataInputDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 25</value>
+    <value>323, 25</value>
   </data>
   <data name="date_PCDataInputDate.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -691,7 +697,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="ncc_Tester1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 21</value>
+    <value>1089, 21</value>
   </data>
   <data name="ncc_Tester1.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -709,10 +715,10 @@
     <value>4</value>
   </data>
   <data name="btn_PCOpticalMachineRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>542, 379</value>
+    <value>583, 379</value>
   </data>
   <data name="btn_PCOpticalMachineRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>532, 25</value>
+    <value>572, 25</value>
   </data>
   <data name="btn_PCOpticalMachineRemove.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -736,7 +742,7 @@
     <value>2, 379</value>
   </data>
   <data name="btn_PCOpticalMachineADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>536, 25</value>
+    <value>577, 25</value>
   </data>
   <data name="btn_PCOpticalMachineADD.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1012,7 +1018,7 @@
     <value>光學機</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1072, 348</value>
+    <value>1153, 348</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1066,7 +1072,7 @@
     <value>layoutControlGroup2</value>
   </data>
   <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1076, 406</value>
+    <value>1157, 406</value>
   </data>
   <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1087,7 +1093,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1076, 406</value>
+    <value>1157, 406</value>
   </data>
   <data name="xtraTabPage1.Text" xml:space="preserve">
     <value>光学机</value>
@@ -1105,7 +1111,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1082, 438</value>
+    <value>1163, 438</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1117,7 +1123,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="ncc_Tester2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>998, 21</value>
+    <value>1008, 21</value>
   </data>
   <data name="ncc_Tester2.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -1135,10 +1141,10 @@
     <value>4</value>
   </data>
   <data name="btn_PCDefinitionRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>531, 258</value>
+    <value>536, 258</value>
   </data>
   <data name="btn_PCDefinitionRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 25</value>
+    <value>538, 25</value>
   </data>
   <data name="btn_PCDefinitionRemove.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1162,7 +1168,7 @@
     <value>2, 258</value>
   </data>
   <data name="btn_PCDefinitionADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>525, 25</value>
+    <value>530, 25</value>
   </data>
   <data name="btn_PCDefinitionADD.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1186,7 +1192,7 @@
     <value>2, 131</value>
   </data>
   <data name="btn_PCLaserMachineADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>521, 25</value>
+    <value>526, 25</value>
   </data>
   <data name="btn_PCLaserMachineADD.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1291,7 +1297,7 @@
     <value>雷射儀</value>
   </data>
   <data name="gridControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1062, 100</value>
+    <value>1072, 100</value>
   </data>
   <data name="gridControl2.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1417,7 +1423,7 @@
     <value>清晰折射度/清晰可看見</value>
   </data>
   <data name="gridControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1062, 94</value>
+    <value>1072, 94</value>
   </data>
   <data name="gridControl3.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1435,10 +1441,10 @@
     <value>9</value>
   </data>
   <data name="btn_PCLaserMachineRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>527, 131</value>
+    <value>532, 131</value>
   </data>
   <data name="btn_PCLaserMachineRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>537, 25</value>
+    <value>542, 25</value>
   </data>
   <data name="btn_PCLaserMachineRemove.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -1780,7 +1786,7 @@
     <value>歐規光學測試</value>
   </data>
   <data name="gridControl6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1062, 88</value>
+    <value>1072, 88</value>
   </data>
   <data name="gridControl6.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1801,7 +1807,7 @@
     <value>2, 379</value>
   </data>
   <data name="btn_PCEuropeOpticalADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>527, 25</value>
+    <value>532, 25</value>
   </data>
   <data name="btn_PCEuropeOpticalADD.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1822,10 +1828,10 @@
     <value>12</value>
   </data>
   <data name="btn_PCEuropeOpticalRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>533, 379</value>
+    <value>538, 379</value>
   </data>
   <data name="btn_PCEuropeOpticalRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 25</value>
+    <value>536, 25</value>
   </data>
   <data name="btn_PCEuropeOpticalRemove.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1918,7 +1924,7 @@
     <value>layoutControlGroup3</value>
   </data>
   <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 406</value>
+    <value>1076, 406</value>
   </data>
   <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1939,7 +1945,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 406</value>
+    <value>1076, 406</value>
   </data>
   <data name="xtraTabPage2.Text" xml:space="preserve">
     <value>雷射仪/清晰折射度/清晰可看见/欧规光学测试</value>
@@ -1963,7 +1969,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="ncc_Tester3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>998, 21</value>
+    <value>1008, 21</value>
   </data>
   <data name="ncc_Tester3.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1981,10 +1987,10 @@
     <value>4</value>
   </data>
   <data name="btn_PCHazeRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>809, 379</value>
+    <value>817, 379</value>
   </data>
   <data name="btn_PCHazeRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 25</value>
+    <value>257, 25</value>
   </data>
   <data name="btn_PCHazeRemove.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -2005,10 +2011,10 @@
     <value>5</value>
   </data>
   <data name="btn_PCHazeADD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>534, 379</value>
+    <value>539, 379</value>
   </data>
   <data name="btn_PCHazeADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 25</value>
+    <value>274, 25</value>
   </data>
   <data name="btn_PCHazeADD.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -2029,10 +2035,10 @@
     <value>6</value>
   </data>
   <data name="btn_PCPerspectiveRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 379</value>
+    <value>270, 379</value>
   </data>
   <data name="btn_PCPerspectiveRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 25</value>
+    <value>265, 25</value>
   </data>
   <data name="btn_PCPerspectiveRemove.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -2056,7 +2062,7 @@
     <value>2, 379</value>
   </data>
   <data name="btn_PCPerspectiveADD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 25</value>
+    <value>264, 25</value>
   </data>
   <data name="btn_PCPerspectiveADD.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -2119,7 +2125,7 @@
     <value>透視率</value>
   </data>
   <data name="gridControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 348</value>
+    <value>536, 348</value>
   </data>
   <data name="gridControl4.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -2140,7 +2146,7 @@
     <value>1444, 17</value>
   </metadata>
   <data name="gridControl5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>537, 27</value>
+    <value>542, 27</value>
   </data>
   <data name="gridColumn31.Caption" xml:space="preserve">
     <value>编号</value>
@@ -2179,7 +2185,7 @@
     <value>霧度</value>
   </data>
   <data name="gridControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>527, 348</value>
+    <value>532, 348</value>
   </data>
   <data name="gridControl5.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -2251,7 +2257,7 @@
     <value>layoutControlGroup4</value>
   </data>
   <data name="layoutControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 406</value>
+    <value>1076, 406</value>
   </data>
   <data name="layoutControl4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2272,7 +2278,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1066, 406</value>
+    <value>1076, 406</value>
   </data>
   <data name="xtraTabPage3.Text" xml:space="preserve">
     <value>透视率/雾度</value>
@@ -2374,7 +2380,7 @@
     <value>layoutControlGroup1</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1106, 553</value>
+    <value>1187, 553</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2413,7 +2419,7 @@
     <value>8, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1106, 606</value>
+    <value>1187, 606</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -3409,6 +3415,18 @@
     <value>barButtonItem2</value>
   </data>
   <data name="&gt;&gt;barButtonItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem3.Name" xml:space="preserve">
+    <value>barButtonItem3</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem4.Name" xml:space="preserve">
+    <value>barButtonItem4</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem4.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
