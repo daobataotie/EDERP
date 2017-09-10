@@ -2431,6 +2431,7 @@ namespace Book.Model
         }
 
         public readonly static string PRO_IsShowGX2 = "IsShowGX2";
+
     }
 }
     

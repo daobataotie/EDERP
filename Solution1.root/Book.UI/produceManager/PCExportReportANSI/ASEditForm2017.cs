@@ -412,8 +412,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.checkPrismaticHIn.Checked = this._PCExportReportANSI.PrismaticPowerHIn.HasValue ? this._PCExportReportANSI.PrismaticPowerHIn.Value : false;
             this.checkPrismaticHOut.Checked = this._PCExportReportANSI.PrismaticPowerHOut.HasValue ? this._PCExportReportANSI.PrismaticPowerHOut.Value : false;
             this.checkPrismaticVDwn.Checked = this._PCExportReportANSI.PrismaticPowerVDwn.HasValue ? this._PCExportReportANSI.PrismaticPowerVDwn.Value : false;
-            this.checkPrismaticVUp.Checked = this._PCExportReportANSI.PrismaticPowerVUp.HasValue ? this._PCExportReportANSI.PrismaticPowerVUp.Value : false;
             this.che_IsShowGX2.Checked = this._PCExportReportANSI.IsShowGX2.HasValue ? this._PCExportReportANSI.IsShowGX2.Value : false;
+            this.checkPrismaticVUp.Checked = this._PCExportReportANSI.PrismaticPowerVUp.HasValue ? this._PCExportReportANSI.PrismaticPowerVUp.Value : false;
             this.checkScatter.Checked = this._PCExportReportANSI.ScatterLight.HasValue ? this._PCExportReportANSI.ScatterLight.Value : false;
             this.checkMedium.Checked = this._PCExportReportANSI.MediumImpact.HasValue ? this._PCExportReportANSI.MediumImpact.Value : false;
             this.checkHigh.Checked = this._PCExportReportANSI.HighImpact.HasValue ? this._PCExportReportANSI.HighImpact.Value : false;

@@ -21,7 +21,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TCTestQuantity.Text = PCOpticalMachineList.Count.ToString();
             this.TCEmployee.Text = pcDataInput.Employee == null ? "" : pcDataInput.Employee.ToString();
 
-            if (PCOpticalMachineList[0] != null)
+            if (PCOpticalMachineList != null && PCOpticalMachineList.Count > 0 && PCOpticalMachineList[0] != null)
             {
                 this.TCLA.Text = PCOpticalMachineList[0].LeftA.HasValue ? PCOpticalMachineList[0].LeftA.Value.ToString() : "";
                 this.TCLC.Text = PCOpticalMachineList[0].LeftC.HasValue ? PCOpticalMachineList[0].LeftC.Value.ToString("0.00") : "";
@@ -40,7 +40,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.TCRVerticalJudge.Text = PCOpticalMachineList[0].RightVerticalJudge;
             }
 
-            if (PCOpticalMachineList[1] != null)
+            if (PCOpticalMachineList != null && PCOpticalMachineList.Count > 1 && PCOpticalMachineList[1] != null)
             {
                 this.TCLA2.Text = PCOpticalMachineList[1].LeftA.HasValue ? PCOpticalMachineList[1].LeftA.Value.ToString() : "";
                 this.TCLC2.Text = PCOpticalMachineList[1].LeftC.HasValue ? PCOpticalMachineList[1].LeftC.Value.ToString("0.00") : "";

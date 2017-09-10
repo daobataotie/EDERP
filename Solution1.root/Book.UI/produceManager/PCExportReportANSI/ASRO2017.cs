@@ -50,7 +50,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.CheckPriHOut.Checked = _PCExportReportANSI.PrismaticPowerHOut.HasValue ? _PCExportReportANSI.PrismaticPowerHOut.Value : false;
             this.CheckPriVUp.Checked = _PCExportReportANSI.PrismaticPowerVUp.HasValue ? _PCExportReportANSI.PrismaticPowerVUp.Value : false;
             this.CheckPriVDwn.Checked = _PCExportReportANSI.PrismaticPowerVDwn.HasValue ? _PCExportReportANSI.PrismaticPowerVDwn.Value : false;
-            if (_PCExportReportANSI.IsShowGX2)
+            if (_PCExportReportANSI.IsShowGX2.HasValue && _PCExportReportANSI.IsShowGX2.Value)
                 this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? "(" + _PCExportReportANSI.RefractivePower.Value.ToString("0.00") + ") 2" : "(0.00) 2";
             else
                 this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? _PCExportReportANSI.RefractivePower.Value.ToString("0.00") : "0.00";
