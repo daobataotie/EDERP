@@ -283,7 +283,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             model.PCPerspectiveId = Guid.NewGuid().ToString();
             this._PCDataInput.PCPerspectiveList.Add(model);
             this.gridControl4.RefreshDataSource();
-        }
+        } 
 
         private void btn_PCPerspectiveRemove_Click(object sender, EventArgs e)
         {
