@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>198, 17</value>
+  </metadata>
+  <data name="barButtonItem5.Caption" xml:space="preserve">
+    <value>客戶訂單</value>
+  </data>
+  <data name="barButtonItem6.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barButtonItem7.Caption" xml:space="preserve">
+    <value>打印ALAN</value>
+  </data>
+  <data name="barButtonItem8.Caption" xml:space="preserve">
+    <value>打印PPE</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -430,13 +445,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DateReportDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>696, 70</value>
+    <value>827, 70</value>
   </data>
-  <data name="dateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+  <data name="DateReportDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="DateReportDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 25</value>
+    <value>257, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DateReportDate.TabIndex" type="System.Int32, mscorlib">
@@ -455,14 +470,14 @@
     <value>4</value>
   </data>
   <data name="NccTestPerson4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>696, 128</value>
+    <value>828, 128</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NccTestPerson4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="NccTestPerson4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 21</value>
+    <value>256, 21</value>
   </data>
   <data name="NccTestPerson4.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
@@ -480,13 +495,13 @@
     <value>5</value>
   </data>
   <data name="NccTestPerson3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 128</value>
+    <value>472, 128</value>
   </data>
   <data name="NccTestPerson3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="NccTestPerson3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 21</value>
+    <value>215, 21</value>
   </data>
   <data name="NccTestPerson3.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
@@ -510,7 +525,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="NccTestPerson2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 21</value>
+    <value>182, 21</value>
   </data>
   <data name="NccTestPerson2.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
@@ -528,7 +543,7 @@
     <value>7</value>
   </data>
   <data name="lookUpEditUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>808, 41</value>
+    <value>986, 41</value>
   </data>
   <data name="lookUpEditUnit.Properties.Columns" xml:space="preserve">
     <value>CnName</value>
@@ -543,7 +558,7 @@
     <value />
   </data>
   <data name="lookUpEditUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 25</value>
+    <value>98, 25</value>
   </data>
   <data name="lookUpEditUnit.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
@@ -567,7 +582,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="newChooseContorlAuditEmp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 21</value>
+    <value>182, 21</value>
   </data>
   <data name="newChooseContorlAuditEmp.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
@@ -585,10 +600,10 @@
     <value>9</value>
   </data>
   <data name="textTraceMarking.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 12</value>
+    <value>472, 12</value>
   </data>
   <data name="textTraceMarking.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 25</value>
+    <value>215, 25</value>
   </data>
   <data name="textTraceMarking.TabIndex" type="System.Int32, mscorlib">
     <value>96</value>
@@ -606,10 +621,10 @@
     <value>10</value>
   </data>
   <data name="label64.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 70</value>
+    <value>158, 70</value>
   </data>
   <data name="label64.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 25</value>
+    <value>172, 25</value>
   </data>
   <data name="label64.TabIndex" type="System.Int32, mscorlib">
     <value>95</value>
@@ -636,7 +651,7 @@
     <value>12, 70</value>
   </data>
   <data name="label63.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 25</value>
+    <value>142, 25</value>
   </data>
   <data name="label63.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -657,10 +672,10 @@
     <value>12</value>
   </data>
   <data name="txt_AuditState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 99</value>
+    <value>472, 99</value>
   </data>
   <data name="txt_AuditState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 25</value>
+    <value>158, 25</value>
   </data>
   <data name="txt_AuditState.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
@@ -678,13 +693,13 @@
     <value>13</value>
   </data>
   <data name="NccTestPerson.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 70</value>
+    <value>471, 70</value>
   </data>
   <data name="NccTestPerson.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="NccTestPerson.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 21</value>
+    <value>215, 21</value>
   </data>
   <data name="NccTestPerson.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -705,10 +720,10 @@
     <value>0</value>
   </data>
   <data name="SpinTestAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>696, 41</value>
+    <value>828, 41</value>
   </data>
   <data name="SpinTestAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 25</value>
+    <value>104, 25</value>
   </data>
   <data name="SpinTestAmount.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -729,10 +744,10 @@
     <value>0</value>
   </data>
   <data name="SpinOrderAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 41</value>
+    <value>472, 41</value>
   </data>
   <data name="SpinOrderAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 25</value>
+    <value>215, 25</value>
   </data>
   <data name="SpinOrderAmount.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -756,7 +771,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="NccCustomer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 21</value>
+    <value>182, 21</value>
   </data>
   <data name="NccCustomer.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -774,10 +789,10 @@
     <value>17</value>
   </data>
   <data name="TxtCustomersId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>696, 12</value>
+    <value>828, 12</value>
   </data>
   <data name="TxtCustomersId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 25</value>
+    <value>256, 25</value>
   </data>
   <data name="TxtCustomersId.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -795,10 +810,10 @@
     <value>18</value>
   </data>
   <data name="TxtProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 99</value>
+    <value>684, 99</value>
   </data>
   <data name="TxtProduct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 25</value>
+    <value>400, 25</value>
   </data>
   <data name="TxtProduct.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -819,7 +834,7 @@
     <value>149, 12</value>
   </data>
   <data name="TxtOrderId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 25</value>
+    <value>182, 25</value>
   </data>
   <data name="TxtOrderId.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1041,7 +1056,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>889, 609</value>
+    <value>1096, 609</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1079,14 +1094,41 @@
   <data name="emptySpaceItem15.Text" xml:space="preserve">
     <value>emptySpaceItem15</value>
   </data>
+  <data name="SpinTestTrans.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="SpinTestTrans.Location" type="System.Drawing.Point, System.Drawing">
+    <value>657, 161</value>
+  </data>
+  <data name="SpinTestTrans.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SpinTestTrans.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 45</value>
+  </data>
+  <data name="SpinTestTrans.TabIndex" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="&gt;&gt;SpinTestTrans.Name" xml:space="preserve">
+    <value>SpinTestTrans</value>
+  </data>
+  <data name="&gt;&gt;SpinTestTrans.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SpinTestTrans.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;SpinTestTrans.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="textProtectiontwo.EditValue" xml:space="preserve">
     <value>148</value>
   </data>
   <data name="textProtectiontwo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 278</value>
+    <value>513, 276</value>
   </data>
   <data name="textProtectiontwo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
+    <value>61, 25</value>
   </data>
   <data name="textProtectiontwo.TabIndex" type="System.Int32, mscorlib">
     <value>193</value>
@@ -1101,16 +1143,16 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;textProtectiontwo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label67.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label67.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 278</value>
+    <value>573, 277</value>
   </data>
   <data name="label67.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 21</value>
+    <value>81, 21</value>
   </data>
   <data name="label67.TabIndex" type="System.Int32, mscorlib">
     <value>192</value>
@@ -1128,16 +1170,16 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label67.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label66.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label66.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 278</value>
+    <value>392, 278</value>
   </data>
   <data name="label66.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 21</value>
+    <value>116, 21</value>
   </data>
   <data name="label66.TabIndex" type="System.Int32, mscorlib">
     <value>191</value>
@@ -1155,16 +1197,16 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label66.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="textProtectionone.EditValue" xml:space="preserve">
     <value>45</value>
   </data>
   <data name="textProtectionone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>253, 278</value>
+    <value>324, 276</value>
   </data>
   <data name="textProtectionone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
+    <value>64, 25</value>
   </data>
   <data name="textProtectionone.TabIndex" type="System.Int32, mscorlib">
     <value>190</value>
@@ -1179,7 +1221,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;textProtectionone.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label65.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1188,7 +1230,7 @@
     <value>168, 278</value>
   </data>
   <data name="label65.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 21</value>
+    <value>150, 21</value>
   </data>
   <data name="label65.TabIndex" type="System.Int32, mscorlib">
     <value>189</value>
@@ -1206,7 +1248,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label65.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="memoTrans.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 161</value>
@@ -1215,7 +1257,7 @@
     <value>Black</value>
   </data>
   <data name="memoTrans.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 45</value>
+    <value>497, 45</value>
   </data>
   <data name="memoTrans.TabIndex" type="System.Int32, mscorlib">
     <value>188</value>
@@ -1230,13 +1272,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;memoTrans.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label62.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label62.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 425</value>
+    <value>818, 425</value>
   </data>
   <data name="label62.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 23</value>
@@ -1260,13 +1302,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label62.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label61.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label61.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 425</value>
+    <value>717, 425</value>
   </data>
   <data name="label61.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 23</value>
@@ -1290,13 +1332,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label61.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label60.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label60.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 400</value>
+    <value>818, 400</value>
   </data>
   <data name="label60.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 25</value>
@@ -1320,13 +1362,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label60.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label59.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label59.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 400</value>
+    <value>717, 400</value>
   </data>
   <data name="label59.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 25</value>
@@ -1350,13 +1392,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label59.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label58.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label58.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 341</value>
+    <value>818, 341</value>
   </data>
   <data name="label58.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 59</value>
@@ -1380,13 +1422,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label57.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label57.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 341</value>
+    <value>717, 341</value>
   </data>
   <data name="label57.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 59</value>
@@ -1410,13 +1452,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label56.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label56.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 276</value>
+    <value>818, 276</value>
   </data>
   <data name="label56.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 65</value>
@@ -1440,13 +1482,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label55.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label55.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 276</value>
+    <value>717, 276</value>
   </data>
   <data name="label55.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 65</value>
@@ -1470,13 +1512,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label55.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="label54.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label54.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 241</value>
+    <value>818, 241</value>
   </data>
   <data name="label54.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 35</value>
@@ -1500,13 +1542,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label54.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="label53.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label53.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 241</value>
+    <value>717, 241</value>
   </data>
   <data name="label53.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 35</value>
@@ -1530,13 +1572,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="label52.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label52.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 206</value>
+    <value>818, 206</value>
   </data>
   <data name="label52.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 35</value>
@@ -1560,13 +1602,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="label50.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 161</value>
+    <value>818, 161</value>
   </data>
   <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 45</value>
@@ -1590,13 +1632,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="label49.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label49.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 161</value>
+    <value>717, 161</value>
   </data>
   <data name="label49.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 45</value>
@@ -1620,7 +1662,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label49.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1653,13 +1695,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="label48.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label48.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 124</value>
+    <value>818, 124</value>
   </data>
   <data name="label48.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 37</value>
@@ -1683,13 +1725,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label48.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="label47.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label47.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 124</value>
+    <value>717, 124</value>
   </data>
   <data name="label47.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 37</value>
@@ -1713,13 +1755,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="label51.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label51.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 206</value>
+    <value>717, 206</value>
   </data>
   <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 35</value>
@@ -1743,13 +1785,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label51.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="label46.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label46.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 99</value>
+    <value>818, 99</value>
   </data>
   <data name="label46.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 25</value>
@@ -1773,13 +1815,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="label44.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label44.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 74</value>
+    <value>818, 74</value>
   </data>
   <data name="label44.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 25</value>
@@ -1803,13 +1845,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="label43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 74</value>
+    <value>717, 74</value>
   </data>
   <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 25</value>
@@ -1833,13 +1875,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 49</value>
+    <value>818, 49</value>
   </data>
   <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 25</value>
@@ -1863,13 +1905,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 49</value>
+    <value>717, 49</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 25</value>
@@ -1893,13 +1935,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="label45.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 99</value>
+    <value>717, 99</value>
   </data>
   <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 25</value>
@@ -1923,13 +1965,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>29</value>
   </data>
   <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 24</value>
+    <value>818, 24</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 25</value>
@@ -1953,13 +1995,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>30</value>
   </data>
   <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 24</value>
+    <value>717, 24</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 25</value>
@@ -1983,13 +2025,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>31</value>
   </data>
   <data name="SpinJudgeInternal.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinJudgeInternal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 425</value>
+    <value>763, 425</value>
   </data>
   <data name="SpinJudgeInternal.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2010,13 +2052,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinJudgeInternal.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>32</value>
   </data>
   <data name="SpinTestInternal.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinTestInternal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 425</value>
+    <value>657, 425</value>
   </data>
   <data name="SpinTestInternal.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2037,13 +2079,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinTestInternal.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>33</value>
   </data>
   <data name="SpinJudgeInformation.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinJudgeInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 400</value>
+    <value>763, 400</value>
   </data>
   <data name="SpinJudgeInformation.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2064,13 +2106,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinJudgeInformation.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>34</value>
   </data>
   <data name="SpinTestInformation.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinTestInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 400</value>
+    <value>657, 400</value>
   </data>
   <data name="SpinTestInformation.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2091,13 +2133,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinTestInformation.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>35</value>
   </data>
   <data name="SpinJudgeMarking.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinJudgeMarking.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 341</value>
+    <value>763, 341</value>
   </data>
   <data name="SpinJudgeMarking.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2118,13 +2160,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinJudgeMarking.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>36</value>
   </data>
   <data name="SpinTestMarking.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinTestMarking.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 341</value>
+    <value>657, 341</value>
   </data>
   <data name="SpinTestMarking.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2145,13 +2187,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinTestMarking.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>37</value>
   </data>
   <data name="SpinJudgeRobustness.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinJudgeRobustness.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 241</value>
+    <value>763, 241</value>
   </data>
   <data name="SpinJudgeRobustness.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2172,13 +2214,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinJudgeRobustness.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>38</value>
   </data>
   <data name="SpinTestRobustness.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinTestRobustness.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 241</value>
+    <value>657, 241</value>
   </data>
   <data name="SpinTestRobustness.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2199,13 +2241,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinTestRobustness.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>39</value>
   </data>
   <data name="SpinJudgeSurface.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinJudgeSurface.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 206</value>
+    <value>763, 206</value>
   </data>
   <data name="SpinJudgeSurface.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2226,13 +2268,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinJudgeSurface.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>40</value>
   </data>
   <data name="SpinTestHighSpeed.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinTestHighSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 276</value>
+    <value>657, 276</value>
   </data>
   <data name="SpinTestHighSpeed.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2253,13 +2295,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinTestHighSpeed.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>41</value>
   </data>
   <data name="SpinJudgeHighSpeed.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinJudgeHighSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 276</value>
+    <value>763, 276</value>
   </data>
   <data name="SpinJudgeHighSpeed.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2280,13 +2322,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinJudgeHighSpeed.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>42</value>
   </data>
   <data name="SpinTestSurface.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinTestSurface.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 206</value>
+    <value>657, 206</value>
   </data>
   <data name="SpinTestSurface.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2307,13 +2349,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinTestSurface.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>43</value>
   </data>
   <data name="SpinJudgeTrans.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinJudgeTrans.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 161</value>
+    <value>763, 161</value>
   </data>
   <data name="SpinJudgeTrans.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2334,40 +2376,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SpinJudgeTrans.ZOrder" xml:space="preserve">
-    <value>43</value>
-  </data>
-  <data name="SpinTestTrans.EditValue" type="System.Decimal, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="SpinTestTrans.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 161</value>
-  </data>
-  <data name="SpinTestTrans.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SpinTestTrans.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 45</value>
-  </data>
-  <data name="SpinTestTrans.TabIndex" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <data name="&gt;&gt;SpinTestTrans.Name" xml:space="preserve">
-    <value>SpinTestTrans</value>
-  </data>
-  <data name="&gt;&gt;SpinTestTrans.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;SpinTestTrans.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;SpinTestTrans.ZOrder" xml:space="preserve">
     <value>44</value>
   </data>
   <data name="SpinJudgeDiffrence.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="SpinJudgeDiffrence.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 124</value>
+    <value>763, 124</value>
   </data>
   <data name="SpinJudgeDiffrence.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2394,7 +2409,7 @@
     <value>0</value>
   </data>
   <data name="SpinJudgePrism.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 99</value>
+    <value>763, 99</value>
   </data>
   <data name="SpinJudgePrism.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2421,7 +2436,7 @@
     <value>0</value>
   </data>
   <data name="SpinJudgeAst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 74</value>
+    <value>763, 74</value>
   </data>
   <data name="SpinJudgeAst.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2448,7 +2463,7 @@
     <value>0</value>
   </data>
   <data name="SpinJudgeSp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 49</value>
+    <value>763, 49</value>
   </data>
   <data name="SpinJudgeSp.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2475,7 +2490,7 @@
     <value>0</value>
   </data>
   <data name="SpinJudgeConstruction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 24</value>
+    <value>763, 24</value>
   </data>
   <data name="SpinJudgeConstruction.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2502,7 +2517,7 @@
     <value>0</value>
   </data>
   <data name="SpinTestDiffrence.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 124</value>
+    <value>657, 124</value>
   </data>
   <data name="SpinTestDiffrence.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2529,7 +2544,7 @@
     <value>0</value>
   </data>
   <data name="SpinTestAst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 74</value>
+    <value>657, 74</value>
   </data>
   <data name="SpinTestAst.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2556,7 +2571,7 @@
     <value>0</value>
   </data>
   <data name="SpinTestPrism.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 101</value>
+    <value>657, 101</value>
   </data>
   <data name="SpinTestPrism.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2586,7 +2601,7 @@
     <value>166, 425</value>
   </data>
   <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 23</value>
+    <value>497, 23</value>
   </data>
   <data name="label42.TabIndex" type="System.Int32, mscorlib">
     <value>120</value>
@@ -2640,7 +2655,7 @@
     <value>0</value>
   </data>
   <data name="SpinTestSp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 49</value>
+    <value>657, 49</value>
   </data>
   <data name="SpinTestSp.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2694,7 +2709,7 @@
     <value>0</value>
   </data>
   <data name="SpinTestConstruction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 24</value>
+    <value>657, 24</value>
   </data>
   <data name="SpinTestConstruction.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2724,7 +2739,7 @@
     <value>166, 400</value>
   </data>
   <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 25</value>
+    <value>497, 25</value>
   </data>
   <data name="label39.TabIndex" type="System.Int32, mscorlib">
     <value>121</value>
@@ -2862,7 +2877,7 @@
     <value>168, 303</value>
   </data>
   <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 38</value>
+    <value>379, 38</value>
   </data>
   <data name="label33.TabIndex" type="System.Int32, mscorlib">
     <value>112</value>
@@ -2916,7 +2931,7 @@
     <value>166, 341</value>
   </data>
   <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 59</value>
+    <value>497, 59</value>
   </data>
   <data name="label36.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
@@ -2973,7 +2988,7 @@
     <value>166, 241</value>
   </data>
   <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 35</value>
+    <value>497, 35</value>
   </data>
   <data name="label30.TabIndex" type="System.Int32, mscorlib">
     <value>116</value>
@@ -3056,7 +3071,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>166, 206</value>
   </data>
   <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 35</value>
+    <value>497, 35</value>
   </data>
   <data name="label27.TabIndex" type="System.Int32, mscorlib">
     <value>134</value>
@@ -3248,7 +3263,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>166, 99</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 25</value>
+    <value>497, 25</value>
   </data>
   <data name="label18.TabIndex" type="System.Int32, mscorlib">
     <value>128</value>
@@ -3305,7 +3320,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>166, 124</value>
   </data>
   <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 37</value>
+    <value>497, 37</value>
   </data>
   <data name="label21.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
@@ -3359,7 +3374,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>166, 74</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 25</value>
+    <value>497, 25</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>139</value>
@@ -3443,7 +3458,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>166, 49</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 25</value>
+    <value>497, 25</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>129</value>
@@ -3527,7 +3542,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>166, 24</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 25</value>
+    <value>497, 25</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>
@@ -3608,7 +3623,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>456, 0</value>
+    <value>655, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>409, 24</value>
@@ -3644,7 +3659,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>0, 0, 0, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 24</value>
+    <value>488, 24</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
@@ -3671,7 +3686,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>12, 210</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>865, 452</value>
+    <value>1067, 452</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -3688,6 +3703,18 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>客戶訂單</value>
+  </data>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>打印ALAN</value>
+  </data>
+  <data name="barButtonItem4.Caption" xml:space="preserve">
+    <value>打印PPE</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3698,7 +3725,7 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
     <value>8, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>889, 662</value>
+    <value>1096, 662</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 5, 3, 5</value>
@@ -3706,11 +3733,35 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
   <data name="$this.Text" xml:space="preserve">
     <value>CEEN外销报告</value>
   </data>
+  <data name="&gt;&gt;barManager1.Name" xml:space="preserve">
+    <value>barManager1</value>
+  </data>
+  <data name="&gt;&gt;barManager1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;imageCollection1.Name" xml:space="preserve">
     <value>imageCollection1</value>
   </data>
   <data name="&gt;&gt;imageCollection1.Type" xml:space="preserve">
     <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItemFirst.Name" xml:space="preserve">
+    <value>barButtonItemFirst</value>
+  </data>
+  <data name="&gt;&gt;barButtonItemFirst.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItemPrint.Name" xml:space="preserve">
+    <value>barButtonItemPrint</value>
+  </data>
+  <data name="&gt;&gt;barButtonItemPrint.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
+    <value>bar1</value>
+  </data>
+  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Bar, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;bindingSourceUnit.Name" xml:space="preserve">
     <value>bindingSourceUnit</value>
@@ -3910,6 +3961,12 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
   <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;BarBtnCutomerOrder.Name" xml:space="preserve">
     <value>BarBtnCutomerOrder</value>
   </data>
@@ -3940,11 +3997,53 @@ strikes the ocular within a 5nn radius from the center of the support tube</valu
   <data name="&gt;&gt;emptySpaceItem15.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
-    <value>layoutControlItem9</value>
+  <data name="&gt;&gt;barButtonItem1.Name" xml:space="preserve">
+    <value>barButtonItem1</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem2.Name" xml:space="preserve">
+    <value>barButtonItem2</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem3.Name" xml:space="preserve">
+    <value>barButtonItem3</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem4.Name" xml:space="preserve">
+    <value>barButtonItem4</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem5.Name" xml:space="preserve">
+    <value>barButtonItem5</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem6.Name" xml:space="preserve">
+    <value>barButtonItem6</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem6.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem7.Name" xml:space="preserve">
+    <value>barButtonItem7</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem8.Name" xml:space="preserve">
+    <value>barButtonItem8</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CEENEditsForm</value>

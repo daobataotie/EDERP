@@ -36,8 +36,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.lbl_Signature = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
@@ -172,6 +170,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbOrderNo = new DevExpress.XtraReports.UI.XRLabel();
             this.LbBuyer = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.lbl_Signature = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -224,6 +224,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CheckPriHOut,
+            this.CheckPriHIn,
+            this.CheckPriVDwn,
+            this.CheckPriVUp,
             this.xrLabel11,
             this.xrLabel10,
             this.xrLabel9,
@@ -288,13 +292,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.CheckMdeium,
             this.CheckScatter,
             this.LbRefractive,
-            this.CheckPriVDwn,
             this.xrLabel35,
-            this.CheckPriHOut,
             this.lb,
-            this.CheckPriVUp,
             this.xrLabel33,
-            this.CheckPriHIn,
             this.xrLabel32,
             this.CheckThermal,
             this.CheckVisual,
@@ -310,19 +310,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbl_Signature});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
-            // 
-            // xrPictureBox1
-            // 
-            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            // 
-            // lbl_Signature
-            // 
-            resources.ApplyResources(this.lbl_Signature, "lbl_Signature");
-            this.lbl_Signature.Name = "lbl_Signature";
-            this.lbl_Signature.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_Signature.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel11
             // 
@@ -1553,6 +1540,19 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbBuyer.StylePriority.UseBorders = false;
             this.LbBuyer.StylePriority.UseFont = false;
             this.LbBuyer.StylePriority.UseTextAlignment = false;
+            // 
+            // xrPictureBox1
+            // 
+            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            // 
+            // lbl_Signature
+            // 
+            resources.ApplyResources(this.lbl_Signature, "lbl_Signature");
+            this.lbl_Signature.Name = "lbl_Signature";
+            this.lbl_Signature.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Signature.StylePriority.UseTextAlignment = false;
             // 
             // PageFooter
             // 
