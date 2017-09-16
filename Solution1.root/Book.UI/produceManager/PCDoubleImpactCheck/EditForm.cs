@@ -265,7 +265,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this._pcdic.PCDoubleImpactCheckDate = this.DE_PCDoubleImpactCheckDate.DateTime;
             this._pcdic.PCDoubleImpactCheckDesc = this.txtPCDoubleImpactCheckDesc.Text;
             this._pcdic.InvoiceCusXOId = this.txtInvoiceCusXOId.Text;
-            this._pcdic.PronoteHeaderId = this.txtPronoteHeaderId.Text; 
+            this._pcdic.PronoteHeaderId = this.txtPronoteHeaderId.Text;
             this._pcdic.PCDoubleImpactCheckType = this.pcType;
             this._pcdic.PowerImpact = this.coBoxCJLD.Text;
             this._pcdic.JiaReWenDu = this.comBox_ChongJICeShiJiaRe.Text;
@@ -506,7 +506,13 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
                     this._pcdic.ProductId = this._pcdic.Product.ProductId;
                     this._pcdic.CheckStandard = currentModel.CustomerCheckStandard;
                     this._pcdic.InvoiceXOQuantity = currentModel.InvoiceXODetailQuantity;
-                    this._pcdic.PCDoubleImpactCheckCount = Convert.ToInt16(Math.Ceiling(Convert.ToDouble(currentModel.InvoiceXODetailQuantity) / 500));
+                    //this._pcdic.PCDoubleImpactCheckCount = Convert.ToInt16(Math.Ceiling(Convert.ToDouble(currentModel.InvoiceXODetailQuantity) / 500));
+                    if (pcType == 0)
+                        this._pcdic.PCDoubleImpactCheckCount = Common.AutoCalculation.Calculation("csa", Convert.ToInt32(currentModel.InvoiceXODetailQuantity));
+                    else if (pcType == 1)
+                        this._pcdic.PCDoubleImpactCheckCount = Common.AutoCalculation.Calculation("en", Convert.ToInt32(currentModel.InvoiceXODetailQuantity));
+                    else if (pcType == 2)
+                        this._pcdic.PCDoubleImpactCheckCount = Common.AutoCalculation.Calculation("as", Convert.ToInt32(currentModel.InvoiceXODetailQuantity));
 
                     this._pcdic.ProductUnitId = this._pcdic.Product.QualityTestUnitId;
                     this._pcdic.ProductUnit = this._pcdic.Product.QualityTestUnit;

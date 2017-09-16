@@ -81,7 +81,7 @@ namespace Book.UI.Hr.Attendance.Atten
                 return;
             }
             //this.bindingSource_atten.DataSource = _hrManager.SelectDailyInfoByEmployee(this.lookUpEmployeeId.EditValue.ToString(), new DateTime(Convert.ToInt32(this.cmbDutyDate.SelectedText.Substring(0, 4)), Convert.ToInt32(this.cmbDutyDate.SelectedText.Substring(5)), 1), "1").Tables[0];
-            this.bindingSource_atten.DataSource = _hrManager.SelectDailyInfoByEmployeeForDoubleDate((this.nccEmployee.EditValue as Model.Employee).EmployeeId, this.StartcmbDutyDate.DateTime, this.EndcmbDutyDate.DateTime, "1").Tables[0];
+            this.bindingSource_atten.DataSource = _hrManager.SelectDailyInfoByEmployeeForDoubleDate((this.nccEmployee.EditValue as Model.Employee).EmployeeId, this.StartcmbDutyDate.DateTime, this.EndcmbDutyDate.DateTime).Tables[0];
         }
 
         private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -217,7 +217,7 @@ namespace Book.UI.Hr.Attendance.Atten
             //    this._hrManager.DeleteForChangeLeaveDateEmpHrDay(emp);
             //}
 
-            this.bindingSource_atten.DataSource = _hrManager.SelectDailyInfoByEmployeeForDoubleDate(SelectItems.First<Model.Employee>().EmployeeId, this.StartcmbDutyDate.DateTime.Date, this.EndcmbDutyDate.DateTime.Date, "1").Tables[0];
+            this.bindingSource_atten.DataSource = _hrManager.SelectDailyInfoByEmployeeForDoubleDate(SelectItems.First<Model.Employee>().EmployeeId, this.StartcmbDutyDate.DateTime.Date, this.EndcmbDutyDate.DateTime.Date).Tables[0];
             this.nccEmployee.EditValue = SelectItems.First<Model.Employee>();
             MessageBox.Show("重新考勤成功", "錯誤提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

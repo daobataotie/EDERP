@@ -376,7 +376,7 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
             if (pronoForm.ShowDialog(this) == DialogResult.OK)
             {
                 Model.PronoteHeader currentModel = pronoForm.SelectItem;
-               
+
                 if (currentModel != null)
                 {
                     this._ansipcic.Invoice = currentModel.InvoiceXO;
@@ -387,11 +387,12 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
                     this._ansipcic.ProductId = this._ansipcic.Product.ProductId;
                     this._ansipcic.CheckStandard = currentModel.CustomerCheckStandard;
                     this._ansipcic.InvoiceXOQuantity = currentModel.InvoiceXODetailQuantity;
-                    this._ansipcic.ANSIPCImpactCheckCount = Convert.ToInt16(Math.Ceiling(Convert.ToDouble(currentModel.InvoiceXODetailQuantity) / 500));
+                    //this._ansipcic.ANSIPCImpactCheckCount = Convert.ToInt16(Math.Ceiling(Convert.ToDouble(currentModel.InvoiceXODetailQuantity) / 500));
+                    this._ansipcic.ANSIPCImpactCheckCount = Common.AutoCalculation.Calculation(this.ForANSIOrJIS, Convert.ToInt32(currentModel.InvoiceXODetailQuantity));
 
                     this._ansipcic.UnitId = this._ansipcic.Product.QualityTestUnitId;
                     this._ansipcic.Unit = this._ansipcic.Product.QualityTestUnit;
-                    
+
 
                     if (!string.IsNullOrEmpty(this._ansipcic.CheckStandard))
                     {

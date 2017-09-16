@@ -159,7 +159,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             if (this._PCExportReportANSI.Employee != null)
             {
                 this._PCExportReportANSI.EmployeeId = this._PCExportReportANSI.Employee.EmployeeId;
-            } 
+            }
             this._PCExportReportANSI.Employee2 = (this.NccTestPerson2.EditValue as Model.Employee);
             if (this._PCExportReportANSI.Employee2 != null)
             {
@@ -393,15 +393,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 #region 测试数量、合格数量
 
                 //受测数量默认为订单数量的1/500,无条件进位，最大为12
-                int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
-                double MustCheck = 0;
+                //int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
+                //double MustCheck = 0;
 
-                if (Orderamount < 500)
-                    MustCheck = 1;
-                else
-                    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
+                //if (Orderamount < 500)
+                //    MustCheck = 1;
+                //else
+                //    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
 
-                this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+                //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+                this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("ansi", Convert.ToInt32(this._PCExportReportANSI.Amount));
 
                 this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.PanDing7 = this._PCExportReportANSI.PanDing8 = this._PCExportReportANSI.PanDing9 = this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.PanDingShu12 = this._PCExportReportANSI.PanDingShu13 = this._PCExportReportANSI.PanDingShu15 = this._PCExportReportANSI.PanDingShu16 = this._PCExportReportANSI.PanDingShu17 = this._PCExportReportANSI.PanDingShu18 = this._PCExportReportANSI.AmountTest;
 

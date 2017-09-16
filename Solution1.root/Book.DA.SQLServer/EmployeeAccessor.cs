@@ -259,6 +259,11 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.Employee>("Employee.SelectUseERPer", null);
         }
 
+        public IList<Model.Employee> SelectAllEmployee()
+        {
+            return sqlmapper.QueryForList<Model.Employee>("Employee.select_AllEmployee", null);
+        }
+
         #region 分类构建
         public Book.Model.Employee mGetFirst()
         {

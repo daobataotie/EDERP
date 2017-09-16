@@ -898,11 +898,11 @@
       <DependentUpon>AnormalySalaryCrystal.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Hr\Attendance\Atten\AttenForm.cs">
+    <Compile Include="Hr\Attendance\Atten\HistoryAttenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hr\Attendance\Atten\AttenForm.Designer.cs">
-      <DependentUpon>AttenForm.cs</DependentUpon>
+    <Compile Include="Hr\Attendance\Atten\HistoryAttenForm.Designer.cs">
+      <DependentUpon>HistoryAttenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Hr\Attendance\Atten\AttenreporCrystal.cs">
       <AutoGen>True</AutoGen>
@@ -4293,6 +4293,14 @@
       <DependentUpon>ChooseDepartments.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Attendance\Atten\AttenForm.resx">
+      <DependentUpon>AttenForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Attendance\Atten\AttenForm.zh-CHT.resx">
+      <DependentUpon>AttenForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hr\Attendance\Leave\AllLeaveList.resx">
       <DependentUpon>AllLeaveList.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -5558,12 +5566,12 @@
       <DependentUpon>AnormalySalaryForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hr\Attendance\Atten\AttenForm.resx">
-      <DependentUpon>AttenForm.cs</DependentUpon>
+    <EmbeddedResource Include="Hr\Attendance\Atten\HistoryAttenForm.resx">
+      <DependentUpon>HistoryAttenForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hr\Attendance\Atten\AttenForm.zh-CHT.resx">
-      <DependentUpon>AttenForm.cs</DependentUpon>
+    <EmbeddedResource Include="Hr\Attendance\Atten\HistoryAttenForm.zh-CHT.resx">
+      <DependentUpon>HistoryAttenForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Hr\Attendance\Atten\AttenreporCrystal.rpt">
@@ -11558,6 +11566,12 @@
     </Compile>
     <Compile Include="Hr\Attendance\AnnualHoliday\ChooseDepartments.Designer.cs">
       <DependentUpon>ChooseDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Attendance\Atten\AttenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Attendance\Atten\AttenForm.Designer.cs">
+      <DependentUpon>AttenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Hr\Attendance\Leave\AllLeaveList.cs">
       <SubType>Form</SubType>

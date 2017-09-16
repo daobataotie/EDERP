@@ -298,7 +298,8 @@ namespace Book.UI.produceManager.PCFinishCheck
                     this._PCFC.ProductId = this._PCFC.Product.ProductId;
                     this._PCFC.CustomerProductName = currentModel.CustomerProductName;      //客户型号
                     this._PCFC.PCFinishCheckInCoiunt = currentModel.InvoiceXODetailQuantity;
-                    this._PCFC.PCFinishCheckCount = Math.Ceiling(Convert.ToDouble(this._PCFC.PCFinishCheckInCoiunt) / 500);
+                    //this._PCFC.PCFinishCheckCount = Math.Ceiling(Convert.ToDouble(this._PCFC.PCFinishCheckInCoiunt) / 500);
+                    this._PCFC.PCFinishCheckCount = Common.AutoCalculation.Calculation(currentModel.CustomerCheckStandard, Convert.ToInt32(this._PCFC.PCFinishCheckInCoiunt));
 
                     this._PCFC.ProductUnit = this._PCFC.Product.QualityTestUnit;
                     this._PCFC.ProductUnitId = this._PCFC.Product.QualityTestUnitId;

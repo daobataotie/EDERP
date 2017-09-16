@@ -439,22 +439,17 @@ namespace Book.DA.SQLServer
         /// <param name="EndDate"></param>
         /// <param name="state"></param>
         /// <returns></returns>
-        public DataSet SelectDailyInfoByEmployeeForDoubleDate(string employeeId, DateTime StartDate, DateTime EndDate, string state)
+        public DataSet SelectDailyInfoByEmployeeForDoubleDate(string employeeId, DateTime StartDate, DateTime EndDate)
         {
             try
             {
-                int Syear = StartDate.Year;
-                int Smonth = StartDate.Month;
-                int Eyear = EndDate.Year;
-                int Emonth = EndDate.Month;
                 SqlConnection con = new SqlConnection(sqlmapper.DataSource.ConnectionString);
                 StringBuilder sqlBuilder = new StringBuilder();
-                sqlBuilder.Append("select HrDailyEmployeeAttendInfoId,DutyDate,ShouldCheckIn,ShouldCheckOut,a.EmployeeId,ActualCheckIn,ActualCheckOut, LateInMinute,DayFactor,SpecialBonus,MonthFactor,Note ,(select top 1 ActualcheckIn from HrDailyEmployeeAttendInfo where DutyDate=a.DutyDate and ShouldCheckIn is null and IsNormal=1  order by DutyDate) as SecondCheckIn,(select top 1 ActualcheckOut from HrDailyEmployeeAttendInfo where DutyDate=a.DutyDate and ShouldCheckIn is null and IsNormal=1  order by DutyDate)  as SecondCheckOut,(select SUM(Eovertime) from OverTime where  datediff(d,DueDate,DutyDate)=0 and EmployeeId=a.EmployeeId) as EoverTime   from HrDailyEmployeeAttendInfo  as a   where  1=1");
+                sqlBuilder.Append("select HrDailyEmployeeAttendInfoId,DutyDate,ShouldCheckIn,ShouldCheckOut,a.EmployeeId,ActualCheckIn,ActualCheckOut, LateInMinute,DayFactor,SpecialBonus,MonthFactor,Note ,(select top 1 ActualcheckIn from HrDailyEmployeeAttendInfo where DutyDate=a.DutyDate and ShouldCheckIn is null and IsNormal=1  order by DutyDate) as SecondCheckIn,(select top 1 ActualcheckOut from HrDailyEmployeeAttendInfo where DutyDate=a.DutyDate and ShouldCheckIn is null and IsNormal=1  order by DutyDate)  as SecondCheckOut,(select SUM(Eovertime) from OverTime where  datediff(d,DueDate,DutyDate)=0 and EmployeeId=a.EmployeeId) as EoverTime   from HrDailyEmployeeAttendInfo  as a where  1=1");
                 if (!string.IsNullOrEmpty(employeeId))
                     sqlBuilder.Append(" and a.employeeid='" + employeeId + "'");
                 if (StartDate != null && EndDate != null)
-                    //sqlBuilder.Append(" and   year(DutyDate)=" + Syear + " and month(DutyDate)=" + Smonth + "");
-                    sqlBuilder.Append(" and DutyDate BETWEEN '" + StartDate.ToShortDateString() + "' AND '" + EndDate.ToShortDateString() + "'");
+                    sqlBuilder.Append(" and DutyDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.ToString("yyyy-MM-dd HH:mm:ss") + "'");
                 sqlBuilder.Append(" order by DutyDate");
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlBuilder.ToString(), con);
                 DataSet data = new DataSet();
@@ -570,8 +565,8 @@ namespace Book.DA.SQLServer
         }
 
         public Model.HrDailyEmployeeAttendInfo SelectByDateAndEmp(string empId, DateTime date)
-        { 
-            Hashtable ht=new Hashtable();
+        {
+            Hashtable ht = new Hashtable();
             ht.Add("empid", empId);
             ht.Add("date", date.ToString("yyyy-MM-dd"));
             return sqlmapper.QueryForObject<Model.HrDailyEmployeeAttendInfo>("HrDailyEmployeeAttendInfo.SelectByDateAndEmp", ht);

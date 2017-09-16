@@ -753,6 +753,9 @@ namespace Book.UI
 
             //會計年度薪資表
             operations.Add("Hr.Salary.Salaryset.AnnualSalaryForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Salary.Salaryset.AnnualSalaryForm", form); });
+
+           //歷史出勤記錄
+            operations.Add("Hr.Attendance.Atten.HistoryAttenForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Attendance.Atten.HistoryAttenForm", form); });
         }
 
         static Form CreateForm(string formTypeName)

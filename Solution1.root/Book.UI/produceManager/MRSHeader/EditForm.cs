@@ -895,7 +895,7 @@ namespace Book.UI.produceManager.MRSHeader
                         {
                             pronoteHeader.InvoiceXOId = invoicexo.InvoiceId;
                             pronoteHeader.InvoiceCusId = invoicexo.CustomerInvoiceXOId;
-                            pronoteHeader.InvoiceXODetailQuantity = _mrsdetail.MRSdetailsQuantity;
+                            pronoteHeader.InvoiceXODetailQuantity = _mrsdetail.MRSdetailsQuantity == 0 ? _mrsdetail.MRSdetailssum : _mrsdetail.MRSdetailsQuantity;   //如果计划数量为0，说明是手动添加的，加工单的订单数量就带需求数量
                             //foreach (Model.InvoiceXODetail detail in xodetailManager.Select(invoicexo, false))
                             //{
                             //    if (detail.ProductId == _mrsdetail.MadeProductId)

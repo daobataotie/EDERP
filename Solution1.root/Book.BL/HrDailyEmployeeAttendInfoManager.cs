@@ -63,9 +63,9 @@ namespace Book.BL
             return accessor.SelectDailyInfoByEmployee(employeeId, dutyDate, state);
         }
 
-        public System.Data.DataSet SelectDailyInfoByEmployeeForDoubleDate(string employeeId, DateTime StartDate, DateTime EndDate, string state)
+        public System.Data.DataSet SelectDailyInfoByEmployeeForDoubleDate(string employeeId, DateTime StartDate, DateTime EndDate)
         {
-            return accessor.SelectDailyInfoByEmployeeForDoubleDate(employeeId, StartDate, EndDate, state);
+            return accessor.SelectDailyInfoByEmployeeForDoubleDate(employeeId, StartDate, EndDate);
         }
 
         //public System.Data.DataSet SelectLateInMinute(string employeeId, DateTime dutyDate)

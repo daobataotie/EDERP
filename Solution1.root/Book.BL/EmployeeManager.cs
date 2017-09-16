@@ -462,6 +462,11 @@ namespace Book.BL
             return SortAToOIToZ(accessor.SelectUseERPer());
         }
 
+        public IList<Model.Employee> SelectAllEmployee()
+        {
+            return accessor.SelectAllEmployee();
+        }
+
         /// <summary>
         /// 员工排序按照A-H,O,I-Z
         /// </summary>

@@ -18,7 +18,7 @@ namespace Book.DA
     public partial interface IHrDailyEmployeeAttendInfoAccessor : IAccessor
     {
         System.Data.DataSet SelectDailyInfoByEmployee(string employeeId, DateTime dutyDate, string state);
-        System.Data.DataSet SelectDailyInfoByEmployeeForDoubleDate(string employeeId, DateTime StartDate, DateTime EndDate, string state);
+        System.Data.DataSet SelectDailyInfoByEmployeeForDoubleDate(string employeeId, DateTime StartDate, DateTime EndDate);
         //System.Data.DataSet SelectLateInMinute(string hrId,DateTime dutyDate);
         //void UpdateActualCheckIn(string hrId);
         System.Data.DataSet SelectLateInfo(string EmployeeId, DateTime ClockDate);

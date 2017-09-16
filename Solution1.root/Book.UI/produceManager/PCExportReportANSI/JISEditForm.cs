@@ -377,15 +377,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 #region 测试数量、合格数量
 
                 //受测数量默认为订单数量的1/500,无条件进位，最大为12
-                int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
-                double MustCheck = 0;
+                //int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
+                //double MustCheck = 0;
 
-                if (Orderamount < 500)
-                    MustCheck = 1;
-                else
-                    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
+                //if (Orderamount < 500)
+                //    MustCheck = 1;
+                //else
+                //    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
 
-                this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+                //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+                this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("jis", Convert.ToInt32(this._PCExportReportANSI.Amount));
 
                 this._PCExportReportANSI.ShouCeShu1 = this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.ShouCeShu7 = this._PCExportReportANSI.ShouCeShu8 = this._PCExportReportANSI.ShouCeShu9 = this._PCExportReportANSI.ShouCeShu10 = this._PCExportReportANSI.ShouCeShu11 = this._PCExportReportANSI.ShouCeShu12 = this._PCExportReportANSI.ShouCeShu13 = this._PCExportReportANSI.ShouCeShu14 = this._PCExportReportANSI.ShouCeShu15 = this._PCExportReportANSI.ShouCeShu16 = this._PCExportReportANSI.ShouCeShu17 = this._PCExportReportANSI.ShouCeShu18 = this._PCExportReportANSI.ShouCeShu19 = this._PCExportReportANSI.ShouCeShu20 = this._PCExportReportANSI.ShouCeShu21 = this._PCExportReportANSI.AmountTest;
 

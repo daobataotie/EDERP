@@ -387,15 +387,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 #region 测试数量、合格数量
 
                 //受测数量默认为订单数量的1/500,无条件进位，最大为12
-                int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
-                double MustCheck = 0;
+                //int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
+                //double MustCheck = 0;
 
-                if (Orderamount < 500)
-                    MustCheck = 1;
-                else
-                    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
+                //if (Orderamount < 500)
+                //    MustCheck = 1;
+                //else
+                //    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
 
-                this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+                //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+                this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("en", Convert.ToInt32(this._PCExportReportANSI.Amount));
 
                 //this._PCExportReportANSI.ShouCeShu1 =  
                 this._PCExportReportANSI.ShouCeShu1 = this._PCExportReportANSI.PanDing1 = 100;

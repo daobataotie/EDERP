@@ -82,6 +82,8 @@ namespace Book.DA
 
         IList<Model.Employee> SelectUseERPer();
 
+        IList<Model.Employee> SelectAllEmployee();
+
         IList<Model.Employee> SelectOnActiveAtoH();
 
         IList<Model.Employee> SelectOnActiveO();
@@ -95,6 +97,7 @@ namespace Book.DA
         IList<Model.Employee> SelectHrDailyAttendI(DateTime date);
 
         IList<Model.Employee> SelectHrDailyAttendByMonth(DateTime date);
+
     }
 }
 

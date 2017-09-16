@@ -423,16 +423,17 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 #region 测试数量与合格数量
 
                 //受测数量默认为订单数量的1/500,无条件进位.最大12
-                int mInvoiceXoDetailQuantity = int.Parse(this._pcExpANSI.Amount.HasValue ? this._pcExpANSI.Amount.ToString() : "0");
+                //int mInvoiceXoDetailQuantity = int.Parse(this._pcExpANSI.Amount.HasValue ? this._pcExpANSI.Amount.ToString() : "0");
 
-                double mMustCheck = 0;
+                //double mMustCheck = 0;
 
-                if (mInvoiceXoDetailQuantity < 500)
-                    mMustCheck = 1;
-                else
-                    mMustCheck = mInvoiceXoDetailQuantity % 500 == 0 ? mInvoiceXoDetailQuantity / 500 : mInvoiceXoDetailQuantity / 500 + 1;
+                //if (mInvoiceXoDetailQuantity < 500)
+                //    mMustCheck = 1;
+                //else
+                //    mMustCheck = mInvoiceXoDetailQuantity % 500 == 0 ? mInvoiceXoDetailQuantity / 500 : mInvoiceXoDetailQuantity / 500 + 1;
 
-                this._pcExpANSI.AmountTest = mMustCheck > 12 ? 12 : mMustCheck;    //受测数量1/500订单数量,上限12个,无条件进位
+                //this._pcExpANSI.AmountTest = mMustCheck > 12 ? 12 : mMustCheck;    //受测数量1/500订单数量,上限12个,无条件进位
+                this._pcExpANSI.AmountTest = Common.AutoCalculation.Calculation("ansi", Convert.ToInt32(this._pcExpANSI.Amount));
 
                 this._pcExpANSI.ShouCeShu1 = this._pcExpANSI.ShouCeShu2 = this._pcExpANSI.ShouCeShu3 = this._pcExpANSI.ShouCeShu4 = this._pcExpANSI.ShouCeShu5 = this._pcExpANSI.ShouCeShu6 = this._pcExpANSI.ShouCeShu7 = this._pcExpANSI.ShouCeShu8 = this._pcExpANSI.ShouCeShu9 = this._pcExpANSI.ShouCeShu10 = this._pcExpANSI.ShouCeShu11 = this._pcExpANSI.AmountTest;
 

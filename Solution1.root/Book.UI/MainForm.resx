@@ -1002,6 +1002,9 @@
   <data name="barButtonItem326.Caption" xml:space="preserve">
     <value>重新考勤</value>
   </data>
+  <data name="barButtonItem491.Caption" xml:space="preserve">
+    <value>歷史出勤記錄</value>
+  </data>
   <data name="barSubItem68.Caption" xml:space="preserve">
     <value>薪资管理</value>
   </data>
@@ -3523,6 +3526,12 @@
   <data name="&gt;&gt;barButtonItem480.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barButtonItem488.Name" xml:space="preserve">
+    <value>barButtonItem488</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem488.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;barSubItem59.Name" xml:space="preserve">
     <value>barSubItem59</value>
   </data>
@@ -5383,10 +5392,22 @@
   <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barButtonItem488.Name" xml:space="preserve">
-    <value>barButtonItem488</value>
+  <data name="&gt;&gt;barButtonItem489.Name" xml:space="preserve">
+    <value>barButtonItem489</value>
   </data>
-  <data name="&gt;&gt;barButtonItem488.Type" xml:space="preserve">
+  <data name="&gt;&gt;barButtonItem489.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem490.Name" xml:space="preserve">
+    <value>barButtonItem490</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem490.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem491.Name" xml:space="preserve">
+    <value>barButtonItem491</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem491.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
@@ -5703,6 +5724,12 @@
   </data>
   <data name="barButtonItem459.Caption" xml:space="preserve">
     <value>通关手册</value>
+  </data>
+  <data name="barButtonItem489.Caption" xml:space="preserve">
+    <value>歷史出勤記錄</value>
+  </data>
+  <data name="barButtonItem490.Caption" xml:space="preserve">
+    <value>歷史出勤記錄</value>
   </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>169, 18</value>

@@ -26,7 +26,7 @@
       <result property="Department" column="DepartmentId" lazyLoad="false" select="Department.select_by_primary_key" />
     </resultMap>
   </resultMaps>
-    
+
   <statements>
     <select id="select_SimpleEmployee" resultMap="EmployeeResultSimple" parameterClass="Employee">
       SELECT
@@ -411,6 +411,26 @@
         substring(idno,4,len(idno)) else left(idno,1)+convert(varchar(10),1911+
         convert(int,'1'+substring(idno,2,2)))+substring(idno,4,len(idno)) end ) else idno end) 
 			]]>
+    </select>
+
+    <select id="select_AllEmployee" resultMap="EmployeeResultSimple" parameterClass="Employee">
+     <![CDATA[
+      SELECT
+      [EmployeeId],
+      [IDNo],
+      [EmployeeName],
+      [DepartmentId],
+      [BusinessHoursId],
+      [EmployeeJoinDate],
+      [EmployeeLeaveDate]
+      FROM
+      [dbo].[Employee]
+      ORDER BY (case when left(idno,1) like '[A-Za-z]'
+      then (case when convert(int,substring(idno,2,2)) between 30 and 99
+      then left(idno,1)+cast(1911+convert(int,substring(idno,2,2)) as varchar(10))+
+      substring(idno,4,len(idno)) else left(idno,1)+convert(varchar(10),1911+
+      convert(int,'1'+substring(idno,2,2)))+substring(idno,4,len(idno)) end ) else idno end)
+      ]]>
     </select>
   </statements>
 </sqlMap>
