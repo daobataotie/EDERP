@@ -98,6 +98,24 @@ namespace Book.UI.Hr.Attendance.Atten
             else
                 this.bindingSourceEmployee.DataSource = lstAllEmp.Where(E => E.EmployeeLeaveDate == null);
         }
+
+        private void btn_ExportExcel_Click(object sender, EventArgs e)
+        {
+            //if ((gridControl1.DataSource as DataTable) == null)
+            //{
+            //    MessageBox.Show("無數據，請先查詢","提示",MessageBoxButtons.OK);
+            //    return;
+            //}
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+           
+            saveFileDialog1.Filter = "Excel file|*.xls";
+            if (saveFileDialog1.ShowDialog(this) != DialogResult.OK)
+                return;
+
+            string file = saveFileDialog1.FileName;
+            this.gridControl1.ExportToXls(file);
+        }
     }
 }
 
