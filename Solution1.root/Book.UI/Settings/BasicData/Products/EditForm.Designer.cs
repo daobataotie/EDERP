@@ -5729,7 +5729,7 @@ namespace Book.UI.Settings.BasicData.Products
             // gridColumn52
             // 
             resources.ApplyResources(this.gridColumn52, "gridColumn52");
-            this.gridColumn52.FieldName = "Invoice.InvoiceCustomXOId";
+            this.gridColumn52.FieldName = "CustomerInvoiceXOId";
             this.gridColumn52.Name = "gridColumn52";
             // 
             // repositoryItemRichTextEdit2
