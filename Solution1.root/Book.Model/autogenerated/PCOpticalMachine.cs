@@ -98,6 +98,8 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		private string _rightVerticalJudge;
+
+        private string _condition;
 		
 		/// <summary>
 		/// 
@@ -362,6 +364,12 @@ namespace Book.Model
 				this._rightVerticalJudge = value;
 			}
 		}
+
+        public string Condition
+        {
+            get { return _condition; }
+            set { _condition = value; }
+        }
 	
 		/// <summary>
 		/// 
@@ -462,7 +470,8 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		public readonly static string PRO_RightVerticalJudge = "RightVerticalJudge";
-		
+
+        public readonly static string PRO_Condition = "Condition";
 
 		#endregion
 	}

@@ -22,6 +22,8 @@ namespace Book.Model
 
         public string ProductVersion { get { return this.Product == null ? "" : this.Product.ProductVersion; } }
 
+        public string CustomerName { get { return this.Product == null ? "" : (this.Product.Customer == null ? "" : this.Product.Customer.CustomerShortName); } }
+
         /// <summary>
         /// 对照商品类别{外購,耗用,委外,自製,半成品加工,}
         /// </summary>

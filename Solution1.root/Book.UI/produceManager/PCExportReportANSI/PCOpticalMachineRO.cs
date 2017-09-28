@@ -38,6 +38,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.TCRLevelJudge.Text = PCOpticalMachineList[0].RightLevelJudge;
                 this.TCRVerticalNum.Text = PCOpticalMachineList[0].RightVerticalNum.HasValue ? PCOpticalMachineList[0].RightVerticalNum.Value.ToString("0.00") : "";
                 this.TCRVerticalJudge.Text = PCOpticalMachineList[0].RightVerticalJudge;
+
+                if (!string.IsNullOrEmpty(PCOpticalMachineList[0].Condition))
+                    this.xrLabel4.Text = PCOpticalMachineList[0].Condition;
             }
 
             if (PCOpticalMachineList != null && PCOpticalMachineList.Count > 1 && PCOpticalMachineList[1] != null)
@@ -57,8 +60,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.TCRLevelJudge2.Text = PCOpticalMachineList[1].RightLevelJudge;
                 this.TCRVerticalNum2.Text = PCOpticalMachineList[1].RightVerticalNum.HasValue ? PCOpticalMachineList[1].RightVerticalNum.Value.ToString("0.00") : "";
                 this.TCRVerticalJudge2.Text = PCOpticalMachineList[1].RightVerticalJudge;
-            }
 
+                if (!string.IsNullOrEmpty(PCOpticalMachineList[1].Condition))
+                    this.xrLabel6.Text = PCOpticalMachineList[1].Condition;
+            }
             //this.DataSource = PCOpticalMachineList;
             //this.TCLA.DataBindings.Add("Text", this.DataSource, Model.PCOpticalMachine.PRO_LeftA);
             //this.TCLC.DataBindings.Add("Text", this.DataSource, Model.PCOpticalMachine.PRO_LeftC);

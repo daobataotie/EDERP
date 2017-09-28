@@ -227,6 +227,7 @@
       <result property="OrderOnWayQuantity" column="OrderOnWayQuantity"/>
       <result property="IsProcee" column="IsProcee"/>
       <result property="IsCustomerProduct" column="IsCustomerProduct" />
+      <result property="CustomerId" column="CustomerId" />
       <result property="CustomerProductName" column="CustomerProductName" />
       <result property="CustomerBeforeProductName" column="CustomerBeforeProductName"/>
       <result property="MRSStockQuantity" column="MRSStockQuantity"/>
@@ -246,6 +247,7 @@
       <result property="DepotUnit" column="DepotUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
       <result property="ProduceUnit" column="ProduceUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
       <result property="Supplier" column="SupplierId" lazyLoad="false" select="Supplier.select_by_primary_key" />
+      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
     </resultMap>
     <resultMap id="ProductResultZCMai" class="Product">
       <result property="Id" column="Id" />
@@ -302,6 +304,7 @@
       OrderOnWayQuantity,
       IsProcee,
       IsCustomerProduct,
+      CustomerId,
       CustomerProductName,
       CustomerBeforeProductName,
       MRSStockQuantity,
@@ -422,6 +425,7 @@ where ProductId = #productid#
       OrderOnWayQuantity,
       IsProcee,
       IsCustomerProduct,
+      CustomerId,
       CustomerProductName,
       CustomerBeforeProductName,
       MRSStockQuantity,
@@ -822,6 +826,7 @@ where ProductId = #productid#
       OrderOnWayQuantity,
       IsProcee,
       IsCustomerProduct,
+      CustomerId,
       CustomerProductName,
       CustomerBeforeProductName,
       MRSStockQuantity,

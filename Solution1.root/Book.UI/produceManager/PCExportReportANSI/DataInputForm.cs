@@ -379,6 +379,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                             pCOpticalMachine.RightVerticalNum = Convert.ToDecimal(opticsTest.RupPSM);
                             pCOpticalMachine.RightVerticalJudge = opticsTest.RightVerticalJudge;
 
+                            pCOpticalMachine.Condition = opticsTest.Condition;
+
                             this._PCDataInput.PCOpticalMachineList.Add(pCOpticalMachine);
                             this.gridControl1.RefreshDataSource();
                         }
