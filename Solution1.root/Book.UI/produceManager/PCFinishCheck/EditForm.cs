@@ -85,7 +85,9 @@ namespace Book.UI.produceManager.PCFinishCheck
             }
 
             this.txtPCFinishCheckID.Text = this._PCFC.PCFinishCheckID;
-            this.txtInvoiceCusXOId.Text = this._PCFC.InvoiceCusXOId;
+            //this.txtInvoiceCusXOId.Text = this._PCFC.InvoiceCusXOId;
+            if (this._PCFC.PronoteHeader != null)
+                this.txtInvoiceCusXOId.Text = (this._PCFC.PronoteHeader.InvoiceXO == null ? null : this._PCFC.PronoteHeader.InvoiceXO.CustomerInvoiceXOId);
             this.txtPCFinishCheckDesc.Text = this._PCFC.PCFinishCheckDesc;
             this.DE_JYDRQ.EditValue = this._PCFC.PCFinishCheckDate;
             this.txtProduct.Text = this._PCFC.Product == null ? "" : this._PCFC.Product.ToString();

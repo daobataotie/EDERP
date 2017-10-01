@@ -1,11 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sqlMap namespace="ANSIPCImpactCheck" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
+  <resultMaps>
+    <resultMap id="ANSIPCImpactCheckResult1" class="ANSIPCImpactCheck">
+      <result property="ANSIPCImpactCheckID" column="ANSIPCImpactCheckID" />
+      <result property="EmployeeId" column="EmployeeId" />
+      <result property="ProductId" column="ProductId" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="ANSIPCImpactCheckDate" column="ANSIPCImpactCheckDate" />
+      <result property="InvoiceCusXOId" column="InvoiceCusXOId" />
+      <result property="PronoteHeaderId" column="PronoteHeaderId" />
+      <result property="Spead" column="Spead" />
+      <result property="ANSIPCImpactCheckDesc" column="ANSIPCImpactCheckDesc" />
+      <result property="CheckStandard" column="CheckStandard" />
+      <result property="InvoiceXOQuantity" column="InvoiceXOQuantity" />
+      <result property="PowerImpact" column="PowerImpact" />
+      <result property="ZhuiQiuKG" column="ZhuiQiuKG" />
+      <result property="PrintDesc1" column="PrintDesc1" />
+      <result property="ANSIPCImpactCheckCount" column="ANSIPCImpactCheckCount" />
+      <result property="InvoiceId" column="InvoiceId" />
+      <result property="IsYuanZhuiZhuiLuo" column="IsYuanZhuiZhuiLuo" />
+      <result property="IsGaoSuChongJi" column="IsGaoSuChongJi" />
+      <result property="IsNaiRanXing" column="IsNaiRanXing" />
+      <result property="ForANSIOrJIS" column="ForANSIOrJIS"/>
+      <result property="UnitId" column="UnitId"/>
+      <result property="AuditState" column="AuditState" />
+      <result property="AuditEmpId" column="AuditEmpId" />
+      <result property="CustomerInvoiceXOId" column="CustomerInvoiceXOId" />
+      <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+      <result property="Invoice" column="InvoiceId" lazyLoad="false" select="InvoiceXO.select_SimpleInvoicexo" />
+      <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+      <result property="Unit" column="UnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key"/>
+    </resultMap>
+  </resultMaps>
+  
   <statements>
-    <select id="SelectByDateRange" resultMap="ANSIPCImpactCheckResult" parameterClass="Map">
+    <select id="SelectByDateRange" resultMap="ANSIPCImpactCheckResult1" parameterClass="Map">
       <![CDATA[
-      SELECT * FROM ANSIPCImpactCheck WHERE ANSIPCImpactCheckDate BETWEEN #StartDate# AND #EndDate# $sql$
+      SELECT ac.*,xo.CustomerInvoiceXOId FROM ANSIPCImpactCheck ac left join InvoiceXO xo on xo.InvoiceId = ac.InvoiceId WHERE ANSIPCImpactCheckDate BETWEEN #StartDate# AND #EndDate# $sql$
       ]]>
     </select>
 
