@@ -404,10 +404,26 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
                 this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("ansi", Convert.ToInt32(this._PCExportReportANSI.Amount));
 
-                this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.PanDing7 = this._PCExportReportANSI.PanDing8 = this._PCExportReportANSI.PanDing9 = this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.PanDingShu12 = this._PCExportReportANSI.PanDingShu13 = this._PCExportReportANSI.PanDingShu15 = this._PCExportReportANSI.PanDingShu16 = this._PCExportReportANSI.PanDingShu17 = this._PCExportReportANSI.PanDingShu18 = this._PCExportReportANSI.AmountTest;
+                //this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.PanDing7 = this._PCExportReportANSI.PanDing8 = this._PCExportReportANSI.PanDing9 = this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.PanDingShu12 = this._PCExportReportANSI.PanDingShu13 = this._PCExportReportANSI.PanDingShu15 = this._PCExportReportANSI.PanDingShu16 = 
+                this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDingShu17 = this._PCExportReportANSI.PanDingShu18 = this._PCExportReportANSI.AmountTest;
 
                 this._PCExportReportANSI.QuYangShu1 = this._PCExportReportANSI.QuYangShu14 = this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.PanDingShu14 = 100;
 
+                //2017年9月28日22:58:08  Cindy要求设为固定
+                this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.PanDing2 = 1;
+                this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.PanDing3 = 0;
+                this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.PanDing4 = 2;
+                this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.PanDing5 = 2;
+                this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.PanDing6 = 2;
+                this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.PanDing7 = 2;
+                this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.PanDing8 = 2;
+                this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.PanDing9 = 1;
+                this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.PanDing10 = 2;
+                this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.PanDing11 = 2;
+                this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.PanDingShu12 = 2;
+                this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.PanDingShu13 = 2;
+                this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.PanDingShu15 = 1;
+                this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.PanDingShu16 = 1;
                 #endregion
             }
             this.InitControls();
