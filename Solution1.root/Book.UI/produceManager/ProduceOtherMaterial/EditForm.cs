@@ -201,7 +201,13 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
             {
                 this.dateEditProduceOtherMaterialDate.EditValue = this._produceOtherMaterial.ProduceOtherMaterialDate;
             }
-            this.textEditCusXOId.Text = this._produceOtherMaterial.InvoiceCusId;
+            //this.textEditCusXOId.Text = this._produceOtherMaterial.InvoiceCusId;
+
+            Model.ProduceOtherCompact otherCompact = this.produceOtherCompactManager.Get(this._produceOtherMaterial.ProduceOtherCompactId);
+            if (otherCompact != null)
+                this.textEditCusXOId.Text = (otherCompact.InvoiceXO == null ? null : otherCompact.InvoiceXO.CustomerInvoiceXOId);
+            else
+                this.textEditCusXOId.Text = null;
             this.newChooseEmployee0.EditValue = this._produceOtherMaterial.Employee0;
             this.newChooseEmployee1.EditValue = this._produceOtherMaterial.Employee1;
             this.bindingSourceDetails.DataSource = this._produceOtherMaterial.Details;
