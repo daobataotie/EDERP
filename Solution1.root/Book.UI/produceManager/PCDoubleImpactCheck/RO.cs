@@ -62,7 +62,13 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrLabel1.Text = _pcdic.PrintHeader;
             this.lblANSIPCImpactCheckID.Text = _pcdic.PCDoubleImpactCheckID;
             this.lblANSIPCImpactCheckDate.Text = _pcdic.PCDoubleImpactCheckDate.HasValue ? _pcdic.PCDoubleImpactCheckDate.Value.ToShortDateString() : "";
-            this.lblInvoiceCusXOId.Text = _pcdic.InvoiceCusXOId;
+            //this.lblInvoiceCusXOId.Text = _pcdic.InvoiceCusXOId;
+            if (!string.IsNullOrEmpty(_pcdic.PronoteHeaderId))
+            {
+                Model.PronoteHeader ph = new BL.PronoteHeaderManager().Get(_pcdic.PronoteHeaderId);
+                if (ph != null)
+                    this.lblInvoiceCusXOId.Text = (ph.InvoiceXO == null ? null : ph.InvoiceXO.CustomerInvoiceXOId);
+            }
             this.lblPronoteHeaderId.Text = _pcdic.PronoteHeaderId;
             this.lblProduct.Text = _pcdic.Product == null ? "" : _pcdic.Product.ToString();
             this.lblEmployee0.Text = _pcdic.Employee == null ? "" : _pcdic.Employee.ToString();

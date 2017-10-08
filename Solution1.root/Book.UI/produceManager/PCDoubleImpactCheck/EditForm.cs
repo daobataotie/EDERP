@@ -184,6 +184,8 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
                 if (ph != null)
                     this.txtInvoiceCusXOId.Text = (ph.InvoiceXO == null ? null : ph.InvoiceXO.CustomerInvoiceXOId);
             }
+            else
+                this.txtInvoiceCusXOId.Text = null;
             this.txtPronoteHeaderId.Text = this._pcdic.PronoteHeaderId;
             this.txtPCDoubleImpactCheckDesc.Text = this._pcdic.PCDoubleImpactCheckDesc;
             this.DE_PCDoubleImpactCheckDate.EditValue = this._pcdic.PCDoubleImpactCheckDate.Value;
