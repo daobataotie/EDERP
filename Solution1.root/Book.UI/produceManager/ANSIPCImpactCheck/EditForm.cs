@@ -207,7 +207,8 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
             //初始化控件
             this.txtANSIPCImpactCheckId.Text = this._ansipcic.ANSIPCImpactCheckID;
             this.txtPronoteHeaderId.Text = this._ansipcic.PronoteHeaderId;
-            this.txtInvoiceCusXOId.Text = this._ansipcic.InvoiceCusXOId;
+            //this.txtInvoiceCusXOId.Text = this._ansipcic.InvoiceCusXOId; 
+            this.txtInvoiceCusXOId.Text = (this._ansipcic.Invoice == null ?  this._ansipcic.InvoiceCusXOId : this._ansipcic.Invoice.CustomerInvoiceXOId);
             this.txtANSIPCImpactCheckDesc.Text = this._ansipcic.ANSIPCImpactCheckDesc;
             this.ceInvoiceXOCount.EditValue = this._ansipcic.InvoiceXOQuantity.HasValue ? this._ansipcic.InvoiceXOQuantity.Value : 0;
             this.calcPCCheckCount.EditValue = this._ansipcic.ANSIPCImpactCheckCount.HasValue ? this._ansipcic.ANSIPCImpactCheckCount.Value : 0;
