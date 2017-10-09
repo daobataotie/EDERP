@@ -44,7 +44,10 @@ namespace Book.DA.SQLServer
             StringBuilder sql = new StringBuilder();
             sql.Append("select d.PCImpactCheckId,d.attrDate,d.attrBanBie,d.PronoteHeaderId,d.InvoiceCusXOId,d.PCImpactCheckQuantity,e.EmployeeName,pro.ProductName from PCImpactCheckDetail d left join PCImpactCheck p on d.PCImpactCheckId=p.PCImpactCheckId left join Employee e on e.EmployeeId=p.EmployeeId  left join Product pro on d.ProductId=pro.ProductId  where d.attrDate between '" + StartDate.ToString("yyyy-MM-dd") + "' and '" + EndDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
             if (!string.IsNullOrEmpty(CusXOId))
-                sql.Append(" and d.InvoiceCusXOId = '" + CusXOId + "'");
+            {
+                //sql.Append(" and d.InvoiceCusXOId = '" + CusXOId + "'");
+                sql.Append(" and (d.PronoteHeaderId in (select PronoteHeaderID from PronoteHeader ph join InvoiceXO xo on ph.InvoiceXOId=xo.InvoiceId where xo.CustomerInvoiceXOId='" + CusXOId + "') OR d.PronoteHeaderId in (select ProduceOtherCompactId from ProduceOtherCompact poc join InvoiceXO xo on poc.InvoiceXOId=xo.InvoiceId where xo.CustomerInvoiceXOId='" + CusXOId + "') or d.PronoteHeaderId in (select co.InvoiceId from InvoiceCO co join InvoiceXO xo on co.InvoiceXOId=xo.InvoiceId where xo.CustomerInvoiceXOId='" + CusXOId + "'))");
+            }
             if (product != null)
                 sql.Append(" and d.ProductId = '" + product.ProductId + "'");
             return this.DataReaderBind<Model.PCImpactCheckDetail>(sql.ToString(), null, CommandType.Text);

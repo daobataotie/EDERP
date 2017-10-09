@@ -21,5 +21,7 @@ namespace Book.Model
             get { return _Details; }
             set { _Details = value; }
         }
+
+        public string CustomerInvoiceXOId { get; set; }
     }
 }

@@ -177,7 +177,15 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             }
             //初始化控件
             this.txtPCDoubleImpactCheckID.Text = this._pcdic.PCDoubleImpactCheckID;
-            this.txtInvoiceCusXOId.Text = this._pcdic.InvoiceCusXOId;
+            //this.txtInvoiceCusXOId.Text = this._pcdic.InvoiceCusXOId;
+            if (!string.IsNullOrEmpty(this._pcdic.PronoteHeaderId))
+            {
+                Model.PronoteHeader ph = new BL.PronoteHeaderManager().Get(this._pcdic.PronoteHeaderId);
+                if (ph != null)
+                    this.txtInvoiceCusXOId.Text = (ph.InvoiceXO == null ? null : ph.InvoiceXO.CustomerInvoiceXOId);
+            }
+            else
+                this.txtInvoiceCusXOId.Text = null;
             this.txtPronoteHeaderId.Text = this._pcdic.PronoteHeaderId;
             this.txtPCDoubleImpactCheckDesc.Text = this._pcdic.PCDoubleImpactCheckDesc;
             this.DE_PCDoubleImpactCheckDate.EditValue = this._pcdic.PCDoubleImpactCheckDate.Value;

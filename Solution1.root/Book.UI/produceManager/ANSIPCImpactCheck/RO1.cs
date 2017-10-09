@@ -38,7 +38,8 @@ namespace Book.UI.produceManager
             //Control
             this.lblANSIPCImpactCheckID.Text = ANSIPCIC.ANSIPCImpactCheckID;
             this.lblANSIPCImpactCheckDate.Text = ANSIPCIC.ANSIPCImpactCheckDate.HasValue ? ANSIPCIC.ANSIPCImpactCheckDate.Value.ToShortDateString() : "";
-            this.lblInvoiceCusXOId.Text = ANSIPCIC.InvoiceCusXOId;
+            //this.lblInvoiceCusXOId.Text = ANSIPCIC.InvoiceCusXOId;
+            this.lblInvoiceCusXOId.Text = (ANSIPCIC.Invoice == null ? null : ANSIPCIC.Invoice.CustomerInvoiceXOId);
             this.lblPronoteHeaderId.Text = ANSIPCIC.PronoteHeaderId;
             this.lblProduct.Text = ANSIPCIC.Product == null ? "" : ANSIPCIC.Product.ToString();
             this.lblEmployee0.Text = ANSIPCIC.Employee == null ? "" : ANSIPCIC.Employee.ToString();
