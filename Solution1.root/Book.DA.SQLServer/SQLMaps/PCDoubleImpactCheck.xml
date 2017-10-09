@@ -1,42 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sqlMap namespace="PCDoubleImpactCheck" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <resultMaps>
-    <resultMap id="PCDoubleImpactCheckResult1" class="PCDoubleImpactCheck">
-      <result property="PCDoubleImpactCheckID" column="PCDoubleImpactCheckID" />
-      <result property="ProductId" column="ProductId" />
-      <result property="EmployeeId" column="EmployeeId" />
-      <result property="InsertTime" column="InsertTime" />
-      <result property="UpdateTime" column="UpdateTime" />
-      <result property="PCDoubleImpactCheckDate" column="PCDoubleImpactCheckDate" />
-      <result property="InvoiceCusXOId" column="InvoiceCusXOId" />
-      <result property="PronoteHeaderId" column="PronoteHeaderId" />
-      <result property="PCDoubleImpactCheckDesc" column="PCDoubleImpactCheckDesc" />
-      <result property="PCDoubleImpactCheckType" column="PCDoubleImpactCheckType" />
-      <result property="Spead" column="Spead" />
-      <result property="CheckStandard" column="CheckStandard" />
-      <result property="InvoiceXOQuantity" column="InvoiceXOQuantity" />
-      <result property="PowerImpact" column="PowerImpact" />
-      <result property="PCDoubleImpactCheckCount" column="PCDoubleImpactCheckCount" />
-      <result property="AuditState" column="AuditState" />
-      <result property="AuditEmpId" column="AuditEmpId" />
-      <result property="ProductUnitId" column="ProductUnitId"/>
-      <result property="JiaReWenDu" column="JiaReWenDu"/>
-      <result property="LengDongWenDu" column="LengDongWenDu"/>
-      <result property="ZhuiQiuKG" column="ZhuiQiuKG"/>
-      <result property="PrintHeader" column="PrintHeader"/>
-      <result property="CustomerInvoiceXOId" column="CustomerInvoiceXOId"/>
-      <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
-      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
-      <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
-      <result property="ProductUnit" column="ProductUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key"/>
-    </resultMap>
-  </resultMaps>
-  
   <statements>
-    <select id="SelectByDateRage" resultMap="PCDoubleImpactCheckResult1" parameterClass="Map">
+    <select id="SelectByDateRage" resultMap="PCDoubleImpactCheckResult" parameterClass="Map">
       <![CDATA[
-      SELECT pc.*,xo.CustomerInvoiceXOId FROM PCDoubleImpactCheck pc left join PronoteHeader ph on pc.PronoteHeaderId=ph.PronoteHeaderID join InvoiceXO xo on ph.InvoiceXOId = xo.InvoiceId where pc.PCDoubleImpactCheckDate BETWEEN #startdate# AND #enddate# AND pc.PCDoubleImpactCheckType = #pcFlag# $sql$
+      SELECT 
+      * 
+      FROM PCDoubleImpactCheck 
+      WHERE PCDoubleImpactCheckDate BETWEEN #startdate# AND #enddate# 
+      AND PCDoubleImpactCheck.PCDoubleImpactCheckType = #pcFlag# $sql$
       ]]>
     </select>
 

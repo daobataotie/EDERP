@@ -28,7 +28,7 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.lblPCFinishCheckDate.Text = _pcfc.PCFinishCheckDate.HasValue ? _pcfc.PCFinishCheckDate.Value.ToShortDateString() : "";
             this.lblProductName.Text = _pcfc.Product == null ? "" : _pcfc.Product.ToString();
             this.lblBuMen.Text = _pcfc.WorkHouse == null ? "" : _pcfc.WorkHouse.ToString();
-            //this.lblInvoiceCusXOId.Text = _pcfc.InvoiceCusXOId;
+            this.lblInvoiceCusXOId.Text = _pcfc.InvoiceCusXOId;
             this.lblPCFinishCheckCount.Text = _pcfc.PCFinishCheckCount.ToString();
             this.lblPCFinishCheckInCoiunt.Text = _pcfc.PCFinishCheckInCoiunt.HasValue ? _pcfc.PCFinishCheckInCoiunt.Value.ToString() : "";
             this.lblPCFinishCheckDesc.Text = _pcfc.PCFinishCheckDesc;
@@ -50,7 +50,6 @@ namespace Book.UI.produceManager.PCFinishCheck
                     this.lbl_CustomerName.Text = xo.Customer.CustomerFullName;
                     this.lbl_InvoiceXOCustomer.Text = xo.xocustomer.CustomerFullName;
                     this.lbl_JHDate.Text = xo.InvoiceYjrq.Value.ToString("yyyy-MM-dd");
-                    this.lblInvoiceCusXOId.Text = xo.CustomerInvoiceXOId;
                 }
             }
 

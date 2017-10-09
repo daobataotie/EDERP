@@ -25,26 +25,15 @@ namespace Book.DA.SQLServer
             ht.Add("StartDate", StartDate);
             ht.Add("EndDate", EndDate);
             StringBuilder sql = new StringBuilder();
-            //if (customer != null)
-            //    sql.Append(" and InvoiceCusXOId IN (SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE xocustomerId = '" + customer.CustomerId + "')");
-            //if (!string.IsNullOrEmpty(cusXOId))
-            //    //sql.Append(" and InvoiceCusXOId like '%" + cusXOId + "%'");
-            //    sql.Append(" and PronoteHeaderId in (select PronoteHeaderID from PronoteHeader where InvoiceXOId =(select InvoiceId from InvoiceXO where CustomerInvoiceXOId='" + cusXOId + "'))");
-            //if (product != null)
-            //    sql.Append(" and ProductId = '" + product.ProductId + "'");
-            //if (!String.IsNullOrEmpty(ForANSIOrJIS))
-            //    sql.Append("  AND ForANSIOrJIS='" + ForANSIOrJIS + "'");
-            //ht.Add("sql", sql.ToString());
-            //return sqlmapper.QueryForList<Model.ANSIPCImpactCheck>("ANSIPCImpactCheck.SelectByDateRange", ht);
-
-            if (product != null)
-                sql.Append(" and ac.ProductId = '" + product.ProductId + "'");
             if (customer != null)
-                sql.Append(" and xo.xocustomerId = '" + customer.CustomerId + "'");
+                sql.Append(" and InvoiceCusXOId IN (SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE xocustomerId = '" + customer.CustomerId + "')");
             if (!string.IsNullOrEmpty(cusXOId))
-                sql.Append(" and xo.CustomerInvoiceXOId='" + cusXOId + "'");
+                //sql.Append(" and InvoiceCusXOId like '%" + cusXOId + "%'");
+                sql.Append(" and PronoteHeaderId in (select PronoteHeaderID from PronoteHeader where InvoiceXOId =(select InvoiceId from InvoiceXO where CustomerInvoiceXOId='" + cusXOId + "'))");
+            if (product != null)
+                sql.Append(" and ProductId = '" + product.ProductId + "'");
             if (!String.IsNullOrEmpty(ForANSIOrJIS))
-                sql.Append("  AND ac.ForANSIOrJIS='" + ForANSIOrJIS + "'");
+                sql.Append("  AND ForANSIOrJIS='" + ForANSIOrJIS + "'");
             ht.Add("sql", sql.ToString());
             return sqlmapper.QueryForList<Model.ANSIPCImpactCheck>("ANSIPCImpactCheck.SelectByDateRange", ht);
         }

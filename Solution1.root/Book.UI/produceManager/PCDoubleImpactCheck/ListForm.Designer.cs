@@ -143,7 +143,7 @@
             // gridColumn3
             // 
             resources.ApplyResources(this.gridColumn3, "gridColumn3");
-            this.gridColumn3.FieldName = "CustomerInvoiceXOId";
+            this.gridColumn3.FieldName = "InvoiceCusXOId";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             // 

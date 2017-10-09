@@ -26,24 +26,15 @@ namespace Book.DA.SQLServer
             ht.Add("enddate", enddate);
             ht.Add("pcFlag", pcFlag);
             StringBuilder sql = new StringBuilder();
-            ////if (customer != null)
-            ////    sql.Append(" and InvoiceCusXOId IN (SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE xocustomerId like '" + customer.CustomerId + "')");
-            //if (!string.IsNullOrEmpty(CusXOId))
-            //    sql.Append(" and InvoiceCusXOId = '" + CusXOId + "'");
-            //if (product != null)
-            //    sql.Append(" and ProductId = '" + product.ProductId + "'");
-            //ht.Add("sql", sql.ToString());
-            //IList<Model.PCDoubleImpactCheck> a = sqlmapper.QueryForList<Model.PCDoubleImpactCheck>("PCDoubleImpactCheck.SelectByDateRage", ht);
-            //return a;
-
-            if (product != null)
-                sql.Append(" and pc.ProductId = '" + product.ProductId + "'");
-            if (customer != null)
-                sql.Append(" and xo.xocustomerId = '" + customer.CustomerId + "'");
+            //if (customer != null)
+            //    sql.Append(" and InvoiceCusXOId IN (SELECT CustomerInvoiceXOId FROM InvoiceXO WHERE xocustomerId like '" + customer.CustomerId + "')");
             if (!string.IsNullOrEmpty(CusXOId))
-                sql.Append(" and xo.CustomerInvoiceXOId='" + CusXOId + "'");
+                sql.Append(" and InvoiceCusXOId = '" + CusXOId + "'");
+            if (product != null)
+                sql.Append(" and ProductId = '" + product.ProductId + "'");
             ht.Add("sql", sql.ToString());
-            return sqlmapper.QueryForList<Model.PCDoubleImpactCheck>("PCDoubleImpactCheck.SelectByDateRage", ht);
+            IList<Model.PCDoubleImpactCheck> a = sqlmapper.QueryForList<Model.PCDoubleImpactCheck>("PCDoubleImpactCheck.SelectByDateRage", ht);
+            return a;
         }
 
         public bool IsExistsPNTForInsert(string PNTID, int? type)

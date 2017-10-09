@@ -85,11 +85,7 @@ namespace Book.UI.produceManager.PCFinishCheck
             }
 
             this.txtPCFinishCheckID.Text = this._PCFC.PCFinishCheckID;
-            //this.txtInvoiceCusXOId.Text = this._PCFC.InvoiceCusXOId;
-            if (this._PCFC.PronoteHeader != null)
-                this.txtInvoiceCusXOId.Text = (this._PCFC.PronoteHeader.InvoiceXO == null ? null : this._PCFC.PronoteHeader.InvoiceXO.CustomerInvoiceXOId);
-            else
-                this.txtInvoiceCusXOId.Text = null;
+            this.txtInvoiceCusXOId.Text = this._PCFC.InvoiceCusXOId;
             this.txtPCFinishCheckDesc.Text = this._PCFC.PCFinishCheckDesc;
             this.DE_JYDRQ.EditValue = this._PCFC.PCFinishCheckDate;
             this.txtProduct.Text = this._PCFC.Product == null ? "" : this._PCFC.Product.ToString();
@@ -296,7 +292,6 @@ namespace Book.UI.produceManager.PCFinishCheck
 
                 if (currentModel != null)
                 {
-                    this._PCFC.PronoteHeader = currentModel;
                     this._PCFC.PronoteHeaderID = currentModel.PronoteHeaderID;
                     this._PCFC.InvoiceCusXOId = currentModel.CustomerInvoiceXOId;
                     this._PCFC.Product = new BL.ProductManager().Get(currentModel.ProductId);
@@ -313,10 +308,7 @@ namespace Book.UI.produceManager.PCFinishCheck
                     {
                         Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(currentModel.InvoiceXOId);
                         if (xo != null)
-                        {
                             this._PCFC.Pihao = xo.CustomerLotNumber;
-                            this._PCFC.PronoteHeader.InvoiceXO = xo;
-                        }
                     }
 
                     this.Refresh();
