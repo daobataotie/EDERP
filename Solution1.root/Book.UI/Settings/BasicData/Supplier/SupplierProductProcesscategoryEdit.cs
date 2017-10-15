@@ -119,7 +119,8 @@ namespace Book.UI.Settings.BasicData.Supplier
             this._SupplierProduct.Supplier = this.bsSupplier.Current as Model.Supplier;
             this._SupplierProduct.Note = this.memoEditNote.Text;
             this._SupplierProduct.BuildEmployeeId = this.nccBuildEmployee.EditValue == null ? BL.V.ActiveOperator.EmployeeId : (this.nccBuildEmployee.EditValue as Model.Employee).EmployeeId;
-            this._SupplierProduct.ChangeEmployeeId = this.nccChangeEmployee.EditValue == null ? BL.V.ActiveOperator.EmployeeId : (this.nccChangeEmployee.EditValue as Model.Employee).EmployeeId;
+            //this._SupplierProduct.ChangeEmployeeId = this.nccChangeEmployee.EditValue == null ? BL.V.ActiveOperator.EmployeeId : (this.nccChangeEmployee.EditValue as Model.Employee).EmployeeId;
+            this._SupplierProduct.ChangeEmployeeId = BL.V.ActiveOperator.EmployeeId;
             if (this._SupplierProduct.Supplier != null)
                 this._SupplierProduct.SupplierId = this._SupplierProduct.Supplier.SupplierId;
             this._SupplierProduct.Product = this.btnEditProcProduct.EditValue as Model.Product;
