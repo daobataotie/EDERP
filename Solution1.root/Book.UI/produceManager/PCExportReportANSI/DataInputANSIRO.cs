@@ -27,7 +27,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.xrSubreportANSI.ReportSource = new RO(pcExportReportANSI, tag);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
-            this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
+
+            if (pcDataInput.PCHazeList != null && pcDataInput.PCHazeList.Count != 0)
+                this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
         }
 
         private void DataInputANSIRO_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

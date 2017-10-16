@@ -13,7 +13,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             InitializeComponent();
         }
 
-        public DataInputASRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI AS,int tag)
+        public DataInputASRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI AS, int tag)
             : this()
         {
             if (pcDataInput == null)
@@ -24,10 +24,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TCTSEmployee.Text = pcDataInput.Employee3 == null ? "" : pcDataInput.Employee3.ToString();
 
             if (AS != null)
-                this.xrSubreportAS.ReportSource = new ASRO (AS, tag);
+                this.xrSubreportAS.ReportSource = new ASRO(AS, tag);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
-            this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
+
+            if (pcDataInput.PCHazeList != null && pcDataInput.PCHazeList.Count != 0)
+                this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
         }
     }
 }

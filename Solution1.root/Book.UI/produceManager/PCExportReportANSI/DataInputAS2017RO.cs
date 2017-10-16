@@ -13,7 +13,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             InitializeComponent();
         }
 
-        public DataInputAS2017RO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI AS,int tag)
+        public DataInputAS2017RO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI AS, int tag)
             : this()
         {
             if (pcDataInput == null)
@@ -27,7 +27,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.xrSubreportAS.ReportSource = new ASRO2017(AS, tag);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
-            this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
+
+            if (pcDataInput.PCHazeList != null && pcDataInput.PCHazeList.Count != 0)
+                this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
         }
     }
 }

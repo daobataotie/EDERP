@@ -127,6 +127,18 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
             this._ansipcic.ANSIPCImpactCheckCount = 1;  //检测数量默认为1
             this._ansipcic.Employee = BL.V.ActiveOperator.Employee;
             this._ansipcic.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
+            //if (this._pcFlag == 0)
+            //{
+            if (this.CJLD.Any(d => d.SettingCurrentValue.Contains("150 FT/S")))
+                this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingCurrentValue.Contains("150 FT/S")).SettingCurrentValue;
+            //}
+            //else
+            //{
+            //    if (this.CJLD.Any(d => d.SettingCurrentValue.Contains("150 FT/S")))
+            //        this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingCurrentValue.Contains("150 FT/S")).SettingCurrentValue;
+            //}
+
             //初始化添加一条详细
             this._ansipcic.Details = new List<Model.ANSIPCImpactCheckDetail>();
             this.AddDataRows();
@@ -208,7 +220,7 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
             this.txtANSIPCImpactCheckId.Text = this._ansipcic.ANSIPCImpactCheckID;
             this.txtPronoteHeaderId.Text = this._ansipcic.PronoteHeaderId;
             //this.txtInvoiceCusXOId.Text = this._ansipcic.InvoiceCusXOId;
-            this.txtInvoiceCusXOId.Text = (this._ansipcic.Invoice == null ?  this._ansipcic.InvoiceCusXOId : this._ansipcic.Invoice.CustomerInvoiceXOId);
+            this.txtInvoiceCusXOId.Text = (this._ansipcic.Invoice == null ? this._ansipcic.InvoiceCusXOId : this._ansipcic.Invoice.CustomerInvoiceXOId);
             this.txtANSIPCImpactCheckDesc.Text = this._ansipcic.ANSIPCImpactCheckDesc;
             this.ceInvoiceXOCount.EditValue = this._ansipcic.InvoiceXOQuantity.HasValue ? this._ansipcic.InvoiceXOQuantity.Value : 0;
             this.calcPCCheckCount.EditValue = this._ansipcic.ANSIPCImpactCheckCount.HasValue ? this._ansipcic.ANSIPCImpactCheckCount.Value : 0;
@@ -395,15 +407,15 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
                     this._ansipcic.Unit = this._ansipcic.Product.QualityTestUnit;
 
 
-                    if (!string.IsNullOrEmpty(this._ansipcic.CheckStandard))
-                    {
-                        if (this.CJLD.Any(d => d.SettingDescription == this._ansipcic.CheckStandard))
-                            this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingDescription == this._ansipcic.CheckStandard).SettingCurrentValue;
-                        if (this.ZQZL.Any(d => d.SettingDescription == this._ansipcic.CheckStandard))
-                            this.coBoxZQZL.EditValue = this.ZQZL.FirstOrDefault(d => d.SettingDescription == this._ansipcic.CheckStandard).SettingCurrentValue;
-                        if (this.LYBTXX.Any(d => d.SettingDescription == this._ansipcic.CheckStandard))
-                            this.coBoxLYBTXX.EditValue = this.LYBTXX.First(d => d.SettingDescription == this._ansipcic.CheckStandard).SettingCurrentValue;
-                    }
+                    //if (!string.IsNullOrEmpty(this._ansipcic.CheckStandard))
+                    //{
+                    //    if (this.CJLD.Any(d => d.SettingDescription == this._ansipcic.CheckStandard))
+                    //        this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingDescription == this._ansipcic.CheckStandard).SettingCurrentValue;
+                    //    if (this.ZQZL.Any(d => d.SettingDescription == this._ansipcic.CheckStandard))
+                    //        this.coBoxZQZL.EditValue = this.ZQZL.FirstOrDefault(d => d.SettingDescription == this._ansipcic.CheckStandard).SettingCurrentValue;
+                    //    if (this.LYBTXX.Any(d => d.SettingDescription == this._ansipcic.CheckStandard))
+                    //        this.coBoxLYBTXX.EditValue = this.LYBTXX.First(d => d.SettingDescription == this._ansipcic.CheckStandard).SettingCurrentValue;
+                    //}
                     this.Refresh();
                 }
             }
@@ -489,7 +501,8 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
             foreach (Model.Setting SET in new BL.SettingManager().SelectByName("ChongJiLiDao"))
             {
                 this.coBoxCJLD.Properties.Items.Add(SET.SettingCurrentValue);
-                if (!string.IsNullOrEmpty(SET.SettingDescription))
+                //if (!string.IsNullOrEmpty(SET.SettingDescription))
+                if (!string.IsNullOrEmpty(SET.SettingCurrentValue))
                     this.CJLD.Add(SET);
             }
             foreach (Model.Setting SET in new BL.SettingManager().SelectByName("ZhuiQiuZhongLiang"))

@@ -18,7 +18,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             if (pcDataInput == null)
                 return;
-          
+
             this.TCTSData.Text = pcDataInput.PCDataInputDate.HasValue ? pcDataInput.PCDataInputDate.Value.ToString("yyyy-MM-dd") : "";
             this.TCTSQuantity.Text = pcDataInput.PCPerspectiveList.Count.ToString();
             this.TCTSEmployee.Text = pcDataInput.Employee3 == null ? "" : pcDataInput.Employee3.ToString();
@@ -32,7 +32,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
             this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
-            this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
+
+            if (pcDataInput.PCHazeList != null && pcDataInput.PCHazeList.Count != 0)
+                this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
         }
 
         private void DataInputANSIRO_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

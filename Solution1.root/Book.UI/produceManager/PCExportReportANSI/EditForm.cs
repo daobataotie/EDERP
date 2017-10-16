@@ -386,6 +386,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._pcExpANSI.ProductId = xod.Product.ProductId;
             this._pcExpANSI.InvoiceCusXOId = xod.Invoice.CustomerInvoiceXOId;
             this._pcExpANSI.Amount = xod.InvoiceXODetailQuantity.HasValue ? xod.InvoiceXODetailQuantity.Value : 0;
+            this._pcExpANSI.ProductUnitId = xod.Product.SellUnitId;
 
             //获取ANSI,Finish质检统计记录
             //Model.PCExportReportANSI mPCExpANSI = this._pcExpANSIManager.SelectForExpANSI(xod.Invoice.CustomerInvoiceXOId, xod.Product.ProductId);

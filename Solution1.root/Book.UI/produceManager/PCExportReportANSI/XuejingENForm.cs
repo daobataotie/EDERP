@@ -363,13 +363,13 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 return;
             Model.InvoiceXODetail xd = f.SelectList[0];
 
-
             this._PCExportReportANSI.Customer = xd.Invoice.xocustomer;
             this._PCExportReportANSI.CustomerId = xd.Invoice.xocustomerId;
             this._PCExportReportANSI.Specification = xd.Invoice.Customer.CheckedStandard;
             this._PCExportReportANSI.Product = xd.Product;
             this._PCExportReportANSI.InvoiceCusXOId = xd.Invoice.CustomerInvoiceXOId;
             this._PCExportReportANSI.Amount = xd.InvoiceXODetailQuantity.HasValue ? xd.InvoiceXODetailQuantity.Value : 0;
+            this._PCExportReportANSI.ProductUnitId = xd.Product.SellUnitId;
 
             //获取质检统计记录
             Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpCEENDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
@@ -417,6 +417,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 //this._PCExportReportANSI.PanDingShu12 = _PCExportReportANSIDetail.pCEENUVCF;
                 //this._PCExportReportANSI.QuYangShu12 = _PCExportReportANSIDetail.qCEENUVCF;
 
+                this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.PanDing6
+=2;
+                this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.PanDing5 = 1;
                 #endregion
             }
             this.InitControls();

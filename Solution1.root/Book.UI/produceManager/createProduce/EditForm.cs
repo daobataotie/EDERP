@@ -59,8 +59,8 @@ namespace Book.UI.produceManager.createProduce
         //加载指定数据源
         private void EditForm_Load(object sender, EventArgs e)
         {
-            this.chkHasInvoiceClose.Checked = true;
-            this.chkHasNotMRSOver.Checked = true;
+            //this.chkHasInvoiceClose.Checked = true;
+            //this.chkHasNotMRSOver.Checked = true;
             //switch(this.tagType)
             //   {
             //    case "mps" :

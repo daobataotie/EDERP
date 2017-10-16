@@ -97,6 +97,23 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this._pcdic.PCDoubleImpactCheckCount = 1;   //默认抽检数量为1
             this._pcdic.Employee = BL.V.ActiveOperator.Employee;
             this._pcdic.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
+            if (this.pcType == 0)  
+            {
+                if (this.CJLD.Any(d => d.SettingCurrentValue.Contains("154 FT/S")))
+                    this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingCurrentValue.Contains("154 FT/S")).SettingCurrentValue;
+            }
+            else if (this.pcType == 1)
+            {
+                if (this.CJLD.Any(d => d.SettingCurrentValue.Contains("152.5 FT/S")))
+                    this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingCurrentValue.Contains("152.5 FT/S")).SettingCurrentValue;
+            }
+            else
+            {
+                if (this.CJLD.Any(d => d.SettingCurrentValue.Contains("137 FT/S")))
+                    this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingCurrentValue.Contains("137 FT/S")).SettingCurrentValue;
+            }
+
             //初始化一条详细
             this._pcdic.Detail = new List<Model.PCDoubleImpactCheckDetail>();
             this.AddDataRows();
@@ -425,7 +442,8 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             foreach (Model.Setting SET in new BL.SettingManager().SelectByName("ChongJiLiDao"))
             {
                 this.coBoxCJLD.Properties.Items.Add(SET.SettingCurrentValue);
-                if (!string.IsNullOrEmpty(SET.SettingDescription))
+                //if (!string.IsNullOrEmpty(SET.SettingDescription))
+                if (!string.IsNullOrEmpty(SET.SettingCurrentValue))
                     this.CJLD.Add(SET);
             }
 
@@ -526,19 +544,19 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
                     this._pcdic.ProductUnit = this._pcdic.Product.QualityTestUnit;
 
 
-                    if (!string.IsNullOrEmpty(this._pcdic.CheckStandard))
-                    {
-                        if (this.CJLD.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
-                            this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
-                        if (this.ZQZL.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
-                            this.coBoxZQZL.EditValue = this.ZQZL.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
-                        if (this.LYBTXX.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
-                            this.coBoxLYBTXX.EditValue = this.LYBTXX.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
-                        if (this.JIARE.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
-                            this.comBox_ChongJICeShiJiaRe.EditValue = this.JIARE.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
-                        if (this.LENGDONG.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
-                            this.comBox_ChongJICeShiLengDong.EditValue = this.LENGDONG.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
-                    }
+                    //if (!string.IsNullOrEmpty(this._pcdic.CheckStandard))
+                    //{
+                    //    if (this.CJLD.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
+                    //        this.coBoxCJLD.EditValue = this.CJLD.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
+                    //    if (this.ZQZL.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
+                    //        this.coBoxZQZL.EditValue = this.ZQZL.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
+                    //    if (this.LYBTXX.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
+                    //        this.coBoxLYBTXX.EditValue = this.LYBTXX.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
+                    //    if (this.JIARE.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
+                    //        this.comBox_ChongJICeShiJiaRe.EditValue = this.JIARE.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
+                    //    if (this.LENGDONG.Any(d => d.SettingDescription == this._pcdic.CheckStandard))
+                    //        this.comBox_ChongJICeShiLengDong.EditValue = this.LENGDONG.First(d => d.SettingDescription == this._pcdic.CheckStandard).SettingCurrentValue;
+                    //}
                     this.Refresh();
                 }
             }
