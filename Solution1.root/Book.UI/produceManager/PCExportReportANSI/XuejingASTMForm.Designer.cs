@@ -80,15 +80,6 @@
             this.barPrintPPE = new DevExpress.XtraBars.BarButtonItem();
             this.emptySpaceItem15 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -99,9 +90,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
@@ -110,15 +98,9 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.SpinJudge11 = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinTest11 = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudge10 = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinTest10 = new DevExpress.XtraEditors.SpinEdit();
             this.SpinJudge8 = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTest8 = new DevExpress.XtraEditors.SpinEdit();
             this.SpinJudge7 = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinTest9 = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudge9 = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTest7 = new DevExpress.XtraEditors.SpinEdit();
             this.SpinJudge6 = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTest6 = new DevExpress.XtraEditors.SpinEdit();
@@ -192,15 +174,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudge11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinTest11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudge10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinTest10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinJudge8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTest8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinJudge7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinTest9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudge9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTest7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinJudge6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTest6.Properties)).BeginInit();
@@ -684,15 +660,6 @@
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.label29);
-            this.panel1.Controls.Add(this.label32);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label15);
@@ -703,9 +670,6 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label68);
-            this.panel1.Controls.Add(this.label60);
-            this.panel1.Controls.Add(this.label58);
-            this.panel1.Controls.Add(this.label56);
             this.panel1.Controls.Add(this.label54);
             this.panel1.Controls.Add(this.label52);
             this.panel1.Controls.Add(this.label50);
@@ -714,15 +678,9 @@
             this.panel1.Controls.Add(this.label44);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.SpinJudge11);
-            this.panel1.Controls.Add(this.SpinTest11);
-            this.panel1.Controls.Add(this.SpinJudge10);
-            this.panel1.Controls.Add(this.SpinTest10);
             this.panel1.Controls.Add(this.SpinJudge8);
             this.panel1.Controls.Add(this.SpinTest8);
             this.panel1.Controls.Add(this.SpinJudge7);
-            this.panel1.Controls.Add(this.SpinTest9);
-            this.panel1.Controls.Add(this.SpinJudge9);
             this.panel1.Controls.Add(this.SpinTest7);
             this.panel1.Controls.Add(this.SpinJudge6);
             this.panel1.Controls.Add(this.SpinTest6);
@@ -752,60 +710,6 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Name = "panel1";
-            // 
-            // label26
-            // 
-            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
-            // 
-            // label29
-            // 
-            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
-            // 
-            // label32
-            // 
-            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.Name = "label32";
-            // 
-            // label20
-            // 
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
-            // 
-            // label22
-            // 
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
-            // 
-            // label25
-            // 
-            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
-            // 
-            // label16
-            // 
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
-            // 
-            // label18
-            // 
-            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
-            // 
-            // label19
-            // 
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
             // 
             // label13
             // 
@@ -867,24 +771,6 @@
             resources.ApplyResources(this.label68, "label68");
             this.label68.Name = "label68";
             // 
-            // label60
-            // 
-            this.label60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label60, "label60");
-            this.label60.Name = "label60";
-            // 
-            // label58
-            // 
-            this.label58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label58, "label58");
-            this.label58.Name = "label58";
-            // 
-            // label56
-            // 
-            this.label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.label56, "label56");
-            this.label56.Name = "label56";
-            // 
             // label54
             // 
             this.label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -933,46 +819,6 @@
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
-            // SpinJudge11
-            // 
-            resources.ApplyResources(this.SpinJudge11, "SpinJudge11");
-            this.SpinJudge11.MenuManager = this.barManager1;
-            this.SpinJudge11.Name = "SpinJudge11";
-            this.SpinJudge11.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudge11.Properties.AutoHeight")));
-            this.SpinJudge11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudge11.StyleController = this.layoutControl1;
-            // 
-            // SpinTest11
-            // 
-            resources.ApplyResources(this.SpinTest11, "SpinTest11");
-            this.SpinTest11.MenuManager = this.barManager1;
-            this.SpinTest11.Name = "SpinTest11";
-            this.SpinTest11.Properties.AutoHeight = ((bool)(resources.GetObject("SpinTest11.Properties.AutoHeight")));
-            this.SpinTest11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinTest11.StyleController = this.layoutControl1;
-            // 
-            // SpinJudge10
-            // 
-            resources.ApplyResources(this.SpinJudge10, "SpinJudge10");
-            this.SpinJudge10.MenuManager = this.barManager1;
-            this.SpinJudge10.Name = "SpinJudge10";
-            this.SpinJudge10.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudge10.Properties.AutoHeight")));
-            this.SpinJudge10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudge10.StyleController = this.layoutControl1;
-            // 
-            // SpinTest10
-            // 
-            resources.ApplyResources(this.SpinTest10, "SpinTest10");
-            this.SpinTest10.MenuManager = this.barManager1;
-            this.SpinTest10.Name = "SpinTest10";
-            this.SpinTest10.Properties.AutoHeight = ((bool)(resources.GetObject("SpinTest10.Properties.AutoHeight")));
-            this.SpinTest10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinTest10.StyleController = this.layoutControl1;
-            // 
             // SpinJudge8
             // 
             resources.ApplyResources(this.SpinJudge8, "SpinJudge8");
@@ -1002,26 +848,6 @@
             this.SpinJudge7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.SpinJudge7.StyleController = this.layoutControl1;
-            // 
-            // SpinTest9
-            // 
-            resources.ApplyResources(this.SpinTest9, "SpinTest9");
-            this.SpinTest9.MenuManager = this.barManager1;
-            this.SpinTest9.Name = "SpinTest9";
-            this.SpinTest9.Properties.AutoHeight = ((bool)(resources.GetObject("SpinTest9.Properties.AutoHeight")));
-            this.SpinTest9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinTest9.StyleController = this.layoutControl1;
-            // 
-            // SpinJudge9
-            // 
-            resources.ApplyResources(this.SpinJudge9, "SpinJudge9");
-            this.SpinJudge9.MenuManager = this.barManager1;
-            this.SpinJudge9.Name = "SpinJudge9";
-            this.SpinJudge9.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudge9.Properties.AutoHeight")));
-            this.SpinJudge9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudge9.StyleController = this.layoutControl1;
             // 
             // SpinTest7
             // 
@@ -1300,15 +1126,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem15)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudge11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinTest11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudge10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinTest10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinJudge8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTest8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinJudge7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinTest9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudge9.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTest7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinJudge6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTest6.Properties)).EndInit();
@@ -1378,9 +1198,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem16;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem15;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label50;
@@ -1389,15 +1206,9 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.SpinEdit SpinJudge11;
-        private DevExpress.XtraEditors.SpinEdit SpinTest11;
-        private DevExpress.XtraEditors.SpinEdit SpinJudge10;
-        private DevExpress.XtraEditors.SpinEdit SpinTest10;
         private DevExpress.XtraEditors.SpinEdit SpinJudge8;
         private DevExpress.XtraEditors.SpinEdit SpinTest8;
         private DevExpress.XtraEditors.SpinEdit SpinJudge7;
-        private DevExpress.XtraEditors.SpinEdit SpinTest9;
-        private DevExpress.XtraEditors.SpinEdit SpinJudge9;
         private DevExpress.XtraEditors.SpinEdit SpinTest7;
         private DevExpress.XtraEditors.SpinEdit SpinJudge6;
         private DevExpress.XtraEditors.SpinEdit SpinTest6;
@@ -1433,15 +1244,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;

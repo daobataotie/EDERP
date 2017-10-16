@@ -184,9 +184,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ShouCeShu6 = this.SpinTest6.EditValue == null ? 0 : double.Parse(this.SpinTest6.EditValue.ToString());
             this._PCExportReportANSI.ShouCeShu7 = this.SpinTest7.EditValue == null ? 0 : double.Parse(this.SpinTest7.EditValue.ToString());
             this._PCExportReportANSI.ShouCeShu8 = this.SpinTest8.EditValue == null ? 0 : double.Parse(this.SpinTest8.EditValue.ToString());
-            this._PCExportReportANSI.ShouCeShu9 = this.SpinTest9.EditValue == null ? 0 : double.Parse(this.SpinTest9.EditValue.ToString());
-            this._PCExportReportANSI.ShouCeShu10 = this.SpinTest10.EditValue == null ? 0 : double.Parse(this.SpinTest10.EditValue.ToString());
-            this._PCExportReportANSI.ShouCeShu11 = this.SpinTest11.EditValue == null ? 0 : double.Parse(this.SpinTest11.EditValue.ToString());
+            //this._PCExportReportANSI.ShouCeShu9 = this.SpinTest9.EditValue == null ? 0 : double.Parse(this.SpinTest9.EditValue.ToString());
+            //this._PCExportReportANSI.ShouCeShu10 = this.SpinTest10.EditValue == null ? 0 : double.Parse(this.SpinTest10.EditValue.ToString());
+            //this._PCExportReportANSI.ShouCeShu11 = this.SpinTest11.EditValue == null ? 0 : double.Parse(this.SpinTest11.EditValue.ToString());
             //this._PCExportReportANSI.ShouCeShu12 = this.SpinTestInternal.EditValue == null ? 0 : double.Parse(this.SpinTestInternal.EditValue.ToString());
 
             this._PCExportReportANSI.PanDing1 = this.SpinJudge1.EditValue == null ? 0 : double.Parse(this.SpinJudge1.EditValue.ToString());
@@ -197,9 +197,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.PanDing6 = this.SpinJudge6.EditValue == null ? 0 : double.Parse(this.SpinJudge6.EditValue.ToString());
             this._PCExportReportANSI.PanDing7 = this.SpinJudge7.EditValue == null ? 0 : double.Parse(this.SpinJudge7.EditValue.ToString());
             this._PCExportReportANSI.PanDing8 = this.SpinJudge8.EditValue == null ? 0 : double.Parse(this.SpinJudge8.EditValue.ToString());
-            this._PCExportReportANSI.PanDing9 = this.SpinJudge9.EditValue == null ? 0 : double.Parse(this.SpinJudge9.EditValue.ToString());
-            this._PCExportReportANSI.PanDing10 = this.SpinJudge10.EditValue == null ? 0 : double.Parse(this.SpinJudge10.EditValue.ToString());
-            this._PCExportReportANSI.PanDing11 = this.SpinJudge11.EditValue == null ? 0 : double.Parse(this.SpinJudge11.EditValue.ToString());
+            //this._PCExportReportANSI.PanDing9 = this.SpinJudge9.EditValue == null ? 0 : double.Parse(this.SpinJudge9.EditValue.ToString());
+            //this._PCExportReportANSI.PanDing10 = this.SpinJudge10.EditValue == null ? 0 : double.Parse(this.SpinJudge10.EditValue.ToString());
+            //this._PCExportReportANSI.PanDing11 = this.SpinJudge11.EditValue == null ? 0 : double.Parse(this.SpinJudge11.EditValue.ToString());
             //this._PCExportReportANSI.PanDingShu12 = this.SpinJudgeInternal.EditValue == null ? 0 : double.Parse(this.SpinJudgeInternal.EditValue.ToString());
 
             this._PCExportReportANSI.ProductUnitId = this.lookUpEditUnit.EditValue == null ? null : this.lookUpEditUnit.EditValue.ToString();
@@ -280,9 +280,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.SpinTest6.EditValue = this._PCExportReportANSI.ShouCeShu6.HasValue ? this._PCExportReportANSI.ShouCeShu6.Value : 0;
             this.SpinTest7.EditValue = this._PCExportReportANSI.ShouCeShu7.HasValue ? this._PCExportReportANSI.ShouCeShu7.Value : 0;
             this.SpinTest8.EditValue = this._PCExportReportANSI.ShouCeShu8.HasValue ? this._PCExportReportANSI.ShouCeShu8.Value : 0;
-            this.SpinTest9.EditValue = this._PCExportReportANSI.ShouCeShu9.HasValue ? this._PCExportReportANSI.ShouCeShu9.Value : 0;
-            this.SpinTest10.EditValue = this._PCExportReportANSI.ShouCeShu10.HasValue ? this._PCExportReportANSI.ShouCeShu10.Value : 0;
-            this.SpinTest11.EditValue = this._PCExportReportANSI.ShouCeShu11.HasValue ? this._PCExportReportANSI.ShouCeShu11.Value : 0;
+            //this.SpinTest9.EditValue = this._PCExportReportANSI.ShouCeShu9.HasValue ? this._PCExportReportANSI.ShouCeShu9.Value : 0;
+            //this.SpinTest10.EditValue = this._PCExportReportANSI.ShouCeShu10.HasValue ? this._PCExportReportANSI.ShouCeShu10.Value : 0;
+            //this.SpinTest11.EditValue = this._PCExportReportANSI.ShouCeShu11.HasValue ? this._PCExportReportANSI.ShouCeShu11.Value : 0;
             //this.SpinTestInternal.EditValue = this._PCExportReportANSI.ShouCeShu12.HasValue ? this._PCExportReportANSI.ShouCeShu12.Value : 0;
 
             this.SpinJudge1.EditValue = this._PCExportReportANSI.PanDing1.HasValue ? this._PCExportReportANSI.PanDing1.Value : 0;
@@ -293,9 +293,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.SpinJudge6.EditValue = this._PCExportReportANSI.PanDing6.HasValue ? this._PCExportReportANSI.PanDing6.Value : 0;
             this.SpinJudge7.EditValue = this._PCExportReportANSI.PanDing7.HasValue ? this._PCExportReportANSI.PanDing7.Value : 0;
             this.SpinJudge8.EditValue = this._PCExportReportANSI.PanDing8.HasValue ? this._PCExportReportANSI.PanDing8.Value : 0;
-            this.SpinJudge9.EditValue = this._PCExportReportANSI.PanDing9.HasValue ? this._PCExportReportANSI.PanDing9.Value : 0;
-            this.SpinJudge10.EditValue = this._PCExportReportANSI.PanDing10.HasValue ? this._PCExportReportANSI.PanDing10.Value : 0;
-            this.SpinJudge11.EditValue = this._PCExportReportANSI.PanDing11.HasValue ? this._PCExportReportANSI.PanDing11.Value : 0;
+            //this.SpinJudge9.EditValue = this._PCExportReportANSI.PanDing9.HasValue ? this._PCExportReportANSI.PanDing9.Value : 0;
+            //this.SpinJudge10.EditValue = this._PCExportReportANSI.PanDing10.HasValue ? this._PCExportReportANSI.PanDing10.Value : 0;
+            //this.SpinJudge11.EditValue = this._PCExportReportANSI.PanDing11.HasValue ? this._PCExportReportANSI.PanDing11.Value : 0;
             //this.SpinJudgeInternal.EditValue = this._PCExportReportANSI.PanDingShu12.HasValue ? this._PCExportReportANSI.PanDingShu12.Value : 0;
 
             this.newChooseContorlAuditEmp.EditValue = this._PCExportReportANSI.AuditEmp;
@@ -391,6 +391,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.Product = xd.Product;
             this._PCExportReportANSI.InvoiceCusXOId = xd.Invoice.CustomerInvoiceXOId;
             this._PCExportReportANSI.Amount = xd.InvoiceXODetailQuantity.HasValue ? xd.InvoiceXODetailQuantity.Value : 0;
+            this._PCExportReportANSI.ProductUnitId = xd.Product.SellUnitId;
 
             //获取质检统计记录
             Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpCEENDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
@@ -437,7 +438,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 //this._PCExportReportANSI.QuYangShu11 = _PCExportReportANSIDetail.qCEENZX;
                 //this._PCExportReportANSI.PanDingShu12 = _PCExportReportANSIDetail.pCEENUVCF;
                 //this._PCExportReportANSI.QuYangShu12 = _PCExportReportANSIDetail.qCEENUVCF;
-
+                this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.ShouCeShu8 = this._PCExportReportANSI.PanDing8 = 2;
+                this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.PanDing3 = 1;
                 #endregion
             }
             this.InitControls();
