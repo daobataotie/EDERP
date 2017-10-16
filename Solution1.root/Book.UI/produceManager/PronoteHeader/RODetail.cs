@@ -47,7 +47,8 @@ namespace Book.UI.produceManager.PronoteHeader
             this.xrLabelUnit.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_ProductUnit);
             this.xrLabelXOJHDate.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");
             this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerLotNumber);
-            this.xrLabelProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
+            //this.xrLabelProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
+            this.xrLabelProductName.DataBindings.Add("Text", this.DataSource, "ProductNameWithVersion");
             this.xrRichTextProDesc.DataBindings.Add("Rtf", this.DataSource, "ProductDesc");
             this.RichTextZhengMai.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_AttrZhengMai);
             this.RichTextCeMai.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_AttrCeMai);
@@ -84,7 +85,6 @@ namespace Book.UI.produceManager.PronoteHeader
 
             //CompanyInfo
             this.xrLabelCompanyInfoName.Text = BL.Settings.CompanyChineseName;
-            this.xrLabelDataName.Text = Properties.Resources.Pronotedetails;
             this.xrLabelDataName.Text = Properties.Resources.ZZJiaGong;
 
             this.xrLabelPrintDate.Text = this.xrLabelPrintDate.Text + DateTime.Now.ToShortDateString();
@@ -100,7 +100,8 @@ namespace Book.UI.produceManager.PronoteHeader
             this.xrLabelUnit.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_ProductUnit);
             this.xrLabelXOJHDate.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");
             this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerLotNumber);
-            this.xrLabelProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
+            //this.xrLabelProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
+            this.xrLabelProductName.DataBindings.Add("Text", this.DataSource, "ProductNameWithVersion");
             this.xrRichTextProDesc.DataBindings.Add("Rtf", this.DataSource, "ProductDesc");
             this.xrLabelMRP.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_MRSHeaderId);
             this.xrLabelWorkHouse.DataBindings.Add("Text", this.DataSource, "Workhousename");

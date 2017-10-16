@@ -81,6 +81,12 @@ namespace Book.Model
             set { this._productName = value; }
         }
 
+        private string _productNameWithVersion;
+        public string ProductNameWithVersion
+        {
+            get { return this._productName + "    版次:" + (this.Product == null ? null : this.Product.ProductVersion); }
+        }
+
         private string _InvoiceId;
 
         public string InvoiceId

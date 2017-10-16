@@ -30,7 +30,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 this.xrLabelDataName.Text = Properties.Resources.GZZhiShi;
 
             }
-            else if (flag ==4)
+            else if (flag == 4)
             {
                 this.xrLabelDataName.Text = Properties.Resources.ZZJiaGong;
             }
@@ -55,13 +55,13 @@ namespace Book.UI.produceManager.PronoteHeader
             if (pronoteHeader.Product != null)
             {
 
-                this.xrLabelProductName.Text = pronoteHeader.Product.ProductName;
+                this.xrLabelProductName.Text = pronoteHeader.Product.ProductName + "    版次:" + pronoteHeader.Product.ProductVersion;
                 this.xrLabelCustomerProductName.Text = pronoteHeader.Product.CustomerProductName;
                 this.xrRichTextProDesc.Rtf = this.pronoteHeader.Product.ProductDescription;
-                if (this.pronoteHeader.Product.AttrZhengMai!=null)
-                this.RichTextZhengMai.Rtf = this.pronoteHeader.Product.AttrZhengMai;
+                if (this.pronoteHeader.Product.AttrZhengMai != null)
+                    this.RichTextZhengMai.Rtf = this.pronoteHeader.Product.AttrZhengMai;
                 if (this.pronoteHeader.Product.AttrCeMai != null)
-                this.RichTextCeMai.Rtf = this.pronoteHeader.Product.AttrCeMai;
+                    this.RichTextCeMai.Rtf = this.pronoteHeader.Product.AttrCeMai;
 
             }
             Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(this.pronoteHeader.InvoiceXOId);
@@ -77,7 +77,7 @@ namespace Book.UI.produceManager.PronoteHeader
             this.xrLabelCount.Text = pronoteHeader.DetailsSum.ToString();
             this.xrLabelUnit.Text = pronoteHeader.ProductUnit;
             this.xrLabelPronotedesc.Text = this.pronoteHeader.Pronotedesc;
-            this.lbl_ProduceMaterial.Text = this.pronoteHeader.Materialprocessum == null ? "" : this.pronoteHeader.Materialprocessum.ToString(); 
+            this.lbl_ProduceMaterial.Text = this.pronoteHeader.Materialprocessum == null ? "" : this.pronoteHeader.Materialprocessum.ToString();
 
             //if (this.pronoteHeader.DetailProcedures != null && this.pronoteHeader.DetailProcedures.Count > 0)
             //{

@@ -164,6 +164,11 @@ namespace Book.Model
 
         //  }
 
+        public string ProductNameWithVersion
+        {
+            get { return this.ProductName + "    版次:" + this.ProductVersion; }
+        }
 
+        public static string Pro_ProductNameWithVersion = "ProductNameWithVersion";
     }
 }

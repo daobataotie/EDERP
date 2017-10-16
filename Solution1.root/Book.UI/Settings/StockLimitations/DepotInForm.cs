@@ -134,8 +134,8 @@ namespace Book.UI.Settings.StockLimitations
 
             if (this._depotIn.Employee0Id != null)
                 this.newChooseEmp1.EditValue = _depotIn.Employee0;
-            //else
-            //    this.newChooseEmp0.EditValue = null;
+            else
+                this.newChooseEmp1.EditValue = null;
 
 
             this.newChooseEmp0.EditValue = this._depotIn.Employee;
