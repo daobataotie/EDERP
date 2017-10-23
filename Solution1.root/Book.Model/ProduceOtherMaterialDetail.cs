@@ -8,12 +8,12 @@
 using System;
 namespace Book.Model
 {
-	/// <summary>
-	/// 外包领料详细
-	/// </summary>
-	[Serializable]
-	public partial class ProduceOtherMaterialDetail
-	{
+    /// <summary>
+    /// 外包领料详细
+    /// </summary>
+    [Serializable]
+    public partial class ProduceOtherMaterialDetail
+    {
         private string _productSpecification;
         /// <summary>
         /// 规格型号
@@ -51,5 +51,7 @@ namespace Book.Model
         public string CustomerInvoiceXOId { get; set; }
 
         public string ProductName { get; set; }
-	}
+
+        public string ParentProductName { get; set; }
+    }
 }
