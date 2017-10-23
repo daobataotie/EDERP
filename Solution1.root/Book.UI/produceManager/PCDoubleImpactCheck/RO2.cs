@@ -140,13 +140,15 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             //this.TCattrHotR.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrHotR);
             //this.TCattrCoolR.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrCoolL);
             //this.TCattrCoolR.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrCoolR);
-            this.TCEmployee.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
 
             this.TCattrHeat.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrHeat60);
             this.TCattrZhuiQiuL.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrJPUpL);
             this.TCattrZhuiQiuR.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrJPUpR);
             this.TCChuanTouL.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrJPDownL);
             this.TCChuanTouR.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrJPDownR);
+
+            //this.TCEmployee.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
+            this.TCNote.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.Pro_Note);
         }
     }
 }

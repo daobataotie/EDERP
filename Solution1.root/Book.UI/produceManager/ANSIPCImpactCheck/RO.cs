@@ -115,7 +115,8 @@ namespace Book.UI.produceManager
             this.TCattr90cDown10mmR.DataBindings.Add("Text", this.DataSource, Model.ANSIPCImpactCheckDetail.PRO_attr90cDown10mmR);
             this.TCattr90cUp10mmL.DataBindings.Add("Text", this.DataSource, Model.ANSIPCImpactCheckDetail.PRO_attr90cUp10mmL);
             this.TCattr90cUp10mmR.DataBindings.Add("Text", this.DataSource, Model.ANSIPCImpactCheckDetail.PRO_attr90cUp10mmR);
-            this.TCEmployee.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
+            //this.TCNote.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
+            this.TCNote.DataBindings.Add("Text", this.DataSource, Model.ANSIPCImpactCheckDetail.Pro_Note);
         }
     }
 }

@@ -38,6 +38,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="attrCoolR" column="attrCoolR" />
       <result property="attrHeat60" column="attrHeat60"/>
       <result property="attrHeat30m" column="attrHeat30m"/>
+      <result property="Note" column="Note"/>
       <result property="PCDoubleImpactCheck" column="PCDoubleImpactCheckID" lazyLoad="false" select="PCDoubleImpactCheck.select_by_primary_key" />
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
     </resultMap>
@@ -97,7 +98,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [attrCoolL],
       [attrCoolR],
       [attrHeat60],
-      [attrHeat30m]
+      [attrHeat30m],
+      [Note]
       FROM
       [dbo].[PCDoubleImpactCheckDetail]
       WHERE
@@ -173,7 +175,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [attrCoolL],
       [attrCoolR],
       [attrHeat60],
-      [attrHeat30m]
+      [attrHeat30m],
+      [Note]
       )
       VALUES
       (
@@ -208,7 +211,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #attrCoolL#,
       #attrCoolR#,
       #attrHeat60#,
-      #attrHeat30m#
+      #attrHeat30m#,
+      #Note#
       )
     </insert>
 
@@ -245,7 +249,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [attrCoolL]=#attrCoolL#,
       [attrCoolR]=#attrCoolR#,
       [attrHeat60]=#attrHeat60#,
-      [attrHeat30m]=#attrHeat30m#
+      [attrHeat30m]=#attrHeat30m#,
+      [Note]=#Note#
       WHERE
       [PCDoubleImpactCheckDetailID] = #PCDoubleImpactCheckDetailID#
     </update>

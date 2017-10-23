@@ -37,6 +37,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="attr90cUp10mmR" column="attr90cUp10mmR" />
       <result property="attr90cDown10mmL" column="attr90cDown10mmL" />
       <result property="attr90cDown10mmR" column="attr90cDown10mmR" />
+      <result property="Note" column="Note"/>
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
     </resultMap>
   </resultMaps>
@@ -94,7 +95,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [attr90cUp10mmL],
       [attr90cUp10mmR],
       [attr90cDown10mmL],
-      [attr90cDown10mmR]
+      [attr90cDown10mmR],
+      [Note]
       FROM
       [dbo].[ANSIPCImpactCheckDetail]
       WHERE
@@ -169,7 +171,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [attr90cUp10mmL],
       [attr90cUp10mmR],
       [attr90cDown10mmL],
-      [attr90cDown10mmR]
+      [attr90cDown10mmR],
+      [Note]
       )
       VALUES
       (
@@ -203,7 +206,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #attr90cUp10mmL#,
       #attr90cUp10mmR#,
       #attr90cDown10mmL#,
-      #attr90cDown10mmR#
+      #attr90cDown10mmR#,
+      #Note#
       )
     </insert>
 
@@ -239,7 +243,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [attr90cUp10mmL] = #attr90cUp10mmL#,
       [attr90cUp10mmR] = #attr90cUp10mmR#,
       [attr90cDown10mmL] = #attr90cDown10mmL#,
-      [attr90cDown10mmR] = #attr90cDown10mmR#
+      [attr90cDown10mmR] = #attr90cDown10mmR#,
+      [Note]=#Note#
       WHERE
       [ANSIPCImpactCheckDetailsID] = #ANSIPCImpactCheckDetailsID#
     </update>

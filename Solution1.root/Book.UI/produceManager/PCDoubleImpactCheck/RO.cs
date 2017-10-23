@@ -140,7 +140,8 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrHotR.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrHotR);
             this.TCattrCoolL.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrCoolL);
             this.TCattrCoolR.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrCoolR);
-            this.TCEmployee.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
+            //this.TCEmployee.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
+            this.TCNote.DataBindings.Add("Text",this.DataSource,Model.PCDoubleImpactCheckDetail.Pro_Note);
         }
     }
 }

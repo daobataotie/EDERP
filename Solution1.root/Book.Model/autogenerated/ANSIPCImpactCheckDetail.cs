@@ -816,5 +816,15 @@ namespace Book.Model
 
 
         #endregion
+
+        private string _note;
+
+        public string Note
+        {
+            get { return _note; }
+            set { _note = value; }
+        }
+
+        public static string Pro_Note = "Note";
     }
 }

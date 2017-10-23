@@ -30,7 +30,7 @@ namespace Book.UI.produceManager
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO1));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.TCEmployee = new DevExpress.XtraReports.UI.XRLabel();
+            this.TCNote = new DevExpress.XtraReports.UI.XRLabel();
             this.TCattrDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -116,7 +116,7 @@ namespace Book.UI.produceManager
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.TCEmployee,
+            this.TCNote,
             this.TCattrDate,
             this.xrTable3,
             this.xrTable2});
@@ -124,16 +124,16 @@ namespace Book.UI.produceManager
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             // 
-            // TCEmployee
+            // TCNote
             // 
-            this.TCEmployee.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
+            this.TCNote.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            resources.ApplyResources(this.TCEmployee, "TCEmployee");
-            this.TCEmployee.Name = "TCEmployee";
-            this.TCEmployee.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.TCEmployee.StylePriority.UseBorders = false;
-            this.TCEmployee.StylePriority.UseFont = false;
-            this.TCEmployee.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.TCNote, "TCNote");
+            this.TCNote.Name = "TCNote";
+            this.TCNote.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.TCNote.StylePriority.UseBorders = false;
+            this.TCNote.StylePriority.UseFont = false;
+            this.TCNote.StylePriority.UseTextAlignment = false;
             // 
             // TCattrDate
             // 
@@ -898,7 +898,7 @@ namespace Book.UI.produceManager
         private DevExpress.XtraReports.UI.XRTableCell TCattr90L;
         private DevExpress.XtraReports.UI.XRTableCell TCattr90cUp10mmL;
         private DevExpress.XtraReports.UI.XRTableCell TCattr90cDown10mmL;
-        private DevExpress.XtraReports.UI.XRLabel TCEmployee;
+        private DevExpress.XtraReports.UI.XRLabel TCNote;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRRichText RTDescript;
         private DevExpress.XtraReports.UI.XRLabel lblEmployee0;

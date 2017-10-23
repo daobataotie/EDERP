@@ -728,5 +728,15 @@ namespace Book.Model
         public readonly static string PRO_attrHeat30m = "attrHeat30m";
 
         #endregion
+
+        private string _note;
+
+        public string Note
+        {
+            get { return _note; }
+            set { _note = value; }
+        }
+
+        public static string Pro_Note = "Note";
     }
 }

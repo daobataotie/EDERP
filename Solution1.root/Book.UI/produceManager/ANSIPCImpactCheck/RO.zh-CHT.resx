@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="xrCheckBox2.Text" xml:space="preserve">
-    <value>高速衝擊</value>
-  </data>
-  <data name="xrCheckBox1.Text" xml:space="preserve">
-    <value>尖錐墜落</value>
-  </data>
   <data name="xrLabel8.Text" xml:space="preserve">
     <value>單位：</value>
   </data>
@@ -155,7 +149,7 @@
     <value>鏡片</value>
   </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
-    <value>測試者</value>
+    <value>備註</value>
   </data>
   <data name="xrLabel11.Text" xml:space="preserve">
     <value>單據日期：</value>

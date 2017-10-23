@@ -52,6 +52,8 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit35 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.attrDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RIDEattrDate = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.attrBanBie = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -111,8 +113,6 @@
             this.Employee = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GirdViewLookUpEditEmployee = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.bsLUEemployees = new System.Windows.Forms.BindingSource(this.components);
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit35 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.RICBattr60L = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemLookUpEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit12 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -154,6 +154,7 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -174,6 +175,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIDEattrDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIDEattrDate.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RICBattrBanBie)).BeginInit();
@@ -205,7 +207,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GirdViewLookUpEditEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsLUEemployees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RICBattr60L)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit12)).BeginInit();
@@ -515,12 +516,28 @@
             this.attr90cUp10mmR,
             this.attr90cDown10mmL,
             this.attr90cDown10mmR,
-            this.Employee});
+            this.Employee,
+            this.gridColumn2});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
+            // 
+            // gridColumn1
+            // 
+            resources.ApplyResources(this.gridColumn1, "gridColumn1");
+            this.gridColumn1.ColumnEdit = this.repositoryItemLookUpEdit35;
+            this.gridColumn1.FieldName = "CheckAll";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // repositoryItemLookUpEdit35
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit35, "repositoryItemLookUpEdit35");
+            this.repositoryItemLookUpEdit35.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit35.Buttons"))))});
+            this.repositoryItemLookUpEdit35.Name = "repositoryItemLookUpEdit35";
+            this.repositoryItemLookUpEdit35.EditValueChanged += new System.EventHandler(this.repositoryItemLookUpEdit35_EditValueChanged);
             // 
             // attrDate
             // 
@@ -940,21 +957,6 @@
             this.GirdViewLookUpEditEmployee.Name = "GirdViewLookUpEditEmployee";
             this.GirdViewLookUpEditEmployee.ValueMember = "EmployeeId";
             // 
-            // gridColumn1
-            // 
-            resources.ApplyResources(this.gridColumn1, "gridColumn1");
-            this.gridColumn1.ColumnEdit = this.repositoryItemLookUpEdit35;
-            this.gridColumn1.FieldName = "CheckAll";
-            this.gridColumn1.Name = "gridColumn1";
-            // 
-            // repositoryItemLookUpEdit35
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit35, "repositoryItemLookUpEdit35");
-            this.repositoryItemLookUpEdit35.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit35.Buttons"))))});
-            this.repositoryItemLookUpEdit35.Name = "repositoryItemLookUpEdit35";
-            this.repositoryItemLookUpEdit35.EditValueChanged += new System.EventHandler(this.repositoryItemLookUpEdit35_EditValueChanged);
-            // 
             // RICBattr60L
             // 
             resources.ApplyResources(this.RICBattr60L, "RICBattr60L");
@@ -1346,6 +1348,12 @@
             this.barBtnSearch.Name = "barBtnSearch";
             this.barBtnSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnSearch_ItemClick);
             // 
+            // gridColumn2
+            // 
+            resources.ApplyResources(this.gridColumn2, "gridColumn2");
+            this.gridColumn2.FieldName = "Note";
+            this.gridColumn2.Name = "gridColumn2";
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1373,6 +1381,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIDEattrDate.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RIDEattrDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RICBattrBanBie)).EndInit();
@@ -1404,7 +1413,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GirdViewLookUpEditEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsLUEemployees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RICBattr60L)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit12)).EndInit();
@@ -1575,5 +1583,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

@@ -1546,10 +1546,13 @@
   <data name="GirdViewLookUpEditEmployee.NullText" xml:space="preserve">
     <value />
   </data>
-  <data name="Employee.Visible" type="System.Boolean, mscorlib">
+  <data name="gridColumn3.Caption" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="gridColumn3.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Employee.VisibleIndex" type="System.Int32, mscorlib">
+  <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
   <data name="RICBattr60L.AutoHeight" type="System.Boolean, mscorlib">
@@ -2733,6 +2736,12 @@
   </data>
   <data name="&gt;&gt;repositoryItemCheckedComboBoxEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
+    <value>gridColumn3</value>
+  </data>
+  <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

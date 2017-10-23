@@ -120,9 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="barBtnSearch.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -1371,6 +1368,9 @@
   <data name="Employee.Caption" xml:space="preserve">
     <value>测试者</value>
   </data>
+  <metadata name="bsLUEemployees.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>448, 17</value>
+  </metadata>
   <data name="GirdViewLookUpEditEmployee.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1389,16 +1389,16 @@
   <data name="GirdViewLookUpEditEmployee.Columns3" xml:space="preserve">
     <value>姓名</value>
   </data>
-  <metadata name="bsLUEemployees.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>448, 17</value>
-  </metadata>
   <data name="GirdViewLookUpEditEmployee.NullText" xml:space="preserve">
     <value />
   </data>
-  <data name="Employee.Visible" type="System.Boolean, mscorlib">
+  <data name="gridColumn2.Caption" xml:space="preserve">
+    <value>備註</value>
+  </data>
+  <data name="gridColumn2.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Employee.VisibleIndex" type="System.Int32, mscorlib">
+  <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
   <data name="RICBattr60L.AutoHeight" type="System.Boolean, mscorlib">
@@ -1800,6 +1800,12 @@
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="bsLUEemployees.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>448, 17</value>
+  </metadata>
+  <data name="barBtnSearch.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1859,6 +1865,18 @@
   </data>
   <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
+    <value>gridColumn1</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit35.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit35</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit35.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;attrDate.Name" xml:space="preserve">
     <value>attrDate</value>
@@ -2214,18 +2232,6 @@
   <data name="&gt;&gt;bsLUEemployees.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
-    <value>gridColumn1</value>
-  </data>
-  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemLookUpEdit35.Name" xml:space="preserve">
-    <value>repositoryItemLookUpEdit35</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemLookUpEdit35.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;RICBattr60L.Name" xml:space="preserve">
     <value>RICBattr60L</value>
   </data>
@@ -2441,6 +2447,12 @@
   </data>
   <data name="&gt;&gt;barBtnSearch.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Name" xml:space="preserve">
+    <value>gridColumn2</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

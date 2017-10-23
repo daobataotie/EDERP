@@ -47,7 +47,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrS_SXiaR = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCattrHotR = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCattrCoolR = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCEmployee = new DevExpress.XtraReports.UI.XRLabel();
+            this.TCNote = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell26 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -122,7 +122,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrBiZhong,
             this.xrTable5,
             this.xrTable4,
-            this.TCEmployee,
+            this.TCNote,
             this.xrTable2,
             this.TCPCDoubleImpactCheckDetailDate,
             this.xrTable3});
@@ -287,16 +287,16 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrCoolR.StylePriority.UseTextAlignment = false;
             this.TCattrCoolR.Weight = 0.21805034052577646;
             // 
-            // TCEmployee
+            // TCNote
             // 
-            this.TCEmployee.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
+            this.TCNote.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            resources.ApplyResources(this.TCEmployee, "TCEmployee");
-            this.TCEmployee.Name = "TCEmployee";
-            this.TCEmployee.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.TCEmployee.StylePriority.UseBorders = false;
-            this.TCEmployee.StylePriority.UseFont = false;
-            this.TCEmployee.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.TCNote, "TCNote");
+            this.TCNote.Name = "TCNote";
+            this.TCNote.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.TCNote.StylePriority.UseBorders = false;
+            this.TCNote.StylePriority.UseFont = false;
+            this.TCNote.StylePriority.UseTextAlignment = false;
             // 
             // xrTable2
             // 
@@ -903,7 +903,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.XRLabel lblCheckStandard;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
-        private DevExpress.XtraReports.UI.XRLabel TCEmployee;
+        private DevExpress.XtraReports.UI.XRLabel TCNote;
         private DevExpress.XtraReports.UI.XRTable xrTable5;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow5;
         private DevExpress.XtraReports.UI.XRTableCell TCattrS_SZhongL;
