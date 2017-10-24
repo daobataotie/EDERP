@@ -55,6 +55,7 @@
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -103,7 +104,8 @@
             this.gridColumn18,
             this.gridColumn19,
             this.gridColumn20,
-            this.gridColumn21});
+            this.gridColumn21,
+            this.gridColumn22});
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -222,7 +224,6 @@
             resources.ApplyResources(this.gridColumn16, "gridColumn16");
             this.gridColumn16.FieldName = "ProductName";
             this.gridColumn16.Name = "gridColumn16";
-            this.gridColumn16.Width = 180;
             // 
             // gridColumn17
             // 
@@ -235,7 +236,6 @@
             resources.ApplyResources(this.gridColumn18, "gridColumn18");
             this.gridColumn18.FieldName = "ProductCategoryName";
             this.gridColumn18.Name = "gridColumn18";
-            this.gridColumn18.Width = 85;
             // 
             // gridColumn19
             // 
@@ -261,6 +261,12 @@
             this.barButtonItem2.Id = 13;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // gridColumn22
+            // 
+            resources.ApplyResources(this.gridColumn22, "gridColumn22");
+            this.gridColumn22.FieldName = "CustomerFullName";
+            this.gridColumn22.Name = "gridColumn22";
             // 
             // List1Form
             // 
@@ -308,5 +314,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
     }
 }

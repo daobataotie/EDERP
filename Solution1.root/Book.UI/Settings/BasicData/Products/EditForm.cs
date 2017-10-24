@@ -1925,7 +1925,7 @@ namespace Book.UI.Settings.BasicData.Products
 
                     this.spinEditPlanSellPrice.Properties.ReadOnly = true;
                     this.textEditPowerGroup.Properties.ReadOnly = true;
-                    this.textEditProduceCounty.Properties.ReadOnly = true;
+                    //this.textEditProduceCounty.Properties.ReadOnly = true;
 
                     //this.newChooseContorProduceUnitId.ShowButton = false;
                     //this.newChooseContorProduceUnitId.ButtonReadOnly = true;

@@ -208,6 +208,7 @@
       <result property="SupplierId" column="SupplierId" />
       <result property="ProductCategoryId" column="ProductCategoryId"/>
       <result property="ProductName" column="ProductName" />
+      <result property="ProduceCounty" column="ProduceCounty"/>
       <result property="ReferenceCost" column="ReferenceCost" />
       <result property="ReferenceSellPrice" column="ReferenceSellPrice" />
       <result property="ProductSpecification" column="ProductSpecification"/>
@@ -285,6 +286,7 @@
       SupplierId,
       ProductCategoryId,
       ProductName,
+      ProduceCounty,
       ReferenceCost,
       ReferenceSellPrice, 
       ProductSpecification,
@@ -406,6 +408,7 @@ where ProductId = #productid#
       SupplierId,
       ProductCategoryId,
       ProductName,
+      ProduceCounty,
       ReferenceCost,
       ReferenceSellPrice,
       ProductSpecification,
@@ -807,6 +810,7 @@ where ProductId = #productid#
       SupplierId,
       ProductCategoryId,
       ProductName,
+      ProduceCounty,
       ReferenceCost,
       ReferenceSellPrice, 
       ProductSpecification,

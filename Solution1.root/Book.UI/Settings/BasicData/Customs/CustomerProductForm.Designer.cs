@@ -552,6 +552,7 @@
             this.lookUpSellUnit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lookUpSellUnit.Properties.ValueMember = "ProductUnitId";
             this.lookUpSellUnit.StyleController = this.layoutControl1;
+            this.lookUpSellUnit.EditValueChanged += new System.EventHandler(this.lookUpSellUnit_EditValueChanged);
             // 
             // lookUpDepotUnit
             // 

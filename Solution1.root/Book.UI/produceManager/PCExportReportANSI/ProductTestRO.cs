@@ -18,7 +18,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         {
             this.TCCheckStandard.Text = pcDataInput.CheckStandard;
             this.TCCustomerShortName.Text = pcDataInput.CustomerShortName;
-            this.TCProduct.Text = pcDataInput.Product == null ? "" : pcDataInput.Product.ToString();
+            this.TCProduct.Text = pcDataInput.Product == null ? "" : pcDataInput.Product.ProduceCounty;
             this.TCInvoiceCusId.Text = pcDataInput.InvoiceCusId;
             this.TCTotalQuantity.Text = pcDataInput.OrderQuantity.HasValue ? pcDataInput.OrderQuantity.Value.ToString("f0") : "";
             //this.TCTotalQuantity.Text = pcDataInput.PronoteHeader.DetailsSum.HasValue ? pcDataInput.PronoteHeader.DetailsSum.ToString() : "";

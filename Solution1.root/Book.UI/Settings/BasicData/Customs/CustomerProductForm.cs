@@ -1107,6 +1107,11 @@ namespace Book.UI.Settings.BasicData.Customs
             ro.ShowPreviewDialog();
         }
 
+        private void lookUpSellUnit_EditValueChanged(object sender, EventArgs e)
+        {
+            this.lookUpEditQualityTestUnitId.EditValue = this.lookUpSellUnit.EditValue;
+        }
+
         // bool isck = false;
         //private void gridView1_ShowingEditor_1(object sender, CancelEventArgs e)
         //{

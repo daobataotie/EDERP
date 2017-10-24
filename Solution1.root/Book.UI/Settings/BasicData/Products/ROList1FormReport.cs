@@ -15,7 +15,7 @@ namespace Book.UI.Settings.BasicData.Products
 
             this.DataSource = dt;
 
-            this.lblPrintDate.Text += DateTime.Now.Date;
+            this.lblPrintDate.Text += DateTime.Now.ToString("yyyy-MM-dd");
 
             this.TCID.DataBindings.Add("Text",this.DataSource,"Id");
             this.TCName.DataBindings.Add("Text", this.DataSource, "ProductName");

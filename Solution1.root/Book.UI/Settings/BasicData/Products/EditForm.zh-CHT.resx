@@ -462,10 +462,10 @@
     <value>供應商:</value>
   </data>
   <data name="layoutControlItem4.CustomizationFormText" xml:space="preserve">
-    <value>生產國家:</value>
+    <value>報告商品名稱:</value>
   </data>
   <data name="layoutControlItem4.Text" xml:space="preserve">
-    <value>生產國家:</value>
+    <value>報告商品名稱:</value>
   </data>
   <data name="layoutControlItem7.CustomizationFormText" xml:space="preserve">
     <value>商品型號:</value>

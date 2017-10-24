@@ -1141,7 +1141,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 生产国家
+        /// 生产国家,2017年10月24日22:31:45 改 報告商品名稱
         /// </summary>
         public string ProduceCounty
         {
