@@ -3028,7 +3028,7 @@ namespace Book.UI.Settings.BasicData.Products
             {
                 if (xtraTabControl1.SelectedTabPage == this.xtraTabPageStock)
                 {
-                    this.gridControlStock.DataSource = this.stockManager.SelectReaderByPro(this.product.ProductId, this.dateEditStockStart.DateTime, this.dateEditStockEnd.DateTime);
+                    //this.gridControlStock.DataSource = this.stockManager.SelectReaderByPro(this.product.ProductId, this.dateEditStockStart.DateTime, this.dateEditStockEnd.DateTime);
 
                 }
             }
