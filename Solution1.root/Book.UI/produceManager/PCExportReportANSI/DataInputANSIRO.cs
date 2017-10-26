@@ -26,7 +26,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             if (pcExportReportANSI != null)
                 this.xrSubreportANSI.ReportSource = new RO(pcExportReportANSI, tag);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
-            this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
+
+            if (pcDataInput.PCOpticalMachineList != null && pcDataInput.PCOpticalMachineList.Count != 0)
+                this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
 
             if (pcDataInput.PCHazeList != null && pcDataInput.PCHazeList.Count != 0)
                 this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);

@@ -30,8 +30,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             if (pcAS != null)
                 this.xrSubreportAS.ReportSource = new ASRO2017(pcAS, tag);
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
-            this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
-            this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
+            //this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
+
+            if (pcDataInput.PCOpticalMachineList != null && pcDataInput.PCOpticalMachineList.Count != 0)
+                this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
 
             if (pcDataInput.PCHazeList != null && pcDataInput.PCHazeList.Count != 0)
                 this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
