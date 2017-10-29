@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{ECCEF5A5-BC9A-4CA4-9879-A8E1B170F7B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -1918,12 +1918,6 @@
     </Compile>
     <Compile Include="Query\Q51.Designer.cs">
       <DependentUpon>Q51.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Query\Q52.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Query\Q52.Designer.cs">
-      <DependentUpon>Q52.cs</DependentUpon>
     </Compile>
     <Compile Include="Query\Q53.cs">
       <SubType>Component</SubType>
@@ -5214,6 +5208,14 @@
       <DependentUpon>OutDepotDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Query\Q52.resx">
+      <DependentUpon>Q52.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\Q52.zh-CHT.resx">
+      <DependentUpon>Q52.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Query\Q53_2.zh-CHT.resx">
       <DependentUpon>Q53_2.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -7574,14 +7576,6 @@
       <DependentUpon>Q51.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Query\Q52.resx">
-      <DependentUpon>Q52.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Query\Q52.zh-CHT.resx">
-      <DependentUpon>Q52.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Query\Q53.resx">
       <DependentUpon>Q53.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -7832,6 +7826,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\Q54Update.resx">
       <DependentUpon>Q54Update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\Q52_BackUp.resx">
+      <DependentUpon>Q52_BackUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\Q52_BackUp.zh-CHT.resx">
+      <DependentUpon>Q52_BackUp.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ROStockPrompt.resx">
@@ -12335,6 +12337,12 @@
     <Compile Include="Query\OutDepotDetail.Designer.cs">
       <DependentUpon>OutDepotDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Query\Q52.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\Q52.designer.cs">
+      <DependentUpon>Q52.cs</DependentUpon>
+    </Compile>
     <Compile Include="Query\ROFP.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -12975,6 +12983,12 @@
     </Compile>
     <Compile Include="Query\Q54Update.designer.cs">
       <DependentUpon>Q54Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\Q52_BackUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Query\Q52_BackUp.Designer.cs">
+      <DependentUpon>Q52_BackUp.cs</DependentUpon>
     </Compile>
     <Compile Include="ROStockPrompt.cs">
       <SubType>Component</SubType>

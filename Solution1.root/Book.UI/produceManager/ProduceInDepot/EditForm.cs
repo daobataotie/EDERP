@@ -744,7 +744,7 @@ namespace Book.UI.produceManager.ProduceInDepot
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 Query.ConditionProInDepotChoose condition = f.Condition as Query.ConditionProInDepotChoose;
-                IList<Model.ProduceInDepotDetail> list = this.produceInDepotDetailManager.Select(condition.StartPronoteHeader, condition.EndPronoteHeader, condition.StartDate, condition.EndDate, condition.Product, condition.WorkHouse, condition.MDepot, condition.MDepotPosition, condition.Id1, condition.Id2, condition.Cusxoid, condition.Customer1, condition.Customer2, condition.ProductState);
+                IList<Model.ProduceInDepotDetail> list = this.produceInDepotDetailManager.SelectMonthCount(condition.StartPronoteHeader, condition.EndPronoteHeader, condition.StartDate, condition.EndDate, condition.Product, condition.WorkHouse, condition.MDepot, condition.MDepotPosition, condition.Id1, condition.Id2, condition.Cusxoid, condition.Customer1, condition.Customer2, condition.ProductState);
                 if (list == null || list.Count <= 0)
                 {
                     MessageBox.Show("無符合條件數據記錄");

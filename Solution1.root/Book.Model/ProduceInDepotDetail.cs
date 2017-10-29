@@ -176,6 +176,10 @@ namespace Book.Model
             get { return (mYuanliaowenti == null ? 0 : mYuanliaowenti) + (mChouliaowenti == null ? 0 : mChouliaowenti) + (mPaoguanwenti == null ? 0 : mPaoguanwenti) + (mJingdiangudingdian == null ? 0 : mJingdiangudingdian) + (mChapiancashang == null ? 0 : mChapiancashang) + (mWanMocashang == null ? 0 : mWanMocashang) + (mGuaiShouZhuangShang == null ? 0 : mGuaiShouZhuangShang) + (mHuabancashang == null ? 0 : mHuabancashang) + (mGuohuojizhua == null ? 0 : mGuohuojizhua) + (mBaiyanHeiYan == null ? 0 : mBaiyanHeiYan) + (mJieHeXianHuiwen == null ? 0 : mJieHeXianHuiwen) + (mSuoShui == null ? 0 : mSuoShui) + (mQiPao == null ? 0 : mQiPao) + (mShechuqita == null ? 0 : mShechuqita) + (mCaMoSunHua == null ? 0 : mCaMoSunHua) + (mChaipiancashang == null ? 0 : mChaipiancashang) + (mHeidianzazhi == null ? 0 : mHeidianzazhi) + (mQianghuaqiancashang == null ? 0 : mQianghuaqiancashang) + (mQianghuahoucashang == null ? 0 : mQianghuahoucashang) + (mHanyao == null ? 0 : mHanyao) + (mKeLimianxu == null ? 0 : mKeLimianxu) + (mLiuheng == null ? 0 : mLiuheng) + (mPengYaodiyao == null ? 0 : mPengYaodiyao) + (mQianghuafangwuxian == null ? 0 : mQianghuafangwuxian) + (mYoudian == null ? 0 : mYoudian) + (mQianghuaQiTa == null ? 0 : mQianghuaQiTa) + (mChangshangbuliang == null ? 0 : mChangshangbuliang) + (mZuzhuangcashang == null ? 0 : mZuzhuangcashang) + (mCashang == null ? 0 : mCashang) + (mPinjianqita == null ? 0 : mPinjianqita) + (mPinguanqita == null ? 0 : mPinguanqita) + (mPodong == null ? 0 : mPodong) + (mBowen == null ? 0 : mBowen); }
         }
 
+        //2017年10月27日23:49:05
+        public string DepotName { get; set; }
+        public DateTime? HeaderDate { get; set; }
+
         public readonly static string PRO_ProInDepotDetailDate = "ProInDepotDetailDate";
 
         public readonly static string PRO_RejectionRate_1 = "RejectionRate_1";

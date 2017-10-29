@@ -62,6 +62,12 @@ namespace Book.BL
 
         }
 
+        public IList<Book.Model.ProduceInDepotDetail> SelectMonthCount(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Model.Product product, Model.WorkHouse work, Model.Depot mDepot, Model.DepotPosition mDepotPosition, string id1, string id2, string cusxoid, Model.Customer customer1, Model.Customer customer2, int ProductState)
+        {
+            return accessor.SelectMonthCount(startPronoteHeader, endPronoteHeader, startDate, endDate, product, work, mDepot, mDepotPosition, id1, id2, cusxoid, customer1, customer2, ProductState);
+
+        }
+
         public IList<Book.Model.ProduceInDepotDetail> Select(string PronoteHeaderId, DateTime startDate, DateTime endDate, string workhouseId, Model.Product product, string CusXOId)
         {
             return accessor.Select(PronoteHeaderId, startDate, endDate, workhouseId, product, CusXOId);

@@ -159,7 +159,7 @@ namespace Book.UI.Settings.BasicData.Customs
 
                 Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
                 //dynamic excel = Activator.CreateInstance(objClassType);
-                excel.Application.Workbooks.Add(true);
+                excel.Application.Workbooks.Add(true); 
                 //Microsoft.Office.Interop.Excel.Line l = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
 
                 Microsoft.Office.Interop.Excel.Range r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, productShipmentList.Count]);
