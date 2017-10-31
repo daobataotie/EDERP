@@ -1411,7 +1411,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel102.Text" xml:space="preserve">
-    <value>8.3 各部位耐燃性试验 Test for ignition of each section</value>
+    <value>8.3 各部位阻燃性试验 Test for ignition of each section</value>
   </data>
   <data name="xrLabel18.Text" xml:space="preserve">
     <value>台南厂</value>
@@ -1721,12 +1721,12 @@
     <value>1510.776, 1623.69568</value>
   </data>
   <data name="xrLabel101.Text" xml:space="preserve">
-    <value>5.3 耐燃性 Ignition</value>
+    <value>5.3 阻燃性 Ignition</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
     <value>Chinese (Traditional)</value>
-  </metadata>
+  </data>
 </root>

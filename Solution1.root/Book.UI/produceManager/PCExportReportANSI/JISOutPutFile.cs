@@ -60,46 +60,49 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             DataRow dr;
             dr = dt.NewRow();
-            dr[0] = "客戶訂單通知";
+            dr[0] = "訂單通知";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
-            dr[0] = "客戶採購單";
+            dr[0] = "採購單";
             dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "組裝加工單";
-            dt.Rows.Add(dr);
-            //dr = dt.NewRow();
-            //dr[0] = "半成品加工單";
-            //dt.Rows.Add(dr);
             dr = dt.NewRow();
             dr[0] = "生產加工單";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "原物料採購單";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "委外合同單";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
             dr[0] = "領料單";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
-            dr[0] = "出倉單";
+            dr[0] = "物料採購訂單";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
-            dr[0] = "出貨單/出貨通知單";
+            dr[0] = "入料檢驗單";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
-            dr[0] = "射出日報表";
+            dr[0] = "模具上線檢查表";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
-            dr[0] = "強化/防霧日報表";
+            dr[0] = "生產日報表";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "委外加工單";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "光學/厚度表";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "光譜測試";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "強化/防霧工作日報表";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "衝擊測試表";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
             dr[0] = "品檢日報表";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
-            dr[0] = "模具上線檢查表";
+            dr[0] = "委外加工檢驗單";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
             dr[0] = "組裝半成品日報表";
@@ -111,25 +114,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
             dr[0] = "組裝檢驗日報表";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
-            dr[0] = "入料檢驗單";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "光學/厚度表";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "光譜測試";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "衝擊測試表";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "委外合同單檢驗單";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
             dr[0] = "成品檢驗單";
             dt.Rows.Add(dr);
             dr = dt.NewRow();
             dr[0] = "出貨報告";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "出貨通知單";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "出庫單";
             dt.Rows.Add(dr);
         }
 
@@ -565,14 +559,14 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     //else
                     //{
                     //string str = id.Trim();
-                    if (name.Contains("客戶訂單通知") || name.Contains("客戶採購單"))
+                    if (name.Contains("訂單通知") || name.Contains("採購單"))
                     {
                         //Invoices.XO.EditForm xo = new Book.UI.Invoices.XO.EditForm(str);
                         //xo.Show(this);
                         Invoices.XO.ListForm listform = new Book.UI.Invoices.XO.ListForm(invoiceCusId);
                         listform.Show(this);
                     }
-                    else if (name.Contains("組裝加工單") || name.Contains("生產加工單") || name.Contains("組裝半成品日報表"))
+                    else if (name.Contains("生產加工單") || name.Contains("組裝半成品日報表"))
                     {
                         //PronoteHeader.EditForm pnt = new Book.UI.produceManager.PronoteHeader.EditForm(str);
                         //pnt.Show(this);
@@ -589,7 +583,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                         }
                         listform.Show(this);
                     }
-                    else if (name.Contains("原物料採購單"))
+                    else if (name.Contains("物料採購訂單"))
                     {
                         //Invoices.CO.EditForm co = new Book.UI.Invoices.CO.EditForm(str);
                         //co.Show(this);
@@ -598,7 +592,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                         PCOtherCheck.ListForm listform2 = new Book.UI.produceManager.PCOtherCheck.ListForm(invoiceCusId);
                         listform2.Show(this);
                     }
-                    else if (name.Contains("委外合同單") && !name.Contains("委外合同單檢驗單"))            //委外合同或者产品上线检验单
+                    else if (name.Contains("委外加工單"))            //委外合同或者产品上线检验单
                     {
                         //ProduceOtherCompact.EditForm p = new Book.UI.produceManager.ProduceOtherCompact.EditForm(str);
                         //p.Show(this);
@@ -628,21 +622,21 @@ namespace Book.UI.produceManager.PCExportReportANSI
                         ProduceOtherMaterial.ListForm listform2 = new Book.UI.produceManager.ProduceOtherMaterial.ListForm(invoiceCusId);
                         listform2.Show(this);
                     }
-                    else if (name.Contains("出倉單"))
+                    else if (name.Contains("出庫單"))
                     {
                         //Settings.StockLimitations.OutStockEditForm cc = new Book.UI.Settings.StockLimitations.OutStockEditForm(str);
                         //cc.Show(this);
                         Settings.StockLimitations.ChooseOutStockDepot f = new Book.UI.Settings.StockLimitations.ChooseOutStockDepot(invoiceCusId);
                         f.Show(this);
                     }
-                    else if (name.Contains("出貨單/出貨通知單"))
+                    else if (name.Contains("出貨通知單"))
                     {
                         //Invoices.XS.EditForm xc = new Book.UI.Invoices.XS.EditForm(str);
                         //xc.Show(this);
                         Invoices.XS.ListForm listform = new Book.UI.Invoices.XS.ListForm(invoiceCusId);
                         listform.Show(this);
                     }
-                    else if (name.Contains("射出日報表") || name.Contains("強化/防霧日報表") || name.Contains("品檢日報表") || name.Contains("成品組裝日報表"))
+                    else if (name.Contains("生產日報表") || name.Contains("強化/防霧工作日報表") || name.Contains("品檢日報表") || name.Contains("成品組裝日報表"))
                     {
                         //ProduceInDepot.EditForm pid = new Book.UI.produceManager.ProduceInDepot.EditForm(str);
                         //pid.Show(this);
@@ -687,7 +681,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     //    PCOpticsCheck.ListForm listform = new Book.UI.produceManager.PCOpticsCheck.ListForm(invoiceCusId);
                     //    listform.Show(this);
                     //}
-                    else if (name.Contains("委外合同單檢驗單"))
+                    else if (name.Contains("委外加工檢驗單"))
                     {
                         //PCOtherCheck.EditForm pcoc = new Book.UI.produceManager.PCOtherCheck.EditForm(str);
                         //pcoc.Show(this);

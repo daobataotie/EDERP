@@ -38,6 +38,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
+            this.txt_Wudu = new DevExpress.XtraEditors.TextEdit();
             this.nccToushilv = new Book.UI.Invoices.NewChooseContorl();
             this.nccChongji = new Book.UI.Invoices.NewChooseContorl();
             this.nccNairan = new Book.UI.Invoices.NewChooseContorl();
@@ -66,6 +67,7 @@
             this.layoutControlItem59 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem57 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem62 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btn_InvoiceCOId3 = new DevExpress.XtraEditors.ButtonEdit();
             this.btn_InvoiceCOId2 = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -146,8 +148,6 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.txt_Wudu = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem62 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -158,6 +158,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Wudu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_EN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_JIS.Properties)).BeginInit();
@@ -181,6 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem62)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_InvoiceCOId3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_InvoiceCOId2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -260,8 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Wudu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem62)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -377,6 +377,13 @@
             resources.ApplyResources(this.layoutControl3, "layoutControl3");
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup3;
+            // 
+            // txt_Wudu
+            // 
+            resources.ApplyResources(this.txt_Wudu, "txt_Wudu");
+            this.txt_Wudu.MenuManager = this.barManager1;
+            this.txt_Wudu.Name = "txt_Wudu";
+            this.txt_Wudu.StyleController = this.layoutControl3;
             // 
             // nccToushilv
             // 
@@ -650,6 +657,16 @@
             this.layoutControlItem57.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem57.TextToControlDistance = 0;
             this.layoutControlItem57.TextVisible = false;
+            // 
+            // layoutControlItem62
+            // 
+            this.layoutControlItem62.Control = this.txt_Wudu;
+            resources.ApplyResources(this.layoutControlItem62, "layoutControlItem62");
+            this.layoutControlItem62.Location = new System.Drawing.Point(465, 0);
+            this.layoutControlItem62.Name = "layoutControlItem62";
+            this.layoutControlItem62.Size = new System.Drawing.Size(94, 42);
+            this.layoutControlItem62.TextLocation = DevExpress.Utils.Locations.Top;
+            this.layoutControlItem62.TextSize = new System.Drawing.Size(90, 14);
             // 
             // btn_InvoiceCOId3
             // 
@@ -1473,23 +1490,6 @@
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
-            // txt_Wudu
-            // 
-            resources.ApplyResources(this.txt_Wudu, "txt_Wudu");
-            this.txt_Wudu.MenuManager = this.barManager1;
-            this.txt_Wudu.Name = "txt_Wudu";
-            this.txt_Wudu.StyleController = this.layoutControl3;
-            // 
-            // layoutControlItem62
-            // 
-            this.layoutControlItem62.Control = this.txt_Wudu;
-            resources.ApplyResources(this.layoutControlItem62, "layoutControlItem62");
-            this.layoutControlItem62.Location = new System.Drawing.Point(465, 0);
-            this.layoutControlItem62.Name = "layoutControlItem62";
-            this.layoutControlItem62.Size = new System.Drawing.Size(94, 42);
-            this.layoutControlItem62.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem62.TextSize = new System.Drawing.Size(90, 14);
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1507,6 +1507,7 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Wudu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_EN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_JIS.Properties)).EndInit();
@@ -1530,6 +1531,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem59)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem62)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_InvoiceCOId3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_InvoiceCOId2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -1609,8 +1611,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Wudu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem62)).EndInit();
             this.ResumeLayout(false);
 
         }

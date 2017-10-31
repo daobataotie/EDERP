@@ -986,10 +986,10 @@
     <value>冲击</value>
   </data>
   <data name="layoutControlItem48.CustomizationFormText" xml:space="preserve">
-    <value>耐燃测试</value>
+    <value>阻燃测试</value>
   </data>
   <data name="layoutControlItem48.Text" xml:space="preserve">
-    <value>耐燃测试</value>
+    <value>阻燃测试</value>
   </data>
   <data name="layoutControlItem49.CustomizationFormText" xml:space="preserve">
     <value>ANSI/CSA透视率</value>
@@ -2239,6 +2239,12 @@
   <data name="&gt;&gt;layoutControlItem57.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem62.Name" xml:space="preserve">
+    <value>layoutControlItem62</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem62.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;layoutControlGroup2.Name" xml:space="preserve">
     <value>layoutControlGroup2</value>
   </data>
@@ -2574,12 +2580,6 @@
   </data>
   <data name="&gt;&gt;barButtonItem4.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem62.Name" xml:space="preserve">
-    <value>layoutControlItem62</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem62.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>
