@@ -35,6 +35,7 @@ namespace Book.UI.Hr.Salary.Salaryset
         private BL.EmployeeManager employeeManager = new Book.BL.EmployeeManager();
         private BL.DepartmentManager deptmanager = new Book.BL.DepartmentManager();
         private BL.DutyManager dutymananage = new Book.BL.DutyManager();
+        BL.MonthlySalaryManager ms = new BL.MonthlySalaryManager();
 
         public EditForm()
         {
@@ -84,7 +85,6 @@ namespace Book.UI.Hr.Salary.Salaryset
 
         private void lookUpEditId_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
         {
-
             LookUpEdit lookUpEdit = sender as LookUpEdit;
             if (lookUpEdit.EditValue == null) return;
 
@@ -117,7 +117,7 @@ namespace Book.UI.Hr.Salary.Salaryset
         //当修改数据时，提示信息：修改某员工薪资信息
         private void gridView1_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
-            if (e.RowHandle < 0)
+            if (e.RowHandle < 0 || e.Column.Name == "gridColumn5")
                 return;
             DataTable dt = this.bindingSourceMonthlySalary.DataSource as DataTable;
             DataRow dr = dt.Rows[e.RowHandle];
@@ -131,7 +131,7 @@ namespace Book.UI.Hr.Salary.Salaryset
         //定位时，获取员工薪资信息
         private void gridView1_CellValueChanging(object sender, CellValueChangedEventArgs e)
         {
-            if (e.RowHandle < 0)
+            if (e.RowHandle < 0 || e.Column.Name == "gridColumn5")
                 return;
             GridView view = sender as GridView;
             GridHitInfo hitInfo = view.CalcHitInfo(view.GridControl.PointToClient(Cursor.Position));
@@ -139,6 +139,41 @@ namespace Book.UI.Hr.Salary.Salaryset
             {
                 premoney = this.gridView1.FocusedValue.ToString(); //修改前薪资信息   
             }
+        }
+
+        private void btn_UpdateSelectedEmpSalary_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime baseDate = Convert.ToDateTime(DateTime.Now.AddMonths(-1).ToString("yyyy/MM") + "/1");
+
+                foreach (DataRow dr in dataSet.Tables[0].Rows)
+                {
+                    if (dr["IsChecked"].ToString() == "True")
+                    {
+                        Model.Employee emp = employeeManager.Get(dr["EmployeeId"].ToString());
+                        if (emp != null)
+                        {
+                            ms.UpMonthSalFromClockFrm(emp, baseDate);
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("更新失敗！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            MessageBox.Show("更新成功！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void che_SelectAll_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach (DataRow dr in dataSet.Tables[0].Rows)
+            {
+                dr["IsChecked"] = this.che_SelectAll.Checked;
+            }
+            this.bindingSourceMonthlySalary.DataSource = dataSet.Tables[0];
         }
     }
 }

@@ -210,6 +210,8 @@ namespace Book.UI.produceManager.PCInputCheck
             this._PCInputCheck.InvoiceCGId = this.btn_InvoiceCGId1.Text + "," + this.btn_InvoiceCGId2.Text + "," + this.btn_InvoiceCGId3.Text;
             this._PCInputCheck.InvoiceXOCusId = this.txt_InvoiceXOCusId.Text;
 
+            this._PCInputCheck.TestQuantity = this.spe_TestQuantity.Value;
+
             switch (this.action)
             {
                 case "insert":
@@ -270,6 +272,8 @@ namespace Book.UI.produceManager.PCInputCheck
 
             this.nccConfirmor.EditValue = this._PCInputCheck.Confirmor;
             this.txt_InvoiceXOCusId.EditValue = this._PCInputCheck.InvoiceXOCusId;
+
+            this.spe_TestQuantity.EditValue = this._PCInputCheck.TestQuantity;
 
             //采购单，进库单
             string[] coid = string.IsNullOrEmpty(this._PCInputCheck.InvoiceCOId) ? null : this._PCInputCheck.InvoiceCOId.Split(',');
@@ -363,7 +367,7 @@ namespace Book.UI.produceManager.PCInputCheck
             }
         }
 
-        private void cobUnit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void btn_Product_EditValueChanged(object sender, EventArgs e)
         {
             Model.Product p = this.btn_Product.EditValue as Model.Product;
             if (p != null)
@@ -382,6 +386,27 @@ namespace Book.UI.produceManager.PCInputCheck
             }
             else
                 this.cobUnit.Properties.Items.Clear();
+        }
+
+        private void cobUnit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            //    Model.Product p = this.btn_Product.EditValue as Model.Product;
+            //    if (p != null)
+            //    {
+            //        if (!string.IsNullOrEmpty(p.BasedUnitGroupId))
+            //        {
+            //            BL.ProductUnitManager manager = new Book.BL.ProductUnitManager();
+            //            Model.UnitGroup ug = new BL.UnitGroupManager().Get(p.BasedUnitGroupId);
+            //            IList<Model.ProductUnit> unitList = manager.Select(ug);
+            //            this.cobUnit.Properties.Items.Clear();
+            //            foreach (Model.ProductUnit item in unitList)
+            //            {
+            //                this.cobUnit.Properties.Items.Add(item.CnName);
+            //            }
+            //        }
+            //    }
+            //    else
+            //        this.cobUnit.Properties.Items.Clear();
             if (this.cobUnit.Properties.Items.Count < 1)
             {
                 MessageBox.Show("請先選擇商品！", this.Text, MessageBoxButtons.OK);

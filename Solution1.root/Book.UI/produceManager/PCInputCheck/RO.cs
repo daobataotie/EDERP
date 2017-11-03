@@ -58,7 +58,7 @@ namespace Book.UI.produceManager.PCInputCheck
             this.lblLotNukber.Text = PCInputCheck.LotNumber;
             this.lblTestProduct.Text = PCInputCheck.TestProductId;
             this.lblTestEmployee.Text = PCInputCheck.TestEmployee == null ? null : PCInputCheck.TestEmployee.EmployeeName;
-
+            
             this.TCHeidian.Text = PCInputCheck.Heidian;
             this.TCGuohuo.Text = PCInputCheck.Guohuo;
             this.TCLiaodian.Text = PCInputCheck.Liaodian;
@@ -82,6 +82,8 @@ namespace Book.UI.produceManager.PCInputCheck
             this.TCToushiEmp.Text = PCInputCheck.ToushiEmployee == null ? null : PCInputCheck.ToushiEmployee.EmployeeName;
 
             this.lblConfirmor.Text = PCInputCheck.Confirmor == null ? null : PCInputCheck.Confirmor.EmployeeName;
+
+            this.lblTestQuantity.Text = PCInputCheck.TestQuantity.Value.ToString();
         }
     }
 }
