@@ -17,6 +17,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="manualId" column="manualId" />
       <result property="AuditState" column="AuditState" />
       <result property="AuditEmpId" column="AuditEmpId" />
+      <result property="PerspectiverateRight" column="PerspectiverateRight"/>
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="PCPGOnlineCheckDetail" column="PCPGOnlineCheckDetailId" lazyLoad="false" select="PCPGOnlineCheckDetail.select_by_primary_key" />
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -117,8 +118,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[ThicknessTestDate],
 				[manualId],
         [AuditState],
-        [AuditEmpId]
-        
+        [AuditEmpId],
+        [PerspectiverateRight]
 			FROM
 				[dbo].[ThicknessTest]
 			WHERE
@@ -182,7 +183,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[ThicknessTestDate],
 				[manualId],
         [AuditState],
-        [AuditEmpId]
+        [AuditEmpId],
+        [PerspectiverateRight]
 			) 
 			VALUES 
 			(
@@ -196,7 +198,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#ThicknessTestDate#,
 				#manualId#,
         #AuditState#,
-        #AuditEmpId#
+        #AuditEmpId#,
+        #PerspectiverateRight#
 			)
              ]]>
     </insert>
@@ -213,7 +216,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[ThicknessTestDate] = #ThicknessTestDate#,
 				[manualId] = #manualId#,
         [AuditState]=#AuditState#,        
-        [AuditEmpId]=#AuditEmpId#
+        [AuditEmpId]=#AuditEmpId#,
+        [PerspectiverateRight]=#PerspectiverateRight#
 			WHERE
 				[ThicknessTestId] = #ThicknessTestId#
                     ]]>

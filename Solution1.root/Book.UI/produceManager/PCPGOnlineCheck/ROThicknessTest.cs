@@ -20,11 +20,13 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             lblCompanyName.Text = BL.Settings.CompanyChineseName;
             lblROThicknessTest.Text = Book.UI.Properties.Resources.ROThicknessTest;
             lblTestId.Text = thicknessTest.ThicknessTestId;
-            lblPerspective.Text = thicknessTest.Perspectiverate.ToString();
+            lblPerspective.Text = thicknessTest.Perspectiverate.Value.ToString("0.####");
             lblTestDate.Text = thicknessTest.ThicknessTestDate.Value.ToString("yyyy-MM-dd");
             lblRemarks.Text = thicknessTest.ThicknessDescript;
             lblEmployee.Text = thicknessTest.Employee.EmployeeName;
             lblPrintTime.Text += DateTime.Now.ToShortDateString();
+
+            lblPerspectiveR.Text = thicknessTest.PerspectiverateRight.Value.ToString("0.####");
 
             this.DataSource = thicknessTest.Details;
             TCThickness.DataBindings.Add("Text", this.DataSource, Model.ThicknessTestDetails.PRO_HouduBiao);

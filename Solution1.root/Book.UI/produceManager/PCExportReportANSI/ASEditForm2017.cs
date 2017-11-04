@@ -119,6 +119,25 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             this._PCExportReportANSI.Employee = BL.V.ActiveOperator.Employee;
             this._PCExportReportANSI.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
+            //默認勾選
+            this._PCExportReportANSI.VisualTest = true;
+            this._PCExportReportANSI.ThermalStability = true;
+            this._PCExportReportANSI.IsShowGX2 = true;
+            this._PCExportReportANSI.ScatterLight = true;
+            this._PCExportReportANSI.LowImpact = true;
+            this._PCExportReportANSI.MediumImpact = true;
+            this._PCExportReportANSI.PermertrationTest = true;
+            this._PCExportReportANSI.IgnitionTest = true;
+            this._PCExportReportANSI.Corrsion = true;
+            this._PCExportReportANSI.Markings = true;
+
+            //默認數量
+            this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.ShouCeShu7 = this._PCExportReportANSI.ShouCeShu9 = this._PCExportReportANSI.ShouCeShu10 = this._PCExportReportANSI.ShouCeShu1 = this._PCExportReportANSI.ShouCeShu11 = this._PCExportReportANSI.ShouCeShu14 = 2;
+
+            this._PCExportReportANSI.ShouCeShu15 = this._PCExportReportANSI.ShouCeShu16 = 1;
+
+            this._PCExportReportANSI.ShouCeShu12 = this._PCExportReportANSI.ShouCeShu13 = 0;
         }
 
         protected override void Delete()
@@ -382,10 +401,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
                 this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("as", Convert.ToInt32(this._PCExportReportANSI.Amount));
 
-                this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.AmountTest;
+                //this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.AmountTest;
 
-                this._PCExportReportANSI.PanDing2 = _PCExportReportANSIDetail.pASCCSL;
-                this._PCExportReportANSI.QuYangShu2 = _PCExportReportANSIDetail.qASCCSL;
+                //this._PCExportReportANSI.PanDing2 = _PCExportReportANSIDetail.pASCCSL;
+                this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.ShouCeShu17 = this._PCExportReportANSI.AmountTest;
 
                 #endregion
             }

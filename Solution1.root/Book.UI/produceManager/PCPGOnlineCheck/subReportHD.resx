@@ -236,10 +236,10 @@
     <value>254</value>
   </data>
   <data name="TCbeizhu.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>214.103851, 76.7291641</value>
+    <value>200.874969, 76.7291641</value>
   </data>
   <data name="TCbeizhu.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1784.896, 103.399178</value>
+    <value>1798.12488, 103.399178</value>
   </data>
   <data name="xrLabel1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -248,7 +248,7 @@
     <value>0, 76.7291641</value>
   </data>
   <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>214.1041, 58.4200058</value>
+    <value>200.874939, 58.4200058</value>
   </data>
   <data name="xrLabel1.Text" xml:space="preserve">
     <value>备注：</value>
@@ -284,7 +284,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell6.Text" xml:space="preserve">
-    <value>透视率：</value>
+    <value>透视率L：</value>
   </data>
   <data name="xrTableCell6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleRight</value>
@@ -297,6 +297,15 @@
   </data>
   <data name="TCtsl.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
+  </data>
+  <data name="xrTableCell1.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell1.Text" xml:space="preserve">
+    <value>透視率R：</value>
+  </data>
+  <data name="TCtslRight.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="xrTableCell7.Dpi" type="System.Single, mscorlib">
     <value>254</value>

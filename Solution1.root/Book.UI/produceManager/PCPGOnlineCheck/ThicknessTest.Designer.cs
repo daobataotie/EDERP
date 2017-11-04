@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThicknessTest));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.spinPerspectiverateR = new DevExpress.XtraEditors.SpinEdit();
             this.txtThicknessDescript = new DevExpress.XtraEditors.MemoEdit();
-            this.spinPerspectiverate = new DevExpress.XtraEditors.SpinEdit();
+            this.spinPerspectiverateL = new DevExpress.XtraEditors.SpinEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -60,13 +61,15 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barBtn_Search = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinPerspectiverateR.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThicknessDescript.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinPerspectiverate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinPerspectiverateL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -81,23 +84,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
             // 
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barBtn_Search});
-            this.barManager1.MaxItemId = 15;
             // 
             // imageCollection1
             // 
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
-            // 
-            // bar1
-            // 
-            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_Search, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.bar1.OptionsBar.UseWholeRow = true;
             // 
             // barButtonItemFirst
             // 
@@ -107,10 +104,17 @@
             // 
             this.barButtonItemPrint.Enabled = false;
             // 
+            // bar1
+            // 
+            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_Search, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar1.OptionsBar.UseWholeRow = true;
+            // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.spinPerspectiverateR);
             this.layoutControl1.Controls.Add(this.txtThicknessDescript);
-            this.layoutControl1.Controls.Add(this.spinPerspectiverate);
+            this.layoutControl1.Controls.Add(this.spinPerspectiverateL);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.nccEmployee);
             this.layoutControl1.Controls.Add(this.deThicknessTestDate);
@@ -119,6 +123,17 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
+            // spinPerspectiverateR
+            // 
+            resources.ApplyResources(this.spinPerspectiverateR, "spinPerspectiverateR");
+            this.spinPerspectiverateR.MenuManager = this.barManager1;
+            this.spinPerspectiverateR.Name = "spinPerspectiverateR";
+            this.spinPerspectiverateR.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.spinPerspectiverateR.Properties.DisplayFormat.FormatString = "0.####";
+            this.spinPerspectiverateR.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.spinPerspectiverateR.StyleController = this.layoutControl1;
+            // 
             // txtThicknessDescript
             // 
             resources.ApplyResources(this.txtThicknessDescript, "txtThicknessDescript");
@@ -126,14 +141,16 @@
             this.txtThicknessDescript.Name = "txtThicknessDescript";
             this.txtThicknessDescript.StyleController = this.layoutControl1;
             // 
-            // spinPerspectiverate
+            // spinPerspectiverateL
             // 
-            resources.ApplyResources(this.spinPerspectiverate, "spinPerspectiverate");
-            this.spinPerspectiverate.MenuManager = this.barManager1;
-            this.spinPerspectiverate.Name = "spinPerspectiverate";
-            this.spinPerspectiverate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            resources.ApplyResources(this.spinPerspectiverateL, "spinPerspectiverateL");
+            this.spinPerspectiverateL.MenuManager = this.barManager1;
+            this.spinPerspectiverateL.Name = "spinPerspectiverateL";
+            this.spinPerspectiverateL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.spinPerspectiverate.StyleController = this.layoutControl1;
+            this.spinPerspectiverateL.Properties.DisplayFormat.FormatString = "0.####";
+            this.spinPerspectiverateL.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.spinPerspectiverateL.StyleController = this.layoutControl1;
             // 
             // gridControl1
             // 
@@ -300,7 +317,8 @@
             this.layoutControlItem5,
             this.layoutControlItem6,
             this.layoutControlItem3,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem7});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(815, 363);
@@ -347,13 +365,13 @@
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.spinPerspectiverate;
+            this.layoutControlItem6.Control = this.spinPerspectiverateL;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
             this.layoutControlItem6.Location = new System.Drawing.Point(301, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(248, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(124, 25);
             this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(54, 14);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(50, 14);
             this.layoutControlItem6.TextToControlDistance = 5;
             // 
             // layoutControlItem3
@@ -372,6 +390,17 @@
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(397, 34);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.spinPerspectiverateR;
+            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
+            this.layoutControlItem7.Location = new System.Drawing.Point(425, 0);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(124, 25);
+            this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(50, 20);
+            this.layoutControlItem7.TextToControlDistance = 5;
             // 
             // barBtn_Search
             // 
@@ -392,8 +421,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spinPerspectiverateR.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThicknessDescript.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinPerspectiverate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinPerspectiverateL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -408,6 +438,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -440,10 +471,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraEditors.SpinEdit spinPerspectiverate;
+        private DevExpress.XtraEditors.SpinEdit spinPerspectiverateL;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.MemoEdit txtThicknessDescript;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.SpinEdit spinPerspectiverateR;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

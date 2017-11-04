@@ -43,6 +43,8 @@ namespace Book.Model
 		/// 透视率
 		/// </summary>
 		private double? _perspectiverate;
+
+        private double? _perspectiverateRight;
 		
 		/// <summary>
 		/// 描述备注
@@ -167,7 +169,16 @@ namespace Book.Model
 			{
 				this._perspectiverate = value;
 			}
-		}
+        }
+
+        /// <summary>
+        /// 透视率R
+        /// </summary>
+        public double? PerspectiverateRight
+        {
+            get { return _perspectiverateRight; }
+            set { _perspectiverateRight = value; }
+        }
 
 		/// <summary>
 		/// 描述备注
@@ -330,6 +341,8 @@ namespace Book.Model
         public readonly static string PRO_AuditState = "AuditState";
 
         public readonly static string PRO_AuditEmpId = "AuditEmpId";
+
+        public readonly static string PRO_PerspectiverateRight = "PerspectiverateRight";
 
 		#endregion
 	}

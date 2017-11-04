@@ -16,10 +16,12 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(subReportHD_BeforePrint);
             this.TCcsdh.DataBindings.Add("Text", this.DataSource, Model.ThicknessTest.PRO_ThicknessTestId);
-            this.TCtsl.DataBindings.Add("Text", this.DataSource, Model.ThicknessTest.PRO_Perspectiverate);
+            this.TCtsl.DataBindings.Add("Text", this.DataSource, Model.ThicknessTest.PRO_Perspectiverate, "{0.####}");
             this.TCcsrq.DataBindings.Add("Text", this.DataSource, Model.ThicknessTest.PRO_ThicknessTestDate, "{0:yyyy-MM-dd}");
             this.TCcsyg.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
             this.TCbeizhu.DataBindings.Add("Text", this.DataSource, Model.ThicknessTest.PRO_ThicknessDescript);
+
+            this.TCtslRight.DataBindings.Add("Text", this.DataSource, Model.ThicknessTest.PRO_PerspectiverateRight, "{0.####}");
 
             this.subThicknessTestDetails.ReportSource = new subReportHDDetail();
         }

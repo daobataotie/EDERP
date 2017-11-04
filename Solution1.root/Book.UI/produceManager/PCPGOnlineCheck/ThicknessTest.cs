@@ -116,7 +116,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this._ThicknessTest.ThicknessTestId = this.txtThicknessTestId.Text;
             //this._ThicknessTest.manualId = this.txtManualid.Text;
             this._ThicknessTest.ThicknessTestDate = this.deThicknessTestDate.DateTime;
-            this._ThicknessTest.Perspectiverate = this.spinPerspectiverate.EditValue == null ? 0 : double.Parse(this.spinPerspectiverate.EditValue.ToString());
+            this._ThicknessTest.Perspectiverate = this.spinPerspectiverateL.EditValue == null ? 0 : double.Parse(this.spinPerspectiverateL.EditValue.ToString());
+            this._ThicknessTest.PerspectiverateRight = this.spinPerspectiverateR.EditValue == null ? 0 : double.Parse(this.spinPerspectiverateR.EditValue.ToString());
             this._ThicknessTest.ThicknessDescript = this.txtThicknessDescript.Text;
             this._ThicknessTest.Employee = this.nccEmployee.EditValue as Model.Employee;
             if (this._ThicknessTest.Employee != null)
@@ -156,7 +157,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.deThicknessTestDate.EditValue = this._ThicknessTest.ThicknessTestDate.Value;
             this.txtThicknessDescript.Text = this._ThicknessTest.ThicknessDescript;
             this.nccEmployee.EditValue = this._ThicknessTest.Employee;
-            this.spinPerspectiverate.EditValue = this._ThicknessTest.Perspectiverate.HasValue ? this._ThicknessTest.Perspectiverate.Value : 0;
+            this.spinPerspectiverateL.EditValue = this._ThicknessTest.Perspectiverate.HasValue ? this._ThicknessTest.Perspectiverate.Value : 0;
+            this.spinPerspectiverateR.EditValue = this._ThicknessTest.PerspectiverateRight.HasValue ? this._ThicknessTest.PerspectiverateRight.Value : 0;
 
             this.bindingSource1.DataSource = this._ThicknessTest.Details;
 

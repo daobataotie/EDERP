@@ -80,6 +80,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.lblEmployee = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblPerspectiveR = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -233,6 +235,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblPerspectiveR,
+            this.xrLabel1,
             this.lblPrintTime,
             this.xrTable1,
             this.lblPerspective,
@@ -485,6 +489,24 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             // 
+            // xrLabel1
+            // 
+            resources.ApplyResources(this.xrLabel1, "xrLabel1");
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            // 
+            // lblPerspectiveR
+            // 
+            this.lblPerspectiveR.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            resources.ApplyResources(this.lblPerspectiveR, "lblPerspectiveR");
+            this.lblPerspectiveR.Name = "lblPerspectiveR";
+            this.lblPerspectiveR.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lblPerspectiveR.StylePriority.UseBorders = false;
+            this.lblPerspectiveR.StylePriority.UseFont = false;
+            this.lblPerspectiveR.StylePriority.UseTextAlignment = false;
+            // 
             // ROThicknessTest
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -559,5 +581,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         private DevExpress.XtraReports.UI.XRTableCell TCR4;
         private DevExpress.XtraReports.UI.XRTableCell TCR5;
         private DevExpress.XtraReports.UI.XRLabel lblPrintTime;
+        private DevExpress.XtraReports.UI.XRLabel lblPerspectiveR;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
     }
 }
