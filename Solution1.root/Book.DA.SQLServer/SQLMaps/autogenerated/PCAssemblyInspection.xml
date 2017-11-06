@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCAssemblyInspection" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PCAssemblyInspection" type="Book.Model.PCAssemblyInspection, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PCAssemblyInspectionResult" class="PCAssemblyInspection">
+      <result property="PCAssemblyInspectionId" column="PCAssemblyInspectionId" />
+      <result property="PCAssemblyInspectionDate" column="PCAssemblyInspectionDate" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="EmployeeId" column="EmployeeId" />
+      <result property="InvoiceCusId" column="InvoiceCusId" />
+      <result property="PronoteHeaderId" column="PronoteHeaderId" />
+      <result property="Note" column="Note" />
+      <result property="EmployeeId1" column="EmployeeId1"/>
+      <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="Employee1" column="EmployeeId1" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="PronoteHeader" column="PronoteHeaderId" lazyLoad="false" select="PronoteHeader.select_by_primary_key" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCAssemblyInspection]
+				WHERE
+				[PCAssemblyInspectionId] = #PCAssemblyInspectionId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCAssemblyInspection]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="get_first" resultMap="PCAssemblyInspectionResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCAssemblyInspection
+			 
+			order by InsertTime 
+			]]>
+    </select>
+    <select id="get_last" resultMap="PCAssemblyInspectionResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCAssemblyInspection
+						
+            order by InsertTime desc
+			]]>
+
+    </select>
+    <select id="get_prev" resultMap="PCAssemblyInspectionResult" parameterClass="PCAssemblyInspection">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCAssemblyInspection
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+    </select>
+    <select id="get_next" resultMap="PCAssemblyInspectionResult" parameterClass="PCAssemblyInspection">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCAssemblyInspection
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="PCAssemblyInspection">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCAssemblyInspection
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="PCAssemblyInspection">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCAssemblyInspection
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PCAssemblyInspectionResult" parameterClass="PCAssemblyInspection">
+      <![CDATA[SELECT
+				[PCAssemblyInspectionId],
+				[PCAssemblyInspectionDate],
+				[InsertTime],
+				[UpdateTime],
+				[EmployeeId],
+				[InvoiceCusId],
+				[PronoteHeaderId],
+				[Note],
+        [EmployeeId1]
+			FROM
+				[dbo].[PCAssemblyInspection]
+			WHERE
+				[PCAssemblyInspectionId] = #PCAssemblyInspectionId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[PCAssemblyInspection]
+			WHERE            
+				[PCAssemblyInspectionId] = #PCAssemblyInspectionId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="PCAssemblyInspectionResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[PCAssemblyInspection]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[PCAssemblyInspection]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PCAssemblyInspectionResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCAssemblyInspection]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PCAssemblyInspection">
+      <![CDATA[ INSERT INTO [dbo].[PCAssemblyInspection] 
+			(
+				[PCAssemblyInspectionId],
+				[PCAssemblyInspectionDate],
+				[InsertTime],
+				[UpdateTime],
+				[EmployeeId],
+				[InvoiceCusId],
+				[PronoteHeaderId],
+				[Note],
+        [EmployeeId1]
+			) 
+			VALUES 
+			(
+				#PCAssemblyInspectionId#,
+				#PCAssemblyInspectionDate#,
+				#InsertTime#,
+				#UpdateTime#,
+				#EmployeeId#,
+				#InvoiceCusId#,
+				#PronoteHeaderId#,
+				#Note#,
+        #EmployeeId1#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PCAssemblyInspection">
+      <![CDATA[ 	UPDATE [PCAssemblyInspection] SET
+				[PCAssemblyInspectionDate] = #PCAssemblyInspectionDate#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+				[EmployeeId] = #EmployeeId#,
+				[InvoiceCusId] = #InvoiceCusId#,
+				[PronoteHeaderId] = #PronoteHeaderId#,
+				[Note] = #Note#,
+        [EmployeeId1]=#EmployeeId1#
+			WHERE
+				[PCAssemblyInspectionId] = #PCAssemblyInspectionId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCAssemblyInspection]
+				where  PCAssemblyInspectionId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

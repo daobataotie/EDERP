@@ -650,7 +650,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
                         PCMouldOnlineCheck.ListFrom listform = new Book.UI.produceManager.PCMouldOnlineCheck.ListFrom(invoiceCusId);
                         listform.Show(this);
                     }
-                    else if (name.Contains("組裝檢驗日報表") || name.Contains("光譜測試") || name.Contains("成品檢驗單") || name.Contains("出貨報告"))
+                    else if (name.Contains("組裝檢驗日報表"))
+                    {
+                        PCAssemblyInspection.ListForm listform = new Book.UI.produceManager.PCAssemblyInspection.ListForm(invoiceCusId);
+                        listform.Show(this);
+                    }
+                    else if (name.Contains("光譜測試") || name.Contains("成品檢驗單") || name.Contains("出貨報告"))
                     {
                         //PCFinishCheck.EditForm qcc = new Book.UI.produceManager.PCFinishCheck.EditForm(str);
                         //qcc.Show(this);

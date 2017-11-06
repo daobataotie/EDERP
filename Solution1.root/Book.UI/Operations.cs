@@ -756,6 +756,9 @@ namespace Book.UI
 
            //歷史出勤記錄
             operations.Add("Hr.Attendance.Atten.HistoryAttenForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Attendance.Atten.HistoryAttenForm", form); });
+
+            //組裝檢驗日報表
+            operations.Add("produceManager.PCAssemblyInspection.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCAssemblyInspection.EditForm", form); });
         }
 
         static Form CreateForm(string formTypeName)
