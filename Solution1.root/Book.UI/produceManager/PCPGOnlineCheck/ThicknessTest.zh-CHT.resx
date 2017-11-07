@@ -440,12 +440,12 @@
     <value>測試員工：</value>
   </data>
   <data name="layoutControlItem6.Text" xml:space="preserve">
-    <value>透視率：</value>
+    <value>透視率L：</value>
   </data>
   <data name="layoutControlItem3.Text" xml:space="preserve">
     <value>備註信息：</value>
   </data>
   <data name="layoutControlItem7.Text" xml:space="preserve">
-    <value>手動測試編號：</value>
+    <value>透視率R：</value>
   </data>
 </root>

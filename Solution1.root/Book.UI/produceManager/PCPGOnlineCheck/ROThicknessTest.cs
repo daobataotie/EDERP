@@ -15,18 +15,18 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         public ROThicknessTest(Model.ThicknessTest thicknessTest)
             : this()
         {
-            if(thicknessTest==null)
+            if (thicknessTest == null)
                 return;
             lblCompanyName.Text = BL.Settings.CompanyChineseName;
             lblROThicknessTest.Text = Book.UI.Properties.Resources.ROThicknessTest;
             lblTestId.Text = thicknessTest.ThicknessTestId;
-            lblPerspective.Text = thicknessTest.Perspectiverate.Value.ToString("0.####");
+            lblPerspective.Text = thicknessTest.Perspectiverate.HasValue ? thicknessTest.Perspectiverate.Value.ToString("0.####") : "";
             lblTestDate.Text = thicknessTest.ThicknessTestDate.Value.ToString("yyyy-MM-dd");
             lblRemarks.Text = thicknessTest.ThicknessDescript;
             lblEmployee.Text = thicknessTest.Employee.EmployeeName;
             lblPrintTime.Text += DateTime.Now.ToShortDateString();
 
-            lblPerspectiveR.Text = thicknessTest.PerspectiverateRight.Value.ToString("0.####");
+            lblPerspectiveR.Text = thicknessTest.PerspectiverateRight.HasValue ? thicknessTest.PerspectiverateRight.Value.ToString("0.####") : "";
 
             this.DataSource = thicknessTest.Details;
             TCThickness.DataBindings.Add("Text", this.DataSource, Model.ThicknessTestDetails.PRO_HouduBiao);
