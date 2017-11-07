@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<sqlMap namespace="PCAssemblyInspectionDetail" xmlns="http://ibatis.apache.org/mapping" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCAssemblyInspectionDetail" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <statements>
     <select id="SelectByHeaderId" parameterClass="string" resultMap="PCAssemblyInspectionDetailResult">
@@ -16,7 +16,7 @@
 
     <select id="SelectByCondition" parameterClass="Map" resultMap="PCAssemblyInspectionDetailResult">
       <![CDATA[
-      
+      select pcad.* from PCAssemblyInspectionDetail pcad left join PCAssemblyInspection pca on pcad.PCAssemblyInspectionId=pca.PCAssemblyInspectionId where 1=1 $sql$
       ]]>
     </select>
   </statements>

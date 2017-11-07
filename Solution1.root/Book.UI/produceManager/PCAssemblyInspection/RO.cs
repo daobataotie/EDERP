@@ -35,6 +35,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             TCCustomer.DataBindings.Add("Text", this.DataSource, "Customer." + Model.Customer.PRO_CustomerShortName);
             TCCheckNum.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_CheckNum, "{0:0}");
             TCWaiguan.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Waiguan);
+            TCJiagongbie.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Jiagongbie);
             TCJiao.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Jiao);
             TCShensuojiao.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Shensuojiao);
             TCSuoluosi.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Luosi);

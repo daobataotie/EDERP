@@ -670,7 +670,7 @@
     <value>Combo</value>
   </data>
   <data name="repositoryItemLookUpEdit19.Columns" xml:space="preserve">
-    <value>CustomerId</value>
+    <value>Id</value>
   </data>
   <data name="repositoryItemLookUpEdit19.Columns1" xml:space="preserve">
     <value>Id</value>
@@ -696,6 +696,21 @@
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
     <value>108</value>
   </data>
+  <data name="gridColumn16.Caption" xml:space="preserve">
+    <value>抽檢數</value>
+  </data>
+  <data name="repositoryItemSpinEdit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gridColumn16.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn16.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gridColumn16.Width" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>时间</value>
   </data>
@@ -711,21 +726,6 @@
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
     <value>84</value>
   </data>
-  <data name="gridColumn16.Caption" xml:space="preserve">
-    <value>合格数量</value>
-  </data>
-  <data name="repositoryItemSpinEdit1.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="gridColumn16.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn16.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="gridColumn16.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>外观</value>
   </data>
@@ -739,7 +739,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
     <value>45</value>
@@ -751,7 +751,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="gridColumn11.Width" type="System.Int32, mscorlib">
     <value>66</value>
@@ -769,7 +769,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="gridColumn5.Width" type="System.Int32, mscorlib">
     <value>55</value>
@@ -787,7 +787,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="gridColumn6.Width" type="System.Int32, mscorlib">
     <value>57</value>
@@ -805,7 +805,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gridColumn7.Width" type="System.Int32, mscorlib">
     <value>58</value>
@@ -823,7 +823,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
     <value>45</value>
@@ -841,7 +841,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="gridColumn9.Width" type="System.Int32, mscorlib">
     <value>43</value>
@@ -859,7 +859,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
     <value>43</value>
@@ -874,7 +874,7 @@
     <value>Combo</value>
   </data>
   <data name="repositoryItemLookUpEdit20.Columns" xml:space="preserve">
-    <value>ProductId</value>
+    <value>Id</value>
   </data>
   <data name="repositoryItemLookUpEdit20.Columns1" xml:space="preserve">
     <value>ID</value>
@@ -895,7 +895,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="gridColumn12.Width" type="System.Int32, mscorlib">
     <value>100</value>
@@ -907,7 +907,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="gridColumn13.Width" type="System.Int32, mscorlib">
     <value>56</value>
@@ -925,7 +925,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="gridColumn14.Width" type="System.Int32, mscorlib">
     <value>63</value>
@@ -943,7 +943,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn15.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="gridColumn15.Width" type="System.Int32, mscorlib">
     <value>43</value>
@@ -958,7 +958,7 @@
     <value>Combo</value>
   </data>
   <data name="repositoryItemLookUpEdit18.Columns" xml:space="preserve">
-    <value>EmployeeId</value>
+    <value>IDNo</value>
   </data>
   <data name="repositoryItemLookUpEdit18.Columns1" xml:space="preserve">
     <value>ID</value>
@@ -1025,6 +1025,9 @@
   </data>
   <data name="repositoryItemLookUpEdit15.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
+  </data>
+  <data name="repositoryItemSpinEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="repositoryItemSpinEdit2.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1245,6 +1248,30 @@
   <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit19.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit19</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit19.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceCustomer.Name" xml:space="preserve">
+    <value>bindingSourceCustomer</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceCustomer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridColumn16.Name" xml:space="preserve">
+    <value>gridColumn16</value>
+  </data>
+  <data name="&gt;&gt;gridColumn16.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSpinEdit3.Name" xml:space="preserve">
+    <value>repositoryItemSpinEdit3</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSpinEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
     <value>gridColumn1</value>
   </data>
@@ -1256,18 +1283,6 @@
   </data>
   <data name="&gt;&gt;repositoryItemTimeEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn16.Name" xml:space="preserve">
-    <value>gridColumn16</value>
-  </data>
-  <data name="&gt;&gt;gridColumn16.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemSpinEdit1.Name" xml:space="preserve">
-    <value>repositoryItemSpinEdit1</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemSpinEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn4.Name" xml:space="preserve">
     <value>gridColumn4</value>
@@ -1365,6 +1380,18 @@
   <data name="&gt;&gt;gridColumn12.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit20.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit20</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit20.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceZuzhuangProduct.Name" xml:space="preserve">
+    <value>bindingSourceZuzhuangProduct</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceZuzhuangProduct.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;gridColumn13.Name" xml:space="preserve">
     <value>gridColumn13</value>
   </data>
@@ -1407,6 +1434,12 @@
   <data name="&gt;&gt;repositoryItemLookUpEdit18.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;bindingSourceEmployee.Name" xml:space="preserve">
+    <value>bindingSourceEmployee</value>
+  </data>
+  <data name="&gt;&gt;bindingSourceEmployee.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;gridColumn18.Name" xml:space="preserve">
     <value>gridColumn18</value>
   </data>
@@ -1448,6 +1481,12 @@
   </data>
   <data name="&gt;&gt;repositoryItemLookUpEdit15.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSpinEdit1.Name" xml:space="preserve">
+    <value>repositoryItemSpinEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemSpinEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;repositoryItemSpinEdit2.Name" xml:space="preserve">
     <value>repositoryItemSpinEdit2</value>
@@ -1556,36 +1595,6 @@
   </data>
   <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceCustomer.Name" xml:space="preserve">
-    <value>bindingSourceCustomer</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceCustomer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceEmployee.Name" xml:space="preserve">
-    <value>bindingSourceEmployee</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceEmployee.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceZuzhuangProduct.Name" xml:space="preserve">
-    <value>bindingSourceZuzhuangProduct</value>
-  </data>
-  <data name="&gt;&gt;bindingSourceZuzhuangProduct.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemLookUpEdit19.Name" xml:space="preserve">
-    <value>repositoryItemLookUpEdit19</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemLookUpEdit19.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemLookUpEdit20.Name" xml:space="preserve">
-    <value>repositoryItemLookUpEdit20</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemLookUpEdit20.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

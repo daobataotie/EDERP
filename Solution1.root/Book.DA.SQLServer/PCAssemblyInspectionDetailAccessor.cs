@@ -31,7 +31,7 @@ namespace Book.DA.SQLServer
 
         public IList<Model.PCAssemblyInspectionDetail> SelectByCondition(DateTime startDate, DateTime endDate, string startPId, string endPId, string invoiceCusId)
         {
-            StringBuilder sb = new StringBuilder("select * from PCAssemblyInspectionDetail pcad left join PCAssemblyInspection pca on pcad.PCAssemblyInspectionId=pca.PCAssemblyInspectionId where pca.PCAssemblyInspectionDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            StringBuilder sb = new StringBuilder("and pca.PCAssemblyInspectionDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
             if (!string.IsNullOrEmpty(startPId) || !string.IsNullOrEmpty(endPId))
             {
                 if (!string.IsNullOrEmpty(startPId) && !string.IsNullOrEmpty(endPId))
@@ -45,8 +45,9 @@ namespace Book.DA.SQLServer
             {
                 sb.Append(" and pca.InvoiceCusId='" + invoiceCusId + "'");
             }
+            sb.Append(" order by PCAssemblyInspectionId,PCAssemblyInspectionDetailDate");
 
-            return this.DataReaderBind<Model.PCAssemblyInspectionDetail>(sb.ToString(),null, CommandType.Text);
+            return sqlmapper.QueryForList<Model.PCAssemblyInspectionDetail>("PCAssemblyInspectionDetail.SelectByCondition", sb.ToString());
         }
     }
 }

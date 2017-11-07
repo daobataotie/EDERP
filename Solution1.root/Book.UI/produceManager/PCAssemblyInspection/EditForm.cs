@@ -314,7 +314,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                     detail.PCAssemblyInspectionId = this._pCAssemblyInspection.PCAssemblyInspectionId;
                     detail.Product = p;
                     detail.ProductId = currentModel.ProductId;
-                    detail.CustomerId = xo.CustomerId;
+                    detail.CustomerId = xo == null ? null : xo.CustomerId;
 
                     if (p.IsQiangHua == true)
                         detail.Jiagongbie = "強化";
