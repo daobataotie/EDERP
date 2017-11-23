@@ -13,11 +13,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             InitializeComponent();
         }
 
-        public ProductTestRO(Model.PCDataInput pcDataInput)
+        public ProductTestRO(Model.PCDataInput pcDataInput, string customer)
             : this()
         {
             this.TCCheckStandard.Text = pcDataInput.CheckStandard;
-            this.TCCustomerShortName.Text = pcDataInput.CustomerShortName;
+            //this.TCCustomerShortName.Text = pcDataInput.CustomerShortName;
+            this.TCCustomerShortName.Text = customer;
             this.TCProduct.Text = pcDataInput.Product == null ? "" : pcDataInput.Product.ProduceCounty;
             this.TCInvoiceCusId.Text = pcDataInput.InvoiceCusId;
             this.TCTotalQuantity.Text = pcDataInput.OrderQuantity.HasValue ? pcDataInput.OrderQuantity.Value.ToString("f0") : "";

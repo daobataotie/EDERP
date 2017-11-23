@@ -392,8 +392,8 @@ namespace Book.UI.produceManager.PCFinishCheck
 
         private void CE_InCount_EditValueChanged(object sender, EventArgs e)
         {
-            if (this.action != "view")
-                this.CE_Count.EditValue = Math.Ceiling(Convert.ToDouble(this.CE_InCount.EditValue) / 500);
+            //if (this.action != "view")
+            //    this.CE_Count.EditValue = Math.Ceiling(Convert.ToDouble(this.CE_InCount.EditValue) / 500);
         }
 
         /// <summary>

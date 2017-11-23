@@ -23,11 +23,18 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TCTSQuantity.Text = pcDataInput.PCPerspectiveList.Count.ToString();
             this.TCTSEmployee.Text = pcDataInput.Employee3 == null ? "" : pcDataInput.Employee3.ToString();
 
+            string customer = string.Empty;
             if (ANSI != null)
+            {
                 this.xrSubreportANSI.ReportSource = new RO(ANSI, tag);
+                customer = ANSI.Customer.CustomerName;
+            }
             if (CSA != null)
+            {
                 this.xrSubreportCSA.ReportSource = new CSARO(CSA, tag);
-            this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
+                customer = CSA.Customer.CustomerName;
+            }
+            this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput,customer);
 
             if (pcDataInput.PCOpticalMachineList != null && pcDataInput.PCOpticalMachineList.Count != 0)
                 this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
