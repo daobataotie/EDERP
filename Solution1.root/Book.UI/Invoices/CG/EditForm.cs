@@ -725,6 +725,8 @@ namespace Book.UI.Invoices.CG
             this.textEditInvoiceId.Properties.ReadOnly = true;
             this.buttonEditEmployee1.Enabled = false;
             this.btn_GenerateInputCheck.Enabled = true;
+            this.che_CheckAll.Properties.ReadOnly = false;
+            this.che_CheckAll.Checked = false;
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
@@ -1485,6 +1487,12 @@ namespace Book.UI.Invoices.CG
             f.ShowDialog(this);
             invoicecg.Details = invoiceDetailManager.Select(invoicecg);
             this.bindingSourceDetails.DataSource = invoicecg.Details;
+            this.gridControl1.RefreshDataSource();
+        }
+
+        private void che_CheckAll_CheckedChanged(object sender, EventArgs e)
+        {
+            invoicecg.Details.ToList().ForEach(D => D.IsChecked = this.che_CheckAll.Checked);
             this.gridControl1.RefreshDataSource();
         }
     }

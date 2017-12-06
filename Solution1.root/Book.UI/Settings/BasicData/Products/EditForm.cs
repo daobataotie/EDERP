@@ -2105,6 +2105,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.dateEditProduceMaterialStart.Properties.ReadOnly = false;
             this.dateEditProduceMaterialEnd.Properties.ReadOnly = false;
             this.simpleButtonProduceMaterial.Enabled = true;
+            this.textEditCustomProductName.Enabled = false;
         }
 
         protected override bool HasRows()

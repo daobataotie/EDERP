@@ -185,6 +185,8 @@ namespace Book.UI.Invoices.CG
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem52 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.che_CheckAll = new DevExpress.XtraEditors.CheckEdit();
+            this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -300,6 +302,8 @@ namespace Book.UI.Invoices.CG
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.che_CheckAll.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -318,6 +322,7 @@ namespace Book.UI.Invoices.CG
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.che_CheckAll);
             this.layoutControl1.Controls.Add(this.btn_GenerateInputCheck);
             this.layoutControl1.Controls.Add(this.btn_GetProductNewPrice);
             this.layoutControl1.Controls.Add(this.newChooseContorlAtCurrencyCate);
@@ -1466,7 +1471,8 @@ namespace Book.UI.Invoices.CG
             this.layoutControlItem38,
             this.layoutControlItem39,
             this.layoutControlItem27,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem40});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignModeGroup.CustomSize;
@@ -1520,9 +1526,9 @@ namespace Book.UI.Invoices.CG
             // emptySpaceItem2
             // 
             resources.ApplyResources(this.emptySpaceItem2, "emptySpaceItem2");
-            this.emptySpaceItem2.Location = new System.Drawing.Point(547, 315);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(598, 315);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(338, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(287, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
@@ -1784,6 +1790,26 @@ namespace Book.UI.Invoices.CG
             this.layoutControlItem52.TextSize = new System.Drawing.Size(76, 14);
             this.layoutControlItem52.TextToControlDistance = 5;
             // 
+            // che_CheckAll
+            // 
+            resources.ApplyResources(this.che_CheckAll, "che_CheckAll");
+            this.che_CheckAll.MenuManager = this.barManager1;
+            this.che_CheckAll.Name = "che_CheckAll";
+            this.che_CheckAll.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
+            this.che_CheckAll.StyleController = this.layoutControl1;
+            this.che_CheckAll.CheckedChanged += new System.EventHandler(this.che_CheckAll_CheckedChanged);
+            // 
+            // layoutControlItem40
+            // 
+            this.layoutControlItem40.Control = this.che_CheckAll;
+            resources.ApplyResources(this.layoutControlItem40, "layoutControlItem40");
+            this.layoutControlItem40.Location = new System.Drawing.Point(547, 315);
+            this.layoutControlItem40.Name = "layoutControlItem40";
+            this.layoutControlItem40.Size = new System.Drawing.Size(51, 26);
+            this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem40.TextToControlDistance = 0;
+            this.layoutControlItem40.TextVisible = false;
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1908,6 +1934,8 @@ namespace Book.UI.Invoices.CG
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.che_CheckAll.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2065,6 +2093,8 @@ namespace Book.UI.Invoices.CG
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
         private DevExpress.XtraEditors.SimpleButton btn_GenerateInputCheck;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.CheckEdit che_CheckAll;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem40;
 
     }
 }

@@ -167,6 +167,7 @@ namespace Book.BL
                 product.OrderOnWayQuantity = 0;
                 product.ProductVersion = customerProducts.Version;
                 product.ProductDeadDate = customerProducts.VersionDate;
+                product.ProduceCounty = customerProducts.Product.ProduceCounty;
                 productAccessor.Insert(product);
 
                 //客户产品价格
