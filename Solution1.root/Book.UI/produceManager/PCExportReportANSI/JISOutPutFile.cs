@@ -621,15 +621,19 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
                         ProduceOtherMaterial.ListForm listform2 = new Book.UI.produceManager.ProduceOtherMaterial.ListForm(invoiceCusId);
                         listform2.Show(this);
-                    }
-                    else if (name.Contains("出庫單"))
-                    {
-                        //Settings.StockLimitations.OutStockEditForm cc = new Book.UI.Settings.StockLimitations.OutStockEditForm(str);
-                        //cc.Show(this);
+
                         Settings.StockLimitations.ChooseOutStockDepot f = new Book.UI.Settings.StockLimitations.ChooseOutStockDepot(invoiceCusId);
                         f.Show(this);
+
                     }
-                    else if (name.Contains("出貨通知單"))
+                    //else if (name.Contains("出庫單"))
+                    //{
+                    //    //Settings.StockLimitations.OutStockEditForm cc = new Book.UI.Settings.StockLimitations.OutStockEditForm(str);
+                    //    //cc.Show(this);
+                    //    Settings.StockLimitations.ChooseOutStockDepot f = new Book.UI.Settings.StockLimitations.ChooseOutStockDepot(invoiceCusId);
+                    //    f.Show(this);
+                    //}
+                    else if (name.Contains("出貨通知單") || name.Contains("出庫單"))
                     {
                         //Invoices.XS.EditForm xc = new Book.UI.Invoices.XS.EditForm(str);
                         //xc.Show(this);
