@@ -33,6 +33,8 @@
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_ProduceMaterial = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblInvoiceXODetailQuantity = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelPiHao = new DevExpress.XtraReports.UI.XRLabel();
@@ -87,8 +89,7 @@
             this.xrLabelCompanyInfoName = new DevExpress.XtraReports.UI.XRLabel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbl_ProduceMaterial = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_PageSign = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextProDesc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RichTextCeMai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RichTextZhengMai)).BeginInit();
@@ -157,6 +158,22 @@
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // lbl_ProduceMaterial
+            // 
+            resources.ApplyResources(this.lbl_ProduceMaterial, "lbl_ProduceMaterial");
+            this.lbl_ProduceMaterial.Name = "lbl_ProduceMaterial";
+            this.lbl_ProduceMaterial.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_ProduceMaterial.StylePriority.UseFont = false;
+            this.lbl_ProduceMaterial.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel24
+            // 
+            resources.ApplyResources(this.xrLabel24, "xrLabel24");
+            this.xrLabel24.Name = "xrLabel24";
+            this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel24.StylePriority.UseFont = false;
+            this.xrLabel24.StylePriority.UseTextAlignment = false;
             // 
             // lblInvoiceXODetailQuantity
             // 
@@ -479,6 +496,7 @@
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_PageSign,
             this.xrPanel2});
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
             this.ReportFooter.Name = "ReportFooter";
@@ -598,21 +616,12 @@
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
-            // xrLabel24
+            // lbl_PageSign
             // 
-            resources.ApplyResources(this.xrLabel24, "xrLabel24");
-            this.xrLabel24.Name = "xrLabel24";
-            this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel24.StylePriority.UseFont = false;
-            this.xrLabel24.StylePriority.UseTextAlignment = false;
-            // 
-            // lbl_ProduceMaterial
-            // 
-            resources.ApplyResources(this.lbl_ProduceMaterial, "lbl_ProduceMaterial");
-            this.lbl_ProduceMaterial.Name = "lbl_ProduceMaterial";
-            this.lbl_ProduceMaterial.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_ProduceMaterial.StylePriority.UseFont = false;
-            this.lbl_ProduceMaterial.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.lbl_PageSign, "lbl_PageSign");
+            this.lbl_PageSign.Name = "lbl_PageSign";
+            this.lbl_PageSign.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lbl_PageSign.StylePriority.UseTextAlignment = false;
             // 
             // RO
             // 
@@ -700,5 +709,6 @@
         private DevExpress.XtraReports.UI.XRPanel xrPanel2;
         private DevExpress.XtraReports.UI.XRLabel lbl_ProduceMaterial;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
+        private DevExpress.XtraReports.UI.XRLabel lbl_PageSign;
     }
 }

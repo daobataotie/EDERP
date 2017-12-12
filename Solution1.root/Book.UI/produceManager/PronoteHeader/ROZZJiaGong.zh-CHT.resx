@@ -343,9 +343,6 @@
   <data name="xrLabel1.Text" xml:space="preserve">
     <value>編         號：</value>
   </data>
-  <data name="xrLabelDataName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 15pt, style=Bold</value>
-  </data>
   <data name="xrLabelPrintDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9.75pt</value>
   </data>
@@ -418,6 +415,21 @@
   <data name="xrLabel5.Text" xml:space="preserve">
     <value>制單人：</value>
   </data>
+  <data name="xrLabel23.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel23.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1654.41614, 803.580139</value>
+  </data>
+  <data name="xrLabel23.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="xrLabel23.Text" xml:space="preserve">
+    <value>QR8-06-04-1</value>
+  </data>
+  <data name="xrLabel23.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
   <data name="lblYewu.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -484,7 +496,7 @@
   <data name="xrLabel10.Text" xml:space="preserve">
     <value>審核人：</value>
   </data>
-  <data name="xrLabelCompanyInfoName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 20pt, style=Bold</value>
+  <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
+    <value>862.0001</value>
   </data>
 </root>

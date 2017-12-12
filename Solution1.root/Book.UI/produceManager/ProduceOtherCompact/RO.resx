@@ -655,6 +655,21 @@
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
     <value>95.25</value>
   </data>
+  <data name="xrLabel13.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1736.21655, 150.60083</value>
+  </data>
+  <data name="xrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="xrLabel13.Text" xml:space="preserve">
+    <value>QR8-04-02-1</value>
+  </data>
+  <data name="xrLabel13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
   <data name="xrLabel11.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -714,7 +729,7 @@
     <value>254</value>
   </data>
   <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
-    <value>140.229065</value>
+    <value>209.020828</value>
   </data>
   <data name="topMarginBand1.Dpi" type="System.Single, mscorlib">
     <value>254</value>

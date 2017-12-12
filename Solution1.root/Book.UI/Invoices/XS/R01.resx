@@ -350,6 +350,21 @@
   <data name="xrLabel6.Text" xml:space="preserve">
     <value>数量</value>
   </data>
+  <data name="xrLabel8.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1661.58337, 262.184326</value>
+  </data>
+  <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="xrLabel8.Text" xml:space="preserve">
+    <value>QR8-10-06-1</value>
+  </data>
+  <data name="xrLabel8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
   <data name="xrLabel3.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -441,7 +456,7 @@
     <value>254</value>
   </data>
   <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
-    <value>259.750183</value>
+    <value>320.6043</value>
   </data>
   <data name="xrLabelSongHuoAddress.Dpi" type="System.Single, mscorlib">
     <value>254</value>

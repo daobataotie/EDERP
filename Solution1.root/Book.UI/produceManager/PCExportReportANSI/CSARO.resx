@@ -264,10 +264,10 @@
     <value>551.7283, 55.5622559</value>
   </data>
   <data name="xrLabel121.Text" xml:space="preserve">
-    <value>                                       R7-08-03-R</value>
+    <value>QR8-10-02-1</value>
   </data>
   <data name="xrLabel121.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
+    <value>MiddleRight</value>
   </data>
   <data name="xrLabel118.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Transparent</value>
@@ -338,15 +338,14 @@ High Vebcity Impact
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTableCell20.Text" xml:space="preserve">
-    <value>
+    <value>46.5M+/-0.5M(154ft/s)
 -No contact with either eye of the headform
 -None parts detached from the inner surface
  of the protector.
 -Lens doesn't crack through its entire 
  thickness into two or more separate piece.
 -None parts of fragments that could contact
- either eye of the headform ejected from the 
- protector.</value>
+ either eye of the headform ejected from the protector.</value>
   </data>
   <data name="xrTableCell20.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>

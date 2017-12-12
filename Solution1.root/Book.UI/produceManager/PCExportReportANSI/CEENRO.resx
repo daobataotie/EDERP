@@ -287,8 +287,7 @@
     <value>551.7284, 55.5622559</value>
   </data>
   <data name="xrLabel121.Text" xml:space="preserve">
-    <value>R7-08-03-R
-</value>
+    <value>QR8-10-03-1</value>
   </data>
   <data name="xrLabel121.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleRight</value>
@@ -1582,7 +1581,7 @@ dioptre</value>
     <value>254</value>
   </data>
   <data name="xrLabel4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt, style=Bold</value>
+    <value>新細明體, 9.75pt, style=Bold</value>
   </data>
   <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0.000888188661, 0</value>

@@ -99,6 +99,7 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -641,6 +642,7 @@
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel14,
             this.xrLabelEmp0,
             this.xrLabel10,
             this.xrLabelEmployee0,
@@ -676,6 +678,13 @@
             // 
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
+            // 
+            // xrLabel14
+            // 
+            resources.ApplyResources(this.xrLabel14, "xrLabel14");
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel14.StylePriority.UseTextAlignment = false;
             // 
             // RO1
             // 
@@ -772,5 +781,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableMRSdetailsQuantity;
         private DevExpress.XtraReports.UI.XRTableCell xrTableWorkHouseNext;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel14;
     }
 }

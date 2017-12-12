@@ -1108,11 +1108,26 @@
   <data name="xrLabel40.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
+  <data name="xrLabel17.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1651, 287.934143</value>
+  </data>
+  <data name="xrLabel17.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="xrLabel17.Text" xml:space="preserve">
+    <value>QR8-04-01-1</value>
+  </data>
+  <data name="xrLabel17.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
   <data name="ReportFooter.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
-    <value>282.8542</value>
+    <value>346.3542</value>
   </data>
   <data name="ReportHeader.Dpi" type="System.Single, mscorlib">
     <value>254</value>

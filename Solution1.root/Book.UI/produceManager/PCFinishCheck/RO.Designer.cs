@@ -35,6 +35,10 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.lbl_Pihao = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
+            this.winControlContainer1 = new DevExpress.XtraReports.UI.WinControlContainer();
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.lbl_JHDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_InvoiceXOCustomer = new DevExpress.XtraReports.UI.XRLabel();
@@ -150,12 +154,9 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.winControlContainer1 = new DevExpress.XtraReports.UI.WinControlContainer();
-            this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbl_Pihao = new DevExpress.XtraReports.UI.XRLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
+            this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -240,6 +241,38 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.lblEmployee1});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // lbl_Pihao
+            // 
+            this.lbl_Pihao.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            resources.ApplyResources(this.lbl_Pihao, "lbl_Pihao");
+            this.lbl_Pihao.Name = "lbl_Pihao";
+            this.lbl_Pihao.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Pihao.StylePriority.UseBorders = false;
+            this.lbl_Pihao.StylePriority.UseFont = false;
+            this.lbl_Pihao.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel22
+            // 
+            resources.ApplyResources(this.xrLabel22, "xrLabel22");
+            this.xrLabel22.Name = "xrLabel22";
+            this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel22.StylePriority.UseFont = false;
+            this.xrLabel22.StylePriority.UseTextAlignment = false;
+            // 
+            // winControlContainer1
+            // 
+            resources.ApplyResources(this.winControlContainer1, "winControlContainer1");
+            this.winControlContainer1.Name = "winControlContainer1";
+            this.winControlContainer1.WinControl = this.checkEdit1;
+            // 
+            // checkEdit1
+            // 
+            resources.ApplyResources(this.checkEdit1, "checkEdit1");
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkEdit1.Properties.Appearance.Font")));
+            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit1.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
             // 
             // lbl_JHDate
             // 
@@ -1259,8 +1292,9 @@ namespace Book.UI.produceManager.PCFinishCheck
             // 
             // ReportFooter
             // 
+            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel23});
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
-            this.ReportFooter.Expanded = false;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrPageInfo1
@@ -1282,37 +1316,12 @@ namespace Book.UI.produceManager.PCFinishCheck
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             // 
-            // checkEdit1
+            // xrLabel23
             // 
-            resources.ApplyResources(this.checkEdit1, "checkEdit1");
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkEdit1.Properties.Appearance.Font")));
-            this.checkEdit1.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit1.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
-            // 
-            // winControlContainer1
-            // 
-            resources.ApplyResources(this.winControlContainer1, "winControlContainer1");
-            this.winControlContainer1.Name = "winControlContainer1";
-            this.winControlContainer1.WinControl = this.checkEdit1;
-            // 
-            // xrLabel22
-            // 
-            resources.ApplyResources(this.xrLabel22, "xrLabel22");
-            this.xrLabel22.Name = "xrLabel22";
-            this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel22.StylePriority.UseFont = false;
-            this.xrLabel22.StylePriority.UseTextAlignment = false;
-            // 
-            // lbl_Pihao
-            // 
-            this.lbl_Pihao.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            resources.ApplyResources(this.lbl_Pihao, "lbl_Pihao");
-            this.lbl_Pihao.Name = "lbl_Pihao";
-            this.lbl_Pihao.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_Pihao.StylePriority.UseBorders = false;
-            this.lbl_Pihao.StylePriority.UseFont = false;
-            this.lbl_Pihao.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.xrLabel23, "xrLabel23");
+            this.xrLabel23.Name = "xrLabel23";
+            this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel23.StylePriority.UseTextAlignment = false;
             // 
             // RO
             // 
@@ -1330,8 +1339,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.PageHeight = 2794;
             this.PageWidth = 2159;
             this.Version = "10.2";
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1463,5 +1472,6 @@ namespace Book.UI.produceManager.PCFinishCheck
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraReports.UI.XRLabel lbl_Pihao;
         private DevExpress.XtraReports.UI.XRLabel xrLabel22;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel23;
     }
 }

@@ -142,7 +142,7 @@
     <value>120.52095</value>
   </data>
   <data name="CheckPriHOut.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckPriHOut.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1007.3186, 416.3472</value>
@@ -151,7 +151,7 @@
     <value>44.58313, 74.07822</value>
   </data>
   <data name="CheckPriHIn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckPriHIn.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1007.31836, 352.6357</value>
@@ -160,7 +160,7 @@
     <value>44.583374, 63.71161</value>
   </data>
   <data name="CheckPriVDwn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckPriVDwn.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1200.38086, 416.34964</value>
@@ -169,7 +169,7 @@
     <value>44.2698975, 74.07825</value>
   </data>
   <data name="CheckPriVUp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckPriVUp.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1200.38086, 352.6357</value>
@@ -178,7 +178,7 @@
     <value>44.2697754, 63.7115479</value>
   </data>
   <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>695.112366, 1295.85437</value>
@@ -194,7 +194,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="xrLabel10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1581.5863, 1132.31116</value>
@@ -209,7 +209,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="xrLabel9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1581.5863, 641.5582</value>
@@ -224,7 +224,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="xrLabel8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1703.29675, 351.999817</value>
@@ -239,7 +239,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="CheckLow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckLow.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1668.899, 351.999817</value>
@@ -248,7 +248,7 @@
     <value>34.3977051, 139.91394</value>
   </data>
   <data name="xrLabel5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1581.5863, 352.004028</value>
@@ -257,7 +257,7 @@
     <value>87.31262, 139.909424</value>
   </data>
   <data name="lbl_OrderQuantity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 10pt, style=Bold, Underline</value>
+    <value>新細明體, 10pt, style=Bold, Underline</value>
   </data>
   <data name="lbl_OrderQuantity.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 123.060722</value>
@@ -281,7 +281,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="xrLabel3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 10pt, style=Bold</value>
+    <value>新細明體, 10pt, style=Bold</value>
   </data>
   <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1237.63, 1545.60059</value>
@@ -296,7 +296,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="lbl6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1244.65088, 418.678833</value>
@@ -308,7 +308,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="lbl5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1244.65076, 357.927277</value>
@@ -320,7 +320,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="lbl4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1051.90186, 418.678833</value>
@@ -332,7 +332,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="lbl3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1051.90186, 357.927246</value>
@@ -344,7 +344,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrTable3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2.64583588, 211.9999</value>
@@ -407,7 +407,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrTable2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2.64582825, 566.7359</value>
@@ -449,7 +449,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrTable1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2.64582825, 491.913544</value>
@@ -494,7 +494,7 @@
     <value>775.227661, 79.58655</value>
   </data>
   <data name="xrLabel87.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel87.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2249.18921, 641.5583</value>
@@ -503,7 +503,7 @@
     <value>159.87085, 874.2933</value>
   </data>
   <data name="lbl14.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2806.27051, 351.9999</value>
@@ -515,7 +515,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel95.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel95.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2714.94629, 351.9999</value>
@@ -524,7 +524,7 @@
     <value>56.92578, 139.913849</value>
   </data>
   <data name="lbl13.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2659.26782, 351.9999</value>
@@ -536,7 +536,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel93.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel93.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2549.50684, 351.9999</value>
@@ -545,7 +545,7 @@
     <value>70.07446, 139.913849</value>
   </data>
   <data name="lbl12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2499.507, 351.999817</value>
@@ -557,7 +557,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel90.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel90.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2409.05957, 351.999817</value>
@@ -566,7 +566,7 @@
     <value>52.1130371, 139.91394</value>
   </data>
   <data name="lbl11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2349.14624, 351.999817</value>
@@ -578,7 +578,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel88.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel88.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2249.18872, 351.9999</value>
@@ -587,7 +587,7 @@
     <value>59.91333, 139.913849</value>
   </data>
   <data name="lbl10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2177.7522, 351.999817</value>
@@ -599,7 +599,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel85.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel85.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2077.9917, 351.999817</value>
@@ -608,7 +608,7 @@
     <value>65.36389, 139.91394</value>
   </data>
   <data name="lbl9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2019.95618, 351.999817</value>
@@ -620,7 +620,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel80.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel80.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1926.852, 351.999817</value>
@@ -629,7 +629,7 @@
     <value>58.2084961, 139.91394</value>
   </data>
   <data name="lbl8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1872.17175, 351.999817</value>
@@ -641,7 +641,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel34.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel34.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1777.08679, 352.004028</value>
@@ -650,7 +650,7 @@
     <value>60.08496, 139.909424</value>
   </data>
   <data name="lbl7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1530.71118, 352.001862</value>
@@ -662,7 +662,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel29.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel29.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1436.066, 352.001678</value>
@@ -671,7 +671,7 @@
     <value>52.31372, 139.91098</value>
   </data>
   <data name="lbl2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>832.6951, 352.001678</value>
@@ -683,7 +683,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel27.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel27.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>695.112366, 351.999817</value>
@@ -692,7 +692,7 @@
     <value>97.8959961, 139.911438</value>
   </data>
   <data name="lbl1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lbl1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>638.928955, 352.004028</value>
@@ -704,7 +704,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>551.0109, 351.9999</value>
@@ -719,7 +719,7 @@
     <value>306.916748, 48.0568848</value>
   </data>
   <data name="xrLabel83.Text" xml:space="preserve">
-    <value>R7–08–05</value>
+    <value>QR8-10-04-1</value>
   </data>
   <data name="xrLabel81.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1754.188, 1543.3783</value>
@@ -749,7 +749,7 @@
     <value>Tester:</value>
   </data>
   <data name="xrLabel78.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel78.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2714.94629, 641.5583</value>
@@ -758,7 +758,7 @@
     <value>141.594727, 874.293152</value>
   </data>
   <data name="xrLabel77.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel77.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2549.507, 641.5583</value>
@@ -767,7 +767,7 @@
     <value>165.438965, 874.293152</value>
   </data>
   <data name="xrLabel76.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel76.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2409.05957, 641.5583</value>
@@ -785,7 +785,7 @@ removal of
 steel Rod.</value>
   </data>
   <data name="xrLabel75.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel75.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1777.08679, 641.5582</value>
@@ -794,7 +794,7 @@ steel Rod.</value>
     <value>472.102173, 490.7528</value>
   </data>
   <data name="xrLabel74.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel74.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1284.65088, 641.5582</value>
@@ -803,7 +803,7 @@ steel Rod.</value>
     <value>161.998413, 654.296</value>
   </data>
   <data name="xrLabel73.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel73.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>914.714355, 641.5582</value>
@@ -812,7 +812,7 @@ steel Rod.</value>
     <value>369.936279, 654.296</value>
   </data>
   <data name="xrLabel72.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel72.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>695.1124, 641.5582</value>
@@ -824,7 +824,7 @@ steel Rod.</value>
     <value>Mounted on the support, and in the asworn position in the oven for 30mins The temperature of the oven throughout this period shall be maintained at 60 ±2°C. Protector shall with no physical distortion when removed from oven</value>
   </data>
   <data name="xrLabel71.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel71.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>551.0109, 641.558044</value>
@@ -833,7 +833,7 @@ steel Rod.</value>
     <value>144.1015, 874.2934</value>
   </data>
   <data name="xrLabel70.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel70.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>420.1779, 641.558044</value>
@@ -842,7 +842,7 @@ steel Rod.</value>
     <value>130.832977, 874.2935</value>
   </data>
   <data name="xrLabel69.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel69.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>283.104, 641.558044</value>
@@ -851,7 +851,7 @@ steel Rod.</value>
     <value>137.073883, 874.295349</value>
   </data>
   <data name="xrLabel68.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel68.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>163.847885, 641.558044</value>
@@ -860,7 +860,7 @@ steel Rod.</value>
     <value>119.256119, 874.2934</value>
   </data>
   <data name="xrLabel67.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel67.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2.64583325, 641.5582</value>
@@ -869,7 +869,7 @@ steel Rod.</value>
     <value>161.202026, 874.2932</value>
   </data>
   <data name="xrLabel59.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel59.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1446.65, 641.5582</value>
@@ -878,7 +878,7 @@ steel Rod.</value>
     <value>134.936035, 654.296</value>
   </data>
   <data name="CheckIgnition.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckIgnition.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2461.17285, 351.999817</value>
@@ -887,7 +887,7 @@ steel Rod.</value>
     <value>38.33423, 139.91394</value>
   </data>
   <data name="CheckMarkings.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckMarkings.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2771.872, 351.9999</value>
@@ -896,7 +896,7 @@ steel Rod.</value>
     <value>34.3955078, 139.913849</value>
   </data>
   <data name="CheckCorrosion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckCorrosion.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2619.5813, 352</value>
@@ -905,7 +905,7 @@ steel Rod.</value>
     <value>39.6865234, 139.913727</value>
   </data>
   <data name="CheckPemer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckPemer.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2309.102, 351.999817</value>
@@ -914,7 +914,7 @@ steel Rod.</value>
     <value>40.04419, 139.91394</value>
   </data>
   <data name="CheckExtraHigh.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckExtraHigh.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2143.35571, 352.004028</value>
@@ -923,7 +923,7 @@ steel Rod.</value>
     <value>34.39624, 139.909729</value>
   </data>
   <data name="CheckHigh.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckHigh.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1985.06055, 351.999817</value>
@@ -932,7 +932,7 @@ steel Rod.</value>
     <value>34.895752, 139.91394</value>
   </data>
   <data name="CheckMdeium.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckMdeium.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1837.17175, 352.000061</value>
@@ -941,7 +941,7 @@ steel Rod.</value>
     <value>35, 139.913422</value>
   </data>
   <data name="CheckScatter.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckScatter.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1488.37976, 351.999817</value>
@@ -950,7 +950,7 @@ steel Rod.</value>
     <value>42.3311768, 139.913879</value>
   </data>
   <data name="LbRefractive.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="LbRefractive.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1284.65088, 352.001678</value>
@@ -959,7 +959,7 @@ steel Rod.</value>
     <value>151.415527, 139.909576</value>
   </data>
   <data name="xrLabel35.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel35.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1091.90173, 416.3472</value>
@@ -968,7 +968,7 @@ steel Rod.</value>
     <value>108.479126, 75.56656</value>
   </data>
   <data name="lb.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="lb.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>914.7145, 416.349</value>
@@ -977,7 +977,7 @@ steel Rod.</value>
     <value>92.6040039, 75.5621948</value>
   </data>
   <data name="xrLabel33.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel33.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1091.90161, 351.999817</value>
@@ -986,7 +986,7 @@ steel Rod.</value>
     <value>108.479248, 64.34738</value>
   </data>
   <data name="xrLabel32.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="xrLabel32.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>914.7143, 351.9999</value>
@@ -995,7 +995,7 @@ steel Rod.</value>
     <value>92.6040649, 64.34735</value>
   </data>
   <data name="CheckThermal.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckThermal.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>793.0083, 351.999817</value>
@@ -1004,7 +1004,7 @@ steel Rod.</value>
     <value>39.68689, 139.913727</value>
   </data>
   <data name="CheckVisual.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="CheckVisual.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>603.9289, 351.9999</value>
@@ -1013,7 +1013,7 @@ steel Rod.</value>
     <value>35, 139.913849</value>
   </data>
   <data name="LbQtyTest.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="LbQtyTest.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>420.1779, 352.001678</value>
@@ -1022,7 +1022,7 @@ steel Rod.</value>
     <value>130.833038, 139.911774</value>
   </data>
   <data name="LbBatchNo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="LbBatchNo.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>283.104, 351.9999</value>
@@ -1031,7 +1031,7 @@ steel Rod.</value>
     <value>137.073914, 139.913849</value>
   </data>
   <data name="LbModelNo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="LbModelNo.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>163.847885, 352.002258</value>
@@ -1040,7 +1040,7 @@ steel Rod.</value>
     <value>119.256149, 139.911438</value>
   </data>
   <data name="LbTestDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PMingLiU, 9pt</value>
+    <value>新細明體, 9pt</value>
   </data>
   <data name="LbTestDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>2.64583325, 352.001678</value>
@@ -1089,23 +1089,22 @@ steel Rod.</value>
   </data>
   <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">

@@ -36,6 +36,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.CheckPriHOut = new DevExpress.XtraReports.UI.XRCheckBox();
+            this.CheckPriHIn = new DevExpress.XtraReports.UI.XRCheckBox();
+            this.CheckPriVDwn = new DevExpress.XtraReports.UI.XRCheckBox();
+            this.CheckPriVUp = new DevExpress.XtraReports.UI.XRCheckBox();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
@@ -152,13 +156,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.CheckMdeium = new DevExpress.XtraReports.UI.XRCheckBox();
             this.CheckScatter = new DevExpress.XtraReports.UI.XRCheckBox();
             this.LbRefractive = new DevExpress.XtraReports.UI.XRLabel();
-            this.CheckPriVDwn = new DevExpress.XtraReports.UI.XRCheckBox();
             this.xrLabel35 = new DevExpress.XtraReports.UI.XRLabel();
-            this.CheckPriHOut = new DevExpress.XtraReports.UI.XRCheckBox();
             this.lb = new DevExpress.XtraReports.UI.XRLabel();
-            this.CheckPriVUp = new DevExpress.XtraReports.UI.XRCheckBox();
             this.xrLabel33 = new DevExpress.XtraReports.UI.XRLabel();
-            this.CheckPriHIn = new DevExpress.XtraReports.UI.XRCheckBox();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckThermal = new DevExpress.XtraReports.UI.XRCheckBox();
             this.CheckVisual = new DevExpress.XtraReports.UI.XRCheckBox();
@@ -310,6 +310,40 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbl_Signature});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
+            // 
+            // CheckPriHOut
+            // 
+            this.CheckPriHOut.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            resources.ApplyResources(this.CheckPriHOut, "CheckPriHOut");
+            this.CheckPriHOut.Name = "CheckPriHOut";
+            this.CheckPriHOut.StylePriority.UseBorders = false;
+            this.CheckPriHOut.StylePriority.UseFont = false;
+            this.CheckPriHOut.StylePriority.UseTextAlignment = false;
+            // 
+            // CheckPriHIn
+            // 
+            this.CheckPriHIn.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            resources.ApplyResources(this.CheckPriHIn, "CheckPriHIn");
+            this.CheckPriHIn.Name = "CheckPriHIn";
+            this.CheckPriHIn.StylePriority.UseBorders = false;
+            this.CheckPriHIn.StylePriority.UseFont = false;
+            this.CheckPriHIn.StylePriority.UseTextAlignment = false;
+            // 
+            // CheckPriVDwn
+            // 
+            this.CheckPriVDwn.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            resources.ApplyResources(this.CheckPriVDwn, "CheckPriVDwn");
+            this.CheckPriVDwn.Name = "CheckPriVDwn";
+            this.CheckPriVDwn.StylePriority.UseBorders = false;
+            this.CheckPriVDwn.StylePriority.UseFont = false;
+            // 
+            // CheckPriVUp
+            // 
+            this.CheckPriVUp.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            resources.ApplyResources(this.CheckPriVUp, "CheckPriVUp");
+            this.CheckPriVUp.Name = "CheckPriVUp";
+            this.CheckPriVUp.StylePriority.UseBorders = false;
+            this.CheckPriVUp.StylePriority.UseFont = false;
             // 
             // xrLabel11
             // 
@@ -1348,14 +1382,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbRefractive.StylePriority.UseFont = false;
             this.LbRefractive.StylePriority.UseTextAlignment = false;
             // 
-            // CheckPriVDwn
-            // 
-            this.CheckPriVDwn.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            resources.ApplyResources(this.CheckPriVDwn, "CheckPriVDwn");
-            this.CheckPriVDwn.Name = "CheckPriVDwn";
-            this.CheckPriVDwn.StylePriority.UseBorders = false;
-            this.CheckPriVDwn.StylePriority.UseFont = false;
-            // 
             // xrLabel35
             // 
             this.xrLabel35.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
@@ -1368,15 +1394,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel35.StylePriority.UseBorders = false;
             this.xrLabel35.StylePriority.UseFont = false;
             this.xrLabel35.StylePriority.UseTextAlignment = false;
-            // 
-            // CheckPriHOut
-            // 
-            this.CheckPriHOut.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            resources.ApplyResources(this.CheckPriHOut, "CheckPriHOut");
-            this.CheckPriHOut.Name = "CheckPriHOut";
-            this.CheckPriHOut.StylePriority.UseBorders = false;
-            this.CheckPriHOut.StylePriority.UseFont = false;
-            this.CheckPriHOut.StylePriority.UseTextAlignment = false;
             // 
             // lb
             // 
@@ -1391,14 +1408,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lb.StylePriority.UseFont = false;
             this.lb.StylePriority.UseTextAlignment = false;
             // 
-            // CheckPriVUp
-            // 
-            this.CheckPriVUp.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            resources.ApplyResources(this.CheckPriVUp, "CheckPriVUp");
-            this.CheckPriVUp.Name = "CheckPriVUp";
-            this.CheckPriVUp.StylePriority.UseBorders = false;
-            this.CheckPriVUp.StylePriority.UseFont = false;
-            // 
             // xrLabel33
             // 
             this.xrLabel33.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
@@ -1411,15 +1420,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel33.StylePriority.UseBorders = false;
             this.xrLabel33.StylePriority.UseFont = false;
             this.xrLabel33.StylePriority.UseTextAlignment = false;
-            // 
-            // CheckPriHIn
-            // 
-            this.CheckPriHIn.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            resources.ApplyResources(this.CheckPriHIn, "CheckPriHIn");
-            this.CheckPriHIn.Name = "CheckPriHIn";
-            this.CheckPriHIn.StylePriority.UseBorders = false;
-            this.CheckPriHIn.StylePriority.UseFont = false;
-            this.CheckPriHIn.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel32
             // 

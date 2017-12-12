@@ -110,6 +110,7 @@ namespace Book.UI.Invoices.CO
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextProductDescribe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -773,6 +774,7 @@ namespace Book.UI.Invoices.CO
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel17,
             this.xrLabelNote,
             this.xrLabel40,
             this.xrLabel31,
@@ -807,6 +809,13 @@ namespace Book.UI.Invoices.CO
             this.xrControlStyle1.Name = "xrControlStyle1";
             this.xrControlStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.xrControlStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel17
+            // 
+            resources.ApplyResources(this.xrLabel17, "xrLabel17");
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
             // 
             // R01
             // 
@@ -910,5 +919,6 @@ namespace Book.UI.Invoices.CO
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRLabel lblFP;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel17;
     }
 }

@@ -33,6 +33,8 @@
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_MaterialSum = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblPaihe = new DevExpress.XtraReports.UI.XRLabel();
@@ -89,8 +91,7 @@
             this.xrLabelCompanyInfoName = new DevExpress.XtraReports.UI.XRLabel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.lbl_MaterialSum = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextProDesc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -162,6 +163,22 @@
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // xrLabel26
+            // 
+            resources.ApplyResources(this.xrLabel26, "xrLabel26");
+            this.xrLabel26.Name = "xrLabel26";
+            this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel26.StylePriority.UseFont = false;
+            this.xrLabel26.StylePriority.UseTextAlignment = false;
+            // 
+            // lbl_MaterialSum
+            // 
+            resources.ApplyResources(this.lbl_MaterialSum, "lbl_MaterialSum");
+            this.lbl_MaterialSum.Name = "lbl_MaterialSum";
+            this.lbl_MaterialSum.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_MaterialSum.StylePriority.UseFont = false;
+            this.lbl_MaterialSum.StylePriority.UseTextAlignment = false;
             // 
             // xrLine1
             // 
@@ -522,6 +539,7 @@
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel23,
             this.lblYewu,
             this.xrLabel21,
             this.xrLabel16,
@@ -622,21 +640,12 @@
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
-            // lbl_MaterialSum
+            // xrLabel23
             // 
-            resources.ApplyResources(this.lbl_MaterialSum, "lbl_MaterialSum");
-            this.lbl_MaterialSum.Name = "lbl_MaterialSum";
-            this.lbl_MaterialSum.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_MaterialSum.StylePriority.UseFont = false;
-            this.lbl_MaterialSum.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel26
-            // 
-            resources.ApplyResources(this.xrLabel26, "xrLabel26");
-            this.xrLabel26.Name = "xrLabel26";
-            this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel26.StylePriority.UseFont = false;
-            this.xrLabel26.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.xrLabel23, "xrLabel23");
+            this.xrLabel23.Name = "xrLabel23";
+            this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel23.StylePriority.UseTextAlignment = false;
             // 
             // ROZZJiaGong
             // 
@@ -724,5 +733,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;
         private DevExpress.XtraReports.UI.XRLabel lbl_MaterialSum;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel23;
     }
 }

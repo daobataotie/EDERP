@@ -906,11 +906,26 @@
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
     <value>85.31246</value>
   </data>
+  <data name="xrLabel16.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabel16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1734.41687, 182.3511</value>
+  </data>
+  <data name="xrLabel16.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
+  </data>
+  <data name="xrLabel16.Text" xml:space="preserve">
+    <value>QR8-10-05-1</value>
+  </data>
+  <data name="xrLabel16.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
   <data name="ReportFooter.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
-    <value>187.8545</value>
+    <value>240.771149</value>
   </data>
   <data name="topMarginBand1.Dpi" type="System.Single, mscorlib">
     <value>254</value>

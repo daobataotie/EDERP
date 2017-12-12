@@ -80,6 +80,7 @@ namespace Book.UI.produceManager.PCOtherCheck
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.RTproductDesc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -312,6 +313,7 @@ namespace Book.UI.produceManager.PCOtherCheck
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel3,
             this.lblPCOtherCheckDesc,
             this.xrLabel5,
             this.lblEmployee0,
@@ -529,6 +531,13 @@ namespace Book.UI.produceManager.PCOtherCheck
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.StylePriority.UseFont = false;
             // 
+            // xrLabel3
+            // 
+            resources.ApplyResources(this.xrLabel3, "xrLabel3");
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel3.StylePriority.UseTextAlignment = false;
+            // 
             // Ro
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -604,5 +613,6 @@ namespace Book.UI.produceManager.PCOtherCheck
         private DevExpress.XtraReports.UI.XRRichText RTproductDesc;
         private DevExpress.XtraReports.UI.XRTableCell xrInvoiceCusXoId;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
     }
 }
