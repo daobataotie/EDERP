@@ -828,6 +828,17 @@ namespace Book.UI
                 goto Next;
             }
         Next:
+            foreach (Form item in Application.OpenForms)
+            {
+                if (item.GetType() == f.GetType())
+                {
+                    item.Activate();
+                    item.BringToFront();
+                    item.WindowState = FormWindowState.Normal;
+                    return;
+                }
+            }
+
             f.MdiParent = associatedForm;
             //f.StartPosition = FormStartPosition.CenterParent;
             f.StartPosition = FormStartPosition.CenterScreen;
@@ -869,6 +880,17 @@ namespace Book.UI
                     f = CreateForm(formname, new object[] { ccf.Condition });
                 }
                 f.MdiParent = associatedForm;
+            }
+
+            foreach (Form item in Application.OpenForms)
+            {
+                if (item.GetType() == f.GetType())
+                {
+                    item.Activate();
+                    item.BringToFront();
+                    item.WindowState = FormWindowState.Normal;
+                    return;
+                }
             }
             f.Show();
             f.BringToFront();
