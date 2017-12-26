@@ -53,9 +53,9 @@
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -103,9 +103,9 @@
             this.gridColumn17,
             this.gridColumn18,
             this.gridColumn19,
+            this.gridColumn22,
             this.gridColumn20,
-            this.gridColumn21,
-            this.gridColumn22});
+            this.gridColumn21});
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -246,14 +246,8 @@
             // gridColumn20
             // 
             resources.ApplyResources(this.gridColumn20, "gridColumn20");
-            this.gridColumn20.FieldName = "ReferenceCost";
+            this.gridColumn20.FieldName = "ProductVersion";
             this.gridColumn20.Name = "gridColumn20";
-            // 
-            // gridColumn21
-            // 
-            resources.ApplyResources(this.gridColumn21, "gridColumn21");
-            this.gridColumn21.FieldName = "TotalCost";
-            this.gridColumn21.Name = "gridColumn21";
             // 
             // barButtonItem2
             // 
@@ -267,6 +261,12 @@
             resources.ApplyResources(this.gridColumn22, "gridColumn22");
             this.gridColumn22.FieldName = "CustomerFullName";
             this.gridColumn22.Name = "gridColumn22";
+            // 
+            // gridColumn21
+            // 
+            resources.ApplyResources(this.gridColumn21, "gridColumn21");
+            this.gridColumn21.FieldName = "Price";
+            this.gridColumn21.Name = "gridColumn21";
             // 
             // List1Form
             // 
@@ -312,8 +312,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
     }
 }

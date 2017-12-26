@@ -439,24 +439,6 @@
   <data name="gridColumn19.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="gridColumn20.Caption" xml:space="preserve">
-    <value>成本</value>
-  </data>
-  <data name="gridColumn20.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn20.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="gridColumn21.Caption" xml:space="preserve">
-    <value>總成本</value>
-  </data>
-  <data name="gridColumn21.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn21.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
   <data name="gridColumn22.Caption" xml:space="preserve">
     <value>客戶名稱</value>
   </data>
@@ -468,6 +450,24 @@
   </data>
   <data name="gridColumn22.Width" type="System.Int32, mscorlib">
     <value>119</value>
+  </data>
+  <data name="gridColumn20.Caption" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="gridColumn20.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn20.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="gridColumn21.Caption" xml:space="preserve">
+    <value>單價</value>
+  </data>
+  <data name="gridColumn21.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn21.VisibleIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>货品编号</value>
@@ -775,12 +775,6 @@
   <data name="&gt;&gt;gridColumn20.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;gridColumn21.Name" xml:space="preserve">
-    <value>gridColumn21</value>
-  </data>
-  <data name="&gt;&gt;gridColumn21.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;barButtonItem2.Name" xml:space="preserve">
     <value>barButtonItem2</value>
   </data>
@@ -791,6 +785,12 @@
     <value>gridColumn22</value>
   </data>
   <data name="&gt;&gt;gridColumn22.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn21.Name" xml:space="preserve">
+    <value>gridColumn21</value>
+  </data>
+  <data name="&gt;&gt;gridColumn21.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -23,7 +23,7 @@ namespace Book.UI.Settings.BasicData.Products
     public partial class List1Form : BaseListForm
     {
         DataTable dt = new DataTable();
-        public List1Form()
+        public  List1Form()
         {
 
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace Book.UI.Settings.BasicData.Products
         protected override void RefreshData()
         {
             //为了查询速度，暂将ProductSpecification，ProductDescription去掉
-            this.bindingSource1.DataSource = this.dt = ((BL.ProductManager)this.manager).Query("SELECT product.ProductId,product.Id,ProductName,ProductCategoryName,c.CustomerFullName ,CustomerProductName,isnull(StocksQuantity,0) StocksQuantity,isnull(ReferenceCost,0) ReferenceCost,isnull(StocksQuantity,0)*isnull(ReferenceCost,0) TotalCost FROM Product left join ProductCategory ca  on ca.ProductCategoryId=Product.ProductCategoryId left join Customer c on c.CustomerId=Product.CustomerId order by  ProductName", 300, "pro").Tables[0];
+            this.bindingSource1.DataSource = this.dt = ((BL.ProductManager)this.manager).Query("SELECT product.ProductId,product.Id,ProductName,ProductCategoryName,c.CustomerFullName ,CustomerProductName,isnull(StocksQuantity,0) StocksQuantity,ProductVersion FROM Product left join ProductCategory ca  on ca.ProductCategoryId=Product.ProductCategoryId left join Customer c on c.CustomerId=Product.CustomerId order by  ProductName", 300, "pro").Tables[0];
 
         }
 
