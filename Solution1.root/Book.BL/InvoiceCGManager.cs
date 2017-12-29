@@ -288,8 +288,8 @@ namespace Book.BL
 
                 //更新产品信息00
 
-
-                p.OrderOnWayQuantity = Convert.ToDouble(p.OrderOnWayQuantity) - Convert.ToDouble(detail.InvoiceCGDetailQuantity);
+                if (!string.IsNullOrEmpty(detail.InvoiceCODetailId))
+                    p.OrderOnWayQuantity = Convert.ToDouble(p.OrderOnWayQuantity) - Convert.ToDouble(detail.InvoiceCGDetailQuantity);
                 //2017年7月24日00:07:10： 可以为负,否则会导致不准
                 //p.OrderOnWayQuantity = p.OrderOnWayQuantity < 0 ? 0 : p.OrderOnWayQuantity;
                 p.ProductNearCGDate = DateTime.Now;
@@ -405,17 +405,18 @@ namespace Book.BL
                                 //更新产品信息
                                 //if (detail.DepotPosition != null)
                                 //{
-                                    Model.Product pro = detail.Product;
+                                Model.Product pro = detail.Product;
+                                if (!string.IsNullOrEmpty(detail.InvoiceCODetailId))
                                     pro.OrderOnWayQuantity = Convert.ToDouble(pro.OrderOnWayQuantity) + Convert.ToDouble(detail.InvoiceCGDetailQuantity);
-                                    pro.ProductNearCGDate = DateTime.Now;
-                                    if (!string.IsNullOrEmpty(detail.DepotPositionId) && detail.InvoiceCGDetaiInQuantity != 0)
-                                    {
-                                        pro.StocksQuantity = Convert.ToDouble(pro.StocksQuantity) - Convert.ToDouble(detail.InvoiceCGDetaiInQuantity);
+                                pro.ProductNearCGDate = DateTime.Now;
+                                if (!string.IsNullOrEmpty(detail.DepotPositionId) && detail.InvoiceCGDetaiInQuantity != 0)
+                                {
+                                    pro.StocksQuantity = Convert.ToDouble(pro.StocksQuantity) - Convert.ToDouble(detail.InvoiceCGDetaiInQuantity);
 
-                                        //修改货位库存。
-                                        stockAccessor.Decrement(detail.DepotPosition, pro, detail.InvoiceCGDetaiInQuantity);
-                                    }
-                                    productManager.update(pro);
+                                    //修改货位库存。
+                                    stockAccessor.Decrement(detail.DepotPosition, pro, detail.InvoiceCGDetaiInQuantity);
+                                }
+                                productManager.update(pro);
                                 //}
                                 // 成本
                                 //productAccessor.UpdateCost1(p, p.ProductCurrentCGPrice,cgQuantity);
