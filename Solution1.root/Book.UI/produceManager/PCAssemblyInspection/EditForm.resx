@@ -883,7 +883,7 @@
     <value>ProductName</value>
   </data>
   <data name="repositoryItemLookUpEdit20.Columns3" xml:space="preserve">
-    <value>Name8</value>
+    <value>Name</value>
   </data>
   <metadata name="bindingSourceZuzhuangProduct.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>866, 17</value>
@@ -898,7 +898,7 @@
     <value>12</value>
   </data>
   <data name="gridColumn12.Width" type="System.Int32, mscorlib">
-    <value>100</value>
+    <value>150</value>
   </data>
   <data name="gridColumn13.Caption" xml:space="preserve">
     <value>条码标</value>

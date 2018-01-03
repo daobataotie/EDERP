@@ -67,7 +67,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
 
             this.bindingSourceCustomer.DataSource = new BL.CustomerManager().Select();
             this.bindingSourceEmployee.DataSource = new BL.EmployeeManager().SelectOnActive();
-            this.bindingSourceZuzhuangProduct.DataSource = new BL.ProductManager().SelectProductByProductCategoryId(new Book.Model.ProductCategory() { ProductCategoryId = "183cd20f-dd15-421d-b1ae-e56ed015f4e2" });   //查詢所有包裝袋
+            this.bindingSourceZuzhuangProduct.DataSource = new BL.ProductManager().SelectProductByProductCategoryId(new Book.Model.ProductCategory() { ProductCategoryId = "756c936b-4643-4963-ad11-4e63b86bed2f" });   //查詢所有塑膠袋
         }
 
         public EditForm(string PCAssemblyInspectionId)
@@ -295,39 +295,66 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm pronoForm = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm(null, 0);
             if (pronoForm.ShowDialog(this) == DialogResult.OK)
             {
-                Model.PronoteHeader currentModel = pronoForm.SelectItem;
-                if (currentModel != null)
+                if (pronoForm.SelectItems == null || pronoForm.SelectItems.Count == 0)
                 {
-                    this.txt_PronoteHeaderId.Text = currentModel.PronoteHeaderID;
-                    this._pCAssemblyInspection.PronoteHeader = currentModel;
-                    Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(currentModel.InvoiceXOId);
-                    if (xo != null)
+                    Model.PronoteHeader currentModel = pronoForm.SelectItem;
+                    if (currentModel != null)
                     {
-                        currentModel.InvoiceXO = xo;
-                        this.txt_InvoiceCusId.Text = xo.CustomerInvoiceXOId;
+                        this.txt_PronoteHeaderId.Text = currentModel.PronoteHeaderID;
+                        this._pCAssemblyInspection.PronoteHeader = currentModel;
+                        Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(currentModel.InvoiceXOId);
+                        if (xo != null)
+                        {
+                            currentModel.InvoiceXO = xo;
+                            this.txt_InvoiceCusId.Text = xo.CustomerInvoiceXOId;
+                        }
+                        //this.txt_Model.Text = (currentModel.Product) == null ? "" : (currentModel.Product).CustomerProductName;
+                        Model.Product p = new BL.ProductManager().Get(currentModel.ProductId);
+                        Model.PCAssemblyInspectionDetail detail = new Book.Model.PCAssemblyInspectionDetail();
+                        detail.PCAssemblyInspectionDetailId = Guid.NewGuid().ToString();
+                        detail.PCAssemblyInspectionDetailDate = DateTime.Now;
+                        detail.PCAssemblyInspectionId = this._pCAssemblyInspection.PCAssemblyInspectionId;
+                        detail.Product = p;
+                        detail.ProductId = currentModel.ProductId;
+                        detail.CustomerId = xo == null ? null : xo.CustomerId;
+
+                        if (p.IsQiangHua == true)
+                            detail.Jiagongbie = "強化";
+                        else if (p.IsFangWu == true)
+                            detail.Jiagongbie = "防霧";
+                        else if (p.IsNoQiangFang == true)
+                            detail.Jiagongbie = "無強化防霧";
+
+                        this._pCAssemblyInspection.Details.Add(detail);
+                        this.bindingSourceDetail.Position = this.bindingSourceDetail.IndexOf(detail);
                     }
-                    //this.txt_Model.Text = (currentModel.Product) == null ? "" : (currentModel.Product).CustomerProductName;
-                    Model.Product p = new BL.ProductManager().Get(currentModel.ProductId);
-                    Model.PCAssemblyInspectionDetail detail = new Book.Model.PCAssemblyInspectionDetail();
-                    detail.PCAssemblyInspectionDetailId = Guid.NewGuid().ToString();
-                    detail.PCAssemblyInspectionDetailDate = DateTime.Now;
-                    detail.PCAssemblyInspectionId = this._pCAssemblyInspection.PCAssemblyInspectionId;
-                    detail.Product = p;
-                    detail.ProductId = currentModel.ProductId;
-                    detail.CustomerId = xo == null ? null : xo.CustomerId;
-
-                    if (p.IsQiangHua == true)
-                        detail.Jiagongbie = "強化";
-                    else if (p.IsFangWu == true)
-                        detail.Jiagongbie = "防霧";
-                    else if (p.IsNoQiangFang == true)
-                        detail.Jiagongbie = "無強化防霧";
-
-                    this._pCAssemblyInspection.Details.Add(detail);
-                    this.bindingSourceDetail.Position = this.bindingSourceDetail.IndexOf(detail);
-
-                    this.gridControl1.RefreshDataSource();
                 }
+                else
+                {
+                    foreach(var item in pronoForm.SelectItems)
+                    {
+                        Model.Product p = new BL.ProductManager().Get(item.ProductId);
+                        Model.PCAssemblyInspectionDetail detail = new Book.Model.PCAssemblyInspectionDetail();
+                        detail.PCAssemblyInspectionDetailId = Guid.NewGuid().ToString();
+                        detail.PCAssemblyInspectionDetailDate = DateTime.Now;
+                        detail.PCAssemblyInspectionId = this._pCAssemblyInspection.PCAssemblyInspectionId;
+                        detail.Product = p;
+                        detail.ProductId = item.ProductId;
+                        //detail.CustomerId = xo == null ? null : xo.CustomerId;
+
+                        if (p.IsQiangHua == true)
+                            detail.Jiagongbie = "強化";
+                        else if (p.IsFangWu == true)
+                            detail.Jiagongbie = "防霧";
+                        else if (p.IsNoQiangFang == true)
+                            detail.Jiagongbie = "無強化防霧";
+
+                        this._pCAssemblyInspection.Details.Add(detail);
+                        this.bindingSourceDetail.Position = this.bindingSourceDetail.IndexOf(detail);
+                    }
+                }
+                this.gridControl1.RefreshDataSource();
+
             }
             pronoForm.Dispose();
             GC.Collect();
