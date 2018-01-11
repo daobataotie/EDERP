@@ -68,7 +68,7 @@ namespace Book.DA.SQLServer
                     }
 
 #else 
-                            sqlmapper = builder.ConfigureAndWatch("Book.SQLServer.SQLMap.config", handler);
+                    _sqlmapper = builder.ConfigureAndWatch("Book.SQLServer.SQLMap.config", handler);
 #endif
 
                     //   }
