@@ -303,6 +303,7 @@
             this.barButtonItem476 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem472 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem479 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem492 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem379 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem381 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem54 = new DevExpress.XtraBars.BarSubItem();
@@ -651,7 +652,6 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.barButtonItem492 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -3486,6 +3486,13 @@
             this.barButtonItem479.Name = "barButtonItem479";
             this.barButtonItem479.Tag = "produceManager.PCExportReportANSI.ISOOutPutFile";
             // 
+            // barButtonItem492
+            // 
+            resources.ApplyResources(this.barButtonItem492, "barButtonItem492");
+            this.barButtonItem492.Id = 652;
+            this.barButtonItem492.Name = "barButtonItem492";
+            this.barButtonItem492.Tag = "produceManager.PCAssemblyInspection.EditForm";
+            // 
             // barButtonItem379
             // 
             resources.ApplyResources(this.barButtonItem379, "barButtonItem379");
@@ -6170,13 +6177,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // barButtonItem492
-            // 
-            resources.ApplyResources(this.barButtonItem492, "barButtonItem492");
-            this.barButtonItem492.Id = 652;
-            this.barButtonItem492.Name = "barButtonItem492";
-            this.barButtonItem492.Tag = "produceManager.PCAssemblyInspection.EditForm";
             // 
             // MainForm
             // 

@@ -138,20 +138,485 @@
   <data name="barSubItem2.Caption" xml:space="preserve">
     <value>基础数据管理</value>
   </data>
+  <data name="barButtonItem126.Caption" xml:space="preserve">
+    <value>公司基本资料</value>
+  </data>
+  <data name="barButtonItem257.Caption" xml:space="preserve">
+    <value>公司基本资料</value>
+  </data>
+  <data name="barButtonItem14.Caption" xml:space="preserve">
+    <value>编号规则</value>
+  </data>
+  <data name="barSubItem15.Caption" xml:space="preserve">
+    <value>权限设定</value>
+  </data>
+  <data name="barButtonItem69.Caption" xml:space="preserve">
+    <value>角色设定</value>
+  </data>
+  <data name="barButtonItem70.Caption" xml:space="preserve">
+    <value>操作员设定</value>
+  </data>
+  <data name="barButtonItem307.Caption" xml:space="preserve">
+    <value>权限设置</value>
+  </data>
+  <data name="barButtonItem359.Caption" xml:space="preserve">
+    <value>功能设置</value>
+  </data>
+  <data name="barSubItem46.Caption" xml:space="preserve">
+    <value>流程管理</value>
+  </data>
+  <data name="barButtonItem169.Caption" xml:space="preserve">
+    <value>定义流程</value>
+  </data>
+  <data name="barSubItem35.Caption" xml:space="preserve">
+    <value>客户厂商管理</value>
+  </data>
+  <data name="barButtonItem5.Caption" xml:space="preserve">
+    <value>客户基本资料(&amp;C)...</value>
+  </data>
+  <data name="barButtonItem256.Caption" xml:space="preserve">
+    <value>客户产品基本资料</value>
+  </data>
+  <data name="barButtonItem161.Caption" xml:space="preserve">
+    <value>客户产品对照资料</value>
+  </data>
+  <data name="barButtonItem163.Caption" xml:space="preserve">
+    <value>客户产品加工类型</value>
+  </data>
+  <data name="barButtonItem164.Caption" xml:space="preserve">
+    <value>客户产品加工描述</value>
+  </data>
+  <data name="barButtonItem243.Caption" xml:space="preserve">
+    <value>客户产品加工内容</value>
+  </data>
+  <data name="barButtonItem166.Caption" xml:space="preserve">
+    <value>客户产品包装类型</value>
+  </data>
+  <data name="barButtonItem207.Caption" xml:space="preserve">
+    <value>客户产品包装内容</value>
+  </data>
+  <data name="barButtonItem456.Caption" xml:space="preserve">
+    <value>客户产品价格设置</value>
+  </data>
+  <data name="barButtonItem482.Caption" xml:space="preserve">
+    <value>客戶商品年度出貨查詢</value>
+  </data>
+  <data name="barSubItem89.Caption" xml:space="preserve">
+    <value>供应商管理</value>
+  </data>
+  <data name="barButtonItem247.Caption" xml:space="preserve">
+    <value>供应商分类</value>
+  </data>
+  <data name="barButtonItem33.Caption" xml:space="preserve">
+    <value>厂商基本资料(&amp;S)...</value>
+  </data>
+  <data name="barButtonItem419.Caption" xml:space="preserve">
+    <value>厂商商品/加工对照</value>
+  </data>
+  <data name="barSubItem37.Caption" xml:space="preserve">
+    <value>货品设置</value>
+  </data>
+  <data name="barButtonItem147.Caption" xml:space="preserve">
+    <value>单位组</value>
+  </data>
+  <data name="barButtonItem148.Caption" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="barButtonItem149.Caption" xml:space="preserve">
+    <value>自定义抽检规则</value>
+  </data>
+  <data name="barButtonItem150.Caption" xml:space="preserve">
+    <value>质检计划</value>
+  </data>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>货品类别(&amp;C)...</value>
+  </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>货品(&amp;P)...</value>
+  </data>
+  <data name="barButtonItem467.Caption" xml:space="preserve">
+    <value>原料重量</value>
+  </data>
+  <data name="barButtonItem246.Caption" xml:space="preserve">
+    <value>库房货位设置</value>
+  </data>
+  <data name="barButtonItem165.Caption" xml:space="preserve">
+    <value>货运公司资料</value>
+  </data>
+  <data name="barButtonItem245.Caption" xml:space="preserve">
+    <value>货运方式</value>
+  </data>
+  <data name="barButtonItem248.Caption" xml:space="preserve">
+    <value>公司设置</value>
+  </data>
+  <data name="barButtonItem249.Caption" xml:space="preserve">
+    <value>生产机器设备</value>
+  </data>
+  <data name="barSubItem72.Caption" xml:space="preserve">
+    <value>模具管理</value>
+  </data>
+  <data name="barButtonItem454.Caption" xml:space="preserve">
+    <value>产品规格</value>
+  </data>
+  <data name="barButtonItem252.Caption" xml:space="preserve">
+    <value>成品材质</value>
+  </data>
+  <data name="barButtonItem253.Caption" xml:space="preserve">
+    <value>材质设置</value>
+  </data>
+  <data name="barButtonItem254.Caption" xml:space="preserve">
+    <value>产品模具</value>
+  </data>
+  <data name="barButtonItem255.Caption" xml:space="preserve">
+    <value>模具试模</value>
+  </data>
+  <data name="barButtonItem455.Caption" xml:space="preserve">
+    <value>成品类别</value>
+  </data>
+  <data name="barButtonItem318.Caption" xml:space="preserve">
+    <value>邮件发送</value>
+  </data>
+  <data name="barButtonItem363.Caption" xml:space="preserve">
+    <value>客户基本资料一览表</value>
+  </data>
+  <data name="barButtonItem364.Caption" xml:space="preserve">
+    <value>供应商基本资料一览表</value>
+  </data>
+  <data name="barButtonItem478.Caption" xml:space="preserve">
+    <value>年度結轉</value>
+  </data>
   <data name="barSubItem44.Caption" xml:space="preserve">
     <value>制造数据</value>
+  </data>
+  <data name="barButtonItem170.Caption" xml:space="preserve">
+    <value>生产站</value>
+  </data>
+  <data name="barButtonItem185.Caption" xml:space="preserve">
+    <value>生产站日志</value>
+  </data>
+  <data name="barButtonItem152.Caption" xml:space="preserve">
+    <value>基础物料</value>
+  </data>
+  <data name="barButtonItem186.Caption" xml:space="preserve">
+    <value>产品BOM单列表</value>
+  </data>
+  <data name="barButtonItem177.Caption" xml:space="preserve">
+    <value>产品BOM单</value>
+  </data>
+  <data name="barButtonItem175.Caption" xml:space="preserve">
+    <value>物料类型</value>
+  </data>
+  <data name="barButtonItem162.Caption" xml:space="preserve">
+    <value>物料清单整批修改</value>
+  </data>
+  <data name="barButtonItem194.Caption" xml:space="preserve">
+    <value>工序管理</value>
+  </data>
+  <data name="barButtonItem178.Caption" xml:space="preserve">
+    <value>工艺管理</value>
+  </data>
+  <data name="barButtonItem181.Caption" xml:space="preserve">
+    <value>工艺明细</value>
+  </data>
+  <data name="barButtonItem182.Caption" xml:space="preserve">
+    <value>物料加工工序</value>
+  </data>
+  <data name="barButtonItem303.Caption" xml:space="preserve">
+    <value>工序委外价格</value>
   </data>
   <data name="barSubItem52.Caption" xml:space="preserve">
     <value>采购管理</value>
   </data>
+  <data name="barButtonItem46.Caption" xml:space="preserve">
+    <value>采购报价单</value>
+  </data>
+  <data name="barButtonItem45.Caption" xml:space="preserve">
+    <value>采购订单</value>
+  </data>
+  <data name="barButtonItem77.Caption" xml:space="preserve">
+    <value>进货单</value>
+  </data>
+  <data name="barButtonItem78.Caption" xml:space="preserve">
+    <value>采购退货单</value>
+  </data>
+  <data name="barButtonItem75.Caption" xml:space="preserve">
+    <value>采购报价单一览</value>
+  </data>
+  <data name="barButtonItem76.Caption" xml:space="preserve">
+    <value>采购订单一览</value>
+  </data>
+  <data name="barButtonItem345.Caption" xml:space="preserve">
+    <value>采购进货单一览</value>
+  </data>
+  <data name="barButtonItem346.Caption" xml:space="preserve">
+    <value>采购退货单一览</value>
+  </data>
+  <data name="barButtonItem343.Caption" xml:space="preserve">
+    <value>采购订单明细表</value>
+  </data>
+  <data name="barButtonItem351.Caption" xml:space="preserve">
+    <value>采购订单明细表</value>
+  </data>
+  <data name="barButtonItem95.Caption" xml:space="preserve">
+    <value>进货明细表</value>
+  </data>
+  <data name="barButtonItem96.Caption" xml:space="preserve">
+    <value>进货退货明细表</value>
+  </data>
+  <data name="barButtonItem98.Caption" xml:space="preserve">
+    <value>进货简要表</value>
+  </data>
+  <data name="barButtonItem97.Caption" xml:space="preserve">
+    <value>进货总览表</value>
+  </data>
   <data name="barSubItem55.Caption" xml:space="preserve">
     <value>销售管理</value>
+  </data>
+  <data name="barButtonItem47.Caption" xml:space="preserve">
+    <value>客户询价单</value>
+  </data>
+  <data name="barButtonItem44.Caption" xml:space="preserve">
+    <value>客户订单</value>
+  </data>
+  <data name="barButtonItem16.Caption" xml:space="preserve">
+    <value>出货单</value>
+  </data>
+  <data name="barButtonItem17.Caption" xml:space="preserve">
+    <value>客户退货单</value>
+  </data>
+  <data name="barButtonItem74.Caption" xml:space="preserve">
+    <value>客户询价单一览</value>
+  </data>
+  <data name="barButtonItem73.Caption" xml:space="preserve">
+    <value>客户订单一览</value>
+  </data>
+  <data name="barButtonItem32.Caption" xml:space="preserve">
+    <value>出货单一览</value>
+  </data>
+  <data name="barButtonItem344.Caption" xml:space="preserve">
+    <value>客户退货单一览</value>
+  </data>
+  <data name="barButtonItem342.Caption" xml:space="preserve">
+    <value>销售订单明细表</value>
+  </data>
+  <data name="barButtonItem347.Caption" xml:space="preserve">
+    <value>銷售訂單明細表</value>
+  </data>
+  <data name="barButtonItem99.Caption" xml:space="preserve">
+    <value>出货明细表</value>
+  </data>
+  <data name="barButtonItem102.Caption" xml:space="preserve">
+    <value>出货退货明细表</value>
+  </data>
+  <data name="barButtonItem101.Caption" xml:space="preserve">
+    <value>出货简要表</value>
+  </data>
+  <data name="barButtonItem100.Caption" xml:space="preserve">
+    <value>出货总览表</value>
+  </data>
+  <data name="barButtonItem444.Caption" xml:space="preserve">
+    <value>出货装箱</value>
+  </data>
+  <data name="barButtonItem443.Caption" xml:space="preserve">
+    <value>箱/柜参数设置</value>
+  </data>
+  <data name="barButtonItem445.Caption" xml:space="preserve">
+    <value>订单装箱</value>
+  </data>
+  <data name="barButtonItem451.Caption" xml:space="preserve">
+    <value>箱子装柜</value>
   </data>
   <data name="barSubItem56.Caption" xml:space="preserve">
     <value>仓库管理</value>
   </data>
+  <data name="barButtonItem259.Caption" xml:space="preserve">
+    <value>出仓单</value>
+  </data>
+  <data name="barButtonItem262.Caption" xml:space="preserve">
+    <value>进仓单</value>
+  </data>
+  <data name="barButtonItem8.Caption" xml:space="preserve">
+    <value>库存期初状况(&amp;S)...</value>
+  </data>
+  <data name="barButtonItem263.Caption" xml:space="preserve">
+    <value>盘点录入</value>
+  </data>
+  <data name="barButtonItem216.Caption" xml:space="preserve">
+    <value>库存盘点录入</value>
+  </data>
+  <data name="barButtonItem258.Caption" xml:space="preserve">
+    <value>库存盘点校正</value>
+  </data>
+  <data name="barSubItem22.Caption" xml:space="preserve">
+    <value>借入借出</value>
+  </data>
+  <data name="barButtonItem130.Caption" xml:space="preserve">
+    <value>产品借出单</value>
+  </data>
+  <data name="barButtonItem131.Caption" xml:space="preserve">
+    <value>产品还入单</value>
+  </data>
+  <data name="barButtonItem132.Caption" xml:space="preserve">
+    <value>供应商借入单</value>
+  </data>
+  <data name="barButtonItem133.Caption" xml:space="preserve">
+    <value>供应商借入还出单</value>
+  </data>
+  <data name="barButtonItem134.Caption" xml:space="preserve">
+    <value>客户借出单</value>
+  </data>
+  <data name="barButtonItem135.Caption" xml:space="preserve">
+    <value>客户借出还入单</value>
+  </data>
+  <data name="barButtonItem11.Caption" xml:space="preserve">
+    <value>库存量限制(&amp;L)...</value>
+  </data>
+  <data name="barButtonItem28.Caption" xml:space="preserve">
+    <value>库存调拨</value>
+  </data>
+  <data name="barButtonItem244.Caption" xml:space="preserve">
+    <value>库存盘点明细</value>
+  </data>
+  <data name="barButtonItem260.Caption" xml:space="preserve">
+    <value>库存盘点差异表详细</value>
+  </data>
+  <data name="barButtonItem460.Caption" xml:space="preserve">
+    <value>出仓单明细表</value>
+  </data>
+  <data name="barButtonItem461.Caption" xml:space="preserve">
+    <value>进仓单明细表</value>
+  </data>
+  <data name="barButtonItem470.Caption" xml:space="preserve">
+    <value>库存预警</value>
+  </data>
+  <data name="barButtonItem471.Caption" xml:space="preserve">
+    <value>長期未出倉商品</value>
+  </data>
+  <data name="barButtonItem306.Caption" xml:space="preserve">
+    <value>货品一览</value>
+  </data>
   <data name="barSubItem49.Caption" xml:space="preserve">
     <value>生产管理</value>
+  </data>
+  <data name="barButtonItem189.Caption" xml:space="preserve">
+    <value>生产计划</value>
+  </data>
+  <data name="barButtonItem195.Caption" xml:space="preserve">
+    <value>物料需求计划</value>
+  </data>
+  <data name="barButtonItem250.Caption" xml:space="preserve">
+    <value>生产工序能力</value>
+  </data>
+  <data name="barButtonItem251.Caption" xml:space="preserve">
+    <value>生产进度计划</value>
+  </data>
+  <data name="barButtonItem196.Caption" xml:space="preserve">
+    <value>生产加工</value>
+  </data>
+  <data name="barButtonItemPronoteHeader1.Caption" xml:space="preserve">
+    <value>加工指示</value>
+  </data>
+  <data name="barButtonItem327.Caption" xml:space="preserve">
+    <value>组装加工</value>
+  </data>
+  <data name="barButtonItem261.Caption" xml:space="preserve">
+    <value>生产领料</value>
+  </data>
+  <data name="barButtonItem205.Caption" xml:space="preserve">
+    <value>生产退料</value>
+  </data>
+  <data name="barButtonItem204.Caption" xml:space="preserve">
+    <value>生产入库</value>
+  </data>
+  <data name="barButtonItem199.Caption" xml:space="preserve">
+    <value>委外合同</value>
+  </data>
+  <data name="barButtonItem200.Caption" xml:space="preserve">
+    <value>委外发料</value>
+  </data>
+  <data name="barButtonItem324.Caption" xml:space="preserve">
+    <value>委外退料</value>
+  </data>
+  <data name="barButtonItem203.Caption" xml:space="preserve">
+    <value>委外入库</value>
+  </data>
+  <data name="barButtonItem202.Caption" xml:space="preserve">
+    <value>委外退库</value>
+  </data>
+  <data name="barSubItem77.Caption" xml:space="preserve">
+    <value>车间管理</value>
+  </data>
+  <data name="barButtonItem304.Caption" xml:space="preserve">
+    <value>移转单</value>
+  </data>
+  <data name="barButtonItem317.Caption" xml:space="preserve">
+    <value>生产车间</value>
+  </data>
+  <data name="barButtonItem305.Caption" xml:space="preserve">
+    <value>生产车间数量</value>
+  </data>
+  <data name="barButtonItem308.Caption" xml:space="preserve">
+    <value>生产车间数量列表</value>
+  </data>
+  <data name="barButtonItem320.Caption" xml:space="preserve">
+    <value>生产车间质检</value>
+  </data>
+  <data name="barButtonItem321.Caption" xml:space="preserve">
+    <value>生产车间质检列表</value>
+  </data>
+  <data name="barButtonItem319.Caption" xml:space="preserve">
+    <value>生产日统计</value>
+  </data>
+  <data name="barSubItem78.Caption" xml:space="preserve">
+    <value>明细查询</value>
+  </data>
+  <data name="barButtonItem221.Caption" xml:space="preserve">
+    <value>生产计划明细</value>
+  </data>
+  <data name="barButtonItem198.Caption" xml:space="preserve">
+    <value>物料需求计划明细</value>
+  </data>
+  <data name="barButtonItem348.Caption" xml:space="preserve">
+    <value>物料需求计划明细</value>
+  </data>
+  <data name="barButtonItem225.Caption" xml:space="preserve">
+    <value>生产加工明细表</value>
+  </data>
+  <data name="barButtonItem226.Caption" xml:space="preserve">
+    <value>加工领料明细表</value>
+  </data>
+  <data name="barButtonItem227.Caption" xml:space="preserve">
+    <value>生产退料明细表</value>
+  </data>
+  <data name="barButtonItem230.Caption" xml:space="preserve">
+    <value>生产入库明细表</value>
+  </data>
+  <data name="barButtonItem231.Caption" xml:space="preserve">
+    <value>委外加工单</value>
+  </data>
+  <data name="barButtonItem232.Caption" xml:space="preserve">
+    <value>委外出库明细表</value>
+  </data>
+  <data name="barButtonItem233.Caption" xml:space="preserve">
+    <value>外包退料明细表</value>
+  </data>
+  <data name="barButtonItem234.Caption" xml:space="preserve">
+    <value>委外入库明细表</value>
+  </data>
+  <data name="barButtonItem322.Caption" xml:space="preserve">
+    <value>生产车间数量明细</value>
+  </data>
+  <data name="barButtonItem323.Caption" xml:space="preserve">
+    <value>生产车间质检明显</value>
+  </data>
+  <data name="barButtonItem360.Caption" xml:space="preserve">
+    <value>生产不良率统计表</value>
+  </data>
+  <data name="barButtonItem361.Caption" xml:space="preserve">
+    <value>商品不良率统计表</value>
+  </data>
+  <data name="barButtonItem469.Caption" xml:space="preserve">
+    <value>生管未生产数量总表</value>
   </data>
   <data name="barSubItem53.Caption" xml:space="preserve">
     <value>质量管理</value>
@@ -207,17 +672,251 @@
   <data name="barSubItem60.Caption" xml:space="preserve">
     <value>ANSI外销报告</value>
   </data>
+  <data name="barButtonItem366.Caption" xml:space="preserve">
+    <value>目视检验</value>
+  </data>
+  <data name="barButtonItem367.Caption" xml:space="preserve">
+    <value>清晰度</value>
+  </data>
+  <data name="barButtonItem368.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="barButtonItem368.Caption" xml:space="preserve">
+    <value>棱镜度数&amp;&amp;棱镜平衡度数</value>
+  </data>
+  <data name="barButtonItem369.Caption" xml:space="preserve">
+    <value>可见光透视率</value>
+  </data>
+  <data name="barButtonItem370.Caption" xml:space="preserve">
+    <value>紫外线透视率</value>
+  </data>
+  <data name="barButtonItem371.Caption" xml:space="preserve">
+    <value>球面度数</value>
+  </data>
+  <data name="barButtonItem372.Caption" xml:space="preserve">
+    <value>散光度数</value>
+  </data>
+  <data name="barButtonItem373.Caption" xml:space="preserve">
+    <value>高速冲击测试</value>
+  </data>
+  <data name="barButtonItem374.Caption" xml:space="preserve">
+    <value>圆锥坠落撞击测试</value>
+  </data>
+  <data name="barButtonItem375.Caption" xml:space="preserve">
+    <value>镜片穿透测试</value>
+  </data>
+  <data name="barButtonItem376.Caption" xml:space="preserve">
+    <value>雾度测试</value>
+  </data>
+  <data name="barButtonItem377.Caption" xml:space="preserve">
+    <value>耐燃性测试</value>
+  </data>
+  <data name="barButtonItem354.Caption" xml:space="preserve">
+    <value>ANSI外销报告</value>
+  </data>
+  <data name="barButtonItem446.Caption" xml:space="preserve">
+    <value>详细测试查询</value>
+  </data>
+  <data name="barButtonItem483.Caption" xml:space="preserve">
+    <value>ANSI外銷報告2015</value>
+  </data>
   <data name="barSubItem80.Caption" xml:space="preserve">
     <value>CSA外销报告</value>
+  </data>
+  <data name="barButtonItem383.Caption" xml:space="preserve">
+    <value>屈光/光学</value>
+  </data>
+  <data name="barButtonItem384.Caption" xml:space="preserve">
+    <value>清晰度</value>
+  </data>
+  <data name="barButtonItem385.Caption" xml:space="preserve">
+    <value>偏光偏差量</value>
+  </data>
+  <data name="barButtonItem386.Caption" xml:space="preserve">
+    <value>雾度测试</value>
+  </data>
+  <data name="barButtonItem387.Caption" xml:space="preserve">
+    <value>可见光透视率</value>
+  </data>
+  <data name="barButtonItem388.Caption" xml:space="preserve">
+    <value>高速冲击测试</value>
+  </data>
+  <data name="barButtonItem382.Caption" xml:space="preserve">
+    <value>CSA外销报告</value>
+  </data>
+  <data name="barButtonItem447.Caption" xml:space="preserve">
+    <value>详细测试查询</value>
   </data>
   <data name="barSubItem87.Caption" xml:space="preserve">
     <value>CEEN外销报告</value>
   </data>
+  <data name="barButtonItem389.Caption" xml:space="preserve">
+    <value>结构</value>
+  </data>
+  <data name="barButtonItem390.Caption" xml:space="preserve">
+    <value>球面度数</value>
+  </data>
+  <data name="barButtonItem391.Caption" xml:space="preserve">
+    <value>散光度数</value>
+  </data>
+  <data name="barButtonItem392.Caption" xml:space="preserve">
+    <value>棱镜度数</value>
+  </data>
+  <data name="barButtonItem393.Caption" xml:space="preserve">
+    <value>坐标</value>
+  </data>
+  <data name="barButtonItem394.Caption" xml:space="preserve">
+    <value>透视率</value>
+  </data>
+  <data name="barButtonItem395.Caption" xml:space="preserve">
+    <value>表面品质</value>
+  </data>
+  <data name="barButtonItem396.Caption" xml:space="preserve">
+    <value>直式冲击</value>
+  </data>
+  <data name="barButtonItem397.Caption" xml:space="preserve">
+    <value>高速冲击</value>
+  </data>
+  <data name="barButtonItem398.Caption" xml:space="preserve">
+    <value>记号</value>
+  </data>
+  <data name="barButtonItem399.Caption" xml:space="preserve">
+    <value>资讯</value>
+  </data>
+  <data name="barButtonItem400.Caption" xml:space="preserve">
+    <value>UV成分</value>
+  </data>
+  <data name="barButtonItem401.Caption" xml:space="preserve">
+    <value>CEEN外销报告</value>
+  </data>
+  <data name="barButtonItem448.Caption" xml:space="preserve">
+    <value>详细测试查询</value>
+  </data>
   <data name="barSubItem88.Caption" xml:space="preserve">
     <value>AS外销报告</value>
   </data>
+  <data name="barButtonItem405.Caption" xml:space="preserve">
+    <value>年轮</value>
+  </data>
+  <data name="barButtonItem406.Caption" xml:space="preserve">
+    <value>抽测数量</value>
+  </data>
+  <data name="barButtonItem407.Caption" xml:space="preserve">
+    <value>外观测试</value>
+  </data>
+  <data name="barButtonItem408.Caption" xml:space="preserve">
+    <value>加热稳定性</value>
+  </data>
+  <data name="barButtonItem409.Caption" xml:space="preserve">
+    <value>坐标</value>
+  </data>
+  <data name="barButtonItem410.Caption" xml:space="preserve">
+    <value>球面度数折射度</value>
+  </data>
+  <data name="barButtonItem411.Caption" xml:space="preserve">
+    <value>雾度</value>
+  </data>
+  <data name="barButtonItem412.Caption" xml:space="preserve">
+    <value>中速冲击数率</value>
+  </data>
+  <data name="barButtonItem413.Caption" xml:space="preserve">
+    <value>高速冲击数率</value>
+  </data>
+  <data name="barButtonItem414.Caption" xml:space="preserve">
+    <value>特高速冲击数率</value>
+  </data>
+  <data name="barButtonItem415.Caption" xml:space="preserve">
+    <value>穿透测试</value>
+  </data>
+  <data name="barButtonItem416.Caption" xml:space="preserve">
+    <value>耐燃性</value>
+  </data>
+  <data name="barButtonItem417.Caption" xml:space="preserve">
+    <value>耐蚀性</value>
+  </data>
+  <data name="barButtonItem418.Caption" xml:space="preserve">
+    <value>记号</value>
+  </data>
+  <data name="barButtonItem404.Caption" xml:space="preserve">
+    <value>AS外销报告</value>
+  </data>
+  <data name="barButtonItem484.Caption" xml:space="preserve">
+    <value>AS外銷報告2017</value>
+  </data>
+  <data name="barButtonItem449.Caption" xml:space="preserve">
+    <value>详细测试查询</value>
+  </data>
   <data name="barSubItem90.Caption" xml:space="preserve">
     <value>JIS外销报告</value>
+  </data>
+  <data name="barButtonItem420.Caption" xml:space="preserve">
+    <value>镜片外观</value>
+  </data>
+  <data name="barButtonItem421.Caption" xml:space="preserve">
+    <value>镜片棱镜度</value>
+  </data>
+  <data name="barButtonItem422.Caption" xml:space="preserve">
+    <value>镜片曲光度</value>
+  </data>
+  <data name="barButtonItem423.Caption" xml:space="preserve">
+    <value>镜片散光度</value>
+  </data>
+  <data name="barButtonItem424.Caption" xml:space="preserve">
+    <value>镜片透视率</value>
+  </data>
+  <data name="barButtonItem425.Caption" xml:space="preserve">
+    <value>镜片耐冲击性</value>
+  </data>
+  <data name="barButtonItem426.Caption" xml:space="preserve">
+    <value>镜片表面耐磨耗抵抗</value>
+  </data>
+  <data name="barButtonItem427.Caption" xml:space="preserve">
+    <value>镜片耐热性</value>
+  </data>
+  <data name="barButtonItem428.Caption" xml:space="preserve">
+    <value>镜片耐蚀性</value>
+  </data>
+  <data name="barButtonItem429.Caption" xml:space="preserve">
+    <value>镜片耐燃性</value>
+  </data>
+  <data name="barButtonItem430.Caption" xml:space="preserve">
+    <value>完成品外观</value>
+  </data>
+  <data name="barButtonItem431.Caption" xml:space="preserve">
+    <value>完成品耐冲击性</value>
+  </data>
+  <data name="barButtonItem432.Caption" xml:space="preserve">
+    <value>完成品紧密性第一试验镜脚拉伸</value>
+  </data>
+  <data name="barButtonItem433.Caption" xml:space="preserve">
+    <value>完成品紧密性第二试验中梁吊挂测试机</value>
+  </data>
+  <data name="barButtonItem435.Caption" xml:space="preserve">
+    <value>完成品头带强度</value>
+  </data>
+  <data name="barButtonItem436.Caption" xml:space="preserve">
+    <value>完成品耐消毒性</value>
+  </data>
+  <data name="barButtonItem437.Caption" xml:space="preserve">
+    <value>完成品构造</value>
+  </data>
+  <data name="barButtonItem438.Caption" xml:space="preserve">
+    <value>完成品材料</value>
+  </data>
+  <data name="barButtonItem439.Caption" xml:space="preserve">
+    <value>完成品记号标示</value>
+  </data>
+  <data name="barButtonItem440.Caption" xml:space="preserve">
+    <value>完成品包装上记号</value>
+  </data>
+  <data name="barButtonItem441.Caption" xml:space="preserve">
+    <value>完成品使用手册</value>
+  </data>
+  <data name="barButtonItem450.Caption" xml:space="preserve">
+    <value>详细测试查询</value>
+  </data>
+  <data name="barButtonItem487.Caption" xml:space="preserve">
+    <value>JIS外銷報告</value>
   </data>
   <data name="barButtonItem485.Caption" xml:space="preserve">
     <value>雪鏡專用ASTM 外銷報告</value>
@@ -246,20 +945,593 @@
   <data name="barSubItem54.Caption" xml:space="preserve">
     <value>人力资源</value>
   </data>
+  <data name="barSubItem33.Caption" xml:space="preserve">
+    <value>人事参数</value>
+  </data>
+  <data name="barButtonItem127.Caption" xml:space="preserve">
+    <value>部门管理</value>
+  </data>
+  <data name="barButtonItem6.Caption" xml:space="preserve">
+    <value>员工信息</value>
+  </data>
+  <data name="barButtonItem228.Caption" xml:space="preserve">
+    <value>参数管理</value>
+  </data>
+  <data name="barSubItem71.Caption" xml:space="preserve">
+    <value>休假管理</value>
+  </data>
+  <data name="barButtonItem236.Caption" xml:space="preserve">
+    <value>年度休假</value>
+  </data>
+  <data name="barButtonItem237.Caption" xml:space="preserve">
+    <value>休假类别</value>
+  </data>
+  <data name="barButtonItem241.Caption" xml:space="preserve">
+    <value>员工休假</value>
+  </data>
+  <data name="barButtonItem468.Caption" xml:space="preserve">
+    <value>隔周休设定</value>
+  </data>
+  <data name="barSubItem67.Caption" xml:space="preserve">
+    <value>考勤管理</value>
+  </data>
+  <data name="barButtonItem211.Caption" xml:space="preserve">
+    <value>弹性排班</value>
+  </data>
+  <data name="barButtonItem242.Caption" xml:space="preserve">
+    <value>区段弹性排班</value>
+  </data>
+  <data name="barButtonItem208.Caption" xml:space="preserve">
+    <value>临时卡</value>
+  </data>
+  <data name="barButtonItem212.Caption" xml:space="preserve">
+    <value>餐费管理</value>
+  </data>
+  <data name="barButtonItem214.Caption" xml:space="preserve">
+    <value>打卡记录</value>
+  </data>
+  <data name="barButtonItem220.Caption" xml:space="preserve">
+    <value>借支管理</value>
+  </data>
+  <data name="barButtonItem222.Caption" xml:space="preserve">
+    <value>加班管理</value>
+  </data>
+  <data name="barButtonItem229.Caption" xml:space="preserve">
+    <value>出勤记录</value>
+  </data>
+  <data name="barButtonItem235.Caption" xml:space="preserve">
+    <value>异常出勤记录</value>
+  </data>
+  <data name="barButtonItem326.Caption" xml:space="preserve">
+    <value>重新考勤</value>
+  </data>
+  <data name="barButtonItem491.Caption" xml:space="preserve">
+    <value>歷史出勤記錄</value>
+  </data>
+  <data name="barSubItem68.Caption" xml:space="preserve">
+    <value>薪资管理</value>
+  </data>
+  <data name="barButtonItem217.Caption" xml:space="preserve">
+    <value>薪资设定</value>
+  </data>
+  <data name="barButtonItem218.Caption" xml:space="preserve">
+    <value>薪资计算</value>
+  </data>
+  <data name="barButtonItem238.Caption" xml:space="preserve">
+    <value>列印月薪资</value>
+  </data>
+  <data name="barButtonItem480.Caption" xml:space="preserve">
+    <value>列印月薪資</value>
+  </data>
+  <data name="barButtonItem488.Caption" xml:space="preserve">
+    <value>會計年度薪資表</value>
+  </data>
   <data name="barSubItem59.Caption" xml:space="preserve">
     <value>财务管理</value>
+  </data>
+  <data name="barButtonItem49.Caption" xml:space="preserve">
+    <value>支出类别</value>
+  </data>
+  <data name="barButtonItem39.Caption" xml:space="preserve">
+    <value>资金账户(&amp;A)...</value>
+  </data>
+  <data name="barButtonItem48.Caption" xml:space="preserve">
+    <value>收入类别</value>
+  </data>
+  <data name="barButtonItem51.Caption" xml:space="preserve">
+    <value>支付方式</value>
+  </data>
+  <data name="barButtonItem144.Caption" xml:space="preserve">
+    <value>应收(&amp;R)...</value>
+  </data>
+  <data name="barButtonItem9.Caption" xml:space="preserve">
+    <value>应付(&amp;P)...</value>
+  </data>
+  <data name="barButtonItem10.Caption" xml:space="preserve">
+    <value>资金账户余额(&amp;F)...</value>
+  </data>
+  <data name="barButtonItem71.Caption" xml:space="preserve">
+    <value>商品成本....</value>
+  </data>
+  <data name="barSubItem21.Caption" xml:space="preserve">
+    <value>排行榜</value>
+  </data>
+  <data name="barButtonItem123.Caption" xml:space="preserve">
+    <value>货品交易排行</value>
+  </data>
+  <data name="barButtonItem122.Caption" xml:space="preserve">
+    <value>业务交易排行</value>
+  </data>
+  <data name="barButtonItem352.Caption" xml:space="preserve">
+    <value>厂商交易排行</value>
+  </data>
+  <data name="barButtonItem353.Caption" xml:space="preserve">
+    <value>客户交易排行</value>
+  </data>
+  <data name="barButtonItem349.Caption" xml:space="preserve">
+    <value>项目设置</value>
+  </data>
+  <data name="barButtonItem312.Caption" xml:space="preserve">
+    <value>期初应付账款表</value>
+  </data>
+  <data name="barButtonItem310.Caption" xml:space="preserve">
+    <value>其他应付款</value>
+  </data>
+  <data name="barButtonItem316.Caption" xml:space="preserve">
+    <value>采购发票</value>
+  </data>
+  <data name="barButtonItem314.Caption" xml:space="preserve">
+    <value>应付结算</value>
+  </data>
+  <data name="barButtonItem341.Caption" xml:space="preserve">
+    <value>应付账款明细账</value>
+  </data>
+  <data name="barButtonItem403.Caption" xml:space="preserve">
+    <value>应付账款明细表</value>
+  </data>
+  <data name="barButtonItem362.Caption" xml:space="preserve">
+    <value>应付账款发票号码维护</value>
+  </data>
+  <data name="barButtonItem475.Caption" xml:space="preserve">
+    <value>應付賬款發票</value>
+  </data>
+  <data name="barButtonItem474.Caption" xml:space="preserve">
+    <value>打印發票</value>
+  </data>
+  <data name="barButtonItem313.Caption" xml:space="preserve">
+    <value>期初应收账款表</value>
+  </data>
+  <data name="barButtonItem311.Caption" xml:space="preserve">
+    <value>其他应收款详细</value>
+  </data>
+  <data name="barButtonItem325.Caption" xml:space="preserve">
+    <value>銷售發票</value>
+  </data>
+  <data name="barButtonItem481.Caption" xml:space="preserve">
+    <value>發票編號設置</value>
+  </data>
+  <data name="barButtonItem315.Caption" xml:space="preserve">
+    <value>应收结算</value>
+  </data>
+  <data name="barButtonItem350.Caption" xml:space="preserve">
+    <value>销售发票明细</value>
+  </data>
+  <data name="barButtonItem340.Caption" xml:space="preserve">
+    <value>应收账款明细账</value>
+  </data>
+  <data name="barButtonItem402.Caption" xml:space="preserve">
+    <value>应收账款明细表</value>
+  </data>
+  <data name="barButtonItem380.Caption" xml:space="preserve">
+    <value>应收账款发票号码维护</value>
+  </data>
+  <data name="barSubItem19.Caption" xml:space="preserve">
+    <value>应收应付统计</value>
+  </data>
+  <data name="barButtonItem105.Caption" xml:space="preserve">
+    <value>应付账款简要表</value>
+  </data>
+  <data name="barButtonItem106.Caption" xml:space="preserve">
+    <value>应收账款简要表</value>
+  </data>
+  <data name="barButtonItem107.Caption" xml:space="preserve">
+    <value>应付账款明细表</value>
+  </data>
+  <data name="barButtonItem108.Caption" xml:space="preserve">
+    <value>应收账款明细表</value>
+  </data>
+  <data name="barButtonItem118.Caption" xml:space="preserve">
+    <value>应付账款统计表</value>
+  </data>
+  <data name="barButtonItem109.Caption" xml:space="preserve">
+    <value>应收账款统计表</value>
+  </data>
+  <data name="barButtonItem110.Caption" xml:space="preserve">
+    <value>业务员应收明细表</value>
+  </data>
+  <data name="barButtonItem111.Caption" xml:space="preserve">
+    <value>业务员应收简要表</value>
+  </data>
+  <data name="barSubItem20.Caption" xml:space="preserve">
+    <value>账款冲销报表</value>
+  </data>
+  <data name="barButtonItem112.Caption" xml:space="preserve">
+    <value>收款冲销日报表</value>
+  </data>
+  <data name="barButtonItem113.Caption" xml:space="preserve">
+    <value>付款冲销日报表</value>
+  </data>
+  <data name="barSubItem79.Caption" xml:space="preserve">
+    <value>应收应付结算</value>
+  </data>
+  <data name="barButtonItem337.Caption" xml:space="preserve">
+    <value>应付结算报表</value>
+  </data>
+  <data name="barButtonItem338.Caption" xml:space="preserve">
+    <value>应收结算报表</value>
+  </data>
+  <data name="barButtonItem339.Caption" xml:space="preserve">
+    <value>应收账款超期跟催表</value>
   </data>
   <data name="barSubItem61.Caption" xml:space="preserve">
     <value>综合查询</value>
   </data>
+  <data name="barSubItem17.Caption" xml:space="preserve">
+    <value>单据总览</value>
+  </data>
+  <data name="barButtonItem115.Caption" xml:space="preserve">
+    <value>应收账款邮寄标签</value>
+  </data>
+  <data name="barButtonItem103.Caption" xml:space="preserve">
+    <value>货品低于安全存量表</value>
+  </data>
+  <data name="barButtonItem104.Caption" xml:space="preserve">
+    <value>组装明细表</value>
+  </data>
+  <data name="barButtonItem114.Caption" xml:space="preserve">
+    <value>应收账款账龄分析表</value>
+  </data>
+  <data name="barButtonItem116.Caption" xml:space="preserve">
+    <value>货品利润分析表</value>
+  </data>
+  <data name="barButtonItem117.Caption" xml:space="preserve">
+    <value>货品交易明细表</value>
+  </data>
+  <data name="barButtonItem119.Caption" xml:space="preserve">
+    <value>厂商历次进货表</value>
+  </data>
+  <data name="barButtonItem120.Caption" xml:space="preserve">
+    <value>客户历次出货表</value>
+  </data>
+  <data name="barSubItem10.Caption" xml:space="preserve">
+    <value>单据一览</value>
+  </data>
+  <data name="barSubItem29.Caption" xml:space="preserve">
+    <value>组装与拆分</value>
+  </data>
+  <data name="barButtonItem81.Caption" xml:space="preserve">
+    <value>货品组装单</value>
+  </data>
+  <data name="barButtonItem143.Caption" xml:space="preserve">
+    <value>货品拆分单</value>
+  </data>
+  <data name="barSubItem31.Caption" xml:space="preserve">
+    <value>其他单据</value>
+  </data>
+  <data name="barButtonItem88.Caption" xml:space="preserve">
+    <value>其他收入单</value>
+  </data>
+  <data name="barButtonItem89.Caption" xml:space="preserve">
+    <value>其他支出单</value>
+  </data>
+  <data name="barButtonItem87.Caption" xml:space="preserve">
+    <value>资金流转单</value>
+  </data>
+  <data name="barButtonItem82.Caption" xml:space="preserve">
+    <value>调拨单</value>
+  </data>
+  <data name="barButtonItem91.Caption" xml:space="preserve">
+    <value>请款单</value>
+  </data>
+  <data name="barButtonItem79.Caption" xml:space="preserve">
+    <value>赠送单</value>
+  </data>
+  <data name="barButtonItem80.Caption" xml:space="preserve">
+    <value>获赠单</value>
+  </data>
+  <data name="barButtonItem83.Caption" xml:space="preserve">
+    <value>报损单</value>
+  </data>
+  <data name="barButtonItem84.Caption" xml:space="preserve">
+    <value>报溢单</value>
+  </data>
+  <data name="barSubItem4.Caption" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="barButtonItem35.Caption" xml:space="preserve">
+    <value>交易明细</value>
+  </data>
+  <data name="barButtonItem36.Caption" xml:space="preserve">
+    <value>库存状况</value>
+  </data>
+  <data name="barButtonItem66.Caption" xml:space="preserve">
+    <value>库存量</value>
+  </data>
+  <data name="barButtonItem38.Caption" xml:space="preserve">
+    <value>应收应付</value>
+  </data>
+  <data name="barButtonItem53.Caption" xml:space="preserve">
+    <value>超期应付</value>
+  </data>
+  <data name="barButtonItem61.Caption" xml:space="preserve">
+    <value>帳户余额</value>
+  </data>
+  <data name="barButtonItem54.Caption" xml:space="preserve">
+    <value>出货列表</value>
+  </data>
+  <data name="barButtonItem55.Caption" xml:space="preserve">
+    <value>客户退货列表</value>
+  </data>
+  <data name="barButtonItem56.Caption" xml:space="preserve">
+    <value>进货列表</value>
+  </data>
+  <data name="barButtonItem57.Caption" xml:space="preserve">
+    <value>采购退货列表</value>
+  </data>
+  <data name="barButtonItem58.Caption" xml:space="preserve">
+    <value>赠送列表</value>
+  </data>
+  <data name="barButtonItem60.Caption" xml:space="preserve">
+    <value>获赠列表</value>
+  </data>
+  <data name="barButtonItem62.Caption" xml:space="preserve">
+    <value>采购订货列表</value>
+  </data>
+  <data name="barButtonItem37.Caption" xml:space="preserve">
+    <value>应请款列表</value>
+  </data>
+  <data name="barButtonItem159.Caption" xml:space="preserve">
+    <value>库房库存</value>
+  </data>
+  <data name="barButtonItem160.Caption" xml:space="preserve">
+    <value>产品库存</value>
+  </data>
+  <data name="barSubItem3.Caption" xml:space="preserve">
+    <value>单据录入</value>
+  </data>
+  <data name="barSubItem24.Caption" xml:space="preserve">
+    <value>组装与拆分</value>
+  </data>
+  <data name="barButtonItem18.Caption" xml:space="preserve">
+    <value>货品组装单</value>
+  </data>
+  <data name="barButtonItem129.Caption" xml:space="preserve">
+    <value>货品拆分单</value>
+  </data>
+  <data name="barSubItem25.Caption" xml:space="preserve">
+    <value>其他单据</value>
+  </data>
+  <data name="barButtonItem26.Caption" xml:space="preserve">
+    <value>其他收入单</value>
+  </data>
+  <data name="barButtonItem27.Caption" xml:space="preserve">
+    <value>其他支出单</value>
+  </data>
+  <data name="barButtonItem25.Caption" xml:space="preserve">
+    <value>资金流转单</value>
+  </data>
+  <data name="barButtonItem90.Caption" xml:space="preserve">
+    <value>请款单</value>
+  </data>
+  <data name="barButtonItem19.Caption" xml:space="preserve">
+    <value>赠送单</value>
+  </data>
+  <data name="barButtonItem20.Caption" xml:space="preserve">
+    <value>获赠单</value>
+  </data>
+  <data name="barButtonItem21.Caption" xml:space="preserve">
+    <value>报损单</value>
+  </data>
+  <data name="barButtonItem22.Caption" xml:space="preserve">
+    <value>报溢单</value>
+  </data>
   <data name="barSubItem62.Caption" xml:space="preserve">
     <value>系统帮助</value>
+  </data>
+  <data name="barSubItem6.Caption" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="barButtonItemCalculator.Caption" xml:space="preserve">
+    <value>计算器</value>
+  </data>
+  <data name="barSubItem16.Caption" xml:space="preserve">
+    <value>窗口</value>
+  </data>
+  <data name="barButtonItem31.Caption" xml:space="preserve">
+    <value>层叠</value>
+  </data>
+  <data name="barButtonItem92.Caption" xml:space="preserve">
+    <value>排列</value>
+  </data>
+  <data name="barButtonItem93.Caption" xml:space="preserve">
+    <value>水平平铺</value>
+  </data>
+  <data name="barButtonItem94.Caption" xml:space="preserve">
+    <value>垂直平铺</value>
+  </data>
+  <data name="barButtonItemCloseAll.Caption" xml:space="preserve">
+    <value>关闭所有</value>
+  </data>
+  <data name="barMdiChildrenListItem1.Caption" xml:space="preserve">
+    <value>barMdiChildrenListItem1</value>
+  </data>
+  <data name="barButtonItem190.Caption" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="barButtonItem29.Caption" xml:space="preserve">
+    <value>关于(&amp;A)...</value>
   </data>
   <data name="barSubItem34.Caption" xml:space="preserve">
     <value>会计管理</value>
   </data>
+  <data name="barButtonItem264.Caption" xml:space="preserve">
+    <value>会计科目总类</value>
+  </data>
+  <data name="barButtonItem266.Caption" xml:space="preserve">
+    <value>会计科目设定</value>
+  </data>
+  <data name="barButtonItem358.Caption" xml:space="preserve">
+    <value>会计参数设定</value>
+  </data>
+  <data name="barButtonItem265.Caption" xml:space="preserve">
+    <value>科目类别设定</value>
+  </data>
+  <data name="barButtonItem267.Caption" xml:space="preserve">
+    <value>发票资料设定</value>
+  </data>
+  <data name="barButtonItem268.Caption" xml:space="preserve">
+    <value>专案资料设定</value>
+  </data>
+  <data name="barButtonItem272.Caption" xml:space="preserve">
+    <value>银行资料</value>
+  </data>
+  <data name="barButtonItem309.Caption" xml:space="preserve">
+    <value>货币种类</value>
+  </data>
+  <data name="barButtonItem279.Caption" xml:space="preserve">
+    <value>币别汇率</value>
+  </data>
+  <data name="barButtonItem273.Caption" xml:space="preserve">
+    <value>开户往来银行</value>
+  </data>
+  <data name="barSubItem74.Caption" xml:space="preserve">
+    <value>会计作业</value>
+  </data>
+  <data name="barButtonItem278.Caption" xml:space="preserve">
+    <value>期初余额设定</value>
+  </data>
+  <data name="barButtonItem280.Caption" xml:space="preserve">
+    <value>会计传票</value>
+  </data>
+  <data name="barButtonItem473.Caption" xml:space="preserve">
+    <value>現金支出傳票明細</value>
+  </data>
+  <data name="barButtonItem285.Caption" xml:space="preserve">
+    <value>日记账</value>
+  </data>
+  <data name="barButtonItem295.Caption" xml:space="preserve">
+    <value>日记账</value>
+  </data>
+  <data name="barButtonItem296.Caption" xml:space="preserve">
+    <value>总分类帐</value>
+  </data>
+  <data name="barButtonItem297.Caption" xml:space="preserve">
+    <value>试算表</value>
+  </data>
+  <data name="barButtonItem298.Caption" xml:space="preserve">
+    <value>期间试算表</value>
+  </data>
+  <data name="barButtonItem299.Caption" xml:space="preserve">
+    <value>损益</value>
+  </data>
+  <data name="barButtonItem300.Caption" xml:space="preserve">
+    <value>损益表</value>
+  </data>
+  <data name="barButtonItem301.Caption" xml:space="preserve">
+    <value>资产负债</value>
+  </data>
+  <data name="barButtonItem302.Caption" xml:space="preserve">
+    <value>资产负债表</value>
+  </data>
+  <data name="barSubItem45.Caption" xml:space="preserve">
+    <value>财产管理</value>
+  </data>
+  <data name="barButtonItem270.Caption" xml:space="preserve">
+    <value>财产基本资料</value>
+  </data>
+  <data name="barButtonItem271.Caption" xml:space="preserve">
+    <value>折旧明细维护</value>
+  </data>
+  <data name="barButtonItem292.Caption" xml:space="preserve">
+    <value>科目别财产表</value>
+  </data>
+  <data name="barButtonItem293.Caption" xml:space="preserve">
+    <value>日期别财产表</value>
+  </data>
+  <data name="barButtonItem294.Caption" xml:space="preserve">
+    <value>财产别折舊表</value>
+  </data>
+  <data name="barSubItem73.Caption" xml:space="preserve">
+    <value>银行票据</value>
+  </data>
+  <data name="barButtonItem274.Caption" xml:space="preserve">
+    <value>应收票据作业</value>
+  </data>
+  <data name="barButtonItem275.Caption" xml:space="preserve">
+    <value>应收/付票据作业</value>
+  </data>
+  <data name="barButtonItem276.Caption" xml:space="preserve">
+    <value>银行存提款作业</value>
+  </data>
+  <data name="barButtonItem277.Caption" xml:space="preserve">
+    <value>银行转账作业</value>
+  </data>
+  <data name="barButtonItem281.Caption" xml:space="preserve">
+    <value>应收票据整批托收</value>
+  </data>
+  <data name="barButtonItem282.Caption" xml:space="preserve">
+    <value>应收票据整批票贴</value>
+  </data>
+  <data name="barButtonItem283.Caption" xml:space="preserve">
+    <value>应收票据整批兑现</value>
+  </data>
+  <data name="barButtonItem284.Caption" xml:space="preserve">
+    <value>应付票据整批兑现</value>
+  </data>
+  <data name="barSubItem75.Caption" xml:space="preserve">
+    <value>应收票据明细表</value>
+  </data>
+  <data name="barButtonItem286.Caption" xml:space="preserve">
+    <value>收票日别</value>
+  </data>
+  <data name="barButtonItem287.Caption" xml:space="preserve">
+    <value>托收银行别</value>
+  </data>
+  <data name="barSubItem76.Caption" xml:space="preserve">
+    <value>应付票据明细表</value>
+  </data>
+  <data name="barButtonItem288.Caption" xml:space="preserve">
+    <value>开票日别</value>
+  </data>
+  <data name="barButtonItem289.Caption" xml:space="preserve">
+    <value>开票银行别</value>
+  </data>
+  <data name="barButtonItem290.Caption" xml:space="preserve">
+    <value>银行存提款对账单</value>
+  </data>
+  <data name="barButtonItem291.Caption" xml:space="preserve">
+    <value>未兑换应收票据</value>
+  </data>
+  <data name="未兑现应付票据.Caption" xml:space="preserve">
+    <value>未兑换应付票据</value>
+  </data>
   <data name="barSubItem91.Caption" xml:space="preserve">
     <value>报关系统</value>
+  </data>
+  <data name="barButtonItem462.Caption" xml:space="preserve">
+    <value>手册管理</value>
+  </data>
+  <data name="barButtonItem463.Caption" xml:space="preserve">
+    <value>手册归类</value>
+  </data>
+  <data name="barButtonItem464.Caption" xml:space="preserve">
+    <value>理论耗用</value>
+  </data>
+  <data name="barButtonItem465.Caption" xml:space="preserve">
+    <value>出口明细</value>
+  </data>
+  <data name="barButtonItem466.Caption" xml:space="preserve">
+    <value>进口明细</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="repositoryItemComboBox1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
@@ -272,15 +1544,51 @@
   <data name="bar2.Text" xml:space="preserve">
     <value>Main menu</value>
   </data>
+  <data name="barStaticItem1.Width" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="barStaticItem2.Caption" xml:space="preserve">
+    <value>连接名称</value>
+  </data>
+  <data name="barStaticItem3.Caption" xml:space="preserve">
+    <value>员工名称</value>
+  </data>
   <data name="bar3.Text" xml:space="preserve">
     <value>Status bar</value>
+  </data>
+  <data name="barLargeButtonItem8.Caption" xml:space="preserve">
+    <value>架构图</value>
+  </data>
+  <data name="barLargeButtonItem12.Caption" xml:space="preserve">
+    <value>BOM</value>
+  </data>
+  <data name="barLargeButtonItem3.Caption" xml:space="preserve">
+    <value>采购订单</value>
+  </data>
+  <data name="barLargeButtonItem4.Caption" xml:space="preserve">
+    <value>进货单</value>
+  </data>
+  <data name="barLargeButtonItem5.Caption" xml:space="preserve">
+    <value>销售订单</value>
+  </data>
+  <data name="barLargeButtonItem6.Caption" xml:space="preserve">
+    <value>出货单</value>
+  </data>
+  <data name="barLargeButtonItem2.Caption" xml:space="preserve">
+    <value>付款单</value>
+  </data>
+  <data name="barLargeButtonItem7.Caption" xml:space="preserve">
+    <value>收款单</value>
+  </data>
+  <data name="barLargeButtonItem11.Caption" xml:space="preserve">
+    <value>库存期初</value>
+  </data>
+  <data name="barLargeButtonItem10.Caption" xml:space="preserve">
+    <value>库存</value>
   </data>
   <data name="bar1.Text" xml:space="preserve">
     <value>业务录入</value>
   </data>
-  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>508, 17</value>
-  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="barDockControlTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -288,6 +1596,12 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="barDockControlTop.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
+  </data>
+  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>508, 17</value>
+  </metadata>
+  <data name="helpProvider1.HelpNamespace" xml:space="preserve">
+    <value>F:\erp\工作\helpe\CHM 帮助.chm</value>
   </data>
   <data name="barDockControlTop.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -388,6 +1702,15 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1026, 658</value>
   </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>803, 31</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 43</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
     <value>pictureBox1</value>
   </data>
@@ -399,6 +1722,431 @@
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAkAMDAQAAEABABoBgAAlgAAACAgEAABAAQA6AIAAP4GAAAQEBAAAQAEACgBAADmCQAAMDAAAAEA
+        CACoDgAADgsAACAgAAABAAgAqAgAALYZAAAQEAAAAQAIAGgFAABeIgAAMDAAAAEAIACoJQAAxicAACAg
+        AAABACAAqBAAAG5NAAAQEAAAAQAgAGgEAAAWXgAAKAAAADAAAABgAAAAAQAEAAAAAACABAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAIAAAIAAAACAgACAAAAAgACAAICAAACAgIAAwMDAAAAA/wAA/wAAAP//AP8A
+        AAD/AP8A//8AAP///wAAAAAAAAAAhn5+jo6OjoiP8AAAAAAAAAAAAAAAAAD47Ix8jnjoeO6OiPAAAAAA
+        AAAAAAAAAIiOfn5+fI6Ojnfn6OgAAAAAAAAAgAAAiOjnyMfsjnyOeOjOfn6IAAAAAAB+eOeOfneI6Odo
+        bOfo5+jo7IzogAAAAAB8587Hx+yIiMjshox8jsjsjujs6AAAAADnfnfn53joiI535+fn5+jo5+yOjIAA
+        AAB+x+x+XsiI+IiOfH7HyM7Ozo6Ozo4AAAB35358ho6I//iIjnfn5+eOjs5+joiAAADnfIyOfoiI//+I
+        h+yMfl7H5+jo6OjoAACIjoiIiHiP///4iIjn7HfnzozoyOeOgACIiIiOiIiP////+Ih+eOyOjujo6I6H
+        gAD4////j4///////4iIx+fs6M6Ojo6OiAD//4////////////iI6H6Ojo6I6Ijo6AD/////////////
+        ///4jo5+fn6Ojo6IzgD///////////////+Ijojo6OjIjojojoCI+I+IiPiPj/////iOiOjofojo6IiO
+        iIiOiO/o7+jv////+IiI6I6OiOjojo6I7n7o6Ijo6OiIj///+I6Ijojo6I6I6IjoiOd+iOiOjo6O///4
+        jvjo7+iIjojoiOiOjnzo6I6OeIiP//j++O+IiI6OiOiI6I6IiOh4jojo6Ojo//iI746OjoiI6Ijojvjo
+        6OzsiOiOfoiIiOjvjo+IiO/ojoiO+OiI6Od+jv6OiI6O/o6OiI6OiI7++Ojv6IjoiOzoiIjo6Oj46OiI
+        jviI7++I74iIjv7+jo5ujo6OfojoiO6OiOjviIjojo6O+IiIiOyOiOiOjoiOjojoiIiOjv74iIiI6Ojo
+        6OfOiI6I7I6PiOjo6O/vj4iOjo6Ijvjojox+jojo6O/o745+iIiI6I74+Ijo7+iOiOfn6OiOjoiI+IiO
+        iO/v+I+I7+iIiI746OyMiI6I7I6IiI6I6I+IiIiPiI6Ojojo546O6OiOjojviPiIjviPiI+IiIiIiOiI
+        7IAIyI6I5+iIj4+O+IiI+PiPjv6OjvjojgAI7ojo5+iIj4//iIj/j4+I+I747+iO5wAAjOiOjOjvj4+P
+        j4+Pj/j/jvjoiI6OeAAAjo6I6Ojo+P//+Pj4//+I+OiOjo6MgAAADOfo586Ij4/4////+Pj46I6Ijojo
+        4AAAAIyI6Ojo7/j//4+Pj4iI/ojo6OjIAAAAAI7ofnzoiIj/j//4+Ijo6I74iOjgAAAAAAjOjo5+jviP
+        /4+PiOjo7ojo6M6AAAAAAACOyM7I6OiIiPiOjo5+yOzn7IgAAAAAAAAI7OfuiI6O/viI6Ozn7OfsjoAA
+        AAAAAAAAjs7H7ojoiOjo7I585+x+wAAAAAAAAAAACIzsfo6I6OiOjozuzs7IAAAAAAAAAAAAAAjoznjo
+        6I6I6O7H546AAAAAAAAAAAAAAAAOfOyOjo6OiMjsbIAAAAAAAAAAAAAAAAAAAI6M53536OfoAAAAAAAA
+        AAAAAAAAAAAAAI5+fsjs7I6AAAAAAAAAAAD//AAAf/8AAP/wAAAf/wAA/8AAAA//AADfAAAAA/8AAAAA
+        AAAB/wAAAAAAAAD/AAAAAAAAAH8AAAAAAAAAPwAAAAAAAAAfAAAAAAAAAA8AAAAAAAAABwAAAAAAAAAH
+        AAAAAAAAAAMAAAAAAAAAAwAAAAAAAAADAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAAADAACAAAAAAAMAAMAA
+        AAAAAwAAwAAAAAAHAADgAAAAAAcAAPAAAAAADwAA8AAAAAAfAAD4AAAAAB8AAPwAAAAAPwAA/gAAAAB/
+        AAD/AAAAAf8AAP+AAAAD/wAA/+AAAAf/AAD/+AAAH/8AAP//AAD//wAA//8AAf//AAAoAAAAIAAAAEAA
+        AAABAAQAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICA
+        gADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAIZ+jo6OiPAAAAAAAAAAAA/nx8jojo
+        5+gAAAAACAAAjnyOfnzo7I5+iAAAAG52hsiI5+yGjI6Ofn6AAAB8jOfn74h+fsjo7OfsiAAA5+fseIj4
+        jIaGxo5+jueAAHjIeOz///jnzo7I7IeOgACIjoiIj///iIZ8hujujo4A+P+Pj/////iOjufn6HjngP//
+        ////////+Hjn6H6OiOD///////////jujo6OiOjgiIiIiIj///joiOh+iOiIeOjo7u6I//+Ijo6I6I6I
+        6O7ojoiI7//46IiI6I6IjoiMfojuiIj4746OjoiI6IiOjuiIjo6IjojviIiOjojo6I5+jo6I6Ojvjv6O
+        +IiO+I6O6Ijn6Ijo6IiIiOjoiOiI586Ojo6Ijo6OjviIjoiOjo6OiI6I74joj4iIiIjo74jnjOiOeIiI
+        joiIiIjviI6OiA6OiO6Ij4jviIiPjo6I6OAH6I7IiPj4+Pj/+IiI747ACM6I7oj/j4+P+PiOjo6OAADo
+        6Ojoj///+P+I74iI7AAADI6M6I//+P+IiI6OjnAAAA/o6Ojo+P+Iju6OjoyAAAAAjOzojoiIjo5+zn7I
+        AAAAAABnzojo6OjsjOfGAAAAAAAADmzo6I6IjuZ+4AAAAAAAAAAIzo6I6OfOwAAAAAAAAAAAAAjOzozo
+        gAAAAAAA/4AD//8AAP+8AAA/AAAAHwAAAA8AAAAHAAAABwAAAAMAAAABAAAAAQAAAAEAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAYAAAAGAAAADwAAAA+AAAAfgAAAH8AAAD/wA
+        AD/+AAB//4AB///gB/8oAAAAEAAAACAAAAABAAQAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        gAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAA
+        ho6OjwAAh+jnx+jn4ABufPiOx+yOAIiIj4h+foiA+Pj//4fo7oD4////jo6I6Ojuj/6I6IiOjoiIiO+I
+        6Ojo6O6IjoiOjniOiOiP6OiI6OiPiI+PiOgIjoj4j46OgA6Mj//4+OjgAO7oiI7uhwAACM6OjsfgAAAA
+        COjogAAA8A8AAAAHAAAAAwAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMAD
+        AADgBwAA+B8AACgAAAAwAAAAYAAAAAEACAAAAAAAAAkAAAAAAAAAAAAAAAEAAAABAAAAAAAA330XAOF/
+        GADfghsA44UbAOWKHQDokB8A34MgANKXPwDXmj4A2Jw+AOKMJADgiyoA55IlAOqTIgDumiUA5JMpAOmX
+        LwDlmC4A7p4rAPCcJwDxnygA45MzAOSbMwDqnDMA45o7AOifOQDyoisA7aI0AOWiPADpozwA6ao7APKn
+        MgD0qjUA86w7AO6wPgD1sDUA9LI8APm1OQD5uTwAyY9AAMmQQQDNk0EAz5VAAMqSRgDOlUQAy5RJAM2V
+        SQDMl00A1ptCANecQQDRmEYA1p1FANmfQgDTnEsAzppTANCcVgDVn1YA0J1ZANahTgDYolEA26dUANyo
+        VwDSoV4A36xdAOWiQwDqpUIA7KtEAOWkSgDopEsA5qhLAOqtSwDxrUEA7bJDAO2xTgD0s0QA9rlDAPm8
+        QwDzs0sA9rpKAPm9SwDmpVMA6KZVAOOpVADprFMA6adZAOGvWwDqrFsA7bJSAO24UgDjsVkA5LFYAOGx
+        XgDss1oA7rpcAPC0UQDzulQA+b5QAPK8XADSomEA3K5nANWqbQDdr2sA1qtwANitcwDcsnQA2bF6AOGv
+        aADqr2kA67RkAOm5YgDsuGMA7b1jAOu9ZQDsvmYA6bVsAOy5bQDwv2IA4bFxAOu3dwDsunMA67p5APfA
+        TAD4wUwA98JUAPjDUgD7yVcA98JYAPfFWgDywV4A9sNfAPfEXAD4xFsA+cpcAO/AawDywGEA9MNhAPbF
+        YgDxwWUA9MJlAPLEZgD0xWUA+MZkAPfIZwD5zGMA88ZpAPTGaQDzw20A+MVtAPXIagDzyWwA9cltAPbM
+        bwD5zGoA+tBmAPrRbADtw3MA7cJ8APPGdgD1zHIA+M5zAPPIfgD4zXwA9tB3APrTcwD20nsA+dR8APvY
+        ewDbtYAA3biFAN26iQDgvYoA4L2OAOC+kADuwoQA7MOKAPDHiQDwyYoA88yIAPTOiADzzo0A+daCAPra
+        hAD61YsA+92LAOPDkwDsyZIA48WbAOnJmwDxzpIA8suUAPDMnADu0ZsA+daSAPrckgD615gA99mYAPre
+        mwD74I4A++GSAPvimwDlyaMA582qAOjPqwDu06YA7NWuAPbbpAD736EA8NapAPHYqwDz2qwA6tO0AOvW
+        uQDn2L4A7Ni8APHZsgD746MA/OinAPvkqwD86q0A++WyAPzotAD24L4A/Oe7APzqvADu3MMA5NrNAO/f
+        yADy4MEA+OPBAPzrwwDw4csA/O3JAPjpzgD87s0A/fDNAO3m1wDy5dIA/O/QAPXq2wD88NMA/fPbAPbt
+        4QD79OQA+PLpAPn06QD99+gA+vTtAP357AD79vAA/frzAP37+AD+/PoA/v7+AAAAAAD///8AAAAAAAAA
+        AAAAAAAAAABqKCgoKT5uh4eHh4GHk56zzun1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7Ks5KCgo
+        KDM8Wm6ZmZmHh4eTk6G90ekAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOLV0mszKSgoKCgpPFpumZmZh2Jg
+        YE5fYrPNAAAAAAAAAAAAAAAAAAC7AAAAAAC7qmZAWjw2MykoKCkpKC8+cZOZkIRhT05LQ0Nfb9cAAAAA
+        AAAAAAAAY2NjY2NjY2M/PzljaWloYzczKSgoKSk2O1pejnxhUE9LS0tOX3i8AAAAAAAAAAAAKSgoKCgo
+        KCgoKDNjqru7qmU6MykoKCgoKTtTWWBQTUxMTENLS0hdugAAAAAAAAAAMykoKCgoKCgoKDdnu9bh1q1o
+        OjApKCgoKCgoNElLTScmJiYhIh8cEHgAAAAAAAAAMykpKCgoKCgoKDdlu+fv7+HJqGU3MykoKCgpKTRB
+        JScmJiYmS0tOTl6zAAAAAAAANzMuMy4pMzMuKTpoye31+/LnyqpnOjMuKSgpKSkzHR8iJiZMUFBggWJx
+        vQAAAAAAYzo6Nzo6Ojc6OmOoze35/f3179a7amMwKSgoKCgoKAkfJidMUGF8jpOHXdEAAAAAqqqqqKqo
+        qqiqqK3K4fL7/f379e/hyqplNzMoKCgoKQkfJydMUISOkJmTgZ3TAAAA1tPT09bT09bT1tbn7/X9/f39
+        /fny59OtZ2MzMykpNB0fJ01NYYSZmaCZmW66AAAA9PT08vTy9PL08vT0+f39/f39/f399e/hu2pjMCk1
+        S0xNTU17fpCbm5uloYec0gAA+fv5/fn9+f35/fn9/f39/f39/f39/fXv58qqZlpgentNTXt+kJubpqam
+        ppmGeAAA/f39/f39/f39/f39/f39/f39/f39/f359eTAnId+fnx9fX1+mZubpqe1taWKRwAA/f39/f39
+        /f39/f39/f39/f39/f39/f39++DFm5uafpp+hZqQm5unp7a2tqWZXcwA3uXo6fDw6+jo6+vr6fH4/f39
+        /f39/fvx4Mi4p5ubm5qampCbm6entra2trWfWZ29sLPE2dnZ2be1yMXI2eDx/f39/f39+PDgyMe2p6ek
+        m5ubm5unp6e2tra4tralk25vRG6gtbi2poR8fn6bp9vw/f39/f3469vIxsbGuKenp6entqentra2xri4
+        uLamn11HQoeltri2pnx7maa2xt3x/f39/fHm2cjHxsbGuLi4p7inuLinuLi4xri2uLa1pV0ZHYe1tbi2
+        m3x7m7jHx93w/fv28d3Zx8fHx8bGxsbGxrbGuLi4uLi4uMbGuLi1pUcXH5OluLi2p3x9uMbGx93x/fHo
+        yMjHx8fHx8fGxsbGxsbGxri4uLjGxsbGuLi2pUcXHYe1tri4m3x9uMbGx93m5si2x8fHx8fHx8fHxsbG
+        xsbGxsbGxsbGxsbGuLi2pUoXHIqluLi2pnx9tsbGx9vbx5CQtsbHx8fHx8fHx8bGxsbGxsbGxsbGxsbG
+        uLi2tUcXHYe1uLi2m3x9pLjGx8a2m3x7pLjHx8fHx8fHx8fHx8fGxsbGxsbGxsbGxri2tUoXF4eltri2
+        p3x7mrbGx8e2m319mrjGx8jHx8fIx8jHx8fHx8fGxsbGxsbGuLi2pUoXF16jtri4p357fKfHxsfGxpB+
+        gKfHx8fIx8jHyMjIyMfHx8fGxsbGxsbGxra1pUMXC1mftri4tpB7e6bGx8fIyKZ+fJvHyMjIyMjI2cjZ
+        2cjHx8fGxsbGxsbGuLa1pUcXF0qZtba4uJl8UJvHuMjZ2beZjpmmyMjIyNnZ2dvb29nIx8bGxsbGxsa4
+        uLalk0cZREdetba4uJuBe5vHx9nZ38W3mY+mxdnZ29nb293d3d3byMbGxsbGxri2uLafWVNHcUJKpbW4
+        uJuQTJvHxdnf6ODZt6KmuNnd3d3g4ODm5uDd2cfGxri4uLi4trWTSF1z01Mfn6W2uJ+EJZm22dzo6Ono
+        z8fBwdno6Obm6+vr6+vg28jGuLi4uLi2tqWHHbEAAHYZh6W1uKCBJH61z9/p8PDw6NzPz9zo6fDx8PHx
+        8evm3cfGuLi4uLintp9eFwAAAKtBYp+1tpl8JIGm2eDr8fPz8eno39/o8PH29vH28fHr3ci4uLinuKe2
+        pYdHGQAAAABzF2KltZuOJE2OuNzw8/b2+PHw7vDw8fb2+Pj29vHm28e2tri2tralpUpdsAAAAAC7C0qZ
+        taaOJUthtdnp8fb4+Pj18/P29vb4+Pj48fHgyLi2tra2trajh0hvAAAAAAAAGUJdpaaZTyVPps/o8fb4
+        +/v7+Pj4+Pj4+Pj49uvbtri2uLa2taaZXRl5AAAAAAAAAFQfh6CgYCVLf7XZ6fHz+/j7+/v4+/j49vHr
+        5t3Itra1tbW1ppldF50AAAAAAAAAAK9ER4eZjiIhTI/H2enw9vj7+/j79vbx8ODZx6KgoKa1taamn15H
+        UQAAAAAAAAAAAAB4BUeHj0MhIo6mtdnp8fb2+Pj28fDr4M+eSyImT46gpqKghx9RzQAAAAAAAAAAAAAA
+        c0EaQyAVG2GPtbjI3Ojr8fHw69zFon9PJiAgISJDJkNCF1W7AAAAAAAAAAAAAAAAAHhFDQ0NFUN/taa1
+        x8/Z3ODc2bePTiIbGxsbFRUPDg4WVbwAAAAAAAAAAAAAAAAAAACwBQQFDhVOj6amtaa1taa1tY9PGxsb
+        GxUUFA0FBQRVAAAAAAAAAAAAAAAAAAAAAAAAvFILBA4NX46gpqKmoqampqCUTkgbDw8OBQUODHkAAAAA
+        AAAAAAAAAAAAAAAAAAAAAABsRRYNEV+OmaCgoKCgoKCgoE4cDgUFDhlVdwAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAFUMARpYk4ePmaCgmZSPj2JIBQIHFq4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHhX
+        QkJFR0dYWFhUYlJFVa4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL1VFhYRH0JCQkJIRUJS
+        eAAAAAAAAAAAAAAAAAAAAAAA//wAAH//AAD/8AAAH/8AAP/AAAAP/wAA3wAAAAP/AAAAAAAAAf8AAAAA
+        AAAA/wAAAAAAAAB/AAAAAAAAAD8AAAAAAAAAHwAAAAAAAAAPAAAAAAAAAAcAAAAAAAAABwAAAAAAAAAD
+        AAAAAAAAAAMAAAAAAAAAAwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAwAAgAAAAAADAADAAAAAAAMAAMAA
+        AAAABwAA4AAAAAAHAADwAAAAAA8AAPAAAAAAHwAA+AAAAAAfAAD8AAAAAD8AAP4AAAAAfwAA/wAAAAH/
+        AAD/gAAAA/8AAP/gAAAH/wAA//gAAB//AAD//wAA//8AAP//AAH//wAAKAAAACAAAABAAAAAAQAIAAAA
+        AAAABAAAAAAAAAAAAAAAAQAAAAEAAAAAAADffBYA4H8XAN+DGwDggBcA5YcdAOOJHADhjSMA65MhAO2Z
+        JQDhkigA5pYrAOebLwDrmSoA8Z4oAOGSMwDlnDIA6p4xAOKZOgDeoD0A86MrAPSoLwDnoDgA4KM+AOqj
+        OwDvqDsA66w+APCkMgD1qTAA9a42APKpOQD0rTkA9bAzAPWxOQD3tTwA+bM4APu2OAD6tTwA97k+APm5
+        OwD5uD0AyY9AAMmQQQDMkUAAzpRAAMqSRQDNlEQAy5RIAMyVSwDNl00A0JdCANadRQDZm0YA05xMANad
+        TQDOmVEAz5tUANCcVwDQnVgA5J5BANypVgDSoV4A3qpdAOqlQADspkEA7atEAOalSADmqEsA7q1IAPCu
+        QwDtskMA77BKAO2zTgDvtE8A8rJHAPW1RQD4t0UA9rtDAPq8QQD0s0gA8LNNAPG0TAD2uEoA9r5LAPe6
+        TQD5vUoA+b5MAOeqUADsq1AA47BXAO2xUwDvtlIA6rBXAOGxXgDxt1IA8blWAPS7VwD4v1cA8LpYAPG8
+        WQD3vlkA0qJhANSlZgDVqGsA1qltANescQDZsHkA2rN9AOW1YwDut2MA7L5mAOu4bADxvm0A5Lt1AO66
+        cwD5wEkA+MFNAPnAUQD6xFQA/MhTAPfCWwD3xFkA8sBdAPTBXwD5wFsA+cdeAPnIWQD5ylwA+sxdAPLB
+        YQD0wmEA98djAPPFZgD0xWYA+MRhAPnKYgD5zGAA+cpmAPrPZQD8z2UA9cdpAPPDbQDyxW0A9MhpAPbK
+        bQD5y2gA+s1pAPjKbgD5zW0A+tFrAPXOdAD4znEA+s50APPIewD20HcA+tFxAPvUcQD81XAA+dB1APvU
+        dgD81nYA9tF5APfUfQD40XoA+tV5APnVfgD72HwA3LaCAN67igDfvIkA372OAO/FhgDvyYwA8MaHAPnX
+        gAD61YcA+tiCAPzagQD93IMA+tmFAPvchQD83YYA+tSPAPvdiwDhwZUA4sOZAOPFmwDjxZwA5MedAPPP
+        mQD61pEA+tqTAPvdmQD73p8A/N6eAPzgjQD84ZEA++KaAOTJoQDnzqkA6M+rAO7TpgDv1KgA89SlAPbb
+        pADx2KsA8tiuAOrTsgDr1rgA7dq+APDbuQD84qIA/OSiAPzlpgD746kA/OOoAPvkqgD85qsA/OezAPzo
+        sgD86bUA/ey0APvnuQD857sA+OO8APzpuAD86r0A/OzDAPHizQDz5s8A/O7LAP3xzgDy5NAA/O/TAPXq
+        2gD88NMA/fPZAP302wD78t8A/fPcAP303QD27eAA/fXhAPjw5gD99uUA//jlAPnz6gD69u8A/vntAPv2
+        8AD9+fEA/fr3AP789QD+/fkA/v7+AP///wAAAAAAAAAAAAC5KSkqbHt7e3uNmczuAAAAAAAAAAAAAAAA
+        AAAAAAAA6TQpKSkpPI2ej3tgXlBw4AAAAAAAAAAAALkAAAAAqT5dNi8qKSkqNm6Sh2FUUEVQbeUAAAAA
+        AAApKikpKSkpN2upaTcqKSkpKl19dVVMS0tQP9IAAAAAAC8pKSkpKSk6uejQpzoqKioqKzRLTiUjHR4Z
+        C6wAAAAALykpKSkpKTrG8/fluGYvKikrKyoZJyUlVFR7W84AAABmNzo5OTk5aMj3/fvqx2s3KikpKioX
+        IydVdYOPWwAAAMbGuca5xrnI5fn9/f3z0almKikpKhcnTlWHko+NWwAA9/Pz8/Pz8/f5/f39/f356Llo
+        LzJLTk5zfpKenqNizgD9/f39/f39/f39/f39/f39889xfXVzc3WVnqCxpZBXAP39/f39/f39/f39/f39
+        /f37156LgIt+i4egprGxo1sAy87h4+HT4eHc7v39/f39+NOxpp2Vi5WVoKaxt7euYnJCj7G3plWHfrHj
+        /f39/efUw8O1pqampqa1tcO3sbOjQz+jsbelJ5XExOP9/f3hxcTFw8PDtbW1tbXDw7e3s6MQGKO3t54n
+        scTE5/3n1cTExcTEw8PDw8PDw8PDw7e3oxAXpbHEpSe3xMTj137DxMXExMTFw8TDxMPEw8TEt7euEBaj
+        t7eVTqXExMSeTqDExcTExcTExcPExMTExMS3t6MQEJC3t7EmfsTExKBOisTExcTFxcXExMTExMTDxLez
+        rhALj7O3t3NzxMTE0492sdTFxcXF1NXFw8TEw8S3t7OjEBJis7e3h1TDt9ncpXuHxcXU1NXd3dXFw8O3
+        t7e3s4E0bxGjs7eSJrfF3OPht5jE3Nzd4uLj4tXDt7e3t7ejQW8ABo+zt5IhpdPj5+7awL7h5+fn7ezn
+        2cPDt7exs6MQAAASYqOxjyCH0+fu8+7j4ePu9fX17efht7e3sbOuWxIAAMgGlrOeISa35+74+PXz7u74
+        +Pj159e3sbe3rpAQAAAAABJBo6VUHp7a7vj7+/j4+Pj4+PXnsbezs66jWxIAAAAAAAdgo30VVbPj7vj7
+        +/v7+PXj4MSxs7OzmXsHAAAAAAAAvQZ7jRQepbHh7vj4+O3n4cRLG1SYo5iNCskAAAAAAAAAqwMWCQ5h
+        sbHF4efn57Z7FB0UFA4JDAOtAAAAAAAAAAAAAAMFCBuSs6Wzs6WlYRQUDg4JCQMDAAAAAAAAAAAAAAAA
+        AA8CBhiSmKOYpaOlkx4ICQMEDwAAAAAAAAAAAAAAAAAAAAAPAUSNe4+YkpONXgUCDwAAAAAAAAAAAAAA
+        AAAAAAAAAAAAcg8PGD8/GFg7cgAAAAAAAAAAAAAA/4AD//8AAP+8AAA/AAAAHwAAAA8AAAAHAAAABwAA
+        AAMAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAYAA
+        AAGAAAADwAAAA+AAAAfgAAAH8AAAD/wAAD/+AAB//4AB///gB/8oAAAAEAAAACAAAAABAAgAAAAAAAAB
+        AAAAAAAAAAAAAAABAAAAAQAAAAAAAOeOHwDVmT4A548hAO+ZJQD1qzUA8Kg8APStPgD2tT0A+LM4APm5
+        PADJj0AAypFDAMqSRQDMlUoAzJZMANidQwDQmUkAzppSAN6rVwDUo10A6KVIAOmoSwDprEkA66tNAPOy
+        QgD1tEIA8bFGAPWyRAD2uUYA9bdNAPe4SQD3vkgA56VUAOuyUwDtslMA7rdWAO64VwDls1sA7bVbAOux
+        XwDuuFoA8bVRAPC2VQDwuVgA8L1cANOlZgDcr20A1qtwANqxegDbtH4A665jAOuzYgDtvGEA5rNoAO21
+        agDtu28A+cBKAPrBUwD5w1oA+cdaAPjHXwD4yFsA+cleAPPCZwD1xWUA+s5jAPnKZgD6zmYA98ppAPTK
+        bwD5zm0A+tFtAO7AdwDuxHsA7cR9APfNcwD3z3YA+c5zAPjJdgD50XAA+9RxAPrTdgD303wA+dJ5APnU
+        eAD60n0A+td9APrYfwD8238A3LaCANy4hQD41oAA+9qCAPzbgQD62YYA/N2GAPTQjgD624gA+tyKAPze
+        igD62Y0A+96NAPzfjgD62pEA/N+QAPzgjgD84JEA/OGUAPvgmwD84psA++GcAPzjnwDmy6YA48upAOzX
+        uwDs2L0A++GmAPzlpQD75q4A/OirAPzmtAD96LEA++m+APzowAD87MIA/O3HAPztyAD56c4A/e7MAPPn
+        1QD06dkA+O3aAP3x1QD889oA/vTaAP303QD99eEA/ffoAPr07QD++eoA/vrvAPv38gD7+PMA/vvzAP77
+        9AD+/PkA/v7+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAByCxE1QUFhhAAAAAAwMDAULxILDCY7HxtJAAAADAsLD3N0
+        LgwLEAgJGycAADIyMjKCk4NbDwsCCjpFSgCOjouPk5OTi3ETHzlEUkUAgIaFhomTk5N3UkJCUl1fSili
+        P0h2k4x2amBZWV1qXSkpYj9id3lsbGpqampqamIpJGI/WWo/WWxsbGxqbGpiKRddUkVsYkVubnd2ampi
+        YiI2U1I9d4Bodn1+fm5iYl04ACxUHXeJhoCJjIZuYl0pAAAnTxtUho+PjIl7XV1TNAAAABUGH2iBiX1P
+        BRsqFgAAAAAAIQNBVFRPCAQBIQAAAAAAAAAANxcsKyIzAAAAAADwDwAAAAcAAAADAAAAAQAAAAEAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAOAHAAD4HwAAKAAAADAAAABgAAAAAQAgAAAA
+        AACAJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKyrqQGsq6kTra2sIbCy
+        syqsrq8gsrOyKcC/vUTGn2lxyY9Ar8mPQP/Jj0D/yY9A/8qRQv/cqFf/6bli//PBYP/zwmH/9MNi//TD
+        Yv/ywV7/8sFi//PDbf/zxnX99M2G+fbZn/H45sLN9u7do/Dw8HL19fUy+Pj4DAAAAAAAAAAApaWlA6Wl
+        pQylpqcTpqepGKipqxyoqasOpaepBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKyr
+        qQGrqqgSq6uqHKyurx2+v79H0c/Jfujfy8Darm/N0JNA4cmPQP/Jj0D/yY9A/8mPQP/Pl0j/2KJQ/+Ox
+        Wf/tvWP/9MZq//bKbP/1x2j/9MRl//TCZf/zwGP+88Bl/fPCa/rzxXXu8smD3/DOl8303LKc697GZMLB
+        vyfCwb8NpaWlAaWlpQSlpaUHpqeoC6anqRCnqKoGpaepAQAAAAAAAAAAAAAAAMmPQCfJj0AqyY9AK8mP
+        QCnJj0ApyY9AKbShhCq0oYQ1taKHP7emjUfNu6KI4c2sxfParP/hr2f805dE/MmQQv/Jj0H/yY9A/8mP
+        QP/Jj0D/zZRE/9WgTv/hr1v/671l//TIbf/2yWv/98hn//bEYf/1vlr/9LpV//O4Uf/ytE3/8bRR/vC4
+        XfzyxXjg6MeOtdC9n3rPwq1F4cqiH6mopgeop6YHpqeoB6anqQamp6kCAAAAAAAAAAAAAAAAAAAAAMmP
+        QHbJj0B/yY9AgcmPQH3Jj0B9yY9AfcmPQH3Jj0B9y5JEi8+aTanZpFfg36xc/eGxXv/Zo1L/0ppL/8uU
+        SP/JkUP/yY9A/8mPQP/Jj0D/yY9A/8mPQP/Pl0j/26dU/+y+Zv/1x2n/+spo//rIYv/4wlr/971U//e6
+        T//1tUr/8rFG//CuQ//vr0f/7rJR/e62YPnqxoup08KjXamophaop6YTqKemDAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAMmPQNHJj0DUyY9A1cmPQNPJj0DTyY9A08mPQNPJj0DTyZBB2MuSROLQm0/01qVf/tyy
+        cv/csnb/2a1x/9OkY//OmlP/y5NH/8mPQf/Jj0D/yY9A/8mPQP/LkUL/0JhH/9eiT//ksVj/775e//nH
+        X//5wlf/+b5Q//m7S//3t0f/9bRF//OyQ//xsUb/8LJL/vC0Uv3stFzh4bNtrM+zhV21rJstqamoEKyu
+        rwarra4TqaqrFKWnqAalp6gCAAAAAMmPQPvJj0D9yY9A/8mPQP/Jj0D/yY9A/8mPQP/Jj0D/yY9A/8mP
+        QP/Ml03/06Vl/925h//iw5n/4sSa/926iP/Wqm7/0J1Z/8yUSf/KkUT/yY9B/8mPQP/Jj0D/yZBA/8uS
+        Qv/Vnkv/4KtR/+25Vf/0u1D/+bxL//q8Rv/5uEP/97VB//a0QP/0skH/8rFD//GxRf/uqkH+6ahI4uOt
+        XKrLrH1ruKyYNKyurwaoqqsapqioHKWnqAylp6gEAAAAAMmPQfPJj0D7yY9A/8mPQP/Jj0D/yY9A/8mP
+        QP/Jj0D/yY9A/8mPQP/NmVD/1qtu/+PFm//s2Lz/797G/+vWuP/hwJT/2K50/9CeWf/Mlkv/yZFD/8mP
+        QP/Jj0D/yY9A/8mPQP/Jj0D/zZNB/9adRf/qrkb/97hF//u8Qv/6tz7/+bQ6//mzOP/3sDf/9K03//Kr
+        Of/wqTr/7KI1/+aWK//oqUzN6bReeAAAAACfoaESoaOjGaepqROnqakGAAAAAMmPQPHJj0D6yY9A/8mP
+        QP/Jj0D/yY9A/8mPQP/Jj0D/yY9A/8mPQP/NmVD/1qtw/+PHnv/v38j/9evd//Xr3P/t2sH/5cii/9u1
+        gP/Upmf/zptU/8uTR//JkUL/yY9A/8mPQP/Jj0D/ypBA/82TQf/Wm0L/4qVB//CxP//3tDv/+rU5//q0
+        OP/3szn/9rQ9//a3Rf/0tEX/8bJI/++yTf/ttFPu67dfu9C1h2avp5gon6GhCKepqQanqakCAAAAAMuT
+        SPDLk0j6y5NH/8uTR//Lk0f/y5NH/8uTR//Lk0f/y5NH/8uTR//PnFf/2K92/+XKo//x5ND/+fPr//v4
+        9P/37uL/8ODK/+fOq//evIz/16xx/9CeWv/Ml03/ypJF/8mPQf/Jj0D/yY9A/8mPQP/LkUD/0pc//+Ci
+        Pv/rqzv/9LE5//u1OP/4tTr/+LhB//i9S//3u0z/9b1T//XDYP/yvlz/7rtg6Ou7bbvovHRS4blzEwAA
+        AAAAAAAAAAAAANCdWPHQnVj60JxX/9CcV//QnFf/0JxX/9CcV//QnFf/0JxX/9CcV//UpGX/3LWB/+jP
+        q//z59T/+/bw///+/v/9+/n/+vTt//Xq2v/r17n/4sSZ/9mwef/SomD/zZdO/8qRRP/Jj0H/yY9A/8mP
+        QP/Jj0D/yY9A/8qQQP/Xmj7/56c7//u3Of/5tzv/+bpB//q+TP/5wFD/+MNY//fHY//1x2b/8cBh/+2x
+        U//ltmiP4blzOgAAAAAAAAAAAAAAAN24hvHduIb63biG/924hf/duIX/3biF/924hf/duIX/3biF/924
+        hf/gvpD/5cqk/+7cw//27eD//Pn0///+/v/+/f3//fv4//v27//16tv/7tzD/+bLpv/duYf/1als/8+b
+        Vf/MlUn/yZBC/8mPQP/Jj0D/yY9A/8uQQP/YnD7/6Kk8//m4Ov/5uT3/+btD//q9S//6w1f/+chh//nL
+        af/3ymv/9MZo//HAYf/qtl/W2bFwhK2sqgetrKoEpaamAurUtvDq1Lb66tS1/+rUtf/q1LX/6tS1/+rU
+        tf/q1LX/6tS1/+rUtf/s2Lv/79/I//Tq2//69O3//fv5/////////////v7+//79/P/79/L/9+7j//Hj
+        zv/p0bD/4L+R/9itcv/RoF3/zZdN/8qRRP/KkUH/z5VA/9ecQf/ipj//7rA+//m6Pf/5vEH/+b5H//rA
+        UP/6x17/+sxo//rPbv/4zW//9sxv//XKbv/vul373bFouMCvkTSzraEUo6SkBPjw5vD48Ob6+PDm//jw
+        5v/48Ob/+PDm//jw5v/48Ob/+PDm//jw5v/48uj/+vTt//z48//9+/n//v39////////////////////
+        ///+/v3//fv4//v28P/16tr/7dq//+THnf/asnv/0qJh/82XTf/Pl0X/2Z9C/+2yQ//2uUH/+r1B//m9
+        Q//5v0b/+cJN//rIWv/6zGX/+89u//vRcv/50HL/+NB0//fQef/ywWP/7Lha1ua1X4XmtV8xoKGhB/z5
+        9fD8+fb6/Pr2//z69v/8+vb//Pr2//z69v/8+vb//Pr2//z69v/8+vf//fv5//78+//+/f3//v7+////
+        ///////////////////+/v7//v38//37+f/69e//9uzf//Dgyf/nzar/4L2J/9yuZ//lslj/7rhQ//fA
+        Tf/4wEn/+b9H//m/R//5wU3/+cZV//rMYf/60Gv/+9Jx//vTdP/61Hn/+dR8//fTff/0ym7/7rxf7+ar
+        UdDmsVpJoqOjBv79/PX+/v77////////////////////////////////////////////////////////
+        //////////////////////////////////////////7+///+/v/+/Pv//Pjz//jx5f/y4MH/7tGb/+zD
+        c//0xmT/+chb//vJV//6xlP/+cRQ//nEUP/5xVX/+slc//rOZv/60m3/+9Rz//vVd//6133/+deA//jW
+        gP/20Hf/8cJm/emrS/nmq1Fn4LZqHv79/P/+/v7/////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////v36//76
+        8f/868H/+9+W//zVcP/80Wj/+85j//rNYP/6zF7/+std//rLXf/6y1//+sxi//vOaP/70m7/+9V1//vX
+        e//72YD/+tqC//rYgv/41X7/88ls/+2zTv/ktWCK4LZqUPbduOf447/3+urH//3wz//98dH//fHR//3x
+        z//868T//OvE//3xzv/98M3//fDN//3vy//+9Nz//vnt////////////////////////////////////
+        ////+/P//vXe//7sv//845///NyI//zXeP/71HD/+9Jq//rQZv/6z2X/+s5k//rPZv/6z2j/+9Fr//vT
+        cf/71Xf/+9h8//vagf/724T/+9uG//rahv/514H/9c1y/++7Wf/oslbB5K1Uoe2/eeLzzYn199mY//vj
+        pv/75ar//OWp//zjo//62I3/+teK//vgmf/735j//OCa//zjov/97MD//vXf////////////////////
+        /////////v35//767v/+9Nj//e29//3knv/8347//NyD//zaf//72Hn/+9Vz//vUb//6027/+tNu//vT
+        cP/71HH/+9V0//zXef/72H7/+9qC//vchv/73Ij/+9yI//vbiP/52IT/9tF5//LEZv/qsVLl5qdI2OWh
+        P/Pvu1379s50//nYhP/63Ij/+9uG//vXff/5xlr/+MJR//nMYf/5yl3/+s9o//zbgv/856v//fPV////
+        /////////////////////////vru//7yzf/86q3//OSY//zhjv/84Iz//N+J//zeh//824H//Nl9//zZ
+        ev/82Xn//Nl6//zZfP/82Xz//Nl9//zagf/83IX//N2H//zeif/83Yr/+9yK//vcif/52YX/+NR///bO
+        df/rslT45qVE9eejQPrxv2L999F5//nZhf/63In/+9uF//vVef/4xFP/+MFN//nOZf/61Xb/+9uD//zf
+        jP/96bH//vTY//////////////79///9+//+9tz//e/A//zop//85Zv//OOU//zhkP/84Y7//OCM//zf
+        iv/83ob//NyD//zbgv/824H//NuC//zcg//824L//NuD//zchf/83Yf//N6J//zfi//83ov/+92K//vd
+        iv/62of/+NaB//bQef/rsE/85p87++ikP/7xwWX+99N9//rahv/63Ir/+9uF//vVd//4wlD/+MJO//rT
+        cf/73Ib//OGR//zhkf/96rX//vTZ///////++/T//vjp//712//97Ln//Oah//zjk//845P//OKS//zi
+        kv/84ZD//OCO//zgjf/834r//N6I//zeiP/83oj//N6I//zeif/83Yj//N2I//zeif/834r//N+L//zf
+        jP/834z/+96L//vei//624j/+deC//fTfP/rrkz+5Zw0/uilPP/yw2b/+NV///rbh//73Yv/+9uF//vV
+        dv/4wlH/+MVV//vdhP/734z//OGR//zhkv/86rX//fTa///////+9eD//ezB//zmof/845f//OKT//zi
+        k//84pP//OOT//zjk//84ZH//OGQ//zhkP/84I7//OCN//zgjf/84Iz//N+M//zfjf/8343//N+N//zf
+        jf/8343//N+O//zfjv/8347//N+N//zejf/63In/+dmE//fVfv/rrkr/5Zsw/+ehOf/xwWX/+NV///rb
+        h//73Yv/+9uG//vVdv/4wlH/+MVW//vdhv/7343//OGR//zhkf/86rP//O7F//zsxf/63Zf/+tmG//zh
+        kf/84pL//OKT//zik//84pP//OOT//zjk//84pL//OKR//zhkf/84ZD//OCP//zgj//84I7//OCO//zg
+        j//8347//N+O//zfjv/84I7//OCO//zfjv/834///N+O//zejf/63In/+dmE//fVfv/rr0v/5Zwy/+eh
+        OP/xwWT/+NV///rbiP/73Yz/+9qF//vUdP/4wlH/+MRW//vagv/73oz//OGR//zhkf/856j//OWp//rd
+        lP/4zGf/+cxh//vbgv/74I3//OKT//zik//84pP//OKT//zik//84pL//OKS//zikv/84ZH//OGQ//zh
+        kP/84ZD//OGQ//zhkP/84I///OCP//zgj//84I///OCP//zgj//84I///N+P//zejv/63Ir/+dmF//fV
+        f//rr0z/5p0z/+ijOf/ywmX/+NV///rciP/73oz/+9qE//vScP/4w1H/+MRT//vVd//73Yj//OGR//zh
+        kv/84ZL/+9uF//rRbP/4xE//+MVR//vVdP/73Yj//OKT//zilP/84pT//OKU//zilP/84pT//OKT//zi
+        k//84pL//OKS//zikv/84ZH//OGR//zhkf/84ZH//OGQ//zhkP/84ZD//OGR//zhkf/84I///N+O//zf
+        jv/63Yr/+dmF//fVf//rsEz/5p4z/+adM//wv2H/99N8//nbh//63Yr/+9uG//vWeP/4w1P/98BM//nN
+        Zf/72YH//OCQ//zgkP/84JH/+92H//rVc//4xlT/98NQ//nOaP/724T//OGT//zilP/84pT//OKU//zi
+        lP/84pT//OKV//zilv/84pb//OKV//zilP/84ZL//OGR//zhkf/84JD//OCQ//zgkP/84JD//OCQ//zg
+        j//8347/+9+N//vejP/63In/+NmD//fUff/qrkr/5Jsx/+OYLv7vu1v+9tF4//nahv/63In/+tyH//vZ
+        gP/4xVj/979K//jFVv/613z//OCQ//zgkP/84JH/+9+O//vbhf/4y2P/98RV//jHXP/6137/++CR//zi
+        lv/84pX//OKV//zilf/84pb//OKY//zim//845v//OOb//zjmv/84Zb//OGS//zgkP/84JD//OCQ//zg
+        kP/834///N+P//zfjv/7347/+96N//rei//524j/+NeC//bSe//qrUn+5Jox/uGSKP7ttlT+9c1z//nZ
+        hf/53In/+t2J//vbh//5yWD/+MBM//i/TP/61Hn//OCQ//zgkP/84JP//OKZ//zkov/603v/+Mdg//jB
+        UP/603X/+92N//zimf/84pj//OKY//zimP/84pr//OKc//zkn//85KH//OWj//zlpP/8453//OGW//zg
+        kP/84JD//OCQ//zgkP/834///N+O//zfjv/73o3/+t6M//rei//52of/+NaB//bQef/qrEr+5Jsz/uGU
+        K/TssU379Mhq//nYg//524j/+tyJ//vdif/5zmr/98RW//a+S//603f//N6O//zejv/84pr//OSk//zm
+        rP/61of/+cts//jDW//4ymj/+tR9//zhm//84p3//OKe//zjn//846H//OOj//zlpv/85qr//Oat//zn
+        rf/85qj//OOf//zgk//835D//N6O//zejv/73o3/+96N//vejf/73oz/+t2L//rciv/52YX/99J7//PG
+        af/oqUb54po09uKZMt/qqkL08b5c//jWf//52YX/+tyJ//vdiv/50XH/98Zb//a8SP/50nT/+92N//vf
+        kf/75KL//Oev//zot//73p7/+tSF//nKbf/4yWn/+dB4//vemf/74qL//OWn//zlqP/85ar//Oat//zn
+        sP/86LX//Om3//zqt//86LP//Oap//zim//735H/+96N//vejP/73oz/+96M//vejP/73Yv/+tyK//rb
+        if/52IT/9c1z//C5V//npkLr45w34eaiO8DonzTq7a9J//fSef/514L/+tqI//vciv/50nP/+MZc//a6
+        RP/50HD/+92N//vhmf/75qz//Oq6//zswf/868D/++Ot//rVh//60Hr/+tF9//rakv/75Kj//Om0//zp
+        tf/86bb//Oq5//zrvf/868D//OzC//zsw//867///Oi1//zkp//74JX/+96M//vejP/73oz/+96L//ve
+        i//73Ir/+tuJ//rah//41oH/9MZr/+ypQ//opD3V5qI7wNmrXoDfmDbU6aQ9//XNcv/41H7/+dmG//rb
+        iP/50XP/98Ra//W1PP/4zGf/+tuI//vin//76LX//OzE//zuy//8783//OrA//vgpv/62pX/+tiP//ra
+        lP/85K3//Oq+//ztxP/87cb//O7I//zuyv/8783//O/O//zvzv/87sn//Ou+//zmrv/74Jf/+96L//ve
+        i//73Yr/+9yK//vciv/624j/+tqH//nYhf/31H3/8cFj/+ihOP/np0Gb5qpGasmziFDYmUTB5p84+/PF
+        Zv/30Xn/+diD//rahv/50HL/98JY//WyN//4x17/+teC//ziov/86rv//O7L//zx1P/88tj//PDS//zr
+        xf/75LH/++Cl//vfof/85rT//OzE//3w0f/98dT//fLW//3y2P/989n//fPZ//3y2P/88NH//OzF//zn
+        s//74Jj/+92K//vdiv/73In/+9uJ//vbif/62of/+dmF//jXgv/1zXL/7rhX/eSaM/raqVp41rFuNre4
+        uTDToFyw5qA79fG5Vv/1y3H/+NaB//rZhv/5z3D/98FV//WwM//3wVX/+tJ6//ziov/86r7//PDR//30
+        3f/99eH//fXi//314v/87sz//OrA//zpvP/86b3//O3H//3z2//99eD//fbj//325P/99uP//fXi//31
+        4P/88tj//O3J//zntf/735j/+9yK//vciv/73Ij/+9uH//vbh//62Yb/+deD//jVf//ywGD/6qtH+uKW
+        M/LDq4lqtLa1JqusrSPPpmp746BBxeeZL//xvV7/99J6//nXgv/50XX/98Rc//WwNv/2ukj/+Mhm//vc
+        kP/76Lb//PDR//303//99uX//fjp//346v/99N///fLX//3w0f/98NH//fHV//3z3f/99uX//fjp//34
+        6//9+Or//ffn//325P/88tn//OzH//zkrP/73pT/+9uI//vbiP/72of/+tqG//rZhv/52IP/+NV///bQ
+        d//tsk7/6KM73eejPpvZoVM8tLa1DKWmphe/qINI06BXlOGMIPntsE399Mhs//jVf//503n/+Mdk//Wz
+        Pv/1tD//98BW//rWgf/75Kz//O7L//303//99+f//vnt//768P/++e3//vfp//724//+9uP//vbj//72
+        5P/++On//vnt//767v/++e3//fjq//325P/88db//Om+//vgnP/73I7/+9qG//vahv/72Yb/+tmF//nY
+        hP/51oD/9tB3//PFZ//pp0H75pwyv+qqRErqqkQYAAAAAKWlpAykpaYWuJ9+YuGSK+/ppD358blX//jT
+        e//51Hz/+Mtr//a5Sf/1sTz/9rlL//rRdv/735///OvB//302//99+b//vru//789P/+/Pb//vv1//77
+        8v/++vD//vrv//767//++u3//vrt//767f/++e3//fjp//324v/8787/++aw//vahv/72ob/+9qG//vZ
+        hv/72Yb/+tiE//nXgf/403z/9chr/++0T//lnTf04ZIrnwAAAAAAAAAAAAAAAKWlpQ+kpqcUuqWENuaj
+        PHflmjLR6aVA/vTDZf/3znT/+Mxu//a+VP/1sT3/9rE+//jBWv/61IH/++On//zuy//989z//ffo//76
+        8P/++/T//vz2//789v/++/P//vrx//768P/++u///vjr//725f/98tr//O/Q//vsxv/75bH/+9+b//vZ
+        hf/72YX/+9mF//vYhP/614P/+daA//jUff/1ynD/77dX/uWaMv7moDmk5Z02TwAAAAAAAAAAAAAAAKWm
+        pg6lpqcPtKeRGdKqZSzdmj6d5ps04+yqRv/zwWT/9sps//bDX//0sD//9Ks2//a1Rf/5zG3/+9uQ//vl
+        rf/87cj//fPb//336P/9+e7//vvz//789f/++/L//vrv//746//+9+f//fTg//3w1P/86cD/++Cq//nW
+        kv/5z3//+cx0//nOcf/603r/+tV///rWgf/51X7/+NJ6//bOdP/wuVr/6adF8eCXNNXZpllm3K5fHwAA
+        AAAAAAAAAAAAAKWlpwalpacIpKSmCqSkpgzRpWFd5pw0ruGIHv/trkv/9MNl//bHav/zr0L/8qcy//St
+        Of/4xmT/+9V9//vYg//746r//OzH//3z3P/99uX//vjr//767//++u7//vjo//703f/98dX//O3K//zn
+        u//625//+Mt4//a1Rv/1rTj/9a45//e4S//4x2T/+dB0//nSe//30Hj/9cxx//PFZv/ooTv/4pg11uCr
+        VoW/r5Y7r7K3DgAAAAAAAAAAAAAAAKWlpgulpaYGpKSmBKSkpgSyo4wkyKBmY+SZM7/lmTPp6J85/+6r
+        RP/uoTL/758r//KjLf/2ulL/+ctt//rXgf/7247/+9+e//zlsv/868T//O/R//zy2f/98tz//fHX//3u
+        zf/74rL/+teY//nNfv/3vl7/9rNH//WtN//0qTL/9Kkx//SqNv/zrT3/8q1B//GrQf/vq0T/66U//+WZ
+        NP/lnDXU16FTl7qpjkisqKEhqauvCQAAAAAAAAAAAAAAAKenpw+mpqUIpqWkBqWkowmko6IMsqOMLeaj
+        PmzimDat4pMv3ueUKf7pkyX+65Uk/+6bJf/yrD//9r9b//nTev/61X3/+teF//vbk//736L/++Ot//vl
+        tP/85rf//OW0//zjrf/61I3/+MVt//a2Tv/1qjf/9KUt//SmLf/zpS3/8qMr//GgKv/vnSf/7Zgk/+qT
+        Iv/nkiX+5JEn7OKQKMjZoFCTxqh7XaipqyalpqgRoqSmBAAAAAAAAAAAAAAAAKqqqhOnpqYNp6alEaqp
+        px2op6YWp6emD+KwXwfisF9L4aBInd+CG/7jhhv+5osc/+qTIP/univ/8rFG//jMb//50nf/+tV8//rV
+        fv/61X7/+tV+//vVf//71X//+9V///vVf//5x2f/97ZK//OiKv/zoir/86Ep//OhKf/xnyj/8Jwn/+6a
+        Jv/rliL/6JAf/+WJHP/hhBz+4o4px+ipRVrCrYs7rq6tKKysqyCsrKsKAAAAAAAAAAAAAAAAAAAAAKqq
+        qgapqKgEpqWkBaqppwmpqKYHp6emBeKwXwPGq38fxqRzSeKbOoDhkCrN4okf9+OFGv/mjR//65ww//Gy
+        TP/1xGX/+M90//nReP/50nr/+dJ6//nSe//50nv/+dN7//nTe//5zXL/+MZn//a8V//zrT//8aEv/++Z
+        Jf/tliP/65Mi/+iQIP/lihz/4ogd++GLIvThljSo4Zc3YOipRR6/qYcaqqmnFaqopxGrqqkFAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACkpqgGsqaTFOSpSyzinDp44Yslr+OL
+        I8/jiiDr5Y4k++mXL//ws1D/9cRm//fMcP/3zXL/981z//jOdP/4z3X/+M91//jPdf/4znX/98xy//fJ
+        bf/ztlD/76M2/+uRIf/nix7/5Yoe/eSMIPnjjCLd4ooiv+CMJp/gmDhT4qlPHgAAAACpp6UGqaelCKmn
+        pQapp6UCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA6aU9JemlPXDjky3E34Yh9N99F//pnDf/8LRR//TFZv/0xmf/9cdp//bJbP/2ym7/98tv//fL
+        b//2yW3/9cls//XJa//yvVv/7adB/+WHHf/hfxj/34Eb+eCMJu/lnDWa6aU9SgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA6aU9DOmlPSXmnzdB4o8pXuaYMX3onjew6KA72OefPvXookH666dF/e6u
+        Sv/vsU7/77JQ/++xT//usE7/7rFR/u+1WP3qqUn555465+aULMnklzKY4ZEtcOCMJk/ikSsz6aU9GAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6qY/E+qmPzzonjeI5ZYwxOGN
+        KvHjkC745pcz/eqhOv/rpD7/66VA/+ulQP/rpD//66ZE/uyrT/3mn0D25Zk33OebNK/loz9l5ahGKwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwA
+        AAAMBwAA/AAAAAAHAAAAAAAAAA8AAAAAAAAAPwAAAAAAAAABAAAAAAAAAAEAAAAAAAAAIQAAAAAAAAAB
+        AAAAAAAAAAcAAAAAAAAABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAABwAAAAAAAAAH
+        AAAAAAAAAAcAAAAAAAAABwAAAAAAAAAHAAAAAAAAAAcAAAAAAAAADwAAAAAAAAAPAAD+AAAAAQ8AAP/g
+        AAAP/wAA/+AAAA//AAD//AAAf/8AACgAAAAgAAAAQAAAAAEAIAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAqaikAayrqR2wsrMqq62tHMC/vUTJj0CIyY9A/8mPQP/KkUL/5bVj//PB
+        YP/0w2L/9MNi//LAXf/zw23/88h6/fbZn/H67tS88PDwcvj4+BIAAAAAAAAAAKWlpQymp6gXqKmrHKWn
+        qQcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACpqaQBqqqnG6usrRfV1dV+/O/T/9mZQvnJj0D/yY9A/8mP
+        QP/Jj0D/3KlW//LFbf/4znH/98lr//XCYf/0u1f/8rdS//CzTf/xvWv79tqlvMLBvzvd3NsBAAAAAKWm
+        pwOmp6kKAAAAAAAAAAAAAAAAyY9AdsmPQITJj0B9yY9AfcmPQH3Jj0B9z5pNqd6qXP3hsV7/1p1N/8uU
+        SP/JkEH/yY9A/8mPQP/Jj0D/05xM/+y+Zv/7zGv/+shi//i/V//3uk//9LNI//CuQ//vsEr/7rZg+enP
+        ooGpqKYWqKemEgAAAAAAAAAAAAAAAAAAAADJj0D/yY9A/8mPQP/Jj0D/yY9A/8mPQP/Jj0D/zppS/9qz
+        ff/fvY7/16xx/86YUP/KkEL/yY9A/8mPQP/Jj0D/zZRE/+OwV//5x17/+sBS//q8Sf/4t0X/9bVE//Ky
+        R//xtEz/66ZB/uK5dYGqqacXrK6vCqusrSilp6gKAAAAAMmPQfPJj0D/yY9A/8mPQP/Jj0D/yY9A/8mP
+        QP/Qnln/48Wb//Hizf/r1rj/3LaC/9CeWf/KkkX/yY9A/8mPQP/Jj0D/yY9A/9adRf/1t0f/+7xC//q1
+        PP/5szj/9q83//KrOf/vqDv/5pYr/+m0XrUAAAAAn6GhHKepqRMAAAAAyY9A8MmPQP/Jj0D/yY9A/8mP
+        QP/Jj0D/yY9A/9CeWf/kyKD/+PDm//r27//x4cz/4cGV/9SlZv/Mlkv/yZBB/8mPQP/Jj0D/yY9A/86U
+        QP/rrD7/+7c5//u1OP/3tTz/+L1L//W4S//0wV//77ZT/+rAepoAAAAAAAAAAAAAAADQnVjx0J1Y/9Cc
+        V//QnFf/0JxX/9CcV//QnFf/1qlt/+jPq//58+r///7+//369//16tr/586p/9mwef/Pm1T/ypFE/8mP
+        QP/Jj0D/yY9A/8qQQP/eoD3/+7c5//m4Pf/6vkz/+cFT//fHY//0yGj/7bFT/+G5c1gAAAAAAAAAAOTH
+        nvHkx57/5Med/+THnf/kx53/5Med/+THnf/nzqr/8ePP//z48/////////////79+//48Ob/7dq+/967
+        iv/SoV7/y5NG/8mPQP/Jj0D/zJFA/+CjPv/5uTv/+bxB//q9S//7ymP/+s5s//fLbv/0yGn/6q5T+K2s
+        qgylpqYE+PDm8Pjx5//48Ob/+PDm//jw5v/48Ob/+PDm//nz6v/8+PP//v38//////////////////7+
+        /f/79vD/8uTQ/+THnf/VqGv/zZdN/9CXQv/tskP/+71A//m9Q//5wEj/+sha//vPbP/70XL/+dBz//fQ
+        ef/wulj/5rVfhaChoQf+/v3x////////////////////////////////////////////////////////
+        ///////////////+/v/9+vf/9u3g/+rTsv/ku3X/98RZ//zIU//5wUv/+cFK//rEVP/6z2X/+9Ry//vU
+        dv/614D/+NV///TLb//np0r2pKWlBv79/P//////////////////////////////////////////////
+        ///////////////////////////////////++vH/++Sq//zVcP/8z2X/+s1g//rMXf/6y13/+sxg//vO
+        aP/71XL/+9d7//vbg//62IL/99R8/+2zTv/gtmpQ8s6X2/fbpf/86bj//eu9//3qt//73p///eq2//3p
+        tf/96LL//vPY//////////////////////////////jl//7mp//93IP//Nl8//vVcf/70mr/+tBo//vR
+        a//70m7//NZ2//vYfv/73IX//NyI//vbiP/514H/8cBg/+epSsvloT/z9cls//nYhP/73ov/+9d9//i+
+        Sf/5zGH/+spc//zbgv/97sH///////////////////////7yzf/85p3//OGO//zgi//83of//Np///zZ
+        ev/82Xn//Nl8//zZfP/82oH//N2H//zeif/83Yv/+9yJ//nYhP/2znX/5qVE9emkQf720Hj/+tqG//ve
+        jP/71Xj/97o9//rPaP/84ZH//OGR//7vx//////////////9+f/97LT//OSU//zjk//84pL//OGO//zg
+        jP/834f//N2G//zdhv/83of//N2F//zeiP/834r//OCM//zei//73ov/+tqG//fSe//mnTf+6KU8//fS
+        e//624f//N6N//vVdv/3uT//+92E//zhkf/84ZL//e/I///////+8NH//Oah//zik//84pP//OOT//zj
+        k//84ZH//OGQ//zgjv/84I3//OCM//zfjf/8343//N+N//zgjv/8347//OCO//zejf/624f/99V+/+Wb
+        MP/noDj/99J7//rbiP/83o7/+9V3//e5P//83Yj//OGR//zhkf/978T/++Op//jIWP/834r//OOT//zj
+        k//845P//OOT//zjkv/84pL//OGQ//zhkP/84ZD//OGQ//zgj//84I///OGP//zgj//84JD//N6O//rb
+        iP/31X//5p0z/+ijOf/30nv/+tyI//zfjv/70nD/97xC//vVd//84ZH//OGS//zhkv/60Wz/975B//vV
+        dP/84pP//OKU//zilP/84pT//OKU//zik//84pL//OKS//zhkf/84ZH//OGR//zhkP/84ZH//OGR//zg
+        j//8347/+tyI//fVf//mnjP/5Zsx//bPdv/524f/+96M//vYff/3ukD/+Mlc//zgkP/84JD//OGR//vX
+        eP/3v0f/+Mti//zhk//84pX//OKU//zilP/84pb//OKZ//zjmf/84pb//OGR//zhkf/84JD//OCQ//zg
+        kP/84I///N+O//vejP/524f/99R8/+SaMP/hkij+9Mhq//nZhf/63ov/+9uH//jBTf/4v0z//OCQ//zg
+        kP/84ZX//OSi//nLaP/4wVD/+9yI//zimf/84pj//OKY//zim//85J///OWj//zlpP/84pr//OCQ//zg
+        kP/84JD//N+P//zfjv/73o3/+t6L//nZhf/20Hn/5Jsz/uGWLu/xvFj/+diD//rciv/73or/+Mtj//a+
+        S//83o3//N6O//zmpv/857L/+tF7//nFYf/4x2L//OGd//zjof/85KP//OSm//zmq//857L//Omy//zn
+        q//84ZX//N6O//zejf/73o3/+96N//vei//63Ir/+diD//LCYv/imjby5qI7wOmeMf/30nn/+tqH//vc
+        iv/5zWj/9rpE//vch//74Zn//Om3//zswf/868D/+tWH//rOdP/62pL//Om0//zptf/86rf//Ou9//zs
+        wv/87MP//Ou9//zkp//73oz/+96M//vejP/73ov/+9yK//rah//41X//7KlD/+aiO8DTsXFg4Igc//XL
+        b//52IT/+tuH//nMav/1szn/+tV4//zjo//87cX//PDR//3y1f/857f/+9ya//valf/96r7//e/N//3w
+        z//98dL//fLV//3x1P/878v//Oey//vei//73ov/+9yK//vciv/624f/+diE//bRd//mnTP/569MP7e4
+        uTDhlC7w8blW//jVf//62Yb/+cpm//WwM//5y2f//OKi//zvzP/99N3//fbj//314v/868L//Om8//zq
+        vv/989v//fbj//325P/99uP//fXg//zx1P/857X/+9yK//vciv/73Ij/+9uH//rZhv/41X//77ZR/+KW
+        M/K0trUmpqenHeGsWITiiRz/9c1y//nXgf/50HT/9bA5//a5Rv/72Yf//O7J//314f/++ez//vrv//73
+        5v/+9N3//vTc//703//++ez//vrv//757f/99+b//fDV//zjqP/724f/+9uH//vahv/62Yb/+deB//XO
+        dP/nmy//6qpEcAAAAAClpaQMpKaoHOGSK+/urUb/+NN7//rVff/2uUn/9a42//rRdv/857X//fTb//75
+        7P/+/PT//vz3//778v/++vD//vrv//767f/++u3//vnt//324v/87MX/+9qG//vbhv/72Yb/+9mG//nX
+        gf/40nr/77RP/+GSK+8AAAAAAAAAAKWmphKlp6gT6q1GPOCKIf7yvFv/+NN7//fCW//1qC//97pM//vZ
+        hf/87MP//fXh//767//+/Pb//v34///78///+/L//vrw//714f/97cr/++e5//vemP/72YX/+9mF//vY
+        hP/614H/+NN7//PAYv/hjiT+6q1GPAAAAAAAAAAApaWmBqWlpwqkpKYM6aY/h+GIHv/zwmP/9sdq//Kk
+        L//0rTn/+9R7//vYg//86b7//fPc//746v/++u///vru//703f/98NL//Oe7//rWkf/2tUb/9akx//e4
+        S//5z3H/+dJ7//fQd//zxWb/448m/+CrVoWvsrcWAAAAAAAAAACmpqYOpaWnAQAAAACjoqEM5qM+n9+E
+        HP/rnjH/7Zko//GfKP/3vln/+teA//vXgP/83p7//Om///zuz//98NX//evF//rUj//4wGD/9acu//Wp
+        MP/0qC//86Qs//GfKf/tmCX/6pot/9+EG//npT+fp6irKqKkpgsAAAAAAAAAAKqqqhOmpaQLqqmnHaen
+        phOjpKQH4rBfbt+CG/7liBv/6pMg//CkMv/4zG//+tV8//rVfv/61X7/+9V///vVf//71X//+cBb//Oi
+        Kv/zoir/86Ep//GeKP/umib/6pQh/+WJHP/fghz+6KlFWrCvryysrKsgAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAKSmqAGkpqgO5KlLQuCMJu/gfxf/5Ykb/+6lO//3y27/+dB2//nRef/50Xn/+dJ5//nS
+        ef/50Xn/+Mpu//KoOf/uliP/6pAg/+aMHv/ggBf/4Iwm7+KpT0Spp6UBqaelDqmnpQoAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOmlPXDgiybv330X/+6tSP/0xWb/9cdo//bJ
+        bP/3y2//98tv//bJbf/1yWv/8bdT/+WHHf/ffBb/4Iwm7+mlPXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADqpj8855s0r+GN
+        KvHkkjD86qE6/+ymQf/rpUD/66Q//+yrT/3kmTnz55s0r+WoRkEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA8AAAw/AAACcAAAAPAAAAAQAAAAkAAAAHAAAAAwAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAwAA
+        AAMAAAADIAAAAwAAAAfwAAAH/wAA///AA/8oAAAAEAAAACAAAAABACAAAAAAAEAEAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADArZIOtri4Nte1hLHJj0D/0JlJ/+28Yf/1xmb/88Jn/vTMhOrz376O2rd5D8Wu
+        hQnFsIoLAAAAAMmPQL7Jj0C+yY9AvtGbTuncr23/zppS/8mPQP/LkkP/5bNb//nDWv/3uEn/8bFG/+y3
+        Y923rJowybOKDNS2fQLJj0D4yY9A/8mPQP/Mlkz/7Ne7/+zYvf/TpWb/yZFD/8mPQP/YnUP/9rU9//iz
+        OP/zskL/7LBO7Ni4fC3Yu38E2rJ7+Nqxev/asXr/3LaC//Pn1f/+/fz/9OnZ/9y4hf/MlUr/yY9A/9WZ
+        Pv/5uTz/+sFT//fKaf/ruGDT276BBPv38vf79/L/+/fy//v48//+/Pv///////7+/v/69O3/5sum/96r
+        V//3vkj/+cBK//rOZ//603b/9Mpv/+q7ZmL56c32/fTc//3x1f/+9Nr//vbi//////////////34//3o
+        sf/71HD/+s5j//rOZf/71HP/+9qC//nXgf/ptFjG7rdZ+/rbiP/5yV7/+tFt//zmpv///////vnq//zn
+        pP/84Y7//N2G//zbf//824H//N2G//zeiv/624f/7rha/O+6Wv/73Ir/+cda//vfi//86Kv//Oa0//zi
+        lP/84pP//OKS//zhkP/84I7//N+O//zgjv/8347/+9yK/+64WP/ut1b/+t2K//nIW//6133//OCR//jJ
+        W//62H///OKU//zilP/84pX//OGS//zgkP/84JD//OCP//rdiv/uuFf/6atG+vnah//50XD/+c5t//zh
+        lv/62Y3/+cpm//zim//845///OWn//zlpv/835D/+96O//vejP/52of/67FR++CePsf303z/+dR4//jH
+        X//75q7//O7J//rZk//74ab//OzC//zuyf/87cf/++Gc//vdi//63In/+NaA/+elP7/Hp3lw8LlY//nS
+        eP/2uUb/++av//324//99N7//e7M//314v/99+j//PPb//vgm//724f/+tmF//C9XP/cr2hipKamE+ad
+        Nsr3zXP/9bRC//rSf//989r//vv0//778//++u///fXh//vpvv/72YX/+tiE//fPdv/moDnKAAAAAMSt
+        hQfFqXsn5pw25/CoPP/1t03/+9uQ//zsyP/99OD//OjA//jJdv/1qzX/9bJE//G1Uf/nnznntqqXNAAA
+        AADDrIQHxq6HDNWzeiHijynL548h//XEZf/50nr/+tN8//nOc//0rT7/75kl/+eOH//hkCvMzLCDJcuz
+        iQoAAAAAAAAAAAAAAAAAAAAAAAAAAOiuWlfnmjS666pK+vC2Vf/wt1b/7bFR++SRK7vqrldXAAAAAAAA
+        AAAAAAAAAAAAAMABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+        AAAAAQAAAAEAAPAPAAA=
+</value>
   </data>
   <data name="$this.ShowHelp" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2036,6 +3784,12 @@
     <value>barButtonItem479</value>
   </data>
   <data name="&gt;&gt;barButtonItem479.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem492.Name" xml:space="preserve">
+    <value>barButtonItem492</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem492.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barButtonItem379.Name" xml:space="preserve">
@@ -4090,29 +5844,14 @@
   <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barButtonItem492.Name" xml:space="preserve">
-    <value>barButtonItem492</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem492.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="barSubItem3.Caption" xml:space="preserve">
-    <value>单据录入</value>
-  </data>
-  <data name="barSubItem4.Caption" xml:space="preserve">
-    <value>查询</value>
-  </data>
   <data name="barSubItem5.Caption" xml:space="preserve">
     <value>分析</value>
-  </data>
-  <data name="barSubItem6.Caption" xml:space="preserve">
-    <value>工具</value>
   </data>
   <data name="barSubItem7.Caption" xml:space="preserve">
     <value>帮助</value>
@@ -4120,20 +5859,8 @@
   <data name="barSubItem8.Caption" xml:space="preserve">
     <value>基本设置(&amp;B)</value>
   </data>
-  <data name="barButtonItem2.Caption" xml:space="preserve">
-    <value>货品类别(&amp;C)...</value>
-  </data>
-  <data name="barButtonItem3.Caption" xml:space="preserve">
-    <value>货品(&amp;P)...</value>
-  </data>
   <data name="barButtonItem4.Caption" xml:space="preserve">
     <value>库房设置(&amp;D)...</value>
-  </data>
-  <data name="barButtonItem5.Caption" xml:space="preserve">
-    <value>客户基本资料(&amp;C)...</value>
-  </data>
-  <data name="barButtonItem6.Caption" xml:space="preserve">
-    <value>员工信息</value>
   </data>
   <data name="barButtonItem7.Caption" xml:space="preserve">
     <value>期初</value>
@@ -4141,26 +5868,11 @@
   <data name="barSubItem9.Caption" xml:space="preserve">
     <value>期初(&amp;I)</value>
   </data>
-  <data name="barButtonItem8.Caption" xml:space="preserve">
-    <value>库存期初状况(&amp;S)...</value>
-  </data>
-  <data name="barButtonItem9.Caption" xml:space="preserve">
-    <value>应付(&amp;P)...</value>
-  </data>
-  <data name="barButtonItem10.Caption" xml:space="preserve">
-    <value>资金账户余额(&amp;F)...</value>
-  </data>
-  <data name="barButtonItem11.Caption" xml:space="preserve">
-    <value>库存量限制(&amp;L)...</value>
-  </data>
   <data name="barButtonItem12.Caption" xml:space="preserve">
     <value>单位信息</value>
   </data>
   <data name="barButtonItem13.Caption" xml:space="preserve">
     <value>单据编号规则</value>
-  </data>
-  <data name="barButtonItem14.Caption" xml:space="preserve">
-    <value>编号规则</value>
   </data>
   <data name="barButtonItem1.Caption" xml:space="preserve">
     <value>进货单</value>
@@ -4168,71 +5880,14 @@
   <data name="barButtonItem15.Caption" xml:space="preserve">
     <value>采购退货单</value>
   </data>
-  <data name="barButtonItem16.Caption" xml:space="preserve">
-    <value>出货单</value>
-  </data>
-  <data name="barButtonItem17.Caption" xml:space="preserve">
-    <value>客户退货单</value>
-  </data>
-  <data name="barButtonItem18.Caption" xml:space="preserve">
-    <value>货品组装单</value>
-  </data>
-  <data name="barButtonItem19.Caption" xml:space="preserve">
-    <value>赠送单</value>
-  </data>
-  <data name="barButtonItem20.Caption" xml:space="preserve">
-    <value>获赠单</value>
-  </data>
-  <data name="barButtonItem21.Caption" xml:space="preserve">
-    <value>报损单</value>
-  </data>
-  <data name="barButtonItem22.Caption" xml:space="preserve">
-    <value>报溢单</value>
-  </data>
   <data name="barButtonItem23.Caption" xml:space="preserve">
     <value>付款单</value>
   </data>
   <data name="barButtonItem24.Caption" xml:space="preserve">
     <value>收款单</value>
   </data>
-  <data name="barButtonItem25.Caption" xml:space="preserve">
-    <value>资金流转单</value>
-  </data>
-  <data name="barButtonItem26.Caption" xml:space="preserve">
-    <value>其他收入单</value>
-  </data>
-  <data name="barButtonItem27.Caption" xml:space="preserve">
-    <value>其他支出单</value>
-  </data>
-  <data name="barButtonItem28.Caption" xml:space="preserve">
-    <value>库存调拨</value>
-  </data>
-  <data name="barButtonItem29.Caption" xml:space="preserve">
-    <value>关于(&amp;A)...</value>
-  </data>
-  <data name="barSubItem10.Caption" xml:space="preserve">
-    <value>单据一览</value>
-  </data>
-  <data name="barButtonItem32.Caption" xml:space="preserve">
-    <value>出货单一览</value>
-  </data>
-  <data name="barButtonItemCalculator.Caption" xml:space="preserve">
-    <value>计算器</value>
-  </data>
   <data name="barButtonItem34.Caption" xml:space="preserve">
     <value>日历</value>
-  </data>
-  <data name="barButtonItem35.Caption" xml:space="preserve">
-    <value>交易明细</value>
-  </data>
-  <data name="barButtonItem36.Caption" xml:space="preserve">
-    <value>库存状况</value>
-  </data>
-  <data name="barButtonItem38.Caption" xml:space="preserve">
-    <value>应收应付</value>
-  </data>
-  <data name="barButtonItem39.Caption" xml:space="preserve">
-    <value>资金账户(&amp;A)...</value>
   </data>
   <data name="barSubItem11.Caption" xml:space="preserve">
     <value>网上商城</value>
@@ -4252,68 +5907,20 @@
   <data name="barSubItem12.Caption" xml:space="preserve">
     <value>订单录入</value>
   </data>
-  <data name="barButtonItem44.Caption" xml:space="preserve">
-    <value>客户订单</value>
-  </data>
-  <data name="barButtonItem45.Caption" xml:space="preserve">
-    <value>采购订单</value>
-  </data>
   <data name="barSubItem13.Caption" xml:space="preserve">
     <value>报价单</value>
-  </data>
-  <data name="barButtonItem46.Caption" xml:space="preserve">
-    <value>采购报价单</value>
-  </data>
-  <data name="barButtonItem47.Caption" xml:space="preserve">
-    <value>客户询价单</value>
-  </data>
-  <data name="barButtonItem48.Caption" xml:space="preserve">
-    <value>收入类别</value>
-  </data>
-  <data name="barButtonItem49.Caption" xml:space="preserve">
-    <value>支出类别</value>
   </data>
   <data name="barButtonItem50.Caption" xml:space="preserve">
     <value>客户类别</value>
   </data>
-  <data name="barButtonItem51.Caption" xml:space="preserve">
-    <value>支付方式</value>
-  </data>
   <data name="barButtonItem52.Caption" xml:space="preserve">
     <value>获利率</value>
-  </data>
-  <data name="barButtonItem53.Caption" xml:space="preserve">
-    <value>超期应付</value>
-  </data>
-  <data name="barButtonItem54.Caption" xml:space="preserve">
-    <value>出货列表</value>
-  </data>
-  <data name="barButtonItem55.Caption" xml:space="preserve">
-    <value>客户退货列表</value>
-  </data>
-  <data name="barButtonItem56.Caption" xml:space="preserve">
-    <value>进货列表</value>
-  </data>
-  <data name="barButtonItem57.Caption" xml:space="preserve">
-    <value>采购退货列表</value>
-  </data>
-  <data name="barButtonItem58.Caption" xml:space="preserve">
-    <value>赠送列表</value>
   </data>
   <data name="barSubItem14.Caption" xml:space="preserve">
     <value>测试</value>
   </data>
   <data name="barButtonItem59.Caption" xml:space="preserve">
     <value>aaaa</value>
-  </data>
-  <data name="barButtonItem60.Caption" xml:space="preserve">
-    <value>获赠列表</value>
-  </data>
-  <data name="barButtonItem61.Caption" xml:space="preserve">
-    <value>帳户余额</value>
-  </data>
-  <data name="barButtonItem62.Caption" xml:space="preserve">
-    <value>采购订货列表</value>
   </data>
   <data name="barButtonItem63.Caption" xml:space="preserve">
     <value>账户余额</value>
@@ -4324,62 +5931,11 @@
   <data name="barButtonItem65.Caption" xml:space="preserve">
     <value>超期应收款</value>
   </data>
-  <data name="barButtonItem66.Caption" xml:space="preserve">
-    <value>库存量</value>
-  </data>
   <data name="barButtonItem67.Caption" xml:space="preserve">
     <value>系统 </value>
   </data>
-  <data name="barSubItem15.Caption" xml:space="preserve">
-    <value>权限设定</value>
-  </data>
-  <data name="barButtonItem69.Caption" xml:space="preserve">
-    <value>角色设定</value>
-  </data>
-  <data name="barButtonItem70.Caption" xml:space="preserve">
-    <value>操作员设定</value>
-  </data>
-  <data name="barButtonItem71.Caption" xml:space="preserve">
-    <value>商品成本....</value>
-  </data>
   <data name="barButtonItem72.Caption" xml:space="preserve">
     <value>客户退货单一览</value>
-  </data>
-  <data name="barButtonItem73.Caption" xml:space="preserve">
-    <value>客户订单一览</value>
-  </data>
-  <data name="barButtonItem74.Caption" xml:space="preserve">
-    <value>客户询价单一览</value>
-  </data>
-  <data name="barButtonItem75.Caption" xml:space="preserve">
-    <value>采购报价单一览</value>
-  </data>
-  <data name="barButtonItem76.Caption" xml:space="preserve">
-    <value>采购订单一览</value>
-  </data>
-  <data name="barButtonItem77.Caption" xml:space="preserve">
-    <value>进货单</value>
-  </data>
-  <data name="barButtonItem78.Caption" xml:space="preserve">
-    <value>采购退货单</value>
-  </data>
-  <data name="barButtonItem79.Caption" xml:space="preserve">
-    <value>赠送单</value>
-  </data>
-  <data name="barButtonItem80.Caption" xml:space="preserve">
-    <value>获赠单</value>
-  </data>
-  <data name="barButtonItem81.Caption" xml:space="preserve">
-    <value>货品组装单</value>
-  </data>
-  <data name="barButtonItem82.Caption" xml:space="preserve">
-    <value>调拨单</value>
-  </data>
-  <data name="barButtonItem83.Caption" xml:space="preserve">
-    <value>报损单</value>
-  </data>
-  <data name="barButtonItem84.Caption" xml:space="preserve">
-    <value>报溢单</value>
   </data>
   <data name="barButtonItem85.Caption" xml:space="preserve">
     <value>收款单</value>
@@ -4387,188 +5943,20 @@
   <data name="barButtonItem86.Caption" xml:space="preserve">
     <value>付款单</value>
   </data>
-  <data name="barButtonItem87.Caption" xml:space="preserve">
-    <value>资金流转单</value>
-  </data>
-  <data name="barButtonItem88.Caption" xml:space="preserve">
-    <value>其他收入单</value>
-  </data>
-  <data name="barButtonItem89.Caption" xml:space="preserve">
-    <value>其他支出单</value>
-  </data>
-  <data name="barButtonItem37.Caption" xml:space="preserve">
-    <value>应请款列表</value>
-  </data>
-  <data name="barButtonItem90.Caption" xml:space="preserve">
-    <value>请款单</value>
-  </data>
-  <data name="barButtonItem91.Caption" xml:space="preserve">
-    <value>请款单</value>
-  </data>
-  <data name="barSubItem16.Caption" xml:space="preserve">
-    <value>窗口</value>
-  </data>
-  <data name="barButtonItem31.Caption" xml:space="preserve">
-    <value>层叠</value>
-  </data>
-  <data name="barButtonItem92.Caption" xml:space="preserve">
-    <value>排列</value>
-  </data>
-  <data name="barButtonItem93.Caption" xml:space="preserve">
-    <value>水平平铺</value>
-  </data>
-  <data name="barButtonItem94.Caption" xml:space="preserve">
-    <value>垂直平铺</value>
-  </data>
-  <data name="barButtonItemCloseAll.Caption" xml:space="preserve">
-    <value>关闭所有</value>
-  </data>
-  <data name="barMdiChildrenListItem1.Caption" xml:space="preserve">
-    <value>barMdiChildrenListItem1</value>
-  </data>
-  <data name="barStaticItem1.Width" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="barStaticItem2.Caption" xml:space="preserve">
-    <value>连接名称</value>
-  </data>
-  <data name="barStaticItem3.Caption" xml:space="preserve">
-    <value>员工名称</value>
-  </data>
-  <data name="barButtonItem33.Caption" xml:space="preserve">
-    <value>厂商基本资料(&amp;S)...</value>
-  </data>
   <data name="barLargeButtonItem1.Caption" xml:space="preserve">
     <value>库存</value>
-  </data>
-  <data name="barLargeButtonItem2.Caption" xml:space="preserve">
-    <value>付款单</value>
-  </data>
-  <data name="barLargeButtonItem3.Caption" xml:space="preserve">
-    <value>采购订单</value>
-  </data>
-  <data name="barLargeButtonItem4.Caption" xml:space="preserve">
-    <value>进货单</value>
-  </data>
-  <data name="barLargeButtonItem5.Caption" xml:space="preserve">
-    <value>销售订单</value>
-  </data>
-  <data name="barLargeButtonItem6.Caption" xml:space="preserve">
-    <value>出货单</value>
-  </data>
-  <data name="barLargeButtonItem7.Caption" xml:space="preserve">
-    <value>收款单</value>
   </data>
   <data name="barLargeButtonItem9.Caption" xml:space="preserve">
     <value>质量管理</value>
   </data>
-  <data name="barLargeButtonItem10.Caption" xml:space="preserve">
-    <value>库存</value>
-  </data>
   <data name="barButtonItem68.Caption" xml:space="preserve">
     <value>表單總覽</value>
-  </data>
-  <data name="barSubItem17.Caption" xml:space="preserve">
-    <value>单据总览</value>
-  </data>
-  <data name="barButtonItem95.Caption" xml:space="preserve">
-    <value>进货明细表</value>
-  </data>
-  <data name="barButtonItem96.Caption" xml:space="preserve">
-    <value>进货退货明细表</value>
-  </data>
-  <data name="barButtonItem97.Caption" xml:space="preserve">
-    <value>进货总览表</value>
-  </data>
-  <data name="barButtonItem98.Caption" xml:space="preserve">
-    <value>进货简要表</value>
-  </data>
-  <data name="barButtonItem99.Caption" xml:space="preserve">
-    <value>出货明细表</value>
-  </data>
-  <data name="barButtonItem100.Caption" xml:space="preserve">
-    <value>出货总览表</value>
-  </data>
-  <data name="barButtonItem101.Caption" xml:space="preserve">
-    <value>出货简要表</value>
-  </data>
-  <data name="barButtonItem102.Caption" xml:space="preserve">
-    <value>出货退货明细表</value>
-  </data>
-  <data name="barButtonItem103.Caption" xml:space="preserve">
-    <value>货品低于安全存量表</value>
-  </data>
-  <data name="barButtonItem104.Caption" xml:space="preserve">
-    <value>组装明细表</value>
-  </data>
-  <data name="barButtonItem105.Caption" xml:space="preserve">
-    <value>应付账款简要表</value>
-  </data>
-  <data name="barButtonItem106.Caption" xml:space="preserve">
-    <value>应收账款简要表</value>
-  </data>
-  <data name="barButtonItem107.Caption" xml:space="preserve">
-    <value>应付账款明细表</value>
-  </data>
-  <data name="barButtonItem108.Caption" xml:space="preserve">
-    <value>应收账款明细表</value>
-  </data>
-  <data name="barButtonItem109.Caption" xml:space="preserve">
-    <value>应收账款统计表</value>
-  </data>
-  <data name="barButtonItem110.Caption" xml:space="preserve">
-    <value>业务员应收明细表</value>
-  </data>
-  <data name="barButtonItem111.Caption" xml:space="preserve">
-    <value>业务员应收简要表</value>
-  </data>
-  <data name="barButtonItem112.Caption" xml:space="preserve">
-    <value>收款冲销日报表</value>
-  </data>
-  <data name="barButtonItem113.Caption" xml:space="preserve">
-    <value>付款冲销日报表</value>
-  </data>
-  <data name="barButtonItem114.Caption" xml:space="preserve">
-    <value>应收账款账龄分析表</value>
-  </data>
-  <data name="barButtonItem115.Caption" xml:space="preserve">
-    <value>应收账款邮寄标签</value>
-  </data>
-  <data name="barButtonItem116.Caption" xml:space="preserve">
-    <value>货品利润分析表</value>
-  </data>
-  <data name="barButtonItem117.Caption" xml:space="preserve">
-    <value>货品交易明细表</value>
   </data>
   <data name="barSubItem18.Caption" xml:space="preserve">
     <value>进货出货统计</value>
   </data>
-  <data name="barSubItem19.Caption" xml:space="preserve">
-    <value>应收应付统计</value>
-  </data>
-  <data name="barButtonItem118.Caption" xml:space="preserve">
-    <value>应付账款统计表</value>
-  </data>
-  <data name="barSubItem20.Caption" xml:space="preserve">
-    <value>账款冲销报表</value>
-  </data>
-  <data name="barButtonItem119.Caption" xml:space="preserve">
-    <value>厂商历次进货表</value>
-  </data>
-  <data name="barButtonItem120.Caption" xml:space="preserve">
-    <value>客户历次出货表</value>
-  </data>
   <data name="barButtonItem121.Caption" xml:space="preserve">
     <value>歷史庫存明細表</value>
-  </data>
-  <data name="barButtonItem122.Caption" xml:space="preserve">
-    <value>业务交易排行</value>
-  </data>
-  <data name="barButtonItem123.Caption" xml:space="preserve">
-    <value>货品交易排行</value>
-  </data>
-  <data name="barSubItem21.Caption" xml:space="preserve">
-    <value>排行榜</value>
   </data>
   <data name="barButtonItem124.Caption" xml:space="preserve">
     <value>职务</value>
@@ -4576,53 +5964,20 @@
   <data name="barButtonItem125.Caption" xml:space="preserve">
     <value>库存盘点</value>
   </data>
-  <data name="barButtonItem126.Caption" xml:space="preserve">
-    <value>公司基本资料</value>
-  </data>
-  <data name="barButtonItem127.Caption" xml:space="preserve">
-    <value>部门管理</value>
-  </data>
-  <data name="barSubItem22.Caption" xml:space="preserve">
-    <value>借入借出</value>
-  </data>
   <data name="barSubItem23.Caption" xml:space="preserve">
     <value>采购与销售</value>
   </data>
-  <data name="barSubItem24.Caption" xml:space="preserve">
-    <value>组装与拆分</value>
-  </data>
-  <data name="barButtonItem129.Caption" xml:space="preserve">
-    <value>货品拆分单</value>
-  </data>
-  <data name="barSubItem25.Caption" xml:space="preserve">
-    <value>其他单据</value>
+  <data name="barButtonItem191.Caption" xml:space="preserve">
+    <value>销售预测</value>
   </data>
   <data name="barSubItem26.Caption" xml:space="preserve">
     <value>帐款冲销</value>
   </data>
-  <data name="barButtonItem130.Caption" xml:space="preserve">
-    <value>产品借出单</value>
-  </data>
-  <data name="barButtonItem131.Caption" xml:space="preserve">
-    <value>产品还入单</value>
-  </data>
-  <data name="barButtonItem132.Caption" xml:space="preserve">
-    <value>供应商借入单</value>
-  </data>
-  <data name="barButtonItem133.Caption" xml:space="preserve">
-    <value>供应商借入还出单</value>
-  </data>
-  <data name="barButtonItem134.Caption" xml:space="preserve">
-    <value>客户借出单</value>
-  </data>
-  <data name="barButtonItem135.Caption" xml:space="preserve">
-    <value>客户借出还入单</value>
-  </data>
-  <data name="barLargeButtonItem8.Caption" xml:space="preserve">
-    <value>架构图</value>
-  </data>
   <data name="barSubItem27.Caption" xml:space="preserve">
     <value>采购与销售</value>
+  </data>
+  <data name="barButtonItem192.Caption" xml:space="preserve">
+    <value>销售预测</value>
   </data>
   <data name="barSubItem28.Caption" xml:space="preserve">
     <value>借入借出</value>
@@ -4645,20 +6000,8 @@
   <data name="barButtonItem142.Caption" xml:space="preserve">
     <value>借出还入单</value>
   </data>
-  <data name="barSubItem29.Caption" xml:space="preserve">
-    <value>组装与拆分</value>
-  </data>
-  <data name="barButtonItem143.Caption" xml:space="preserve">
-    <value>货品拆分单</value>
-  </data>
   <data name="barSubItem30.Caption" xml:space="preserve">
     <value>帐款冲销</value>
-  </data>
-  <data name="barSubItem31.Caption" xml:space="preserve">
-    <value>其他单据</value>
-  </data>
-  <data name="barButtonItem144.Caption" xml:space="preserve">
-    <value>应收(&amp;R)...</value>
   </data>
   <data name="barButtonItem145.Caption" xml:space="preserve">
     <value>演示</value>
@@ -4666,29 +6009,11 @@
   <data name="barButtonItem146.Caption" xml:space="preserve">
     <value>货位设定</value>
   </data>
-  <data name="barButtonItem147.Caption" xml:space="preserve">
-    <value>单位组</value>
-  </data>
-  <data name="barButtonItem148.Caption" xml:space="preserve">
-    <value>单位</value>
-  </data>
-  <data name="barButtonItem149.Caption" xml:space="preserve">
-    <value>自定义抽检规则</value>
-  </data>
-  <data name="barButtonItem150.Caption" xml:space="preserve">
-    <value>质检计划</value>
-  </data>
-  <data name="barButtonItem152.Caption" xml:space="preserve">
-    <value>基础物料</value>
-  </data>
   <data name="barButtonItem153.Caption" xml:space="preserve">
     <value>银行资料</value>
   </data>
   <data name="barButtonItem154.Caption" xml:space="preserve">
     <value>学历</value>
-  </data>
-  <data name="barSubItem33.Caption" xml:space="preserve">
-    <value>人事参数</value>
   </data>
   <data name="barButtonItem155.Caption" xml:space="preserve">
     <value>班别</value>
@@ -4699,50 +6024,11 @@
   <data name="barButtonItem157.Caption" xml:space="preserve">
     <value>barButtonItem157</value>
   </data>
-  <data name="barButtonItem159.Caption" xml:space="preserve">
-    <value>库房库存</value>
-  </data>
-  <data name="barButtonItem160.Caption" xml:space="preserve">
-    <value>产品库存</value>
-  </data>
-  <data name="barSubItem35.Caption" xml:space="preserve">
-    <value>客户厂商管理</value>
-  </data>
-  <data name="barButtonItem162.Caption" xml:space="preserve">
-    <value>物料清单整批修改</value>
-  </data>
   <data name="barSubItem36.Caption" xml:space="preserve">
     <value>库房货品设置</value>
   </data>
-  <data name="barSubItem37.Caption" xml:space="preserve">
-    <value>货品设置</value>
-  </data>
-  <data name="barButtonItem161.Caption" xml:space="preserve">
-    <value>客户产品对照资料</value>
-  </data>
-  <data name="barButtonItem163.Caption" xml:space="preserve">
-    <value>客户产品加工类型</value>
-  </data>
-  <data name="barButtonItem164.Caption" xml:space="preserve">
-    <value>客户产品加工描述</value>
-  </data>
-  <data name="barButtonItem165.Caption" xml:space="preserve">
-    <value>货运公司资料</value>
-  </data>
-  <data name="barButtonItem166.Caption" xml:space="preserve">
-    <value>客户产品包装类型</value>
-  </data>
   <data name="barButtonItem168.Caption" xml:space="preserve">
     <value>计价方式</value>
-  </data>
-  <data name="barSubItem46.Caption" xml:space="preserve">
-    <value>流程管理</value>
-  </data>
-  <data name="barButtonItem169.Caption" xml:space="preserve">
-    <value>定义流程</value>
-  </data>
-  <data name="barButtonItem170.Caption" xml:space="preserve">
-    <value>生产站</value>
   </data>
   <data name="barButtonItem171.Caption" xml:space="preserve">
     <value>表单管理</value>
@@ -4759,26 +6045,11 @@
   <data name="barButtonItem174.Caption" xml:space="preserve">
     <value>我所审批</value>
   </data>
-  <data name="barButtonItem175.Caption" xml:space="preserve">
-    <value>物料类型</value>
-  </data>
-  <data name="barButtonItem177.Caption" xml:space="preserve">
-    <value>产品BOM单</value>
-  </data>
-  <data name="barButtonItem178.Caption" xml:space="preserve">
-    <value>工艺管理</value>
-  </data>
   <data name="barButtonItem179.Caption" xml:space="preserve">
     <value>barButtonItem179</value>
   </data>
   <data name="barButtonItem180.Caption" xml:space="preserve">
     <value>工序管理</value>
-  </data>
-  <data name="barButtonItem181.Caption" xml:space="preserve">
-    <value>工艺明细</value>
-  </data>
-  <data name="barButtonItem182.Caption" xml:space="preserve">
-    <value>物料加工工序</value>
   </data>
   <data name="barButtonItem183.Caption" xml:space="preserve">
     <value>工作中心</value>
@@ -4786,80 +6057,26 @@
   <data name="barButtonItem184.Caption" xml:space="preserve">
     <value>barButtonItem184</value>
   </data>
-  <data name="barButtonItem185.Caption" xml:space="preserve">
-    <value>生产站日志</value>
-  </data>
-  <data name="barButtonItem186.Caption" xml:space="preserve">
-    <value>产品BOM单列表</value>
-  </data>
   <data name="barButtonItem187.Caption" xml:space="preserve">
     <value>采购管理</value>
   </data>
   <data name="barButtonItem188.Caption" xml:space="preserve">
     <value>barButtonItem188</value>
   </data>
-  <data name="barButtonItem190.Caption" xml:space="preserve">
-    <value>帮助</value>
-  </data>
-  <data name="barButtonItem189.Caption" xml:space="preserve">
-    <value>生产计划</value>
-  </data>
-  <data name="barButtonItem191.Caption" xml:space="preserve">
-    <value>销售预测</value>
-  </data>
-  <data name="barButtonItem192.Caption" xml:space="preserve">
-    <value>销售预测</value>
-  </data>
   <data name="barButtonItem193.Caption" xml:space="preserve">
     <value>产生生产计划</value>
-  </data>
-  <data name="barButtonItem194.Caption" xml:space="preserve">
-    <value>工序管理</value>
-  </data>
-  <data name="barButtonItem195.Caption" xml:space="preserve">
-    <value>物料需求计划</value>
-  </data>
-  <data name="barButtonItem196.Caption" xml:space="preserve">
-    <value>生产加工</value>
   </data>
   <data name="barButtonItem197.Caption" xml:space="preserve">
     <value>加工领料</value>
   </data>
-  <data name="barButtonItem198.Caption" xml:space="preserve">
-    <value>物料需求计划明细</value>
-  </data>
-  <data name="barButtonItem199.Caption" xml:space="preserve">
-    <value>委外合同</value>
-  </data>
-  <data name="barButtonItem200.Caption" xml:space="preserve">
-    <value>委外发料</value>
-  </data>
   <data name="barButtonItem201.Caption" xml:space="preserve">
     <value>生产物流</value>
-  </data>
-  <data name="barButtonItem202.Caption" xml:space="preserve">
-    <value>委外退库</value>
-  </data>
-  <data name="barButtonItem203.Caption" xml:space="preserve">
-    <value>委外入库</value>
-  </data>
-  <data name="barButtonItem204.Caption" xml:space="preserve">
-    <value>生产入库</value>
-  </data>
-  <data name="barButtonItem205.Caption" xml:space="preserve">
-    <value>生产退料</value>
   </data>
   <data name="barSubItem57.Caption" xml:space="preserve">
     <value>质量管理</value>
   </data>
-  <data name="barSubItem58.Caption" xml:space="preserve">
-    <value>财务管理</value>
-  </data>
   <data name="barSubItem63.Caption" xml:space="preserve">
     <value>质检方案管理</value>
-  </data>
-  <data name="barButtonItem206.Caption" xml:space="preserve">
-    <value>barButtonItem206</value>
   </data>
   <data name="barSubItem64.Caption" xml:space="preserve">
     <value>质检报告管理</value>
@@ -4867,53 +6084,23 @@
   <data name="barSubItem65.Caption" xml:space="preserve">
     <value>质检分析管理</value>
   </data>
+  <data name="barSubItem58.Caption" xml:space="preserve">
+    <value>财务管理</value>
+  </data>
+  <data name="barButtonItem206.Caption" xml:space="preserve">
+    <value>barButtonItem206</value>
+  </data>
   <data name="barSubItem66.Caption" xml:space="preserve">
     <value>质量</value>
-  </data>
-  <data name="barSubItem67.Caption" xml:space="preserve">
-    <value>考勤管理</value>
-  </data>
-  <data name="barSubItem68.Caption" xml:space="preserve">
-    <value>薪资管理</value>
   </data>
   <data name="barSubItem69.Caption" xml:space="preserve">
     <value>薪资报告分析</value>
   </data>
-  <data name="barButtonItem207.Caption" xml:space="preserve">
-    <value>客户产品包装内容</value>
-  </data>
-  <data name="barButtonItem208.Caption" xml:space="preserve">
-    <value>临时卡</value>
-  </data>
-  <data name="barButtonItem211.Caption" xml:space="preserve">
-    <value>弹性排班</value>
-  </data>
-  <data name="barButtonItem212.Caption" xml:space="preserve">
-    <value>餐费管理</value>
-  </data>
-  <data name="barButtonItem214.Caption" xml:space="preserve">
-    <value>打卡记录</value>
-  </data>
   <data name="barButtonItem215.Caption" xml:space="preserve">
     <value>年假管理</value>
   </data>
-  <data name="barButtonItem217.Caption" xml:space="preserve">
-    <value>薪资设定</value>
-  </data>
-  <data name="barButtonItem218.Caption" xml:space="preserve">
-    <value>薪资计算</value>
-  </data>
   <data name="barButtonItem219.Caption" xml:space="preserve">
     <value>薪资历史</value>
-  </data>
-  <data name="barButtonItem220.Caption" xml:space="preserve">
-    <value>借支管理</value>
-  </data>
-  <data name="barButtonItem221.Caption" xml:space="preserve">
-    <value>生产计划明细</value>
-  </data>
-  <data name="barButtonItem222.Caption" xml:space="preserve">
-    <value>加班管理</value>
   </data>
   <data name="barButtonItem223.Caption" xml:space="preserve">
     <value>初始化</value>
@@ -4924,485 +6111,20 @@
   <data name="barButtonItem224.Caption" xml:space="preserve">
     <value>排班初始化</value>
   </data>
-  <data name="barButtonItem225.Caption" xml:space="preserve">
-    <value>生产加工明细表</value>
-  </data>
-  <data name="barButtonItem226.Caption" xml:space="preserve">
-    <value>加工领料明细表</value>
-  </data>
-  <data name="barButtonItem227.Caption" xml:space="preserve">
-    <value>生产退料明细表</value>
-  </data>
-  <data name="barButtonItem228.Caption" xml:space="preserve">
-    <value>参数管理</value>
-  </data>
-  <data name="barButtonItem229.Caption" xml:space="preserve">
-    <value>出勤记录</value>
-  </data>
-  <data name="barButtonItem230.Caption" xml:space="preserve">
-    <value>生产入库明细表</value>
-  </data>
-  <data name="barButtonItem231.Caption" xml:space="preserve">
-    <value>委外加工单</value>
-  </data>
-  <data name="barButtonItem232.Caption" xml:space="preserve">
-    <value>委外出库明细表</value>
-  </data>
-  <data name="barButtonItem233.Caption" xml:space="preserve">
-    <value>外包退料明细表</value>
-  </data>
-  <data name="barButtonItem234.Caption" xml:space="preserve">
-    <value>委外入库明细表</value>
-  </data>
-  <data name="barButtonItem235.Caption" xml:space="preserve">
-    <value>异常出勤记录</value>
-  </data>
-  <data name="barSubItem71.Caption" xml:space="preserve">
-    <value>休假管理</value>
-  </data>
-  <data name="barButtonItem236.Caption" xml:space="preserve">
-    <value>年度休假</value>
-  </data>
-  <data name="barButtonItem237.Caption" xml:space="preserve">
-    <value>休假类别</value>
-  </data>
-  <data name="barButtonItem238.Caption" xml:space="preserve">
-    <value>列印月薪资</value>
-  </data>
   <data name="barButtonItem239.Caption" xml:space="preserve">
     <value>Test</value>
   </data>
   <data name="barButtonItem240.Caption" xml:space="preserve">
     <value>休假管理</value>
   </data>
-  <data name="barButtonItem241.Caption" xml:space="preserve">
-    <value>员工休假</value>
-  </data>
-  <data name="barButtonItem242.Caption" xml:space="preserve">
-    <value>区段弹性排班</value>
-  </data>
-  <data name="barButtonItem216.Caption" xml:space="preserve">
-    <value>库存盘点录入</value>
-  </data>
-  <data name="barButtonItem243.Caption" xml:space="preserve">
-    <value>客户产品加工内容</value>
-  </data>
-  <data name="barButtonItem244.Caption" xml:space="preserve">
-    <value>库存盘点明细</value>
-  </data>
-  <data name="barButtonItem245.Caption" xml:space="preserve">
-    <value>货运方式</value>
-  </data>
-  <data name="barButtonItem246.Caption" xml:space="preserve">
-    <value>库房货位设置</value>
-  </data>
-  <data name="barButtonItem247.Caption" xml:space="preserve">
-    <value>供应商分类</value>
-  </data>
-  <data name="barButtonItem248.Caption" xml:space="preserve">
-    <value>公司设置</value>
-  </data>
-  <data name="barButtonItem249.Caption" xml:space="preserve">
-    <value>生产机器设备</value>
-  </data>
-  <data name="barButtonItem250.Caption" xml:space="preserve">
-    <value>生产工序能力</value>
-  </data>
-  <data name="barButtonItem251.Caption" xml:space="preserve">
-    <value>生产进度计划</value>
-  </data>
-  <data name="barButtonItem252.Caption" xml:space="preserve">
-    <value>成品材质</value>
-  </data>
-  <data name="barButtonItem253.Caption" xml:space="preserve">
-    <value>材质设置</value>
-  </data>
-  <data name="barSubItem72.Caption" xml:space="preserve">
-    <value>模具管理</value>
-  </data>
-  <data name="barButtonItem254.Caption" xml:space="preserve">
-    <value>产品模具</value>
-  </data>
-  <data name="barButtonItem255.Caption" xml:space="preserve">
-    <value>模具试模</value>
-  </data>
-  <data name="barButtonItem256.Caption" xml:space="preserve">
-    <value>客户产品基本资料</value>
-  </data>
-  <data name="barButtonItem257.Caption" xml:space="preserve">
-    <value>公司基本资料</value>
-  </data>
-  <data name="barButtonItem258.Caption" xml:space="preserve">
-    <value>库存盘点校正</value>
-  </data>
-  <data name="barButtonItem259.Caption" xml:space="preserve">
-    <value>出仓单</value>
-  </data>
-  <data name="barButtonItem260.Caption" xml:space="preserve">
-    <value>库存盘点差异表详细</value>
-  </data>
-  <data name="barButtonItem261.Caption" xml:space="preserve">
-    <value>生产领料</value>
-  </data>
-  <data name="barButtonItem262.Caption" xml:space="preserve">
-    <value>进仓单</value>
-  </data>
-  <data name="barButtonItem263.Caption" xml:space="preserve">
-    <value>盘点录入</value>
-  </data>
-  <data name="barButtonItem264.Caption" xml:space="preserve">
-    <value>会计科目总类</value>
-  </data>
-  <data name="barButtonItem265.Caption" xml:space="preserve">
-    <value>科目类别设定</value>
-  </data>
-  <data name="barButtonItem266.Caption" xml:space="preserve">
-    <value>会计科目设定</value>
-  </data>
-  <data name="barButtonItem267.Caption" xml:space="preserve">
-    <value>发票资料设定</value>
-  </data>
-  <data name="barButtonItem268.Caption" xml:space="preserve">
-    <value>专案资料设定</value>
-  </data>
-  <data name="barSubItem45.Caption" xml:space="preserve">
-    <value>财产管理</value>
-  </data>
   <data name="barButtonItem269.Caption" xml:space="preserve">
     <value>财产基本资料</value>
-  </data>
-  <data name="barButtonItem270.Caption" xml:space="preserve">
-    <value>财产基本资料</value>
-  </data>
-  <data name="barButtonItem271.Caption" xml:space="preserve">
-    <value>折旧明细维护</value>
-  </data>
-  <data name="barButtonItem272.Caption" xml:space="preserve">
-    <value>银行资料</value>
-  </data>
-  <data name="barButtonItem273.Caption" xml:space="preserve">
-    <value>开户往来银行</value>
-  </data>
-  <data name="barSubItem73.Caption" xml:space="preserve">
-    <value>银行票据</value>
-  </data>
-  <data name="barButtonItem274.Caption" xml:space="preserve">
-    <value>应收票据作业</value>
-  </data>
-  <data name="barButtonItem275.Caption" xml:space="preserve">
-    <value>应收/付票据作业</value>
-  </data>
-  <data name="barButtonItem276.Caption" xml:space="preserve">
-    <value>银行存提款作业</value>
-  </data>
-  <data name="barButtonItem277.Caption" xml:space="preserve">
-    <value>银行转账作业</value>
-  </data>
-  <data name="barButtonItem278.Caption" xml:space="preserve">
-    <value>期初余额设定</value>
-  </data>
-  <data name="barButtonItem279.Caption" xml:space="preserve">
-    <value>币别汇率</value>
-  </data>
-  <data name="barButtonItem280.Caption" xml:space="preserve">
-    <value>会计传票</value>
-  </data>
-  <data name="barButtonItem281.Caption" xml:space="preserve">
-    <value>应收票据整批托收</value>
-  </data>
-  <data name="barButtonItem282.Caption" xml:space="preserve">
-    <value>应收票据整批票贴</value>
-  </data>
-  <data name="barButtonItem283.Caption" xml:space="preserve">
-    <value>应收票据整批兑现</value>
-  </data>
-  <data name="barButtonItem284.Caption" xml:space="preserve">
-    <value>应付票据整批兑现</value>
-  </data>
-  <data name="barSubItem74.Caption" xml:space="preserve">
-    <value>会计作业</value>
-  </data>
-  <data name="barButtonItem285.Caption" xml:space="preserve">
-    <value>日记账</value>
-  </data>
-  <data name="barSubItem75.Caption" xml:space="preserve">
-    <value>应收票据明细表</value>
-  </data>
-  <data name="barButtonItem286.Caption" xml:space="preserve">
-    <value>收票日别</value>
-  </data>
-  <data name="barButtonItem287.Caption" xml:space="preserve">
-    <value>托收银行别</value>
-  </data>
-  <data name="barSubItem76.Caption" xml:space="preserve">
-    <value>应付票据明细表</value>
-  </data>
-  <data name="barButtonItem288.Caption" xml:space="preserve">
-    <value>开票日别</value>
-  </data>
-  <data name="barButtonItem289.Caption" xml:space="preserve">
-    <value>开票银行别</value>
-  </data>
-  <data name="barButtonItem290.Caption" xml:space="preserve">
-    <value>银行存提款对账单</value>
-  </data>
-  <data name="barButtonItem291.Caption" xml:space="preserve">
-    <value>未兑换应收票据</value>
-  </data>
-  <data name="未兑现应付票据.Caption" xml:space="preserve">
-    <value>未兑换应付票据</value>
-  </data>
-  <data name="barButtonItem292.Caption" xml:space="preserve">
-    <value>科目别财产表</value>
-  </data>
-  <data name="barButtonItem293.Caption" xml:space="preserve">
-    <value>日期别财产表</value>
-  </data>
-  <data name="barButtonItem294.Caption" xml:space="preserve">
-    <value>财产别折舊表</value>
-  </data>
-  <data name="barButtonItem295.Caption" xml:space="preserve">
-    <value>日记账</value>
-  </data>
-  <data name="barButtonItem296.Caption" xml:space="preserve">
-    <value>总分类帐</value>
-  </data>
-  <data name="barButtonItem297.Caption" xml:space="preserve">
-    <value>试算表</value>
-  </data>
-  <data name="barButtonItem298.Caption" xml:space="preserve">
-    <value>期间试算表</value>
-  </data>
-  <data name="barButtonItem299.Caption" xml:space="preserve">
-    <value>损益</value>
-  </data>
-  <data name="barButtonItem300.Caption" xml:space="preserve">
-    <value>损益表</value>
-  </data>
-  <data name="barButtonItem301.Caption" xml:space="preserve">
-    <value>资产负债</value>
-  </data>
-  <data name="barButtonItem302.Caption" xml:space="preserve">
-    <value>资产负债表</value>
-  </data>
-  <data name="barButtonItem303.Caption" xml:space="preserve">
-    <value>工序委外价格</value>
-  </data>
-  <data name="barButtonItem304.Caption" xml:space="preserve">
-    <value>移转单</value>
-  </data>
-  <data name="barButtonItem305.Caption" xml:space="preserve">
-    <value>生产车间数量</value>
-  </data>
-  <data name="barSubItem77.Caption" xml:space="preserve">
-    <value>车间管理</value>
-  </data>
-  <data name="barSubItem78.Caption" xml:space="preserve">
-    <value>明细查询</value>
-  </data>
-  <data name="barButtonItem306.Caption" xml:space="preserve">
-    <value>货品一览</value>
-  </data>
-  <data name="barButtonItem307.Caption" xml:space="preserve">
-    <value>权限设置</value>
-  </data>
-  <data name="barButtonItem308.Caption" xml:space="preserve">
-    <value>生产车间数量列表</value>
-  </data>
-  <data name="barButtonItem309.Caption" xml:space="preserve">
-    <value>货币种类</value>
-  </data>
-  <data name="barButtonItem310.Caption" xml:space="preserve">
-    <value>其他应付款</value>
-  </data>
-  <data name="barButtonItem311.Caption" xml:space="preserve">
-    <value>其他应收款详细</value>
-  </data>
-  <data name="barButtonItem312.Caption" xml:space="preserve">
-    <value>期初应付账款表</value>
-  </data>
-  <data name="barButtonItem313.Caption" xml:space="preserve">
-    <value>期初应收账款表</value>
-  </data>
-  <data name="barSubItem79.Caption" xml:space="preserve">
-    <value>应收应付结算</value>
-  </data>
-  <data name="barButtonItem314.Caption" xml:space="preserve">
-    <value>应付结算</value>
-  </data>
-  <data name="barButtonItem315.Caption" xml:space="preserve">
-    <value>应收结算</value>
-  </data>
-  <data name="barButtonItem316.Caption" xml:space="preserve">
-    <value>采购发票</value>
-  </data>
-  <data name="barButtonItem317.Caption" xml:space="preserve">
-    <value>生产车间</value>
-  </data>
-  <data name="barButtonItem318.Caption" xml:space="preserve">
-    <value>邮件发送</value>
-  </data>
-  <data name="barButtonItem319.Caption" xml:space="preserve">
-    <value>生产日统计</value>
-  </data>
-  <data name="barButtonItem320.Caption" xml:space="preserve">
-    <value>生产车间质检</value>
-  </data>
-  <data name="barButtonItem321.Caption" xml:space="preserve">
-    <value>生产车间质检列表</value>
-  </data>
-  <data name="barButtonItem322.Caption" xml:space="preserve">
-    <value>生产车间数量明细</value>
-  </data>
-  <data name="barButtonItem323.Caption" xml:space="preserve">
-    <value>生产车间质检明显</value>
-  </data>
-  <data name="barButtonItem324.Caption" xml:space="preserve">
-    <value>委外退料</value>
-  </data>
-  <data name="barLargeButtonItem11.Caption" xml:space="preserve">
-    <value>库存期初</value>
-  </data>
-  <data name="barLargeButtonItem12.Caption" xml:space="preserve">
-    <value>BOM</value>
-  </data>
-  <data name="barButtonItem325.Caption" xml:space="preserve">
-    <value>銷售發票</value>
-  </data>
-  <data name="barButtonItemPronoteHeader1.Caption" xml:space="preserve">
-    <value>加工指示</value>
-  </data>
-  <data name="barButtonItem326.Caption" xml:space="preserve">
-    <value>重新考勤</value>
-  </data>
-  <data name="barButtonItem327.Caption" xml:space="preserve">
-    <value>组装加工</value>
-  </data>
-  <data name="barButtonItem337.Caption" xml:space="preserve">
-    <value>应付结算报表</value>
-  </data>
-  <data name="barButtonItem338.Caption" xml:space="preserve">
-    <value>应收结算报表</value>
-  </data>
-  <data name="barButtonItem339.Caption" xml:space="preserve">
-    <value>应收账款超期跟催表</value>
-  </data>
-  <data name="barButtonItem340.Caption" xml:space="preserve">
-    <value>应收账款明细账</value>
-  </data>
-  <data name="barButtonItem341.Caption" xml:space="preserve">
-    <value>应付账款明细账</value>
-  </data>
-  <data name="barButtonItem342.Caption" xml:space="preserve">
-    <value>销售订单明细表</value>
-  </data>
-  <data name="barButtonItem343.Caption" xml:space="preserve">
-    <value>采购订单明细表</value>
-  </data>
-  <data name="barButtonItem344.Caption" xml:space="preserve">
-    <value>客户退货单一览</value>
-  </data>
-  <data name="barButtonItem345.Caption" xml:space="preserve">
-    <value>采购进货单一览</value>
-  </data>
-  <data name="barButtonItem346.Caption" xml:space="preserve">
-    <value>采购退货单一览</value>
-  </data>
-  <data name="barButtonItem347.Caption" xml:space="preserve">
-    <value>銷售訂單明細表</value>
-  </data>
-  <data name="barButtonItem348.Caption" xml:space="preserve">
-    <value>物料需求计划明细</value>
-  </data>
-  <data name="barButtonItem349.Caption" xml:space="preserve">
-    <value>项目设置</value>
-  </data>
-  <data name="barButtonItem350.Caption" xml:space="preserve">
-    <value>销售发票明细</value>
-  </data>
-  <data name="barButtonItem351.Caption" xml:space="preserve">
-    <value>采购订单明细表</value>
-  </data>
-  <data name="barButtonItem352.Caption" xml:space="preserve">
-    <value>厂商交易排行</value>
-  </data>
-  <data name="barButtonItem353.Caption" xml:space="preserve">
-    <value>客户交易排行</value>
-  </data>
-  <data name="barButtonItem354.Caption" xml:space="preserve">
-    <value>ANSI外销报告</value>
-  </data>
-  <data name="barButtonItem358.Caption" xml:space="preserve">
-    <value>会计参数设定</value>
-  </data>
-  <data name="barButtonItem359.Caption" xml:space="preserve">
-    <value>功能设置</value>
-  </data>
-  <data name="barButtonItem360.Caption" xml:space="preserve">
-    <value>生产不良率统计表</value>
-  </data>
-  <data name="barButtonItem361.Caption" xml:space="preserve">
-    <value>商品不良率统计表</value>
-  </data>
-  <data name="barButtonItem362.Caption" xml:space="preserve">
-    <value>应付账款发票号码维护</value>
-  </data>
-  <data name="barButtonItem363.Caption" xml:space="preserve">
-    <value>客户基本资料一览表</value>
-  </data>
-  <data name="barButtonItem364.Caption" xml:space="preserve">
-    <value>供应商基本资料一览表</value>
   </data>
   <data name="barButtonItem365.Caption" xml:space="preserve">
     <value>ANSI外销报告</value>
   </data>
-  <data name="barButtonItem366.Caption" xml:space="preserve">
-    <value>目视检验</value>
-  </data>
-  <data name="barButtonItem367.Caption" xml:space="preserve">
-    <value>清晰度</value>
-  </data>
-  <data name="barButtonItem368.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="barButtonItem368.Caption" xml:space="preserve">
-    <value>棱镜度数&amp;&amp;棱镜平衡度数</value>
-  </data>
-  <data name="barButtonItem369.Caption" xml:space="preserve">
-    <value>可见光透视率</value>
-  </data>
-  <data name="barButtonItem370.Caption" xml:space="preserve">
-    <value>紫外线透视率</value>
-  </data>
-  <data name="barButtonItem371.Caption" xml:space="preserve">
-    <value>球面度数</value>
-  </data>
-  <data name="barButtonItem372.Caption" xml:space="preserve">
-    <value>散光度数</value>
-  </data>
-  <data name="barButtonItem373.Caption" xml:space="preserve">
-    <value>高速冲击测试</value>
-  </data>
-  <data name="barButtonItem374.Caption" xml:space="preserve">
-    <value>圆锥坠落撞击测试</value>
-  </data>
-  <data name="barButtonItem375.Caption" xml:space="preserve">
-    <value>镜片穿透测试</value>
-  </data>
-  <data name="barButtonItem376.Caption" xml:space="preserve">
-    <value>雾度测试</value>
-  </data>
-  <data name="barButtonItem377.Caption" xml:space="preserve">
-    <value>耐燃性测试</value>
-  </data>
   <data name="barButtonItem378.Caption" xml:space="preserve">
     <value>ANSI外销报告</value>
-  </data>
-  <data name="barButtonItem380.Caption" xml:space="preserve">
-    <value>应收账款发票号码维护</value>
-  </data>
-  <data name="barButtonItem382.Caption" xml:space="preserve">
-    <value>CSA外销报告</value>
   </data>
   <data name="barSubItem81.Caption" xml:space="preserve">
     <value>屈光/光学</value>
@@ -5422,185 +6144,8 @@
   <data name="barSubItem86.Caption" xml:space="preserve">
     <value>高速冲击测试</value>
   </data>
-  <data name="barButtonItem383.Caption" xml:space="preserve">
-    <value>屈光/光学</value>
-  </data>
-  <data name="barButtonItem384.Caption" xml:space="preserve">
-    <value>清晰度</value>
-  </data>
-  <data name="barButtonItem385.Caption" xml:space="preserve">
-    <value>偏光偏差量</value>
-  </data>
-  <data name="barButtonItem386.Caption" xml:space="preserve">
-    <value>雾度测试</value>
-  </data>
-  <data name="barButtonItem387.Caption" xml:space="preserve">
-    <value>可见光透视率</value>
-  </data>
-  <data name="barButtonItem388.Caption" xml:space="preserve">
-    <value>高速冲击测试</value>
-  </data>
-  <data name="barButtonItem389.Caption" xml:space="preserve">
-    <value>结构</value>
-  </data>
-  <data name="barButtonItem390.Caption" xml:space="preserve">
-    <value>球面度数</value>
-  </data>
-  <data name="barButtonItem391.Caption" xml:space="preserve">
-    <value>散光度数</value>
-  </data>
-  <data name="barButtonItem392.Caption" xml:space="preserve">
-    <value>棱镜度数</value>
-  </data>
-  <data name="barButtonItem393.Caption" xml:space="preserve">
-    <value>坐标</value>
-  </data>
-  <data name="barButtonItem394.Caption" xml:space="preserve">
-    <value>透视率</value>
-  </data>
-  <data name="barButtonItem395.Caption" xml:space="preserve">
-    <value>表面品质</value>
-  </data>
-  <data name="barButtonItem396.Caption" xml:space="preserve">
-    <value>直式冲击</value>
-  </data>
-  <data name="barButtonItem397.Caption" xml:space="preserve">
-    <value>高速冲击</value>
-  </data>
-  <data name="barButtonItem398.Caption" xml:space="preserve">
-    <value>记号</value>
-  </data>
-  <data name="barButtonItem399.Caption" xml:space="preserve">
-    <value>资讯</value>
-  </data>
-  <data name="barButtonItem400.Caption" xml:space="preserve">
-    <value>UV成分</value>
-  </data>
-  <data name="barButtonItem401.Caption" xml:space="preserve">
-    <value>CEEN外销报告</value>
-  </data>
-  <data name="barButtonItem402.Caption" xml:space="preserve">
-    <value>应收账款明细表</value>
-  </data>
-  <data name="barButtonItem403.Caption" xml:space="preserve">
-    <value>应付账款明细表</value>
-  </data>
-  <data name="barButtonItem404.Caption" xml:space="preserve">
-    <value>AS外销报告</value>
-  </data>
-  <data name="barButtonItem405.Caption" xml:space="preserve">
-    <value>年轮</value>
-  </data>
-  <data name="barButtonItem406.Caption" xml:space="preserve">
-    <value>抽测数量</value>
-  </data>
-  <data name="barButtonItem407.Caption" xml:space="preserve">
-    <value>外观测试</value>
-  </data>
-  <data name="barButtonItem408.Caption" xml:space="preserve">
-    <value>加热稳定性</value>
-  </data>
-  <data name="barButtonItem409.Caption" xml:space="preserve">
-    <value>坐标</value>
-  </data>
-  <data name="barButtonItem410.Caption" xml:space="preserve">
-    <value>球面度数折射度</value>
-  </data>
-  <data name="barButtonItem411.Caption" xml:space="preserve">
-    <value>雾度</value>
-  </data>
-  <data name="barButtonItem412.Caption" xml:space="preserve">
-    <value>中速冲击数率</value>
-  </data>
-  <data name="barButtonItem413.Caption" xml:space="preserve">
-    <value>高速冲击数率</value>
-  </data>
-  <data name="barButtonItem414.Caption" xml:space="preserve">
-    <value>特高速冲击数率</value>
-  </data>
-  <data name="barButtonItem415.Caption" xml:space="preserve">
-    <value>穿透测试</value>
-  </data>
-  <data name="barButtonItem416.Caption" xml:space="preserve">
-    <value>耐燃性</value>
-  </data>
-  <data name="barButtonItem417.Caption" xml:space="preserve">
-    <value>耐蚀性</value>
-  </data>
-  <data name="barButtonItem418.Caption" xml:space="preserve">
-    <value>记号</value>
-  </data>
-  <data name="barSubItem89.Caption" xml:space="preserve">
-    <value>供应商管理</value>
-  </data>
-  <data name="barButtonItem419.Caption" xml:space="preserve">
-    <value>厂商商品/加工对照</value>
-  </data>
-  <data name="barButtonItem420.Caption" xml:space="preserve">
-    <value>镜片外观</value>
-  </data>
-  <data name="barButtonItem421.Caption" xml:space="preserve">
-    <value>镜片棱镜度</value>
-  </data>
-  <data name="barButtonItem422.Caption" xml:space="preserve">
-    <value>镜片曲光度</value>
-  </data>
-  <data name="barButtonItem423.Caption" xml:space="preserve">
-    <value>镜片散光度</value>
-  </data>
-  <data name="barButtonItem424.Caption" xml:space="preserve">
-    <value>镜片透视率</value>
-  </data>
-  <data name="barButtonItem425.Caption" xml:space="preserve">
-    <value>镜片耐冲击性</value>
-  </data>
-  <data name="barButtonItem426.Caption" xml:space="preserve">
-    <value>镜片表面耐磨耗抵抗</value>
-  </data>
-  <data name="barButtonItem427.Caption" xml:space="preserve">
-    <value>镜片耐热性</value>
-  </data>
-  <data name="barButtonItem428.Caption" xml:space="preserve">
-    <value>镜片耐蚀性</value>
-  </data>
-  <data name="barButtonItem429.Caption" xml:space="preserve">
-    <value>镜片耐燃性</value>
-  </data>
-  <data name="barButtonItem430.Caption" xml:space="preserve">
-    <value>完成品外观</value>
-  </data>
-  <data name="barButtonItem431.Caption" xml:space="preserve">
-    <value>完成品耐冲击性</value>
-  </data>
-  <data name="barButtonItem432.Caption" xml:space="preserve">
-    <value>完成品紧密性第一试验镜脚拉伸</value>
-  </data>
-  <data name="barButtonItem433.Caption" xml:space="preserve">
-    <value>完成品紧密性第二试验中梁吊挂测试机</value>
-  </data>
   <data name="barButtonItem434.Caption" xml:space="preserve">
     <value>barButtonItem434</value>
-  </data>
-  <data name="barButtonItem435.Caption" xml:space="preserve">
-    <value>完成品头带强度</value>
-  </data>
-  <data name="barButtonItem436.Caption" xml:space="preserve">
-    <value>完成品耐消毒性</value>
-  </data>
-  <data name="barButtonItem437.Caption" xml:space="preserve">
-    <value>完成品构造</value>
-  </data>
-  <data name="barButtonItem438.Caption" xml:space="preserve">
-    <value>完成品材料</value>
-  </data>
-  <data name="barButtonItem439.Caption" xml:space="preserve">
-    <value>完成品记号标示</value>
-  </data>
-  <data name="barButtonItem440.Caption" xml:space="preserve">
-    <value>完成品包装上记号</value>
-  </data>
-  <data name="barButtonItem441.Caption" xml:space="preserve">
-    <value>完成品使用手册</value>
   </data>
   <data name="barButtonItem442.Caption" xml:space="preserve">
     <value>JIS外销报告</value>
@@ -5608,124 +6153,16 @@
   <data name="barLinkContainerItem1.Caption" xml:space="preserve">
     <value>barLinkContainerItem1</value>
   </data>
-  <data name="barButtonItem443.Caption" xml:space="preserve">
-    <value>箱/柜参数设置</value>
-  </data>
-  <data name="barButtonItem444.Caption" xml:space="preserve">
-    <value>出货装箱</value>
-  </data>
-  <data name="barButtonItem445.Caption" xml:space="preserve">
-    <value>订单装箱</value>
-  </data>
-  <data name="barButtonItem446.Caption" xml:space="preserve">
-    <value>详细测试查询</value>
-  </data>
-  <data name="barButtonItem447.Caption" xml:space="preserve">
-    <value>详细测试查询</value>
-  </data>
-  <data name="barButtonItem448.Caption" xml:space="preserve">
-    <value>详细测试查询</value>
-  </data>
-  <data name="barButtonItem449.Caption" xml:space="preserve">
-    <value>详细测试查询</value>
-  </data>
-  <data name="barButtonItem450.Caption" xml:space="preserve">
-    <value>详细测试查询</value>
-  </data>
-  <data name="barButtonItem451.Caption" xml:space="preserve">
-    <value>箱子装柜</value>
-  </data>
-  <data name="barButtonItem454.Caption" xml:space="preserve">
-    <value>产品规格</value>
-  </data>
-  <data name="barButtonItem455.Caption" xml:space="preserve">
-    <value>成品类别</value>
-  </data>
-  <data name="barButtonItem456.Caption" xml:space="preserve">
-    <value>客户产品价格设置</value>
-  </data>
   <data name="barButtonItem458.Caption" xml:space="preserve">
     <value>备案资料库</value>
   </data>
   <data name="barButtonItem459.Caption" xml:space="preserve">
     <value>通关手册</value>
   </data>
-  <data name="barButtonItem460.Caption" xml:space="preserve">
-    <value>出仓单明细表</value>
-  </data>
-  <data name="barButtonItem461.Caption" xml:space="preserve">
-    <value>进仓单明细表</value>
-  </data>
-  <data name="barButtonItem462.Caption" xml:space="preserve">
-    <value>手册管理</value>
-  </data>
-  <data name="barButtonItem463.Caption" xml:space="preserve">
-    <value>手册归类</value>
-  </data>
-  <data name="barButtonItem464.Caption" xml:space="preserve">
-    <value>理论耗用</value>
-  </data>
-  <data name="barButtonItem465.Caption" xml:space="preserve">
-    <value>出口明细</value>
-  </data>
-  <data name="barButtonItem466.Caption" xml:space="preserve">
-    <value>进口明细</value>
-  </data>
-  <data name="barButtonItem467.Caption" xml:space="preserve">
-    <value>原料重量</value>
-  </data>
-  <data name="barButtonItem468.Caption" xml:space="preserve">
-    <value>隔周休设定</value>
-  </data>
-  <data name="barButtonItem469.Caption" xml:space="preserve">
-    <value>生管未生产数量总表</value>
-  </data>
-  <data name="barButtonItem470.Caption" xml:space="preserve">
-    <value>库存预警</value>
-  </data>
-  <data name="barButtonItem471.Caption" xml:space="preserve">
-    <value>長期未出倉商品</value>
-  </data>
-  <data name="barButtonItem473.Caption" xml:space="preserve">
-    <value>現金支出傳票明細</value>
-  </data>
-  <data name="barButtonItem474.Caption" xml:space="preserve">
-    <value>打印發票</value>
-  </data>
-  <data name="barButtonItem475.Caption" xml:space="preserve">
-    <value>應付賬款發票</value>
-  </data>
-  <data name="barButtonItem478.Caption" xml:space="preserve">
-    <value>年度結轉</value>
-  </data>
-  <data name="barButtonItem480.Caption" xml:space="preserve">
-    <value>列印月薪資</value>
-  </data>
-  <data name="barButtonItem481.Caption" xml:space="preserve">
-    <value>發票編號設置</value>
-  </data>
-  <data name="barButtonItem482.Caption" xml:space="preserve">
-    <value>客戶商品年度出貨查詢</value>
-  </data>
-  <data name="barButtonItem483.Caption" xml:space="preserve">
-    <value>ANSI外銷報告2015</value>
-  </data>
-  <data name="barButtonItem484.Caption" xml:space="preserve">
-    <value>AS外銷報告2017</value>
-  </data>
-  <data name="barButtonItem487.Caption" xml:space="preserve">
-    <value>JIS外銷報告</value>
-  </data>
-  <data name="barButtonItem488.Caption" xml:space="preserve">
-    <value>會計年度薪資表</value>
-  </data>
   <data name="barButtonItem489.Caption" xml:space="preserve">
     <value>歷史出勤記錄</value>
   </data>
   <data name="barButtonItem490.Caption" xml:space="preserve">
-    <value>歷史出勤記錄</value>
-  </data>
-  <data name="barButtonItem491.Caption" xml:space="preserve">
     <value>歷史出勤記錄</value>
   </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -6495,12 +6932,6 @@
   <data name="pictureEdit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <metadata name="helpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>508, 17</value>
-  </metadata>
-  <data name="helpProvider1.HelpNamespace" xml:space="preserve">
-    <value>F:\erp\工作\helpe\CHM 帮助.chm</value>
-  </data>
   <data name="pictureEdit1.ShowHelp" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -6522,25 +6953,4 @@
   <metadata name="defaultLookAndFeel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>803, 31</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 43</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
 </root>
