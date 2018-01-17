@@ -390,9 +390,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             //获取ANSI,Finish质检统计记录
             //Model.PCExportReportANSI mPCExpANSI = this._pcExpANSIManager.SelectForExpANSI(xod.Invoice.CustomerInvoiceXOId, xod.Product.ProductId);
-            Model.PCExportReportANSIDetail mPCExpANSIDet = new BL.PCExportReportANSIDetailManager().SelectForExpANSIDetailsSUM(xod.Invoice.CustomerInvoiceXOId, xod.Product.ProductId);
-            if (mPCExpANSIDet != null)
-            {
+            //Model.PCExportReportANSIDetail mPCExpANSIDet = new BL.PCExportReportANSIDetailManager().SelectForExpANSIDetailsSUM(xod.Invoice.CustomerInvoiceXOId, xod.Product.ProductId);
+            //if (mPCExpANSIDet != null)
+            //{
                 //测试数量
                 //this._pcExpANSI.AmountTest = mPCExpANSI.mCountANSI;
 
@@ -462,7 +462,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 //this._pcExpANSI.QuYangShu11 = mPCExpANSIDet.qNRXCS;
                 //this._pcExpANSI.PanDing11 = mPCExpANSIDet.pNRXCS;
                 #endregion
-            }
+            //}
             this.InitControls();
         }
 

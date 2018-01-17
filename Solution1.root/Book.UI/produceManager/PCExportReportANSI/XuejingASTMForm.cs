@@ -394,10 +394,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ProductUnitId = xd.Product.SellUnitId;
 
             //获取质检统计记录
-            Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpCEENDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
+            //Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpCEENDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
 
-            if (_PCExportReportANSIDetail != null)
-            {
+            //if (_PCExportReportANSIDetail != null)
+            //{
                 #region 测试数量、合格数量
 
                 //受测数量默认为订单数量的1/500,无条件进位，最大为12
@@ -441,7 +441,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.ShouCeShu8 = this._PCExportReportANSI.PanDing8 = 2;
                 this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.PanDing3 = 1;
                 #endregion
-            }
+            //}
             this.InitControls();
         }
 

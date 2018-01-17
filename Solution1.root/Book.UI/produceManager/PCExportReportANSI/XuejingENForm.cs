@@ -372,56 +372,56 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ProductUnitId = xd.Product.SellUnitId;
 
             //获取质检统计记录
-            Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpCEENDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
+            //Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpCEENDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
 
-            if (_PCExportReportANSIDetail != null)
-            {
-                #region 测试数量、合格数量
+            //if (_PCExportReportANSIDetail != null)
+            //{
+            #region 测试数量、合格数量
 
-                //受测数量默认为订单数量的1/500,无条件进位，最大为12
-                int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
-                double MustCheck = 0;
+            //受测数量默认为订单数量的1/500,无条件进位，最大为12
+            int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
+            double MustCheck = 0;
 
-                if (Orderamount < 500)
-                    MustCheck = 1;
-                else
-                    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
+            if (Orderamount < 500)
+                MustCheck = 1;
+            else
+                MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
 
-                this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+            this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
 
-                this._PCExportReportANSI.ShouCeShu1 = this._PCExportReportANSI.AmountTest;
-                //this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.ShouCeShu7 = this._PCExportReportANSI.ShouCeShu8 = this._PCExportReportANSI.ShouCeShu9 == this._PCExportReportANSI.ShouCeShu12
+            this._PCExportReportANSI.ShouCeShu1 = this._PCExportReportANSI.AmountTest;
+            //this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.ShouCeShu7 = this._PCExportReportANSI.ShouCeShu8 = this._PCExportReportANSI.ShouCeShu9 == this._PCExportReportANSI.ShouCeShu12
 
-                this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.AmountTest;
-                //this._PCExportReportANSI.QuYangShu1 = _PCExportReportANSIDetail.qCEENCONSTRUCTION;
-                //this._PCExportReportANSI.PanDing2 = _PCExportReportANSIDetail.pCEENQMDS;
-                //this._PCExportReportANSI.QuYangShu2 = _PCExportReportANSIDetail.qCEENQMDS;
-                //this._PCExportReportANSI.PanDing3 = _PCExportReportANSIDetail.pCEENSGDS;
-                //this._PCExportReportANSI.QuYangShu3 = _PCExportReportANSIDetail.qCEENSGDS;
-                //this._PCExportReportANSI.PanDing4 = _PCExportReportANSIDetail.pCEENLJDS;
-                //this._PCExportReportANSI.QuYangShu4 = _PCExportReportANSIDetail.qCEENLJDS;
-                //this._PCExportReportANSI.PanDing5 = _PCExportReportANSIDetail.pCEENZB;
-                //this._PCExportReportANSI.QuYangShu5 = _PCExportReportANSIDetail.qCEENZB;
-                //this._PCExportReportANSI.PanDing6 = _PCExportReportANSIDetail.pCEENTSL;
-                //this._PCExportReportANSI.QuYangShu6 = _PCExportReportANSIDetail.qCEENTSL;
-                //this._PCExportReportANSI.PanDing7 = _PCExportReportANSIDetail.pCEENBMPZ;
-                //this._PCExportReportANSI.QuYangShu7 = _PCExportReportANSIDetail.qCEENBMPZ;
-                //this._PCExportReportANSI.PanDing8 = _PCExportReportANSIDetail.pCEENZSCJ;
-                //this._PCExportReportANSI.QuYangShu8 = _PCExportReportANSIDetail.qCEENZSCJ;
-                //this._PCExportReportANSI.PanDing9 = _PCExportReportANSIDetail.pCEENGSCJ; ;
-                //this._PCExportReportANSI.QuYangShu9 = _PCExportReportANSIDetail.qCEENGSCJ;
-                //this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.AmountTest;
-                //this._PCExportReportANSI.QuYangShu10 = _PCExportReportANSIDetail.qCEENJH;
-                //this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.AmountTest;
-                //this._PCExportReportANSI.QuYangShu11 = _PCExportReportANSIDetail.qCEENZX;
-                //this._PCExportReportANSI.PanDingShu12 = _PCExportReportANSIDetail.pCEENUVCF;
-                //this._PCExportReportANSI.QuYangShu12 = _PCExportReportANSIDetail.qCEENUVCF;
+            this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.AmountTest;
+            //this._PCExportReportANSI.QuYangShu1 = _PCExportReportANSIDetail.qCEENCONSTRUCTION;
+            //this._PCExportReportANSI.PanDing2 = _PCExportReportANSIDetail.pCEENQMDS;
+            //this._PCExportReportANSI.QuYangShu2 = _PCExportReportANSIDetail.qCEENQMDS;
+            //this._PCExportReportANSI.PanDing3 = _PCExportReportANSIDetail.pCEENSGDS;
+            //this._PCExportReportANSI.QuYangShu3 = _PCExportReportANSIDetail.qCEENSGDS;
+            //this._PCExportReportANSI.PanDing4 = _PCExportReportANSIDetail.pCEENLJDS;
+            //this._PCExportReportANSI.QuYangShu4 = _PCExportReportANSIDetail.qCEENLJDS;
+            //this._PCExportReportANSI.PanDing5 = _PCExportReportANSIDetail.pCEENZB;
+            //this._PCExportReportANSI.QuYangShu5 = _PCExportReportANSIDetail.qCEENZB;
+            //this._PCExportReportANSI.PanDing6 = _PCExportReportANSIDetail.pCEENTSL;
+            //this._PCExportReportANSI.QuYangShu6 = _PCExportReportANSIDetail.qCEENTSL;
+            //this._PCExportReportANSI.PanDing7 = _PCExportReportANSIDetail.pCEENBMPZ;
+            //this._PCExportReportANSI.QuYangShu7 = _PCExportReportANSIDetail.qCEENBMPZ;
+            //this._PCExportReportANSI.PanDing8 = _PCExportReportANSIDetail.pCEENZSCJ;
+            //this._PCExportReportANSI.QuYangShu8 = _PCExportReportANSIDetail.qCEENZSCJ;
+            //this._PCExportReportANSI.PanDing9 = _PCExportReportANSIDetail.pCEENGSCJ; ;
+            //this._PCExportReportANSI.QuYangShu9 = _PCExportReportANSIDetail.qCEENGSCJ;
+            //this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.AmountTest;
+            //this._PCExportReportANSI.QuYangShu10 = _PCExportReportANSIDetail.qCEENJH;
+            //this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.AmountTest;
+            //this._PCExportReportANSI.QuYangShu11 = _PCExportReportANSIDetail.qCEENZX;
+            //this._PCExportReportANSI.PanDingShu12 = _PCExportReportANSIDetail.pCEENUVCF;
+            //this._PCExportReportANSI.QuYangShu12 = _PCExportReportANSIDetail.qCEENUVCF;
 
-                this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.PanDing6
-=2;
-                this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.PanDing5 = 1;
-                #endregion
-            }
+            this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.ShouCeShu3 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.ShouCeShu6 = this._PCExportReportANSI.PanDing6
+= 2;
+            this._PCExportReportANSI.ShouCeShu5 = this._PCExportReportANSI.PanDing5 = 1;
+            #endregion
+            //}
             this.InitControls();
         }
 

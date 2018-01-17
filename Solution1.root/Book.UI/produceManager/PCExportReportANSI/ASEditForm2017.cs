@@ -383,31 +383,31 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ProductUnitId = xd.Product.SellUnitId;
 
             //获取质检统计记录
-            Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpASDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
+            //Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpASDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
 
-            if (_PCExportReportANSIDetail != null)
-            {
-                #region 测试数量、合格数量
+            //if (_PCExportReportANSIDetail != null)
+            //{
+            #region 测试数量、合格数量
 
-                //受测数量默认为订单数量的1/500,无条件进位，最大为12
-                //int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
-                //double MustCheck = 0;
+            //受测数量默认为订单数量的1/500,无条件进位，最大为12
+            //int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
+            //double MustCheck = 0;
 
-                //if (Orderamount < 500)
-                //    MustCheck = 1;
-                //else
-                //    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
+            //if (Orderamount < 500)
+            //    MustCheck = 1;
+            //else
+            //    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
 
-                //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
-                this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("as", Convert.ToInt32(this._PCExportReportANSI.Amount));
+            //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+            this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("as", Convert.ToInt32(this._PCExportReportANSI.Amount));
 
-                //this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.AmountTest;
+            //this._PCExportReportANSI.ShouCeShu2 = this._PCExportReportANSI.AmountTest;
 
-                //this._PCExportReportANSI.PanDing2 = _PCExportReportANSIDetail.pASCCSL;
-                this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.ShouCeShu17 = this._PCExportReportANSI.AmountTest;
+            //this._PCExportReportANSI.PanDing2 = _PCExportReportANSIDetail.pASCCSL;
+            this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.ShouCeShu4 = this._PCExportReportANSI.ShouCeShu17 = this._PCExportReportANSI.AmountTest;
 
-                #endregion
-            }
+            #endregion
+            //}
             this.InitControls();
         }
 
