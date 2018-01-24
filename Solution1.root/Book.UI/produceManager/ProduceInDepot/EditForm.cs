@@ -253,9 +253,9 @@ namespace Book.UI.produceManager.ProduceInDepot
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            //return new RO(produceInDepot.ProduceInDepotId);
-            ExportExcel(this.produceInDepot.Details);
-            return null;
+            return new RO(produceInDepot.ProduceInDepotId);
+           
+            //return null;
         }
 
         private void ExportExcel(IList<Model.ProduceInDepotDetail> details)
@@ -1326,6 +1326,11 @@ namespace Book.UI.produceManager.ProduceInDepot
                 this.gridView1.PostEditor();
                 this.gridView1.UpdateCurrentRow();
             }
+        }
+
+        private void bar_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ExportExcel(this.produceInDepot.Details);
         }
     }
 }

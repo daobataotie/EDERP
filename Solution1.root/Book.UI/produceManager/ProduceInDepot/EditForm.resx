@@ -129,6 +129,9 @@
   <data name="barButtonItemExport.Caption" xml:space="preserve">
     <value>多条件导出</value>
   </data>
+  <data name="bar_ExportExcel.Caption" xml:space="preserve">
+    <value>導出Excel</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -355,13 +358,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PayDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>758, 12</value>
+    <value>808, 12</value>
   </data>
   <data name="PayDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="PayDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 21</value>
+    <value>149, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PayDate.TabIndex" type="System.Int32, mscorlib">
@@ -380,10 +383,10 @@
     <value>4</value>
   </data>
   <data name="txt_TotalMoney.Location" type="System.Drawing.Point, System.Drawing">
-    <value>806, 348</value>
+    <value>861, 369</value>
   </data>
   <data name="txt_TotalMoney.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 21</value>
+    <value>96, 21</value>
   </data>
   <data name="txt_TotalMoney.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -401,10 +404,10 @@
     <value>5</value>
   </data>
   <data name="txt_Tax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>701, 348</value>
+    <value>748, 369</value>
   </data>
   <data name="txt_Tax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 21</value>
+    <value>68, 21</value>
   </data>
   <data name="txt_Tax.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -422,10 +425,10 @@
     <value>6</value>
   </data>
   <data name="txt_AmountMoney.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 348</value>
+    <value>610, 369</value>
   </data>
   <data name="txt_AmountMoney.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 21</value>
+    <value>93, 21</value>
   </data>
   <data name="txt_AmountMoney.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -443,10 +446,10 @@
     <value>7</value>
   </data>
   <data name="EmpAudit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>744, 323</value>
+    <value>793, 339</value>
   </data>
   <data name="EmpAudit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 21</value>
+    <value>164, 21</value>
   </data>
   <data name="EmpAudit.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -467,7 +470,7 @@
     <value>76, 37</value>
   </data>
   <data name="newChooseContorlDepot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 21</value>
+    <value>193, 21</value>
   </data>
   <data name="newChooseContorlDepot.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -485,7 +488,7 @@
     <value>9</value>
   </data>
   <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>596, 323</value>
+    <value>634, 339</value>
   </data>
   <data name="textEditAuditState.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -500,7 +503,7 @@
     <value>False</value>
   </data>
   <data name="textEditAuditState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 21</value>
+    <value>102, 26</value>
   </data>
   <data name="textEditAuditState.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -518,10 +521,10 @@
     <value>10</value>
   </data>
   <data name="simpleButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 61</value>
+    <value>12, 63</value>
   </data>
   <data name="simpleButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 22</value>
+    <value>182, 22</value>
   </data>
   <data name="simpleButton3.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -542,10 +545,10 @@
     <value>11</value>
   </data>
   <data name="newChooseWorkHorseId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>541, 12</value>
+    <value>575, 12</value>
   </data>
   <data name="newChooseWorkHorseId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 21</value>
+    <value>165, 21</value>
   </data>
   <data name="newChooseWorkHorseId.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -563,10 +566,10 @@
     <value>12</value>
   </data>
   <data name="newChooseEmployee0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>319, 37</value>
+    <value>337, 37</value>
   </data>
   <data name="newChooseEmployee0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 21</value>
+    <value>170, 21</value>
   </data>
   <data name="newChooseEmployee0.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -584,10 +587,10 @@
     <value>13</value>
   </data>
   <data name="newChooseEmployee1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>541, 37</value>
+    <value>575, 37</value>
   </data>
   <data name="newChooseEmployee1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 21</value>
+    <value>382, 21</value>
   </data>
   <data name="newChooseEmployee1.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -605,10 +608,10 @@
     <value>14</value>
   </data>
   <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 297</value>
+    <value>12, 313</value>
   </data>
   <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
+    <value>159, 22</value>
   </data>
   <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -629,10 +632,10 @@
     <value>15</value>
   </data>
   <data name="textEditProduceInDepotDesc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 323</value>
+    <value>76, 339</value>
   </data>
   <data name="textEditProduceInDepotDesc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>451, 46</value>
+    <value>489, 51</value>
   </data>
   <data name="textEditProduceInDepotDesc.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -653,13 +656,13 @@
     <value>2011-02-16</value>
   </data>
   <data name="dateEditProduceInDepotDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 12</value>
+    <value>338, 12</value>
   </data>
   <data name="dateEditProduceInDepotDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="dateEditProduceInDepotDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 21</value>
+    <value>169, 21</value>
   </data>
   <data name="dateEditProduceInDepotDate.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -677,10 +680,10 @@
     <value>17</value>
   </data>
   <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 297</value>
+    <value>175, 313</value>
   </data>
   <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 22</value>
+    <value>168, 22</value>
   </data>
   <data name="simpleButton2.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -704,7 +707,7 @@
     <value>76, 12</value>
   </data>
   <data name="textEditProduceInDepotId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 21</value>
+    <value>194, 21</value>
   </data>
   <data name="textEditProduceInDepotId.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -725,7 +728,7 @@
     <value>499, 17</value>
   </metadata>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 87</value>
+    <value>12, 89</value>
   </data>
   <data name="gridColumn8.Caption" xml:space="preserve">
     <value>序号</value>
@@ -1100,7 +1103,7 @@
     <value>名称</value>
   </data>
   <metadata name="bindingSourceWorkHouse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 55</value>
+    <value>1282, 17</value>
   </metadata>
   <data name="repositoryItemLookUpEdit7.NullText" xml:space="preserve">
     <value />
@@ -1746,7 +1749,7 @@
     <value>Combo</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>881, 206</value>
+    <value>945, 220</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -1891,7 +1894,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>905, 381</value>
+    <value>969, 402</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1930,7 +1933,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>905, 428</value>
+    <value>969, 449</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>生产入库</value>
@@ -2677,6 +2680,12 @@
     <value>barBtnPrintMonth</value>
   </data>
   <data name="&gt;&gt;barBtnPrintMonth.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bar_ExportExcel.Name" xml:space="preserve">
+    <value>bar_ExportExcel</value>
+  </data>
+  <data name="&gt;&gt;bar_ExportExcel.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

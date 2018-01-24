@@ -659,7 +659,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                         PCAssemblyInspection.ListForm listform = new Book.UI.produceManager.PCAssemblyInspection.ListForm(invoiceCusId);
                         listform.Show(this);
                     }
-                    else if (name.Contains("光譜測試") || name.Contains("成品檢驗單") || name.Contains("出貨報告"))
+                    else if (name.Contains("光譜測試") || name.Contains("成品檢驗單"))
                     {
                         //PCFinishCheck.EditForm qcc = new Book.UI.produceManager.PCFinishCheck.EditForm(str);
                         //qcc.Show(this);
@@ -717,11 +717,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
                             f.Show(this);
                     }
 
-                    //else if (name.Contains("出貨報告"))
-                    //{
-                    //    PCExportReportANSI.ListForm listform = new ListForm(invoiceCusId, "JIS");
-                    //    listform.Show(this);
-                    //}
+                    else if (name.Contains("出貨報告"))
+                    {
+                        PCExportReportANSI.ListForm listform = new ListForm(invoiceCusId, "JIS");
+                        listform.Show(this);
+                    }
                     //}
                     //}
                 }
