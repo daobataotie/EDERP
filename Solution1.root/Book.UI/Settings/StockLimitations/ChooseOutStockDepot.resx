@@ -117,13 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gridControl1.EmbeddedNavigator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
@@ -327,11 +324,14 @@
   <data name="&gt;&gt;simpleButtonNew.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="btn_Print.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
   <data name="btn_Print.Location" type="System.Drawing.Point, System.Drawing">
-    <value>550, 404</value>
+    <value>550, 407</value>
   </data>
   <data name="btn_Print.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 25</value>
+    <value>93, 22</value>
   </data>
   <data name="btn_Print.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -352,10 +352,10 @@
     <value>4</value>
   </data>
   <data name="txt_InvoiceCusID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>427, 12</value>
+    <value>406, 12</value>
   </data>
   <data name="txt_InvoiceCusID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 25</value>
+    <value>133, 21</value>
   </data>
   <data name="txt_InvoiceCusID.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -376,7 +376,7 @@
     <value>600, 12</value>
   </data>
   <data name="buttonEditProduct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 25</value>
+    <value>186, 21</value>
   </data>
   <data name="buttonEditProduct.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -397,7 +397,7 @@
     <value>790, 12</value>
   </data>
   <data name="Button_SearCh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 25</value>
+    <value>72, 22</value>
   </data>
   <data name="Button_SearCh.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -418,14 +418,14 @@
     <value>7</value>
   </data>
   <data name="dateEditStartDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 12</value>
+    <value>60, 12</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="dateEditStartDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="dateEditStartDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 25</value>
+    <value>91, 21</value>
   </data>
   <data name="dateEditStartDate.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -443,13 +443,13 @@
     <value>8</value>
   </data>
   <data name="dateEditEndate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 12</value>
+    <value>212, 12</value>
   </data>
   <data name="dateEditEndate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="dateEditEndate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 25</value>
+    <value>102, 21</value>
   </data>
   <data name="dateEditEndate.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -466,14 +466,17 @@
   <data name="&gt;&gt;dateEditEndate.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="checkAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
   <data name="checkAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 404</value>
+    <value>113, 407</value>
   </data>
   <data name="checkAll.Properties.Caption" xml:space="preserve">
     <value>全選</value>
   </data>
   <data name="checkAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 23</value>
+    <value>54, 19</value>
   </data>
   <data name="checkAll.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -599,7 +602,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 18</value>
+    <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>865, 449</value>
