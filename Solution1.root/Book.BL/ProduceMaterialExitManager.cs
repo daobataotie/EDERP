@@ -27,7 +27,9 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
-            accessor.Delete(produceExitMaterialId);
+            //accessor.Delete(produceExitMaterialId);
+            Model.ProduceMaterialExit model = this.Get(produceExitMaterialId);
+            this.Delete(model);
         }
 
         /// <summary>
@@ -163,6 +165,7 @@ namespace Book.BL
                 if (oldDetail.Product == null || oldDetail.Product.ProductId == null) continue;
                 oldDetail.DepotPosition = depotPositionAccessor.Get(oldDetail.DepotPositionId);
                 stockAccessor.Decrement(oldDetail.DepotPosition, oldDetail.Product, oldDetail.ProduceQuantity);
+                productAccessor.UpdateProduct_Stock(oldDetail.Product);
             }
         }
 
