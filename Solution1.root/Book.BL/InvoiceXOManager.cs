@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Book.BL
 {
@@ -440,6 +441,17 @@ namespace Book.BL
         public string SelectCusXOIdByPrimaryId(string id)
         {
             return accessor.SelectCusXOIdByPrimaryId(id);
+        }
+
+        public void UpdateRelationInvoiceCusID(string oldId, string newId)
+        {
+            StringBuilder sql = new StringBuilder("");
+            sql.Append(" update PCImpactCheck set InvoiceCusXOId='" + newId + "' where InvoiceCusXOId='" + oldId + "' ");  //衝擊測試單
+            sql.Append(" update PCImpactCheckDetail set InvoiceCusXOId='" + newId + "' where InvoiceCusXOId='" + oldId + "'"); //衝擊測試單详细
+            sql.Append(" update PCDataInput set InvoiceCusId='" + newId + "' where InvoiceCusId='" + oldId + "'");   //數據輸入頁
+            sql.Append(" update PCExportReportANSI set InvoiceCusXOId='" + newId + "' where InvoiceCusXOId='" + oldId + "'");  //外销报告
+
+            accessor.UpdateSql(sql.ToString());
         }
     }
 }

@@ -15,9 +15,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="PronoteHeaderId" column="PronoteHeaderId" />
       <result property="Note" column="Note" />
       <result property="EmployeeId1" column="EmployeeId1"/>
+      <result property="CustomerId" column="CustomerId" />
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key" />
       <result property="Employee1" column="EmployeeId1" lazyLoad="false" select="Employee.select_by_primary_key" />
-      <result property="PronoteHeader" column="PronoteHeaderId" lazyLoad="false" select="PronoteHeader.select_by_primary_key" />
+      <!--<result property="PronoteHeader" column="PronoteHeaderId" lazyLoad="false" select="PronoteHeader.select_by_primary_key" />-->
+      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
     </resultMap>
   </resultMaps>
 
@@ -113,7 +115,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceCusId],
 				[PronoteHeaderId],
 				[Note],
-        [EmployeeId1]
+        [EmployeeId1],
+        [CustomerId]
 			FROM
 				[dbo].[PCAssemblyInspection]
 			WHERE
@@ -175,7 +178,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceCusId],
 				[PronoteHeaderId],
 				[Note],
-        [EmployeeId1]
+        [EmployeeId1],
+        [CustomerId]
 			) 
 			VALUES 
 			(
@@ -187,7 +191,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#InvoiceCusId#,
 				#PronoteHeaderId#,
 				#Note#,
-        #EmployeeId1#
+        #EmployeeId1#,
+        #CustomerId#
 			)
              ]]>
     </insert>
@@ -202,7 +207,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceCusId] = #InvoiceCusId#,
 				[PronoteHeaderId] = #PronoteHeaderId#,
 				[Note] = #Note#,
-        [EmployeeId1]=#EmployeeId1#
+        [EmployeeId1]=#EmployeeId1#,
+        [CustomerId]=#CustomerId#
 			WHERE
 				[PCAssemblyInspectionId] = #PCAssemblyInspectionId#
                     ]]>

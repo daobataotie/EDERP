@@ -9,13 +9,13 @@ using DevExpress.XtraEditors;
 
 namespace Book.UI.produceManager.PCAssemblyInspection
 {
-    public partial class EditForm : Settings.BasicData.BaseEditForm
+    public partial class EditForm_Backup : Settings.BasicData.BaseEditForm
     {
         Model.PCAssemblyInspection _pCAssemblyInspection = null;
         BL.PCAssemblyInspectionManager manager = new Book.BL.PCAssemblyInspectionManager();
 
         int LastFlag = 0;
-        public EditForm()
+        public EditForm_Backup()
         {
             InitializeComponent();
 
@@ -23,11 +23,9 @@ namespace Book.UI.produceManager.PCAssemblyInspection
 
             this.nccEmployee.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.nccEmployee1.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            this.nccCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
 
             this.invalidValueExceptions.Add(Model.PCAssemblyInspection.PRO_PCAssemblyInspectionDate, new AA("日期不能为空", this.date_PCAssemblyInspectionDate));
-            //this.invalidValueExceptions.Add(Model.PCAssemblyInspection.PRO_PronoteHeaderId, new AA("加工单不能为空", this.txt_PronoteHeaderId));
-            this.invalidValueExceptions.Add(Model.PCAssemblyInspection.PRO_CustomerId, new AA("客戶不能为空", this.nccCustomer));
+            this.invalidValueExceptions.Add(Model.PCAssemblyInspection.PRO_PronoteHeaderId, new AA("加工单不能为空", this.txt_PronoteHeaderId));
 
             #region LookUpEdit
             DataTable dt = new DataTable();
@@ -72,7 +70,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.bindingSourceZuzhuangProduct.DataSource = new BL.ProductManager().SelectProductByProductCategoryId(new Book.Model.ProductCategory() { ProductCategoryId = "756c936b-4643-4963-ad11-4e63b86bed2f" });   //查詢所有塑膠袋
         }
 
-        public EditForm(string PCAssemblyInspectionId)
+        public EditForm_Backup(string PCAssemblyInspectionId)
             : this()
         {
             this._pCAssemblyInspection = this.manager.Get(PCAssemblyInspectionId);
@@ -81,7 +79,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                 LastFlag = 1;
         }
 
-        public EditForm(Model.PCAssemblyInspection model)
+        public EditForm_Backup(Model.PCAssemblyInspection model)
             : this()
         {
             if (model == null)
@@ -92,7 +90,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                 LastFlag = 1;
         }
 
-        public EditForm(Model.PCAssemblyInspection model, string action)
+        public EditForm_Backup(Model.PCAssemblyInspection model, string action)
             : this()
         {
             if (model == null)
@@ -165,8 +163,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                 this._pCAssemblyInspection.PCAssemblyInspectionDate = this.date_PCAssemblyInspectionDate.DateTime;
             else
                 this._pCAssemblyInspection.PCAssemblyInspectionDate = null;
-            //this._pCAssemblyInspection.PronoteHeaderId = this.txt_PronoteHeaderId.Text;
-            this._pCAssemblyInspection.CustomerId = (this.nccCustomer.EditValue == null ? null : (this.nccCustomer.EditValue as Model.Customer).CustomerId);
+            this._pCAssemblyInspection.PronoteHeaderId = this.txt_PronoteHeaderId.Text;
             this._pCAssemblyInspection.InvoiceCusId = this.txt_InvoiceCusId.Text;
             this._pCAssemblyInspection.EmployeeId = this.nccEmployee.EditValue == null ? null : (this.nccEmployee.EditValue as Model.Employee).EmployeeId;
 
@@ -197,8 +194,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
 
             this.txt_PCAssemblyInspectionId.Text = this._pCAssemblyInspection.PCAssemblyInspectionId;
             this.date_PCAssemblyInspectionDate.EditValue = this._pCAssemblyInspection.PCAssemblyInspectionDate;
-            //this.txt_PronoteHeaderId.Text = this._pCAssemblyInspection.PronoteHeaderId;
-            this.nccCustomer.EditValue = this._pCAssemblyInspection.Customer;
+            this.txt_PronoteHeaderId.Text = this._pCAssemblyInspection.PronoteHeaderId;
             this.txt_InvoiceCusId.Text = this._pCAssemblyInspection.InvoiceCusId;
             this.nccEmployee.EditValue = this._pCAssemblyInspection.Employee;
             this.txt_Note.Text = this._pCAssemblyInspection.Note;
@@ -217,6 +213,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                     break;
             }
 
+            this.txt_PronoteHeaderId.Properties.ReadOnly = true;
             this.txt_PCAssemblyInspectionId.Properties.ReadOnly = true;
         }
 
@@ -244,7 +241,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
         {
             if (this._pCAssemblyInspection.Details == null || this._pCAssemblyInspection.Details.Count == 0)
             {
-                MessageBox.Show("请先从加工单拉取第一条内容。", this.Text, MessageBoxButtons.OK);
+                MessageBox.Show("请先从加工单拉取第一条测试内容。", this.Text, MessageBoxButtons.OK);
                 return;
             }
             else
@@ -256,18 +253,18 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                 detail.Product = this._pCAssemblyInspection.Details[0].Product;
                 detail.ProductId = this._pCAssemblyInspection.Details[0].ProductId;
 
-                //if (detail.Product != null)
-                //{
-                //    if (detail.Product.IsQiangHua == true)
-                //        detail.Jiagongbie = "強化";
-                //    else if (detail.Product.IsFangWu == true)
-                //        detail.Jiagongbie = "防霧";
-                //    else if (detail.Product.IsNoQiangFang == true)
-                //        detail.Jiagongbie = "無強化防霧";
-                //}
+                if (detail.Product != null)
+                {
+                    if (detail.Product.IsQiangHua == true)
+                        detail.Jiagongbie = "強化";
+                    else if (detail.Product.IsFangWu == true)
+                        detail.Jiagongbie = "防霧";
+                    else if (detail.Product.IsNoQiangFang == true)
+                        detail.Jiagongbie = "無強化防霧";
+                }
 
-                //if (this._pCAssemblyInspection.PronoteHeader != null)
-                //    detail.CustomerId = (this._pCAssemblyInspection.PronoteHeader.InvoiceXO == null ? null : this._pCAssemblyInspection.PronoteHeader.InvoiceXO.CustomerId);
+                if (this._pCAssemblyInspection.PronoteHeader != null)
+                    detail.CustomerId = (this._pCAssemblyInspection.PronoteHeader.InvoiceXO == null ? null : this._pCAssemblyInspection.PronoteHeader.InvoiceXO.CustomerId);
 
                 this._pCAssemblyInspection.Details.Add(detail);
                 this.bindingSourceDetail.Position = this.bindingSourceDetail.IndexOf(detail);
@@ -303,14 +300,13 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                     Model.PronoteHeader currentModel = pronoForm.SelectItem;
                     if (currentModel != null)
                     {
-                        //this.txt_PronoteHeaderId.Text = currentModel.PronoteHeaderID;
-                        //this._pCAssemblyInspection.PronoteHeader = currentModel;
+                        this.txt_PronoteHeaderId.Text = currentModel.PronoteHeaderID;
+                        this._pCAssemblyInspection.PronoteHeader = currentModel;
                         Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(currentModel.InvoiceXOId);
                         if (xo != null)
                         {
                             currentModel.InvoiceXO = xo;
                             this.txt_InvoiceCusId.Text = xo.CustomerInvoiceXOId;
-                            this.nccCustomer.EditValue = xo.Customer;
                         }
                         //this.txt_Model.Text = (currentModel.Product) == null ? "" : (currentModel.Product).CustomerProductName;
                         Model.Product p = new BL.ProductManager().Get(currentModel.ProductId);
@@ -320,15 +316,14 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                         detail.PCAssemblyInspectionId = this._pCAssemblyInspection.PCAssemblyInspectionId;
                         detail.Product = p;
                         detail.ProductId = currentModel.ProductId;
-                        //detail.CustomerId = xo == null ? null : xo.CustomerId;
-                        detail.PronoteHeaderId = currentModel.PronoteHeaderID;
+                        detail.CustomerId = xo == null ? null : xo.CustomerId;
 
-                        //if (p.IsQiangHua == true)
-                        //    detail.Jiagongbie = "強化";
-                        //else if (p.IsFangWu == true)
-                        //    detail.Jiagongbie = "防霧";
-                        //else if (p.IsNoQiangFang == true)
-                        //    detail.Jiagongbie = "無強化防霧";
+                        if (p.IsQiangHua == true)
+                            detail.Jiagongbie = "強化";
+                        else if (p.IsFangWu == true)
+                            detail.Jiagongbie = "防霧";
+                        else if (p.IsNoQiangFang == true)
+                            detail.Jiagongbie = "無強化防霧";
 
                         this._pCAssemblyInspection.Details.Add(detail);
                         this.bindingSourceDetail.Position = this.bindingSourceDetail.IndexOf(detail);
@@ -336,14 +331,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                 }
                 else
                 {
-                    Model.InvoiceXO xo = new BL.InvoiceXOManager().Get(pronoForm.SelectItems[0].InvoiceXOId);
-                    if (xo != null)
-                    {
-                        this.txt_InvoiceCusId.Text = xo.CustomerInvoiceXOId;
-                        this.nccCustomer.EditValue = xo.Customer;
-                    }
-
-                    foreach (var item in pronoForm.SelectItems)
+                    foreach(var item in pronoForm.SelectItems)
                     {
                         Model.Product p = new BL.ProductManager().Get(item.ProductId);
                         Model.PCAssemblyInspectionDetail detail = new Book.Model.PCAssemblyInspectionDetail();
@@ -353,14 +341,13 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                         detail.Product = p;
                         detail.ProductId = item.ProductId;
                         //detail.CustomerId = xo == null ? null : xo.CustomerId;
-                        detail.PronoteHeaderId = item.PronoteHeaderID;
 
-                        //if (p.IsQiangHua == true)
-                        //    detail.Jiagongbie = "強化";
-                        //else if (p.IsFangWu == true)
-                        //    detail.Jiagongbie = "防霧";
-                        //else if (p.IsNoQiangFang == true)
-                        //    detail.Jiagongbie = "無強化防霧";
+                        if (p.IsQiangHua == true)
+                            detail.Jiagongbie = "強化";
+                        else if (p.IsFangWu == true)
+                            detail.Jiagongbie = "防霧";
+                        else if (p.IsNoQiangFang == true)
+                            detail.Jiagongbie = "無強化防霧";
 
                         this._pCAssemblyInspection.Details.Add(detail);
                         this.bindingSourceDetail.Position = this.bindingSourceDetail.IndexOf(detail);
@@ -377,5 +364,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
         {
             return "PCAssemblyInspection" + "," + this._pCAssemblyInspection.PCAssemblyInspectionId;
         }
+
+
     }
 }

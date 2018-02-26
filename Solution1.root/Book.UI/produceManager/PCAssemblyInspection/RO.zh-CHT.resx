@@ -120,9 +120,6 @@
   <data name="xrTableCell3.Text" xml:space="preserve">
     <value>型號/規格</value>
   </data>
-  <data name="xrTableCell20.Text" xml:space="preserve">
-    <value>客戶</value>
-  </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
     <value>時間</value>
   </data>
@@ -131,9 +128,6 @@
   </data>
   <data name="xrTableCell4.Text" xml:space="preserve">
     <value>外觀</value>
-  </data>
-  <data name="xrTableCell17.Text" xml:space="preserve">
-    <value>加工別</value>
   </data>
   <data name="xrTableCell2.Text" xml:space="preserve">
     <value>RICH腳</value>
@@ -173,9 +167,6 @@
   </data>
   <data name="xrLabel4.Text" xml:space="preserve">
     <value>客戶訂單號：</value>
-  </data>
-  <data name="xrLabel3.Text" xml:space="preserve">
-    <value>加工單：</value>
   </data>
   <data name="xrLabel2.Text" xml:space="preserve">
     <value>單據日期：</value>

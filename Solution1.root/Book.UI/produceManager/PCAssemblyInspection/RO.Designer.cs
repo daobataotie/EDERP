@@ -30,14 +30,15 @@ namespace Book.UI.produceManager.PCAssemblyInspection
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.lblJiagongbie = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.TCProduct = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCCustomer = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCPronoteHeaderId = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCCheckDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCCheckNum = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCWaiguan = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCJiagongbie = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCJiao = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCShensuojiao = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCSuoluosi = new DevExpress.XtraReports.UI.XRTableCell();
@@ -63,7 +64,6 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -80,7 +80,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_InvoiceCusId = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbl_PronoteHeaderId = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_CustomerId = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_PCAssemblyInspectionDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
@@ -102,10 +102,30 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblJiagongbie,
+            this.xrLabel6,
             this.xrTable2});
             resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // lblJiagongbie
+            // 
+            this.lblJiagongbie.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            resources.ApplyResources(this.lblJiagongbie, "lblJiagongbie");
+            this.lblJiagongbie.Name = "lblJiagongbie";
+            this.lblJiagongbie.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lblJiagongbie.StylePriority.UseBorders = false;
+            this.lblJiagongbie.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel6
+            // 
+            this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            resources.ApplyResources(this.xrLabel6, "xrLabel6");
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel6.StylePriority.UseBorders = false;
+            this.xrLabel6.StylePriority.UseTextAlignment = false;
             // 
             // xrTable2
             // 
@@ -124,11 +144,10 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.TCProduct,
-            this.TCCustomer,
+            this.TCPronoteHeaderId,
             this.TCCheckDate,
             this.TCCheckNum,
             this.TCWaiguan,
-            this.TCJiagongbie,
             this.TCJiao,
             this.TCShensuojiao,
             this.TCSuoluosi,
@@ -150,43 +169,37 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             // 
             resources.ApplyResources(this.TCProduct, "TCProduct");
             this.TCProduct.Name = "TCProduct";
-            this.TCProduct.Weight = 0.53549024779429166;
+            this.TCProduct.Weight = 0.61138915391093474;
             // 
-            // TCCustomer
+            // TCPronoteHeaderId
             // 
-            resources.ApplyResources(this.TCCustomer, "TCCustomer");
-            this.TCCustomer.Name = "TCCustomer";
-            this.TCCustomer.Weight = 0.43741816282823404;
+            resources.ApplyResources(this.TCPronoteHeaderId, "TCPronoteHeaderId");
+            this.TCPronoteHeaderId.Name = "TCPronoteHeaderId";
+            this.TCPronoteHeaderId.Weight = 0.4573908474314205;
             // 
             // TCCheckDate
             // 
             resources.ApplyResources(this.TCCheckDate, "TCCheckDate");
             this.TCCheckDate.Name = "TCCheckDate";
-            this.TCCheckDate.Weight = 0.21171672676321626;
+            this.TCCheckDate.Weight = 0.2276957590929726;
             // 
             // TCCheckNum
             // 
             resources.ApplyResources(this.TCCheckNum, "TCCheckNum");
             this.TCCheckNum.Name = "TCCheckNum";
-            this.TCCheckNum.Weight = 0.18774950006502089;
+            this.TCCheckNum.Weight = 0.20772280668577492;
             // 
             // TCWaiguan
             // 
             resources.ApplyResources(this.TCWaiguan, "TCWaiguan");
             this.TCWaiguan.Name = "TCWaiguan";
-            this.TCWaiguan.Weight = 0.15379527996762157;
-            // 
-            // TCJiagongbie
-            // 
-            resources.ApplyResources(this.TCJiagongbie, "TCJiagongbie");
-            this.TCJiagongbie.Name = "TCJiagongbie";
-            this.TCJiagongbie.Weight = 0.19374124967426909;
+            this.TCWaiguan.Weight = 0.20572628264488535;
             // 
             // TCJiao
             // 
             resources.ApplyResources(this.TCJiao, "TCJiao");
             this.TCJiao.Name = "TCJiao";
-            this.TCJiao.Weight = 0.18641827413231316;
+            this.TCJiao.Weight = 0.19640459145897846;
             // 
             // TCShensuojiao
             // 
@@ -290,7 +303,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.xrLabel7,
             this.lbl_InvoiceCusId,
             this.xrLabel4,
-            this.lbl_PronoteHeaderId,
+            this.lbl_CustomerId,
             this.xrLabel3,
             this.lbl_PCAssemblyInspectionDate,
             this.xrLabel2,
@@ -330,7 +343,6 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.xrTableCell1,
             this.xrTableCell18,
             this.xrTableCell4,
-            this.xrTableCell17,
             this.xrTableCell2,
             this.xrTableCell5,
             this.xrTableCell6,
@@ -352,43 +364,37 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             // 
             resources.ApplyResources(this.xrTableCell3, "xrTableCell3");
             this.xrTableCell3.Name = "xrTableCell3";
-            this.xrTableCell3.Weight = 0.53549087016609687;
+            this.xrTableCell3.Weight = 0.61138967172172887;
             // 
             // xrTableCell20
             // 
             resources.ApplyResources(this.xrTableCell20, "xrTableCell20");
             this.xrTableCell20.Name = "xrTableCell20";
-            this.xrTableCell20.Weight = 0.43741749438105043;
+            this.xrTableCell20.Weight = 0.45739082077364107;
             // 
             // xrTableCell1
             // 
             resources.ApplyResources(this.xrTableCell1, "xrTableCell1");
             this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Weight = 0.21171681891397107;
+            this.xrTableCell1.Weight = 0.22769561825414716;
             // 
             // xrTableCell18
             // 
             resources.ApplyResources(this.xrTableCell18, "xrTableCell18");
             this.xrTableCell18.Name = "xrTableCell18";
-            this.xrTableCell18.Weight = 0.18774951158386449;
+            this.xrTableCell18.Weight = 0.20772276886340343;
             // 
             // xrTableCell4
             // 
             resources.ApplyResources(this.xrTableCell4, "xrTableCell4");
             this.xrTableCell4.Name = "xrTableCell4";
-            this.xrTableCell4.Weight = 0.15379508990669588;
-            // 
-            // xrTableCell17
-            // 
-            resources.ApplyResources(this.xrTableCell17, "xrTableCell17");
-            this.xrTableCell17.Name = "xrTableCell17";
-            this.xrTableCell17.Weight = 0.19374161251785482;
+            this.xrTableCell4.Weight = 0.20572642965794918;
             // 
             // xrTableCell2
             // 
             resources.ApplyResources(this.xrTableCell2, "xrTableCell2");
             this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Weight = 0.18641808983080963;
+            this.xrTableCell2.Weight = 0.19640417802947341;
             // 
             // xrTableCell5
             // 
@@ -485,12 +491,12 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             // 
-            // lbl_PronoteHeaderId
+            // lbl_CustomerId
             // 
-            resources.ApplyResources(this.lbl_PronoteHeaderId, "lbl_PronoteHeaderId");
-            this.lbl_PronoteHeaderId.Name = "lbl_PronoteHeaderId";
-            this.lbl_PronoteHeaderId.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_PronoteHeaderId.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.lbl_CustomerId, "lbl_CustomerId");
+            this.lbl_CustomerId.Name = "lbl_CustomerId";
+            this.lbl_CustomerId.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_CustomerId.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel3
             // 
@@ -627,7 +633,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
         private DevExpress.XtraReports.UI.XRLabel lblCompanyName;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.XRLabel lbl_ReportName;
-        private DevExpress.XtraReports.UI.XRLabel lbl_PronoteHeaderId;
+        private DevExpress.XtraReports.UI.XRLabel lbl_CustomerId;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel lbl_PCAssemblyInspectionDate;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
@@ -676,12 +682,12 @@ namespace Book.UI.produceManager.PCAssemblyInspection
         private DevExpress.XtraReports.UI.XRTableCell TCChongji;
         private DevExpress.XtraReports.UI.XRTableCell TCEmoloyee;
         private DevExpress.XtraReports.UI.XRLabel lblEmployee1;
-        private DevExpress.XtraReports.UI.XRTableCell TCCustomer;
-        private DevExpress.XtraReports.UI.XRTableCell TCJiagongbie;
+        private DevExpress.XtraReports.UI.XRTableCell TCPronoteHeaderId;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell20;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;
         private DevExpress.XtraReports.UI.XRTableCell TCNote;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
         private DevExpress.XtraReports.UI.XRLabel lblReportDate;
+        private DevExpress.XtraReports.UI.XRLabel lblJiagongbie;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
     }
 }

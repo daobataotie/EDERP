@@ -24,7 +24,8 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.lblReportDate.Text += DateTime.Now.ToString("yyyy-MM-dd");
             this.lbl_PCAssemblyInspectionId.Text = pCAssemblyInspection.PCAssemblyInspectionId;
             this.lbl_PCAssemblyInspectionDate.Text = pCAssemblyInspection.PCAssemblyInspectionDate.Value.ToString("yyyy-MM-dd");
-            this.lbl_PronoteHeaderId.Text = pCAssemblyInspection.PronoteHeaderId;
+            //this.lbl_PronoteHeaderId.Text = pCAssemblyInspection.PronoteHeaderId;
+            this.lbl_CustomerId.Text = pCAssemblyInspection.Customer.CustomerShortName;
             this.lbl_InvoiceCusId.Text = pCAssemblyInspection.InvoiceCusId;
             this.lbl_Note.Text = pCAssemblyInspection.Note;
             this.lbl_Employee.Text = pCAssemblyInspection.Employee == null ? "" : pCAssemblyInspection.Employee.EmployeeName;
@@ -32,10 +33,11 @@ namespace Book.UI.produceManager.PCAssemblyInspection
 
             TCProduct.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
             TCCheckDate.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_PCAssemblyInspectionDetailDate, "{0:HH:mm}");
-            TCCustomer.DataBindings.Add("Text", this.DataSource, "Customer." + Model.Customer.PRO_CustomerShortName);
+            //TCPronoteHeaderId.DataBindings.Add("Text", this.DataSource, "Customer." + Model.Customer.PRO_CustomerShortName);
+            TCPronoteHeaderId.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_PronoteHeaderId);
             TCCheckNum.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_CheckNum, "{0:0}");
             TCWaiguan.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Waiguan);
-            TCJiagongbie.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Jiagongbie);
+            //TCJiagongbie.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Jiagongbie);
             TCJiao.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Jiao);
             TCShensuojiao.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Shensuojiao);
             TCSuoluosi.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Luosi);
@@ -48,6 +50,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             TCChongji.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Chongji);
             TCEmoloyee.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
             TCNote.DataBindings.Add("Text", this.DataSource, Model.PCAssemblyInspectionDetail.PRO_Note);
+            this.lblJiagongbie.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
         }
     }
 }

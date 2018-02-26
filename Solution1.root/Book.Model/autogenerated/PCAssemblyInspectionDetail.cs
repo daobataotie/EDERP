@@ -135,6 +135,12 @@ namespace Book.Model
 		/// 产品
 		/// </summary>
 		private Product _product;
+
+
+        //2018年2月23日14:30:02
+        private string _pronoteHeaderId;
+
+        private PronoteHeader _pronoteHeader;
 		 
 		#endregion
 		
@@ -515,6 +521,32 @@ namespace Book.Model
 			}
 			
 		}
+
+        public string PronoteHeaderId
+        {
+            get
+            {
+                return this._pronoteHeaderId;
+            }
+            set
+            {
+                this._pronoteHeaderId = value;
+            }
+        }
+
+        public virtual PronoteHeader PronoteHeader
+        {
+            get
+            {
+                return this._pronoteHeader;
+            }
+            set
+            {
+                this._pronoteHeader = value;
+            }
+
+        }
+
 		/// <summary>
 		/// 
 		/// </summary>
@@ -619,8 +651,8 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		public readonly static string PRO_Note = "Note";
-		
 
+        public readonly static string PRO_PronoteHeaderId = "PronoteHeaderId";
 		#endregion
 	}
 }

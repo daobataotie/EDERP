@@ -426,6 +426,9 @@
   <data name="labelControl1.Text" xml:space="preserve">
     <value>說明：合格√ 不合格× 無此項△</value>
   </data>
+  <data name="gridColumn3.Caption" xml:space="preserve">
+    <value>型號/規格</value>
+  </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>客戶</value>
   </data>
@@ -442,11 +445,17 @@
   <data name="gridColumn11.Caption" xml:space="preserve">
     <value>加工別</value>
   </data>
+  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
   <data name="gridColumn11.Width" type="System.Int32, mscorlib">
-    <value>162</value>
+    <value>72</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>RICH腳</value>
+  </data>
+  <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="gridColumn5.Width" type="System.Int32, mscorlib">
     <value>56</value>
@@ -486,6 +495,9 @@
   </data>
   <data name="layoutControlItem3.Text" xml:space="preserve">
     <value>單據日期：</value>
+  </data>
+  <data name="layoutControlItem4.Text" xml:space="preserve">
+    <value>加工單號：</value>
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>製單人：</value>

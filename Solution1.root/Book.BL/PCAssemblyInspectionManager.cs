@@ -95,7 +95,7 @@ namespace Book.BL
             //
             // todo: add other logic here.
             //
-                       try
+            try
             {
                 BL.V.BeginTransaction();
                 Validate(pCAssemblyInspection);
@@ -130,8 +130,8 @@ namespace Book.BL
         {
             if (model.PCAssemblyInspectionDate == null)
                 throw new Helper.InvalidValueException(Model.PCAssemblyInspection.PRO_PCAssemblyInspectionDate);
-            if (string.IsNullOrEmpty(model.PronoteHeaderId))
-                throw new Helper.InvalidValueException(Model.PCAssemblyInspection.PRO_PronoteHeaderId);
+            if (string.IsNullOrEmpty(model.CustomerId))
+                throw new Helper.InvalidValueException(Model.PCAssemblyInspection.PRO_CustomerId);
 
         }
 

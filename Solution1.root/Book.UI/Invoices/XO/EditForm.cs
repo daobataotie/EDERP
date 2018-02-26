@@ -35,6 +35,7 @@ namespace Book.UI.Invoices.XO
         int tags = 0;
         private const int SISHEWURU_WEISHU = 3;
         int LastFlag = 0; //页面载入时是否执行 last方法
+        string InvoiceCusID = "";  //初始訂單號，保存時判斷訂單號是否修改過
 
         public EditForm()
         {
@@ -360,10 +361,17 @@ namespace Book.UI.Invoices.XO
 
             //修改未出货数量
             if (this.action == "update")
+            {
                 foreach (var item in this.invoice.Details)
                 {
                     item.InvoiceXODetailQuantity0 = Convert.ToDouble(item.InvoiceXODetailQuantity) - Convert.ToDouble(item.InvoiceXODetailBeenQuantity);
                 }
+
+                if (this.InvoiceCusID != this.invoice.CustomerInvoiceXOId)  //訂單號有變，修改對應的單據
+                {
+                    this.invoiceManager.UpdateRelationInvoiceCusID(this.InvoiceCusID, this.invoice.CustomerInvoiceXOId);
+                }
+            }
 
             switch (this.action)
             {
@@ -773,6 +781,7 @@ namespace Book.UI.Invoices.XO
             //if (this.invoice.InvoiceYjrq!=null)
             //    this.dateEditYJRQ.DateTime = this.invoice.InvoiceYjrq == null ? DateTime.Now.AddDays(3) : this.invoice.InvoiceYjrq.Value;    
             this.textEditCustomerInvoiceXOID.Text = this.invoice.CustomerInvoiceXOId;
+            this.InvoiceCusID = this.invoice.CustomerInvoiceXOId;
             //this.buttonEditEmployee1.EditValue = BL.V.ActiveOperator.Employee;
             this.buttonEditEmployee2.EditValue = this.invoice.Employee2;
             this.newChooseContorlEmp4.EditValue = this.invoice.Employee4;

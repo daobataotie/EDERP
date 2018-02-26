@@ -27,7 +27,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="PassNum" column="PassNum" />
       <result property="EmployeeId" column="EmployeeId" />
       <result property="Note" column="Note" />
-      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />
+      <result property="PronoteHeaderId" column="PronoteHeaderId" />
+      <!--<result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_by_primary_key" />-->
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key" />
       <result property="PCAssemblyInspection" column="PCAssemblyInspectionId" lazyLoad="false" select="PCAssemblyInspection.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
@@ -80,7 +81,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Chongji],
 				[PassNum],
 				[EmployeeId],
-				[Note]
+				[Note],
+        [PronoteHeaderId]
 			FROM
 				[dbo].[PCAssemblyInspectionDetail]
 			WHERE
@@ -154,7 +156,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Chongji],
 				[PassNum],
 				[EmployeeId],
-				[Note]
+				[Note],
+        [PronoteHeaderId]
 			) 
 			VALUES 
 			(
@@ -178,7 +181,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#Chongji#,
 				#PassNum#,
 				#EmployeeId#,
-				#Note#
+				#Note#,
+        #PronoteHeaderId#
 			)
              ]]>
     </insert>
@@ -205,7 +209,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Chongji] = #Chongji#,
 				[PassNum] = #PassNum#,
 				[EmployeeId] = #EmployeeId#,
-				[Note] = #Note#
+				[Note] = #Note#,
+        [PronoteHeaderId]=#PronoteHeaderId#
 			WHERE
 				[PCAssemblyInspectionDetailId] = #PCAssemblyInspectionDetailId#
                     ]]>

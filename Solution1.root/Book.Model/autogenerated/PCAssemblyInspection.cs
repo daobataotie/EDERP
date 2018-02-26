@@ -66,6 +66,12 @@ namespace Book.Model
 		private PronoteHeader _pronoteHeader;
 
         private Employee _employee1;
+
+        //2018年2月23日14:31:27
+        private string _customerId;
+
+        private Customer _customer;
+
 		#endregion
 		
 		#region Properties
@@ -163,17 +169,17 @@ namespace Book.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string PronoteHeaderId
-		{
-			get 
-			{
-				return this._pronoteHeaderId;
-			}
-			set 
-			{
-				this._pronoteHeaderId = value;
-			}
-		}
+        public string PronoteHeaderId
+        {
+            get
+            {
+                return this._pronoteHeaderId;
+            }
+            set
+            {
+                this._pronoteHeaderId = value;
+            }
+        }
 
 		/// <summary>
 		/// 
@@ -214,16 +220,16 @@ namespace Book.Model
 		/// <summary>
 		/// 生产通知头
 		/// </summary>
-		public virtual PronoteHeader PronoteHeader
-		{
-			get
-			{
-				return this._pronoteHeader;
-			}
-			set
-			{
-				this._pronoteHeader = value;
-			}
+        public virtual PronoteHeader PronoteHeader
+        {
+            get
+            {
+                return this._pronoteHeader;
+            }
+            set
+            {
+                this._pronoteHeader = value;
+            }
 
         }
 
@@ -231,6 +237,31 @@ namespace Book.Model
         {
             get { return _employee1; }
             set { _employee1 = value; }
+        }
+
+        public string CustomerId
+        {
+            get
+            {
+                return this._customerId;
+            }
+            set
+            {
+                this._customerId = value;
+            }
+        }
+
+        public virtual Customer Customer
+        {
+            get
+            {
+                return this._customer;
+            }
+            set
+            {
+                this._customer = value;
+            }
+
         }
 		 
 		/// <summary>
@@ -274,6 +305,8 @@ namespace Book.Model
 		public readonly static string PRO_Note = "Note";
 
         public readonly static string PRO_EmployeeId1 = "EmployeeId1";
+
+        public readonly static string PRO_CustomerId = "CustomerId";
 
 		#endregion
 	}

@@ -1,6 +1,6 @@
 ﻿namespace Book.UI.produceManager.PCAssemblyInspection
 {
-    partial class EditForm
+    partial class EditForm_Backup
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.nccCustomer = new Book.UI.Invoices.NewChooseContorl();
             this.nccEmployee1 = new Book.UI.Invoices.NewChooseContorl();
             this.txt_Note = new DevExpress.XtraEditors.TextEdit();
             this.btn_Add = new DevExpress.XtraEditors.SimpleButton();
             this.txt_InvoiceCusId = new DevExpress.XtraEditors.TextEdit();
             this.nccEmployee = new Book.UI.Invoices.NewChooseContorl();
+            this.txt_PronoteHeaderId = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btn_Remove = new DevExpress.XtraEditors.SimpleButton();
             this.date_PCAssemblyInspectionDate = new DevExpress.XtraEditors.DateEdit();
@@ -78,7 +78,6 @@
             this.repositoryItemLookUpEdit18 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.bindingSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -95,6 +94,7 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -102,7 +102,6 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barPronoteHeader = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -111,6 +110,7 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Note.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_InvoiceCusId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_PronoteHeaderId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_PCAssemblyInspectionDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_PCAssemblyInspectionDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -149,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
@@ -156,7 +157,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -179,12 +179,12 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.nccCustomer);
             this.layoutControl1.Controls.Add(this.nccEmployee1);
             this.layoutControl1.Controls.Add(this.txt_Note);
             this.layoutControl1.Controls.Add(this.btn_Add);
             this.layoutControl1.Controls.Add(this.txt_InvoiceCusId);
             this.layoutControl1.Controls.Add(this.nccEmployee);
+            this.layoutControl1.Controls.Add(this.txt_PronoteHeaderId);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.btn_Remove);
             this.layoutControl1.Controls.Add(this.date_PCAssemblyInspectionDate);
@@ -193,12 +193,6 @@
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            // 
-            // nccCustomer
-            // 
-            this.nccCustomer.EditValue = null;
-            resources.ApplyResources(this.nccCustomer, "nccCustomer");
-            this.nccCustomer.Name = "nccCustomer";
             // 
             // nccEmployee1
             // 
@@ -225,7 +219,6 @@
             resources.ApplyResources(this.txt_InvoiceCusId, "txt_InvoiceCusId");
             this.txt_InvoiceCusId.MenuManager = this.barManager1;
             this.txt_InvoiceCusId.Name = "txt_InvoiceCusId";
-            this.txt_InvoiceCusId.Properties.ReadOnly = true;
             this.txt_InvoiceCusId.StyleController = this.layoutControl1;
             // 
             // nccEmployee
@@ -233,6 +226,14 @@
             this.nccEmployee.EditValue = null;
             resources.ApplyResources(this.nccEmployee, "nccEmployee");
             this.nccEmployee.Name = "nccEmployee";
+            // 
+            // txt_PronoteHeaderId
+            // 
+            resources.ApplyResources(this.txt_PronoteHeaderId, "txt_PronoteHeaderId");
+            this.txt_PronoteHeaderId.MenuManager = this.barManager1;
+            this.txt_PronoteHeaderId.Name = "txt_PronoteHeaderId";
+            this.txt_PronoteHeaderId.Properties.ReadOnly = true;
+            this.txt_PronoteHeaderId.StyleController = this.layoutControl1;
             // 
             // labelControl1
             // 
@@ -315,8 +316,7 @@
             this.gridColumn14,
             this.gridColumn15,
             this.gridColumn17,
-            this.gridColumn18,
-            this.gridColumn19});
+            this.gridColumn18});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -396,7 +396,7 @@
             // gridColumn11
             // 
             resources.ApplyResources(this.gridColumn11, "gridColumn11");
-            this.gridColumn11.FieldName = "Product.ProductName";
+            this.gridColumn11.FieldName = "Jiagongbie";
             this.gridColumn11.Name = "gridColumn11";
             // 
             // gridColumn5
@@ -563,12 +563,6 @@
             this.gridColumn18.FieldName = "Note";
             this.gridColumn18.Name = "gridColumn18";
             // 
-            // gridColumn19
-            // 
-            resources.ApplyResources(this.gridColumn19, "gridColumn19");
-            this.gridColumn19.FieldName = "PronoteHeaderId";
-            this.gridColumn19.Name = "gridColumn19";
-            // 
             // repositoryItemLookUpEdit8
             // 
             resources.ApplyResources(this.repositoryItemLookUpEdit8, "repositoryItemLookUpEdit8");
@@ -661,14 +655,14 @@
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
+            this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem7,
             this.layoutControlItem8,
             this.layoutControlItem9,
             this.layoutControlItem10,
             this.layoutControlItem6,
-            this.layoutControlItem13,
-            this.layoutControlItem11});
+            this.layoutControlItem13});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(900, 450);
@@ -701,8 +695,17 @@
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Location = new System.Drawing.Point(246, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(175, 25);
+            this.layoutControlItem3.Size = new System.Drawing.Size(191, 25);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.txt_PronoteHeaderId;
+            resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
+            this.layoutControlItem4.Location = new System.Drawing.Point(437, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(225, 25);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem5
             // 
@@ -759,9 +762,9 @@
             // 
             this.layoutControlItem6.Control = this.txt_InvoiceCusId;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(693, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(662, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(187, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(218, 25);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem13
@@ -772,17 +775,6 @@
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(330, 26);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(72, 14);
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.nccCustomer;
-            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(421, 0);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(272, 25);
-            this.layoutControlItem11.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(36, 14);
-            this.layoutControlItem11.TextToControlDistance = 5;
             // 
             // barPronoteHeader
             // 
@@ -811,6 +803,7 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txt_Note.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_InvoiceCusId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_PronoteHeaderId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_PCAssemblyInspectionDate.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_PCAssemblyInspectionDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -849,6 +842,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
@@ -856,7 +850,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -871,10 +864,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.TextEdit txt_InvoiceCusId;
         private Book.UI.Invoices.NewChooseContorl nccEmployee;
+        private DevExpress.XtraEditors.TextEdit txt_PronoteHeaderId;
         private DevExpress.XtraEditors.DateEdit date_PCAssemblyInspectionDate;
         private DevExpress.XtraEditors.TextEdit txt_PCAssemblyInspectionId;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraBars.BarButtonItem barPronoteHeader;
@@ -935,8 +930,5 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit20;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit3;
-        private Book.UI.Invoices.NewChooseContorl nccCustomer;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }
