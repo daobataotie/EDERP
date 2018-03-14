@@ -141,7 +141,7 @@ namespace Book.UI.produceManager.ProduceInDepot
                         details = details.Where(d => d.WorkHousename == "組A").ToList();
                         ExportExcel(details, "組A");
 
-                       details2 = details2.Where(d => d.WorkHousename == "組A(半)").ToList();
+                        details2 = details2.Where(d => d.WorkHousename == "組A(半)").ToList();
                         ExportExcel(details2, "組A(半)");
                     }
                     //else if (RowFilter.Contains("組A(半)"))
@@ -208,35 +208,43 @@ namespace Book.UI.produceManager.ProduceInDepot
                 #region Set Header
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).Font.Size = 20;
-                excel.get_Range(excel.Cells[1, 1], excel.Cells[2, 16]).HorizontalAlignment = -4108;
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 16]).ColumnWidth = 12;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[2, 17]).HorizontalAlignment = -4108;
+                excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 17]).ColumnWidth = 12;
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 2]).ColumnWidth = 20;
                 excel.get_Range(excel.Cells[2, 3], excel.Cells[2, 3]).ColumnWidth = 30;
                 excel.get_Range(excel.Cells[2, 11], excel.Cells[2, 12]).ColumnWidth = 20;
 
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 16]).Interior.Color = 12566463;
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[details.Count + 2, 16]).RowHeight = 20;
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[details.Count + 2, 16]).Font.Size = 13;
-                excel.get_Range(excel.Cells[3, 1], excel.Cells[details.Count + 2, 16]).WrapText = true;
-                excel.get_Range(excel.Cells[3, 1], excel.Cells[details.Count + 2, 16]).EntireRow.AutoFit();
+                excel.get_Range(excel.Cells[2, 1], excel.Cells[details.Count + 2, 17]).RowHeight = 20;
+                excel.get_Range(excel.Cells[2, 1], excel.Cells[details.Count + 2, 17]).Font.Size = 13;
+                excel.get_Range(excel.Cells[3, 1], excel.Cells[details.Count + 2, 17]).WrapText = true;
+                excel.get_Range(excel.Cells[3, 1], excel.Cells[details.Count + 2, 17]).EntireRow.AutoFit();
 
                 excel.Cells[2, 1] = "入庫日期";
                 excel.Cells[2, 2] = "入庫單號";
                 excel.Cells[2, 3] = "產品名稱";
-                excel.Cells[2, 4] = "公司部門";
-                excel.Cells[2, 5] = "單位";
-                excel.Cells[2, 6] = "生產數量";
-                excel.Cells[2, 7] = "合計生產";
-                excel.Cells[2, 8] = "合計合格";
-                excel.Cells[2, 9] = "合計入庫";
-                excel.Cells[2, 10] = "合計轉生產";
-                excel.Cells[2, 11] = "加工單";
-                excel.Cells[2, 12] = "客戶訂單號";
-                excel.Cells[2, 13] = "生產數量";
-                excel.Cells[2, 14] = "合格數量";
-                excel.Cells[2, 15] = "轉生產數量";
-                excel.Cells[2, 16] = "入庫數量";
+                excel.Cells[2, 4] = "型號";
+                excel.Cells[2, 5] = "公司部門";
+                excel.Cells[2, 6] = "單位";
+                excel.Cells[2, 7] = "生產數量";
+                excel.Cells[2, 8] = "合計生產";
+                excel.Cells[2, 9] = "合計合格";
+                excel.Cells[2, 10] = "合計入庫";
+                excel.Cells[2, 11] = "合計轉生產";
+                excel.Cells[2, 12] = "加工單";
+                excel.Cells[2, 13] = "客戶訂單號";
+                excel.Cells[2, 14] = "生產數量";
+                excel.Cells[2, 15] = "合格數量";
+                excel.Cells[2, 16] = "轉生產數量";
+                excel.Cells[2, 17] = "入庫數量";
 
+                #endregion
+
+                #region 取商品對應的母件型號
+                foreach (var item in details)
+                {
+                    item.CustomerProductName = (this.manager as BL.ProduceInDepotDetailManager).SelectCustomerProductNameByPronoteHeaderId(item.PronoteHeaderId);
+                }
                 #endregion
 
                 for (int i = 0; i < details.Count; i++)
@@ -244,19 +252,20 @@ namespace Book.UI.produceManager.ProduceInDepot
                     excel.Cells[i + 3, 1] = details[i].mProduceInDepotDate.HasValue ? details[i].mProduceInDepotDate.Value.ToString("yyyy-MM-dd") : "";
                     excel.Cells[i + 3, 2] = details[i].ProduceInDepotId;
                     excel.Cells[i + 3, 3] = details[i].ProductName;
-                    excel.Cells[i + 3, 4] = details[i].WorkHousename;
-                    excel.Cells[i + 3, 5] = details[i].ProductUnit;
-                    excel.Cells[i + 3, 6] = details[i].PronoteHeaderSum;
-                    excel.Cells[i + 3, 7] = details[i].HeJiProceduresSum;
-                    excel.Cells[i + 3, 8] = details[i].HeJiCheckOutSum;
-                    excel.Cells[i + 3, 9] = details[i].HeJiProduceQuantity;
-                    excel.Cells[i + 3, 10] = details[i].HeJiProduceTransferQuantity;
-                    excel.Cells[i + 3, 11] = details[i].PronoteHeaderId;
-                    excel.Cells[i + 3, 12] = details[i].CusXOId;
-                    excel.Cells[i + 3, 13] = details[i].ProceduresSum;
-                    excel.Cells[i + 3, 14] = details[i].CheckOutSum;
-                    excel.Cells[i + 3, 15] = details[i].ProduceTransferQuantity;
-                    excel.Cells[i + 3, 16] = details[i].ProduceQuantity;
+                    excel.Cells[i + 3, 4] = details[i].CustomerProductName;
+                    excel.Cells[i + 3, 5] = details[i].WorkHousename;
+                    excel.Cells[i + 3, 6] = details[i].ProductUnit;
+                    excel.Cells[i + 3, 7] = details[i].PronoteHeaderSum;
+                    excel.Cells[i + 3, 8] = details[i].HeJiProceduresSum;
+                    excel.Cells[i + 3, 9] = details[i].HeJiCheckOutSum;
+                    excel.Cells[i + 3, 10] = details[i].HeJiProduceQuantity;
+                    excel.Cells[i + 3, 11] = details[i].HeJiProduceTransferQuantity;
+                    excel.Cells[i + 3, 12] = details[i].PronoteHeaderId;
+                    excel.Cells[i + 3, 13] = details[i].CusXOId;
+                    excel.Cells[i + 3, 14] = details[i].ProceduresSum;
+                    excel.Cells[i + 3, 15] = details[i].CheckOutSum;
+                    excel.Cells[i + 3, 16] = details[i].ProduceTransferQuantity;
+                    excel.Cells[i + 3, 17] = details[i].ProduceQuantity;
                 }
 
                 excel.Visible = true;//是否打开该Excel文件

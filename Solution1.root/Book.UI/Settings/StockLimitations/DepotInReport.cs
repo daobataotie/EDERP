@@ -13,7 +13,7 @@ namespace Book.UI.Settings.StockLimitations
 
         private Model.DepotIn DepotIn;
         public DepotInReport(string DepotInId)
-        {  
+        {
 
             InitializeComponent();
 
@@ -28,7 +28,7 @@ namespace Book.UI.Settings.StockLimitations
 
             //CompanyInfo
             this.xrLabelCompanyInfoName.Text = BL.Settings.CompanyChineseName;
-            this.xrLabelDataName.Text =Properties.Resources.DepotIn;
+            this.xrLabelDataName.Text = Properties.Resources.DepotIn;
             this.xrLabelPrintDate.Text = "Ñu±íÈÕÆÚ£º        " + DateTime.Now.ToShortDateString();
 
 
@@ -54,6 +54,7 @@ namespace Book.UI.Settings.StockLimitations
 
             this.xrLabelDescription.Text = DepotIn.Description;
             this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, Model.DepotInDetail.PRO_Inumber);
+            this.TCProductID.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
             this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
             //this.xrTableCellXH.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
             this.xrTableCellCount.DataBindings.Add("Text", this.DataSource, Model.DepotInDetail.PRO_DepotInQuantity);

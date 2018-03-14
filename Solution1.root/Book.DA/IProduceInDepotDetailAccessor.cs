@@ -58,6 +58,8 @@ namespace Book.DA
         DataTable ProducePronotePlanReport(DateTime startdate, DateTime enddate, string pronoteheaderid, string xocustomerid, string invoiceCusId, string employeeid, string pronotetype, string workhouseid, string productid, bool? isJieAN);
 
         string SelectByInvoiceCusID(string ID);
+
+        string SelectCustomerProductNameByPronoteHeaderId(string pronoteHeaderId);
     }
 }
 

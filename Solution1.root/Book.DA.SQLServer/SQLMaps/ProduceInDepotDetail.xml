@@ -142,5 +142,11 @@
       select distinct Cast(ProduceInDepotId as varchar) + ' ' +char(10) from ProduceInDepotDetail where PronoteHeaderId in (select PronoteHeaderID from PronoteHeader where InvoiceXOId =(select InvoiceId from InvoiceXO where CustomerInvoiceXOId=#value#)) for xml path('')
       ]]>
     </select>
+
+    <select id="SelectCustomerProductNameByPronoteHeaderId" resultClass="string" parameterClass="string">
+      <![CDATA[
+      select CustomerProductName from Product where ProductId=(select ProductId from MPSdetails where MPSdetailsId =(select MPSdetailsId from MRSdetails where MRSdetailsId = (select MRSdetailsId from PronoteHeader where PronoteHeaderID=#value#)))
+      ]]>
+    </select>
   </statements>
 </sqlMap>

@@ -175,6 +175,11 @@ namespace Book.BL
         {
             return accessor.SelectByInvoiceCusID(ID);
         }
+
+        public string SelectCustomerProductNameByPronoteHeaderId(string pronoteHeaderId)
+        {
+            return accessor.SelectCustomerProductNameByPronoteHeaderId(pronoteHeaderId);
+        }
     }
 }
 

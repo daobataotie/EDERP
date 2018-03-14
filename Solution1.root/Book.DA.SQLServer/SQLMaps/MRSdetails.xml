@@ -22,12 +22,12 @@
       <result property="MRSHeaderId" column="MRSHeaderId" />
       <result property="MRSdetailssum" column="MRSdetailssum" />
       <result property="MRSdetailsdes" column="MRSdetailsdes" />
-      <!--<result property="MPSheaderId" column="MPSheaderId" />-->
+      <result property="MPSheaderId" column="MPSheaderId" />
       <result property="ProductUnit" column="ProductUnit" />
       <result property="MRSdetailsQuantity" column="MRSdetailsQuantity" />
       <!--<result property="MRSHasSingleSum" column="MRSHasSingleSum" />
-      <result property="MPSDate" column="MPSDate" />
-      <result property="MPSdetailsId" column="MPSdetailsId" />-->
+      <result property="MPSDate" column="MPSDate" />-->
+      <result property="MPSdetailsId" column="MPSdetailsId" />
       <result property="MadeProductId" column="MadeProductId" />
       <!--<result property="DetailsFlag" column="DetailsFlag" />-->
       <result property="Inumber" column="Inumber" />
@@ -59,7 +59,7 @@
   <statements>
     <select id="select_byMRSheaderId"  resultMap="MRSdetailsAndProductFPSLsumResult" parameterClass="string">
       <![CDATA[
-      SELECT MRSdetailsId,ProductId,MRSHeaderId,MRSdetailssum,MRSdetailsdes,ProductUnit,MRSdetailsQuantity,MadeProductId, Inumber,JiaoHuoDate,ArrangeDesc,BeforePackageProductId,SupplierId,WorkHouseNextId,MaterialDesc,(select ProductName+'{'+CustomerProductName+'}' from product p where p.productid=MRSdetails.MadeProductId) as MadeProductName FROM MRSdetails WHERE MRSHeaderId=#value# order by Inumber
+      SELECT MPSheaderId,MPSdetailsId,MRSdetailsId,ProductId,MRSHeaderId,MRSdetailssum,MRSdetailsdes,ProductUnit,MRSdetailsQuantity,MadeProductId, Inumber,JiaoHuoDate,ArrangeDesc,BeforePackageProductId,SupplierId,WorkHouseNextId,MaterialDesc,(select ProductName+'{'+CustomerProductName+'}' from product p where p.productid=MRSdetails.MadeProductId) as MadeProductName FROM MRSdetails WHERE MRSHeaderId=#value# order by Inumber
       ]]>
     </select>
 

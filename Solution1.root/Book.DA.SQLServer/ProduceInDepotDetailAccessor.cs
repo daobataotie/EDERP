@@ -1738,5 +1738,10 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<string>("ProduceInDepotDetail.SelectByInvoiceCusID", ID);
         }
+
+        public string SelectCustomerProductNameByPronoteHeaderId(string pronoteHeaderId)
+        {
+            return sqlmapper.QueryForObject<string>("ProduceInDepotDetail.SelectCustomerProductNameByPronoteHeaderId", pronoteHeaderId);
+        }
     }
 }
