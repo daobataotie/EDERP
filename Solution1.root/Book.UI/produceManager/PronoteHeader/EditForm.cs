@@ -1768,6 +1768,13 @@ namespace Book.UI.produceManager.PronoteHeader
             //IList<Model.PronotedetailsMaterial> detail = from n in this.pronoteHeader.DetailsMaterial
             //             where n.Checkeds == true
             //             select n;
+
+            if (this.action != "view")
+            {
+                MessageBox.Show("請保存后再生成領料單", this.Text, MessageBoxButtons.OK);
+                return;
+            }
+
             if (this.pronoteHeader.IsClose.HasValue && this.pronoteHeader.IsClose.Value)
             {
                 MessageBox.Show( "已結案，不能生成領料單", this.Text,MessageBoxButtons.OK);
