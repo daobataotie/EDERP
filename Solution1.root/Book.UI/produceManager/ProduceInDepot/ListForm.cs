@@ -189,7 +189,7 @@ namespace Book.UI.produceManager.ProduceInDepot
                 Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
                 excel.Application.Workbooks.Add(true);
 
-                Microsoft.Office.Interop.Excel.Range r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 16]);
+                Microsoft.Office.Interop.Excel.Range r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 17]);
                 r.MergeCells = true;//合并单元格
 
                 //Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignCenter = -4108;
