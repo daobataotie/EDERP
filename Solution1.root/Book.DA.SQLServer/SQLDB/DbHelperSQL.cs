@@ -15,9 +15,9 @@ namespace Book.DA.SQLServer.SQLDB
     public abstract class DbHelperSQL
     {
         //数据库连接字符串(web.config来配置)，可以动态更改connectionString支持多数据库.		
-        public static string connectionString = PubConstant.ConnectionString;     		
+        public static string connectionString = PubConstant.ConnectionString;
         public DbHelperSQL()
-        {            
+        {
         }
 
         #region 公用方法
@@ -206,7 +206,7 @@ namespace Book.DA.SQLServer.SQLDB
                 }
             }
         }
-      
+
         /// <summary>
         /// 执行Sql和Oracle滴混合事务
         /// </summary>
@@ -234,7 +234,7 @@ namespace Book.DA.SQLServer.SQLDB
                             if (myDE.CommandText.ToLower().IndexOf("count(") == -1)
                             {
                                 tx.Rollback();
-                                throw new Exception("违背要求"+myDE.CommandText+"必须符合select count(..的格式");
+                                throw new Exception("违背要求" + myDE.CommandText + "必须符合select count(..的格式");
                                 //return 0;
                             }
 
@@ -313,7 +313,7 @@ namespace Book.DA.SQLServer.SQLDB
                     throw e;
                 }
             }
-        }        
+        }
         /// <summary>
         /// 执行多条SQL语句，实现数据库事务。
         /// </summary>
@@ -529,8 +529,12 @@ namespace Book.DA.SQLServer.SQLDB
             catch (System.Data.SqlClient.SqlException e)
             {
                 throw e;
-            }   
-
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
         }
         /// <summary>
         /// 执行查询语句，返回DataSet
@@ -552,10 +556,15 @@ namespace Book.DA.SQLServer.SQLDB
                 {
                     throw new Exception(ex.Message);
                 }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
                 return ds;
             }
         }
-        public static DataSet Query(string SQLString, int Times,string tabelName)
+        public static DataSet Query(string SQLString, int Times, string tabelName)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -575,7 +584,29 @@ namespace Book.DA.SQLServer.SQLDB
             }
         }
 
-
+        public static object QueryObject(string SQLString)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(SQLString, connection);
+                    object obj = cmd.ExecuteScalar();
+                    obj = ((obj is DBNull) ? null : obj);
+                    return obj;
+                }
+                catch (System.Data.SqlClient.SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
+            }
+        }
 
         #endregion
 
@@ -654,14 +685,15 @@ namespace Book.DA.SQLServer.SQLDB
                 {
                     SqlCommand cmd = new SqlCommand();
                     try
-                    { int count = 0;
+                    {
+                        int count = 0;
                         //循环
                         foreach (CommandInfo myDE in cmdList)
                         {
                             string cmdText = myDE.CommandText;
                             SqlParameter[] cmdParms = (SqlParameter[])myDE.Parameters;
                             PrepareCommand(cmd, conn, trans, cmdText, cmdParms);
-                           
+
                             if (myDE.EffentNextType == EffentNextType.WhenHaveContine || myDE.EffentNextType == EffentNextType.WhenNoHaveContine)
                             {
                                 if (myDE.CommandText.ToLower().IndexOf("count(") == -1)
@@ -940,7 +972,7 @@ namespace Book.DA.SQLServer.SQLDB
             command.CommandType = CommandType.StoredProcedure;
             returnReader = command.ExecuteReader(CommandBehavior.CloseConnection);
             return returnReader;
-            
+
         }
 
 

@@ -108,6 +108,12 @@ namespace Book.BL
         {
             return accessor.SelectDetailMPSState(invoiceXO, isNeedMps);
         }
+
+
+        public IList<string> SelectProductIDs(string PronoteHeaderId)
+        {
+            return accessor.SelectProductIDs(PronoteHeaderId);
+        }
     }
 }
 

@@ -73,7 +73,11 @@ namespace Book.BL
             return accessor.IsExistsIndexOfBom(bomcom);
         }
 
-        
+        public IList<Model.BomComponentInfo> SelectBomIdAndUseQty(string productIds)
+        {
+            return accessor.SelectBomIdAndUseQty(productIds);
+        }
+
     }
 }
 

@@ -15,6 +15,12 @@ namespace Book.UI.produceManager.ProduceInDepot
     public partial class ListForm : BaseListForm
     {
         int tag = 0;
+        BL.BomComponentInfoManager bomComponentInfoManager = new Book.BL.BomComponentInfoManager();
+        BL.BomParentPartInfoManager bomParentPartInfoManager = new Book.BL.BomParentPartInfoManager();
+        BL.InvoiceXODetailManager invoiceXODetailManager = new Book.BL.InvoiceXODetailManager();
+        BL.ProductManager productManager = new Book.BL.ProductManager();
+
+
         public ListForm()
         {
             InitializeComponent();
@@ -211,10 +217,10 @@ namespace Book.UI.produceManager.ProduceInDepot
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[2, 17]).HorizontalAlignment = -4108;
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 17]).ColumnWidth = 12;
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 2]).ColumnWidth = 20;
-                excel.get_Range(excel.Cells[2, 3], excel.Cells[2, 3]).ColumnWidth = 30;
+                excel.get_Range(excel.Cells[2, 3], excel.Cells[2, 3]).ColumnWidth = 40;
                 excel.get_Range(excel.Cells[2, 11], excel.Cells[2, 12]).ColumnWidth = 20;
 
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 16]).Interior.Color = 12566463;
+                excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 17]).Interior.Color = 12566463;
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[details.Count + 2, 17]).RowHeight = 20;
                 excel.get_Range(excel.Cells[2, 1], excel.Cells[details.Count + 2, 17]).Font.Size = 13;
                 excel.get_Range(excel.Cells[3, 1], excel.Cells[details.Count + 2, 17]).WrapText = true;
@@ -243,7 +249,23 @@ namespace Book.UI.produceManager.ProduceInDepot
                 #region 取商品對應的母件型號
                 foreach (var item in details)
                 {
-                    item.CustomerProductName = (this.manager as BL.ProduceInDepotDetailManager).SelectCustomerProductNameByPronoteHeaderId(item.PronoteHeaderId);
+                    if (string.IsNullOrEmpty(item.CustomerProductName))
+                    {
+                        //item.CustomerProductName = (this.manager as BL.ProduceInDepotDetailManager).SelectCustomerProductNameByPronoteHeaderId(item.PronoteHeaderId);  如果一个订单里面多个商品同时用到某个子件，在物料需求里面该子件会合并计算为一笔，其实它对应有多个主件
+                        List<string> invoiceProductIds = this.invoiceXODetailManager.SelectProductIDs(item.PronoteHeaderId).ToList();
+                        List<string> parentProductIds = new List<string>();
+                        this.GetParentProductInfo("'" + item.ProductId + "'", parentProductIds);
+                        IEnumerable<string> productIds = invoiceProductIds.Intersect(parentProductIds);
+
+                        string pIds = "";
+                        foreach (var p in productIds)
+                        {
+                            pIds += "'" + p + "',";
+                        }
+                        pIds = pIds.TrimEnd(',');
+
+                        item.CustomerProductName = this.productManager.SelectCustomerProductNameByProductIds(pIds).TrimEnd(',');
+                    }
                 }
                 #endregion
 
@@ -468,6 +490,39 @@ namespace Book.UI.produceManager.ProduceInDepot
             }
         }
 
+        private void GetParentProductInfo(string productId, List<string> parentProductIds)
+        {
+            IList<Model.BomComponentInfo> bomComponentList = bomComponentInfoManager.SelectBomIdAndUseQty(productId);
+            if (bomComponentList == null || bomComponentList.Count == 0)
+                return;
+
+            string bomIds = "";
+            foreach (var component in bomComponentList)
+            {
+                bomIds += "'" + component.BomId + "',";
+            }
+            bomIds = bomIds.TrimEnd(',');
+
+            IList<Model.BomParentPartInfo> bomParentList = bomParentPartInfoManager.SelectProducts(bomIds);
+            string productIds = "";
+
+            #region 新版，一个子件没母件引用N次，叠加计算
+            foreach (var comInfo in bomComponentList)
+            {
+                Model.BomParentPartInfo parent = bomParentList.First(P => P.BomId == comInfo.BomId);
+                productIds += "'" + parent.ProductId + "',";
+
+                if (!parentProductIds.Contains(parent.ProductId))
+                {
+                    parentProductIds.Add(parent.ProductId);
+                }
+            }
+            #endregion
+
+            productIds = productIds.TrimEnd(',');
+
+            GetParentProductInfo(productIds, parentProductIds);   //递归调用
+        }
 
         //加工单查看
         private void repositoryItemHyperLinkEdit1_Click(object sender, EventArgs e)
@@ -508,6 +563,5 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.gridColumn17.Visible = true;
             this.gridColumn20.Visible = true;
         }
-
     }
 }

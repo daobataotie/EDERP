@@ -63,5 +63,10 @@
       SELECT * FROM InvoiceXODetail d LEFT JOIN InvoiceXO i ON i.InvoiceId = d.InvoiceId WHERE  $value$
       ]]>
     </select>
+    <select id="SelectProductIDs" parameterClass="string" resultClass="string">
+      <![CDATA[
+      select ProductId from InvoiceXODetail where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=#value#)
+      ]]>
+    </select>
   </statements>
 </sqlMap>

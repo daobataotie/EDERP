@@ -105,6 +105,8 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barPronoteHeader = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.repositoryItemLookUpEdit21 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemLookUpEdit22 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -157,6 +159,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit22)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -290,7 +294,9 @@
             this.repositoryItemLookUpEdit18,
             this.repositoryItemLookUpEdit19,
             this.repositoryItemLookUpEdit20,
-            this.repositoryItemSpinEdit3});
+            this.repositoryItemSpinEdit3,
+            this.repositoryItemLookUpEdit21,
+            this.repositoryItemLookUpEdit22});
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
             this.gridView2});
@@ -486,7 +492,7 @@
             // gridColumn12
             // 
             resources.ApplyResources(this.gridColumn12, "gridColumn12");
-            this.gridColumn12.ColumnEdit = this.repositoryItemLookUpEdit20;
+            this.gridColumn12.ColumnEdit = this.repositoryItemLookUpEdit21;
             this.gridColumn12.FieldName = "Baozhuangdai";
             this.gridColumn12.Name = "gridColumn12";
             // 
@@ -506,6 +512,7 @@
             // gridColumn13
             // 
             resources.ApplyResources(this.gridColumn13, "gridColumn13");
+            this.gridColumn13.ColumnEdit = this.repositoryItemLookUpEdit22;
             this.gridColumn13.FieldName = "Tiaomabiao";
             this.gridColumn13.Name = "gridColumn13";
             // 
@@ -798,6 +805,20 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
+            // repositoryItemLookUpEdit21
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit21, "repositoryItemLookUpEdit21");
+            this.repositoryItemLookUpEdit21.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit21.Buttons"))))});
+            this.repositoryItemLookUpEdit21.Name = "repositoryItemLookUpEdit21";
+            // 
+            // repositoryItemLookUpEdit22
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit22, "repositoryItemLookUpEdit22");
+            this.repositoryItemLookUpEdit22.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit22.Buttons"))))});
+            this.repositoryItemLookUpEdit22.Name = "repositoryItemLookUpEdit22";
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -857,6 +878,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit22)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -938,5 +961,7 @@
         private Book.UI.Invoices.NewChooseContorl nccCustomer;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit21;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit22;
     }
 }

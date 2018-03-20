@@ -140,5 +140,11 @@ namespace Book.DA.SQLServer
         }
 
         #endregion
+
+        public IList<Model.BomParentPartInfo> SelectProducts(string BomIds)
+        {
+            string sql = "select BomId,ProductId from BomParentPartInfo where BomId in (" + BomIds + ")";
+            return this.DataReaderBind<Model.BomParentPartInfo>(sql, null, CommandType.Text);
+        }
     }
 }

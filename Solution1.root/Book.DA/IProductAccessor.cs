@@ -62,6 +62,8 @@ namespace Book.DA
         Model.Product SelectByIdAndName(string id, string productName);
         IList<Model.Product> SelectByInvoiceCusID(string id);
         IList<Model.Product> GetProductBaseInfo();
+
+        string SelectCustomerProductNameByProductIds(string productIds);
     }
 }
 

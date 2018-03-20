@@ -53,7 +53,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
 
             for (int i = 0; i < this.gridView1.Columns.Count; i++)
             {
-                if (this.gridView1.Columns[i].ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit && this.gridView1.Columns[i].Name != "gridColumn2" && this.gridView1.Columns[i].Name != "gridColumn12" && this.gridView1.Columns[i].Name != "gridColumn17")
+                if (this.gridView1.Columns[i].ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit && this.gridView1.Columns[i].Name != "gridColumn2" && this.gridView1.Columns[i].Name != "gridColumn17")
                 {
                     ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DataSource = dt;
                     ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.Clear();
@@ -69,7 +69,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
 
             this.bindingSourceCustomer.DataSource = new BL.CustomerManager().Select();
             this.bindingSourceEmployee.DataSource = new BL.EmployeeManager().SelectOnActive();
-            this.bindingSourceZuzhuangProduct.DataSource = new BL.ProductManager().SelectProductByProductCategoryId(new Book.Model.ProductCategory() { ProductCategoryId = "756c936b-4643-4963-ad11-4e63b86bed2f" });   //查詢所有塑膠袋
+            //this.bindingSourceZuzhuangProduct.DataSource = new BL.ProductManager().SelectProductByProductCategoryId(new Book.Model.ProductCategory() { ProductCategoryId = "756c936b-4643-4963-ad11-4e63b86bed2f" });   //查詢所有塑膠袋
         }
 
         public EditForm(string PCAssemblyInspectionId)
@@ -298,7 +298,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm pronoForm = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm(null, 0);
             if (pronoForm.ShowDialog(this) == DialogResult.OK)
             {
-                if (pronoForm.SelectItems == null || pronoForm.SelectItems.Count == 0)
+                if (PronoteHeader.ChoosePronoteHeaderDetailsForm._pronoteHeaderList == null || PronoteHeader.ChoosePronoteHeaderDetailsForm._pronoteHeaderList.Count == 0)
                 {
                     Model.PronoteHeader currentModel = pronoForm.SelectItem;
                     if (currentModel != null)
@@ -343,7 +343,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
                         this.nccCustomer.EditValue = xo.Customer;
                     }
 
-                    foreach (var item in pronoForm.SelectItems)
+                    foreach (var item in PronoteHeader.ChoosePronoteHeaderDetailsForm._pronoteHeaderList)
                     {
                         Model.Product p = new BL.ProductManager().Get(item.ProductId);
                         Model.PCAssemblyInspectionDetail detail = new Book.Model.PCAssemblyInspectionDetail();

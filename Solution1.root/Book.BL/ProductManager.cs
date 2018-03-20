@@ -682,6 +682,11 @@ namespace Book.BL
         {
             return accessor.GetProductBaseInfo();
         }
+
+        public string SelectCustomerProductNameByProductIds(string productIds)
+        {
+            return accessor.SelectCustomerProductNameByProductIds(productIds);
+        }
     }
 }
 

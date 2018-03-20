@@ -147,5 +147,10 @@ namespace Book.DA.SQLServer
             //return sqlmapper.QueryForList<Model.InvoiceXODetail>("InvoiceXODetail.select_byYJRQCustomEmp", str.ToString());
             return this.DataReaderBind<Model.InvoiceXODetail>(str.ToString(), null, CommandType.Text);
         }
+
+        public IList<string> SelectProductIDs(string PronoteHeaderId)
+        {
+            return sqlmapper.QueryForList<string>("InvoiceXODetail.SelectProductIDs", PronoteHeaderId);
+        }
     }
 }

@@ -171,6 +171,11 @@ namespace Book.DA.SQLServer
             return SQLDB.DbHelperSQL.RunProcedure(procName, pars,tabelName);
         }
 
+        public object QueryObject(string SQLString)
+        {
+            return SQLDB.DbHelperSQL.QueryObject(SQLString);
+        }
+
         /// <summary>
         /// 判断该字段是否有重复值
         /// </summary>

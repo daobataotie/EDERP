@@ -368,6 +368,12 @@ namespace Book.BL
         {
             return accessor.Select_ProductId(productid);
         }
+
+        public IList<Model.BomParentPartInfo> SelectProducts(string BomIds)
+        {
+            return accessor.SelectProducts(BomIds);
+        }
+
     }
 }
 
