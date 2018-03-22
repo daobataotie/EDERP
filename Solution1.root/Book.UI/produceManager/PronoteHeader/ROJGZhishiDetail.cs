@@ -26,6 +26,9 @@ namespace Book.UI.produceManager.PronoteHeader
                 if (!string.IsNullOrEmpty(detail.InvoiceXOId))
                     detail.InvoiceXO = this.xomanamager.Get(detail.InvoiceXOId);
                 detail.MRSDetails = this.mrsdetailManager.Get(detail.MRSdetailsId);
+
+                if (string.IsNullOrEmpty(detail.CustomerProductName))
+                    detail.CustomerProductName = new Help().GetCustomerProductNameByPronoteHeaderId(detail.PronoteHeaderID, detail.ProductId);
             }
             this.DataSource = list;
             this.xrLabelDataName.Text = Properties.Resources.GZZhiShi;
@@ -46,6 +49,9 @@ namespace Book.UI.produceManager.PronoteHeader
                 if (!string.IsNullOrEmpty(detail.InvoiceXOId))
                     detail.InvoiceXO = this.xomanamager.Get(detail.InvoiceXOId);
                 detail.MRSDetails = this.mrsdetailManager.Get(detail.MRSdetailsId);
+
+                if (string.IsNullOrEmpty(detail.CustomerProductName))
+                    detail.CustomerProductName = new Help().GetCustomerProductNameByPronoteHeaderId(detail.PronoteHeaderID, detail.ProductId);
             }
             this.DataSource = list;
             this.xrLabelDataName.Text = Properties.Resources.GZZhiShi;

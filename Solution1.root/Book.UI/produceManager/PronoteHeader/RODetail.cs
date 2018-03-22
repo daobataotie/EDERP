@@ -26,7 +26,13 @@ namespace Book.UI.produceManager.PronoteHeader
                     detail.InvoiceXO = this.xomanamager.Get(detail.InvoiceXOId);
                 detail.MRSDetails = this.mrsdetailManager.Get(detail.MRSdetailsId);
                 if (!string.IsNullOrEmpty(detail.ProductId))
+                {
                     detail.Product = new BL.ProductManager().Get(detail.ProductId);
+
+                    if (string.IsNullOrEmpty(detail.CustomerProductName))
+                        detail.CustomerProductName = new Help().GetCustomerProductNameByPronoteHeaderId(detail.PronoteHeaderID, detail.ProductId);
+
+                }
             }
             this.DataSource = list;
             //CompanyInfo
@@ -79,7 +85,12 @@ namespace Book.UI.produceManager.PronoteHeader
                     detail.InvoiceXO = this.xomanamager.Get(detail.InvoiceXOId);
                 detail.MRSDetails = this.mrsdetailManager.Get(detail.MRSdetailsId);
                 if (!string.IsNullOrEmpty(detail.ProductId))
+                {
                     detail.Product = new BL.ProductManager().Get(detail.ProductId);
+
+                    if (string.IsNullOrEmpty(detail.CustomerProductName))
+                        detail.CustomerProductName = new Help().GetCustomerProductNameByPronoteHeaderId(detail.PronoteHeaderID, detail.ProductId);
+                }
             }
             this.DataSource = list;
 

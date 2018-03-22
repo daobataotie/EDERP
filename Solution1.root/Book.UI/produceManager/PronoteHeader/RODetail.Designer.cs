@@ -100,7 +100,6 @@
             this.xrSubreport2,
             this.xrSubreport1});
             resources.ApplyResources(this.Detail, "Detail");
-            this.Detail.Expanded = false;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             // 

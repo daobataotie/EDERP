@@ -331,7 +331,7 @@
     <value>客戶訂單</value>
   </data>
   <data name="barButtonItem16.Caption" xml:space="preserve">
-    <value>出貨單</value>
+    <value>出庫單</value>
   </data>
   <data name="barButtonItem17.Caption" xml:space="preserve">
     <value>客戶退貨單</value>
@@ -1321,7 +1321,7 @@
     <value>客戶訂單</value>
   </data>
   <data name="barLargeButtonItem6.Caption" xml:space="preserve">
-    <value>出貨單</value>
+    <value>出庫單</value>
   </data>
   <data name="barLargeButtonItem2.Caption" xml:space="preserve">
     <value>付款單</value>

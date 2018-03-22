@@ -11617,6 +11617,7 @@
     <Compile Include="AnnualCarryoverForm.Designer.cs">
       <DependentUpon>AnnualCarryoverForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="produceManager\Help.cs" />
     <Compile Include="Hr\Attendance\AnnualHoliday\ChooseDepartments.cs">
       <SubType>Form</SubType>
     </Compile>

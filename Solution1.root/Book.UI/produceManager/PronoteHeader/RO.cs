@@ -58,7 +58,10 @@ namespace Book.UI.produceManager.PronoteHeader
             {
 
                 this.xrLabelProductName.Text = pronoteHeader.Product.ProductName + "    版次:" + pronoteHeader.Product.ProductVersion;
-                this.xrLabelCustomerProductName.Text = pronoteHeader.Product.CustomerProductName;
+                if (string.IsNullOrEmpty(pronoteHeader.Product.CustomerProductName))
+                    this.xrLabelCustomerProductName.Text = new Help().GetCustomerProductNameByPronoteHeaderId(pronoteHeader.PronoteHeaderID, pronoteHeader.ProductId);
+                else
+                    this.xrLabelCustomerProductName.Text = pronoteHeader.Product.CustomerProductName;
                 this.xrRichTextProDesc.Rtf = this.pronoteHeader.Product.ProductDescription;
                 if (this.pronoteHeader.Product.AttrZhengMai != null)
                     this.RichTextZhengMai.Rtf = this.pronoteHeader.Product.AttrZhengMai;

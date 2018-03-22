@@ -15,11 +15,6 @@ namespace Book.UI.produceManager.ProduceInDepot
     public partial class ListForm : BaseListForm
     {
         int tag = 0;
-        BL.BomComponentInfoManager bomComponentInfoManager = new Book.BL.BomComponentInfoManager();
-        BL.BomParentPartInfoManager bomParentPartInfoManager = new Book.BL.BomParentPartInfoManager();
-        BL.InvoiceXODetailManager invoiceXODetailManager = new Book.BL.InvoiceXODetailManager();
-        BL.ProductManager productManager = new Book.BL.ProductManager();
-
 
         public ListForm()
         {
@@ -252,19 +247,7 @@ namespace Book.UI.produceManager.ProduceInDepot
                     if (string.IsNullOrEmpty(item.CustomerProductName))
                     {
                         //item.CustomerProductName = (this.manager as BL.ProduceInDepotDetailManager).SelectCustomerProductNameByPronoteHeaderId(item.PronoteHeaderId);  如果一个订单里面多个商品同时用到某个子件，在物料需求里面该子件会合并计算为一笔，其实它对应有多个主件
-                        List<string> invoiceProductIds = this.invoiceXODetailManager.SelectProductIDs(item.PronoteHeaderId).ToList();
-                        List<string> parentProductIds = new List<string>();
-                        this.GetParentProductInfo("'" + item.ProductId + "'", parentProductIds);
-                        IEnumerable<string> productIds = invoiceProductIds.Intersect(parentProductIds);
-
-                        string pIds = "";
-                        foreach (var p in productIds)
-                        {
-                            pIds += "'" + p + "',";
-                        }
-                        pIds = pIds.TrimEnd(',');
-
-                        item.CustomerProductName = this.productManager.SelectCustomerProductNameByProductIds(pIds).TrimEnd(',');
+                        item.CustomerProductName = new Help().GetCustomerProductNameByPronoteHeaderId(item.PronoteHeaderId, item.ProductId);
                     }
                 }
                 #endregion
@@ -488,40 +471,6 @@ namespace Book.UI.produceManager.ProduceInDepot
                 MessageBox.Show("Excel未生成完畢，請勿操作，并重新點擊按鈕生成數據！", "提示！", MessageBoxButtons.OK);
                 return;
             }
-        }
-
-        private void GetParentProductInfo(string productId, List<string> parentProductIds)
-        {
-            IList<Model.BomComponentInfo> bomComponentList = bomComponentInfoManager.SelectBomIdAndUseQty(productId);
-            if (bomComponentList == null || bomComponentList.Count == 0)
-                return;
-
-            string bomIds = "";
-            foreach (var component in bomComponentList)
-            {
-                bomIds += "'" + component.BomId + "',";
-            }
-            bomIds = bomIds.TrimEnd(',');
-
-            IList<Model.BomParentPartInfo> bomParentList = bomParentPartInfoManager.SelectProducts(bomIds);
-            string productIds = "";
-
-            #region 新版，一个子件没母件引用N次，叠加计算
-            foreach (var comInfo in bomComponentList)
-            {
-                Model.BomParentPartInfo parent = bomParentList.First(P => P.BomId == comInfo.BomId);
-                productIds += "'" + parent.ProductId + "',";
-
-                if (!parentProductIds.Contains(parent.ProductId))
-                {
-                    parentProductIds.Add(parent.ProductId);
-                }
-            }
-            #endregion
-
-            productIds = productIds.TrimEnd(',');
-
-            GetParentProductInfo(productIds, parentProductIds);   //递归调用
         }
 
         //加工单查看

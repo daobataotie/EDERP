@@ -227,6 +227,6 @@
     <value>稅價類別</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>銷售出貨詳細選擇</value>
+    <value>銷售出庫詳細選擇</value>
   </data>
 </root>
