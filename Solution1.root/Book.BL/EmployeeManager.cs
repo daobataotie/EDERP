@@ -430,7 +430,7 @@ namespace Book.BL
             IList<Model.Employee> o = new List<Model.Employee>();
             IList<Model.Employee> i = new List<Model.Employee>();
 
-            a = h.Where(E => (E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'A' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'H') ||( E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'a' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'h')).ToList();
+            a = h.Where(E => (E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'A' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'H') || (E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'a' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'h')).ToList();
             o = h.Where(E => E.IDNo.Substring(0, 1).ToCharArray()[0] == 'O' || E.IDNo.Substring(0, 1).ToCharArray()[0] == 'o').ToList();
             i = h.Where(E => (E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'I' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'Z') || (E.IDNo.Substring(0, 1).ToCharArray()[0] >= 'i' && E.IDNo.Substring(0, 1).ToCharArray()[0] <= 'z') && E.IDNo.Substring(0, 1).ToCharArray()[0] != 'O' && E.IDNo.Substring(0, 1).ToCharArray()[0] != 'o').ToList();
 
@@ -527,6 +527,11 @@ namespace Book.BL
             return accessor.mHasRowsAfter(emp);
         }
         #endregion
+
+        public Model.Employee SelectIdByNameAnId(string name, string id)
+        {
+            return accessor.SelectIdByNameAnId(name, id);
+        }
     }
 
     public static class Help

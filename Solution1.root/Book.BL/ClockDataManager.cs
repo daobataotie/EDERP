@@ -233,6 +233,11 @@ namespace Book.BL
         {
             accessor.DeleteByFileName(FileName);
         }
+
+        public int CountClockByDateRange(DateTime dateStart, DateTime dateEnd)
+        {
+            return accessor.CountClockByDateRange(dateStart, dateEnd);
+        }
     }
 }
 

@@ -87,6 +87,8 @@ namespace Book.DA
         /// </summary>
         /// <param name="FileName">文件名</param>
         void DeleteByFileName(string FileName);
+
+        int CountClockByDateRange(DateTime dateStart, DateTime dateEnd);
     }
 }
 

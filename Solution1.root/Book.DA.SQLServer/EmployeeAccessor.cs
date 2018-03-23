@@ -345,5 +345,14 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.Employee>("Employee.select_HrDailyAttendInfoByDayI", date.Date);
         }
         #endregion
+
+        public Model.Employee SelectIdByNameAnId(string name, string id)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("name", name);
+            ht.Add("IDNo", id);
+
+            return sqlmapper.QueryForObject<Model.Employee>("Employee.SelectIdByNameAnId", ht);
+        }
     }
 }

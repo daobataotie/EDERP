@@ -98,6 +98,7 @@ namespace Book.DA
 
         IList<Model.Employee> SelectHrDailyAttendByMonth(DateTime date);
 
+        Model.Employee SelectIdByNameAnId(string name, string id);
     }
 }
 

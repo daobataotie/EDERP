@@ -191,6 +191,7 @@ namespace Book.UI
 
             #region 打卡记录
             operations.Add("hr.attendance.clockdata", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Attendance.ClockData.ClockForm", form); });
+            operations.Add("Hr.Attendance.ClockData.NewClockForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Attendance.ClockData.NewClockForm", form); });
             #endregion
             #region 考勤管理
             //出勤记录
@@ -754,7 +755,7 @@ namespace Book.UI
             //會計年度薪資表
             operations.Add("Hr.Salary.Salaryset.AnnualSalaryForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Salary.Salaryset.AnnualSalaryForm", form); });
 
-           //歷史出勤記錄
+            //歷史出勤記錄
             operations.Add("Hr.Attendance.Atten.HistoryAttenForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Attendance.Atten.HistoryAttenForm", form); });
 
             //組裝檢驗日報表

@@ -79,5 +79,11 @@
        WHERE FileNames = #value#
       ]]>
     </delete>
+
+    <select id="CountClockByDateRange" parameterClass="Map" resultClass="int">
+      <![CDATA[
+      select Count(*) from ClockData where Clocktime between #StartDate# and #EndDate#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

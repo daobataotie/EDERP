@@ -133,7 +133,7 @@ namespace Book.DA.SQLServer
             Hashtable parms = new Hashtable();
 
             parms.Add("starttime", starttime);
-            parms.Add("endtime", endtime);
+            parms.Add("endtime", endtime.ToString("yyyy-MM-dd HH:mm:ss"));
 
             return sqlmapper.QueryForList<Model.ClockData>("ClockData.select_Clockbydate", parms);
         }
@@ -310,5 +310,12 @@ namespace Book.DA.SQLServer
             sqlmapper.Delete("ClockData.DeleteByFileName", FileName);
         }
 
+        public int CountClockByDateRange(DateTime dateStart, DateTime dateEnd)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("StartDate", dateStart);
+            ht.Add("EndDate", dateEnd.ToString("yyyy-MM-dd HH:mm:ss"));
+            return sqlmapper.QueryForObject<int>("ClockData.CountClockByDateRange", ht);
+        }
     }
 }

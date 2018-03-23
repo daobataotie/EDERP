@@ -414,7 +414,7 @@
     </select>
 
     <select id="select_AllEmployee" resultMap="EmployeeResultSimple" parameterClass="Employee">
-     <![CDATA[
+      <![CDATA[
       SELECT
       [EmployeeId],
       [IDNo],
@@ -432,5 +432,10 @@
       convert(int,'1'+substring(idno,2,2)))+substring(idno,4,len(idno)) end ) else idno end)
       ]]>
     </select>
+
+    <select id="SelectIdByNameAnId" parameterClass="Map" resultClass="Employee">
+      select top 1 EmployeeId,CardNo from Employee where EmployeeName=#name# and IDNo=#IDNo#
+    </select>
+    
   </statements>
 </sqlMap>

@@ -4313,6 +4313,10 @@
       <DependentUpon>AttenForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Attendance\ClockData\NewClockForm.resx">
+      <DependentUpon>NewClockForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hr\Attendance\Leave\AllLeaveList.resx">
       <DependentUpon>AllLeaveList.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11616,6 +11620,12 @@
     </Compile>
     <Compile Include="AnnualCarryoverForm.Designer.cs">
       <DependentUpon>AnnualCarryoverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Attendance\ClockData\NewClockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Attendance\ClockData\NewClockForm.Designer.cs">
+      <DependentUpon>NewClockForm.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\Help.cs" />
     <Compile Include="Hr\Attendance\AnnualHoliday\ChooseDepartments.cs">
