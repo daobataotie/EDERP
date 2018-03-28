@@ -120,6 +120,10 @@ namespace Book.UI.produceManager.PronoteHeader
             this.action = "view";
             if (this.action == "view")
                 LastFlag = 1;
+            if (flagIsProcee == 4)
+                this.Text = Properties.Resources.ZZJiaGong;
+            else if (flagIsProcee == 5)
+                this.Text = Properties.Resources.GZZhiShi;
         }
 
         public EditForm(Model.MRSdetails mRSdetails)
@@ -1057,7 +1061,7 @@ namespace Book.UI.produceManager.PronoteHeader
             //}
             // else
             // {
-         
+
 
             SelectProduceMaterial form = new SelectProduceMaterial(this.pronoteHeader);
             if (form.ShowDialog(this) == DialogResult.OK)
@@ -1777,7 +1781,7 @@ namespace Book.UI.produceManager.PronoteHeader
 
             if (this.pronoteHeader.IsClose.HasValue && this.pronoteHeader.IsClose.Value)
             {
-                MessageBox.Show( "已結案，不能生成領料單", this.Text,MessageBoxButtons.OK);
+                MessageBox.Show("已結案，不能生成領料單", this.Text, MessageBoxButtons.OK);
                 return;
             }
 

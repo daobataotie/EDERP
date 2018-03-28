@@ -236,7 +236,7 @@ namespace Book.UI.produceManager.PronoteHeader
         {
             Form f = this.GetEditForm(new object[] { this.bindingSource1.Current });
             if (f != null)
-                f.ShowDialog();
+                f.Show();
         }
 
         /// <summary>

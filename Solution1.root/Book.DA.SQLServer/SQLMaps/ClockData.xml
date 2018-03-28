@@ -79,6 +79,11 @@
        WHERE FileNames = #value#
       ]]>
     </delete>
+    <delete id="DeleteByDateRange" parameterClass="Map">
+      <![CDATA[
+       DELETE FROM ClockData where Clocktime between #StartDate# and #EndDate#
+      ]]>
+    </delete>
 
     <select id="CountClockByDateRange" parameterClass="Map" resultClass="int">
       <![CDATA[

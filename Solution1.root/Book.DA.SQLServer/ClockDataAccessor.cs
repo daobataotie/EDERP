@@ -310,10 +310,18 @@ namespace Book.DA.SQLServer
             sqlmapper.Delete("ClockData.DeleteByFileName", FileName);
         }
 
-        public int CountClockByDateRange(DateTime dateStart, DateTime dateEnd)
+        public void DeleteByDateRange(DateTime dateStart, DateTime dateEnd)
         {
             Hashtable ht = new Hashtable();
             ht.Add("StartDate", dateStart);
+            ht.Add("EndDate", dateEnd.ToString("yyyy-MM-dd HH:mm:ss"));
+            sqlmapper.Delete("ClockData.DeleteByDateRange", ht);
+        }
+
+        public int CountClockByDateRange(DateTime dateStart, DateTime dateEnd)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("StartDate", dateStart.ToString("yyyy-MM-dd"));
             ht.Add("EndDate", dateEnd.ToString("yyyy-MM-dd HH:mm:ss"));
             return sqlmapper.QueryForObject<int>("ClockData.CountClockByDateRange", ht);
         }

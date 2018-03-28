@@ -620,6 +620,9 @@ namespace Book.UI.Settings.BasicData.Products
             this.product.Moshu = Convert.ToDouble(this.spinEditMoshu.EditValue);
             this.product.SunhaoRage = Convert.ToDouble(this.spinEditSunhaoStart1.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhaoEnd1.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhao1.EditValue).ToString() + "," + Convert.ToDouble(this.spinEditSunhaoStart2.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhaoEnd2.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhao2.EditValue).ToString() + "," + Convert.ToDouble(this.spinEditSunhaoStart3.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhaoEnd3.EditValue).ToString() + "/" + Convert.ToDouble(this.spinEditSunhao3.EditValue).ToString();
 
+            //2018年3月28日21:12:51
+            this.product.IsDepot = this.checkEditIsDepot.Checked;
+
             switch (this.action)
             {
                 case "insert":
@@ -1133,6 +1136,10 @@ namespace Book.UI.Settings.BasicData.Products
             this.spinEditChakuang.EditValue = this.product.Chakuang;
             this.spinEditPaihe.EditValue = this.product.Paihe;
             this.spinEditMoshu.EditValue = this.product.Moshu;
+
+            //2018年3月28日21:11:49
+            this.checkEditIsDepot.EditValue = this.product.IsDepot;
+
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {
                 string[] sunhaolist = this.product.SunhaoRage.Split(',');

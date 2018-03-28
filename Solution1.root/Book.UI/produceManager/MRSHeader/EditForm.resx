@@ -120,6 +120,15 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>导出Excel</value>
+  </data>
+  <data name="barButtonItemSearch.Caption" xml:space="preserve">
+    <value>查詢</value>
+  </data>
+  <data name="barBtnSomeParmSearch.Caption" xml:space="preserve">
+    <value>条件列印</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -643,9 +652,6 @@
   <data name="gridColumnWorkHouse.Caption" xml:space="preserve">
     <value>下个生产站</value>
   </data>
-  <metadata name="bindingSourceWorkHouse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>863, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit3.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -664,6 +670,9 @@
   <data name="repositoryItemLookUpEdit3.Columns3" xml:space="preserve">
     <value>地址</value>
   </data>
+  <metadata name="bindingSourceWorkHouse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>863, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit3.NullText" xml:space="preserve">
     <value />
   </data>
@@ -730,9 +739,6 @@
   <data name="gridColumnSupplierId.Caption" xml:space="preserve">
     <value>供应商</value>
   </data>
-  <metadata name="bindingSourceSupplier.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>303, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit2.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -779,6 +785,9 @@
   <data name="repositoryItemLookUpEdit2.Columns12" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
     <value>Default</value>
   </data>
+  <metadata name="bindingSourceSupplier.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>303, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit2.NullText" xml:space="preserve">
     <value />
   </data>
@@ -860,9 +869,6 @@
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <metadata name="bindingSourceProductId.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>489, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -908,6 +914,9 @@
   <data name="repositoryItemLookUpEdit1.Columns12" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v10.2">
     <value>Default</value>
   </data>
+  <metadata name="bindingSourceProductId.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>489, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit1.NullText" xml:space="preserve">
     <value />
   </data>
@@ -1742,32 +1751,14 @@
   <data name="&gt;&gt;splitContainerControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="bindingSourceWorkHouse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>863, 17</value>
-  </metadata>
-  <metadata name="bindingSourceSupplier.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>303, 17</value>
-  </metadata>
-  <metadata name="bindingSourceProductId.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>489, 17</value>
-  </metadata>
-  <data name="barButtonItem1.Caption" xml:space="preserve">
-    <value>导出Excel</value>
-  </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1070, 17</value>
   </metadata>
-  <data name="barButtonItemSearch.Caption" xml:space="preserve">
-    <value>查詢</value>
-  </data>
   <data name="layoutControlItem20.CustomizationFormText" xml:space="preserve">
     <value>需求來源:</value>
   </data>
   <data name="layoutControlItem20.Text" xml:space="preserve">
     <value>需求來源:</value>
-  </data>
-  <data name="barBtnSomeParmSearch.Caption" xml:space="preserve">
-    <value>条件列印</value>
   </data>
   <data name="layoutControlItem24.CustomizationFormText" xml:space="preserve">
     <value>审核人：</value>
@@ -2210,6 +2201,12 @@
   <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">
+    <value>layoutControlItem29</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem29.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;barButtonItem1.Name" xml:space="preserve">
     <value>barButtonItem1</value>
   </data>
@@ -2250,12 +2247,6 @@
     <value>layoutControlItem25</value>
   </data>
   <data name="&gt;&gt;layoutControlItem25.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">
-    <value>layoutControlItem29</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem29.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -238,6 +238,11 @@ namespace Book.BL
         {
             return accessor.CountClockByDateRange(dateStart, dateEnd);
         }
+
+        public void DeleteByDateRange(DateTime dateStart, DateTime dateEnd)
+        {
+            accessor.DeleteByDateRange(dateStart, dateEnd);
+        }
     }
 }
 

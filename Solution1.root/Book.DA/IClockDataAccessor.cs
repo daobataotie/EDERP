@@ -89,6 +89,7 @@ namespace Book.DA
         void DeleteByFileName(string FileName);
 
         int CountClockByDateRange(DateTime dateStart, DateTime dateEnd);
+        void DeleteByDateRange(DateTime dateStart, DateTime dateEnd);
     }
 }
 

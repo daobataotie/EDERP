@@ -168,11 +168,11 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             //this._pCAssemblyInspection.PronoteHeaderId = this.txt_PronoteHeaderId.Text;
             this._pCAssemblyInspection.CustomerId = (this.nccCustomer.EditValue == null ? null : (this.nccCustomer.EditValue as Model.Customer).CustomerId);
             this._pCAssemblyInspection.InvoiceCusId = this.txt_InvoiceCusId.Text;
-            this._pCAssemblyInspection.EmployeeId = this.nccEmployee.EditValue == null ? null : (this.nccEmployee.EditValue as Model.Employee).EmployeeId;
+            this._pCAssemblyInspection.EmployeeId = (this.nccEmployee.EditValue == null ? null : (this.nccEmployee.EditValue as Model.Employee).EmployeeId);
 
             this._pCAssemblyInspection.Note = this.txt_Note.Text;
 
-            this._pCAssemblyInspection.EmployeeId1 = (this.nccEmployee1.EditValue as Model.Employee) == null ? null : (this.nccEmployee1.EditValue as Model.Employee).EmployeeId;
+            this._pCAssemblyInspection.EmployeeId1 = (this.nccEmployee1.EditValue == null ? null : (this.nccEmployee1.EditValue as Model.Employee).EmployeeId);
 
             switch (this.action)
             {

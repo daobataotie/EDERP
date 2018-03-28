@@ -278,7 +278,7 @@ namespace Book.UI.Settings.ProduceManager
                     if (this._bomParmentPartInfo.Product.IsProcee != null && this._bomParmentPartInfo.Product.IsProcee.Value)
                         this.textEditSourceType.Text = "委外半成品加工";
                 }
-                if (this._bomParmentPartInfo.Product.HomeMade != null && this._bomParmentPartInfo.Product.HomeMade.Value)
+                if ((this._bomParmentPartInfo.Product.HomeMade != null && this._bomParmentPartInfo.Product.HomeMade.Value) || (this._bomParmentPartInfo.Product.IsDepot != null && this._bomParmentPartInfo.Product.IsDepot.Value))
                 {
                     this.textEditSourceType.Text = Properties.Resources.IsHomeMade;
                     if (this._bomParmentPartInfo.Product.IsProcee != null && this._bomParmentPartInfo.Product.IsProcee.Value)
@@ -832,7 +832,7 @@ namespace Book.UI.Settings.ProduceManager
                         this.textEditSourceType.Text = "耗用";
                     if (product.TrustOut != null && product.TrustOut.Value)
                         this.textEditSourceType.Text = "委外";
-                    if (product.HomeMade != null && product.HomeMade.Value)
+                    if ((product.HomeMade != null && product.HomeMade.Value) || (product.IsDepot != null && product.IsDepot.Value))
                         this.textEditSourceType.Text = Properties.Resources.IsHomeMade;
 
                     //修改加工工序表客户工艺

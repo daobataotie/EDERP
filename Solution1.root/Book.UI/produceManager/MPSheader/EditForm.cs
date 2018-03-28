@@ -938,7 +938,7 @@ namespace Book.UI.produceManager.MPSheader
                     if (bomcom.Product.IsProcee == true)
                     {
                         bomcom.MadeProductId = details.ProductId;
-                        if (bomcom.Product.HomeMade == true)
+                        if (bomcom.Product.HomeMade == true || bomcom.Product.IsDepot == true)
                             bomComponentInfo5.Add(bomcom);
                         else if (bomcom.Product.TrustOut == true)
                             bomComponentInfo6.Add(bomcom);

@@ -522,6 +522,8 @@ namespace Book.Model
 
         private string _SunhaoRage;
 
+        private bool? _IsDepot;
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -2483,6 +2485,12 @@ namespace Book.Model
             { return this._isNoQiangFang; }
             set { this._isNoQiangFang = value; }
         }
+
+        public bool? IsDepot
+        {
+            get { return _IsDepot; }
+            set { _IsDepot = value; }
+        }
         /// <summary>
         /// 强化
         /// </summary>
@@ -3003,6 +3011,8 @@ namespace Book.Model
         public readonly static string PRO_Moshu = "Moshu";
 
         public readonly static string PRO_SunhaoRage = "SunhaoRage";
+
+        public readonly static string PRO_IsDepot = "IsDepot";
 
         #endregion
     }
