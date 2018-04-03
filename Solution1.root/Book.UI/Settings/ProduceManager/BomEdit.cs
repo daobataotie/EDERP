@@ -278,11 +278,17 @@ namespace Book.UI.Settings.ProduceManager
                     if (this._bomParmentPartInfo.Product.IsProcee != null && this._bomParmentPartInfo.Product.IsProcee.Value)
                         this.textEditSourceType.Text = "委外半成品加工";
                 }
-                if ((this._bomParmentPartInfo.Product.HomeMade != null && this._bomParmentPartInfo.Product.HomeMade.Value) || (this._bomParmentPartInfo.Product.IsDepot != null && this._bomParmentPartInfo.Product.IsDepot.Value))
+                if ((this._bomParmentPartInfo.Product.HomeMade != null && this._bomParmentPartInfo.Product.HomeMade.Value))
                 {
                     this.textEditSourceType.Text = Properties.Resources.IsHomeMade;
                     if (this._bomParmentPartInfo.Product.IsProcee != null && this._bomParmentPartInfo.Product.IsProcee.Value)
                         this.textEditSourceType.Text = "自製半成品加工";
+                }
+                if (this._bomParmentPartInfo.Product.IsDepot != null && this._bomParmentPartInfo.Product.IsDepot.Value)
+                {
+                    this.textEditSourceType.Text = Properties.Resources.IsHomeMade;
+                    if (this._bomParmentPartInfo.Product.IsProcee != null && this._bomParmentPartInfo.Product.IsProcee.Value)
+                        this.textEditSourceType.Text = "倉庫半成品加工";
                 }
 
                 this.newChooseContorlCustomer.EditValue = this._bomParmentPartInfo.Product.Customer;
@@ -299,7 +305,6 @@ namespace Book.UI.Settings.ProduceManager
             {
                 this._techonlogyHeader = this.techonlogyHeaderManager.Get(this._bomParmentPartInfo.TechonlogyHeaderId) as Model.TechonlogyHeader;
                 this.buttonEditTechonlogyHeaderid.EditValue = this._techonlogyHeader;
-
             }
             else
             {

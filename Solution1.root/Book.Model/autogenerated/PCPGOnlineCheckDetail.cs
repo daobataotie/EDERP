@@ -736,5 +736,15 @@ namespace Book.Model
         public readonly static string PRO_CheckedStandard = "CheckedStandard";
 
 		#endregion
+
+        private DateTime? _secondTestTime;
+
+        public DateTime? SecondTestTime
+        {
+            get { return _secondTestTime; }
+            set { _secondTestTime = value; }
+        }
+
+        public readonly static string PRO_SecondTestTime = "SecondTestTime";
 	}
 }

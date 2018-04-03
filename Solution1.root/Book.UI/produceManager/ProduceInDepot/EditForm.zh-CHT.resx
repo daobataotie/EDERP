@@ -515,4 +515,7 @@
   <data name="layoutControlItem19.Text" xml:space="preserve">
     <value>付款日期：</value>
   </data>
+  <data name="gridColumn49.Caption" xml:space="preserve">
+    <value>溢料氣孔</value>
+  </data>
 </root>

@@ -462,5 +462,15 @@ namespace Book.Model
             set { _employeeName = value; }
         }
 
+
+        private DateTime? _secondTestTime;
+
+        public DateTime? SecondTestTime
+        {
+            get { return _secondTestTime; }
+            set { _secondTestTime = value; }
+        }
+
+        public readonly static string PRO_SecondTestTime = "SecondTestTime";
     }
 }

@@ -25,7 +25,7 @@ namespace Book.Model
 
         public readonly static string PROPERTY_GETSOURCETYPE = "GetSourceType";
 
-        public string  GetSourceType
+        public string GetSourceType
         {
             get
             {
@@ -52,6 +52,9 @@ namespace Book.Model
                         break;
                     case "6":
                         sourceType = "委外(半成品加工)";
+                        break;
+                    case "7":
+                        sourceType = "倉庫(半成品加工)";
                         break;
                     default:
                         break;
@@ -105,25 +108,25 @@ namespace Book.Model
 
         private string _employee0Name;
 
-             public string Employee0Name
+        public string Employee0Name
         {
             get { return _employee0Name; }
             set { _employee0Name = value; }
         }
-             private string _employee1Name;
+        private string _employee1Name;
 
-         public string Employee1Name
+        public string Employee1Name
         {
             get { return _employee1Name; }
             set { _employee1Name = value; }
         }
-         private string _customerShortName;
+        private string _customerShortName;
 
-         public string CustomerShortName
-         {
-             get { return _customerShortName; }
-             set { _customerShortName = value; }
-         }
+        public string CustomerShortName
+        {
+            get { return _customerShortName; }
+            set { _customerShortName = value; }
+        }
         public readonly static string PROPERTY_IsChecked = "IsChecked";
     }
 }

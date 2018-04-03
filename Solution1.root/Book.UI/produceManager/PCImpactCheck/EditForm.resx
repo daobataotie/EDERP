@@ -1461,7 +1461,7 @@
     <value>True</value>
   </data>
   <data name="attrRetest.VisibleIndex" type="System.Int32, mscorlib">
-    <value>43</value>
+    <value>44</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>班別</value>
@@ -1594,6 +1594,15 @@
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
     <value>63</value>
+  </data>
+  <data name="gridColumn11.Caption" xml:space="preserve">
+    <value>第二次抽驗外觀</value>
+  </data>
+  <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
+    <value>43</value>
   </data>
   <data name="RICBattr60L.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2626,6 +2635,12 @@
   </data>
   <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn11.Name" xml:space="preserve">
+    <value>gridColumn11</value>
+  </data>
+  <data name="&gt;&gt;gridColumn11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

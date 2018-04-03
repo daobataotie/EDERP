@@ -150,12 +150,6 @@
   <data name="xrTableCell13.Text" xml:space="preserve">
     <value>電鍍剝離測試</value>
   </data>
-  <data name="xrTableCell2.Text" xml:space="preserve">
-    <value>毛邊</value>
-  </data>
-  <data name="xrTableCell10.Text" xml:space="preserve">
-    <value>裝腳鬆緊度</value>
-  </data>
   <data name="xrLabel9.Text" xml:space="preserve">
     <value>來源單據：</value>
   </data>

@@ -54,6 +54,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="mCheckStandard" column="mCheckStandard" />
       <result property="InvoiceXOQuantity" column="InvoiceXOQuantity" />
       <result property="ProductUnitId" column="ProductUnitId" />
+      <result property="SecondTestTime" column="SecondTestTime"/>
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
     </resultMap>
   </resultMaps>
@@ -131,8 +132,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [PronoteHeaderId],
         [mCheckStandard],
         [InvoiceXOQuantity],
-        [ProductUnitId]
-        
+        [ProductUnitId],
+        [SecondTestTime]
 			FROM
 				[dbo].[PCImpactCheckDetail]
 			WHERE
@@ -233,8 +234,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [PronoteHeaderId],
         [mCheckStandard],
         [InvoiceXOQuantity],
-        [ProductUnitId]
-        
+        [ProductUnitId],
+        [SecondTestTime]
 			) 
 			VALUES 
 			(
@@ -285,8 +286,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #PronoteHeaderId#,
         #mCheckStandard#,
         #InvoiceXOQuantity#,
-        #ProductUnitId#
-        
+        #ProductUnitId#,
+        #SecondTestTime#
 			)
              ]]>
     </insert>
@@ -340,8 +341,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [PronoteHeaderId]=#PronoteHeaderId#,
         [mCheckStandard]=#mCheckStandard#,
         [InvoiceXOQuantity]=#InvoiceXOQuantity#,
-        [ProductUnitId]=#ProductUnitId#
-        
+        [ProductUnitId]=#ProductUnitId#,
+        [SecondTestTime]=#SecondTestTime#
 			WHERE
 				[PCImpactCheckDetailId] = #PCImpactCheckDetailId#
                     ]]>

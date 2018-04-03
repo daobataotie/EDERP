@@ -304,7 +304,7 @@ namespace Book.UI.produceManager.MRSHeader
 
                     if (this.mrsheader.IsbuiltInvoiceCO == true)
                     {
-                        if (this.mrsheader.SourceType == "0" || this.mrsheader.SourceType == "4" || this.mrsheader.SourceType == "5")
+                        if (this.mrsheader.SourceType == "0" || this.mrsheader.SourceType == "4" || this.mrsheader.SourceType == "5" || this.mrsheader.SourceType == "7")
                         {
                             //sbtn_buitProg.Text = Properties.Resources.IsBuiltTrustOut;
                             this.simpleButtonOther.Enabled = false;
@@ -337,7 +337,7 @@ namespace Book.UI.produceManager.MRSHeader
                     }
                     else
                     {
-                        if (this.mrsheader.SourceType == "0" || this.mrsheader.SourceType == "4" || this.mrsheader.SourceType == "5")
+                        if (this.mrsheader.SourceType == "0" || this.mrsheader.SourceType == "4" || this.mrsheader.SourceType == "5" || this.mrsheader.SourceType == "7")
                         {
                             //sbtn_buitProg.Text = Properties.Resources.IsBuiltTrustOut;
                             this.simpleButtonOther.Enabled = false;
@@ -861,7 +861,7 @@ namespace Book.UI.produceManager.MRSHeader
                             pronoteHeader.InvoiceType = "0";
                         else if (this.mrsheader.SourceType == "4")
                             pronoteHeader.InvoiceType = "1";
-                        else if (this.mrsheader.SourceType == "5")
+                        else if (this.mrsheader.SourceType == "5" || this.mrsheader.SourceType == "7")
                             pronoteHeader.InvoiceType = "2";
                         pronoteHeader.Materialprocessum = produceMaterialdetailsManager.SelectMaterialprocessum(_mrsdetail.MRSdetailsId);
 

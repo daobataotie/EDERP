@@ -352,6 +352,7 @@
             this.newChooseWorkHorseId.EditValue = null;
             resources.ApplyResources(this.newChooseWorkHorseId, "newChooseWorkHorseId");
             this.newChooseWorkHorseId.Name = "newChooseWorkHorseId";
+            this.newChooseWorkHorseId.EditValueChanged += new System.EventHandler(this.newChooseWorkHorseId_EditValueChanged);
             // 
             // newChooseEmployee0
             // 

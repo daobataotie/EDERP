@@ -225,4 +225,7 @@
   <data name="xrLabel2.Text" xml:space="preserve">
     <value>部門數據統計：</value>
   </data>
+  <data name="xrTableCell16.Text" xml:space="preserve">
+    <value>溢料氣孔</value>
+  </data>
 </root>

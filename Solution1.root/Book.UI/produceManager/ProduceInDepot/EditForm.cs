@@ -254,7 +254,7 @@ namespace Book.UI.produceManager.ProduceInDepot
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
             return new RO(produceInDepot.ProduceInDepotId);
-           
+
             //return null;
         }
 
@@ -998,7 +998,7 @@ namespace Book.UI.produceManager.ProduceInDepot
                         dt.Columns.Add("廠商不良", typeof(string));
                         dt.Columns.Add("組裝擦傷", typeof(string));
                         dt.Columns.Add("擦傷", typeof(string));
-                        dt.Columns.Add("品檢其他", typeof(string));
+                        dt.Columns.Add("溢料氣孔", typeof(string));
                         dt.Columns.Add("品管其他", typeof(string));
                         dt.Columns.Add("破洞", typeof(string));
                         dt.Columns.Add("波紋", typeof(string));
@@ -1102,7 +1102,7 @@ namespace Book.UI.produceManager.ProduceInDepot
                             dr["廠商不良"] = cc.mChangshangbuliang.HasValue ? cc.mChangshangbuliang.ToString() : "0";
                             dr["組裝擦傷"] = cc.mZuzhuangcashang.HasValue ? cc.mZuzhuangcashang.ToString() : "0";
                             dr["擦傷"] = cc.mCashang.HasValue ? cc.mCashang.ToString() : "0";
-                            dr["品檢其他"] = cc.mPinjianqita.HasValue ? cc.mPinjianqita.ToString() : "0";
+                            dr["溢料氣孔"] = cc.mPinjianqita.HasValue ? cc.mPinjianqita.ToString() : "0";
                             dr["品管其他"] = cc.mPinguanqita.HasValue ? cc.mPinguanqita.ToString() : "0";
                             dr["破洞"] = cc.mPodong.HasValue ? cc.mPodong.ToString() : "0";
                             dr["波紋"] = cc.mBowen.HasValue ? cc.mBowen.ToString() : "0";
@@ -1331,6 +1331,19 @@ namespace Book.UI.produceManager.ProduceInDepot
         private void bar_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ExportExcel(this.produceInDepot.Details);
+        }
+
+        private void newChooseWorkHorseId_EditValueChanged(object sender, EventArgs e)
+        {
+            if (newChooseWorkHorseId.EditValue != null)
+            {
+                foreach (var item in this.produceInDepot.Details)
+                {
+                    item.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumyPronHeaderWorkHouse(item.PronoteHeaderId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId);
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
         }
     }
 }

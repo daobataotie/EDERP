@@ -118,16 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="xrLabel2.Dpi" type="System.Single, mscorlib">
+  <data name="lblSecondTestTime.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblSecondTestTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lblSecondTestTime.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1759.42981, 248.70842</value>
+  </data>
+  <data name="lblSecondTestTime.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>235.715332, 113.770828</value>
+  </data>
+  <data name="lblSecondTestTime.Text" xml:space="preserve">
+    <value>TCattrZhuangJiaoSJDL</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lblSecondTestTime.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel2.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="xrLabel2.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 16pt</value>
   </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>24.0395527, 373.0625</value>
+    <value>24.0395527, 386.291656</value>
   </data>
   <data name="xrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>757.1433, 74.57823</value>
@@ -135,7 +154,6 @@
   <data name="xrLabel2.Text" xml:space="preserve">
     <value>光学测试 &gt; &gt; &gt; </value>
   </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>BottomJustify</value>
   </data>
@@ -146,7 +164,7 @@
     <value>新細明體, 16pt</value>
   </data>
   <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>24.0395527, 595.3125</value>
+    <value>24.0395527, 608.5417</value>
   </data>
   <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>757.1433, 74.57823</value>
@@ -161,7 +179,7 @@
     <value>254</value>
   </data>
   <data name="subReportGX.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 468.3125</value>
+    <value>0, 481.541656</value>
   </data>
   <data name="subReportGX.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>1998.99963, 100.753387</value>
@@ -170,7 +188,7 @@
     <value>254</value>
   </data>
   <data name="subReportHD.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 690.5625</value>
+    <value>0, 703.7917</value>
   </data>
   <data name="subReportHD.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>1998.99988, 124.565887</value>
@@ -182,10 +200,10 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="TCattrZhuangJiaoSJDL.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1673.23621, 235.479248</value>
+    <value>1544.618, 248.70842</value>
   </data>
   <data name="TCattrZhuangJiaoSJDL.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>321.907959, 113.770828</value>
+    <value>214.811768, 113.770828</value>
   </data>
   <data name="TCattrZhuangJiaoSJDL.Text" xml:space="preserve">
     <value>TCattrZhuangJiaoSJDL</value>
@@ -200,7 +218,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 235.479172</value>
+    <value>0, 248.708328</value>
   </data>
   <data name="TCFromInvoiceId.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -392,7 +410,7 @@
     <value>254</value>
   </data>
   <data name="xrTable3.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1995.14514, 86.12485</value>
+    <value>1995.14514, 99.354</value>
   </data>
   <data name="xrTable3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -404,7 +422,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 134.020645</value>
+    <value>0, 147.249817</value>
   </data>
   <data name="TCPCPGOnlineCheckDetailDate.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -530,10 +548,10 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="TCattrGaoDiJiaoL.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1422.777, 235.479248</value>
+    <value>1422.777, 248.70842</value>
   </data>
   <data name="TCattrGaoDiJiaoL.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>250.459229, 56.83995</value>
+    <value>121.841064, 56.8399658</value>
   </data>
   <data name="TCattrGaoDiJiaoL.Text" xml:space="preserve">
     <value>TCattrGaoDiJiaoL</value>
@@ -548,10 +566,10 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="TCattrGaoDiJiaoR.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1422.777, 292.3192</value>
+    <value>1422.777, 305.54837</value>
   </data>
   <data name="TCattrGaoDiJiaoR.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>250.459229, 56.9307861</value>
+    <value>121.841064, 56.9307861</value>
   </data>
   <data name="TCattrGaoDiJiaoR.Text" xml:space="preserve">
     <value>TCattrGaoDiJiaoR</value>
@@ -566,7 +584,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1380.31836, 235.479172</value>
+    <value>1380.31836, 248.708328</value>
   </data>
   <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>42.45862, 56.84004</value>
@@ -584,7 +602,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1380.31836, 292.3192</value>
+    <value>1380.31836, 305.54837</value>
   </data>
   <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>42.45862, 56.9308</value>
@@ -602,7 +620,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 86.12483</value>
+    <value>0, 99.354</value>
   </data>
   <data name="xrTableCell6.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -667,6 +685,12 @@
   <data name="xrTableCell10.Text" xml:space="preserve">
     <value>装脚松紧度</value>
   </data>
+  <data name="xrTableCell9.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell9.Text" xml:space="preserve">
+    <value>第2次抽驗外觀</value>
+  </data>
   <data name="xrTableRow1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -680,7 +704,7 @@
     <value>254</value>
   </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
-    <value>815.1284</value>
+    <value>828.357544</value>
   </data>
   <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>

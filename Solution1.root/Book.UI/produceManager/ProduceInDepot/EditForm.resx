@@ -1472,7 +1472,7 @@
     <value>57</value>
   </data>
   <data name="gridColumn49.Caption" xml:space="preserve">
-    <value>品檢其他</value>
+    <value>溢料气孔</value>
   </data>
   <data name="gridColumn49.Visible" type="System.Boolean, mscorlib">
     <value>True</value>

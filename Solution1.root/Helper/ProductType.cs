@@ -25,15 +25,18 @@ namespace Helper
         ///自制(组装)
         /// </summary>
         Package = 4,
-         /// <summary>
+        /// <summary>
         ///自制(半成品加工)
         /// </summary>
         HomeMadeProcee = 5,
-           /// <summary>
+        /// <summary>
         ///委外(半成品加工)
         /// </summary>
-        TrustOutProcee = 6
-        
+        TrustOutProcee = 6,
 
+        /// <summary>
+        ///倉庫(半成品加工)
+        /// </summary>
+        DepotMadeProcee = 7
     }
 }

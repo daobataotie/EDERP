@@ -219,4 +219,7 @@
   <data name="xrLabel4.Text" xml:space="preserve">
     <value>總計：</value>
   </data>
+  <data name="xrTableCell37.Text" xml:space="preserve">
+    <value>溢料氣孔</value>
+  </data>
 </root>

@@ -779,6 +779,7 @@ namespace Book.UI.produceManager.MPSheader
             IList<Model.BomComponentInfo> bomComponentInfo3 = new List<Model.BomComponentInfo>();
             IList<Model.BomComponentInfo> bomComponentInfo5 = new List<Model.BomComponentInfo>();
             IList<Model.BomComponentInfo> bomComponentInfo6 = new List<Model.BomComponentInfo>();
+            IList<Model.BomComponentInfo> bomComponentInfo7 = new List<Model.BomComponentInfo>();
             string mrpid1 = null;
             IList<Model.BomComponentInfo> comDetailss4 = new List<Model.BomComponentInfo>();
             Model.BomComponentInfo comm4;
@@ -938,11 +939,12 @@ namespace Book.UI.produceManager.MPSheader
                     if (bomcom.Product.IsProcee == true)
                     {
                         bomcom.MadeProductId = details.ProductId;
-                        if (bomcom.Product.HomeMade == true || bomcom.Product.IsDepot == true)
+                        if (bomcom.Product.HomeMade == true)
                             bomComponentInfo5.Add(bomcom);
                         else if (bomcom.Product.TrustOut == true)
                             bomComponentInfo6.Add(bomcom);
-
+                        else if (bomcom.Product.IsDepot == true)
+                            bomComponentInfo7.Add(bomcom);
                     }
                     else if (bomcom.Product.HomeMade == true)
                     {
@@ -980,6 +982,8 @@ namespace Book.UI.produceManager.MPSheader
             Model.MRSdetails mRSdetails5;//自製半成品加工     
             Model.MRSHeader mRSHeader6;//委外半成品加工     
             Model.MRSdetails mRSdetails6;//委外半成品加工   
+            Model.MRSHeader mRSHeader7;//倉庫半成品加工     
+            Model.MRSdetails mRSdetails7;//倉庫半成品加工   
             int InumerSum = 0;
 
             if (comDetailss4.Count > 0)
@@ -1114,6 +1118,78 @@ namespace Book.UI.produceManager.MPSheader
                         mRSdetails5.MRSdetailssum = 0;
                     mRSdetails5.WorkHouseNextId = bomcom.NextWorkHouseId;
                     new BL.MRSdetailsManager().Insert(mRSdetails5);
+                }
+            }
+            InumerSum = 0;
+            if (bomComponentInfo7.Count > 0)
+            {
+                mrpid1 = this.mRSHeaderManager.GetId();
+                mRSHeader7 = new Model.MRSHeader();
+                mRSHeader7.MRSHeaderId = mrpid1;
+                mRSHeader7.MPSheaderId = this.mpsheader.MPSheaderId;
+                mRSHeader7.Employee0Id = this.mpsheader.Employee0Id;
+                mRSHeader7.Employee1Id = this.mpsheader.Employee1Id;
+                mRSHeader7.MRSstartdate = this.mpsheader.MPSStartDate;
+                mRSHeader7.Customer = bomComponentInfo7[0].Customer;
+                mRSHeader7.CustomerId = bomComponentInfo7[0].Customer == null ? null : bomComponentInfo7[0].Customer.CustomerId;
+
+                mRSHeader7.SourceType = ((Int32)global::Helper.ProductType.DepotMadeProcee).ToString();
+                Audit(mRSHeader7);
+                this.mRSHeaderManager.Insert(mRSHeader7);
+                //}
+
+                var temp2 = from m in bomComponentInfo7
+                            group m by new { m.ProductId, m.Unit } into g
+                            select new
+                            {
+                                MrpQuantity = (from x in g select x.MrpQuantity).Sum(),
+                                MpsQuantity = (from x in g select x.MpsQuantity).Sum(),
+                                ProductId = g.Key.ProductId,
+                                Product = g.Max(p => p.Product),
+                                Unit = g.Key.Unit,
+                                MPSdetailsId = g.Max(p => p.MPSdetailsId),
+                                Customer = g.Max(p => p.Customer),
+                                BomComponentInfoDesc = g.Max(p => p.BomComponentInfoDesc),
+                                MadeProductId = g.First().MadeProductId,
+                                BeforepPackageProductId = g.First().BeforepPackageProductId,
+                                NextWorkHouseId = g.First().NextWorkHouseId
+                            };
+
+                foreach (var bomcom in temp2)
+                {
+                    //if (bomcom.MrpQuantity <= 0)
+                    //{
+                    //    bomcom.MrpQuantity = 0;
+                    //    //continue;
+                    //}
+                    InumerSum += 1;
+                    mRSdetails7 = new Book.Model.MRSdetails();
+                    mRSdetails7.MRSdetailsId = Guid.NewGuid().ToString();
+                    mRSdetails7.MRSHeaderId = mrpid1;
+                    mRSdetails7.MRSdetailssum = bomcom.MpsQuantity < 0 ? 0 : double.Parse(bomcom.MpsQuantity.Value.ToString("f0"));
+                    mRSdetails7.MRSdetailsQuantity = bomcom.MpsQuantity < 0 ? 0 : double.Parse(bomcom.MpsQuantity.Value.ToString("f0"));
+                    mRSdetails7.MPSheaderId = this.mpsheader.MPSheaderId;
+                    mRSdetails7.MPSdetailsId = bomcom.MPSdetailsId;
+                    mRSdetails7.Product = bomcom.Product;
+                    mRSdetails7.ProductId = bomcom.ProductId;
+                    mRSdetails7.ProductUnit = bomcom.Unit;
+                    mRSdetails7.Customer = bomcom.Customer;
+                    mRSdetails7.MadeProductId = bomcom.MadeProductId;
+                    mRSdetails7.MRSdetailsdes = bomcom.BomComponentInfoDesc;
+                    mRSdetails7.WorkHouseNextId = bomcom.NextWorkHouseId;
+                    mRSdetails7.BeforePackageProductId = bomcom.BeforepPackageProductId;
+                    if (mRSdetails7.Customer != null)
+                        mRSdetails7.CustomerId = mRSdetails7.Customer.CustomerId;
+                    mRSdetails7.Inumber = InumerSum;
+                    mRSdetails7.MRSStockQuantity = mRSdetails7.Product == null ? 0 : mRSdetails7.Product.StocksQuantity;
+                    //if (mRSdetails5.Product != null)
+                    //    mRSdetails5.MRSdetailssum = mRSdetails5.MRSdetailsQuantity - (mRSdetails5.Product.StocksQuantity == null ? 0 : mRSdetails5.Product.StocksQuantity);
+                    //else
+                    mRSdetails7.MRSdetailssum = mRSdetails7.MRSdetailsQuantity;
+                    if (mRSdetails7.MRSdetailssum == null || mRSdetails7.MRSdetailssum < 0)
+                        mRSdetails7.MRSdetailssum = 0;
+                    mRSdetails7.WorkHouseNextId = bomcom.NextWorkHouseId;
+                    new BL.MRSdetailsManager().Insert(mRSdetails7);
                 }
             }
 
@@ -1503,6 +1579,7 @@ namespace Book.UI.produceManager.MPSheader
                 //    new BL.MRSdetailsManager().Insert(mRSdetails3);
                 //}
             }
+
         }
 
         private static void Audit(Model.MRSHeader mRSHeader)

@@ -39,6 +39,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.TCFromInvoiceId.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_FromInvoiceId);
             this.TCCheckStandard.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_CheckedStandard);
             this.TCInvoiceCusId.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_InvoiceCusXOId);
+            this.lblSecondTestTime.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_SecondTestTime, "{0:yyyy-MM-dd}");
 
             this.subReportGX.ReportSource = new subReportGX();
             this.subReportHD.ReportSource = new subReportHD();

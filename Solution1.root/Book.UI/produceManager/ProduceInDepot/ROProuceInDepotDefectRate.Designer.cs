@@ -70,6 +70,10 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.TCmChangshangbuliang = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCmZuzhuangcashang = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCmCashang = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCmPinjianqita = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCmPinguanqita = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCmPodong = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCmBowen = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -123,6 +127,10 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.xrTableCell36 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell38 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell37 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell40 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell39 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell41 = new DevExpress.XtraReports.UI.XRTableCell();
             this.lblReportDate = new DevExpress.XtraReports.UI.XRLabel();
             this.lblReportName = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
@@ -130,14 +138,6 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell39 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell40 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell41 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCmPinjianqita = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCmPodong = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCmPinguanqita = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCmBowen = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -441,6 +441,30 @@ namespace Book.UI.produceManager.ProduceInDepot
             resources.ApplyResources(this.TCmCashang, "TCmCashang");
             this.TCmCashang.Name = "TCmCashang";
             this.TCmCashang.Weight = 0.061317209995493518;
+            // 
+            // TCmPinjianqita
+            // 
+            resources.ApplyResources(this.TCmPinjianqita, "TCmPinjianqita");
+            this.TCmPinjianqita.Name = "TCmPinjianqita";
+            this.TCmPinjianqita.Weight = 0.058150027038781776;
+            // 
+            // TCmPinguanqita
+            // 
+            resources.ApplyResources(this.TCmPinguanqita, "TCmPinguanqita");
+            this.TCmPinguanqita.Name = "TCmPinguanqita";
+            this.TCmPinguanqita.Weight = 0.058150027038781776;
+            // 
+            // TCmPodong
+            // 
+            resources.ApplyResources(this.TCmPodong, "TCmPodong");
+            this.TCmPodong.Name = "TCmPodong";
+            this.TCmPodong.Weight = 0.058150027038781776;
+            // 
+            // TCmBowen
+            // 
+            resources.ApplyResources(this.TCmBowen, "TCmBowen");
+            this.TCmBowen.Name = "TCmBowen";
+            this.TCmBowen.Weight = 0.058150027038781776;
             // 
             // TopMargin
             // 
@@ -829,6 +853,30 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.xrTableCell37.Name = "xrTableCell37";
             this.xrTableCell37.Weight = 0.061317013958944261;
             // 
+            // xrTableCell16
+            // 
+            resources.ApplyResources(this.xrTableCell16, "xrTableCell16");
+            this.xrTableCell16.Name = "xrTableCell16";
+            this.xrTableCell16.Weight = 0.058150021858801283;
+            // 
+            // xrTableCell40
+            // 
+            resources.ApplyResources(this.xrTableCell40, "xrTableCell40");
+            this.xrTableCell40.Name = "xrTableCell40";
+            this.xrTableCell40.Weight = 0.058150021858801283;
+            // 
+            // xrTableCell39
+            // 
+            resources.ApplyResources(this.xrTableCell39, "xrTableCell39");
+            this.xrTableCell39.Name = "xrTableCell39";
+            this.xrTableCell39.Weight = 0.058150021858801283;
+            // 
+            // xrTableCell41
+            // 
+            resources.ApplyResources(this.xrTableCell41, "xrTableCell41");
+            this.xrTableCell41.Name = "xrTableCell41";
+            this.xrTableCell41.Weight = 0.058150021858801283;
+            // 
             // lblReportDate
             // 
             resources.ApplyResources(this.lblReportDate, "lblReportDate");
@@ -879,54 +927,6 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.xrPageInfo1});
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
-            // 
-            // xrTableCell16
-            // 
-            resources.ApplyResources(this.xrTableCell16, "xrTableCell16");
-            this.xrTableCell16.Name = "xrTableCell16";
-            this.xrTableCell16.Weight = 0.058150021858801283;
-            // 
-            // xrTableCell39
-            // 
-            resources.ApplyResources(this.xrTableCell39, "xrTableCell39");
-            this.xrTableCell39.Name = "xrTableCell39";
-            this.xrTableCell39.Weight = 0.058150021858801283;
-            // 
-            // xrTableCell40
-            // 
-            resources.ApplyResources(this.xrTableCell40, "xrTableCell40");
-            this.xrTableCell40.Name = "xrTableCell40";
-            this.xrTableCell40.Weight = 0.058150021858801283;
-            // 
-            // xrTableCell41
-            // 
-            resources.ApplyResources(this.xrTableCell41, "xrTableCell41");
-            this.xrTableCell41.Name = "xrTableCell41";
-            this.xrTableCell41.Weight = 0.058150021858801283;
-            // 
-            // TCmPinjianqita
-            // 
-            resources.ApplyResources(this.TCmPinjianqita, "TCmPinjianqita");
-            this.TCmPinjianqita.Name = "TCmPinjianqita";
-            this.TCmPinjianqita.Weight = 0.058150027038781776;
-            // 
-            // TCmPodong
-            // 
-            resources.ApplyResources(this.TCmPodong, "TCmPodong");
-            this.TCmPodong.Name = "TCmPodong";
-            this.TCmPodong.Weight = 0.058150027038781776;
-            // 
-            // TCmPinguanqita
-            // 
-            resources.ApplyResources(this.TCmPinguanqita, "TCmPinguanqita");
-            this.TCmPinguanqita.Name = "TCmPinguanqita";
-            this.TCmPinguanqita.Weight = 0.058150027038781776;
-            // 
-            // TCmBowen
-            // 
-            resources.ApplyResources(this.TCmBowen, "TCmBowen");
-            this.TCmBowen.Name = "TCmBowen";
-            this.TCmBowen.Weight = 0.058150027038781776;
             // 
             // ROProuceInDepotDefectRate
             // 

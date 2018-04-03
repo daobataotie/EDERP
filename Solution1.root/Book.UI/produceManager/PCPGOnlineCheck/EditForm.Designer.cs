@@ -139,6 +139,7 @@
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnContionPrint = new DevExpress.XtraBars.BarButtonItem();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -474,7 +475,8 @@
             this.PCPGOnlineCheckDetailDesc,
             this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn4});
+            this.gridColumn4,
+            this.gridColumn5});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -1238,6 +1240,12 @@
             this.barBtnContionPrint.Name = "barBtnContionPrint";
             this.barBtnContionPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnContionPrint_ItemClick);
             // 
+            // gridColumn5
+            // 
+            resources.ApplyResources(this.gridColumn5, "gridColumn5");
+            this.gridColumn5.FieldName = "SecondTestTime";
+            this.gridColumn5.Name = "gridColumn5";
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1432,6 +1440,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit4;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit5;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
 
     }
 }

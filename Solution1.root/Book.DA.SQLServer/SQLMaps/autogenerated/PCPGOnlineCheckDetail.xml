@@ -35,6 +35,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="attrCuSuanCeShi" column="attrCuSuanCeShi" />
       <result property="ProductId" column="ProductId"/>
       <result property="CheckedStandard" column="CheckedStandard"/>
+      <result property="SecondTestTime" column="SecondTestTime"/>
       <result property="PronoteHeader" column="FromInvoiceId" lazyLoad="false" select="PronoteHeader.select_by_primary_key"/>
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct"/>
     </resultMap>
@@ -94,7 +95,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[attrMaoBian],
 				[attrCuSuanCeShi],
         [ProductId],
-        [CheckedStandard]
+        [CheckedStandard],
+        [SecondTestTime]
 			FROM
 				[dbo].[PCPGOnlineCheckDetail]
 			WHERE
@@ -176,7 +178,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[attrMaoBian],
 				[attrCuSuanCeShi],
         [ProductId],
-        [CheckedStandard]
+        [CheckedStandard],
+        [SecondTestTime]
 			) 
 			VALUES 
 			(
@@ -208,7 +211,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#attrMaoBian#,
 				#attrCuSuanCeShi#,
         #ProductId#,
-        #CheckedStandard#
+        #CheckedStandard#,
+        #SecondTestTime#
 			)
              ]]>
     </insert>
@@ -243,7 +247,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[attrMaoBian] = #attrMaoBian#,
 				[attrCuSuanCeShi] = #attrCuSuanCeShi#,
         [ProductId] = #ProductId#,
-        [CheckedStandard] = #CheckedStandard#
+        [CheckedStandard] = #CheckedStandard#,
+        [SecondTestTime]=#SecondTestTime#
 			WHERE
 				[PCPGOnlineCheckDetailId] = #PCPGOnlineCheckDetailId#
                     ]]>

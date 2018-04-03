@@ -1897,13 +1897,13 @@
     <value>镜片(脚)记号正确：</value>
   </data>
   <data name="layoutControlItem16.Text" xml:space="preserve">
-    <value>镜片(脚)记号正确：</value>
+    <value>产品记号正确：</value>
   </data>
   <data name="layoutControlItem17.CustomizationFormText" xml:space="preserve">
     <value>镜片(脚)色系：</value>
   </data>
   <data name="layoutControlItem17.Text" xml:space="preserve">
-    <value>镜片(脚)色系：</value>
+    <value>产品色系：</value>
   </data>
   <data name="layoutControlItem18.CustomizationFormText" xml:space="preserve">
     <value>镜脚是否太松摇晃：</value>
@@ -2487,6 +2487,12 @@
   <data name="&gt;&gt;layoutControlItem43.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;emptySpaceItem3.Name" xml:space="preserve">
+    <value>emptySpaceItem3</value>
+  </data>
+  <data name="&gt;&gt;emptySpaceItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;emptySpaceItem4.Name" xml:space="preserve">
     <value>emptySpaceItem4</value>
   </data>
@@ -2516,12 +2522,6 @@
   </data>
   <data name="&gt;&gt;barButtonItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem3.Name" xml:space="preserve">
-    <value>emptySpaceItem3</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem3.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>
