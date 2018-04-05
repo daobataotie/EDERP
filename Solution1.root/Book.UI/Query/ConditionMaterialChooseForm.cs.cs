@@ -45,7 +45,7 @@ namespace Book.UI.Query
             //this.bindingSourceProduceMaterialID.DataSource = new BL.ProduceMaterialManager().Select();
             this.dateEditStartDate.DateTime = DateTime.Now.Date.AddDays(-3);
             this.dateEditEndDate.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
-
+            this.ncc_Customer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
         }
 
         private void ConditionMaterialChooseForm_Load(object sender, EventArgs e)
@@ -100,6 +100,7 @@ namespace Book.UI.Query
             this.condition.DepartmentId0 = (this.newChooseWorkHouse.EditValue as Model.WorkHouse) == null ? null : (this.newChooseWorkHouse.EditValue as Model.WorkHouse).WorkHouseId;
 
             this.condition.CusInvoiceXOId = this.txtCusInvoiceXOId.Text;
+            this.condition.CustomerId = (this.ncc_Customer.EditValue == null ? null : (this.ncc_Customer.EditValue as Model.Customer).CustomerId);
         }
 
         private void buttonEditProduct1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

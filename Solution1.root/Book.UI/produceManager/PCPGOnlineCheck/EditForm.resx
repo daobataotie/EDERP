@@ -1202,6 +1202,9 @@
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>第二次抽驗外觀</value>
   </data>
+  <data name="repositoryItemTimeEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="gridColumn5.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1958,6 +1961,12 @@
   <data name="&gt;&gt;repositoryItemRichTextEdit2.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit, DevExpress.XtraRichEdit.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;gridColumn5.Name" xml:space="preserve">
+    <value>gridColumn5</value>
+  </data>
+  <data name="&gt;&gt;gridColumn5.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;repositoryItemTimeEdit1.Name" xml:space="preserve">
     <value>repositoryItemTimeEdit1</value>
   </data>
@@ -2144,11 +2153,11 @@
   <data name="&gt;&gt;barBtnContionPrint.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;gridColumn5.Name" xml:space="preserve">
-    <value>gridColumn5</value>
+  <data name="&gt;&gt;repositoryItemTimeEdit2.Name" xml:space="preserve">
+    <value>repositoryItemTimeEdit2</value>
   </data>
-  <data name="&gt;&gt;gridColumn5.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;repositoryItemTimeEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

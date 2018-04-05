@@ -85,7 +85,7 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.TCCheckStandard.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_mCheckStandard);
             this.TCInvoiceXOQuantity.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_InvoiceXOQuantity);
             this.TCCheckQuantity.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_PCImpactCheckQuantity);
-            this.TCSecondTestTime.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_SecondTestTime, "{0:yyyy-MM-dd}");
+            this.TCSecondTestTime.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_SecondTestTime, "{0:HH:mm}");
         }
 
         public RO(Model.PCImpactCheck _pcic, string RowFilter)

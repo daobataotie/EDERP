@@ -88,5 +88,13 @@ namespace Book.UI.Query
             get { return _CusInvoiceXOId; }
             set { _CusInvoiceXOId = value; }
         }
+
+        private string _customerId;
+
+        public string CustomerId
+        {
+            get { return _customerId; }
+            set { _customerId = value; }
+        }
     }
 }

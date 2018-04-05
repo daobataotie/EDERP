@@ -74,7 +74,7 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<bool>("ProduceMaterial.existsId", id);
         }
 
-        public IList<Book.Model.ProduceMaterial> SelectBycondition(DateTime startDate, DateTime endDate, string produceMaterialId0, string produceMaterialId1, Book.Model.Product pId0, Book.Model.Product pId1, string departmentId0, string departmentId1, string PronoteHeaderId0, string PronoteHeaderId1, string CusInvoiceXOId)
+        public IList<Book.Model.ProduceMaterial> SelectBycondition(DateTime startDate, DateTime endDate, string produceMaterialId0, string produceMaterialId1, Book.Model.Product pId0, Book.Model.Product pId1, string departmentId0, string departmentId1, string PronoteHeaderId0, string PronoteHeaderId1, string CusInvoiceXOId, string customerId)
         {
             SqlParameter[] parames = { 
                     new SqlParameter("@startDate", DbType.DateTime), 
@@ -87,7 +87,8 @@ namespace Book.DA.SQLServer
                     new SqlParameter("@departmentId1", DbType.String),
                     new SqlParameter("@PronoteHeaderId0", DbType.String), 
                     new SqlParameter("@PronoteHeaderId1", DbType.String),
-                    new SqlParameter("@CusInvoiceXOId",DbType.String)
+                    new SqlParameter("@CusInvoiceXOId",DbType.String),
+                    new SqlParameter("@CustomerId",DbType.String)
                                      };
 
             parames[0].Value = startDate;
@@ -134,6 +135,11 @@ namespace Book.DA.SQLServer
                 parames[10].Value = CusInvoiceXOId;
             else
                 parames[10].Value = DBNull.Value;
+
+            if (!string.IsNullOrEmpty(customerId))
+                parames[11].Value = customerId;
+            else
+                parames[11].Value = DBNull.Value;
             //  sql.Append(" from ProduceMaterial p left join  Workhouse w on w.WorkHouseId=p.WorkHouseId right join ProduceMaterialdetails d on p.ProduceMaterialID = d.ProduceMaterialID left join Product pro on d.ProductId = pro.ProductId");
 
             StringBuilder sql = new StringBuilder();
@@ -157,6 +163,8 @@ namespace Book.DA.SQLServer
                 sql.Append(" AND p.InvoiceId between @PronoteHeaderId0 and @PronoteHeaderId1");
             if (!string.IsNullOrEmpty(CusInvoiceXOId))
                 sql.Append(" AND InvoiceXOId = (SELECT InvoiceId FROM InvoiceXO WHERE CustomerInvoiceXOId = @CusInvoiceXOId)");
+            if (!string.IsNullOrEmpty(customerId))
+                sql.Append(" and p.InvoiceXOId in (select InvoiceId from InvoiceXO where CustomerId=@CustomerId)");
             sql.Append(" order by p.ProduceMaterialID desc ");
             return this.DataReaderBind<Model.ProduceMaterial>(sql.ToString(), parames, CommandType.Text);
             //Hashtable ht = new Hashtable();

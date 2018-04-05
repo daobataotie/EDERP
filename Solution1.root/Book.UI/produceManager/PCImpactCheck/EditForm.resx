@@ -1598,6 +1598,9 @@
   <data name="gridColumn11.Caption" xml:space="preserve">
     <value>第二次抽驗外觀</value>
   </data>
+  <data name="repositoryItemTimeEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2528,6 +2531,18 @@
   <data name="&gt;&gt;gridColumn10.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;gridColumn11.Name" xml:space="preserve">
+    <value>gridColumn11</value>
+  </data>
+  <data name="&gt;&gt;gridColumn11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTimeEdit1.Name" xml:space="preserve">
+    <value>repositoryItemTimeEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTimeEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;RICBattr60L.Name" xml:space="preserve">
     <value>RICBattr60L</value>
   </data>
@@ -2635,12 +2650,6 @@
   </data>
   <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn11.Name" xml:space="preserve">
-    <value>gridColumn11</value>
-  </data>
-  <data name="&gt;&gt;gridColumn11.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>
