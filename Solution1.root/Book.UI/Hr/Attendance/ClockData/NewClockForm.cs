@@ -58,10 +58,31 @@ namespace Book.UI.Hr.Attendance.ClockData
                 OleDbDataAdapter oda = new OleDbDataAdapter(sql, oconn);
                 oda.Fill(dt);
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("導入只支持64位操作系統配合64位ERP", "提示", MessageBoxButtons.OK);
-                return;
+                if (ex.Message.Contains("Microsoft.ACE.OLEDB.15.0"))
+                {
+                    try
+                    {
+                        string fileNameNew = System.Configuration.ConfigurationManager.AppSettings["AccessPath"];
+                        string connNew = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Persist Security Info=False;Jet OLEDB:Database Password=!@Stan888@!", fileNameNew);
+                        OleDbConnection oconnNew = new OleDbConnection(connNew);
+                        string sqlNew = string.Format("select c.CheckTime,u.Name,u.SSN from CHECKINOUT c left join USERINFO u on c.USERID=u.USERID where c.CheckTime between #{0}# and #{1}# order by c.CheckTime ", dateStart.ToString("yyyy-MM-dd"), dateEnd.ToString("yyyy-MM-dd HH:mm:ss"));
+
+                        OleDbDataAdapter odaNew = new OleDbDataAdapter(sqlNew, oconnNew);
+                        odaNew.Fill(dt);
+                    }
+                    catch (Exception ex2)
+                    {
+                        MessageBox.Show(ex2.Message, "提示", MessageBoxButtons.OK);
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("導入只支持64位操作系統配合64位ERP", "提示", MessageBoxButtons.OK);
+                    return;
+                }
             }
 
             //int erpClockCount = clockDataManager.CountClockByDateRange(dateStart, dateEnd);
@@ -81,7 +102,7 @@ namespace Book.UI.Hr.Attendance.ClockData
                     string date = dr[0].ToString();
                     string name = dr[1].ToString().Trim();
                     string id = dr[2].ToString();
-                    if (name.Contains("\\0"))
+                    if (name.Contains("\0"))
                         name = name.Substring(0, name.IndexOf('\0'));
 
                     Model.Employee emp = this.employeeManager.SelectIdByNameAnId(name, id);

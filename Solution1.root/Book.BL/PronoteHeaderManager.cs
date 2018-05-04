@@ -352,9 +352,9 @@ namespace Book.BL
             return "pnt";
         }
 
-        public IList<Book.Model.PronoteHeader> GetByDate(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, DateTime JiaohuoDateStart, DateTime JiaohuoDateEnd, string MachineName)
+        public IList<Book.Model.PronoteHeader> GetByDate(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7, DateTime JiaohuoDateStart, DateTime JiaohuoDateEnd, string MachineName)
         {
-            return accessor.GetByDate(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5, JiaohuoDateStart, JiaohuoDateEnd, MachineName);
+            return accessor.GetByDate(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5, sourcetype7, JiaohuoDateStart, JiaohuoDateEnd, MachineName);
         }
 
         public IList<Book.Model.PronoteHeader> Select(string customerStart, string customerEnd, DateTime dateStart, DateTime dateEnd, string CusXOId)
@@ -393,19 +393,19 @@ namespace Book.BL
             accessor.UpdateHeaderIsClse(pronoteheaderid, isclose);
         }
 
-        public IList<Book.Model.PronoteHeader> GetByDateMa(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, int sourcetype, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5)
+        public IList<Book.Model.PronoteHeader> GetByDateMa(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, int sourcetype, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7)
         {
-            return accessor.GetByDateMa(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, sourcetype, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5);
+            return accessor.GetByDateMa(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, sourcetype, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5, sourcetype7);
         }
 
-        public IList<Book.Model.PronoteHeader> GetByDateZJ(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, string sign, bool sourcetype0, bool sourcetype4, bool sourcetype5)
+        public IList<Book.Model.PronoteHeader> GetByDateZJ(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, string sign, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7)
         {
-            return accessor.GetByDateZJ(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sign, sourcetype0, sourcetype4, sourcetype5);
+            return accessor.GetByDateZJ(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sign, sourcetype0, sourcetype4, sourcetype5, sourcetype7);
         }
 
-        public IList<Book.Model.PronoteHeader> GetByDateDI(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey,  bool sourcetype0, bool sourcetype4, bool sourcetype5)
+        public IList<Book.Model.PronoteHeader> GetByDateDI(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7)
         {
-            return accessor.GetByDateDI(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5);
+            return accessor.GetByDateDI(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5, sourcetype7);
         }
         public void UpdateHeaderIsClseByXOId(string InvoiceXOId, bool isclose)
         {

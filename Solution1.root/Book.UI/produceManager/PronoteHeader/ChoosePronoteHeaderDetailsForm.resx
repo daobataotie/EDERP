@@ -168,7 +168,7 @@
     <value>5</value>
   </data>
   <data name="lookUpEditMachine.Location" type="System.Drawing.Point, System.Drawing">
-    <value>507, 87</value>
+    <value>556, 86</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="lookUpEditMachine.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
@@ -187,7 +187,7 @@
     <value />
   </data>
   <data name="lookUpEditMachine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 21</value>
+    <value>130, 21</value>
   </data>
   <data name="lookUpEditMachine.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -215,7 +215,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="lbl_Status.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+    <value>20, 74</value>
   </data>
   <data name="lbl_Status.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
@@ -234,6 +234,30 @@
   </data>
   <data name="&gt;&gt;lbl_Status.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="check_DepotProcess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>521, 111</value>
+  </data>
+  <data name="checkEdit2.Properties.Caption" xml:space="preserve">
+    <value>倉庫(半成品加工)</value>
+  </data>
+  <data name="check_DepotProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 19</value>
+  </data>
+  <data name="check_DepotProcess.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;check_DepotProcess.Name" xml:space="preserve">
+    <value>check_DepotProcess</value>
+  </data>
+  <data name="&gt;&gt;check_DepotProcess.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;check_DepotProcess.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;check_DepotProcess.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="date_JiaohuoStart.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 88</value>
@@ -260,7 +284,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_JiaohuoStart.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="date_JiaohuoEnd.Location" type="System.Drawing.Point, System.Drawing">
     <value>312, 88</value>
@@ -269,7 +293,7 @@
     <value>Combo</value>
   </data>
   <data name="date_JiaohuoEnd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 21</value>
+    <value>205, 21</value>
   </data>
   <data name="date_JiaohuoEnd.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
@@ -287,7 +311,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_JiaohuoEnd.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btn_Print.Location" type="System.Drawing.Point, System.Drawing">
     <value>714, 115</value>
@@ -311,16 +335,16 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_Print.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="checkEditZizhiBCP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>472, 112</value>
+    <value>316, 113</value>
   </data>
   <data name="checkEditZizhiBCP.Properties.Caption" xml:space="preserve">
     <value>自製(半成品加工)</value>
   </data>
   <data name="checkEditZizhiBCP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 19</value>
+    <value>201, 19</value>
   </data>
   <data name="checkEditZizhiBCP.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -335,16 +359,16 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;checkEditZizhiBCP.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="checkEditZizhiZZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 113</value>
+    <value>155, 113</value>
   </data>
   <data name="checkEditZizhiZZ.Properties.Caption" xml:space="preserve">
     <value>自製(組裝)</value>
   </data>
   <data name="checkEditZizhiZZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 19</value>
+    <value>157, 19</value>
   </data>
   <data name="checkEditZizhiZZ.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -359,7 +383,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;checkEditZizhiZZ.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="checkEditZizhi.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 113</value>
@@ -368,7 +392,7 @@
     <value>自製</value>
   </data>
   <data name="checkEditZizhi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 19</value>
+    <value>139, 19</value>
   </data>
   <data name="checkEditZizhi.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -383,7 +407,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;checkEditZizhi.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="TXTproCusNameKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
@@ -392,7 +416,7 @@
     <value>312, 63</value>
   </data>
   <data name="TXTproCusNameKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 21</value>
+    <value>205, 21</value>
   </data>
   <data name="TXTproCusNameKey.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -407,7 +431,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;TXTproCusNameKey.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="TXTproNameKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
@@ -431,7 +455,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;TXTproNameKey.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="newChooseCustomer.Location" type="System.Drawing.Point, System.Drawing">
     <value>505, 12</value>
@@ -452,7 +476,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseCustomer.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="buttonEditPro1.Location" type="System.Drawing.Point, System.Drawing">
     <value>706, 12</value>
@@ -473,7 +497,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;buttonEditPro1.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="newChooseWorkHorse.Location" type="System.Drawing.Point, System.Drawing">
     <value>505, 37</value>
@@ -494,7 +518,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseWorkHorse.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="textEditCusXOId.EditValue" xml:space="preserve">
     <value />
@@ -518,7 +542,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCusXOId.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="dateEditStartDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>81, 12</value>
@@ -542,7 +566,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;dateEditStartDate.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="txtpronoteHeaderIdKey.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
@@ -566,7 +590,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtpronoteHeaderIdKey.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
     <value>739, 461</value>
@@ -590,7 +614,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButton2.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -872,7 +896,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>561, 461</value>
@@ -896,7 +920,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="dateEditEndDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>312, 12</value>
@@ -920,16 +944,16 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;dateEditEndDate.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="checkEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>472, 63</value>
+    <value>521, 63</value>
   </data>
   <data name="checkEdit1.Properties.Caption" xml:space="preserve">
     <value>只顯示未結案</value>
   </data>
   <data name="checkEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 19</value>
+    <value>165, 19</value>
   </data>
   <data name="checkEdit1.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -944,7 +968,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;checkEdit1.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="simpleButtonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>714, 37</value>
@@ -968,7 +992,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButtonOK.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1063,12 +1087,6 @@
   <data name="layoutControlItem22.Text" xml:space="preserve">
     <value>layoutControlItem22</value>
   </data>
-  <data name="layoutControlItem23.CustomizationFormText" xml:space="preserve">
-    <value>layoutControlItem23</value>
-  </data>
-  <data name="layoutControlItem23.Text" xml:space="preserve">
-    <value>layoutControlItem23</value>
-  </data>
   <data name="layoutControlItem25.CustomizationFormText" xml:space="preserve">
     <value>至：</value>
   </data>
@@ -1080,18 +1098,6 @@
   </data>
   <data name="layoutControlItem24.Text" xml:space="preserve">
     <value>交货日期：</value>
-  </data>
-  <data name="layoutControlItem26.CustomizationFormText" xml:space="preserve">
-    <value>机台：</value>
-  </data>
-  <data name="layoutControlItem26.Text" xml:space="preserve">
-    <value>机台：</value>
-  </data>
-  <data name="emptySpaceItem1.CustomizationFormText" xml:space="preserve">
-    <value>emptySpaceItem1</value>
-  </data>
-  <data name="emptySpaceItem1.Text" xml:space="preserve">
-    <value>emptySpaceItem1</value>
   </data>
   <data name="emptySpaceItem3.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem3</value>
@@ -1134,6 +1140,24 @@
   </data>
   <data name="layoutControlItem27.Text" xml:space="preserve">
     <value>layoutControlItem27</value>
+  </data>
+  <data name="layoutControlItem23.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem23</value>
+  </data>
+  <data name="layoutControlItem23.Text" xml:space="preserve">
+    <value>layoutControlItem23</value>
+  </data>
+  <data name="layoutControlItem26.CustomizationFormText" xml:space="preserve">
+    <value>机台：</value>
+  </data>
+  <data name="layoutControlItem26.Text" xml:space="preserve">
+    <value>机台：</value>
+  </data>
+  <data name="layoutControlItem31.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem31</value>
+  </data>
+  <data name="layoutControlItem31.Text" xml:space="preserve">
+    <value>layoutControlItem31</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
@@ -1510,12 +1534,6 @@
   <data name="&gt;&gt;layoutControlItem26.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
-    <value>emptySpaceItem1</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;emptySpaceItem3.Name" xml:space="preserve">
     <value>emptySpaceItem3</value>
   </data>
@@ -1599,6 +1617,12 @@
   </data>
   <data name="&gt;&gt;emptySpaceItem2.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem31.Name" xml:space="preserve">
+    <value>layoutControlItem31</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem31.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ChoosePronoteHeaderDetailsForm</value>

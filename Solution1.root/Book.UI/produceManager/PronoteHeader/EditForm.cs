@@ -1648,6 +1648,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 {
                     Model.PronotedetailsMaterial temp = new Model.PronotedetailsMaterial();
                     temp.PronotedetailsMaterialId = Guid.NewGuid().ToString();
+                    temp.PronoteHeader = this.pronoteHeader;
                     temp.PronoteHeaderID = this.pronoteHeader.PronoteHeaderID;
                     temp.Product = item;
                     temp.ProductId = item.ProductId;
@@ -1773,11 +1774,11 @@ namespace Book.UI.produceManager.PronoteHeader
             //             where n.Checkeds == true
             //             select n;
 
-            if (this.action != "view")
-            {
-                MessageBox.Show("請保存后再生成領料單", this.Text, MessageBoxButtons.OK);
-                return;
-            }
+            //if (this.action != "view")
+            //{
+            //    MessageBox.Show("請保存后再生成領料單", this.Text, MessageBoxButtons.OK);
+            //    return;
+            //}
 
             if (this.pronoteHeader.IsClose.HasValue && this.pronoteHeader.IsClose.Value)
             {

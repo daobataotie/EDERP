@@ -971,57 +971,62 @@ namespace Book.UI.produceManager.MRSHeader
                         IList<Model.BomParentPartInfo> bompar = this.bomParentPartInfoManager.DataReaderBind<Model.BomParentPartInfo>(" select Top 1 BomId,TechonlogyHeaderId from BomParentPartInfo where productId=@productid and Status=0", new SqlParameter[] { sp }, CommandType.Text);
                         if (bompar == null || bompar.Count == 0)
                         {
-                            MessageBox.Show(this, "請檢驗商品" + _mrsdetail.Product.ProductName + "的BOM資料是否建立或者啟用");
-                            throw new Exception();
-                        }
-
-                        Model.BomParentPartInfo bomP = bompar[0];
-
-                        #region  //工序  损耗
-                        if (!string.IsNullOrEmpty(bomP.TechonlogyHeaderId))
-                        {
-                            // Model.TechonlogyHeader techonlogyHeader = techonlogyHeaderManager.Get(bomP.TechonlogyHeaderId);
-                            SqlParameter[] sqlte = new SqlParameter[] { new SqlParameter("@TechonlogyHeaderId", SqlDbType.VarChar, 50) };
-                            sqlte[0].Value = bomP.TechonlogyHeaderId;
-                            IList<Model.Technologydetails> tedetail = technologydetailsManager.DataReaderBind<Model.Technologydetails>(" SELECT t.TechnologydetailsNo,t.ProceduresId,p.WorkHouseId,p.SupplierId,p.IsOtherProduceOther PackageUnit,t.Quantity,t.SunhaoRange  FROM   [Technologydetails] t left join Procedures p on t.ProceduresId=p.ProceduresId WHERE [TechonlogyHeaderId] = @TechonlogyHeaderId ", sqlte, CommandType.Text);
-                            if (tedetail != null)
+                            if (!_mrsdetail.Product.Id.StartsWith("K0-001"))   //標籤
                             {
-                                foreach (Model.Technologydetails technologydetails in tedetail)
-                                {
-                                    pronoteProceduresDetail = new Book.Model.PronoteProceduresDetail();
-                                    pronoteProceduresDetail.PronoteProceduresDetailId = Guid.NewGuid().ToString();
-                                    pronoteProceduresDetail.ProceduresNo = technologydetails.TechnologydetailsNo;
-                                    pronoteProceduresDetail.ProceduresId = technologydetails.ProceduresId;
-                                    pronoteProceduresDetail.WorkHouseId = technologydetails.WorkHouseId;
-                                    if (tedetail.IndexOf(technologydetails) == 0)
-                                        pronoteProceduresDetail.PronoteProceduresDate = _mrsdetail.JiaoHuoDate;
-                                    if (technologydetails.Procedures != null)
-                                    {
-                                        pronoteProceduresDetail.IsOtherProduceOther = technologydetails.IsOtherProduceOther;
-                                        pronoteProceduresDetail.SupplierId = technologydetails.SupplierId;
-                                    }
-                                    pronoteProceduresDetail.TechnologyQuantity = technologydetails.Quantity;
-                                    pronoteHeader.DetailProcedures.Add(pronoteProceduresDetail);
-                                }
+                                MessageBox.Show(this, "請檢驗商品" + _mrsdetail.Product.ProductName + "的BOM資料是否建立或者啟用");
+                                throw new Exception();
+                            }
+                        }
+                        else
+                        {
+                            Model.BomParentPartInfo bomP = bompar[0];
 
-                                //通过工艺里面的损耗设定计算损耗
-                                if (this.mrsheader.SourceType == "0")     //自制
+                            #region  //工序  损耗
+                            if (!string.IsNullOrEmpty(bomP.TechonlogyHeaderId))
+                            {
+                                // Model.TechonlogyHeader techonlogyHeader = techonlogyHeaderManager.Get(bomP.TechonlogyHeaderId);
+                                SqlParameter[] sqlte = new SqlParameter[] { new SqlParameter("@TechonlogyHeaderId", SqlDbType.VarChar, 50) };
+                                sqlte[0].Value = bomP.TechonlogyHeaderId;
+                                IList<Model.Technologydetails> tedetail = technologydetailsManager.DataReaderBind<Model.Technologydetails>(" SELECT t.TechnologydetailsNo,t.ProceduresId,p.WorkHouseId,p.SupplierId,p.IsOtherProduceOther PackageUnit,t.Quantity,t.SunhaoRange  FROM   [Technologydetails] t left join Procedures p on t.ProceduresId=p.ProceduresId WHERE [TechonlogyHeaderId] = @TechonlogyHeaderId ", sqlte, CommandType.Text);
+                                if (tedetail != null)
                                 {
-                                    count = 0;
-                                    foreach (var item in tedetail)
+                                    foreach (Model.Technologydetails technologydetails in tedetail)
                                     {
-                                        if (!string.IsNullOrEmpty(item.SunhaoRange))
+                                        pronoteProceduresDetail = new Book.Model.PronoteProceduresDetail();
+                                        pronoteProceduresDetail.PronoteProceduresDetailId = Guid.NewGuid().ToString();
+                                        pronoteProceduresDetail.ProceduresNo = technologydetails.TechnologydetailsNo;
+                                        pronoteProceduresDetail.ProceduresId = technologydetails.ProceduresId;
+                                        pronoteProceduresDetail.WorkHouseId = technologydetails.WorkHouseId;
+                                        if (tedetail.IndexOf(technologydetails) == 0)
+                                            pronoteProceduresDetail.PronoteProceduresDate = _mrsdetail.JiaoHuoDate;
+                                        if (technologydetails.Procedures != null)
                                         {
-                                            string[] sunhaorange = item.SunhaoRange.Split(',');
-                                            foreach (var sunhao in sunhaorange)
+                                            pronoteProceduresDetail.IsOtherProduceOther = technologydetails.IsOtherProduceOther;
+                                            pronoteProceduresDetail.SupplierId = technologydetails.SupplierId;
+                                        }
+                                        pronoteProceduresDetail.TechnologyQuantity = technologydetails.Quantity;
+                                        pronoteHeader.DetailProcedures.Add(pronoteProceduresDetail);
+                                    }
+
+                                    //通过工艺里面的损耗设定计算损耗
+                                    if (this.mrsheader.SourceType == "0")     //自制
+                                    {
+                                        count = 0;
+                                        foreach (var item in tedetail)
+                                        {
+                                            if (!string.IsNullOrEmpty(item.SunhaoRange))
                                             {
-                                                if (!string.IsNullOrEmpty(sunhao))
+                                                string[] sunhaorange = item.SunhaoRange.Split(',');
+                                                foreach (var sunhao in sunhaorange)
                                                 {
-                                                    string[] sh = sunhao.Split('/');
-                                                    if (this.pronoteHeader.DetailsSum >= Convert.ToDouble(sh[0]) && this.pronoteHeader.DetailsSum <= Convert.ToDouble(sh[1]))
+                                                    if (!string.IsNullOrEmpty(sunhao))
                                                     {
-                                                        count += Convert.ToDouble(sh[2]) / 100;
-                                                        break;
+                                                        string[] sh = sunhao.Split('/');
+                                                        if (this.pronoteHeader.DetailsSum >= Convert.ToDouble(sh[0]) && this.pronoteHeader.DetailsSum <= Convert.ToDouble(sh[1]))
+                                                        {
+                                                            count += Convert.ToDouble(sh[2]) / 100;
+                                                            break;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -1029,86 +1034,86 @@ namespace Book.UI.produceManager.MRSHeader
                                     }
                                 }
                             }
-                        }
-                        #endregion
+                            #endregion
 
-                        //插框，排盒，模数
-                        if (_mrsdetail.Product.Chakuang > 0)
-                            pronoteHeader.Chakuang = Math.Ceiling(Convert.ToDouble(pronoteHeader.DetailsSum * (1 + count) / _mrsdetail.Product.Chakuang)).ToString() + " * " + _mrsdetail.Product.Chakuang.ToString() + "框";     //框取整
-                        if (_mrsdetail.Product.Paihe > 0)
-                            pronoteHeader.Paihe = Math.Floor(Convert.ToDouble(pronoteHeader.DetailsSum * (1 + count) / _mrsdetail.Product.Paihe)).ToString() + " * " + _mrsdetail.Product.Paihe.ToString() + "盒 + " + ((pronoteHeader.DetailsSum * (1 + count) % _mrsdetail.Product.Paihe) == 0 ? "" : (pronoteHeader.DetailsSum * (1 + count) % _mrsdetail.Product.Paihe).Value.ToString("0.####"));
+                            //插框，排盒，模数
+                            if (_mrsdetail.Product.Chakuang > 0)
+                                pronoteHeader.Chakuang = Math.Ceiling(Convert.ToDouble(pronoteHeader.DetailsSum * (1 + count) / _mrsdetail.Product.Chakuang)).ToString() + " * " + _mrsdetail.Product.Chakuang.ToString() + "框";     //框取整
+                            if (_mrsdetail.Product.Paihe > 0)
+                                pronoteHeader.Paihe = Math.Floor(Convert.ToDouble(pronoteHeader.DetailsSum * (1 + count) / _mrsdetail.Product.Paihe)).ToString() + " * " + _mrsdetail.Product.Paihe.ToString() + "盒 + " + ((pronoteHeader.DetailsSum * (1 + count) % _mrsdetail.Product.Paihe) == 0 ? "" : (pronoteHeader.DetailsSum * (1 + count) % _mrsdetail.Product.Paihe).Value.ToString("0.####"));
 
-                        if (_mrsdetail.Product.Moshu > 0)
-                            pronoteHeader.Moshu = Math.Floor(Convert.ToDouble(pronoteHeader.DetailsSum * (1 + count) / _mrsdetail.Product.Moshu)).ToString() + " * " + _mrsdetail.Product.Moshu.ToString() + "模 + " + ((pronoteHeader.DetailsSum * (1 + count) % _mrsdetail.Product.Moshu) == 0 ? "" : (pronoteHeader.DetailsSum * (1 + count) % _mrsdetail.Product.Moshu).Value.ToString("0.####"));
+                            if (_mrsdetail.Product.Moshu > 0)
+                                pronoteHeader.Moshu = Math.Floor(Convert.ToDouble(pronoteHeader.DetailsSum * (1 + count) / _mrsdetail.Product.Moshu)).ToString() + " * " + _mrsdetail.Product.Moshu.ToString() + "模 + " + ((pronoteHeader.DetailsSum * (1 + count) % _mrsdetail.Product.Moshu) == 0 ? "" : (pronoteHeader.DetailsSum * (1 + count) % _mrsdetail.Product.Moshu).Value.ToString("0.####"));
 
 
-                        #region //配料
-                        SqlParameter[] sqlpar = new SqlParameter[] { new SqlParameter("@BomId", SqlDbType.VarChar, 50) };
-                        sqlpar[0].Value = bomP.BomId;
-                        foreach (Model.BomComponentInfo component in this.bomComponentInfoManager.DataReaderBind<Model.BomComponentInfo>(" SELECT ProductId,UseQuantity,SubLoseRate,Unit  FROM   [BomComponentInfo] WHERE [BomId] = @BomId ", sqlpar, CommandType.Text))
-                        {
-                            materials = new Model.PronotedetailsMaterial();
-                            materials.PronotedetailsMaterialId = Guid.NewGuid().ToString();
-                            materials.ProductId = component.ProductId;
-                            materials.PronoteHeaderID = pronoteHeader.PronoteHeaderID;
-                            materials.PronoteQuantity = Math.Truncate(Convert.ToDouble(component.UseQuantity * pronoteHeader.DetailsSum * (1 + count) * (1 + 0.01 * (component.SubLoseRate == null ? 0 : component.SubLoseRate))) * 10) / 10;    //保留一位小数 不四舍五入
-                            materials.Product = new BL.ProductManager().Get(materials.ProductId);
-                            //if (materials.Product != null && this.mrsheader.GetSourceType == "自製") //依照最小领料单位取整数倍
-                            //{
-                            //    if (materials.Product.ProductCategory != null && Convert.ToDouble(materials.Product.ProductCategory.ProductMinQuantity) > 0)
-                            //        materials.PronoteQuantity = Math.Ceiling(Convert.ToDouble(materials.PronoteQuantity / materials.Product.ProductCategory.ProductMinQuantity)) * materials.Product.ProductCategory.ProductMinQuantity;
-                            //}
-                            materials.ProductUnit = component.Unit;
-                            no = no + 1;
-                            materials.Inumber = no;
-                            pronoteHeader.DetailsMaterial.Add(materials);
-                        }
-                        #endregion
-
-                        #region  //包装
-                        if (this.mrsheader.SourceType == "4")      //自制（组装）
-                        {
-
-                            IList<Model.BomPackageDetails> packageList = this.bomPackageDetailsManager.DataReaderBind<Model.BomPackageDetails>(" SELECT ProductId,Quantity,PackageUnit  FROM   [bomPackageDetails] WHERE [BomId] = @BomId ", sqlpar, CommandType.Text);
-                            if (packageList != null && packageList.Count > 0)
+                            #region //配料
+                            SqlParameter[] sqlpar = new SqlParameter[] { new SqlParameter("@BomId", SqlDbType.VarChar, 50) };
+                            sqlpar[0].Value = bomP.BomId;
+                            foreach (Model.BomComponentInfo component in this.bomComponentInfoManager.DataReaderBind<Model.BomComponentInfo>(" SELECT ProductId,UseQuantity,SubLoseRate,Unit  FROM   [BomComponentInfo] WHERE [BomId] = @BomId ", sqlpar, CommandType.Text))
                             {
-                                foreach (Model.BomPackageDetails item in packageList)
+                                materials = new Model.PronotedetailsMaterial();
+                                materials.PronotedetailsMaterialId = Guid.NewGuid().ToString();
+                                materials.ProductId = component.ProductId;
+                                materials.PronoteHeaderID = pronoteHeader.PronoteHeaderID;
+                                materials.PronoteQuantity = Math.Truncate(Convert.ToDouble(component.UseQuantity * pronoteHeader.DetailsSum * (1 + count) * (1 + 0.01 * (component.SubLoseRate == null ? 0 : component.SubLoseRate))) * 10) / 10;    //保留一位小数 不四舍五入
+                                materials.Product = new BL.ProductManager().Get(materials.ProductId);
+                                //if (materials.Product != null && this.mrsheader.GetSourceType == "自製") //依照最小领料单位取整数倍
+                                //{
+                                //    if (materials.Product.ProductCategory != null && Convert.ToDouble(materials.Product.ProductCategory.ProductMinQuantity) > 0)
+                                //        materials.PronoteQuantity = Math.Ceiling(Convert.ToDouble(materials.PronoteQuantity / materials.Product.ProductCategory.ProductMinQuantity)) * materials.Product.ProductCategory.ProductMinQuantity;
+                                //}
+                                materials.ProductUnit = component.Unit;
+                                no = no + 1;
+                                materials.Inumber = no;
+                                pronoteHeader.DetailsMaterial.Add(materials);
+                            }
+                            #endregion
+
+                            #region  //包装
+                            if (this.mrsheader.SourceType == "4")      //自制（组装）
+                            {
+
+                                IList<Model.BomPackageDetails> packageList = this.bomPackageDetailsManager.DataReaderBind<Model.BomPackageDetails>(" SELECT ProductId,Quantity,PackageUnit  FROM   [bomPackageDetails] WHERE [BomId] = @BomId ", sqlpar, CommandType.Text);
+                                if (packageList != null && packageList.Count > 0)
                                 {
-                                    Model.PronotedetailsMaterial materials = new Model.PronotedetailsMaterial();
-                                    materials.PronotedetailsMaterialId = Guid.NewGuid().ToString();
-                                    //materials.Product = item.Product;
-                                    materials.ProductId = item.ProductId;
-                                    materials.PronoteHeader = pronoteHeader;
-                                    materials.PronoteHeaderID = pronoteHeader.PronoteHeaderID;
-                                    //string b = "";
-                                    //if (double.Parse(this.calcEditQuantity.Value.ToString()) % item.UseQuantity != 0)
-                                    //{
-                                    //    b = ((double.Parse(this.calcEditQuantity.Value.ToString()) / item.UseQuantity) + 1).ToString();
-                                    //    materials.PronoteQuantity =double.Parse( b.Substring(0, b.IndexOf('.') < 0 ? b.Length : b.Length - b.IndexOf('.') - 1));
-                                    //}
-                                    //else
-                                    //{
-                                    //    materials.PronoteQuantity = double.Parse(this.calcEditQuantity.Value.ToString()) / item.UseQuantity;
-                                    //}
+                                    foreach (Model.BomPackageDetails item in packageList)
+                                    {
+                                        Model.PronotedetailsMaterial materials = new Model.PronotedetailsMaterial();
+                                        materials.PronotedetailsMaterialId = Guid.NewGuid().ToString();
+                                        //materials.Product = item.Product;
+                                        materials.ProductId = item.ProductId;
+                                        materials.PronoteHeader = pronoteHeader;
+                                        materials.PronoteHeaderID = pronoteHeader.PronoteHeaderID;
+                                        //string b = "";
+                                        //if (double.Parse(this.calcEditQuantity.Value.ToString()) % item.UseQuantity != 0)
+                                        //{
+                                        //    b = ((double.Parse(this.calcEditQuantity.Value.ToString()) / item.UseQuantity) + 1).ToString();
+                                        //    materials.PronoteQuantity =double.Parse( b.Substring(0, b.IndexOf('.') < 0 ? b.Length : b.Length - b.IndexOf('.') - 1));
+                                        //}
+                                        //else
+                                        //{
+                                        //    materials.PronoteQuantity = double.Parse(this.calcEditQuantity.Value.ToString()) / item.UseQuantity;
+                                        //}
 
-                                    materials.PronoteQuantity = Math.Round(Convert.ToDouble(pronoteHeader.DetailsSum * item.Quantity), 4);
+                                        materials.PronoteQuantity = Math.Round(Convert.ToDouble(pronoteHeader.DetailsSum * item.Quantity), 4);
 
-                                    materials.Product = new BL.ProductManager().Get(materials.ProductId);
-                                    //if (materials.Product != null && this.mrsheader.GetSourceType == "自製")
-                                    //{
-                                    //    if (materials.Product.ProductCategory != null && Convert.ToDouble(materials.Product.ProductCategory.ProductMinQuantity) > 0)
-                                    //        materials.PronoteQuantity = Math.Ceiling(Convert.ToDouble(materials.PronoteQuantity / materials.Product.ProductCategory.ProductMinQuantity)) * materials.Product.ProductCategory.ProductMinQuantity;
-                                    //}
-                                    materials.ProductUnit = item.PackageUnit;
-                                    materials.MPSQuantity = pronoteHeader.DetailsSum * item.Quantity;
-                                    // materials.MPS headerId = mrsdetail.MRSHeader.MPSheaderId;
-                                    no = no + 1;
-                                    materials.Inumber = no;
-                                    pronoteHeader.DetailsMaterial.Add(materials);
+                                        materials.Product = new BL.ProductManager().Get(materials.ProductId);
+                                        //if (materials.Product != null && this.mrsheader.GetSourceType == "自製")
+                                        //{
+                                        //    if (materials.Product.ProductCategory != null && Convert.ToDouble(materials.Product.ProductCategory.ProductMinQuantity) > 0)
+                                        //        materials.PronoteQuantity = Math.Ceiling(Convert.ToDouble(materials.PronoteQuantity / materials.Product.ProductCategory.ProductMinQuantity)) * materials.Product.ProductCategory.ProductMinQuantity;
+                                        //}
+                                        materials.ProductUnit = item.PackageUnit;
+                                        materials.MPSQuantity = pronoteHeader.DetailsSum * item.Quantity;
+                                        // materials.MPS headerId = mrsdetail.MRSHeader.MPSheaderId;
+                                        no = no + 1;
+                                        materials.Inumber = no;
+                                        pronoteHeader.DetailsMaterial.Add(materials);
+                                    }
                                 }
                             }
+                            #endregion
                         }
-                        #endregion
 
                         if (pronoteHeader != null && !string.IsNullOrEmpty(pronoteHeader.PronoteHeaderID))
                         {

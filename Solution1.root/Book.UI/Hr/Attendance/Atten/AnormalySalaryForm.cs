@@ -85,6 +85,7 @@ namespace Book.UI.Hr.Attendance.Atten
             }
         }
 
+        //打印异常报表
         private void sbtn_print_Click(object sender, EventArgs e)
         {
             AttenreporCrystalForm acf = new AttenreporCrystalForm(this.mPrintDs, this.dateEdit1.DateTime);

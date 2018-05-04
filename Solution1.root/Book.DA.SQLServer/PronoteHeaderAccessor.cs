@@ -33,7 +33,7 @@ namespace Book.DA.SQLServer
         /// <param name="workhouseIndepot"></param>
         /// <param name="jiean"></param>
         /// <returns></returns>
-        public IList<Book.Model.PronoteHeader> GetByDate(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, DateTime JiaohuoDateStart, DateTime JiaohuoDateEnd, string MachineName)
+        public IList<Book.Model.PronoteHeader> GetByDate(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7, DateTime JiaohuoDateStart, DateTime JiaohuoDateEnd, string MachineName)
         {
             SqlParameter[] parames = { new SqlParameter("@startdate", DbType.DateTime), new SqlParameter("@enddate", DbType.DateTime), new SqlParameter("@xocustomerId", DbType.String), new SqlParameter("@CustomerInvoiceXOId", DbType.String), new SqlParameter("@productid", DbType.String) };
             parames[0].Value = startDate;
@@ -101,19 +101,28 @@ namespace Book.DA.SQLServer
                 sql.Append(" and a.PronoteHeaderID in (SELECT PronoteHeaderID FROM PronoteProceduresDetail WHERE PronoteMachineId='" + MachineName + "')");
             //三种自制条件
             if (sourcetype0 && sourcetype4 && !sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4')) and 2=2)");
             else if (sourcetype0 && sourcetype5 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5')) and 2=2)");
             else if (sourcetype4 && sourcetype5 && !sourcetype0)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5')) and 2=2)");
             else if (sourcetype0 && !sourcetype5 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0')) and 2=2)");
             else if (sourcetype4 && !sourcetype0 && !sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4')) and 2=2)");
             else if (sourcetype5 && !sourcetype0 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5')) and 2=2)");
             else if (sourcetype0 && sourcetype4 && sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5')) and 2=2)");
+            //在加一种自制条件--仓库(半成品加工)
+            if (sourcetype7)
+            {
+                if (sql.ToString().Contains("and 2=2"))
+                    sql.Replace("and 2=2", "or a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+                else
+                    sql.Append(" and a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+            }
+
             sql.Append(" order by a.PronoteHeaderID desc ");
             return this.DataReaderBind<Model.PronoteHeader>(sql.ToString(), parames, CommandType.Text);
         }
@@ -135,7 +144,7 @@ namespace Book.DA.SQLServer
         /// <param name="proCusNameKey"></param>
         /// <param name="pronoteHeaderIdKey"></param>
         /// <returns></returns>
-        public IList<Book.Model.PronoteHeader> GetByDateMa(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, int sourcetype, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5)
+        public IList<Book.Model.PronoteHeader> GetByDateMa(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, int sourcetype, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7)
         {
             SqlParameter[] parames = { new SqlParameter("@startdate", DbType.DateTime), new SqlParameter("@enddate", DbType.DateTime), new SqlParameter("@xocustomerId", DbType.String), new SqlParameter("@CustomerInvoiceXOId", DbType.String), new SqlParameter("@productid", DbType.String) };
             parames[0].Value = startDate;
@@ -203,25 +212,34 @@ namespace Book.DA.SQLServer
 
             //三种自制条件
             if (sourcetype0 && sourcetype4 && !sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4')) and 2=2)");
             else if (sourcetype0 && sourcetype5 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5'))");
-            else if (sourcetype0 && !sourcetype5 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5')) and 2=2)");
             else if (sourcetype4 && sourcetype5 && !sourcetype0)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5')) and 2=2)");
+            else if (sourcetype0 && !sourcetype5 && !sourcetype4)
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0')) and 2=2)");
             else if (sourcetype4 && !sourcetype0 && !sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4')) and 2=2)");
             else if (sourcetype5 && !sourcetype0 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5')) and 2=2)");
             else if (sourcetype0 && sourcetype4 && sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5')) and 2=2)");
+            //在加一种自制条件--仓库(半成品加工)
+            if (sourcetype7)
+            {
+                if (sql.ToString().Contains("and 2=2"))
+                    sql.Replace("and 2=2", "or a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+                else
+                    sql.Append(" and a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+            }
+
             sql.Append(" order by a.PronoteHeaderID desc ");
             return this.DataReaderBind<Model.PronoteHeader>(sql.ToString(), parames, CommandType.Text);
         }
 
         //质检选择加工单      
-        public IList<Book.Model.PronoteHeader> GetByDateZJ(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, string sign, bool sourcetype0, bool sourcetype4, bool sourcetype5)
+        public IList<Book.Model.PronoteHeader> GetByDateZJ(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, string sign, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7)
         {
             SqlParameter[] parames = { new SqlParameter("@startdate", DbType.DateTime), new SqlParameter("@enddate", DbType.DateTime), new SqlParameter("@xocustomerId", DbType.String), new SqlParameter("@CustomerInvoiceXOId", DbType.String), new SqlParameter("@productid", DbType.String) };
             parames[0].Value = startDate;
@@ -287,27 +305,37 @@ namespace Book.DA.SQLServer
                 sql.Append(" and a.PronoteHeaderID like '%" + pronoteHeaderIdKey + "%'");
             if (sign == "Check")
                 sql.Append(" and not exists (SELECT PCFinishCheckID FROM PCFinishCheck WHERE PCFinishCheck.PronoteHeaderID=a.PronoteHeaderID)");
+
             //三种自制条件
             if (sourcetype0 && sourcetype4 && !sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4')) and 2=2)");
             else if (sourcetype0 && sourcetype5 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5')) and 2=2)");
             else if (sourcetype4 && sourcetype5 && !sourcetype0)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5')) and 2=2)");
             else if (sourcetype0 && !sourcetype5 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0')) and 2=2)");
             else if (sourcetype4 && !sourcetype0 && !sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4')) and 2=2)");
             else if (sourcetype5 && !sourcetype0 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5')) and 2=2)");
             else if (sourcetype0 && sourcetype4 && sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5')) and 2=2)");
+            //在加一种自制条件--仓库(半成品加工)
+            if (sourcetype7)
+            {
+                if (sql.ToString().Contains("and 2=2"))
+                    sql.Replace("and 2=2", "or a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+                else
+                    sql.Append(" and a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+            }
+
             sql.Append(" order by a.PronoteHeaderID desc ");
             return this.DataReaderBind<Model.PronoteHeader>(sql.ToString(), parames, CommandType.Text);
         }
 
         //数据输入页 选择加工单
-        public IList<Book.Model.PronoteHeader> GetByDateDI(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5)
+        public IList<Book.Model.PronoteHeader> GetByDateDI(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7)
         {
             SqlParameter[] parames = { new SqlParameter("@startdate", DbType.DateTime), new SqlParameter("@enddate", DbType.DateTime), new SqlParameter("@xocustomerId", DbType.String), new SqlParameter("@CustomerInvoiceXOId", DbType.String), new SqlParameter("@productid", DbType.String) };
             parames[0].Value = startDate;
@@ -334,7 +362,7 @@ namespace Book.DA.SQLServer
             sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
             sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
             sql.Append(",b.ProductName,b.id, b.CustomerProductName FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
-            
+
             sql.Append("  where    PronoteDate between @startdate and @enddate  ");
             if (!string.IsNullOrEmpty(cusxoid))
                 sql.Append(" and   i.CustomerInvoiceXOId  like '%'+@CustomerInvoiceXOId+'%'");
@@ -354,22 +382,30 @@ namespace Book.DA.SQLServer
                 sql.Append(" and a.PronoteHeaderID like '%" + pronoteHeaderIdKey + "%'");
             //2017年9月11日00:43:22
             sql.Append(" and a.PronoteHeaderID not in (select PronoteHeaderId from PCDataInput)"); //数据输入也 只能拉一次 PNT
-           
+
             //三种自制条件
             if (sourcetype0 && sourcetype4 && !sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4')) and 2=2)");
             else if (sourcetype0 && sourcetype5 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5')) and 2=2)");
             else if (sourcetype4 && sourcetype5 && !sourcetype0)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5')) and 2=2)");
             else if (sourcetype0 && !sourcetype5 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0')) and 2=2)");
             else if (sourcetype4 && !sourcetype0 && !sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4')) and 2=2)");
             else if (sourcetype5 && !sourcetype0 && !sourcetype4)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5')) and 2=2)");
             else if (sourcetype0 && sourcetype4 && sourcetype5)
-                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5'))");
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5')) and 2=2)");
+            //在加一种自制条件--仓库(半成品加工)
+            if (sourcetype7)
+            {
+                if (sql.ToString().Contains("and 2=2"))
+                    sql.Replace("and 2=2", "or a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+                else
+                    sql.Append(" and a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+            }
 
             sql.Append(" order by a.PronoteHeaderID desc ");
             return this.DataReaderBind<Model.PronoteHeader>(sql.ToString(), parames, CommandType.Text);
