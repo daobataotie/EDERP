@@ -510,11 +510,11 @@ namespace Book.BL
 
                 if (mShouldCheckIn != null)
                 {
-                    mActualCheckIn = clockdata.GetAnyInOut(mCardNo, mShouldCheckIn.Value.AddHours(-8), mShouldCheckIn.Value.AddHours(4), "ASC");
+                    mActualCheckIn = clockdata.GetAnyInOut(emp.EmployeeId, mShouldCheckIn.Value.AddHours(-8), mShouldCheckIn.Value.AddHours(4), "ASC");
                 }
                 if (mShouldCheckOut != null)
                 {
-                    mActualCheckOut = clockdata.GetAnyInOut(mCardNo, mShouldCheckOut.Value.AddHours(-5), mShouldCheckOut.Value.AddHours(8), "desc");
+                    mActualCheckOut = clockdata.GetAnyInOut(emp.EmployeeId, mShouldCheckOut.Value.AddHours(-5), mShouldCheckOut.Value.AddHours(8), "desc");
                 }
                 //判斷出勤記錄
                 //___找不到上下班打卡資料
@@ -642,8 +642,8 @@ namespace Book.BL
                     }
                 }
                 //找出假日出勤時間
-                mActualCheckIn = clockdata.GetAnyInOut(mCardNo, mayBeCheckIn.AddHours(-8), mayBeCheckOut.AddHours(4), "ASC");
-                mActualCheckOut = clockdata.GetAnyInOut(mCardNo, mayBeCheckIn.AddHours(-5), mayBeCheckOut.AddHours(8), "DESC");
+                mActualCheckIn = clockdata.GetAnyInOut(emp.EmployeeId, mayBeCheckIn.AddHours(-8), mayBeCheckOut.AddHours(4), "ASC");
+                mActualCheckOut = clockdata.GetAnyInOut(emp.EmployeeId, mayBeCheckIn.AddHours(-5), mayBeCheckOut.AddHours(8), "DESC");
                 //有正常刷卡假日加班
                 if (mActualCheckIn != null && mActualCheckOut != null)
                 {

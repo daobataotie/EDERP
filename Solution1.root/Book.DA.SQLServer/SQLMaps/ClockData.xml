@@ -59,7 +59,7 @@
     <select  id="select_GetAnyInOut" parameterClass="Map" resultClass="DateTime">
       <![CDATA[
       SELECT TOP 1 ClockTime FROM ClockData
-      WHERE CardNo = #cardNo#
+      WHERE EmployeeId = #EmployeeId#
       AND Clocktime > #MinDateTime#
       AND Clocktime < #MaxDateTime#
       ORDER BY Clocktime $ordertype$

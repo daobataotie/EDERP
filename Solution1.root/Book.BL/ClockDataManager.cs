@@ -214,9 +214,9 @@ namespace Book.BL
         /// <param name="ChkDate">记录时间</param>
         /// <param name="ordertype">排序类型</param>
         /// <returns></returns>
-        public DateTime? GetAnyInOut(string cardNo, DateTime MinDateTime, DateTime MaxDateTime, string ordertype)
+        public DateTime? GetAnyInOut(string EmployeeId, DateTime MinDateTime, DateTime MaxDateTime, string ordertype)
         {
-            return accessor.GetAnyInOut(cardNo, MinDateTime, MaxDateTime, ordertype);
+            return accessor.GetAnyInOut(EmployeeId, MinDateTime, MaxDateTime, ordertype);
         }
 
         /// <summary>

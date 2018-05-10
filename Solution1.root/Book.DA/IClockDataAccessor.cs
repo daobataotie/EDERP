@@ -75,7 +75,7 @@ namespace Book.DA
         /// <param name="MaxDateTime"></param>
         /// <param name="ordertype"></param>
         /// <returns></returns>
-        DateTime? GetAnyInOut(string cardNo, DateTime MinDateTime, DateTime MaxDateTime, string ordertype);
+        DateTime? GetAnyInOut(string EmployeeId, DateTime MinDateTime, DateTime MaxDateTime, string ordertype);
         /// <summary>
         /// 去考勤月雇员编号集合
         /// </summary>

@@ -283,10 +283,10 @@ namespace Book.DA.SQLServer
         /// <param name="MaxDateTime"></param>
         /// <param name="ordertype"></param>
         /// <returns></returns>
-        public DateTime? GetAnyInOut(string cardNo, DateTime MinDateTime, DateTime MaxDateTime, string ordertype)
+        public DateTime? GetAnyInOut(string EmployeeId, DateTime MinDateTime, DateTime MaxDateTime, string ordertype)
         {
             Hashtable parm = new Hashtable();
-            parm.Add("cardNo", cardNo);
+            parm.Add("EmployeeId", EmployeeId);
             parm.Add("MinDateTime", MinDateTime);
             parm.Add("MaxDateTime", MaxDateTime);
             parm.Add("ordertype", ordertype);
@@ -313,7 +313,7 @@ namespace Book.DA.SQLServer
         public void DeleteByDateRange(DateTime dateStart, DateTime dateEnd)
         {
             Hashtable ht = new Hashtable();
-            ht.Add("StartDate", dateStart);
+            ht.Add("StartDate", dateStart.ToString("yyyy-MM-dd"));
             ht.Add("EndDate", dateEnd.ToString("yyyy-MM-dd HH:mm:ss"));
             sqlmapper.Delete("ClockData.DeleteByDateRange", ht);
         }

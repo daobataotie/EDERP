@@ -49,6 +49,7 @@ namespace Book.UI.Hr.Attendance.Atten
             this.ActualCheckOut = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTimeEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
             this.Note = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemTimeEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
@@ -57,7 +58,6 @@ namespace Book.UI.Hr.Attendance.Atten
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -252,6 +252,12 @@ namespace Book.UI.Hr.Attendance.Atten
             this.Note.OptionsColumn.AllowEdit = false;
             this.Note.OptionsColumn.ReadOnly = true;
             // 
+            // gridColumn1
+            // 
+            resources.ApplyResources(this.gridColumn1, "gridColumn1");
+            this.gridColumn1.FieldName = "DepartmentName";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
             // repositoryItemCheckEdit1
             // 
             resources.ApplyResources(this.repositoryItemCheckEdit1, "repositoryItemCheckEdit1");
@@ -328,12 +334,6 @@ namespace Book.UI.Hr.Attendance.Atten
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextToControlDistance = 0;
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // gridColumn1
-            // 
-            resources.ApplyResources(this.gridColumn1, "gridColumn1");
-            this.gridColumn1.FieldName = "DepartmentName";
-            this.gridColumn1.Name = "gridColumn1";
             // 
             // AnormalySalaryForm
             // 

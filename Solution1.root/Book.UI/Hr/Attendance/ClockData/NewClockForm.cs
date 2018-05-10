@@ -107,6 +107,8 @@ namespace Book.UI.Hr.Attendance.ClockData
 
                     Model.Employee emp = this.employeeManager.SelectIdByNameAnId(name, id);
                     if (emp == null)
+                        emp = this.employeeManager.GetbyIdNo(id);
+                    if (emp == null)
                         continue;
 
                     Model.ClockData clockdata = new Book.Model.ClockData();
