@@ -315,6 +315,7 @@ namespace Book.DA.SQLServer
             Hashtable ht = new Hashtable();
             ht.Add("StartDate", dateStart.ToString("yyyy-MM-dd"));
             ht.Add("EndDate", dateEnd.ToString("yyyy-MM-dd HH:mm:ss"));
+            sqlmapper.DataSource.DbProvider.CreateCommand().CommandTimeout = 40;
             sqlmapper.Delete("ClockData.DeleteByDateRange", ht);
         }
 
