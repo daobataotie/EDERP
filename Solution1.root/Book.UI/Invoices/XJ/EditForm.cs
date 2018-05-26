@@ -596,7 +596,7 @@ namespace Book.UI.Invoices.XJ
             if (this.action == "insert") { this.textEditInvoiceId.EditValue = this._invoiceManager.GetNewId(this.dateEditInvoiceDate.DateTime); }
         }
 
-        //选择主件商品
+        //参考件商品
         private void BtnEditProduct_Click(object sender, EventArgs e)
         {
             if (this.action != "view")
@@ -723,6 +723,131 @@ namespace Book.UI.Invoices.XJ
                 f.Dispose();
                 System.GC.Collect();
             }
+        }
+
+        //添加商品
+        private void simpleButtonAppend_Click(object sender, EventArgs e)
+        {
+            if (this._ds.Tables.Count == 0)
+            {
+                MessageBox.Show("請先添加參考商品！", this.Text, MessageBoxButtons.OK);
+                return;
+            }
+            Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                #region 弃用
+                //if (this._ds == null || this._ds.Tables.Count == 0 || this._ds.Tables[0].Columns.Count == 0)
+                //{
+                //    DataTable indt = new DataTable();
+                //    indt.Columns.Add("InvoiceDetailsId", typeof(string));
+                //    indt.Columns.Add("BomId", typeof(string));
+                //    indt.Columns.Add("ProductId", typeof(string));
+                //    indt.Columns.Add("UseQuantity", typeof(int));
+                //    indt.Columns.Add("Unit", typeof(string));
+                //    indt.Columns.Add("ProductPrice", typeof(decimal));
+                //    indt.Columns.Add("ProductName", typeof(string));
+                //    indt.Columns.Add("ParentId", typeof(string));
+                //    indt.Columns.Add("Const", typeof(decimal));
+                //    indt.Columns.Add("QuoteConst", typeof(decimal));
+                //    this._ds.Tables.Add(indt);
+                //}
+                //if (Invoices.ChooseProductForm.ProductList == null || Invoices.ChooseProductForm.ProductList.Count == 0)
+                //{
+                //    Model.Product p = f.SelectedItem as Model.Product;
+
+                //    DataRow dr = this._ds.Tables[0].NewRow();
+                //    dr["InvoiceXJDetailId"] = Guid.NewGuid().ToString();
+                //    dr["InvoiceXJDetailPrice"] = 0;
+                //    //dr["ProductId"] = p.ProductId;
+                //    dr["ProductName"] = p.ToString();
+                //    dr["Unit"] = p.BuyUnit == null ? "" : p.BuyUnit.ToString();
+                //    dr["ParentId"] = "000";
+                //    this._ds.Tables[0].Rows.Add(dr);
+                //} 
+                #endregion
+
+                if (Invoices.ChooseProductForm.ProductList != null && Invoices.ChooseProductForm.ProductList.Count > 0)
+                {
+                    Model.Product p = f.SelectedItem as Model.Product;
+
+                    DataRow dr = this._ds.Tables[0].NewRow();
+                    dr["InvoiceXJDetailId"] = Guid.NewGuid().ToString();
+                    dr["InvoiceXJDetailPrice"] = 0;
+                    //dr["ProductId"] = p.ProductId;
+                    dr["ProductName"] = p.ToString();
+                    dr["Unit"] = p.BuyUnit == null ? "" : p.BuyUnit.ToString();
+                    dr["ParentId"] = "000";
+                    this._ds.Tables[0].Rows.Add(dr);
+                }
+                this.gridControl2.RefreshDataSource();
+            }
+
+            #region note
+            //Model.Customer customer = this.buttonEditCompany.EditValue as Model.Customer;
+            //if (customer == null)
+            //{
+            //    MessageBox.Show("請選則客戶！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    return;
+            //}
+            //   this.bindingSourceproduct.DataSource = this.productManager.Select(customer);// this.customerProductsManager.Select(customer);
+            //Book.UI.Settings.BasicData.Customs.ChooseCustomerProductForm f = new Book.UI.Settings.BasicData.Customs.ChooseCustomerProductForm(customer);
+
+            /*
+            Book.UI.Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+
+                if (this.invoice.Details.Count > 0 && string.IsNullOrEmpty(this.invoice.Details[0].ProductId))
+                    this.invoice.Details.RemoveAt(0);
+                Model.InvoiceXJDetail detail = null;
+                if (Book.UI.Invoices.ChooseProductForm.ProductList != null || Book.UI.Invoices.ChooseProductForm.ProductList.Count > 0)
+                {
+                    foreach (Model.Product product in Book.UI.Invoices.ChooseProductForm.ProductList)
+                    {
+                        detail = new Book.Model.InvoiceXJDetail();
+                        detail.InvoiceXJDetailId = Guid.NewGuid().ToString();
+                        detail.Inumber = this.invoice.Details.Count + 1;
+                        detail.Invoice = this.invoice;
+                        detail.Product = product;
+                        if (product != null)
+                            detail.ProductId = product.ProductId;
+                        detail.InvoiceXJDetailQuantity = 1;
+                        detail.InvoiceXJDetailPrice = decimal.Zero;
+                        detail.InvoiceXJDetailMoney = decimal.Zero;
+                        detail.InvoiceAllowance = 0;
+                        detail.InvoiceXJDetailNote = "";
+                        detail.InvoiceProductUnit = product.MainUnit == null ? "" : product.MainUnit.CnName;
+                        this.invoice.Details.Add(detail);
+
+                    }
+                }
+                if (Book.UI.Invoices.ChooseProductForm.ProductList == null || Book.UI.Invoices.ChooseProductForm.ProductList.Count == 0)
+                {
+                    detail = new Book.Model.InvoiceXJDetail();
+                    Model.Product product = f.SelectedItem as Model.Product;
+                    detail.InvoiceXJDetailId = Guid.NewGuid().ToString();
+                    detail.Inumber = this.invoice.Details.Count + 1;
+                    detail.Invoice = this.invoice;
+                    detail.Product = product;
+                    if (product != null)
+                        detail.ProductId = product.ProductId;
+                    detail.InvoiceXJDetailQuantity = 1;
+                    detail.InvoiceXJDetailPrice = decimal.Zero;
+                    detail.InvoiceXJDetailMoney = decimal.Zero;
+                    detail.InvoiceAllowance = 0;
+                    detail.InvoiceXJDetailNote = "";
+                    detail.InvoiceProductUnit = product.MainUnit == null ? "" : product.MainUnit.CnName;
+                    this.invoice.Details.Add(detail);
+                }
+
+                this.gridControl2.RefreshDataSource();
+                this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
+            }
+            f.Dispose();
+            System.GC.Collect();
+             */
+            #endregion
         }
 
         private void GridViewAdjustment()
@@ -935,128 +1060,6 @@ namespace Book.UI.Invoices.XJ
             this.CheckLayer(tabindex + 1, SonParIds, IsCheckStatus);
         }
 
-        // 商品明细增加已有商品  "+"
-        private void simpleButtonAppend_Click(object sender, EventArgs e)
-        {
-            if (this._ds.Tables.Count == 0)
-            {
-                MessageBox.Show("請先添加參考商品！", this.Text, MessageBoxButtons.OK);
-                return;
-            }
-            Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
-            if (f.ShowDialog(this) == DialogResult.OK)
-            {
-                //if (this._ds == null || this._ds.Tables.Count == 0 || this._ds.Tables[0].Columns.Count == 0)
-                //{
-                //    DataTable indt = new DataTable();
-                //    indt.Columns.Add("InvoiceDetailsId", typeof(string));
-                //    indt.Columns.Add("BomId", typeof(string));
-                //    indt.Columns.Add("ProductId", typeof(string));
-                //    indt.Columns.Add("UseQuantity", typeof(int));
-                //    indt.Columns.Add("Unit", typeof(string));
-                //    indt.Columns.Add("ProductPrice", typeof(decimal));
-                //    indt.Columns.Add("ProductName", typeof(string));
-                //    indt.Columns.Add("ParentId", typeof(string));
-                //    indt.Columns.Add("Const", typeof(decimal));
-                //    indt.Columns.Add("QuoteConst", typeof(decimal));
-                //    this._ds.Tables.Add(indt);
-                //}
-                //if (Invoices.ChooseProductForm.ProductList == null || Invoices.ChooseProductForm.ProductList.Count == 0)
-                //{
-                //    Model.Product p = f.SelectedItem as Model.Product;
-
-                //    DataRow dr = this._ds.Tables[0].NewRow();
-                //    dr["InvoiceXJDetailId"] = Guid.NewGuid().ToString();
-                //    dr["InvoiceXJDetailPrice"] = 0;
-                //    //dr["ProductId"] = p.ProductId;
-                //    dr["ProductName"] = p.ToString();
-                //    dr["Unit"] = p.BuyUnit == null ? "" : p.BuyUnit.ToString();
-                //    dr["ParentId"] = "000";
-                //    this._ds.Tables[0].Rows.Add(dr);
-                //}
-                if (Invoices.ChooseProductForm.ProductList != null && Invoices.ChooseProductForm.ProductList.Count > 0)
-                {
-                    Model.Product p = f.SelectedItem as Model.Product;
-
-                    DataRow dr = this._ds.Tables[0].NewRow();
-                    dr["InvoiceXJDetailId"] = Guid.NewGuid().ToString();
-                    dr["InvoiceXJDetailPrice"] = 0;
-                    //dr["ProductId"] = p.ProductId;
-                    dr["ProductName"] = p.ToString();
-                    dr["Unit"] = p.BuyUnit == null ? "" : p.BuyUnit.ToString();
-                    dr["ParentId"] = "000";
-                    this._ds.Tables[0].Rows.Add(dr);
-                }
-                this.gridControl2.RefreshDataSource();
-            }
-
-            #region note
-            //Model.Customer customer = this.buttonEditCompany.EditValue as Model.Customer;
-            //if (customer == null)
-            //{
-            //    MessageBox.Show("請選則客戶！", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    return;
-            //}
-            //   this.bindingSourceproduct.DataSource = this.productManager.Select(customer);// this.customerProductsManager.Select(customer);
-            //Book.UI.Settings.BasicData.Customs.ChooseCustomerProductForm f = new Book.UI.Settings.BasicData.Customs.ChooseCustomerProductForm(customer);
-
-            /*
-            Book.UI.Invoices.ChooseProductForm f = new Book.UI.Invoices.ChooseProductForm();
-            if (f.ShowDialog(this) == DialogResult.OK)
-            {
-
-                if (this.invoice.Details.Count > 0 && string.IsNullOrEmpty(this.invoice.Details[0].ProductId))
-                    this.invoice.Details.RemoveAt(0);
-                Model.InvoiceXJDetail detail = null;
-                if (Book.UI.Invoices.ChooseProductForm.ProductList != null || Book.UI.Invoices.ChooseProductForm.ProductList.Count > 0)
-                {
-                    foreach (Model.Product product in Book.UI.Invoices.ChooseProductForm.ProductList)
-                    {
-                        detail = new Book.Model.InvoiceXJDetail();
-                        detail.InvoiceXJDetailId = Guid.NewGuid().ToString();
-                        detail.Inumber = this.invoice.Details.Count + 1;
-                        detail.Invoice = this.invoice;
-                        detail.Product = product;
-                        if (product != null)
-                            detail.ProductId = product.ProductId;
-                        detail.InvoiceXJDetailQuantity = 1;
-                        detail.InvoiceXJDetailPrice = decimal.Zero;
-                        detail.InvoiceXJDetailMoney = decimal.Zero;
-                        detail.InvoiceAllowance = 0;
-                        detail.InvoiceXJDetailNote = "";
-                        detail.InvoiceProductUnit = product.MainUnit == null ? "" : product.MainUnit.CnName;
-                        this.invoice.Details.Add(detail);
-
-                    }
-                }
-                if (Book.UI.Invoices.ChooseProductForm.ProductList == null || Book.UI.Invoices.ChooseProductForm.ProductList.Count == 0)
-                {
-                    detail = new Book.Model.InvoiceXJDetail();
-                    Model.Product product = f.SelectedItem as Model.Product;
-                    detail.InvoiceXJDetailId = Guid.NewGuid().ToString();
-                    detail.Inumber = this.invoice.Details.Count + 1;
-                    detail.Invoice = this.invoice;
-                    detail.Product = product;
-                    if (product != null)
-                        detail.ProductId = product.ProductId;
-                    detail.InvoiceXJDetailQuantity = 1;
-                    detail.InvoiceXJDetailPrice = decimal.Zero;
-                    detail.InvoiceXJDetailMoney = decimal.Zero;
-                    detail.InvoiceAllowance = 0;
-                    detail.InvoiceXJDetailNote = "";
-                    detail.InvoiceProductUnit = product.MainUnit == null ? "" : product.MainUnit.CnName;
-                    this.invoice.Details.Add(detail);
-                }
-
-                this.gridControl2.RefreshDataSource();
-                this.bindingSource1.Position = this.bindingSource1.IndexOf(detail);
-            }
-            f.Dispose();
-            System.GC.Collect();
-             */
-            #endregion
-        }
-
         // "-"
         private void simpleButtonRemove_Click(object sender, EventArgs e)
         {
@@ -1229,6 +1232,8 @@ namespace Book.UI.Invoices.XJ
         }
 
         DataRow _CopyTempDr = null;
+
+        //商品明细界面 按键
         void GV_0_KeyDown(object sender, KeyEventArgs e)
         {
             if (this.action == "insert" || this.action == "update")
@@ -1257,6 +1262,7 @@ namespace Book.UI.Invoices.XJ
                                 //else
                                 addR["Inumber"] = "0";
                                 addR["InvoiceXJDetailId"] = Guid.NewGuid().ToString();
+                                addR["InvoiceXJDetailPrice"] = 0;
                                 addR["ParentId"] = dr["ParentId"].ToString();
                                 o.Rows.Add(addR);
                             }
@@ -1418,6 +1424,7 @@ namespace Book.UI.Invoices.XJ
             this.gridControl1.RefreshDataSource();
         }
 
+        //其他加工界面 按下 +
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
             if (this.action == "insert" || this.action == "update")
@@ -1543,6 +1550,7 @@ namespace Book.UI.Invoices.XJ
             }
         }
 
+        //其他包装界面 按下 +
         private void gridView2_KeyDown(object sender, KeyEventArgs e)
         {
             if (this.action == "insert" || this.action == "update")

@@ -392,7 +392,7 @@
     <value>1975.1875, 78.18749</value>
   </data>
   <data name="lblReportName.Text" xml:space="preserve">
-    <value>模具上线检验单</value>
+    <value>模具上线检查表</value>
   </data>
   <data name="lblReportName.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>

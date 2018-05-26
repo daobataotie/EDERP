@@ -971,7 +971,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="lblEmployee0.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1426.104, 100.232559</value>
+    <value>1428.74988, 34.0867424</value>
   </data>
   <data name="lblEmployee0.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>330.7292, 58.42001</value>
@@ -989,7 +989,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1172.104, 100.232559</value>
+    <value>1174.74988, 34.0867424</value>
   </data>
   <data name="xrLabel18.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>254, 58.42</value>

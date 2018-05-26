@@ -103,6 +103,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.lblCompanyName = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -705,6 +706,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel13,
             this.RTDescript,
             this.xrLabel17,
             this.lblEmployee0,
@@ -789,6 +791,13 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.lblCompanyName});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrLabel13
+            // 
+            resources.ApplyResources(this.xrLabel13, "xrLabel13");
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel13.StylePriority.UseTextAlignment = false;
             // 
             // RO2
             // 
@@ -891,5 +900,6 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
     }
 }

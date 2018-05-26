@@ -95,6 +95,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.lblEmployee1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -571,6 +572,7 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel8,
             this.lblEmployee1,
             this.xrLabel10,
             this.xrLabel9});
@@ -598,6 +600,13 @@ namespace Book.UI.produceManager.PCAssemblyInspection
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel9.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel8
+            // 
+            resources.ApplyResources(this.xrLabel8, "xrLabel8");
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel8.StylePriority.UseTextAlignment = false;
             // 
             // RO
             // 
@@ -689,5 +698,6 @@ namespace Book.UI.produceManager.PCAssemblyInspection
         private DevExpress.XtraReports.UI.XRLabel lblReportDate;
         private DevExpress.XtraReports.UI.XRLabel lblJiagongbie;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
     }
 }

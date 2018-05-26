@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
+using System.Linq;
 
 namespace Book.UI.Invoices.XJ
 {
@@ -61,7 +62,8 @@ namespace Book.UI.Invoices.XJ
                 item.InvoiceXJDetailQuote = item.InvoiceXJDetailQuote == 0 ? null : item.InvoiceXJDetailQuote;
             }
 
-            this.DataSource = this._InvoiceXJ.Details;
+            this.DataSource = (this._InvoiceXJ.Details == null ? null : this._InvoiceXJ.Details.Where(D=>D.ParentId=="000").ToList());
+            //this.DataSource = this._InvoiceXJ.Details;
             this.TCInvoiceXJGuanXiaoPro.Text += this._InvoiceXJ.GuanXiaoPro == 0 ? "    " : this._InvoiceXJ.GuanXiaoPro.ToString();
             if (this._InvoiceXJ.Details != null)
                 foreach (var item in this._InvoiceXJ.Details)

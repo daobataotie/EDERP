@@ -127,13 +127,26 @@
   <data name="lblInvoiceCusXOId.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleRight</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>365.592041, 0</value>
+  </data>
+  <data name="TCNote.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1815.95569, 0</value>
+  </data>
   <data name="xrLabel17.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
     <value>加热测试</value>
   </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="TCattrJPZYR.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="lblInvoiceCusXOId.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
@@ -142,6 +155,13 @@
   </data>
   <data name="xrPageInfo1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1730.5625, 47.5222931</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrTable3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
   </data>
   <data name="xrLabel18.Text" xml:space="preserve">
     <value>制单员：</value>
@@ -158,28 +178,17 @@
   <data name="lblPCDoubleImpactCheckCount.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrTableCell3.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
-  </data>
-  <data name="TCattrBiZhong.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="xrTableCell7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
   </data>
   <data name="xrTableCell26.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 572.687439</value>
   </data>
   <data name="lblChongJiLiDu.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>1656.833, 76.72919</value>
-  </data>
-  <data name="TCEmployee.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>168.606934, 119.062584</value>
   </data>
   <data name="lblPCDoubleImpactCheckCount.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>333.913818, 51.99997</value>
@@ -214,23 +223,26 @@
   <data name="TCattrHeat.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1647.34875, 0</value>
   </data>
-  <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1984.56274, 91.41666</value>
-  </data>
   <data name="lblCompanyName.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
   <data name="lblCheckStandard.Text" xml:space="preserve">
     <value>lblCheckStandard</value>
   </data>
+  <data name="xrLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
+  </data>
   <data name="RTDescript.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>284.458344, 0</value>
   </data>
-  <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1210.90479, 0</value>
+  <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>462.969543, 72.8959045</value>
   </data>
   <data name="TCattrHeat.Text" xml:space="preserve">
     <value>TCEmployee</value>
+  </data>
+  <data name="lblDataName.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="xrLabel15.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>1656.833, 77.9165955</value>
@@ -244,17 +256,11 @@
   <data name="xrLabel10.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
   </data>
-  <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>256.6459, 51.9999847</value>
-  </data>
   <data name="lblPriteDate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
   <data name="xrLabel11.Dpi" type="System.Single, mscorlib">
     <value>254</value>
-  </data>
-  <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
-    <value>92.60416</value>
   </data>
   <data name="lblInvoiceXOQuantity.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -301,6 +307,9 @@
   <data name="lblPronoteHeaderId.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrTable1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
+  </data>
   <data name="ReportHeader.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -319,8 +328,8 @@
   <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 317.395935</value>
   </data>
-  <data name="xrLabel17.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
+  <data name="xrLabel8.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="xrLabel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
@@ -331,14 +340,11 @@
   <data name="TCattrBiZhong.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>185.374939, 119.062584</value>
   </data>
-  <data name="lblEmployee0.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
+  <data name="lbl_productunit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
   </data>
   <data name="TCEmployee.Dpi" type="System.Single, mscorlib">
     <value>254</value>
-  </data>
-  <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 265.395935</value>
   </data>
   <data name="xrLabel9.Text" xml:space="preserve">
     <value>加工单据编号：</value>
@@ -385,14 +391,8 @@
   <data name="xrLabel4.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
   </data>
-  <data name="xrLabel4.Dpi" type="System.Single, mscorlib">
+  <data name="TCattrJPZYL.Dpi" type="System.Single, mscorlib">
     <value>254</value>
-  </data>
-  <data name="lblProduct.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
-  </data>
-  <data name="xrTableCell5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
   </data>
   <data name="xrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleRight</value>
@@ -412,22 +412,25 @@
   <data name="xrTableCell12.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
   </data>
-  <data name="TCPCDoubleImpactCheckDetailDate.Text" xml:space="preserve">
-    <value>TCPCDoubleImpactCheckDetailDate</value>
-  </data>
   <data name="lblANSIPCImpactCheckDate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
+  </data>
+  <data name="xrLabel7.Text" xml:space="preserve">
+    <value>检测数量：</value>
   </data>
   <data name="TCattrBiZhong.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>327.729431, 0</value>
   </data>
+  <data name="xrTableCell9.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="lblPriteDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
   </data>
-  <data name="lbl_productunit.Text" xml:space="preserve">
-    <value>lblPCDoubleImpactCheckCount</value>
-  </data>
   <data name="xrTableCell26.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TCattrZhuiQiuR.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="TCChuanTouL.Text" xml:space="preserve">
@@ -435,9 +438,6 @@
   </data>
   <data name="xrLabel15.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
-  </data>
-  <data name="xrTableCell11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
   </data>
   <data name="TCattrHeat.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
@@ -466,14 +466,8 @@
   <data name="TCPCDoubleImpactCheckDetailDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>206.729233, 119.0625</value>
   </data>
-  <data name="lblInvoiceXOQuantity.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
-  </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
     <value>119.062668</value>
-  </data>
-  <data name="TCattrS_SZhongR.Text" xml:space="preserve">
-    <value>TCattrS_SZhongR</value>
   </data>
   <data name="lblCheckStandard.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1635.60107, 213.395813</value>
@@ -484,7 +478,10 @@
   <data name="xrLabel15.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="lblCompanyName.Dpi" type="System.Single, mscorlib">
+  <data name="xrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrTableRow3.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="lblProduct.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
@@ -493,11 +490,11 @@
   <data name="xrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>78.7292, 0</value>
   </data>
-  <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>207.7294, 63.5</value>
-  </data>
   <data name="lblPriteDate.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="PageFooter.HeightF" type="System.Single, mscorlib">
+    <value>97.8958359</value>
   </data>
   <data name="TCattrBiZhong.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
@@ -511,11 +508,8 @@
   <data name="Detail.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="lbl_productunit.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrTable5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
+  <data name="xrLabel17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
   </data>
   <data name="TCattrShangLiangR.Text" xml:space="preserve">
     <value>TCattrShangLiangR</value>
@@ -523,23 +517,23 @@
   <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>504.9167, 72.8959045</value>
   </data>
-  <data name="TCattrHeat.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
-  </data>
   <data name="TCattrShangLiangL.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
   <data name="xrLabel10.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>291.041626, 51.99997</value>
   </data>
-  <data name="xrTable3.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>120, 55.5625</value>
+  <data name="TCattrHeat.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="TCattrShangLiangL.Text" xml:space="preserve">
     <value>TCattrShangLiangL</value>
   </data>
-  <data name="xrLabel7.Text" xml:space="preserve">
-    <value>检测数量：</value>
+  <data name="TCEmployee.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>168.606934, 119.062584</value>
+  </data>
+  <data name="xrTable5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>513.1044, 0</value>
   </data>
   <data name="lblProduct.Text" xml:space="preserve">
     <value>xrLabel4</value>
@@ -575,14 +569,11 @@
   <data name="TCattrShangLiangL.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="lblPriteDate.Text" xml:space="preserve">
-    <value>列印时间：</value>
+  <data name="xrTable5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
   <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
-  </data>
-  <data name="lblEmployee0.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>362.427856, 47.52227</value>
   </data>
   <data name="TCChuanTouR.Text" xml:space="preserve">
     <value>TCChuanTouR</value>
@@ -590,8 +581,14 @@
   <data name="xrLabel10.Text" xml:space="preserve">
     <value>单位：</value>
   </data>
+  <data name="xrLabel6.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="xrTableCell11.Text" xml:space="preserve">
     <value>90°(中)</value>
+  </data>
+  <data name="xrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>254, 58.42</value>
   </data>
   <data name="PageHeader.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -599,10 +596,10 @@
   <data name="lblInvoiceXOQuantity.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>333.913818, 51.9999847</value>
   </data>
-  <data name="lbl_productunit.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>942.393066, 317.395935</value>
-  </data>
   <data name="xrTable2.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TCChuanTouR.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrTable3.Dpi" type="System.Single, mscorlib">
@@ -614,11 +611,14 @@
   <data name="xrLabel18.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
+  <data name="xrLabel10.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
   </data>
-  <data name="xrTableCell11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
+  <data name="lblEmployee0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
   </data>
   <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>327.729431, 494.770844</value>
@@ -629,10 +629,10 @@
   <data name="RTDescript.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>794.9177, 92.0997543</value>
   </data>
-  <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
+  <data name="TCattrZhuiQiuR.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
-  <data name="xrTableCell4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
   </data>
   <data name="TCPCDoubleImpactCheckDetailDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
@@ -665,8 +665,8 @@
   <data name="xrTableCell3.Text" xml:space="preserve">
     <value>备注</value>
   </data>
-  <data name="xrTableRow3.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="lblEmployee0.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>362.427856, 47.52227</value>
   </data>
   <data name="xrLabel12.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>256.645874, 52.00006</value>
@@ -674,8 +674,8 @@
   <data name="lblPriteDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1610.5199, 79.5867157</value>
   </data>
-  <data name="TCattrJPZYR.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="xrTableCell4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
   </data>
   <data name="lblCheckStandard.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -686,17 +686,20 @@
   <data name="TCattrZhuiQiuL.Text" xml:space="preserve">
     <value>TCattrZhuiQiuL</value>
   </data>
-  <data name="TCattrZhuiQiuR.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="$this.Dpi" type="System.Single, mscorlib">
+  <data name="xrLabel4.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrTable3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrTableCell11.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
+  </data>
+  <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1984.56274, 91.41666</value>
   </data>
   <data name="xrLabel6.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
+  </data>
+  <data name="xrLabel2.Text" xml:space="preserve">
+    <value>质检标准：</value>
   </data>
   <data name="lblInvoiceCusXOId.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
@@ -704,8 +707,14 @@
   <data name="lblANSIPCImpactCheckID.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
+  <data name="xrTable5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
+  </data>
   <data name="xrTableCell9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
+  </data>
+  <data name="lblCheckStandard.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="xrTableRow2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -731,8 +740,8 @@
   <data name="xrTable4.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="lblDataName.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="lblPriteDate.Text" xml:space="preserve">
+    <value>列印时间：</value>
   </data>
   <data name="xrTableCell9.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
@@ -749,8 +758,11 @@
   <data name="lblPronoteHeaderId.Text" xml:space="preserve">
     <value>xrLabel4</value>
   </data>
-  <data name="xrTableCell9.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="TCattrHeat.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 13pt, style=Bold</value>
   </data>
   <data name="lblANSIPCImpactCheckID.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -767,8 +779,8 @@
   <data name="xrLabel1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="TCNote.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1815.95569, 0</value>
+  <data name="xrTableCell5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
   <data name="lblChongJiLiDu.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
@@ -791,9 +803,6 @@
   <data name="lblDataName.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 15pt</value>
   </data>
-  <data name="xrTableCell12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
-  </data>
   <data name="xrTableCell2.Text" xml:space="preserve">
     <value>上框2CM</value>
   </data>
@@ -803,17 +812,14 @@
   <data name="xrLabel11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleRight</value>
   </data>
-  <data name="xrLabel2.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
   <data name="TCPCDoubleImpactCheckDetailDate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
   <data name="lblPCDoubleImpactCheckCount.Text" xml:space="preserve">
     <value>lblPCDoubleImpactCheckCount</value>
   </data>
-  <data name="xrTableCell33.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>0, 265.395935</value>
   </data>
   <data name="xrTable1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -821,14 +827,11 @@
   <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>651.3514, 161.395752</value>
   </data>
-  <data name="lblInvoiceXOQuantity.Text" xml:space="preserve">
-    <value>xrLabel4</value>
+  <data name="xrTableCell7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
   <data name="lblEmployee0.Text" xml:space="preserve">
     <value>xrLabel18</value>
-  </data>
-  <data name="xrTableCell7.Text" xml:space="preserve">
-    <value>穿透44.2g</value>
   </data>
   <data name="xrTableCell26.Text" xml:space="preserve">
     <value>左</value>
@@ -836,8 +839,8 @@
   <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 213.395889</value>
   </data>
-  <data name="xrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
+  <data name="xrTableCell12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
   <data name="xrTableCell3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -860,8 +863,8 @@
   <data name="xrTableCell11.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="lblCheckStandard.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="lblProduct.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10pt</value>
   </data>
   <data name="xrTableCell5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -869,8 +872,8 @@
   <data name="xrLabel15.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
   </data>
-  <data name="xrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleRight</value>
+  <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>256.6459, 51.9999847</value>
   </data>
   <data name="lblInvoiceXOQuantity.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 10pt</value>
@@ -887,23 +890,29 @@
   <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>256.645874, 52.0000153</value>
   </data>
-  <data name="xrLabel17.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>205.729126, 44.673912</value>
+  <data name="lblCompanyName.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell33.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="xrTableCell9.Text" xml:space="preserve">
     <value>鼻中</value>
   </data>
-  <data name="xrLabel2.Text" xml:space="preserve">
-    <value>质检标准：</value>
+  <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>207.7294, 63.5</value>
   </data>
   <data name="xrLabel17.Text" xml:space="preserve">
     <value>备注：</value>
   </data>
+  <data name="xrLabel17.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>205.729126, 44.673912</value>
+  </data>
   <data name="xrTableCell1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
-  <data name="TCattrJPZYL.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="xrTableCell7.Text" xml:space="preserve">
+    <value>穿透44.2g</value>
   </data>
   <data name="lblInvoiceCusXOId.Text" xml:space="preserve">
     <value>xrLabel4</value>
@@ -911,14 +920,14 @@
   <data name="lblCheckStandard.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>349.9613, 51.9998932</value>
   </data>
-  <data name="lblChongJiLiDu.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
+  <data name="xrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleRight</value>
   </data>
   <data name="xrLabel12.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrLabel6.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="lblInvoiceXOQuantity.Text" xml:space="preserve">
+    <value>xrLabel4</value>
   </data>
   <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1360.435, 213.395721</value>
@@ -935,26 +944,26 @@
   <data name="xrTableCell2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="lbl_productunit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
-  </data>
-  <data name="TCattrZhuiQiuR.Dpi" type="System.Single, mscorlib">
+  <data name="xrLabel2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleRight</value>
+  <data name="lbl_productunit.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>942.393066, 317.395935</value>
   </data>
-  <data name="xrLabel7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
+  <data name="TCattrS_SZhongR.Text" xml:space="preserve">
+    <value>TCattrS_SZhongR</value>
+  </data>
+  <data name="lblInvoiceXOQuantity.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="xrTableCell1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="PageFooter.HeightF" type="System.Single, mscorlib">
-    <value>97.8958359</value>
+  <data name="lblChongJiLiDu.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
-  <data name="lblEmployee0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
+  <data name="lbl_productunit.Text" xml:space="preserve">
+    <value>lblPCDoubleImpactCheckCount</value>
   </data>
   <data name="lblDataName.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>1987.2085, 63.71167</value>
@@ -968,20 +977,20 @@
   <data name="TCattrS_SZhongR.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
-  <data name="xrTable5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
+  <data name="xrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
-  <data name="xrLabel3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 13pt, style=Bold</value>
+  <data name="xrTable3.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>120, 55.5625</value>
   </data>
-  <data name="xrTable5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>513.1044, 0</value>
+  <data name="$this.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblEmployee0.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="xrLabel17.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
-  </data>
-  <data name="lblProduct.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>256.645874, 265.395935</value>
   </data>
   <data name="TCattrJPZYL.Text" xml:space="preserve">
     <value>TCattrJPZYL</value>
@@ -989,11 +998,8 @@
   <data name="xrLabel11.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>291.0417, 51.99998</value>
   </data>
-  <data name="lblChongJiLiDu.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>462.969543, 72.8959045</value>
+  <data name="TCPCDoubleImpactCheckDetailDate.Text" xml:space="preserve">
+    <value>TCPCDoubleImpactCheckDetailDate</value>
   </data>
   <data name="BottomMargin.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1004,11 +1010,11 @@
   <data name="lblANSIPCImpactCheckDate.Text" xml:space="preserve">
     <value>xrLabel4</value>
   </data>
-  <data name="TCChuanTouR.Dpi" type="System.Single, mscorlib">
+  <data name="lblChongJiLiDu.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrTable1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10pt</value>
+  <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1210.90479, 0</value>
   </data>
   <data name="ReportFooter.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1031,8 +1037,8 @@
   <data name="xrTable5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>365.592041, 0</value>
+  <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
+    <value>92.60416</value>
   </data>
   <data name="xrLabel11.Text" xml:space="preserve">
     <value>单据日期：</value>
@@ -1061,11 +1067,11 @@
   <data name="lblInvoiceCusXOId.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>348.961426, 51.9999847</value>
   </data>
-  <data name="xrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleRight</value>
+  <data name="xrTableCell11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
-  <data name="TCattrHeat.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="TCattrBiZhong.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
   </data>
   <data name="lblCompanyName.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 0</value>
@@ -1076,10 +1082,10 @@
   <data name="lblPronoteHeaderId.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>354.729431, 51.99997</value>
   </data>
-  <data name="xrLabel10.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="lblProduct.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>256.645874, 265.395935</value>
   </data>
-  <data name="xrLabel8.Dpi" type="System.Single, mscorlib">
+  <data name="lbl_productunit.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="lblCompanyName.SizeF" type="System.Drawing.SizeF, System.Drawing">
