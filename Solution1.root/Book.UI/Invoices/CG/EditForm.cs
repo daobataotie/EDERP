@@ -468,7 +468,7 @@ namespace Book.UI.Invoices.CG
             invoicecg.InvoiceHeji = 0;
             invoicecg.InvoiceAllowance = 0;
             invoicecg.Employee1 = BL.V.ActiveOperator.Employee;
-            flag = 0;
+            flag = 1;
             invoicecg.TaxCaluType = 1;      //默认为外加税
             invoicecg.InvoiceTaxrate = 5;   //默认税率为5%
 
@@ -634,8 +634,8 @@ namespace Book.UI.Invoices.CG
             this.calcEditInvoiceTax.EditValue = invoicecg.InvoiceTax;
             this.calcEditInvoiceTotal.EditValue = invoicecg.InvoiceTotal;
             this.calcInvoiceAllowance.EditValue = invoicecg.InvoiceAllowance;
-            this.spinEditInvoiceTaxRate.EditValue = invoicecg.InvoiceTaxrate;
             this.comboBoxEditInvoiceKslb.SelectedIndex = invoicecg.TaxCaluType.HasValue ? invoicecg.TaxCaluType.Value : 0;
+            this.spinEditInvoiceTaxRate.EditValue = invoicecg.InvoiceTaxrate;
             this.newChooseContorDepotId.EditValue = invoicecg.Depot;
             this.bindingSourceDetails.DataSource = invoicecg.Details;
             this.flag = invoicecg.TaxCaluType.HasValue ? invoicecg.TaxCaluType.Value : 0;

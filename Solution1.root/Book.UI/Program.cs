@@ -159,10 +159,11 @@ namespace Book.UI
                 if (!connections[0].Awailable)
                 {
                     file = "connections2.xml";
-                    connections = Common.ConnectionInfoAccessor.Load(file);
+                    if (System.IO.File.Exists(file))
+                        connections = Common.ConnectionInfoAccessor.Load(file);
                 }
-                    
-                
+
+
             }
             catch
             {
@@ -178,7 +179,7 @@ namespace Book.UI
             XmlNodeList nodes = document.SelectNodes("/configuration/userSettings/Book.UI.Properties.Settings/setting");
             foreach (XmlNode node in nodes)
             {
-                if (node.Attributes["name"].Value == "Skin") 
+                if (node.Attributes["name"].Value == "Skin")
                 {
                     General.LoginForm f = new General.LoginForm();
                     f.defaultLookAndFeel1.LookAndFeel.SkinName = node.FirstChild.InnerText;

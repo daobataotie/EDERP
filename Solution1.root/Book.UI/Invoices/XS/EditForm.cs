@@ -326,6 +326,9 @@ namespace Book.UI.Invoices.XS
             invoice.Employee0 = BL.V.ActiveOperator.Employee;
             invoice.ShipmentDate = DateTime.Now;
             invoice.Setdetails.Clear();
+            invoice.InvoiceTaxrate = 5;
+            invoice.TaxCaluType = 1;
+            this.flag = 1;
             dic.Clear();
             if (this.invoicexo != null)
             {
@@ -1242,45 +1245,48 @@ namespace Book.UI.Invoices.XS
 
         private void spinEditInvoiceTaxRate_EditValueChanged(object sender, EventArgs e)
         {
-            foreach (Model.InvoiceXSDetail detail in invoice.Details)
+            if (this.action != "view")
             {
-                this.textEditInvoiceId.Text.Equals(null);
-                if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId)) continue;
-                if (detail.Donatetowards != null && detail.Donatetowards == true) continue;
-                //if (detail.InvoiceXODetailQuantity == 0 || detail.InvoiceXODetailQuantity == 0) continue;
-                if (flag == 0)
+                foreach (Model.InvoiceXSDetail detail in invoice.Details)
                 {
-                    detail.InvoiceXSDetailTaxPrice = 0;
-                    detail.InvoiceXSDetailTax = 0;
-                    detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailMoney;
-                    this.spinEditInvoiceTaxRate.EditValue = 0;
-                }
-                if (flag == 1)
-                {
-                    if (detail.InvoiceXSDetailPrice == null)
+                    this.textEditInvoiceId.Text.Equals(null);
+                    if (detail.Product == null || string.IsNullOrEmpty(detail.Product.ProductId)) continue;
+                    if (detail.Donatetowards != null && detail.Donatetowards == true) continue;
+                    //if (detail.InvoiceXODetailQuantity == 0 || detail.InvoiceXODetailQuantity == 0) continue;
+                    if (flag == 0)
                     {
-                        detail.InvoiceXSDetailPrice = 0;
+                        detail.InvoiceXSDetailTaxPrice = 0;
+                        detail.InvoiceXSDetailTax = 0;
+                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailMoney;
+                        this.spinEditInvoiceTaxRate.EditValue = 0;
                     }
-                    detail.InvoiceXSDetailTaxPrice = 0;
-                    detail.InvoiceXSDetailTax = detail.InvoiceXSDetailPrice.Value * decimal.Parse(detail.InvoiceXSDetailQuantity.ToString()) * decimal.Parse(this.spinEditInvoiceTaxRate.Text) / 100;
+                    if (flag == 1)
+                    {
+                        if (detail.InvoiceXSDetailPrice == null)
+                        {
+                            detail.InvoiceXSDetailPrice = 0;
+                        }
+                        detail.InvoiceXSDetailTaxPrice = 0;
+                        detail.InvoiceXSDetailTax = detail.InvoiceXSDetailPrice.Value * decimal.Parse(detail.InvoiceXSDetailQuantity.ToString()) * decimal.Parse(this.spinEditInvoiceTaxRate.Text) / 100;
 
-                    detail.InvoiceXSDetailTax = this.GetDecimal(detail.InvoiceXSDetailTax.Value, BL.V.SetDataFormat.XSZJXiao.Value);
+                        detail.InvoiceXSDetailTax = this.GetDecimal(detail.InvoiceXSDetailTax.Value, BL.V.SetDataFormat.XSZJXiao.Value);
 
-                    detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailTax + detail.InvoiceXSDetailMoney;
+                        detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailTax + detail.InvoiceXSDetailMoney;
+                    }
+                    else
+                    {
+                        //ÔÝÎ´¿¼ÂÇÄÚº¬Ë°
+                        //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
+                    }
+
+                    // detail.InvoiceCODetailMoney = decimal.Parse(detail.OrderQuantity.ToString()) * detail.InvoiceCODetailPrice;
                 }
-                else
-                {
-                    //ÔÝÎ´¿¼ÂÇÄÚº¬Ë°
-                    //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
-                }
-
-                // detail.InvoiceCODetailMoney = decimal.Parse(detail.OrderQuantity.ToString()) * detail.InvoiceCODetailPrice;
+                this.gridControl1.RefreshDataSource();
+                this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = flag == 0 ? false : true;
+                this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = flag == 1 ? false : true;
+                this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = flag == 2 ? false : true;
+                this.UpdateMoneyFields();
             }
-            this.gridControl1.RefreshDataSource();
-            this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = flag == 0 ? false : true;
-            this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = flag == 1 ? false : true;
-            this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = flag == 2 ? false : true;
-            this.UpdateMoneyFields();
         }
     }
 }

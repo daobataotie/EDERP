@@ -718,6 +718,7 @@ namespace Book.UI.Settings.BasicData.Products
             }
             this.product.EmployeeCreator = BL.V.ActiveOperator.Employee;
             this.product.EmployeeCreatorId = this.product.EmployeeCreator == null ? null : this.product.EmployeeCreator.EmployeeId;
+            this.product.UpdateTime = DateTime.Now;
         }
 
         protected override void MoveNext()
@@ -2823,11 +2824,7 @@ namespace Book.UI.Settings.BasicData.Products
             }
         }
 
-        /// <summary>
-        /// 複製當前的產品----liuyl
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // 複製當前的產品
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.action = "insert";
@@ -2861,13 +2858,18 @@ namespace Book.UI.Settings.BasicData.Products
             productCope.TrustOut = this.product.TrustOut;
             productCope.Consume = this.product.Consume;
             productCope.ProductBarCodeIsAuto = false;
-            product.ProductBarCode = string.Empty;
+            productCope.ProductBarCode = string.Empty;
 
             //if (product.ProductBarCodeIsAuto == null || (bool)product.ProductBarCodeIsAuto)
             //{
             //    product.ProductBarCodeIsAuto = false;
             //    product.ProductBarCode = string.Empty;
-            //}          
+            //}   
+
+            productCope.EmployeeCreator = BL.V.ActiveOperator.Employee;
+            productCope.EmployeeCreatorId = productCope.EmployeeCreator == null ? null : productCope.EmployeeCreator.EmployeeId;
+            productCope.UpdateTime = DateTime.Now;
+
             this.radioGroupBarCode.SelectedIndex = 0;
             this.product = productCope;
             this.Refresh();
