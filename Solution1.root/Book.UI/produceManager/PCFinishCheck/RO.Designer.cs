@@ -1321,6 +1321,7 @@ namespace Book.UI.produceManager.PCFinishCheck
             // PageHeader
             // 
             resources.ApplyResources(this.PageHeader, "PageHeader");
+            this.PageHeader.Expanded = false;
             this.PageHeader.Name = "PageHeader";
             // 
             // RO
