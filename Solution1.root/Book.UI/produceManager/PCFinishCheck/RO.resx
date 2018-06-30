@@ -1495,17 +1495,11 @@
   <data name="lblEmployee1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
-  <data name="ReportHeader.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
-    <value>1854.72534</value>
-  </data>
   <data name="xrLabel23.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrLabel23.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1732.02234, 0</value>
+    <value>1732.02222, 2531.84717</value>
   </data>
   <data name="xrLabel23.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>254, 58.42</value>
@@ -1516,11 +1510,17 @@
   <data name="xrLabel23.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
+  <data name="ReportHeader.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
+    <value>2590.267</value>
+  </data>
   <data name="ReportFooter.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
-    <value>58.4200439</value>
+    <value>0</value>
   </data>
   <data name="xrPageInfo1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1538,7 +1538,7 @@
     <value>254</value>
   </data>
   <data name="PageFooter.HeightF" type="System.Single, mscorlib">
-    <value>97.89584</value>
+    <value>42.545</value>
   </data>
   <data name="PageHeader.Dpi" type="System.Single, mscorlib">
     <value>254</value>

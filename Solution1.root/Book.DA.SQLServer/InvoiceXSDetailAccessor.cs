@@ -113,7 +113,7 @@ namespace Book.DA.SQLServer
         {
             StringBuilder sb = new StringBuilder();
             if (Product != null && Product2 != null)
-                sb.Append(" AND ProductId BETWEEN '" + Product.Id + "' AND '" + Product2.Id + "'");
+                sb.Append(" AND ProductId BETWEEN '" + Product.ProductId + "' AND '" + Product2.ProductId + "'");
             if (!string.IsNullOrEmpty(CusXOId))
                 sb.Append(" AND InvoiceXOId IN (SELECT InvoiceId FROM InvoiceXO WHERE CustomerInvoiceXOId = '" + CusXOId + "')");
             sb.Append(" AND InvoiceId IN (SELECT InvoiceId FROM InvoiceXS WHERE InvoiceDate BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.Date.AddDays(1).ToString("yyyy-MM-dd") + "')");

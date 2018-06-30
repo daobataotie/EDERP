@@ -238,7 +238,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.xrLabel13,
             this.xrLabel14,
             this.lblEmployee0,
-            this.lblEmployee1});
+            this.lblEmployee1,
+            this.xrLabel23});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -1292,8 +1293,6 @@ namespace Book.UI.produceManager.PCFinishCheck
             // 
             // ReportFooter
             // 
-            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel23});
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
             this.ReportFooter.Name = "ReportFooter";
             // 
