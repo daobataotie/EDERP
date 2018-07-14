@@ -39,6 +39,7 @@ namespace Book.UI.produceManager.PronoteHeader
                     this.Text = "生產管理-" + Properties.Resources.ZZJiaGong + "列表";
                     break;
                 case 5:
+                case 7:
                     this.Text = "生產管理-" + Properties.Resources.GZZhiShi + "列表";
                     break;
                 default:
@@ -100,6 +101,7 @@ namespace Book.UI.produceManager.PronoteHeader
                     this.Text = "生產管理-" + Properties.Resources.ZZJiaGong + "列表";
                     break;
                 case 5:
+                case 7:
                     this.Text = "生產管理-" + Properties.Resources.GZZhiShi + "列表";
                     break;
                 default:
@@ -177,6 +179,8 @@ namespace Book.UI.produceManager.PronoteHeader
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.sourceType == 7)
+                this.sourceType = 5;
             //if (!this.gridView1.UpdateCurrentRow() || !this.gridView1.PostEditor()) return;
             this.gridView1.PostEditor();
             this.gridView1.UpdateCurrentRow();

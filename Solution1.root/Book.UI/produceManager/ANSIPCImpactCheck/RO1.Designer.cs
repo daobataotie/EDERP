@@ -101,13 +101,13 @@ namespace Book.UI.produceManager
             this.lblDataName = new DevExpress.XtraReports.UI.XRLabel();
             this.lblInvoiceXOQuantity = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblEmployee0 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.RTDescript = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -772,6 +772,13 @@ namespace Book.UI.produceManager
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
             // 
+            // xrLabel13
+            // 
+            resources.ApplyResources(this.xrLabel13, "xrLabel13");
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel13.StylePriority.UseTextAlignment = false;
+            // 
             // lblEmployee0
             // 
             resources.ApplyResources(this.lblEmployee0, "lblEmployee0");
@@ -815,13 +822,6 @@ namespace Book.UI.produceManager
             resources.ApplyResources(this.xrPageInfo1, "xrPageInfo1");
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            // 
-            // xrLabel13
-            // 
-            resources.ApplyResources(this.xrLabel13, "xrLabel13");
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel13.StylePriority.UseTextAlignment = false;
             // 
             // RO1
             // 

@@ -122,7 +122,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 LastFlag = 1;
             if (flagIsProcee == 4)
                 this.Text = Properties.Resources.ZZJiaGong;
-            else if (flagIsProcee == 5)
+            else if (flagIsProcee == 5 || this.FlagIsProcee == 7)
                 this.Text = Properties.Resources.GZZhiShi;
         }
 
@@ -421,7 +421,10 @@ namespace Book.UI.produceManager.PronoteHeader
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
-            //加工单 0；组装加工 4；加工指示 5；
+            if (FlagIsProcee == 7)
+                FlagIsProcee = 5;
+
+            //加工单 0；组装加工 4；加工指示 5,7；
             if (FlagIsProcee == 4)
             {
                 return new RO(pronoteHeader.PronoteHeaderID, FlagIsProcee);
@@ -455,7 +458,7 @@ namespace Book.UI.produceManager.PronoteHeader
             string invoiceType = "0";
             if (this.FlagIsProcee == 4)
                 invoiceType = "1";
-            else if (this.FlagIsProcee == 5)
+            else if (this.FlagIsProcee == 5 || this.FlagIsProcee == 7)
                 invoiceType = "2";
             this.pronoteHeader = this.pronoteHeaderManager.Get(this.pronoteHeaderManager.mGetFirst(invoiceType) == null ? "" : this.pronoteHeaderManager.mGetFirst(invoiceType).PronoteHeaderID);
         }
@@ -468,7 +471,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 string invoiceType = "0";
                 if (this.FlagIsProcee == 4)
                     invoiceType = "1";
-                else if (this.FlagIsProcee == 5)
+                else if (this.FlagIsProcee == 5 || this.FlagIsProcee == 7)
                     invoiceType = "2";
                 this.pronoteHeader = this.pronoteHeaderManager.Get(this.pronoteHeaderManager.GetLast(invoiceType) == null ? "" : this.pronoteHeaderManager.GetLast(invoiceType).PronoteHeaderID);
             }
@@ -480,7 +483,7 @@ namespace Book.UI.produceManager.PronoteHeader
             string invoiceType = "0";
             if (this.FlagIsProcee == 4)
                 invoiceType = "1";
-            else if (this.FlagIsProcee == 5)
+            else if (this.FlagIsProcee == 5 || this.FlagIsProcee == 7)
                 invoiceType = "2";
             return this.pronoteHeaderManager.mHasRows(invoiceType);
         }
@@ -1541,6 +1544,8 @@ namespace Book.UI.produceManager.PronoteHeader
         {
             //produceManager.PronoteHeader.RO3 f = new RO3(pronoteHeader.PronoteHeaderID, FlagIsProcee);
             //f.ShowPreviewDialog();
+            if (this.FlagIsProcee == 7)
+                this.FlagIsProcee = 5;
 
             //连打
             try

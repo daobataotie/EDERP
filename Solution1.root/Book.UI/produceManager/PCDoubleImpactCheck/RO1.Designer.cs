@@ -94,6 +94,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.lblProduct = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.RTDescript = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblEmployee0 = new DevExpress.XtraReports.UI.XRLabel();
@@ -102,7 +103,6 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.lblCompanyName = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
-            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -721,6 +721,13 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
             // 
+            // xrLabel5
+            // 
+            resources.ApplyResources(this.xrLabel5, "xrLabel5");
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel5.StylePriority.UseTextAlignment = false;
+            // 
             // RTDescript
             // 
             resources.ApplyResources(this.RTDescript, "RTDescript");
@@ -779,13 +786,6 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.lblCompanyName});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
-            // 
-            // xrLabel5
-            // 
-            resources.ApplyResources(this.xrLabel5, "xrLabel5");
-            this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel5.StylePriority.UseTextAlignment = false;
             // 
             // RO1
             // 

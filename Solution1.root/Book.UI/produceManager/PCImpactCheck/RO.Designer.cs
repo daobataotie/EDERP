@@ -88,6 +88,7 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.TCCheckStandard = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCInvoiceXOQuantity = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCCheckQuantity = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCSecondTestTime = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -121,6 +122,7 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.xrTableCell29 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell31 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell32 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell25 = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -143,8 +145,7 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrTableCell25 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCSecondTestTime = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -741,6 +742,12 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.TCCheckQuantity.Name = "TCCheckQuantity";
             this.TCCheckQuantity.Weight = 0.8488158253854976;
             // 
+            // TCSecondTestTime
+            // 
+            resources.ApplyResources(this.TCSecondTestTime, "TCSecondTestTime");
+            this.TCSecondTestTime.Name = "TCSecondTestTime";
+            this.TCSecondTestTime.Weight = 0.80639206594387236;
+            // 
             // xrTable1
             // 
             this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
@@ -1005,6 +1012,12 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.xrTableCell32.Name = "xrTableCell32";
             this.xrTableCell32.Weight = 0.84881845375396192;
             // 
+            // xrTableCell25
+            // 
+            resources.ApplyResources(this.xrTableCell25, "xrTableCell25");
+            this.xrTableCell25.Name = "xrTableCell25";
+            this.xrTableCell25.Weight = 0.80639111973122513;
+            // 
             // TopMargin
             // 
             resources.ApplyResources(this.TopMargin, "TopMargin");
@@ -1122,6 +1135,7 @@ namespace Book.UI.produceManager.PCImpactCheck
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel4,
             this.xrLine2,
             this.lblEmployeeId,
             this.xrLabel20,
@@ -1182,17 +1196,11 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             // 
-            // xrTableCell25
+            // xrLabel4
             // 
-            resources.ApplyResources(this.xrTableCell25, "xrTableCell25");
-            this.xrTableCell25.Name = "xrTableCell25";
-            this.xrTableCell25.Weight = 0.80639111973122513;
-            // 
-            // TCSecondTestTime
-            // 
-            resources.ApplyResources(this.TCSecondTestTime, "TCSecondTestTime");
-            this.TCSecondTestTime.Name = "TCSecondTestTime";
-            this.TCSecondTestTime.Weight = 0.80639206594387236;
+            resources.ApplyResources(this.xrLabel4, "xrLabel4");
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             // 
             // RO
             // 
@@ -1340,5 +1348,6 @@ namespace Book.UI.produceManager.PCImpactCheck
         private DevExpress.XtraReports.UI.XRLabel TCattrFootL;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell25;
         private DevExpress.XtraReports.UI.XRTableCell TCSecondTestTime;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
     }
 }

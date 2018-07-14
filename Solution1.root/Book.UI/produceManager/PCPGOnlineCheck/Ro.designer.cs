@@ -104,6 +104,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -683,6 +684,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1,
             this.lblEmployee,
             this.xrLabel7,
             this.lblPCPGOnlineCheckDesc,
@@ -747,6 +749,13 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             resources.ApplyResources(this.xrPageInfo1, "xrPageInfo1");
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            // 
+            // xrLabel1
+            // 
+            resources.ApplyResources(this.xrLabel1, "xrLabel1");
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
             // 
             // Ro
             // 
@@ -848,5 +857,6 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.XRTableCell TCSecondTestTime;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
     }
 }

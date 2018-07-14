@@ -22,7 +22,7 @@ namespace Book.UI.produceManager.ANSIPCImpactCheck
 
         //测试单类型
         string ForANSIOrJIS = null;
-        int _pcFlag = 0;
+        int _pcFlag = 0;         //0:ASNI   1:JIS
 
         public EditForm()
         {
