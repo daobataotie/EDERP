@@ -869,5 +869,11 @@ select ProductId,Id,ProductName from Product where ProductId in (select ProductI
       select ProductId,Id,ProductName from Product
       ]]>
     </select>
+
+    <select id="SelectStocksQuantityByStock" resultClass="double" parameterClass="string">
+      <![CDATA[
+      select ISNULL(sum(stockquantity1),0) from Stock where ProductId=#value#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

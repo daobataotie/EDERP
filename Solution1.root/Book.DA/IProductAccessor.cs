@@ -64,6 +64,8 @@ namespace Book.DA
         IList<Model.Product> GetProductBaseInfo();
 
         string SelectCustomerProductNameByProductIds(string productIds);
+
+        double SelectStocksQuantityByStock(string productId);
     }
 }
 

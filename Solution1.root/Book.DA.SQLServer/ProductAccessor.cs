@@ -276,6 +276,10 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.Product>("Product.GetProductBaseInfo", null);
         }
 
+        public double SelectStocksQuantityByStock(string productId)
+        {
+            return sqlmapper.QueryForObject<double>("Product.SelectStocksQuantityByStock", productId);
+        }
         #endregion
 
 
@@ -291,7 +295,7 @@ namespace Book.DA.SQLServer
             string sql = "select CustomerProductName+',' from Product where ProductId in (" + productIds + ") for xml path('')";
             object value = this.QueryObject(sql);
 
-            return(value == null ? "" : value.ToString());
+            return (value == null ? "" : value.ToString());
         }
     }
 }
