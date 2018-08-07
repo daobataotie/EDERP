@@ -265,6 +265,9 @@
   <data name="xrLabelCustomer.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrLabelCustomer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10.25pt</value>
+  </data>
   <data name="xrLabelCustomer.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1597.75012, 293.541748</value>
   </data>
@@ -277,6 +280,9 @@
   <data name="xrLabel15.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
+  <data name="xrLabel15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 10.25pt</value>
+  </data>
   <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>1377.94543, 293.541748</value>
   </data>
@@ -284,7 +290,7 @@
     <value>219.804688, 49.99994</value>
   </data>
   <data name="xrLabel15.Text" xml:space="preserve">
-    <value>客          户：</value>
+    <value>客        户：</value>
   </data>
   <data name="xrLabel15.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>

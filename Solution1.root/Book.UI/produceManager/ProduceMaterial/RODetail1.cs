@@ -24,6 +24,13 @@ namespace Book.UI.produceManager.ProduceMaterial
             this.xrRichText1.DataBindings.Add("Rtf", this.DataSource, "ProductDescription");
             this.xrTableCusProName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
             this.TC_NextWorkStation.DataBindings.Add("Text", this.DataSource, "NextWorkHouse." + Model.WorkHouse.PROPERTY_WORKHOUSENAME);
+
+            //this.xrLabel1ProduceMaterialdesc.DataBindings.Add("Text", this.ProduceMaterial, Model.ProduceMaterial.PRO_ProduceMaterialdesc);
+            //this.xrLabelEmployee0.DataBindings.Add("Text", this.ProduceMaterial, "Employee0Name");
+            //this.xrLabelEmployee2.DataBindings.Add("Text", this.ProduceMaterial, "AuditEmpName");
+            //this.xrLabel1ProduceMaterialdesc.Text = this.ProduceMaterial.ProduceMaterialdesc;
+            //this.xrLabelEmployee0.Text = this.ProduceMaterial.Employee0Name;
+            //this.xrLabelEmployee2.Text = this.ProduceMaterial.AuditEmpName;
         }
 
         private Model.ProduceMaterial _produceMaterial;
@@ -39,6 +46,11 @@ namespace Book.UI.produceManager.ProduceMaterial
                 return;
             ProduceMaterial.Details = this.produceMaterialdetailsManager.Select(ProduceMaterial);
             this.DataSource = ProduceMaterial.Details;
+
+            this.xrLabel1ProduceMaterialdesc.Text = this.ProduceMaterial.ProduceMaterialdesc;
+            this.xrLabelEmployee0.Text = this.ProduceMaterial.Employee0Name;
+            this.xrLabelEmployee2.Text = this.ProduceMaterial.AuditEmpName;
+
         }
 
     }

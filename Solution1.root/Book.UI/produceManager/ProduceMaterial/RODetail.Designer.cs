@@ -56,14 +56,6 @@
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelDataName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelCompanyInfoName = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabelEmployee0 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabelEmployee1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabelEmployee2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel1ProduceMaterialdesc = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -71,6 +63,8 @@
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrLabelCustomer = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -91,6 +85,8 @@
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel13,
+            this.xrLabelCustomer,
             this.xrLabelPiHao,
             this.xrLabel15,
             this.xrLabelSourceType,
@@ -123,6 +119,7 @@
             resources.ApplyResources(this.xrLabelPiHao, "xrLabelPiHao");
             this.xrLabelPiHao.Name = "xrLabelPiHao";
             this.xrLabelPiHao.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabelPiHao.StylePriority.UseFont = false;
             this.xrLabelPiHao.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel15
@@ -130,6 +127,7 @@
             resources.ApplyResources(this.xrLabel15, "xrLabel15");
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             // 
             // xrLabelSourceType
@@ -304,84 +302,10 @@
             this.xrLabelCompanyInfoName.StylePriority.UsePadding = false;
             this.xrLabelCompanyInfoName.StylePriority.UseTextAlignment = false;
             // 
-            // xrLabel7
-            // 
-            resources.ApplyResources(this.xrLabel7, "xrLabel7");
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel7.StylePriority.UseFont = false;
-            this.xrLabel7.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabelEmployee0
-            // 
-            this.xrLabelEmployee0.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            resources.ApplyResources(this.xrLabelEmployee0, "xrLabelEmployee0");
-            this.xrLabelEmployee0.Name = "xrLabelEmployee0";
-            this.xrLabelEmployee0.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabelEmployee0.StylePriority.UseBorders = false;
-            this.xrLabelEmployee0.StylePriority.UseFont = false;
-            this.xrLabelEmployee0.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel9
-            // 
-            resources.ApplyResources(this.xrLabel9, "xrLabel9");
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel9.StylePriority.UseFont = false;
-            this.xrLabel9.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabelEmployee1
-            // 
-            resources.ApplyResources(this.xrLabelEmployee1, "xrLabelEmployee1");
-            this.xrLabelEmployee1.Name = "xrLabelEmployee1";
-            this.xrLabelEmployee1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabelEmployee1.StylePriority.UseFont = false;
-            this.xrLabelEmployee1.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel2
-            // 
-            resources.ApplyResources(this.xrLabel2, "xrLabel2");
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabelEmployee2
-            // 
-            resources.ApplyResources(this.xrLabelEmployee2, "xrLabelEmployee2");
-            this.xrLabelEmployee2.Name = "xrLabelEmployee2";
-            this.xrLabelEmployee2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabelEmployee2.StylePriority.UseFont = false;
-            this.xrLabelEmployee2.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel11
-            // 
-            resources.ApplyResources(this.xrLabel11, "xrLabel11");
-            this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel11.StylePriority.UseFont = false;
-            this.xrLabel11.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel1ProduceMaterialdesc
-            // 
-            resources.ApplyResources(this.xrLabel1ProduceMaterialdesc, "xrLabel1ProduceMaterialdesc");
-            this.xrLabel1ProduceMaterialdesc.Name = "xrLabel1ProduceMaterialdesc";
-            this.xrLabel1ProduceMaterialdesc.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel1ProduceMaterialdesc.StylePriority.UseFont = false;
-            this.xrLabel1ProduceMaterialdesc.StylePriority.UseTextAlignment = false;
-            // 
             // PageFooter
             // 
             this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo2,
-            this.xrLabel1ProduceMaterialdesc,
-            this.xrLabelEmployee0,
-            this.xrLabelEmployee2,
-            this.xrLabelEmployee1,
-            this.xrLabel2,
-            this.xrLabel9,
-            this.xrLabel11,
-            this.xrLabel7});
+            this.xrPageInfo2});
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             this.PageFooter.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
@@ -420,6 +344,22 @@
             this.GroupHeader1.Name = "GroupHeader1";
             this.GroupHeader1.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
             // 
+            // xrLabelCustomer
+            // 
+            resources.ApplyResources(this.xrLabelCustomer, "xrLabelCustomer");
+            this.xrLabelCustomer.Name = "xrLabelCustomer";
+            this.xrLabelCustomer.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabelCustomer.StylePriority.UseFont = false;
+            this.xrLabelCustomer.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel13
+            // 
+            resources.ApplyResources(this.xrLabel13, "xrLabel13");
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel13.StylePriority.UseFont = false;
+            this.xrLabel13.StylePriority.UseTextAlignment = false;
+            // 
             // RODetail
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -450,20 +390,12 @@
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.XRLabel xrLabelDataName;
         private DevExpress.XtraReports.UI.XRLabel xrLabelCompanyInfoName;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel1ProduceMaterialdesc;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel11;
-        private DevExpress.XtraReports.UI.XRLabel xrLabelEmployee1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
-        private DevExpress.XtraReports.UI.XRLabel xrLabelEmployee0;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabelProduceMaterialDate;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRLabel xrLabelDepartment;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabelXOId;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
-        private DevExpress.XtraReports.UI.XRLabel xrLabelEmployee2;
         private DevExpress.XtraReports.UI.XRBarCode xrBarCodeProduceMaterialID;
         private DevExpress.XtraReports.UI.XRLabel xrLabelInsertTime;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
@@ -484,5 +416,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel13;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelCustomer;
     }
 }

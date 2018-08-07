@@ -11888,6 +11888,12 @@
     <Compile Include="produceManager\ANSIPCImpactCheck\RO1.Designer.cs">
       <DependentUpon>RO1.cs</DependentUpon>
     </Compile>
+    <Compile Include="produceManager\JISDataInput\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\JISDataInput\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="produceManager\MouldCategory\ProductCategory.cs">
       <SubType>Form</SubType>
     </Compile>

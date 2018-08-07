@@ -59,6 +59,15 @@
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelEmployee1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelEmployee2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelEmployee0 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel1ProduceMaterialdesc = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -296,6 +305,16 @@
             // 
             // ReportFooter
             // 
+            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabelEmployee0,
+            this.xrLabelEmployee2,
+            this.xrLabel1ProduceMaterialdesc,
+            this.xrLabelEmployee1,
+            this.xrLabel11,
+            this.xrLabel7,
+            this.xrLabel2,
+            this.xrLabel9,
+            this.xrLabel16});
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
@@ -309,6 +328,79 @@
             // 
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
+            // 
+            // xrLabel7
+            // 
+            resources.ApplyResources(this.xrLabel7, "xrLabel7");
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel11
+            // 
+            resources.ApplyResources(this.xrLabel11, "xrLabel11");
+            this.xrLabel11.Name = "xrLabel11";
+            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel11.StylePriority.UseFont = false;
+            this.xrLabel11.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel9
+            // 
+            resources.ApplyResources(this.xrLabel9, "xrLabel9");
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel9.StylePriority.UseFont = false;
+            this.xrLabel9.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel2
+            // 
+            resources.ApplyResources(this.xrLabel2, "xrLabel2");
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabelEmployee1
+            // 
+            resources.ApplyResources(this.xrLabelEmployee1, "xrLabelEmployee1");
+            this.xrLabelEmployee1.Name = "xrLabelEmployee1";
+            this.xrLabelEmployee1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabelEmployee1.StylePriority.UseFont = false;
+            this.xrLabelEmployee1.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabelEmployee2
+            // 
+            resources.ApplyResources(this.xrLabelEmployee2, "xrLabelEmployee2");
+            this.xrLabelEmployee2.Name = "xrLabelEmployee2";
+            this.xrLabelEmployee2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabelEmployee2.StylePriority.UseFont = false;
+            this.xrLabelEmployee2.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabelEmployee0
+            // 
+            this.xrLabelEmployee0.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            resources.ApplyResources(this.xrLabelEmployee0, "xrLabelEmployee0");
+            this.xrLabelEmployee0.Name = "xrLabelEmployee0";
+            this.xrLabelEmployee0.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabelEmployee0.StylePriority.UseBorders = false;
+            this.xrLabelEmployee0.StylePriority.UseFont = false;
+            this.xrLabelEmployee0.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel1ProduceMaterialdesc
+            // 
+            resources.ApplyResources(this.xrLabel1ProduceMaterialdesc, "xrLabel1ProduceMaterialdesc");
+            this.xrLabel1ProduceMaterialdesc.Name = "xrLabel1ProduceMaterialdesc";
+            this.xrLabel1ProduceMaterialdesc.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel1ProduceMaterialdesc.StylePriority.UseFont = false;
+            this.xrLabel1ProduceMaterialdesc.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel16
+            // 
+            resources.ApplyResources(this.xrLabel16, "xrLabel16");
+            this.xrLabel16.Name = "xrLabel16";
+            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel16.StylePriority.UseTextAlignment = false;
             // 
             // RODetail1
             // 
@@ -366,5 +458,14 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableCell TC_NextWorkStation;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelEmployee0;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelEmployee2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1ProduceMaterialdesc;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelEmployee1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel11;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel16;
     }
 }
