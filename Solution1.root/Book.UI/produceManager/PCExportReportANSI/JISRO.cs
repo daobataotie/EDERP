@@ -41,6 +41,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             string[] test = new string[10];
             double[] number = new double[10] { _PCExportReportANSI.ShouCeShu1.Value, _PCExportReportANSI.ShouCeShu2.Value, _PCExportReportANSI.ShouCeShu3.Value, _PCExportReportANSI.ShouCeShu4.Value, _PCExportReportANSI.ShouCeShu5.Value, _PCExportReportANSI.ShouCeShu6.Value, _PCExportReportANSI.ShouCeShu7.Value, _PCExportReportANSI.ShouCeShu8.Value, _PCExportReportANSI.ShouCeShu9.Value, _PCExportReportANSI.ShouCeShu10.Value };
             int b = -1;
+
+            this.lblTestStandard.Text = string.IsNullOrEmpty(_PCExportReportANSI.CSAJiShuBiaoZhun) ? "JIS T8147:2016" : _PCExportReportANSI.CSAJiShuBiaoZhun;
             foreach (double quality in number)
             {
                 for (int i = 0; i < test.Length; i++)

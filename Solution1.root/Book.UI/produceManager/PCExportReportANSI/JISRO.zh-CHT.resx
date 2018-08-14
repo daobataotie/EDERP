@@ -296,6 +296,16 @@
   <data name="xrLabel18.Text" xml:space="preserve">
     <value>台南廠</value>
   </data>
+  <data name="lblTestStandard.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lblTestStandard.Text" xml:space="preserve">
+    <value>JIS T8147:2003</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lblTestStandard.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>BottomLeft</value>
+  </data>
   <data name="xrLabel15.Text" xml:space="preserve">
     <value>SPECIFICATION(測試標準):</value>
   </data>

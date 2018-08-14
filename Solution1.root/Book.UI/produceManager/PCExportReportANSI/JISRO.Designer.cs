@@ -128,7 +128,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTestStandard = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbReportDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
@@ -284,7 +284,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel19,
             this.xrLabel18,
             this.xrLabel17,
-            this.xrLabel16,
+            this.lblTestStandard,
             this.xrLabel15,
             this.LbReportDate,
             this.xrLabel13,
@@ -1318,12 +1318,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel17.StylePriority.UseTextAlignment = false;
             // 
-            // xrLabel16
+            // lblTestStandard
             // 
-            resources.ApplyResources(this.xrLabel16, "xrLabel16");
-            this.xrLabel16.Name = "xrLabel16";
-            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel16.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.lblTestStandard, "lblTestStandard");
+            this.lblTestStandard.Name = "lblTestStandard";
+            this.lblTestStandard.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lblTestStandard.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel15
             // 
@@ -1462,7 +1462,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
         private DevExpress.XtraReports.UI.XRLabel LbReportDate;
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel16;
+        private DevExpress.XtraReports.UI.XRLabel lblTestStandard;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.XRLabel xrLabel20;

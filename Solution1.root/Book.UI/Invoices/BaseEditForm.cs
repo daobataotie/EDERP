@@ -528,10 +528,12 @@ namespace Book.UI.Invoices
             }
         }
 
+        //修改
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (MessageBox.Show("確定要修改？", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
+                this.Refresh();
                 this.action = "update";
                 this.Refresh();
             }
@@ -554,6 +556,7 @@ namespace Book.UI.Invoices
         {
             try
             {
+                this.Refresh();
                 this.TurnNull();
             }
             catch (Helper.RequireValueException ex)

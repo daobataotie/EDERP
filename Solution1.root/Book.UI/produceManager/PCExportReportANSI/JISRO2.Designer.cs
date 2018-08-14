@@ -33,6 +33,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.lbl_Signature = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel163 = new DevExpress.XtraReports.UI.XRLabel();
@@ -121,7 +122,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbFinJudgeHCOSTE = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel132 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbFinTestHCOSTE = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -237,6 +237,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbFinTestHCOSTE});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
+            // 
+            // xrPictureBox1
+            // 
+            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
+            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
+            this.xrPictureBox1.Name = "xrPictureBox1";
             // 
             // lbl_Signature
             // 
@@ -1209,12 +1215,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.lbFinTestHCOSTE.StylePriority.UseBorders = false;
             this.lbFinTestHCOSTE.StylePriority.UsePadding = false;
             this.lbFinTestHCOSTE.StylePriority.UseTextAlignment = false;
-            // 
-            // xrPictureBox1
-            // 
-            resources.ApplyResources(this.xrPictureBox1, "xrPictureBox1");
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.Name = "xrPictureBox1";
             // 
             // JISRO2
             // 

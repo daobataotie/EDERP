@@ -4605,6 +4605,14 @@
       <DependentUpon>RO1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\JISDataInput\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\JISDataInput\EditForm.zh-CHT.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\MouldCategory\ProductCategory.resx">
       <DependentUpon>ProductCategory.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4875,6 +4883,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\XuejingENRO.resx">
       <DependentUpon>XuejingENRO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\JISRO1.resx">
+      <DependentUpon>JISRO1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\JISRO1.zh-CHT.resx">
+      <DependentUpon>JISRO1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFinishCheck\ListForm.zh-CHT.resx">
@@ -12152,6 +12168,12 @@
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\XuejingENRO.Designer.cs">
       <DependentUpon>XuejingENRO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\JISRO1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\JISRO1.Designer.cs">
+      <DependentUpon>JISRO1.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCImpactCheck\EditForm.cs">
       <SubType>Form</SubType>

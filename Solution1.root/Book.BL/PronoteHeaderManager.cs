@@ -230,13 +230,19 @@ namespace Book.BL
                     if (pronoteHeader.Employee2 != null)
                         pronoteHeader.Employee2Id = pronoteHeader.Employee2.EmployeeId;
 
-
                     pronoteHeader.InvoiceStatus = 1;
-                    pronoteHeader.InDepotQuantity = pronoteHeader.InDepotQuantity.HasValue ? pronoteHeader.InDepotQuantity : 0;
-                    if (pronoteHeader.InDepotQuantity >= pronoteHeader.DetailsSum)
-                        pronoteHeader.IsClose = true;
-                    else
-                        pronoteHeader.IsClose = false;
+
+                    if (pronoteHeader.IsClose == null || !pronoteHeader.IsClose.Value)
+                    {
+                        pronoteHeader.InDepotQuantity = pronoteHeader.InDepotQuantity.HasValue ? pronoteHeader.InDepotQuantity : 0;
+                        if (pronoteHeader.InDepotQuantity >= pronoteHeader.DetailsSum)
+                        {
+                            pronoteHeader.IsClose = true;
+                            pronoteHeader.JieAnDate = DateTime.Now;
+                        }
+                        else
+                            pronoteHeader.IsClose = false;
+                    }
                     accessor.Update(pronoteHeader);
 
 
