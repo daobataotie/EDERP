@@ -8,12 +8,18 @@
 using System;
 namespace Book.Model
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	[Serializable]
-	public partial class PCAssemblyInspectionDetail
-	{
-
-	}
+    /// <summary>
+    /// 
+    /// </summary>
+    [Serializable]
+    public partial class PCAssemblyInspectionDetail
+    {
+        public string PHID
+        {
+            get
+            {
+                return this.PronoteHeaderId;
+            }
+        }
+    }
 }

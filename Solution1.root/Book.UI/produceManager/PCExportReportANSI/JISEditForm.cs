@@ -614,6 +614,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
         }
 
+        #region  判定数量自动等同测试数量
         private void spinlensTestApp_EditValueChanged(object sender, EventArgs e)
         {
             this.spinlensJudgeApp.EditValue = this.spinlensTestApp.EditValue;
@@ -702,6 +703,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private void spinFinTestMfpac_EditValueChanged(object sender, EventArgs e)
         {
             spinFinJudgeMfpac.EditValue = spinFinTestMfpac.EditValue;
-        }
+        } 
+        #endregion
     }
 }

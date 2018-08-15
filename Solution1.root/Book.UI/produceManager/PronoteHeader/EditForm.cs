@@ -933,7 +933,7 @@ namespace Book.UI.produceManager.PronoteHeader
             }
         }
 
-        // 形成领料单
+        //查看领料单
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //object tag = e.Item.Tag;
@@ -1774,6 +1774,7 @@ namespace Book.UI.produceManager.PronoteHeader
             this.barButtonItemJieAn.Enabled = this.action == "view" ? true : false;
         }
 
+        //生成领料单
         private void btn_MakeProduceMaterial_Click(object sender, EventArgs e)
         {
             //IList<Model.PronotedetailsMaterial> detail = from n in this.pronoteHeader.DetailsMaterial
