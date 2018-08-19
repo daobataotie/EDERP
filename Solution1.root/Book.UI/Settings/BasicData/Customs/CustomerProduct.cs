@@ -12,6 +12,7 @@ namespace Book.UI.Settings.BasicData.Customs
 {
     public partial class CustomerProduct : DevExpress.XtraEditors.XtraForm
     {
+        Model.Customer customer = null;
         IList<Model.Product> customerProductList;
         BL.ProductManager productManager = new Book.BL.ProductManager();
         BL.CustomerProductsManager customerProductsManager = new Book.BL.CustomerProductsManager();
@@ -25,13 +26,15 @@ namespace Book.UI.Settings.BasicData.Customs
         public CustomerProduct(Model.Customer c)
             : this()
         {
-            this.bindingSource1.DataSource = customerProductList = productManager.SelectAllProductByCustomer(c);
+            customer = c;
+            this.bindingSource1.DataSource = customerProductList = productManager.SelectAllProductByCustomer(c, true);
         }
 
         public CustomerProduct(Model.Customer c, IList<Model.Product> productList)
             : this()
         {
-            customerProductList = productManager.SelectAllProductByCustomer(c);
+            customer = c;
+            customerProductList = productManager.SelectAllProductByCustomer(c, true);
 
             foreach (var item in customerProductList)
             {
@@ -54,6 +57,12 @@ namespace Book.UI.Settings.BasicData.Customs
             {
                 item.Checked = this.checkEdit1.Checked;
             }
+            this.gridControl2.RefreshDataSource();
+        }
+
+        private void che_IsShowUnuseProduct_CheckedChanged(object sender, EventArgs e)
+        {
+            this.bindingSource1.DataSource = customerProductList = productManager.SelectAllProductByCustomer(customer, !this.che_IsShowUnuseProduct.Checked);
             this.gridControl2.RefreshDataSource();
         }
     }

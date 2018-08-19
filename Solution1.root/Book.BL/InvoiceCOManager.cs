@@ -72,6 +72,22 @@ namespace Book.BL
             _TurnNull((Model.InvoiceCO)invoice);
         }
 
+        public override void Delete(string invoiceId)
+        {
+            try
+            {
+                //修改物料需求的排单状态
+                accessor.UpdateMRSState(invoiceId);
+
+                accessor.Delete(invoiceId);
+            }
+            catch
+            {
+                V.RollbackTransaction();
+                throw new Helper.InvalidValueException("DeleteError");
+            }
+        }
+
         #region Other
 
         protected override string GetInvoiceKind()

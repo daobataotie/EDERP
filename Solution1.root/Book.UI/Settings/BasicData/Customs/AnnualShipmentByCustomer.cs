@@ -131,6 +131,8 @@ namespace Book.UI.Settings.BasicData.Customs
             }
             try
             {
+                productShipmentList = productShipmentList.OrderBy(P => P.CustomerProductName).ToList();
+
                 Type objClassType = null;
                 objClassType = Type.GetTypeFromProgID("Excel.Application");
                 if (objClassType == null)
@@ -159,7 +161,7 @@ namespace Book.UI.Settings.BasicData.Customs
 
                 Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
                 //dynamic excel = Activator.CreateInstance(objClassType);
-                excel.Application.Workbooks.Add(true); 
+                excel.Application.Workbooks.Add(true);
                 //Microsoft.Office.Interop.Excel.Line l = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
 
                 Microsoft.Office.Interop.Excel.Range r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, productShipmentList.Count]);
@@ -195,7 +197,7 @@ namespace Book.UI.Settings.BasicData.Customs
                 {
                     excel.Cells[2, j + 2] = productShipmentList[j].CustomerProductName;
                     excel.get_Range(excel.Cells[2, j + 2], excel.Cells[2, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
-                    
+
                     //2017年5月13日21:00:53  第三行加商品名稱
                     excel.Cells[3, j + 2] = productShipmentList[j].ProductName;
                     excel.get_Range(excel.Cells[3, j + 2], excel.Cells[3, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");

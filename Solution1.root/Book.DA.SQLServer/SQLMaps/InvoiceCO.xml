@@ -59,5 +59,11 @@
       select InvoiceId+',' from InvoiceCO where InvoiceXOId=#value# for xml path('')
       ]]>
     </select>
+
+    <update id="UpdateMRSState" parameterClass="String">
+      <![CDATA[
+      update MRSdetails set ArrangeDesc='' where MRSdetailsId in (select MRSdetailsId from MRSdetails md left join InvoiceCO c on md.MRSHeaderId=c.MRSHeaderId left join InvoiceCODetail cd on c.InvoiceId=cd.InvoiceId where md.ProductId=cd.ProductId and c.InvoiceId=#value#)
+      ]]>
+    </update>
   </statements>
 </sqlMap>

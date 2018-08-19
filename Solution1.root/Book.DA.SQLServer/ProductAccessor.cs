@@ -128,10 +128,13 @@ namespace Book.DA.SQLServer
             ht.Add("DeadDate", DateTime.Now.Date.AddDays(1).AddSeconds(-1));
             return sqlmapper.QueryForList<Model.Product>("Product.SelectProductByCustomer", ht);
         }
-        public IList<Model.Product> SelectAllProductByCustomer(Model.Customer customer)
+        public IList<Model.Product> SelectAllProductByCustomer(Model.Customer customer, bool isShowUnuseProduct)
         {
             Hashtable ht = new Hashtable();
             ht.Add("CustomerId", customer.CustomerId);
+            if (!isShowUnuseProduct)
+                ht.Add("sql", " and Product.ProductId in (select CustomerProductProceName from CustomerProducts where (VersionDate IS NULL OR (year(VersionDate) = '1900' AND month(VersionDate) = '01' AND day(VersionDate) = '01') OR VersionDate > GETDATE()) and CustomerId='" + customer.CustomerId + "')");
+
             return sqlmapper.QueryForList<Model.Product>("Product.SelectAllProductByCustomer", ht);
         }
 

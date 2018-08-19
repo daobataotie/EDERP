@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="JISDataInput" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="JISDataInput" type="Book.Model.JISDataInput, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="JISDataInputResult" class="JISDataInput">
+      <result property="JISDataInputId" column="JISDataInputId" />
+      <result property="JISDataInputDate" column="JISDataInputDate" />
+      <result property="InvoiceXOId" column="InvoiceXOId" />
+      <result property="ProductId" column="ProductId" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="InvoiceQuantiy" column="InvoiceQuantiy" />
+      <result property="TestQuantity" column="TestQuantity" />
+      <result property="Color" column="Color" />
+      <result property="Effect" column="Effect" />
+      <result property="EmployeeId1" column="EmployeeId1" />
+      <result property="EmployeeId2" column="EmployeeId2" />
+      <result property="Waiguan1" column="Waiguan1" />
+      <result property="Lingjingdu" column="Lingjingdu" />
+      <result property="Quguangdu" column="Quguangdu" />
+      <result property="Sanguangdu" column="Sanguangdu" />
+      <result property="Toushilv" column="Toushilv" />
+      <result property="Chongji1" column="Chongji1" />
+      <result property="Naimohao" column="Naimohao" />
+      <result property="Naire" column="Naire" />
+      <result property="Naishi" column="Naishi" />
+      <result property="Zuran" column="Zuran" />
+      <result property="Waiguan2" column="Waiguan2" />
+      <result property="Chongji2" column="Chongji2" />
+      <result property="Jinmi" column="Jinmi" />
+      <result property="Toudai" column="Toudai" />
+      <result property="Naixiaodu" column="Naixiaodu" />
+      <result property="Gouzao" column="Gouzao" />
+      <result property="Cailiao" column="Cailiao" />
+      <result property="Jihao" column="Jihao" />
+      <result property="Shouce" column="Shouce" />
+      <result property="Employee1" column="EmployeeId1" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="Employee2" column="EmployeeId2" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_by_primary_key" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[JISDataInput]
+				WHERE
+				[JISDataInputId] = #JISDataInputId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[JISDataInput]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="get_first" resultMap="JISDataInputResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.JISDataInput
+			 
+			order by InsertTime 
+			]]>
+    </select>
+    <select id="get_last" resultMap="JISDataInputResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.JISDataInput
+						
+            order by InsertTime desc
+			]]>
+
+    </select>
+    <select id="get_prev" resultMap="JISDataInputResult" parameterClass="JISDataInput">
+      <![CDATA[
+			select top 1 *
+			from dbo.JISDataInput
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+    </select>
+    <select id="get_next" resultMap="JISDataInputResult" parameterClass="JISDataInput">
+      <![CDATA[
+			select top 1 *
+			from dbo.JISDataInput
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="JISDataInput">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.JISDataInput
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="JISDataInput">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.JISDataInput
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="JISDataInputResult" parameterClass="JISDataInput">
+      <![CDATA[SELECT
+				[JISDataInputId],
+				[JISDataInputDate],
+				[InvoiceXOId],
+				[ProductId],
+				[InsertTime],
+				[UpdateTime],
+				[InvoiceQuantiy],
+				[TestQuantity],
+				[Color],
+				[Effect],
+				[EmployeeId1],
+				[EmployeeId2],
+				[Waiguan1],
+				[Lingjingdu],
+				[Quguangdu],
+				[Sanguangdu],
+				[Toushilv],
+				[Chongji1],
+				[Naimohao],
+				[Naire],
+				[Naishi],
+				[Zuran],
+				[Waiguan2],
+				[Chongji2],
+				[Jinmi],
+				[Toudai],
+				[Naixiaodu],
+				[Gouzao],
+				[Cailiao],
+				[Jihao],
+				[Shouce]
+			FROM
+				[dbo].[JISDataInput]
+			WHERE
+				[JISDataInputId] = #JISDataInputId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[JISDataInput]
+			WHERE            
+				[JISDataInputId] = #JISDataInputId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="JISDataInputResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[JISDataInput]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[JISDataInput]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="JISDataInputResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[JISDataInput]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="JISDataInput">
+      <![CDATA[ INSERT INTO [dbo].[JISDataInput] 
+			(
+				[JISDataInputId],
+				[JISDataInputDate],
+				[InvoiceXOId],
+				[ProductId],
+				[InsertTime],
+				[UpdateTime],
+				[InvoiceQuantiy],
+				[TestQuantity],
+				[Color],
+				[Effect],
+				[EmployeeId1],
+				[EmployeeId2],
+				[Waiguan1],
+				[Lingjingdu],
+				[Quguangdu],
+				[Sanguangdu],
+				[Toushilv],
+				[Chongji1],
+				[Naimohao],
+				[Naire],
+				[Naishi],
+				[Zuran],
+				[Waiguan2],
+				[Chongji2],
+				[Jinmi],
+				[Toudai],
+				[Naixiaodu],
+				[Gouzao],
+				[Cailiao],
+				[Jihao],
+				[Shouce]
+			) 
+			VALUES 
+			(
+				#JISDataInputId#,
+				#JISDataInputDate#,
+				#InvoiceXOId#,
+				#ProductId#,
+				#InsertTime#,
+				#UpdateTime#,
+				#InvoiceQuantiy#,
+				#TestQuantity#,
+				#Color#,
+				#Effect#,
+				#EmployeeId1#,
+				#EmployeeId2#,
+				#Waiguan1#,
+				#Lingjingdu#,
+				#Quguangdu#,
+				#Sanguangdu#,
+				#Toushilv#,
+				#Chongji1#,
+				#Naimohao#,
+				#Naire#,
+				#Naishi#,
+				#Zuran#,
+				#Waiguan2#,
+				#Chongji2#,
+				#Jinmi#,
+				#Toudai#,
+				#Naixiaodu#,
+				#Gouzao#,
+				#Cailiao#,
+				#Jihao#,
+				#Shouce#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="JISDataInput">
+      <![CDATA[ 	UPDATE [JISDataInput] SET
+				[JISDataInputDate] = #JISDataInputDate#,
+				[InvoiceXOId] = #InvoiceXOId#,
+				[ProductId] = #ProductId#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+				[InvoiceQuantiy] = #InvoiceQuantiy#,
+				[TestQuantity] = #TestQuantity#,
+				[Color] = #Color#,
+				[Effect] = #Effect#,
+				[EmployeeId1] = #EmployeeId1#,
+				[EmployeeId2] = #EmployeeId2#,
+				[Waiguan1] = #Waiguan1#,
+				[Lingjingdu] = #Lingjingdu#,
+				[Quguangdu] = #Quguangdu#,
+				[Sanguangdu] = #Sanguangdu#,
+				[Toushilv] = #Toushilv#,
+				[Chongji1] = #Chongji1#,
+				[Naimohao] = #Naimohao#,
+				[Naire] = #Naire#,
+				[Naishi] = #Naishi#,
+				[Zuran] = #Zuran#,
+				[Waiguan2] = #Waiguan2#,
+				[Chongji2] = #Chongji2#,
+				[Jinmi] = #Jinmi#,
+				[Toudai] = #Toudai#,
+				[Naixiaodu] = #Naixiaodu#,
+				[Gouzao] = #Gouzao#,
+				[Cailiao] = #Cailiao#,
+				[Jihao] = #Jihao#,
+				[Shouce] = #Shouce#
+			WHERE
+				[JISDataInputId] = #JISDataInputId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[JISDataInput]
+				where  JISDataInputId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

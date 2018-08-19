@@ -43,6 +43,8 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.che_IsShowUnuseProduct = new DevExpress.XtraEditors.CheckEdit();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -53,10 +55,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.che_IsShowUnuseProduct.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.che_IsShowUnuseProduct);
             this.layoutControl1.Controls.Add(this.checkEdit1);
             this.layoutControl1.Controls.Add(this.gridControl2);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -72,7 +77,7 @@
             this.checkEdit1.Location = new System.Drawing.Point(12, 450);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "全選";
-            this.checkEdit1.Size = new System.Drawing.Size(616, 19);
+            this.checkEdit1.Size = new System.Drawing.Size(69, 19);
             this.checkEdit1.StyleController = this.layoutControl1;
             this.checkEdit1.TabIndex = 6;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
@@ -160,7 +165,8 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(640, 481);
@@ -186,11 +192,33 @@
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 438);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(620, 23);
+            this.layoutControlItem3.Size = new System.Drawing.Size(73, 23);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
+            // 
+            // che_IsShowUnuseProduct
+            // 
+            this.che_IsShowUnuseProduct.Location = new System.Drawing.Point(85, 450);
+            this.che_IsShowUnuseProduct.Name = "che_IsShowUnuseProduct";
+            this.che_IsShowUnuseProduct.Properties.Caption = "不顯示停用商品";
+            this.che_IsShowUnuseProduct.Size = new System.Drawing.Size(543, 19);
+            this.che_IsShowUnuseProduct.StyleController = this.layoutControl1;
+            this.che_IsShowUnuseProduct.TabIndex = 7;
+            this.che_IsShowUnuseProduct.CheckedChanged += new System.EventHandler(this.che_IsShowUnuseProduct_CheckedChanged);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.che_IsShowUnuseProduct;
+            this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
+            this.layoutControlItem1.Location = new System.Drawing.Point(73, 438);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(547, 23);
+            this.layoutControlItem1.Text = "layoutControlItem1";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextToControlDistance = 0;
+            this.layoutControlItem1.TextVisible = false;
             // 
             // CustomerProduct
             // 
@@ -212,6 +240,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.che_IsShowUnuseProduct.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +262,7 @@
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraEditors.CheckEdit che_IsShowUnuseProduct;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

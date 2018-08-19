@@ -69,11 +69,11 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.simpleButton_Exit = new DevExpress.XtraEditors.SimpleButton();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.cbo_bussiness = new DevExpress.XtraEditors.ComboBoxEdit();
             this.newChooseCustom = new Book.UI.Invoices.NewChooseContorl();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.cedetailisclose = new DevExpress.XtraEditors.CheckEdit();
             this.spb_search = new DevExpress.XtraEditors.SimpleButton();
+            this.cbo_bussiness = new DevExpress.XtraEditors.ComboBoxEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -113,10 +113,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_bussiness.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cedetailisclose.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_bussiness.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -385,7 +385,7 @@
             // gridXSCustomer
             // 
             resources.ApplyResources(this.gridXSCustomer, "gridXSCustomer");
-            this.gridXSCustomer.FieldName = "XSCustomerId";
+            this.gridXSCustomer.FieldName = "xocustomer";
             this.gridXSCustomer.Name = "gridXSCustomer";
             // 
             // gridColumn6
@@ -425,14 +425,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateEdit1.StyleController = this.layoutControl1;
             // 
-            // cbo_bussiness
-            // 
-            resources.ApplyResources(this.cbo_bussiness, "cbo_bussiness");
-            this.cbo_bussiness.Name = "cbo_bussiness";
-            this.cbo_bussiness.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cbo_bussiness.Properties.Buttons"))))});
-            this.cbo_bussiness.StyleController = this.layoutControl1;
-            // 
             // newChooseCustom
             // 
             this.newChooseCustom.EditValue = null;
@@ -463,6 +455,14 @@
             this.spb_search.Name = "spb_search";
             this.spb_search.StyleController = this.layoutControl1;
             this.spb_search.Click += new System.EventHandler(this.spb_search_Click);
+            // 
+            // cbo_bussiness
+            // 
+            resources.ApplyResources(this.cbo_bussiness, "cbo_bussiness");
+            this.cbo_bussiness.Name = "cbo_bussiness";
+            this.cbo_bussiness.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cbo_bussiness.Properties.Buttons"))))});
+            this.cbo_bussiness.StyleController = this.layoutControl1;
             // 
             // layoutControlGroup1
             // 
@@ -731,10 +731,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_bussiness.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cedetailisclose.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_bussiness.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
