@@ -1055,7 +1055,7 @@ Power
   <data name="label6.Text" xml:space="preserve">
     <value>Refractive
 Power
-光学测试</value>
+球面度数</value>
   </data>
   <data name="label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>

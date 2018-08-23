@@ -206,7 +206,11 @@ namespace Book.UI.Hr.Salary.Salaryset
         /// </summary>
         private int flag = 0;
 
-        //薪资计算于2013.10修改
+        /*
+         * 薪资计算于2013.10修改  此处修改对应的两处也要修改:
+         * 1，本页面的 “CalulationNoText”方法
+         * 2，CalCrystalReportForm1 修改
+         */
         private void Calulation(Model.Employee emp)
         {
             //2015年1月26日10:53:19   出勤奖金 改为 伙食津贴
@@ -354,7 +358,14 @@ namespace Book.UI.Hr.Salary.Salaryset
                         halfSpecialBonus += Convert.ToDouble(attend.SpecialBonus);
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
-                    if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //员工编号为J开头，并且是国定假日给出勤奖
+                    //if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //{
+                    //    hasPayDays++;
+                    //    gnDays++;
+                    //}
+                    //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
+                    if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
                     {
                         hasPayDays++;
                         gnDays++;
@@ -1209,7 +1220,13 @@ namespace Book.UI.Hr.Salary.Salaryset
                         halfSpecialBonus += Convert.ToDouble(attend.SpecialBonus);
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
-                    if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //{
+                    //    hasPayDays++;
+                    //    gnDays++;
+                    //}
+                    //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
+                    if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
                     {
                         hasPayDays++;
                         gnDays++;

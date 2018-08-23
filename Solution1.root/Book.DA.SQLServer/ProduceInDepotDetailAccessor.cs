@@ -28,8 +28,8 @@ namespace Book.DA.SQLServer
         {
             Hashtable ht = new Hashtable();
             ht.Add("pronoteid", PronoteHeaderId);
-            ht.Add("startdate", startDate);
-            ht.Add("enddate", endDate);
+            ht.Add("startdate", startDate.ToString("yyyy-MM-dd"));
+            ht.Add("enddate", endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss"));
             ht.Add("workhouseId", workhouseId);
             ht.Add("productid", product == null ? null : product.ProductId);
             ht.Add("cusxoid", CusXOId == null ? null : CusXOId);
@@ -46,7 +46,7 @@ namespace Book.DA.SQLServer
             //ht.Add("enddate", endDate);
             //ht.Add("productid", product == null ? null : product.ProductId);
             StringBuilder str = new StringBuilder();
-            str.Append("   select d.*,i.ProduceInDepotDate as mProduceInDepotDate,pr.IsClose as PIsClose , p.ProductName as ProductName,p.CustomerProductName,(SELECT Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId = (SELECT ProduceInDepot.WorkHouseId FROM ProduceInDepot WHERE ProduceInDepot.ProduceInDepotId = d.ProduceInDepotId)) as WorkHousename,(select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pr.PronoteHeaderId)) AS CusXOId,(SELECT LEFT(a,isnull(len(a)-1,0)) AS c FROM (SELECT (SELECT (cast(PronoteMachineId AS varchar)+',')  FROM PronoteProceduresDetail WHERE PronoteHeaderID=d.PronoteHeaderId AND PronoteMachineId IS NOT NULL AND PronoteMachineId<>'' FOR xml path('')) AS a) AS b) AS Machine,pr.JieAnDate from ProduceInDepotDetail d left join PronoteHeader pr on pr.PronoteHeaderId=d.PronoteHeaderId  left join ProduceInDepot i on d.ProduceInDepotId=i.ProduceInDepotId left join  product p on d.productid=p.productid where d.ProduceInDepotId in(select ProduceInDepotId from ProduceInDepot where ProduceInDepotDate between '" + startDate.ToShortDateString() + "' and '" + endDate.Date.AddDays(1).ToShortDateString() + "') ");
+            str.Append("   select d.*,i.ProduceInDepotDate as mProduceInDepotDate,pr.IsClose as PIsClose , p.ProductName as ProductName,p.CustomerProductName,(SELECT Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId = (SELECT ProduceInDepot.WorkHouseId FROM ProduceInDepot WHERE ProduceInDepot.ProduceInDepotId = d.ProduceInDepotId)) as WorkHousename,(select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pr.PronoteHeaderId)) AS CusXOId,(SELECT LEFT(a,isnull(len(a)-1,0)) AS c FROM (SELECT (SELECT (cast(PronoteMachineId AS varchar)+',')  FROM PronoteProceduresDetail WHERE PronoteHeaderID=d.PronoteHeaderId AND PronoteMachineId IS NOT NULL AND PronoteMachineId<>'' FOR xml path('')) AS a) AS b) AS Machine,pr.JieAnDate from ProduceInDepotDetail d left join PronoteHeader pr on pr.PronoteHeaderId=d.PronoteHeaderId  left join ProduceInDepot i on d.ProduceInDepotId=i.ProduceInDepotId left join  product p on d.productid=p.productid where d.ProduceInDepotId in(select ProduceInDepotId from ProduceInDepot where ProduceInDepotDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "') ");
             if (!string.IsNullOrEmpty(startPronoteHeader) && !string.IsNullOrEmpty(endPronoteHeader))
             {
                 str.Append(" and (d.PronoteHeaderId between '" + startPronoteHeader + "' and  '" + endPronoteHeader + "')");
@@ -101,8 +101,8 @@ namespace Book.DA.SQLServer
             Hashtable ht = new Hashtable();
             ht.Add("startpronoteid", string.IsNullOrEmpty(startPronoteHeader) ? null : startPronoteHeader);
             ht.Add("endpronoteid", string.IsNullOrEmpty(endPronoteHeader) ? null : endPronoteHeader);
-            ht.Add("startdate", startDate);
-            ht.Add("enddate", endDate);
+            ht.Add("startdate", startDate.ToString("yyyy-MM-dd"));
+            ht.Add("enddate", endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss"));
             ht.Add("productid", product == null ? null : product.ProductId);
             StringBuilder str = new StringBuilder();
             if (work != null)
@@ -187,7 +187,7 @@ namespace Book.DA.SQLServer
             //}
             //ht.Add("sql", str.ToString());
             //return sqlmapper.QueryForList<Model.ProduceInDepotDetail>("ProduceInDepotDetail.select_byProduceInDateAndPronote", ht);
-            StringBuilder sb = new StringBuilder("select pid.ProduceInDepotId,pi.ProduceInDepotDate as HeaderDate,pid.PronoteHeaderId,p.ProductName,wh.Workhousename,pid.ProceduresSum,pid.ProduceTransferQuantity,pid.ProduceQuantity,pid.ProductUnit,d.DepotName, (select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pid.PronoteHeaderId)) as CusXOId  from ProduceInDepotDetail pid left join Product p on p.ProductId=pid.ProductId left join ProduceInDepot pi on pi.ProduceInDepotId=pid.ProduceInDepotId  left join WorkHouse wh on wh.WorkHouseId=pi.WorkHouseId left join Depot d on d.DepotId=pi.DepotId where pi.ProduceInDepotDate between '" + startDate + "' and '" + endDate + "'");
+            StringBuilder sb = new StringBuilder("select pid.ProduceInDepotId,pi.ProduceInDepotDate as HeaderDate,pid.PronoteHeaderId,p.ProductName,wh.Workhousename,pid.ProceduresSum,pid.ProduceTransferQuantity,pid.ProduceQuantity,pid.ProductUnit,d.DepotName, (select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pid.PronoteHeaderId)) as CusXOId  from ProduceInDepotDetail pid left join Product p on p.ProductId=pid.ProductId left join ProduceInDepot pi on pi.ProduceInDepotId=pid.ProduceInDepotId  left join WorkHouse wh on wh.WorkHouseId=pi.WorkHouseId left join Depot d on d.DepotId=pi.DepotId where pi.ProduceInDepotDate between '" + startDate.ToString("yyyy-MM-dd")+ "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
 
             if (!string.IsNullOrEmpty(startPronoteHeader) && !string.IsNullOrEmpty(endPronoteHeader))
                 sb.Append(" and pid.PronoteHeaderId between '" + startPronoteHeader + "' and '" + endPronoteHeader + "'");
@@ -222,7 +222,7 @@ namespace Book.DA.SQLServer
         public double? select_SumPronoteHeaderWorkhouseDateRang(DateTime startdate, DateTime enddate, string PronoteHeaderId, string WorkHouseId)
         {
             Hashtable ht = new Hashtable();
-            ht.Add("startdate", startdate);
+            ht.Add("startdate", startdate.ToString("yyyy-MM-dd"));
             ht.Add("enddate", enddate);
             ht.Add("PronoteHeaderId", PronoteHeaderId);
             ht.Add("WorkHouseId", WorkHouseId);
@@ -233,8 +233,8 @@ namespace Book.DA.SQLServer
         public double? select_CheckOutSumPronoteHeaderWorkhouseDateRang(DateTime startdate, DateTime enddate, string PronoteHeaderId, string WorkHouseId)
         {
             Hashtable ht = new Hashtable();
-            ht.Add("startdate", startdate);
-            ht.Add("enddate", enddate);
+            ht.Add("startdate", startdate.ToString("yyyy-MM-dd"));
+            ht.Add("enddate", enddate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss"));
             ht.Add("PronoteHeaderId", PronoteHeaderId);
             ht.Add("WorkHouseId", WorkHouseId);
 

@@ -387,7 +387,12 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //if (VPerson.specialEmpOfAttendJJ.Contains(emp.EmployeeId) && this.hrSpecificHolidayManager.ISExistsByName(_ms.mNote))
                     //    hasPayDays++;
                     //员工编号为J开头，并且是国定假日给出勤奖
-                    if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //if ((emp.IDNo.ToUpper().StartsWith("J")) && this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //{
+                    //    hasPayDays++;
+                    //    gnDays++;
+                    //} //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
+                    if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
                     {
                         hasPayDays++;
                         gnDays++;

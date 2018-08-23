@@ -141,6 +141,19 @@
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
     <value>120.52095</value>
   </data>
+  <data name="lbl_ApproverdDate.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbl_ApproverdDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2077.99146, 1545.60059</value>
+  </data>
+  <data name="lbl_ApproverdDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>271.8993, 47.8369141</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lbl_ApproverdDate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
+  </data>
   <data name="CheckPriHOut.Font" type="System.Drawing.Font, System.Drawing">
     <value>新細明體, 9pt</value>
   </data>
@@ -189,7 +202,6 @@
   <data name="xrLabel11.Text" xml:space="preserve">
     <value>Within 2 min of removal from the oven, commence testing the eye protector for C3.2.3 / C3.2.6 / C3.3.1 / C3.2.8. The maximum time for which the protector may be out of the oven for testing shall be 5 min. It shall then be returned to the oven for a minimum of 15 min before again being withdrawn.測試標的應於移出烤箱兩分鐘內開始依表序進行相關光學及衝擊測試且測試時間不超過五分 鐘。超過五分鐘後，測試標的應再以相同溫度條件再置入烤箱15分鐘後繼續前次測試順序。重覆此測試方式直至完成所有表列測 試項目為止。</value>
   </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLabel11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
   </data>
@@ -371,7 +383,7 @@
     <value>Prismatic   Power                       菱鏡度測試</value>
   </data>
   <data name="xrTableCell39.Text" xml:space="preserve">
-    <value>Refractive   Power          光學測試</value>
+    <value>Refractive   Power          球面度數</value>
   </data>
   <data name="xrTableCell36.Text" xml:space="preserve">
     <value>Haze             霧度測試</value>
@@ -725,7 +737,7 @@
     <value>1754.188, 1543.3783</value>
   </data>
   <data name="xrLabel81.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>545.041748, 47.836792</value>
+    <value>323.803223, 47.836792</value>
   </data>
   <data name="xrLabel81.Text" xml:space="preserve">
     <value>Approved by &amp; Date:</value>
