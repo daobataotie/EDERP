@@ -50,10 +50,20 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.CheckPriHOut.Checked = _PCExportReportANSI.PrismaticPowerHOut.HasValue ? _PCExportReportANSI.PrismaticPowerHOut.Value : false;
             this.CheckPriVUp.Checked = _PCExportReportANSI.PrismaticPowerVUp.HasValue ? _PCExportReportANSI.PrismaticPowerVUp.Value : false;
             this.CheckPriVDwn.Checked = _PCExportReportANSI.PrismaticPowerVDwn.HasValue ? _PCExportReportANSI.PrismaticPowerVDwn.Value : false;
+            //if (_PCExportReportANSI.IsShowGX2.HasValue && _PCExportReportANSI.IsShowGX2.Value)
+            //    this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? "(" + _PCExportReportANSI.RefractivePower.Value.ToString("0.00") + ") 2" : "(0.00) 2";
+            //else
+            //    this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? _PCExportReportANSI.RefractivePower.Value.ToString("0.00") : "0.00";
             if (_PCExportReportANSI.IsShowGX2.HasValue && _PCExportReportANSI.IsShowGX2.Value)
-                this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? "(" + _PCExportReportANSI.RefractivePower.Value.ToString("0.00") + ") 2" : "(0.00) 2";
-            else
-                this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? _PCExportReportANSI.RefractivePower.Value.ToString("0.00") : "0.00";
+            {
+                //this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? "(" + _PCExportReportANSI.RefractivePower.Value.ToString("0.00") + ") 2" : "(0.00) 2";
+                this.LbRefractive.Text = (_PCExportReportANSI.RefractivePower.HasValue && _PCExportReportANSI.RefractivePower.Value != 0.0) ? "(" + _PCExportReportANSI.RefractivePower.Value.ToString("0.00") + ") 2" : "0.00";
+            }
+            //else
+            //{
+            //    this.LbRefractive.Text = (_PCExportReportANSI.RefractivePower.HasValue && _PCExportReportANSI.RefractivePower.Value != 0.0) ? _PCExportReportANSI.RefractivePower.Value.ToString("0.00") : "0.00";
+            //    //this.LbRefractive.Text = _PCExportReportANSI.RefractivePower.HasValue ? _PCExportReportANSI.RefractivePower.Value.ToString("0.00") : "";
+            //}
             this.CheckScatter.Checked = _PCExportReportANSI.ScatterLight.HasValue ? _PCExportReportANSI.ScatterLight.Value : false;
             this.CheckMdeium.Checked = _PCExportReportANSI.MediumImpact.HasValue ? _PCExportReportANSI.MediumImpact.Value : false;
             this.CheckLow.Checked = _PCExportReportANSI.LowImpact.HasValue ? _PCExportReportANSI.LowImpact.Value : false;
@@ -65,7 +75,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.CheckMarkings.Checked = _PCExportReportANSI.Markings.HasValue ? _PCExportReportANSI.Markings.Value : false;
             this.LbTester.Text = (_PCExportReportANSI.Employee == null ? null : _PCExportReportANSI.Employee.ToString()) + (_PCExportReportANSI.Employee2 == null ? null : " / " + _PCExportReportANSI.Employee2.ToString()) + (_PCExportReportANSI.Employee3 == null ? null : " / " + _PCExportReportANSI.Employee3.ToString()) + (_PCExportReportANSI.Employee4 == null ? null : " / " + _PCExportReportANSI.Employee4.ToString());
             this.xrLabel4.Text = _PCExportReportANSI.AuditEmp == null ? null : _PCExportReportANSI.AuditEmp.ToString();
-            this.lbl_ApproverdDate.Text = _PCExportReportANSI.ReportDate.HasValue ? _PCExportReportANSI.ReportDate.Value.ToString("yyyy-MM-dd") : "";
+            this.xrLabel4.Text += " " + (_PCExportReportANSI.ReportDate.HasValue ? _PCExportReportANSI.ReportDate.Value.ToString("yyyy-MM-dd") : "");
+            //this.lbl_ApproverdDate.Text = _PCExportReportANSI.ReportDate.HasValue ? _PCExportReportANSI.ReportDate.Value.ToString("yyyy-MM-dd") : "";
 
             //对外观，加热，坐标等判定新增的 测试数量
 

@@ -173,7 +173,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.lbl_Signature = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.lbl_ApproverdDate = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -225,7 +224,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lbl_ApproverdDate,
             this.CheckPriHOut,
             this.CheckPriHIn,
             this.CheckPriVDwn,
@@ -1561,13 +1559,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
             // 
-            // lbl_ApproverdDate
-            // 
-            resources.ApplyResources(this.lbl_ApproverdDate, "lbl_ApproverdDate");
-            this.lbl_ApproverdDate.Name = "lbl_ApproverdDate";
-            this.lbl_ApproverdDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_ApproverdDate.StylePriority.UseTextAlignment = false;
-            // 
             // ASRO2017
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1736,6 +1727,5 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
-        private DevExpress.XtraReports.UI.XRLabel lbl_ApproverdDate;
     }
 }
