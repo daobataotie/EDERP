@@ -34,6 +34,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.xrSubreportCSA.ReportSource = new CSARO(CSA, tag);
                 customer = CSA.Customer.CustomerName;
             }
+            if (string.IsNullOrEmpty(customer))
+                customer = pcDataInput.CustomerShortName;
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput, customer);
 
             if (pcDataInput.PCOpticalMachineList != null && pcDataInput.PCOpticalMachineList.Count != 0)

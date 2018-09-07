@@ -305,7 +305,7 @@
             this.xrSubreportAS.Dpi = 254F;
             this.xrSubreportAS.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrSubreportAS.Name = "xrSubreportAS";
-            this.xrSubreportAS.SizeF = new System.Drawing.SizeF(1988.417F, 95.46167F);
+            this.xrSubreportAS.SizeF = new System.Drawing.SizeF(2898F, 95.46167F);
             // 
             // TopMargin
             // 

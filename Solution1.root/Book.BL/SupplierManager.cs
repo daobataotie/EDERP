@@ -220,6 +220,16 @@ namespace Book.BL
         {
             return accessor.Select(supplierCategory);
         }
+
+        public IList<Model.Supplier> Zhunshilv(DateTime startDate, DateTime endDate, string supplierCategoryIds)
+        {
+            return accessor.Zhunshilv(startDate, endDate, supplierCategoryIds);
+        }
+
+        public IList<Model.Supplier> SelectNameAndCategoryByCategoryId(string supplierCategoryIds)
+        {
+            return accessor.SelectNameAndCategoryByCategoryId(supplierCategoryIds);
+        }
     }
 }
 

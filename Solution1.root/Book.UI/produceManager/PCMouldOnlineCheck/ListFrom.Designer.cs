@@ -47,6 +47,7 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -96,6 +97,7 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11,
+            this.gridColumn16,
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn14,
@@ -212,6 +214,12 @@
             this.gridColumn15.FieldName = "PCMouldOnlineCheck.PCMouldOnlineCheckDate";
             this.gridColumn15.Name = "gridColumn15";
             // 
+            // gridColumn16
+            // 
+            resources.ApplyResources(this.gridColumn16, "gridColumn16");
+            this.gridColumn16.FieldName = "Appearance";
+            this.gridColumn16.Name = "gridColumn16";
+            // 
             // ListFrom
             // 
             resources.ApplyResources(this, "$this");
@@ -248,5 +256,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit repositoryItemRichTextEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
     }
 }

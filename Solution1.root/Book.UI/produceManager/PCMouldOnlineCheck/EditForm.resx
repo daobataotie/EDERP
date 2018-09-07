@@ -780,6 +780,21 @@
   <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
+  <data name="gridColumn14.Caption" xml:space="preserve">
+    <value>外觀/軟料附著度</value>
+  </data>
+  <data name="repositoryItemLookUpEdit10.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemLookUpEdit10.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="gridColumn14.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
   <data name="gridColumn12.Caption" xml:space="preserve">
     <value>异常情况</value>
   </data>
@@ -787,7 +802,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="gridColumnEmployee.Caption" xml:space="preserve">
     <value>填表人</value>
@@ -814,7 +829,7 @@
     <value>True</value>
   </data>
   <data name="gridColumnEmployee.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="gridColumn13.Caption" xml:space="preserve">
     <value>商品描述</value>
@@ -823,7 +838,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="gridColumn13.Width" type="System.Int32, mscorlib">
     <value>80</value>
@@ -1272,6 +1287,18 @@
   </data>
   <data name="&gt;&gt;barButtonItemSearch.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn14.Name" xml:space="preserve">
+    <value>gridColumn14</value>
+  </data>
+  <data name="&gt;&gt;gridColumn14.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit10.Name" xml:space="preserve">
+    <value>repositoryItemLookUpEdit10</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemLookUpEdit10.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

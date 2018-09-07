@@ -760,6 +760,9 @@ namespace Book.UI
 
             //組裝檢驗日報表
             operations.Add("produceManager.PCAssemblyInspection.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCAssemblyInspection.EditForm", form); });
+
+            //厂商交货准时率
+            operations.Add("Settings.BasicData.Supplier.SupplierJiaohuoZhunshilv", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Supplier.SupplierJiaohuoZhunshilv", form); });
         }
 
         static Form CreateForm(string formTypeName)

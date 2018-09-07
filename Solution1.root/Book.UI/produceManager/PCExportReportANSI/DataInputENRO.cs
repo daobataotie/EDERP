@@ -29,6 +29,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.xrSubreportEN.ReportSource = new CEENRO(EN, tag);
                 customer = EN.Customer.CustomerName;
             }
+            if (string.IsNullOrEmpty(customer))
+                customer = pcDataInput.CustomerShortName;
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput, customer);
 
             if (pcDataInput.PCOpticalMachineList != null && pcDataInput.PCOpticalMachineList.Count != 0)

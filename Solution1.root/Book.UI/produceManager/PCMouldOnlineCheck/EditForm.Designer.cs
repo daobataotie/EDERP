@@ -83,6 +83,8 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemSearch = new DevExpress.XtraBars.BarButtonItem();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -120,6 +122,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit10)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -227,7 +230,8 @@
             this.repositoryItemDateEdit1,
             this.repositoryItemDateEdit2,
             this.repositoryItemTimeEdit1,
-            this.repositoryItemTimeEdit2});
+            this.repositoryItemTimeEdit2,
+            this.repositoryItemLookUpEdit10});
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -245,6 +249,7 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11,
+            this.gridColumn14,
             this.gridColumn12,
             this.gridColumnEmployee,
             this.gridColumn13});
@@ -607,6 +612,20 @@
             this.barButtonItemSearch.Name = "barButtonItemSearch";
             this.barButtonItemSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSearch_ItemClick);
             // 
+            // gridColumn14
+            // 
+            resources.ApplyResources(this.gridColumn14, "gridColumn14");
+            this.gridColumn14.ColumnEdit = this.repositoryItemLookUpEdit10;
+            this.gridColumn14.FieldName = "Appearance";
+            this.gridColumn14.Name = "gridColumn14";
+            // 
+            // repositoryItemLookUpEdit10
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit10, "repositoryItemLookUpEdit10");
+            this.repositoryItemLookUpEdit10.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit10.Buttons"))))});
+            this.repositoryItemLookUpEdit10.Name = "repositoryItemLookUpEdit10";
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -651,6 +670,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -710,5 +730,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit repositoryItemTimeEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit repositoryItemTimeEdit2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit10;
     }
 }

@@ -20,6 +20,10 @@ namespace Book.DA
         //IList<Model.Supplier> Select(string SupplierStart, string SupplierEnd, DateTime dateStart, DateTime dateEnd);
 
         IList<Book.Model.Supplier> Select(Model.SupplierCategory supplierCategory);
+
+        IList<Model.Supplier> Zhunshilv(DateTime startDate, DateTime endDate, string supplierCategoryIds);
+
+        IList<Model.Supplier> SelectNameAndCategoryByCategoryId(string supplierCategoryIds);
     }
 }
 

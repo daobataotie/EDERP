@@ -39,6 +39,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.xrSubreportAS.ReportSource = new ASRO2017(pcAS, tag);
                 customer = pcAS.Customer.CustomerName;
             }
+            if (string.IsNullOrEmpty(customer))
+                customer = pcDataInput.CustomerShortName;
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput, customer);
             //this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput);
 

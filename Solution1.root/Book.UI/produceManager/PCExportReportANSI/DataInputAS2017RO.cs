@@ -29,6 +29,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this.xrSubreportAS.ReportSource = new ASRO2017(AS, tag);
                 customer = AS.Customer.CustomerName;
             }
+            if (string.IsNullOrEmpty(customer))
+                customer = pcDataInput.CustomerShortName;
             this.xrSubreportProductTest.ReportSource = new ProductTestRO(pcDataInput, customer);
 
             if (pcDataInput.PCOpticalMachineList != null && pcDataInput.PCOpticalMachineList.Count != 0)

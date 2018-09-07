@@ -2486,6 +2486,9 @@ namespace Book.Model
             set { this._isNoQiangFang = value; }
         }
 
+        /// <summary>
+        /// 仓库
+        /// </summary>
         public bool? IsDepot
         {
             get { return _IsDepot; }
