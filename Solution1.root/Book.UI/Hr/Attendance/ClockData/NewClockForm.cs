@@ -95,7 +95,7 @@ namespace Book.UI.Hr.Attendance.ClockData
             {
                 BL.V.BeginTransaction();
 
-                clockDataManager.DeleteByDateRange  (dateStart, dateEnd);
+                clockDataManager.DeleteByDateRange(dateStart, dateEnd);
 
                 foreach (DataRow dr in dt.Rows)
                 {

@@ -88,74 +88,82 @@ namespace Book.UI.Settings.BasicData.Supplier
             var scGroup = supplierList.GroupBy(S => S.SupplierCategoryName);         //根据厂商类别分类
             int row = 5;
 
-            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            excel.Application.Workbooks.Add(true);
-            Microsoft.Office.Interop.Excel.Range r1 = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 7]);
-            r1.MergeCells = true;//合并单元格
-            Microsoft.Office.Interop.Excel.Range r2 = excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 7]);
-            r2.MergeCells = true;
-            Microsoft.Office.Interop.Excel.Range r3 = excel.get_Range(excel.Cells[3, 1], excel.Cells[3, 2]);
-            r3.MergeCells = true;
-
-            excel.Cells.ColumnWidth = 12;
-            excel.Cells.Font.Size = 12;
-            excel.get_Range(excel.Cells[4, 1], excel.Cells[4, 1]).ColumnWidth = 5;
-            excel.get_Range(excel.Cells[4, 2], excel.Cells[4, 2]).ColumnWidth = 30;
-            excel.get_Range(excel.Cells[4, 4], excel.Cells[4, 4]).ColumnWidth = 15;
-            excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
-            excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).Font.Size = 20;
-
-            excel.Cells[1, 1] = "亦達光學股份有限公司";
-            excel.Cells[2, 1] = "廠商交易排行";
-            excel.Cells[3, 1] = "日期區間:" + this.date_Start.DateTime.ToString("yyyy-MM-dd") + " ~ " + this.date_End.DateTime.ToString("yyyy-MM-dd");
-            excel.Cells[2, 1] = "廠商交易排行";
-
-            int number = 1;
-            foreach (var item in scGroup)
+            try
             {
-                Microsoft.Office.Interop.Excel.Range r = excel.get_Range(excel.Cells[row, 1], excel.Cells[row, 7]);
-                r.MergeCells = true;
-                excel.get_Range(excel.Cells[row, 1], excel.Cells[row, 1]).RowHeight = 25;
-                excel.get_Range(excel.Cells[row, 1], excel.Cells[row, 1]).Font.Size = 20;
-                excel.Cells[row, 1] = item.Key;
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Application.Workbooks.Add(true);
+                Microsoft.Office.Interop.Excel.Range r1 = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 7]);
+                r1.MergeCells = true;//合并单元格
+                Microsoft.Office.Interop.Excel.Range r2 = excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 7]);
+                r2.MergeCells = true;
+                Microsoft.Office.Interop.Excel.Range r3 = excel.get_Range(excel.Cells[3, 1], excel.Cells[3, 2]);
+                r3.MergeCells = true;
 
-                row++;
+                excel.Cells.ColumnWidth = 12;
+                excel.Cells.Font.Size = 12;
+                excel.get_Range(excel.Cells[4, 1], excel.Cells[4, 1]).ColumnWidth = 5;
+                excel.get_Range(excel.Cells[4, 2], excel.Cells[4, 2]).ColumnWidth = 30;
+                excel.get_Range(excel.Cells[4, 4], excel.Cells[4, 4]).ColumnWidth = 15;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).Font.Size = 20;
 
-                excel.Cells[row, 1] = "序號";
-                excel.Cells[row, 2] = "公司名稱";
-                excel.Cells[row, 3] = "採購單數量";
-                excel.Cells[row, 4] = "延遲交貨次數";
-                excel.Cells[row, 5] = "百分比";
-                excel.Cells[row, 6] = "退貨次數";
-                excel.Cells[row, 7] = "異常單";
+                excel.Cells[1, 1] = "亦達光學股份有限公司";
+                excel.Cells[2, 1] = "廠商交易排行";
+                excel.Cells[3, 1] = "日期區間:" + this.date_Start.DateTime.ToString("yyyy-MM-dd") + " ~ " + this.date_End.DateTime.ToString("yyyy-MM-dd");
+                excel.Cells[2, 1] = "廠商交易排行";
 
-                row++;
-
-                int i = 1;
-                foreach (var s in item)
+                int number = 1;
+                foreach (var item in scGroup)
                 {
-                    excel.Cells[row, 1] = number;
-                    excel.Cells[row, 2] = s.SupplierFullName;
-                    excel.Cells[row, 3] = s.TotalTime;
-                    excel.Cells[row, 4] = s.OverTime;
-                    if (s.TotalTime != 0)
-                        excel.Cells[row, 5] = (s.OverTime / s.TotalTime * 100).ToString() + "%";
+                    Microsoft.Office.Interop.Excel.Range r = excel.get_Range(excel.Cells[row, 1], excel.Cells[row, 7]);
+                    r.MergeCells = true;
+                    excel.get_Range(excel.Cells[row, 1], excel.Cells[row, 1]).RowHeight = 25;
+                    excel.get_Range(excel.Cells[row, 1], excel.Cells[row, 1]).Font.Size = 20;
+                    excel.Cells[row, 1] = item.Key;
 
-                    i++;
                     row++;
-                    number++;
+
+                    excel.Cells[row, 1] = "序號";
+                    excel.Cells[row, 2] = "公司名稱";
+                    excel.Cells[row, 3] = "採購單數量";
+                    excel.Cells[row, 4] = "延遲交貨次數";
+                    excel.Cells[row, 5] = "百分比";
+                    excel.Cells[row, 6] = "退貨次數";
+                    excel.Cells[row, 7] = "異常單";
+
+                    row++;
+
+                    int i = 1;
+                    foreach (var s in item)
+                    {
+                        excel.Cells[row, 1] = number;
+                        excel.Cells[row, 2] = s.SupplierFullName;
+                        excel.Cells[row, 3] = s.TotalTime;
+                        excel.Cells[row, 4] = s.OverTime;
+                        if (s.TotalTime != 0)
+                            excel.Cells[row, 5] = (s.OverTime / s.TotalTime * 100).ToString() + "%";
+
+                        i++;
+                        row++;
+                        number++;
+                    }
+
+                    excel.get_Range(excel.Cells[row - i, 1], excel.Cells[row - 1, 7]).Borders.LineStyle = 1;
+                    excel.get_Range(excel.Cells[row - i, 1], excel.Cells[row - 1, 7]).Borders.ColorIndex = 1;
+                    //excel.get_Range(excel.Cells[row - i, 1], excel.Cells[row - 1, 7]).BorderAround(XlLineStyle.xlContinuous, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexAutomatic, "#000000");
+
+                    row++;
                 }
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[row, 7]).HorizontalAlignment = -4108;
 
-                excel.get_Range(excel.Cells[row - i, 1], excel.Cells[row - 1, 7]).Borders.LineStyle = 1;
-                excel.get_Range(excel.Cells[row - i, 1], excel.Cells[row - 1, 7]).Borders.ColorIndex = 1;
-                //excel.get_Range(excel.Cells[row - i, 1], excel.Cells[row - 1, 7]).BorderAround(XlLineStyle.xlContinuous, XlBorderWeight.xlThin, XlColorIndex.xlColorIndexAutomatic, "#000000");
-
-                row++;
+                excel.Visible = true;//是否打开该Excel文件
+                excel.WindowState = XlWindowState.xlMaximized;
             }
-            excel.get_Range(excel.Cells[1, 1], excel.Cells[row, 7]).HorizontalAlignment = -4108;
-
-            excel.Visible = true;//是否打开该Excel文件
-            excel.WindowState = XlWindowState.xlMaximized;
+            catch (Exception ex)
+            {
+                MessageBox.Show("本機沒有安裝Excel", "提示", MessageBoxButtons.OK);
+                return;
+            }
         }
 
         private void SetExcelLittleTitle()

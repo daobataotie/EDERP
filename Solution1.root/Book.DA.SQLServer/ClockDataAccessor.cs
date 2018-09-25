@@ -312,11 +312,24 @@ namespace Book.DA.SQLServer
 
         public void DeleteByDateRange(DateTime dateStart, DateTime dateEnd)
         {
-            Hashtable ht = new Hashtable();
-            ht.Add("StartDate", dateStart.ToString("yyyy-MM-dd"));
-            ht.Add("EndDate", dateEnd.ToString("yyyy-MM-dd HH:mm:ss"));
-            sqlmapper.DataSource.DbProvider.CreateCommand().CommandTimeout = 40;
-            sqlmapper.Delete("ClockData.DeleteByDateRange", ht);
+            //Hashtable ht = new Hashtable();
+            //ht.Add("StartDate", dateStart.ToString("yyyy-MM-dd"));
+            //ht.Add("EndDate", dateEnd.ToString("yyyy-MM-dd HH:mm:ss"));
+            ////sqlmapper.DataSource.DbProvider.CreateConnection().ConnectionTimeout = 100;  这个是只读的
+            //sqlmapper.DataSource.DbProvider.CreateCommand().CommandTimeout = 300;
+            //sqlmapper.Delete("ClockData.DeleteByDateRange", ht);
+
+            string sql = " DELETE FROM ClockData where Clocktime between '" + dateStart.ToString("yyyy-MM-dd") + "' and '" + dateEnd.ToString("yyyy-MM-dd HH:mm:ss") + "'";
+
+            SqlConnection conn = new SqlConnection(sqlmapper.DataSource.ConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandTimeout = 300;
+            cmd.CommandText = sql;
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         public int CountClockByDateRange(DateTime dateStart, DateTime dateEnd)
