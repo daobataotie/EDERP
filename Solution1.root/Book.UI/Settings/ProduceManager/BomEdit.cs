@@ -228,8 +228,9 @@ namespace Book.UI.Settings.ProduceManager
             if (this._bomParmentPartInfo == null)
                 return null;
 
-            return new MaterialXR(XRband(), this._bomParmentPartInfo);
+            //return new MaterialXR(XRband(), this._bomParmentPartInfo);
 
+            return new ROBOM(this._bomParmentPartInfo);
 
         }
 

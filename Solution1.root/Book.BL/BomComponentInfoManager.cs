@@ -78,6 +78,11 @@ namespace Book.BL
             return accessor.SelectBomIdAndUseQty(productIds);
         }
 
+        public IList<Book.Model.BomComponentInfo> SelectByProductId(string bomId)
+        {
+            return accessor.SelectByProductId(bomId);
+        }
+
     }
 }
 

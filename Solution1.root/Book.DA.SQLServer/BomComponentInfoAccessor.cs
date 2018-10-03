@@ -50,5 +50,10 @@ namespace Book.DA.SQLServer
             string sql = "select BomId,UseQuantity,ProductId from BomComponentInfo where ProductId in (" + productIds + ")";
             return this.DataReaderBind<Model.BomComponentInfo>(sql, null, CommandType.Text);
         }
+
+        public IList<Book.Model.BomComponentInfo> SelectByProductId(string bomId)
+        {
+            return sqlmapper.QueryForList<Model.BomComponentInfo>("BomComponentInfo.SelectByProductId", bomId);
+        }
     }
 }

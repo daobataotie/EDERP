@@ -109,5 +109,9 @@ namespace Book.Model
         public static readonly string PRO_JiaoQi = "JiaoQi";
 
         public IList<Model.BomComponentInfo> Details { get; set; }
+
+        public string ReportInumber { get; set; }
+
+        public readonly static string PRO_ReportInumber = "ReportInumber";
     }
 }
