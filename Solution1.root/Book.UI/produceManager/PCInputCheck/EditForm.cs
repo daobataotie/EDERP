@@ -102,18 +102,18 @@ namespace Book.UI.produceManager.PCInputCheck
             this._PCInputCheck.PCInputCheckDate = DateTime.Now;
             this._PCInputCheck.CheckEmployee = BL.V.ActiveOperator.Employee;
 
-            this._PCInputCheck.Heidian = "0";
-            this._PCInputCheck.Guohuo = "0";
-            this._PCInputCheck.Liaodian = "0";
-            this._PCInputCheck.Wasiqi = "0";
-            this._PCInputCheck.Zazhi = "0";
-            this._PCInputCheck.Qipao = "0";
+            this._PCInputCheck.Heidian = "-1";
+            this._PCInputCheck.Guohuo = "-1";
+            this._PCInputCheck.Liaodian = "-1";
+            this._PCInputCheck.Wasiqi = "-1";
+            this._PCInputCheck.Zazhi = "-1";
+            this._PCInputCheck.Qipao = "-1";
 
-            this._PCInputCheck.Duise = "0";
-            this._PCInputCheck.Chongji = "0";
-            this._PCInputCheck.Nairanceshi = "0";
-            this._PCInputCheck.UVvalue = "0";
-            this._PCInputCheck.Wudu = "0";
+            this._PCInputCheck.Duise = "-1";
+            this._PCInputCheck.Chongji = "-1";
+            this._PCInputCheck.Nairanceshi = "-1";
+            this._PCInputCheck.UVvalue = "-1";
+            this._PCInputCheck.Wudu = "";
 
             this.action = "insert";
         }

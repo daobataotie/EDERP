@@ -23,6 +23,9 @@ namespace Book.UI.produceManager.PCInputCheck
                     if (item.GetValue(PCInputCheck, null) != null)
                         switch (item.GetValue(PCInputCheck, null).ToString())
                         {
+                            case "-1":
+                                item.SetValue(PCInputCheck, "", null);
+                                break;
                             case "0":
                                 item.SetValue(PCInputCheck, "PASS", null);
                                 break;
@@ -83,7 +86,7 @@ namespace Book.UI.produceManager.PCInputCheck
 
             this.lblConfirmor.Text = PCInputCheck.Confirmor == null ? null : PCInputCheck.Confirmor.EmployeeName;
 
-            this.lblTestQuantity.Text = PCInputCheck.TestQuantity.HasValue ? PCInputCheck.TestQuantity.Value.ToString() : "";
+            this.lblTestQuantity.Text = PCInputCheck.TestQuantity.HasValue ? (PCInputCheck.TestQuantity == 0 ? "" : PCInputCheck.TestQuantity.Value.ToString()) : "";
         }
     }
 }

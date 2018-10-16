@@ -365,7 +365,13 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //    gnDays++;
                     //}
                     //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
-                    if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //{
+                    //    hasPayDays++;
+                    //    gnDays++;
+                    //}
+                    //2018年10月6日00:25:02：外劳年终要扣国定假日
+                    if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note) && !emp.IsMigrantWorker)
                     {
                         hasPayDays++;
                         gnDays++;
@@ -1226,7 +1232,13 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //    gnDays++;
                     //}
                     //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
-                    if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note))
+                    //{
+                    //    hasPayDays++;
+                    //    gnDays++;
+                    //}
+                    //2018年10月6日00:25:02：外劳年终要扣国定假日
+                    if (this.annualHolidayManager.IsNationalHoliday(attend.DutyDate.Value, attend.Note) && !emp.IsMigrantWorker)
                     {
                         hasPayDays++;
                         gnDays++;

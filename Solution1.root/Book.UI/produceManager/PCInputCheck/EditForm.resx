@@ -120,18 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="barButtonItem1.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="barButtonItem2.Caption" xml:space="preserve">
-    <value>關聯客戶訂單</value>
-  </data>
-  <data name="barButtonItem3.Caption" xml:space="preserve">
-    <value>barButtonItem3</value>
-  </data>
-  <data name="barButtonItem4.Caption" xml:space="preserve">
-    <value>結案</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -792,9 +780,6 @@
   <data name="&gt;&gt;nccDuise.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="rdo_Nairan.EditValue" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="rdo_Nairan.Location" type="System.Drawing.Point, System.Drawing">
     <value>234, 29</value>
   </data>
@@ -834,9 +819,6 @@
   <data name="&gt;&gt;rdo_Nairan.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="rdo_Chongji.EditValue" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="rdo_Chongji.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 29</value>
   </data>
@@ -875,9 +857,6 @@
   </data>
   <data name="&gt;&gt;rdo_Chongji.ZOrder" xml:space="preserve">
     <value>14</value>
-  </data>
-  <data name="rdo_UV.EditValue" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="rdo_UV.Location" type="System.Drawing.Point, System.Drawing">
     <value>351, 29</value>
@@ -938,9 +917,6 @@
   </data>
   <data name="&gt;&gt;nccUV.ZOrder" xml:space="preserve">
     <value>16</value>
-  </data>
-  <data name="rdo_Duise.EditValue" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="rdo_Duise.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 29</value>
@@ -1171,9 +1147,6 @@
   <data name="&gt;&gt;btn_InvoiceCOId2.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="rdo_Qipao.EditValue" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="rdo_Qipao.Location" type="System.Drawing.Point, System.Drawing">
     <value>801, 29</value>
   </data>
@@ -1212,9 +1185,6 @@
   </data>
   <data name="&gt;&gt;rdo_Qipao.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="rdo_Guohuo.EditValue" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="rdo_Guohuo.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 29</value>
@@ -1255,9 +1225,6 @@
   <data name="&gt;&gt;rdo_Guohuo.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="rdo_Liaodian.EditValue" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="rdo_Liaodian.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 29</value>
   </data>
@@ -1296,9 +1263,6 @@
   </data>
   <data name="&gt;&gt;rdo_Liaodian.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="rdo_Wasiqi.EditValue" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="rdo_Wasiqi.Location" type="System.Drawing.Point, System.Drawing">
     <value>481, 29</value>
@@ -1339,9 +1303,6 @@
   <data name="&gt;&gt;rdo_Wasiqi.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="rdo_Zazhi.EditValue" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="rdo_Zazhi.Location" type="System.Drawing.Point, System.Drawing">
     <value>642, 29</value>
   </data>
@@ -1380,9 +1341,6 @@
   </data>
   <data name="&gt;&gt;rdo_Zazhi.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="rdo_Heidian.EditValue" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="rdo_Heidian.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 29</value>
@@ -2136,6 +2094,18 @@
   </data>
   <data name="layoutControlItem44.Text" xml:space="preserve">
     <value>瓦斯气：</value>
+  </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>關聯客戶訂單</value>
+  </data>
+  <data name="barButtonItem3.Caption" xml:space="preserve">
+    <value>barButtonItem3</value>
+  </data>
+  <data name="barButtonItem4.Caption" xml:space="preserve">
+    <value>結案</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
