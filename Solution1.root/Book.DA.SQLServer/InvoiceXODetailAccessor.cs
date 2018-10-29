@@ -123,7 +123,7 @@ namespace Book.DA.SQLServer
             if (mpsIsClose)  //true 只查询未排完单
                 str.Append(" and d.InvoiceMPSState<>2");
             if (detailFlag)
-                str.Append(" and d.DetailsFlag=2");
+                str.Append(" and d.DetailsFlag<>2");
             str.Append(" ORDER BY");
 
             switch (orderColumn)
