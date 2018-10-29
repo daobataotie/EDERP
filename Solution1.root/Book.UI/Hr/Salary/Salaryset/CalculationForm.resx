@@ -1125,7 +1125,7 @@
     <value>9</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 435</value>
+    <value>227, 435</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1824,13 +1824,13 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>267, 57</value>
+    <value>238, 57</value>
   </data>
   <data name="tableLayoutPanel5.RowCount" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="tableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 435</value>
+    <value>285, 435</value>
   </data>
   <data name="tableLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1848,7 +1848,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel5.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelControl38" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_dx" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label_SalaryTotal" Row="10" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl46" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_jiez" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl44" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_baox" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl43" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_cf" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl42" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_SubTotal" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl41" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_PingRiJiaBan" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl34" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelControl5" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelControl45" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelControl28" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_cdkk" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label_JiaRiJiaBan" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txt_JiuYuanJiaoKou" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,38.82353,Percent,61.17647" /&gt;&lt;Rows Styles="Percent,100,Absolute,25,Absolute,26,Absolute,25,Absolute,24,Absolute,25,Absolute,25,Absolute,25,Absolute,26,Absolute,26,Absolute,26,Absolute,118,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelControl38" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_dx" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label_SalaryTotal" Row="10" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl46" Row="10" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_jiez" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl44" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_baox" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl43" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_cf" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl42" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_SubTotal" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl41" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_PingRiJiaBan" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl34" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelControl5" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelControl45" Row="9" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelControl28" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label_cdkk" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label_JiaRiJiaBan" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txt_JiuYuanJiaoKou" Row="9" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,34.97399,Percent,65.02601" /&gt;&lt;Rows Styles="Percent,100,Absolute,25,Absolute,26,Absolute,25,Absolute,24,Absolute,25,Absolute,25,Absolute,25,Absolute,26,Absolute,26,Absolute,26,Absolute,118" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="labelControl14.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1857,7 +1857,7 @@
     <value>Tahoma, 12pt, style=Bold</value>
   </data>
   <data name="labelControl14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 17</value>
+    <value>67, 17</value>
   </data>
   <data name="labelControl14.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 19</value>
@@ -1890,7 +1890,7 @@
     <value>Tahoma, 12pt</value>
   </data>
   <data name="labelControl30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 16</value>
+    <value>10, 16</value>
   </data>
   <data name="labelControl30.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 19</value>
@@ -1920,7 +1920,7 @@
     <value>Tahoma, 12pt</value>
   </data>
   <data name="label_gname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 16</value>
+    <value>80, 16</value>
   </data>
   <data name="label_gname.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 19</value>
@@ -1950,7 +1950,7 @@
     <value>Tahoma, 10pt, style=Bold</value>
   </data>
   <data name="labelControl15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 18</value>
+    <value>181, 18</value>
   </data>
   <data name="labelControl15.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 16</value>
@@ -1977,7 +1977,7 @@
     <value>Fill</value>
   </data>
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 1</value>
+    <value>235, 1</value>
   </data>
   <data name="tableLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1986,7 +1986,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 52</value>
+    <value>291, 52</value>
   </data>
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2031,7 +2031,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel4" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel5" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl14" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,10.70664,Percent,89.29337,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel4" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel5" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelControl14" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,44.63896,Percent,55.36105" /&gt;&lt;Rows Styles="Percent,10.70664,Percent,89.29336" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

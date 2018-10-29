@@ -847,12 +847,16 @@ namespace Book.UI.Hr.Salary.Salaryset
             //{
             //_ms.mGeneralOverTimeFee = GetSiSheWuRu((_ms.mDailyPay / 8) * 2 * 1.33, 0) + GetSiSheWuRu((_ms.mDailyPay / 8) * (_ms.mGeneralOverTime - 2) * 1.66, 0);
             //}
+            string overTimeDetail_General = "";
+            string overTimeDetail_Holiday = "";
             if (!VPerson.specialEmp.Contains(emp.EmployeeId))
             {
                 //平日加班 小于2小时 为 时薪*1.33*加班小时,超出2小时部分 为 时薪*1.66*加班小时
                 _ms.mGeneralOverTimeFee = GetSiSheWuRu((_ms.mMonthlyPay / 30 / 8) * (_ms.GeneralOverTimeCountSmall * 1.334 + _ms.GeneralOverTimeCountBig * 1.667), 0);
-                //假日加班 一律 为时薪 两倍.
+                overTimeDetail_General = string.Format("{0}H * 1.33 + {1}H * 1.66  |  {2}", _ms.GeneralOverTimeCountSmall, _ms.GeneralOverTimeCountBig, _ms.mGeneralOverTimeFee);
+                ////假日加班 一律 为时薪 两倍.
                 _ms.mHolidayOverTimeFee = GetSiSheWuRu(((_ms.mMonthlyPay / 30 / 8) * 3 / 2) * _ms.mHolidayOverTime, 0);
+                overTimeDetail_Holiday = string.Format("{0}H * 2  |  {1}", _ms.mHolidayOverTime, _ms.mHolidayOverTimeFee);
             }
             #endregion
             #endregion
@@ -905,9 +909,11 @@ namespace Book.UI.Hr.Salary.Salaryset
             //绩效奖金
             //this.label_jxjj.Text = _ms.mEffectBonus.ToString();
             //假日加班费
-            this.label_JiaRiJiaBan.Text = _ms.mHolidayOverTimeFee.ToString();
-            //平日加班费
-            this.label_PingRiJiaBan.Text = _ms.mGeneralOverTimeFee.ToString();
+            //this.label_JiaRiJiaBan.Text = _ms.mHolidayOverTimeFee.ToString();
+            ////平日加班费
+            //this.label_PingRiJiaBan.Text = _ms.mGeneralOverTimeFee.ToString();
+            this.label_JiaRiJiaBan.Text = overTimeDetail_Holiday;
+            this.label_PingRiJiaBan.Text = overTimeDetail_General;
             //加班津贴
             //this.label_jbjt.Text = _ms.mOverTimeBonus.ToString();
             //班别津贴

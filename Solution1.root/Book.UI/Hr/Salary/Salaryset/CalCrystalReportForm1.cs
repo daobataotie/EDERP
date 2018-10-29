@@ -117,9 +117,9 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //_drT["JiaBanDesc"] = _ms.OverTimeCountSmall.ToString() + "H * 1.33 + " + _ms.OverTimeCountBig.ToString() + "H * 1.66";
                     //_drT["JiaBanDesc"] = "平=" + _ms.GeneralOverTimeCountSmall.ToString() + "H * 1.33 + " + _ms.GeneralOverTimeCountBig.ToString() + "H * 1.66,假=" + _ms.mHolidayOverTime + "H * 2";
                     //平日加班费
-                    _drT["JiaBanDesc"] = _ms.GeneralOverTimeCountSmall.ToString() + " H * 1.33 + " + _ms.GeneralOverTimeCountBig.ToString() + " H * 1.66";
+                    _drT["JiaBanDesc"] = _ms.GeneralOverTimeCountSmall.ToString() + "H * 1.33 + " + _ms.GeneralOverTimeCountBig.ToString() + "H * 1.66";
                     //假日加班费
-                    _drT["JiaBanDesc2"] = _ms.mHolidayOverTime + " H * 2";
+                    _drT["JiaBanDesc2"] = _ms.mHolidayOverTime + "H * 2";
                     table.Rows.Add(_drT);
                 }
             }
@@ -222,9 +222,9 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //_drT["JiaBanDesc"] = _ms.OverTimeCountSmall.ToString() + "H * 1.33 + " + _ms.OverTimeCountBig.ToString() + "H * 1.66";
                     //_drT["JiaBanDesc"] = "平=" + _ms.GeneralOverTimeCountSmall.ToString() + "H * 1.33 + " + _ms.GeneralOverTimeCountBig.ToString() + "H * 1.66,假=" + _ms.mHolidayOverTime + "H * 2";
                     //平日加班费
-                    _drT["JiaBanDesc"] = _ms.GeneralOverTimeCountSmall.ToString() + " H * 1.33 + " + _ms.GeneralOverTimeCountBig.ToString() + " H * 1.66";
+                    _drT["JiaBanDesc"] = _ms.GeneralOverTimeCountSmall.ToString() + "H * 1.33 + " + _ms.GeneralOverTimeCountBig.ToString() + "H * 1.66";
                     //假日加班费
-                    _drT["JiaBanDesc2"] = _ms.mHolidayOverTime + " H * 2";
+                    _drT["JiaBanDesc2"] = _ms.mHolidayOverTime + "H * 2";
                     table.Rows.Add(_drT);
                 }
             }
