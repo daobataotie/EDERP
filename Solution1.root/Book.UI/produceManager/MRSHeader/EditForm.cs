@@ -987,7 +987,7 @@ namespace Book.UI.produceManager.MRSHeader
                                 // Model.TechonlogyHeader techonlogyHeader = techonlogyHeaderManager.Get(bomP.TechonlogyHeaderId);
                                 SqlParameter[] sqlte = new SqlParameter[] { new SqlParameter("@TechonlogyHeaderId", SqlDbType.VarChar, 50) };
                                 sqlte[0].Value = bomP.TechonlogyHeaderId;
-                                IList<Model.Technologydetails> tedetail = technologydetailsManager.DataReaderBind<Model.Technologydetails>(" SELECT t.TechnologydetailsNo,t.ProceduresId,p.WorkHouseId,p.SupplierId,p.IsOtherProduceOther PackageUnit,t.Quantity,t.SunhaoRange  FROM   [Technologydetails] t left join Procedures p on t.ProceduresId=p.ProceduresId WHERE [TechonlogyHeaderId] = @TechonlogyHeaderId ", sqlte, CommandType.Text);
+                                IList<Model.Technologydetails> tedetail = technologydetailsManager.DataReaderBind<Model.Technologydetails>(" SELECT t.TechnologydetailsNo,t.ProceduresId,p.WorkHouseId,p.SupplierId,p.IsOtherProduceOther PackageUnit,t.Quantity,t.SunhaoRange  FROM   [Technologydetails] t left join Procedures p on t.ProceduresId=p.ProceduresId WHERE [TechonlogyHeaderId] = @TechonlogyHeaderId order by t.TechnologydetailsNo", sqlte, CommandType.Text);
                                 if (tedetail != null)
                                 {
                                     foreach (Model.Technologydetails technologydetails in tedetail)

@@ -82,6 +82,8 @@ namespace Book.UI.Settings.StockLimitations
             this.xrLabelXqlu = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelDepotOutDate = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txt_ParentProduct = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabeldescription = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
@@ -89,8 +91,6 @@ namespace Book.UI.Settings.StockLimitations
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txt_ParentProduct = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -508,6 +508,22 @@ namespace Book.UI.Settings.StockLimitations
             this.xrLabelDepotOutDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabelDepotOutDate.StylePriority.UseTextAlignment = false;
             // 
+            // xrLabel16
+            // 
+            resources.ApplyResources(this.xrLabel16, "xrLabel16");
+            this.xrLabel16.Name = "xrLabel16";
+            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel16.StylePriority.UseFont = false;
+            this.xrLabel16.StylePriority.UseTextAlignment = false;
+            // 
+            // txt_ParentProduct
+            // 
+            resources.ApplyResources(this.txt_ParentProduct, "txt_ParentProduct");
+            this.txt_ParentProduct.Name = "txt_ParentProduct";
+            this.txt_ParentProduct.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.txt_ParentProduct.StylePriority.UseFont = false;
+            this.txt_ParentProduct.StylePriority.UseTextAlignment = false;
+            // 
             // xrLabel6
             // 
             resources.ApplyResources(this.xrLabel6, "xrLabel6");
@@ -558,22 +574,6 @@ namespace Book.UI.Settings.StockLimitations
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrPageInfo1.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel16
-            // 
-            resources.ApplyResources(this.xrLabel16, "xrLabel16");
-            this.xrLabel16.Name = "xrLabel16";
-            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel16.StylePriority.UseFont = false;
-            this.xrLabel16.StylePriority.UseTextAlignment = false;
-            // 
-            // txt_ParentProduct
-            // 
-            resources.ApplyResources(this.txt_ParentProduct, "txt_ParentProduct");
-            this.txt_ParentProduct.Name = "txt_ParentProduct";
-            this.txt_ParentProduct.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.txt_ParentProduct.StylePriority.UseFont = false;
-            this.txt_ParentProduct.StylePriority.UseTextAlignment = false;
             // 
             // OutStockReport
             // 

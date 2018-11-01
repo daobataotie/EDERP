@@ -853,10 +853,10 @@ namespace Book.UI.Hr.Salary.Salaryset
             {
                 //平日加班 小于2小时 为 时薪*1.33*加班小时,超出2小时部分 为 时薪*1.66*加班小时
                 _ms.mGeneralOverTimeFee = GetSiSheWuRu((_ms.mMonthlyPay / 30 / 8) * (_ms.GeneralOverTimeCountSmall * 1.334 + _ms.GeneralOverTimeCountBig * 1.667), 0);
-                overTimeDetail_General = string.Format("{0}H * 1.33 + {1}H * 1.66  |  {2}", _ms.GeneralOverTimeCountSmall, _ms.GeneralOverTimeCountBig, _ms.mGeneralOverTimeFee);
-                ////假日加班 一律 为时薪 两倍.
+                overTimeDetail_General = string.Format("{0}H * 1.334 + {1}H * 1.667  |  {2}", _ms.GeneralOverTimeCountSmall, _ms.GeneralOverTimeCountBig, _ms.mGeneralOverTimeFee);
+                ////假日加班 一律 为时薪 1.5倍.
                 _ms.mHolidayOverTimeFee = GetSiSheWuRu(((_ms.mMonthlyPay / 30 / 8) * 3 / 2) * _ms.mHolidayOverTime, 0);
-                overTimeDetail_Holiday = string.Format("{0}H * 2  |  {1}", _ms.mHolidayOverTime, _ms.mHolidayOverTimeFee);
+                overTimeDetail_Holiday = string.Format("{0}H * 1.5  |  {1}", _ms.mHolidayOverTime, _ms.mHolidayOverTimeFee);
             }
             #endregion
             #endregion

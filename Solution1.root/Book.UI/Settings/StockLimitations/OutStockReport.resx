@@ -608,7 +608,7 @@
     <value>254</value>
   </data>
   <data name="xrLabel16.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新細明體, 10.25pt</value>
+    <value>Times New Roman, 9.75pt</value>
   </data>
   <data name="xrLabel16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>600.6042, 150.270874</value>

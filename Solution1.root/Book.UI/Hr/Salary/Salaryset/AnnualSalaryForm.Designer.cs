@@ -285,7 +285,7 @@
             this.ClientSize = new System.Drawing.Size(527, 383);
             this.Controls.Add(this.layoutControl1);
             this.Name = "AnnualSalaryForm";
-            this.Text = "列印月薪资";
+            this.Text = "列印年度薪资";
             this.Load += new System.EventHandler(this.PrintMonthSalary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
