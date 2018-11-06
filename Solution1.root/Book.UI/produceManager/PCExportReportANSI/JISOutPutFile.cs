@@ -719,7 +719,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
                     else if (name.Contains("出貨報告"))
                     {
-                        PCExportReportANSI.ListForm listform = new ListForm(invoiceCusId, "JIS");
+                        //PCExportReportANSI.ListForm listform = new ListForm(invoiceCusId, "JIS");
+                        //listform.Show(this);
+                        //2018年11月6日22:17:33：cindy要求改拉成品检验单
+                        PCFinishCheck.ListForm listform = new Book.UI.produceManager.PCFinishCheck.ListForm(invoiceCusId);
                         listform.Show(this);
                     }
                     //}

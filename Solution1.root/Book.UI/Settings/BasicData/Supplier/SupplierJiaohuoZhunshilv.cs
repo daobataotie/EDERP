@@ -141,7 +141,7 @@ namespace Book.UI.Settings.BasicData.Supplier
                         excel.Cells[row, 3] = s.TotalTime;
                         excel.Cells[row, 4] = s.OverTime;
                         if (s.TotalTime != 0)
-                            excel.Cells[row, 5] = (s.OverTime / s.TotalTime * 100).ToString() + "%";
+                            excel.Cells[row, 5] = ((decimal)s.OverTime / (decimal)s.TotalTime * 100).ToString() + "%";
 
                         i++;
                         row++;
