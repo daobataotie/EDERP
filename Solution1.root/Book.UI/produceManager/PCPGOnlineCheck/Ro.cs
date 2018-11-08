@@ -69,7 +69,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             //this.TCattrZhuangJiaoSJDL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrZhuangJiaoSJDL);
             this.TCCheckQuantity.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_CheckQuantity);
             this.TCImpactCheck.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_ImpactCheck);
-            this.TCPCPGOnlineCheckDetailDate.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_PCPGOnlineCheckDetailDate, "{0:yyyy-MM-dd HH:mm:ss}");
+            this.TCPCPGOnlineCheckDetailDate.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_PCPGOnlineCheckDetailDate, "{0:yyyy-MM-dd}");
             this.TCFromInvoiceId.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_FromInvoiceId);
             this.TCCheckStandard.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_CheckedStandard);
             this.TCInvoiceCusId.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_InvoiceCusXOId);
@@ -135,7 +135,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             //this.TCattrZhuangJiaoSJDL.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrZhuangJiaoSJDL);
             this.TCCheckQuantity.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_CheckQuantity);
             this.TCImpactCheck.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_ImpactCheck);
-            this.TCPCPGOnlineCheckDetailDate.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_PCPGOnlineCheckDetailDate, "{0:yyyy-MM-dd HH:mm:ss}");
+            this.TCPCPGOnlineCheckDetailDate.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_PCPGOnlineCheckDetailDate, "{0:yyyy-MM-dd}");
             this.TCFromInvoiceId.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_FromInvoiceId);
             this.TCCheckStandard.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_CheckedStandard);
             this.TCInvoiceCusId.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_InvoiceCusXOId);

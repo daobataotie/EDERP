@@ -3415,5 +3415,18 @@ namespace Book.UI.Settings.BasicData.Products
         {
             return "Product" + "," + this.product.Id;
         }
+
+        private void bar_ReportStockRecord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel|*.xlsx";
+            sfd.Title = "請選擇保存路徑";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                this.gridViewStock.OptionsPrint.AutoWidth = false;
+                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() {  });
+            }
+        }
     }
 }
