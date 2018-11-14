@@ -61,7 +61,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             {
                 if (item.Count() > 1)
                 {
-                    Model.Supplier model = item.OrderBy(D => D.OverDay).First();
+                    Model.Supplier model = item.OrderByDescending(D => D.OverDay).First();
                     model.OverTime = (model.OverDay > (int)this.spe_OverDays.Value) ? 1 : 0;
                     list.Add(model);
                 }

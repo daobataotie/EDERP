@@ -66,5 +66,12 @@ namespace Book.Model
         /// </summary>
         public int Status { get; set; }
 
+        public string GuangXue { get; set; }
+
+        public string Houdu { get; set; }
+
+        public readonly static string PRO_GuangXue = "GuangXue";
+
+        public readonly static string PRO_Houdu = "Houdu";
     }
 }

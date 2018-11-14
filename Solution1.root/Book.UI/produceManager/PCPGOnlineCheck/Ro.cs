@@ -61,6 +61,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             //this.TCattrGaoDiJiaoR.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGaoDiJiaoR);
             this.TCattrGuanXue.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrGuanXue);
             this.TCattrHouDu.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrHouDu);
+
             this.TCattrMaoBian.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrMaoBian);
             this.TCattrQiangHuaMo.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrQiangHuaMo);
             this.TCattrTouShiLv.DataBindings.Add("Text", this.DataSource, Model.PCPGOnlineCheckDetail.PRO_attrTouShiLv);
