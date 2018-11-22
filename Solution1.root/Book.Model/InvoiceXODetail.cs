@@ -95,6 +95,8 @@ namespace Book.Model
             }
         }
 
+        public DateTime? ChuhuoDate { get; set; }
+
         public readonly static string PRO_InvoiceDate = "InvoiceDate";
 
         public readonly static string PRO_InvoiceYjrq = "InvoiceYjrq";
@@ -108,5 +110,7 @@ namespace Book.Model
         public readonly static string PRO_ProductName = "ProductName";
 
         public readonly static string PRO_CustomerProductName = "CustomerProductName";
+
+        public readonly static string PRO_ChuhuoDate = "ChuhuoDate";
     }
 }

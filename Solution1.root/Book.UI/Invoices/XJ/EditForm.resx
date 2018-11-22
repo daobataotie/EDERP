@@ -891,7 +891,7 @@
     <value>12, 256</value>
   </data>
   <data name="simpleButtonAppend.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>104, 22</value>
   </data>
   <data name="simpleButtonAppend.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -912,10 +912,10 @@
     <value>5</value>
   </data>
   <data name="BtnEditProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 256</value>
+    <value>188, 256</value>
   </data>
   <data name="BtnEditProduct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 21</value>
+    <value>387, 21</value>
   </data>
   <data name="BtnEditProduct.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>

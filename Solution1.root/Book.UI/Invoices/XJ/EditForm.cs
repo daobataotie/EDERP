@@ -1039,27 +1039,6 @@ namespace Book.UI.Invoices.XJ
             }
         }
 
-        //更改层级显示
-        private void CheckLayer(int tabindex, string ParentsId, bool IsCheckStatus)
-        {
-            DataTable UpdateDT = this._ds.Tables["Level" + (tabindex + 1).ToString()];
-            if (UpdateDT == null || UpdateDT.Rows.Count == 0)
-                return;
-            StringBuilder SbSonParIds = new StringBuilder();
-
-            DataRow[] UpRows = UpdateDT.Select(" ParentId in (" + ParentsId + ")");
-            for (int i = 0; i < UpRows.Length; i++)
-            {
-                SbSonParIds.Append("'" + UpRows[i]["InvoiceXJDetailId"].ToString() + "',");
-                UpRows[i]["IsChecked"] = IsCheckStatus;
-            }
-            if (string.IsNullOrEmpty(SbSonParIds.ToString()))
-                return;
-
-            string SonParIds = SbSonParIds.ToString().Substring(0, SbSonParIds.ToString().Length - 1);
-            this.CheckLayer(tabindex + 1, SonParIds, IsCheckStatus);
-        }
-
         // "-"
         private void simpleButtonRemove_Click(object sender, EventArgs e)
         {
@@ -1138,6 +1117,27 @@ namespace Book.UI.Invoices.XJ
                 this.CheckLayer(tabindex, ParentsId, bool.Parse(e.Value.ToString()));
                 return;
             }
+        }
+
+        //更改层级显示
+        private void CheckLayer(int tabindex, string ParentsId, bool IsCheckStatus)
+        {
+            DataTable UpdateDT = this._ds.Tables["Level" + (tabindex + 1).ToString()];
+            if (UpdateDT == null || UpdateDT.Rows.Count == 0)
+                return;
+            StringBuilder SbSonParIds = new StringBuilder();
+
+            DataRow[] UpRows = UpdateDT.Select(" ParentId in (" + ParentsId + ")");
+            for (int i = 0; i < UpRows.Length; i++)
+            {
+                SbSonParIds.Append("'" + UpRows[i]["InvoiceXJDetailId"].ToString() + "',");
+                //UpRows[i]["IsChecked"] = IsCheckStatus;   //2018年11月15日15:13:10：上层勾选后，子层级不勾选
+            }
+            if (string.IsNullOrEmpty(SbSonParIds.ToString()))
+                return;
+
+            string SonParIds = SbSonParIds.ToString().Substring(0, SbSonParIds.ToString().Length - 1);
+            this.CheckLayer(tabindex + 1, SonParIds, IsCheckStatus);
         }
 
         private void GridTest_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

@@ -120,9 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="BarBtn_Search.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -432,6 +429,9 @@
         PiydRVvthbEShq0tdS1YP1XNB1WKv8rxjMwZjD8BORXH707ETOoAAAAASUVORK5CYIIL
 </value>
   </data>
+  <data name="BarBtn_Search.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_InvoiceCO.Location" type="System.Drawing.Point, System.Drawing">
     <value>799, 12</value>
@@ -697,6 +697,9 @@
   </data>
   <data name="attrDate.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="attrDate.Width" type="System.Int32, mscorlib">
+    <value>125</value>
   </data>
   <data name="attrBanBie.Caption" xml:space="preserve">
     <value>班别</value>
@@ -1466,6 +1469,9 @@
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>班別</value>
   </data>
+  <metadata name="bindingSourceBusiness.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>657, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit37.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1478,9 +1484,6 @@
   <data name="repositoryItemLookUpEdit37.Columns1" xml:space="preserve">
     <value>班別</value>
   </data>
-  <metadata name="bindingSourceBusiness.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>657, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit37.NullText" xml:space="preserve">
     <value />
   </data>
@@ -1544,6 +1547,9 @@
   <data name="gridColumn8.Caption" xml:space="preserve">
     <value>單位</value>
   </data>
+  <metadata name="bindingSourceUnit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>495, 17</value>
+  </metadata>
   <data name="repositoryItemLookUpEdit38.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1556,9 +1562,6 @@
   <data name="repositoryItemLookUpEdit38.Columns1" xml:space="preserve">
     <value>單位</value>
   </data>
-  <metadata name="bindingSourceUnit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>495, 17</value>
-  </metadata>
   <data name="repositoryItemLookUpEdit38.NullText" xml:space="preserve">
     <value />
   </data>
@@ -1925,6 +1928,12 @@
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="bindingSourceBusiness.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>657, 17</value>
+  </metadata>
+  <metadata name="bindingSourceUnit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>495, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

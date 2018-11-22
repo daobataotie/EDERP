@@ -125,60 +125,66 @@
   <data name="TCattrBanbie.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 251.354324</value>
   </data>
-  <data name="lblattr45L.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1325.56213, 190.5</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TCattrBanbie.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>310.750336, 60.8542633</value>
+  </data>
+  <data name="lblattr45L.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1449.91138, 190.5</value>
+  </data>
   <data name="lblattr45L.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>243.421875, 121.708496</value>
+    <value>190.505127, 121.708496</value>
   </data>
   <data name="lblattr_15R.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1222.37939, 190.5</value>
+    <value>1346.72864, 190.5</value>
   </data>
   <data name="lblattr_15L.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1116.53906, 190.5</value>
+    <value>1240.88855, 190.5</value>
   </data>
   <data name="lblattr_15L.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>105.840088, 121.708496</value>
   </data>
   <data name="lblattrCentralR.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>791.6881, 190.5</value>
+    <value>916.0376, 190.5</value>
   </data>
   <data name="lblattrCentralL.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>680.396362, 251.354324</value>
+    <value>804.7459, 251.354324</value>
   </data>
   <data name="lblattrGlassRightR.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>680.3963, 190.5</value>
+    <value>804.74585, 190.5</value>
   </data>
   <data name="lblattrGlassRightL.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>567.5628, 251.354324</value>
+    <value>691.9124, 251.354324</value>
   </data>
   <data name="lblattrGlassLeftR.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>567.5628, 190.5</value>
+    <value>691.9124, 190.5</value>
   </data>
   <data name="lblattrGlassLeftL.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>459.083252, 190.5</value>
+    <value>581.9793, 190.5</value>
+  </data>
+  <data name="lblattrGlassLeftL.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>109.933167, 121.708496</value>
   </data>
   <data name="TCattrNoseCentral.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>895.813354, 190.5</value>
+    <value>1020.16284, 190.5</value>
   </data>
   <data name="TCattrGuanZui.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1005.417, 190.5</value>
+    <value>1129.7666, 190.5</value>
   </data>
   <data name="xrTable5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1568.984, 251.354324</value>
+    <value>1640.4165, 251.354324</value>
   </data>
   <data name="xrTable5.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1079.83142, 60.8542633</value>
+    <value>1008.39893, 60.8542633</value>
   </data>
   <data name="xrTable4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1568.984, 190.5</value>
+    <value>1640.4165, 190.5</value>
   </data>
   <data name="xrTable4.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1079.83167, 60.854248</value>
+    <value>1008.39917, 60.854248</value>
   </data>
   <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>187.854263, 251.354324</value>
+    <value>310.750336, 251.35434</value>
   </data>
   <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>25.3997936, 402.769</value>
@@ -193,17 +199,16 @@
     <value>再測試：</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>187.854263, 190.5</value>
+    <value>310.750336, 190.5</value>
   </data>
   <data name="TCattrDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 190.5</value>
   </data>
+  <data name="TCattrDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>310.750336, 60.854248</value>
+  </data>
   <data name="xrTable7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 63.50003</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TCSecondTestTime.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 127</value>
@@ -235,12 +240,10 @@
   <data name="xrTable6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 0</value>
   </data>
-  <data name="xrTableCell25.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
   <data name="xrTableCell25.Text" xml:space="preserve">
     <value>第2次抽驗外觀</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Detail.HeightF" type="System.Single, mscorlib">
     <value>429.227356</value>
   </data>
@@ -279,15 +282,6 @@
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
     <value>211.666672</value>
-  </data>
-  <data name="xrLabel4.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2542.58252, 61.6283455</value>
-  </data>
-  <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>254, 51.9999733</value>
   </data>
   <data name="xrLabel4.Text" xml:space="preserve">
     <value>QW-06 附表 10</value>

@@ -47,7 +47,7 @@ namespace Book.UI.Query
             //this.TCInvoiceXODetailBeenQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailBeenQuantity);
             //this.TCInvoiceXTDetailQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXTDetailQuantity);
 
-            this.TCdingdanbianhao.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceId);
+            //this.TCdingdanbianhao.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceId);
             this.TCkhddbh.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_CustomerInvoiceXOId);
             this.TCdanjia.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailPrice, "{0:000}");
             this.TCjinge.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailMoney, "{0:0}");
@@ -57,6 +57,7 @@ namespace Book.UI.Query
             this.TCkhxh.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_CustomerProductName);
             this.TCriqi.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceDate, "{0:yyyy/MM/dd}");
             this.TCyjrq.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceYjrq, "{0:yyyy/MM/dd}");
+            this.TCChuhuoDate.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_ChuhuoDate, "{0:yyyy/MM/dd}");
             this.TCshuliang.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailQuantity);
             this.TCInvoiceXODetailBeenQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXODetailBeenQuantity);
             this.TCInvoiceXTDetailQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceXODetail.PRO_InvoiceXTDetailQuantity);

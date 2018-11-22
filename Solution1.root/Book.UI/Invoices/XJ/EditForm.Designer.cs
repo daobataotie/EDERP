@@ -819,9 +819,9 @@
             // emptySpaceItem3
             // 
             resources.ApplyResources(this.emptySpaceItem3, "emptySpaceItem3");
-            this.emptySpaceItem3.Location = new System.Drawing.Point(432, 244);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(567, 244);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(544, 26);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(409, 26);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem8
@@ -830,7 +830,7 @@
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 244);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(122, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(108, 26);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
             this.layoutControlItem8.TextVisible = false;
@@ -839,9 +839,9 @@
             // 
             this.layoutControlItem20.Control = this.BtnEditProduct;
             resources.ApplyResources(this.layoutControlItem20, "layoutControlItem20");
-            this.layoutControlItem20.Location = new System.Drawing.Point(122, 244);
+            this.layoutControlItem20.Location = new System.Drawing.Point(108, 244);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(310, 26);
+            this.layoutControlItem20.Size = new System.Drawing.Size(459, 26);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(64, 14);
             // 
             // xtraTabPage2

@@ -37,7 +37,7 @@ namespace Book.UI.produceManager.PCImpactCheck
             //this.lblInvoiceXOQuantity.Text = _pcic.InvoiceXOQuantity.HasValue ? _pcic.InvoiceXOQuantity.Value.ToString() : "";
             //this.lbl_ProuductUnit.Text = _pcic.ProductUnit == null ? "" : _pcic.ProductUnit.ToString();
             //Details
-            this.TCattrDate.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_attrDate, "{0:yyyy-MM-dd}");
+            this.TCattrDate.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_attrDate, "{0:yyyy-MM-dd HH:mm}");
             this.TCattrBanbie.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_attrBanBie);
             this.TCattrGlassUpL.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_AttrGlassUpLDis);
             this.TCattrGlassUpR.DataBindings.Add("Text", this.DataSource, Model.PCImpactCheckDetail.PRO_AttrGlassUpRDis);

@@ -105,6 +105,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemRichTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTimeEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
             this.repositoryItemTimeEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
             this.GVCattrExterior = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.GVCattrDianDuPDSLv = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
@@ -140,7 +141,6 @@
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnContionPrint = new DevExpress.XtraBars.BarButtonItem();
-            this.repositoryItemTimeEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
             layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -183,6 +183,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEditEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVCattrExterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVCattrDianDuPDSLv)).BeginInit();
@@ -215,7 +216,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -490,15 +490,18 @@
             // 
             resources.ApplyResources(this.attrDate, "attrDate");
             this.attrDate.ColumnEdit = this.RIDEattrDate;
+            this.attrDate.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm";
+            this.attrDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.attrDate.FieldName = "PCPGOnlineCheckDetailDate";
             this.attrDate.Name = "attrDate";
-            this.attrDate.OptionsColumn.AllowEdit = false;
             // 
             // RIDEattrDate
             // 
             resources.ApplyResources(this.RIDEattrDate, "RIDEattrDate");
             this.RIDEattrDate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("RIDEattrDate.Buttons"))))});
+            this.RIDEattrDate.EditFormat.FormatString = "yyyy-MM-dd HH:mm";
+            this.RIDEattrDate.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.RIDEattrDate.Mask.EditMask = null;
             this.RIDEattrDate.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("RIDEattrDate.Mask.IgnoreMaskBlank")));
             this.RIDEattrDate.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("RIDEattrDate.Mask.MaskType")));
@@ -866,6 +869,17 @@
             this.gridColumn5.ColumnEdit = this.repositoryItemTimeEdit2;
             this.gridColumn5.FieldName = "SecondTestTime";
             this.gridColumn5.Name = "gridColumn5";
+            // 
+            // repositoryItemTimeEdit2
+            // 
+            resources.ApplyResources(this.repositoryItemTimeEdit2, "repositoryItemTimeEdit2");
+            this.repositoryItemTimeEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemTimeEdit2.DisplayFormat.FormatString = "HH:mm";
+            this.repositoryItemTimeEdit2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemTimeEdit2.EditFormat.FormatString = "HH:mm";
+            this.repositoryItemTimeEdit2.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemTimeEdit2.Name = "repositoryItemTimeEdit2";
             // 
             // repositoryItemTimeEdit1
             // 
@@ -1250,17 +1264,6 @@
             this.barBtnContionPrint.Name = "barBtnContionPrint";
             this.barBtnContionPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnContionPrint_ItemClick);
             // 
-            // repositoryItemTimeEdit2
-            // 
-            resources.ApplyResources(this.repositoryItemTimeEdit2, "repositoryItemTimeEdit2");
-            this.repositoryItemTimeEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryItemTimeEdit2.DisplayFormat.FormatString = "HH:mm";
-            this.repositoryItemTimeEdit2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.repositoryItemTimeEdit2.EditFormat.FormatString = "HH:mm";
-            this.repositoryItemTimeEdit2.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.repositoryItemTimeEdit2.Name = "repositoryItemTimeEdit2";
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1309,6 +1312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEditEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVCattrExterior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVCattrDianDuPDSLv)).EndInit();
@@ -1341,7 +1345,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit2)).EndInit();
             this.ResumeLayout(false);
 
         }

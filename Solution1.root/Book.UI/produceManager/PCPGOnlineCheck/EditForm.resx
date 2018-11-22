@@ -864,7 +864,7 @@
     <value>0</value>
   </data>
   <data name="attrDate.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+    <value>124</value>
   </data>
   <data name="DetailInvoiceCusXOId.Caption" xml:space="preserve">
     <value>订单编号</value>
@@ -879,7 +879,7 @@
     <value>1</value>
   </data>
   <data name="DetailInvoiceCusXOId.Width" type="System.Int32, mscorlib">
-    <value>128</value>
+    <value>118</value>
   </data>
   <data name="ProductName.Caption" xml:space="preserve">
     <value>商品名称</value>
@@ -947,6 +947,9 @@
   <data name="colattrUVChengFen.VisibleIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
+  <data name="colattrUVChengFen.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
   <data name="colattrHouDu.Caption" xml:space="preserve">
     <value>厚度透视率</value>
   </data>
@@ -979,6 +982,9 @@
   </data>
   <data name="colattrTouShiLv.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
+  </data>
+  <data name="colattrTouShiLv.Width" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="colattrFangWuMoYingDu.Caption" xml:space="preserve">
     <value>防雾膜测试</value>
@@ -1054,6 +1060,9 @@
   </data>
   <data name="ImpactCheck.VisibleIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="ImpactCheck.Width" type="System.Int32, mscorlib">
+    <value>51</value>
   </data>
   <data name="attrExterior.Caption" xml:space="preserve">
     <value>外观</value>
@@ -1187,6 +1196,9 @@
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="gridColumn3.Width" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>商品描述</value>
   </data>
@@ -1197,7 +1209,7 @@
     <value>4</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
-    <value>115</value>
+    <value>95</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>第二次抽驗外觀</value>
@@ -1967,6 +1979,12 @@
   <data name="&gt;&gt;gridColumn5.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;repositoryItemTimeEdit2.Name" xml:space="preserve">
+    <value>repositoryItemTimeEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTimeEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;repositoryItemTimeEdit1.Name" xml:space="preserve">
     <value>repositoryItemTimeEdit1</value>
   </data>
@@ -2152,12 +2170,6 @@
   </data>
   <data name="&gt;&gt;barBtnContionPrint.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemTimeEdit2.Name" xml:space="preserve">
-    <value>repositoryItemTimeEdit2</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemTimeEdit2.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

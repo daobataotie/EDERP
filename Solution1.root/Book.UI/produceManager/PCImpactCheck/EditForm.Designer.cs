@@ -469,6 +469,8 @@
             // 
             resources.ApplyResources(this.attrDate, "attrDate");
             this.attrDate.ColumnEdit = this.RIDEattrDate;
+            this.attrDate.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm";
+            this.attrDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.attrDate.FieldName = "attrDate";
             this.attrDate.Name = "attrDate";
             // 
@@ -477,6 +479,10 @@
             resources.ApplyResources(this.RIDEattrDate, "RIDEattrDate");
             this.RIDEattrDate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("RIDEattrDate.Buttons"))))});
+            this.RIDEattrDate.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm";
+            this.RIDEattrDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.RIDEattrDate.EditFormat.FormatString = "yyyy-MM-dd HH:mm";
+            this.RIDEattrDate.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.RIDEattrDate.Mask.EditMask = null;
             this.RIDEattrDate.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("RIDEattrDate.Mask.IgnoreMaskBlank")));
             this.RIDEattrDate.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("RIDEattrDate.Mask.MaskType")));
