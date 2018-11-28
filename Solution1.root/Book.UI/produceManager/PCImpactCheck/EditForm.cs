@@ -373,7 +373,7 @@ namespace Book.UI.produceManager.PCImpactCheck
             if (pronoForm.ShowDialog(this) == DialogResult.OK)
             {
                 this._PCIC.PCFromType = -1;     //单据类型
-                this._PCIC.Details.Clear();
+                //this._PCIC.Details.Clear();
                 //Model.PronoteHeader currentModel = pronoForm.SelectItem;
                 Model.PCImpactCheckDetail detail;
                 foreach (var item in PronoteHeader.ChoosePronoteHeaderDetailsForm._pronoteHeaderList)
@@ -412,7 +412,7 @@ namespace Book.UI.produceManager.PCImpactCheck
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 this._PCIC.PCFromType = 1;      //单据类型
-                this._PCIC.Details.Clear();
+                //this._PCIC.Details.Clear();
                 //Model.ProduceOtherCompact currentModel = f.SelectItem as Model.ProduceOtherCompact;
                 //if (currentModel != null)
                 //{
@@ -471,6 +471,41 @@ namespace Book.UI.produceManager.PCImpactCheck
             GC.Collect();
         }
 
+        //採購單
+        private void btn_InvoiceCO_Click(object sender, EventArgs e)
+        {
+            Invoices.CG.CGForm form = new Book.UI.Invoices.CG.CGForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                if (form.key != null && form.key.Count > 0)
+                {
+                    this._PCIC.PCFromType = 2;     //单据类型
+                    //this._PCIC.Details.Clear();
+                    Model.PCImpactCheckDetail detail;
+                    foreach (var item in form.key)
+                    {
+                        detail = new Book.Model.PCImpactCheckDetail();
+                        detail.PCImpactCheckDetailId = Guid.NewGuid().ToString();
+                        detail.PCImpactCheckId = this._PCIC.PCImpactCheckId;
+                        detail.attrDate = DateTime.Now;
+
+                        detail.PronoteHeaderId = item.InvoiceId;
+                        detail.Product = item.Product;
+                        detail.ProductId = item.ProductId;
+                        detail.ProductUnitId = item.InvoiceProductUnit;
+                        detail.InvoiceCusXOId = item.Invoice.InvoiceCustomXOId;
+                        if (item.Invoice.Customer != null)
+                            detail.mCheckStandard = item.Invoice.Customer.CheckedStandard;
+                        detail.InvoiceXOQuantity = item.OrderQuantity.HasValue ? item.OrderQuantity.Value : 0;
+                        this._PCIC.Details.Add(detail);
+                    }
+                }
+            }
+            this.gridControl1.RefreshDataSource();
+            form.Dispose();
+            GC.Collect();
+        }
+
         private void txtPCImpactCheckDesc_DoubleClick(object sender, EventArgs e)
         {
             PCParameterSet.ChooseParameter cp = new Book.UI.produceManager.PCParameterSet.ChooseParameter("BeiZhuShuoMing");
@@ -506,41 +541,6 @@ namespace Book.UI.produceManager.PCImpactCheck
         private void gridControl1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        //採購單
-        private void btn_InvoiceCO_Click(object sender, EventArgs e)
-        {
-            Invoices.CG.CGForm form = new Book.UI.Invoices.CG.CGForm();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                if (form.key != null && form.key.Count > 0)
-                {
-                    this._PCIC.PCFromType = 2;     //单据类型
-                    this._PCIC.Details.Clear();
-                    Model.PCImpactCheckDetail detail;
-                    foreach (var item in form.key)
-                    {
-                        detail = new Book.Model.PCImpactCheckDetail();
-                        detail.PCImpactCheckDetailId = Guid.NewGuid().ToString();
-                        detail.PCImpactCheckId = this._PCIC.PCImpactCheckId;
-                        detail.attrDate = DateTime.Now;
-
-                        detail.PronoteHeaderId = item.InvoiceId;
-                        detail.Product = item.Product;
-                        detail.ProductId = item.ProductId;
-                        detail.ProductUnitId = item.InvoiceProductUnit;
-                        detail.InvoiceCusXOId = item.Invoice.InvoiceCustomXOId;
-                        if (item.Invoice.Customer != null)
-                            detail.mCheckStandard = item.Invoice.Customer.CheckedStandard;
-                        detail.InvoiceXOQuantity = item.OrderQuantity.HasValue ? item.OrderQuantity.Value : 0;
-                        this._PCIC.Details.Add(detail);
-                    }
-                }
-            }
-            this.gridControl1.RefreshDataSource();
-            form.Dispose();
-            GC.Collect();
         }
     }
 }

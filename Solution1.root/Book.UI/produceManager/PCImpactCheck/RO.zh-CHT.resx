@@ -283,6 +283,12 @@
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
     <value>211.666672</value>
   </data>
+  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>2479.07666, 61.6283455</value>
+  </data>
+  <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>293.2644, 51.9999733</value>
+  </data>
   <data name="xrLabel4.Text" xml:space="preserve">
     <value>QW-06 附表 10</value>
   </data>

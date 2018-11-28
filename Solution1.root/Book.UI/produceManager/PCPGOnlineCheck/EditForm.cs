@@ -365,7 +365,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm pronoForm = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm(this.nccWorkHouse.EditValue as Model.WorkHouse, 0);
             if (pronoForm.ShowDialog(this) == DialogResult.OK)
             {
-                this._pcpgoc.Details.Clear();
+                //this._pcpgoc.Details.Clear();
                 foreach (var SelectModel in PronoteHeader.ChoosePronoteHeaderDetailsForm._pronoteHeaderList)
                 {
                     if (SelectModel != null)
@@ -425,7 +425,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             Model.ProduceOtherCompact OtherCompact = f.SelectItem as Model.ProduceOtherCompact;
             if (OtherCompact != null)
             {
-                this._pcpgoc.Details.Clear();
+                //this._pcpgoc.Details.Clear();
                 foreach (var item in f.key)
                 {
                     this._pcpgoc.PCPGOnlineCheckType = 1;
@@ -521,6 +521,54 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             //f.Dispose();
             //GC.Collect();
             #endregion
+        }
+
+        //采购单
+        private void btn_invoiceCO_Click(object sender, EventArgs e)
+        {
+            Invoices.CG.CGForm f = new Book.UI.Invoices.CG.CGForm();
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                //this._pcpgoc.Details.Clear();
+                foreach (var SelectModel in f.key)
+                {
+                    if (SelectModel != null)
+                    {
+                        this._pcpgoc.PCPGOnlineCheckType = 0;
+
+                        Model.InvoiceXO xo = null;
+                        if (SelectModel.Invoice.InvoiceXOId != null)
+                        {
+                            xo = new BL.InvoiceXOManager().Get(SelectModel.Invoice.InvoiceXOId);
+                            this._pcpgoc.Customer = xo == null ? null : xo.xocustomer;
+                            this._pcpgoc.InvoiceCusXOId = xo == null ? "" : xo.CustomerInvoiceXOId;
+                        }
+
+                        this.txtInvoiceCusXOId.Text = this._pcpgoc.InvoiceCusXOId;
+
+                        //Detail
+                        Model.PCPGOnlineCheckDetail d = new Book.Model.PCPGOnlineCheckDetail();
+                        d.PCPGOnlineCheckDetailId = Guid.NewGuid().ToString();
+                        d.PCPGOnlineCheckId = this._pcpgoc.PCPGOnlineCheckId;
+                        if (SelectModel.Invoice.InvoiceXOId != null)
+                            d.InvoiceCusXOId = xo == null ? "" : xo.CustomerInvoiceXOId;
+                        d.PCPGOnlineCheckDetailDate = DateTime.Now;
+                        //d.PCPGOnlineCheckDetailTime = DateTime.Now;
+                        d.ProductId = SelectModel.ProductId;
+                        d.Product = SelectModel.Product;
+                        d.CheckQuantity = Convert.ToInt32(SelectModel.OrderQuantity);
+                        d.FromInvoiceId = SelectModel.InvoiceId;
+                        if (this._pcpgoc.Customer != null)
+                            d.CheckedStandard = this._pcpgoc.Customer.CheckedStandard;
+
+                        this._pcpgoc.Details.Add(d);
+                    }
+                }
+                this.gridControl1.RefreshDataSource();
+
+            }
+            f.Dispose();
+            GC.Collect();
         }
 
         //查询
@@ -699,51 +747,5 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             }
         }
 
-        private void btn_invoiceCO_Click(object sender, EventArgs e)
-        {
-            Invoices.CG.CGForm f = new Book.UI.Invoices.CG.CGForm();
-            if (f.ShowDialog(this) == DialogResult.OK)
-            {
-                this._pcpgoc.Details.Clear();
-                foreach (var SelectModel in f.key)
-                {
-                    if (SelectModel != null)
-                    {
-                        this._pcpgoc.PCPGOnlineCheckType = 0;
-
-                        Model.InvoiceXO xo = null;
-                        if (SelectModel.Invoice.InvoiceXOId != null)
-                        {
-                            xo = new BL.InvoiceXOManager().Get(SelectModel.Invoice.InvoiceXOId);
-                            this._pcpgoc.Customer = xo == null ? null : xo.xocustomer;
-                            this._pcpgoc.InvoiceCusXOId = xo == null ? "" : xo.CustomerInvoiceXOId;
-                        }
-
-                        this.txtInvoiceCusXOId.Text = this._pcpgoc.InvoiceCusXOId;
-
-                        //Detail
-                        Model.PCPGOnlineCheckDetail d = new Book.Model.PCPGOnlineCheckDetail();
-                        d.PCPGOnlineCheckDetailId = Guid.NewGuid().ToString();
-                        d.PCPGOnlineCheckId = this._pcpgoc.PCPGOnlineCheckId;
-                        if (SelectModel.Invoice.InvoiceXOId != null)
-                            d.InvoiceCusXOId = xo == null ? "" : xo.CustomerInvoiceXOId;
-                        d.PCPGOnlineCheckDetailDate = DateTime.Now;
-                        //d.PCPGOnlineCheckDetailTime = DateTime.Now;
-                        d.ProductId = SelectModel.ProductId;
-                        d.Product = SelectModel.Product;
-                        d.CheckQuantity = Convert.ToInt32(SelectModel.OrderQuantity);
-                        d.FromInvoiceId = SelectModel.InvoiceId;
-                        if (this._pcpgoc.Customer != null)
-                            d.CheckedStandard = this._pcpgoc.Customer.CheckedStandard;
-
-                        this._pcpgoc.Details.Add(d);
-                    }
-                }
-                this.gridControl1.RefreshDataSource();
-
-            }
-            f.Dispose();
-            GC.Collect();
-        }
     }
 }
