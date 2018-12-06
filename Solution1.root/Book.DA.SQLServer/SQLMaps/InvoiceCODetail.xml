@@ -44,6 +44,7 @@
       <result property="InvoiceCTQuantity" column="InvoiceCTQuantity" />
       <result property="Remark" column="Remark" />
       <result property="CustomerInvoiceXOId" column="CustomerInvoiceXOId"/>
+      <result property="CustomerLotNumber" column="CustomerLotNumber"/>
       <result property="Invoice" column="InvoiceId" lazyLoad="false" select="InvoiceCO.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
       <result property="NextWorkHouse" column="NextWorkHouseId" lazyLoad="false" select="WorkHouse.select_by_primary_key" />
@@ -63,7 +64,7 @@
       where invoiceid=#value#
     </delete>
     <select id="SelectByDateRangeAndPid" resultMap="InvoiceCODetailResult2" parameterClass="Map">
-      select d.*,xo.CustomerInvoiceXOId from invoicecodetail d left join InvoiceCO i on d.InvoiceId=i.InvoiceId left join InvoiceXO xo on xo.InvoiceId=i.InvoiceXOId where d.productid=#pid# and i.invoicedate between #startdate# and #enddate# order by d.invoiceid
+      select d.*,xo.CustomerInvoiceXOId,xo.CustomerLotNumber from invoicecodetail d left join InvoiceCO i on d.InvoiceId=i.InvoiceId left join InvoiceXO xo on xo.InvoiceId=i.InvoiceXOId where d.productid=#pid# and i.invoicedate between #startdate# and #enddate# order by d.invoiceid
     </select>
     <select id="SelectByHeaderProRang" parameterClass="string" resultMap="InvoiceCODetailResult">
       <![CDATA[

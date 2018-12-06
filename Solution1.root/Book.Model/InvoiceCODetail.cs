@@ -127,6 +127,8 @@ namespace Book.Model
             }
         }
 
+        public string CustomerLotNumber { get; set; }
+
         /// <summary>
         /// 采购订单明细编号
         /// </summary>

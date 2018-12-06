@@ -2021,7 +2021,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 162</value>
+    <value>230, 162</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 21</value>
@@ -2048,7 +2048,7 @@
     <value>4</value>
   </data>
   <data name="cePrice7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 162</value>
+    <value>498, 162</value>
   </data>
   <data name="cePrice7.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2072,7 +2072,7 @@
     <value>5</value>
   </data>
   <data name="cePrice6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 137</value>
+    <value>498, 137</value>
   </data>
   <data name="cePrice6.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2102,7 +2102,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange7_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 21</value>
+    <value>142, 21</value>
   </data>
   <data name="cePriRange7_L.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -2120,7 +2120,7 @@
     <value>7</value>
   </data>
   <data name="cePrice5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 112</value>
+    <value>498, 112</value>
   </data>
   <data name="cePrice5.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2144,7 +2144,7 @@
     <value>8</value>
   </data>
   <data name="cePriRange6_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 137</value>
+    <value>263, 137</value>
   </data>
   <data name="cePriRange6_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2174,7 +2174,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange6_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="cePriRange6_L.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -2192,7 +2192,7 @@
     <value>10</value>
   </data>
   <data name="cePrice4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 87</value>
+    <value>498, 87</value>
   </data>
   <data name="cePrice4.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2216,7 +2216,7 @@
     <value>11</value>
   </data>
   <data name="cePriRange5_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 112</value>
+    <value>263, 112</value>
   </data>
   <data name="cePriRange5_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2246,7 +2246,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange5_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="cePriRange5_L.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -2264,7 +2264,7 @@
     <value>13</value>
   </data>
   <data name="cePriRange3_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 62</value>
+    <value>263, 62</value>
   </data>
   <data name="cePriRange3_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2288,7 +2288,7 @@
     <value>14</value>
   </data>
   <data name="cePriRange4_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 87</value>
+    <value>263, 87</value>
   </data>
   <data name="cePriRange4_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2318,7 +2318,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange4_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="cePriRange4_L.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -2336,7 +2336,7 @@
     <value>16</value>
   </data>
   <data name="cePrice3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 62</value>
+    <value>498, 62</value>
   </data>
   <data name="cePrice3.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2360,7 +2360,7 @@
     <value>17</value>
   </data>
   <data name="cePrice2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 37</value>
+    <value>498, 37</value>
   </data>
   <data name="cePrice2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2390,7 +2390,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange3_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="cePriRange3_L.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -2408,7 +2408,7 @@
     <value>19</value>
   </data>
   <data name="cePrice1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 12</value>
+    <value>498, 12</value>
   </data>
   <data name="cePrice1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2432,7 +2432,7 @@
     <value>20</value>
   </data>
   <data name="cePriRange2_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 37</value>
+    <value>265, 37</value>
   </data>
   <data name="cePriRange2_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2462,7 +2462,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange2_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 21</value>
+    <value>142, 21</value>
   </data>
   <data name="cePriRange2_L.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -2486,7 +2486,7 @@
     <value>Combo</value>
   </data>
   <data name="cePriRange1_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 21</value>
+    <value>142, 21</value>
   </data>
   <data name="cePriRange1_L.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -2504,7 +2504,7 @@
     <value>23</value>
   </data>
   <data name="cePriRange1_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 12</value>
+    <value>265, 12</value>
   </data>
   <data name="cePriRange1_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2672,7 +2672,7 @@
     <value>layoutControlGroup14</value>
   </data>
   <data name="layoutControl13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 215</value>
+    <value>645, 215</value>
   </data>
   <data name="layoutControl13.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2693,7 +2693,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 215</value>
+    <value>645, 215</value>
   </data>
   <data name="xtraTabPage3.Text" xml:space="preserve">
     <value>采购价位</value>
@@ -2711,7 +2711,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 243</value>
+    <value>651, 243</value>
   </data>
   <data name="xtraTabControl2.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -2720,7 +2720,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 162</value>
+    <value>229, 162</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 21</value>
@@ -2747,7 +2747,7 @@
     <value>4</value>
   </data>
   <data name="XOcePrice7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>509, 162</value>
+    <value>510, 162</value>
   </data>
   <data name="XOcePrice7.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2771,7 +2771,7 @@
     <value>5</value>
   </data>
   <data name="XOcePriRange6_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 137</value>
+    <value>263, 137</value>
   </data>
   <data name="XOcePriRange6_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2795,7 +2795,7 @@
     <value>6</value>
   </data>
   <data name="XOcePrice6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>509, 137</value>
+    <value>510, 137</value>
   </data>
   <data name="XOcePrice6.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2825,7 +2825,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange6_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="XOcePriRange6_L.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -2843,7 +2843,7 @@
     <value>8</value>
   </data>
   <data name="XOcePrice5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>509, 112</value>
+    <value>510, 112</value>
   </data>
   <data name="XOcePrice5.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2867,7 +2867,7 @@
     <value>9</value>
   </data>
   <data name="XOcePriRange5_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 112</value>
+    <value>263, 112</value>
   </data>
   <data name="XOcePriRange5_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2897,7 +2897,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange5_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="XOcePriRange5_L.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -2915,7 +2915,7 @@
     <value>11</value>
   </data>
   <data name="XOcePrice4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>509, 87</value>
+    <value>510, 87</value>
   </data>
   <data name="XOcePrice4.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2939,7 +2939,7 @@
     <value>12</value>
   </data>
   <data name="XOcePriRange4_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 87</value>
+    <value>263, 87</value>
   </data>
   <data name="XOcePriRange4_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -2969,7 +2969,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange4_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="XOcePriRange4_L.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -2987,7 +2987,7 @@
     <value>14</value>
   </data>
   <data name="XOcePrice3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>509, 62</value>
+    <value>510, 62</value>
   </data>
   <data name="XOcePrice3.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -3011,7 +3011,7 @@
     <value>15</value>
   </data>
   <data name="XOcePriRange3_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 62</value>
+    <value>263, 62</value>
   </data>
   <data name="XOcePriRange3_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -3041,7 +3041,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange3_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="XOcePriRange3_L.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -3059,7 +3059,7 @@
     <value>17</value>
   </data>
   <data name="XOcePriRange2_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 37</value>
+    <value>263, 37</value>
   </data>
   <data name="XOcePriRange2_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -3083,7 +3083,7 @@
     <value>18</value>
   </data>
   <data name="XOcePrice1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>509, 12</value>
+    <value>510, 12</value>
   </data>
   <data name="XOcePrice1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -3113,7 +3113,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange2_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="XOcePriRange2_L.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -3131,7 +3131,7 @@
     <value>20</value>
   </data>
   <data name="XOcePriRange1_R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 12</value>
+    <value>263, 12</value>
   </data>
   <data name="XOcePriRange1_R.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -3161,7 +3161,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange7_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 21</value>
+    <value>141, 21</value>
   </data>
   <data name="XOcePriRange7_L.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -3179,7 +3179,7 @@
     <value>22</value>
   </data>
   <data name="XOcePrice2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>509, 37</value>
+    <value>510, 37</value>
   </data>
   <data name="XOcePrice2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -3209,7 +3209,7 @@
     <value>Combo</value>
   </data>
   <data name="XOcePriRange1_L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 21</value>
+    <value>140, 21</value>
   </data>
   <data name="XOcePriRange1_L.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -3371,7 +3371,7 @@
     <value>layoutControlGroup15</value>
   </data>
   <data name="layoutControl14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 215</value>
+    <value>645, 215</value>
   </data>
   <data name="layoutControl14.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3392,7 +3392,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 215</value>
+    <value>645, 215</value>
   </data>
   <data name="xtraTabPage12.Text" xml:space="preserve">
     <value>销售价位</value>
@@ -3413,7 +3413,7 @@
     <value>363, 12</value>
   </data>
   <data name="richTextCeMai.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 191</value>
+    <value>270, 191</value>
   </data>
   <data name="richTextCeMai.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -3482,7 +3482,7 @@
     <value>layoutControlGroup16</value>
   </data>
   <data name="layoutControl15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 215</value>
+    <value>645, 215</value>
   </data>
   <data name="layoutControl15.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3503,7 +3503,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 215</value>
+    <value>645, 215</value>
   </data>
   <data name="xtraTabPage13.Text" xml:space="preserve">
     <value>正侧麦</value>
@@ -3554,7 +3554,7 @@
     <value>False</value>
   </data>
   <data name="spinEditReferenceSellPrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 22</value>
+    <value>348, 22</value>
   </data>
   <data name="spinEditReferenceSellPrice.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -3593,7 +3593,7 @@
     <value>False</value>
   </data>
   <data name="spinEditNewestCost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 23</value>
+    <value>348, 23</value>
   </data>
   <data name="spinEditNewestCost.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -3614,7 +3614,7 @@
     <value>315, 115</value>
   </data>
   <data name="newChooseContorlDepotPosition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 21</value>
+    <value>348, 21</value>
   </data>
   <data name="newChooseContorlDepotPosition.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -3674,7 +3674,7 @@
     <value>False</value>
   </data>
   <data name="spinEditHighestPurchasingPrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 21</value>
+    <value>348, 21</value>
   </data>
   <data name="spinEditHighestPurchasingPrice.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -3791,7 +3791,7 @@
     <value>False</value>
   </data>
   <data name="spinEditPlanSellPrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 21</value>
+    <value>348, 21</value>
   </data>
   <data name="spinEditPlanSellPrice.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -3953,7 +3953,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3974,7 +3974,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage7.Text" xml:space="preserve">
     <value>成本</value>
@@ -4070,7 +4070,7 @@
     <value>False</value>
   </data>
   <data name="textEditCheckCycle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 28</value>
+    <value>241, 28</value>
   </data>
   <data name="textEditCheckCycle.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -4184,7 +4184,7 @@
     <value>False</value>
   </data>
   <data name="spinEditDamageRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 30</value>
+    <value>241, 30</value>
   </data>
   <data name="spinEditDamageRate.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -4241,7 +4241,7 @@
     <value>False</value>
   </data>
   <data name="dateEditLastStockTakeTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 29</value>
+    <value>241, 29</value>
   </data>
   <data name="dateEditLastStockTakeTime.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -4277,7 +4277,7 @@
     <value>月</value>
   </data>
   <data name="comboBoxEditStockCheckTimeParts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 30</value>
+    <value>241, 30</value>
   </data>
   <data name="comboBoxEditStockCheckTimeParts.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -4304,7 +4304,7 @@
     <value>質檢</value>
   </data>
   <data name="checkEditIsRequiredCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 21</value>
+    <value>326, 21</value>
   </data>
   <data name="checkEditIsRequiredCheck.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -4439,7 +4439,7 @@
     <value>False</value>
   </data>
   <data name="spinEditHighestStock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 30</value>
+    <value>241, 30</value>
   </data>
   <data name="spinEditHighestStock.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -4616,7 +4616,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4637,7 +4637,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage8.Text" xml:space="preserve">
     <value>控制</value>
@@ -4658,7 +4658,7 @@
     <value>0</value>
   </data>
   <data name="spinEditSunhao3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>516, 52</value>
+    <value>517, 52</value>
   </data>
   <data name="spinEditSunhao3.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 21</value>
@@ -4682,7 +4682,7 @@
     <value>0</value>
   </data>
   <data name="spinEditSunhao2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>516, 27</value>
+    <value>517, 27</value>
   </data>
   <data name="spinEditSunhao2.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 21</value>
@@ -4706,7 +4706,7 @@
     <value>0</value>
   </data>
   <data name="spinEditSunhao1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>516, 2</value>
+    <value>517, 2</value>
   </data>
   <data name="spinEditSunhao1.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 21</value>
@@ -4733,7 +4733,7 @@
     <value>296, 52</value>
   </data>
   <data name="spinEditSunhaoEnd3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 21</value>
+    <value>152, 21</value>
   </data>
   <data name="spinEditSunhaoEnd3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -4757,7 +4757,7 @@
     <value>296, 27</value>
   </data>
   <data name="spinEditSunhaoEnd2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 21</value>
+    <value>152, 21</value>
   </data>
   <data name="spinEditSunhaoEnd2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -4781,7 +4781,7 @@
     <value>296, 2</value>
   </data>
   <data name="spinEditSunhaoEnd1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 21</value>
+    <value>152, 21</value>
   </data>
   <data name="spinEditSunhaoEnd1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -4937,7 +4937,7 @@
     <value>layoutControlGroup19</value>
   </data>
   <data name="layoutControl18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>646, 75</value>
+    <value>647, 75</value>
   </data>
   <data name="layoutControl18.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4961,7 +4961,7 @@
     <value>12, 292</value>
   </data>
   <data name="groupControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 100</value>
+    <value>651, 100</value>
   </data>
   <data name="groupControl1.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -5012,7 +5012,7 @@
     <value>412, 242</value>
   </data>
   <data name="spinEditPaihe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 21</value>
+    <value>251, 21</value>
   </data>
   <data name="spinEditPaihe.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -5063,7 +5063,7 @@
     <value>17, 93</value>
   </metadata>
   <data name="checkedComboBoxEditJWeight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 21</value>
+    <value>164, 21</value>
   </data>
   <data name="checkedComboBoxEditJWeight.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -5096,7 +5096,7 @@
     <value>False</value>
   </data>
   <data name="textEditPowerGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 26</value>
+    <value>251, 26</value>
   </data>
   <data name="textEditPowerGroup.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -5135,7 +5135,7 @@
     <value>False</value>
   </data>
   <data name="spinEditVolume.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 23</value>
+    <value>251, 23</value>
   </data>
   <data name="spinEditVolume.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -5213,7 +5213,7 @@
     <value>412, 186</value>
   </data>
   <data name="newChooseContorlEmployeeChange.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 21</value>
+    <value>251, 21</value>
   </data>
   <data name="newChooseContorlEmployeeChange.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -5267,7 +5267,7 @@
     <value>False</value>
   </data>
   <data name="textEditQualityRequire.Size" type="System.Drawing.Size, System.Drawing">
-    <value>575, 23</value>
+    <value>576, 23</value>
   </data>
   <data name="textEditQualityRequire.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -5387,7 +5387,7 @@
     <value>412, 83</value>
   </data>
   <data name="newChooseContorWeightUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 21</value>
+    <value>251, 21</value>
   </data>
   <data name="newChooseContorWeightUnit.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -5429,7 +5429,7 @@
     <value>412, 3</value>
   </data>
   <data name="newChooseContorVolumeUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 21</value>
+    <value>251, 21</value>
   </data>
   <data name="newChooseContorVolumeUnit.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -5507,7 +5507,7 @@
     <value>False</value>
   </data>
   <data name="spinEditWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 23</value>
+    <value>251, 23</value>
   </data>
   <data name="spinEditWidth.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -5735,7 +5735,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -5756,7 +5756,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage4.Text" xml:space="preserve">
     <value>其他</value>
@@ -5840,7 +5840,7 @@
     <value />
   </data>
   <data name="lookUpEditQualityTestUnitId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
+    <value>246, 22</value>
   </data>
   <data name="lookUpEditQualityTestUnitId.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -5921,7 +5921,7 @@
     <value>False</value>
   </data>
   <data name="spinEditCheckCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 23</value>
+    <value>233, 23</value>
   </data>
   <data name="spinEditCheckCount.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -5999,7 +5999,7 @@
     <value>按自定義規則抽檢</value>
   </data>
   <data name="comboBoxEditCheckRule.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 21</value>
+    <value>233, 21</value>
   </data>
   <data name="comboBoxEditCheckRule.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6122,7 +6122,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl8.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -6143,7 +6143,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage5.Text" xml:space="preserve">
     <value>质检</value>
@@ -6167,7 +6167,7 @@
     <value>Combo</value>
   </data>
   <data name="calcEditMateriaOtherFenPei.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 21</value>
+    <value>197, 21</value>
   </data>
   <data name="calcEditMateriaOtherFenPei.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -6230,7 +6230,7 @@
     <value>False</value>
   </data>
   <data name="spinEditStocksQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 22</value>
+    <value>197, 22</value>
   </data>
   <data name="spinEditStocksQuantity.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -6308,7 +6308,7 @@
     <value>False</value>
   </data>
   <data name="spinEditLendQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 21</value>
+    <value>197, 21</value>
   </data>
   <data name="spinEditLendQuantity.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -6386,7 +6386,7 @@
     <value>False</value>
   </data>
   <data name="spinEditBeenAssigned.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 22</value>
+    <value>197, 22</value>
   </data>
   <data name="spinEditBeenAssigned.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -6482,7 +6482,7 @@
     <value>False</value>
   </data>
   <data name="dateEditProductNearXSDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 21</value>
+    <value>197, 21</value>
   </data>
   <data name="dateEditProductNearXSDate.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -6635,7 +6635,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6656,7 +6656,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage2.Text" xml:space="preserve">
     <value>库存数量</value>
@@ -6701,7 +6701,7 @@
     <value>543, 12</value>
   </data>
   <data name="simpleButtonNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 22</value>
+    <value>73, 22</value>
   </data>
   <data name="simpleButtonNext.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -6806,7 +6806,7 @@
     <value>12, 38</value>
   </data>
   <data name="pictureEditPrivew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 345</value>
+    <value>651, 345</value>
   </data>
   <data name="pictureEditPrivew.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -6824,7 +6824,7 @@
     <value>9</value>
   </data>
   <data name="simpleButtonDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 12</value>
+    <value>620, 12</value>
   </data>
   <data name="simpleButtonDelete.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 22</value>
@@ -6902,7 +6902,7 @@
     <value>layoutControlGroup8</value>
   </data>
   <data name="layoutControl7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl7.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -6923,7 +6923,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage6.Text" xml:space="preserve">
     <value>图档</value>
@@ -6968,7 +6968,7 @@
     <value>401, 227</value>
   </data>
   <data name="textEditProceduresId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 21</value>
+    <value>262, 21</value>
   </data>
   <data name="textEditProceduresId.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -7124,7 +7124,7 @@
     <value>135</value>
   </data>
   <data name="gridControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 185</value>
+    <value>651, 185</value>
   </data>
   <data name="gridControl2.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -7196,7 +7196,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7217,7 +7217,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPageProcee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPageProcee.Text" xml:space="preserve">
     <value>加工讯息</value>
@@ -7388,7 +7388,7 @@
     <value>197</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 193</value>
+    <value>651, 193</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -7448,7 +7448,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl9.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7469,7 +7469,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage9.Text" xml:space="preserve">
     <value>模具信息</value>
@@ -7487,7 +7487,7 @@
     <value>8</value>
   </data>
   <data name="simpleButton_search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>501, 12</value>
+    <value>502, 12</value>
   </data>
   <data name="simpleButton_search.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 22</value>
@@ -7517,7 +7517,7 @@
     <value>Combo</value>
   </data>
   <data name="dateEditcoenddate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>173, 21</value>
   </data>
   <data name="dateEditcoenddate.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -7720,8 +7720,17 @@
   <data name="gridColumn52.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="gridColumn57.Caption" xml:space="preserve">
+    <value>批號</value>
+  </data>
+  <data name="gridColumn57.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn57.VisibleIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="gridControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 345</value>
+    <value>651, 345</value>
   </data>
   <data name="gridControl3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -7775,7 +7784,7 @@
     <value>layoutControlGroup11</value>
   </data>
   <data name="layoutControl10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl10.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7796,7 +7805,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage10.Text" xml:space="preserve">
     <value>采购记录</value>
@@ -7814,7 +7823,7 @@
     <value>9</value>
   </data>
   <data name="simpleButtonMation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 12</value>
+    <value>504, 12</value>
   </data>
   <data name="simpleButtonMation.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 22</value>
@@ -7844,7 +7853,7 @@
     <value>Combo</value>
   </data>
   <data name="dateEditxoenddate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 21</value>
+    <value>173, 21</value>
   </data>
   <data name="dateEditxoenddate.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -7964,7 +7973,7 @@
     <value>1</value>
   </data>
   <data name="gridControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 345</value>
+    <value>651, 345</value>
   </data>
   <data name="gridControl4.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -8018,7 +8027,7 @@
     <value>layoutControlGroup12</value>
   </data>
   <data name="layoutControl11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl11.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -8039,7 +8048,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPage11.Text" xml:space="preserve">
     <value>销售记录</value>
@@ -8465,7 +8474,7 @@
     <value>11</value>
   </data>
   <data name="btn_OtherCompactSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>483, 12</value>
+    <value>484, 12</value>
   </data>
   <data name="btn_OtherCompactSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
@@ -8495,7 +8504,7 @@
     <value>Combo</value>
   </data>
   <data name="dateEditOtherCompactEnd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 21</value>
+    <value>167, 21</value>
   </data>
   <data name="dateEditOtherCompactEnd.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -8657,7 +8666,7 @@
     <value>150</value>
   </data>
   <data name="gridControl6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 345</value>
+    <value>651, 345</value>
   </data>
   <data name="gridControl6.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -8711,7 +8720,7 @@
     <value>layoutControlGroup17</value>
   </data>
   <data name="layoutControl16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl16.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -8732,7 +8741,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPageOtherCompact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabPageOtherCompact.Text" xml:space="preserve">
     <value>委外合同記錄</value>
@@ -8756,7 +8765,7 @@
     <value>Combo</value>
   </data>
   <data name="dateEditProduceMaterialEnd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 21</value>
+    <value>159, 21</value>
   </data>
   <data name="dateEditProduceMaterialEnd.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -8798,7 +8807,7 @@
     <value>5</value>
   </data>
   <data name="simpleButtonProduceMaterial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>475, 12</value>
+    <value>476, 12</value>
   </data>
   <data name="simpleButtonProduceMaterial.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 22</value>
@@ -8936,7 +8945,7 @@
     <value>100</value>
   </data>
   <data name="gridControl7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 345</value>
+    <value>651, 345</value>
   </data>
   <data name="gridControl7.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -8990,7 +8999,7 @@
     <value>layoutControlGroup18</value>
   </data>
   <data name="layoutControl17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="layoutControl17.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -9011,7 +9020,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabproduceMaterial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 395</value>
+    <value>675, 395</value>
   </data>
   <data name="xtraTabproduceMaterial.Text" xml:space="preserve">
     <value>領料記錄</value>
@@ -10667,6 +10676,12 @@
     <value>gridColumn52</value>
   </data>
   <data name="&gt;&gt;gridColumn52.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn57.Name" xml:space="preserve">
+    <value>gridColumn57</value>
+  </data>
+  <data name="&gt;&gt;gridColumn57.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;repositoryItemRichTextEdit2.Name" xml:space="preserve">

@@ -2901,6 +2901,7 @@ namespace Book.UI.Settings.BasicData.Products
             }
         }
 
+        //采购记录
         private void simpleButton_search_Click(object sender, EventArgs e)
         {
             DateTime startdate = this.dateEditcostartdate.EditValue == null ? DateTime.Now.AddMonths(-1) : this.dateEditcostartdate.DateTime;
