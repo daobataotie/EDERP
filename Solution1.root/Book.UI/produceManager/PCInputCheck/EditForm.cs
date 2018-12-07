@@ -229,7 +229,7 @@ namespace Book.UI.produceManager.PCInputCheck
                 this.AddNew();
             else
             {
-                if (this.action == "view")
+                if (this.action == "view" || this.action == "update")   //打印的时候会更改_PCInputCheck(黑点/过火/料点/...)的值，修改时重新刷新
                     this._PCInputCheck = this.manager.Get(this._PCInputCheck.PCInputCheckId);
             }
 
