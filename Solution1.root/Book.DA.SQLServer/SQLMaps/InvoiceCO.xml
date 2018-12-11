@@ -65,5 +65,11 @@
       update MRSdetails set ArrangeDesc='' where MRSdetailsId in (select MRSdetailsId from MRSdetails md left join InvoiceCO c on md.MRSHeaderId=c.MRSHeaderId left join InvoiceCODetail cd on c.InvoiceId=cd.InvoiceId where md.ProductId=cd.ProductId and c.InvoiceId=#value#)
       ]]>
     </update>
+
+    <select id="GetCusXOIdByCOId" parameterClass="string" resultClass="string">
+      <![CDATA[
+      select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from InvoiceCO where InvoiceId=#value#)
+      ]]>
+    </select>
   </statements>
 </sqlMap>

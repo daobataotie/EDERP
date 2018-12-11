@@ -28,6 +28,7 @@ namespace Book.DA
         DateTime GetInvoiceYjrq(string id);
         string SelectCOIdByXOId(string XOId);
         void UpdateMRSState(string invoiceid);
+        string GetCusXOIdByCOId(string invoiceCOId);
     }
 }
 

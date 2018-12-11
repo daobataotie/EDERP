@@ -109,5 +109,10 @@ namespace Book.DA.SQLServer
         {
             sqlmapper.Update("InvoiceCO.UpdateMRSState", invoiceid);
         }
+
+        public string GetCusXOIdByCOId(string invoiceCOId)
+        {
+            return sqlmapper.QueryForObject<string>("InvoiceCO.GetCusXOIdByCOId", invoiceCOId);
+        }
     }
 }

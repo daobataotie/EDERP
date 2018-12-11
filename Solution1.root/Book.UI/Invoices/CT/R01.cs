@@ -10,6 +10,7 @@ namespace Book.UI.Invoices.CT
     {
         private BL.InvoiceCTManager InvoiceCTManager = new Book.BL.InvoiceCTManager();
         private BL.InvoiceCTDetailManager InvoiceCTDetailManager = new Book.BL.InvoiceCTDetailManager();
+        private BL.InvoiceCOManager invoiceCOManager = new Book.BL.InvoiceCOManager();
 
         private Model.InvoiceCT invoice;
 
@@ -24,14 +25,19 @@ namespace Book.UI.Invoices.CT
 
             this.invoice.Details = this.InvoiceCTDetailManager.Select(this.invoice);
 
+            foreach (var item in this.invoice.Details)
+            {
+                item.CustomerInvoiceXOId = invoiceCOManager.GetCusXOIdByCOId(item.InvoiceCOId);
+            }
+
             this.DataSource = this.invoice.Details;
 
             //CompanyInfo
             this.xrLabelCompanyInfoAddress.Text = BL.Settings.CompanyAddress1;
             this.xrLabelCompanyInfoFAX.Text = BL.Settings.CompanyFax;
-            this.xrLabelCompanyInfoName.Text = BL.Settings.CompanyChineseName ;
+            this.xrLabelCompanyInfoName.Text = BL.Settings.CompanyChineseName;
             this.xrLabelCompanyInfoTelphone.Text = BL.Settings.CompanyPhone;
-            this.xrLabelData.Text =Properties.Resources.InvoiceCT;
+            this.xrLabelData.Text = Properties.Resources.InvoiceCT;
             this.Print.Text += DateTime.Now.ToShortDateString();
             //每页合计统计
             //this.xrLabelPateTotal.Summary.Running = SummaryRunning.Page;
@@ -63,16 +69,17 @@ namespace Book.UI.Invoices.CT
             this.xrLabelheji.Text = this.invoice.InvoiceHeJi.Value.ToString("0");
             this.xrLabelNote.Text = this.invoice.InvoiceNote;
 
+
             //明细信息
             this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, Model.InvoiceCTDetail.PRO_Inumber);
             this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
-           // this.xrTableCellProductGuige.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
+            // this.xrTableCellProductGuige.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
             this.xrTableCellProductUnit.DataBindings.Add("Text", this.DataSource, Model.InvoiceCTDetail.PRO_InvoiceCTDetailQuantity);
             this.xrTableCellQuantity.DataBindings.Add("Text", this.DataSource, Model.InvoiceCTDetail.PRO_InvoiceProductUnit);
             this.xrTableCellUintPrice.DataBindings.Add("Text", this.DataSource, Model.InvoiceCTDetail.PRO_InvoiceCTDetailPrice, global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.CGDJXiao.Value));
-            this.xrCheckBoxIsZs.DataBindings.Add("CheckState", this.DataSource, Model.InvoiceCTDetail.PRO_InvoiceCTDetailZS);
+            this.TCInvoiceCO.DataBindings.Add("Text", this.DataSource, Model.InvoiceCTDetail.PRO_InvoiceCOId);
+            this.TCCusXOId.DataBindings.Add("Text", this.DataSource, Model.InvoiceCTDetail.PRO_CustomerInvoiceXOId);
             this.xrTableCellMoney.DataBindings.Add("Text", this.DataSource, Model.InvoiceCTDetail.PRO_InvoiceCTDetailMoney0, global::Helper.DateTimeParse.GetFormatA(BL.V.SetDataFormat.CGJEXiao.Value));
         }
-
     }
 }

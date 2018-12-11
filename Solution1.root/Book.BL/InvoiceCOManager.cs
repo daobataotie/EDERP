@@ -458,5 +458,10 @@ namespace Book.BL
         {
             return accessor.SelectCOIdByXOId(XOId);
         }
+
+        public string GetCusXOIdByCOId(string invoiceCOId)
+        {
+            return accessor.GetCusXOIdByCOId(invoiceCOId);
+        }
     }
 }

@@ -48,5 +48,9 @@ namespace Book.Model
         public string SupplierFullName { get; set; }
 
         public string ProductName { get; set; }
+
+        public string CustomerInvoiceXOId { get; set; }
+
+        public readonly static string PRO_CustomerInvoiceXOId = "CustomerInvoiceXOId";
 	}
 }
