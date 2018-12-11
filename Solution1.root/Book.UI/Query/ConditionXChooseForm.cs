@@ -25,6 +25,8 @@ namespace Book.UI.Query
             this.newChooseEmp2.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.dateEditStartDate.DateTime = DateTime.Now.Date.AddMonths(-1);
             this.dateEditEndDate.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
+            this.ncc_XOCustomer1.Choose = new Settings.BasicData.Customs.ChooseCustoms();
+            this.ncc_XOCustomer2.Choose = new Settings.BasicData.Customs.ChooseCustoms();
         }
 
         public override Condition Condition
@@ -101,6 +103,9 @@ namespace Book.UI.Query
             this.condition.ConveyanceMethodId = this.lookUpEdit2.EditValue == null ? null : this.lookUpEdit2.EditValue.ToString();
 
             this.condition.Special = this.checkEditSpecial.Checked;
+
+            this.condition.XOCustomerId1 = this.ncc_XOCustomer1.EditValue as Model.Customer;
+            this.condition.XOCustomerId2 = this.ncc_XOCustomer2.EditValue as Model.Customer;
         }
 
         private void buttonEditPro_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -144,6 +149,11 @@ namespace Book.UI.Query
             }
             form.Dispose();
             GC.Collect();
+        }
+
+        private void ncc_XOCustomer1_EditValueChanged(object sender, EventArgs e)
+        {
+            this.ncc_XOCustomer2.EditValue = this.ncc_XOCustomer1.EditValue;
         }
     }
 }

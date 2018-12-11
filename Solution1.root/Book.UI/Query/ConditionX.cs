@@ -142,5 +142,9 @@ namespace Book.UI.Query
             get { return _special; }
             set { _special = value; }
         }
+
+        public Model.Customer XOCustomerId1 { get; set; }
+
+        public Model.Customer XOCustomerId2 { get; set; }
     }
 }

@@ -103,9 +103,9 @@ namespace Book.BL
             return accessor.SelectbyConditionX(StartDate, EndDate, Yjri1, Yjri2, Customer1, Customer2, XOId1, XOId2, Product, Product2, CusXOId, OrderColumn, OrderType);
         }
 
-        public System.Data.DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Model.Customer Customer1, Model.Customer Customer2, string XOId1, string XOId2, Model.Product Product, Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial)
+        public System.Data.DataTable SelectbyConditionXBiao(DateTime StartDate, DateTime EndDate, DateTime Yjri1, DateTime Yjri2, Model.Customer Customer1, Model.Customer Customer2, string XOId1, string XOId2, Model.Product Product, Model.Product Product2, string CusXOId, int OrderColumn, int OrderType, bool? isSpecial, Model.Customer XOCustomer1, Model.Customer XOCustomer2)
         {
-            return accessor.SelectbyConditionXBiao(StartDate, EndDate, Yjri1, Yjri2, Customer1, Customer2, XOId1, XOId2, Product, Product2, CusXOId, OrderColumn, OrderType, isSpecial);
+            return accessor.SelectbyConditionXBiao(StartDate, EndDate, Yjri1, Yjri2, Customer1, Customer2, XOId1, XOId2, Product, Product2, CusXOId, OrderColumn, OrderType, isSpecial, XOCustomer1, XOCustomer2);
         }
 
         public System.Data.DataTable SelectAnnualShipment(string ProductId, DateTime StartDate, DateTime EndDate, string CustomerId, int showType)
