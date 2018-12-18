@@ -129,9 +129,11 @@ namespace Book.UI.Hr.Attendance.Leave
 
                 this.newChooseContorl1.ShowButton = true;
                 this.newChooseContorl1.Enabled = false;
-                this.dateedit.Enabled = true;
                 //this.calcLeaveCount.Enabled = this._leave.LeaveRange > 2 ? true : false;
                 base.Refresh();
+
+                this.dateedit.Enabled = true;
+                this.dateedit.Properties.ReadOnly = false;
             }
         }
 
@@ -213,6 +215,7 @@ namespace Book.UI.Hr.Attendance.Leave
             this.newChooseContorl1.ShowButton = true;
             this.newChooseContorl1.Enabled = false;
             this.dateedit.Enabled = true;
+            this.dateedit.Properties.ReadOnly = false;
             this.checkEditAll.Checked = false;
             //this.calcLeaveCount.Enabled = this._leave.LeaveRange > 2 ? true : false;
             //this.chkIsAll.Enabled = true;
@@ -463,6 +466,45 @@ namespace Book.UI.Hr.Attendance.Leave
             IList<Model.Employee> emplist = this.bs_Employees.DataSource as IList<Model.Employee>;
             YearLeaveList f = new YearLeaveList(emplist);
             f.ShowDialog();
+        }
+
+        private void bar_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Model.Employee emp = this.bs_Employees.Current as Model.Employee;
+            if (emp == null)
+            {
+                MessageBox.Show("請先選擇一名員工", this.Text, MessageBoxButtons.OK);
+                return;
+            }
+
+            Type objClassType = null;
+            objClassType = Type.GetTypeFromProgID("Excel.Application");
+            if (objClassType == null)
+            {
+                MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
+                return;
+            }
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Application.Workbooks.Add(true);
+            Microsoft.Office.Interop.Excel.Worksheet sheet = (Microsoft.Office.Interop.Excel.Worksheet)excel.Worksheets[1];
+
+            sheet.Cells[1, 1] = "日期";
+            sheet.Cells[1, 2] = "休假天數";
+            sheet.Cells[1, 3] = "休假類別";
+            sheet.Cells[1, 4] = "休假原因";
+
+            int row = 2;
+            foreach (var item in this._leaveList)
+            {
+                sheet.Cells[row, 1] = item.LeaveDate.Value.ToString("yyyy-MM-dd");
+                sheet.Cells[row, 2] = item.LeaveDay;
+                sheet.Cells[row, 3] = item.LeaveType.ToString();
+                sheet.Cells[row, 4] = item.LeaveText;
+
+                row++;
+            }
+
+            excel.Visible = true;
         }
     }
 }

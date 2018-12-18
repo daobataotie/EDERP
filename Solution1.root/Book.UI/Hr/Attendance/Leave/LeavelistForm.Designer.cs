@@ -80,6 +80,7 @@ namespace Book.UI.Hr.Attendance.Leave
             this.barBtnSearchBetweenDate = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_ExportExcel = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -130,8 +131,9 @@ namespace Book.UI.Hr.Attendance.Leave
             this.barBtnDelbyCondition,
             this.barBtnSearchBetweenDate,
             this.barButtonItem1,
-            this.barButtonItem2});
-            this.barManager1.MaxItemId = 16;
+            this.barButtonItem2,
+            this.bar_ExportExcel});
+            this.barManager1.MaxItemId = 17;
             // 
             // imageCollection1
             // 
@@ -143,7 +145,8 @@ namespace Book.UI.Hr.Attendance.Leave
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnDelbyCondition, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnSearchBetweenDate, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bar_ExportExcel)});
             this.bar1.OptionsBar.UseWholeRow = true;
             // 
             // splitContainerControl1
@@ -285,7 +288,7 @@ namespace Book.UI.Hr.Attendance.Leave
             this.layoutControlItem10});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "Root";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(403, 512);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(403, 521);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem7
@@ -305,7 +308,7 @@ namespace Book.UI.Hr.Attendance.Leave
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(383, 444);
+            this.layoutControlItem8.Size = new System.Drawing.Size(383, 453);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
             this.layoutControlItem8.TextVisible = false;
@@ -323,7 +326,7 @@ namespace Book.UI.Hr.Attendance.Leave
             // 
             this.layoutControlItem10.Control = this.checkEditAll;
             resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 469);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 478);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(383, 23);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
@@ -478,16 +481,16 @@ namespace Book.UI.Hr.Attendance.Leave
             this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(607, 512);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(582, 521);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.gridControl1;
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 110);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 112);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(587, 382);
+            this.layoutControlItem1.Size = new System.Drawing.Size(562, 389);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
@@ -496,9 +499,9 @@ namespace Book.UI.Hr.Attendance.Leave
             // 
             this.layoutControlItem3.Control = this.lookUpEdit1;
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
-            this.layoutControlItem3.Location = new System.Drawing.Point(354, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(339, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(233, 25);
+            this.layoutControlItem3.Size = new System.Drawing.Size(223, 25);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem2
@@ -507,16 +510,16 @@ namespace Book.UI.Hr.Attendance.Leave
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(186, 25);
+            this.layoutControlItem2.Size = new System.Drawing.Size(178, 25);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.newChooseContorl1;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(186, 25);
+            this.layoutControlItem6.Location = new System.Drawing.Point(178, 25);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(401, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(384, 25);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem5
@@ -525,7 +528,7 @@ namespace Book.UI.Hr.Attendance.Leave
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(587, 60);
+            this.layoutControlItem5.Size = new System.Drawing.Size(562, 62);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem4
@@ -534,16 +537,16 @@ namespace Book.UI.Hr.Attendance.Leave
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(186, 25);
+            this.layoutControlItem4.Size = new System.Drawing.Size(178, 25);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.dateEditLeaveDateEnd;
             resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(186, 0);
+            this.layoutControlItem11.Location = new System.Drawing.Point(178, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(168, 25);
+            this.layoutControlItem11.Size = new System.Drawing.Size(161, 25);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(60, 14);
             // 
             // barBtnListPrint
@@ -580,6 +583,13 @@ namespace Book.UI.Hr.Attendance.Leave
             this.barButtonItem2.Id = 15;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // bar_ExportExcel
+            // 
+            resources.ApplyResources(this.bar_ExportExcel, "bar_ExportExcel");
+            this.bar_ExportExcel.Id = 16;
+            this.bar_ExportExcel.Name = "bar_ExportExcel";
+            this.bar_ExportExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ExportExcel_ItemClick);
             // 
             // LeavelistForm
             // 
@@ -687,5 +697,6 @@ namespace Book.UI.Hr.Attendance.Leave
         private DevExpress.XtraEditors.CheckEdit checkEditAll;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem bar_ExportExcel;
     }
 }

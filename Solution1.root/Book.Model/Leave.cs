@@ -46,5 +46,27 @@ namespace Book.Model
             }
         }
 
+        public string LeaveDay
+        {
+            get
+            {
+                string day = "";
+                switch (this.LeaveRange.Value.ToString())
+                {
+                    case "0":
+                        day = "整日";
+                        break;
+                    case "1":
+                        day = "上半日";
+                        break;
+                    case "2":
+                        day = "下半日";
+                        break;
+                }
+
+                return day;
+            }
+        }
+
     }
 }

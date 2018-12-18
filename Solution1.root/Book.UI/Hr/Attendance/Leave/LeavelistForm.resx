@@ -120,18 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="barBtnDelbyCondition.Caption" xml:space="preserve">
-    <value>条件删除</value>
-  </data>
-  <data name="barBtnSearchBetweenDate.Caption" xml:space="preserve">
-    <value>该员工日期区间查询</value>
-  </data>
-  <data name="barButtonItem1.Caption" xml:space="preserve">
-    <value>所有员工查询</value>
-  </data>
-  <data name="barButtonItem2.Caption" xml:space="preserve">
-    <value>年度請假彙總</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -365,7 +353,7 @@
     <value>0, 47</value>
   </data>
   <data name="checkEditAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 481</value>
+    <value>12, 490</value>
   </data>
   <data name="checkEditAll.Properties.Caption" xml:space="preserve">
     <value>全選</value>
@@ -535,7 +523,7 @@
     <value>24</value>
   </data>
   <data name="grid_Employees.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 440</value>
+    <value>379, 449</value>
   </data>
   <data name="grid_Employees.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -589,7 +577,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 512</value>
+    <value>403, 521</value>
   </data>
   <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -613,13 +601,13 @@
     <value>Panel1</value>
   </data>
   <data name="dateEditLeaveDateEnd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 12</value>
+    <value>254, 12</value>
   </data>
   <data name="dateEditLeaveDateEnd.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="dateEditLeaveDateEnd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 21</value>
+    <value>93, 21</value>
   </data>
   <data name="dateEditLeaveDateEnd.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -637,10 +625,10 @@
     <value>4</value>
   </data>
   <data name="newChooseContorl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 37</value>
+    <value>254, 37</value>
   </data>
   <data name="newChooseContorl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 21</value>
+    <value>316, 21</value>
   </data>
   <data name="newChooseContorl1.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -658,7 +646,7 @@
     <value>5</value>
   </data>
   <data name="lookUpEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>430, 12</value>
+    <value>415, 12</value>
   </data>
   <data name="lookUpEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -697,7 +685,7 @@
     <value />
   </data>
   <data name="lookUpEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
+    <value>155, 21</value>
   </data>
   <data name="lookUpEdit1.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -733,7 +721,7 @@
     <value>下半日</value>
   </data>
   <data name="cmbLeaveDayCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="cmbLeaveDayCount.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -757,7 +745,7 @@
     <value>Combo</value>
   </data>
   <data name="dateEditLeaveDateStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="dateEditLeaveDateStart.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -778,7 +766,7 @@
     <value>76, 62</value>
   </data>
   <data name="memoEditLeaveDesc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>519, 56</value>
+    <value>494, 58</value>
   </data>
   <data name="memoEditLeaveDesc.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -802,7 +790,7 @@
     <value>False</value>
   </data>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 122</value>
+    <value>12, 124</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>日期</value>
@@ -847,7 +835,7 @@
     <value> </value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>583, 378</value>
+    <value>558, 385</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -919,7 +907,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>607, 512</value>
+    <value>582, 521</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -943,7 +931,7 @@
     <value>Panel2</value>
   </data>
   <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1015, 512</value>
+    <value>990, 521</value>
   </data>
   <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -966,9 +954,24 @@
   <data name="barBtnListPrint.Caption" xml:space="preserve">
     <value>列印休假记录</value>
   </data>
+  <data name="barBtnDelbyCondition.Caption" xml:space="preserve">
+    <value>条件删除</value>
+  </data>
   <metadata name="bs_Department.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>746, 17</value>
   </metadata>
+  <data name="barBtnSearchBetweenDate.Caption" xml:space="preserve">
+    <value>该员工日期区间查询</value>
+  </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>所有员工查询</value>
+  </data>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>年度請假彙總</value>
+  </data>
+  <data name="bar_ExportExcel.Caption" xml:space="preserve">
+    <value>導出Excel</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -979,7 +982,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1015, 559</value>
+    <value>990, 568</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>员工休假</value>
@@ -1228,6 +1231,12 @@
     <value>barButtonItem2</value>
   </data>
   <data name="&gt;&gt;barButtonItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bar_ExportExcel.Name" xml:space="preserve">
+    <value>bar_ExportExcel</value>
+  </data>
+  <data name="&gt;&gt;bar_ExportExcel.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
