@@ -1334,8 +1334,8 @@ namespace Book.UI.produceManager.ProduceInDepot
         }
 
         private void newChooseWorkHorseId_EditValueChanged(object sender, EventArgs e)
-        {
-            if (newChooseWorkHorseId.EditValue != null)
+         {
+             if (newChooseWorkHorseId.EditValue != null && this.action != "view")
             {
                 foreach (var item in this.produceInDepot.Details)
                 {
