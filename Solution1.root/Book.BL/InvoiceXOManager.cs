@@ -465,6 +465,10 @@ namespace Book.BL
             accessor.UpdateSql(sql.ToString());
         }
 
+        public string SelectCusXOIdByPronoteHeaderId(string id)
+        {
+            return accessor.SelectCusXOIdByPronoteHeaderId(id);
+        }
     }
 }
 

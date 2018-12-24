@@ -126,59 +126,26 @@
   <data name="xrLabel9.Text" xml:space="preserve">
     <value>制單人：</value>
   </data>
-  <data name="xrTableCell10.Text" xml:space="preserve">
-    <value>合計生產數量</value>
-  </data>
-  <data name="xrTableCell9.Text" xml:space="preserve">
-    <value>生產單號</value>
-  </data>
-  <data name="xrTableCell8.Text" xml:space="preserve">
-    <value>轉生產數量</value>
-  </data>
-  <data name="xrTableCell12.Text" xml:space="preserve">
-    <value>合計合格數量</value>
-  </data>
-  <data name="xrTableCell15.Text" xml:space="preserve">
-    <value>班別</value>
-  </data>
-  <data name="xrTableCell17.Text" xml:space="preserve">
-    <value>黑點</value>
-  </data>
-  <data name="xrTableCell18.Text" xml:space="preserve">
-    <value>雜質</value>
-  </data>
-  <data name="xrTableCell19.Text" xml:space="preserve">
-    <value>主件訂單數量</value>
-  </data>
-  <data name="xrTableCell20.Text" xml:space="preserve">
-    <value>生產數量</value>
-  </data>
-  <data name="xrTableCell21.Text" xml:space="preserve">
-    <value>合格數量</value>
-  </data>
-  <data name="xrTableCell3.Text" xml:space="preserve">
-    <value>金額</value>
-  </data>
-  <data name="xrTableCell6.Text" xml:space="preserve">
-    <value>單價</value>
-  </data>
   <data name="xrTableCell5.Text" xml:space="preserve">
     <value>數量</value>
   </data>
-  <data name="xrTableCell13.Text" xml:space="preserve">
-    <value>規格型號</value>
-  </data>
-  <data name="xrTableCell14.Text" xml:space="preserve">
-    <value>入庫時間</value>
-  </data>
   <data name="xrTableCell11.Text" xml:space="preserve">
     <value>公司部門</value>
+  </data>
+  <data name="xrTableCell2.Text" xml:space="preserve">
+    <value>客戶型號</value>
   </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
     <value>貨品名稱</value>
   </data>
   <data name="xrTableCell4.Text" xml:space="preserve">
     <value>貨品編號</value>
+  </data>
+  <data name="xrTableCell3.Text" xml:space="preserve">
+    <value>加工單號</value>
+  </data>
+  <data name="xrTableCell6.Text" xml:space="preserve">
+    <value>客戶訂單號碼</value>
   </data>
   <data name="xrLabel5.Text" xml:space="preserve">
     <value>日      期：</value>

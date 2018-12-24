@@ -29,6 +29,7 @@ namespace Book.DA
         bool IsHasMps(string invoiceId);
         string SelectInvoiceYjrq(string invoiceid);
         string SelectCusXOIdByPrimaryId(string id);
+        string SelectCusXOIdByPronoteHeaderId(string id);
     }
 }
 

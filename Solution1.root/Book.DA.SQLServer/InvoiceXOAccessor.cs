@@ -118,6 +118,11 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<string>("InvoiceXO.SelectCusXOIdByPrimaryId", id);
         }
+
+        public string SelectCusXOIdByPronoteHeaderId(string id)
+        {
+            return sqlmapper.QueryForObject<string>("InvoiceXO.SelectCusXOIdByPronoteHeaderId", id);
+        }
         #endregion
     }
 }

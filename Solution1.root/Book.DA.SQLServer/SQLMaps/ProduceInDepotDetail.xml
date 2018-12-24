@@ -148,5 +148,6 @@
       select CustomerProductName from Product where ProductId=(select ProductId from MPSdetails where MPSdetailsId =(select MPSdetailsId from MRSdetails where MRSdetailsId = (select MRSdetailsId from PronoteHeader where PronoteHeaderID=#value#)))
       ]]>
     </select>
+    
   </statements>
 </sqlMap>
