@@ -47,6 +47,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -95,6 +96,7 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bsLUEemployees = new System.Windows.Forms.BindingSource(this.components);
             this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -110,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).BeginInit();
@@ -153,6 +156,10 @@
             // imageCollection1
             // 
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            // 
+            // bar1
+            // 
+            this.bar1.OptionsBar.UseWholeRow = true;
             // 
             // layoutControl1
             // 
@@ -318,7 +325,8 @@
             this.repositoryItemSpinEdit4,
             this.repositoryItemSpinEdit5,
             this.repositoryItemSpinEdit6,
-            this.repositoryItemCheckEdit2});
+            this.repositoryItemCheckEdit2,
+            this.repositoryItemComboBox1});
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -346,8 +354,16 @@
             // gridColumn1
             // 
             resources.ApplyResources(this.gridColumn1, "gridColumn1");
+            this.gridColumn1.ColumnEdit = this.repositoryItemComboBox1;
             this.gridColumn1.FieldName = "Method";
             this.gridColumn1.Name = "gridColumn1";
+            // 
+            // repositoryItemComboBox1
+            // 
+            resources.ApplyResources(this.repositoryItemComboBox1, "repositoryItemComboBox1");
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemComboBox1.Buttons"))))});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
             // gridColumn2
             // 
@@ -871,6 +887,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "EditForm";
             this.Controls.SetChildIndex(this.layoutControl1, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -886,6 +903,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).EndInit();
@@ -995,5 +1013,6 @@
         private DevExpress.XtraEditors.LookUpEdit lookUpEditUnit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private System.Windows.Forms.BindingSource bindingSourceUnit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
     }
 }

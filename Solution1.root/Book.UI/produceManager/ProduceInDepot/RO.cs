@@ -76,8 +76,6 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.xrTableCellCustomerProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_CustomerProductName);
             this.xrTableCellPronoteHeaderId.DataBindings.Add("Text", this.DataSource, Model.ProduceInDepotDetail.PRO_PronoteHeaderId);
             this.TCCusXOId.DataBindings.Add("Text", this.DataSource, "CusXOId");
-            this.xrRichText1.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
         }
-
     }
 }

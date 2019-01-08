@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListForm));
             this.barBtn_Search = new DevExpress.XtraBars.BarButtonItem();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,6 +45,9 @@
             this.che_Out = new DevExpress.XtraEditors.CheckEdit();
             this.che_HomeMade = new DevExpress.XtraEditors.CheckEdit();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.btn_OK = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -54,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.che_Out.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.che_HomeMade.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -75,13 +79,15 @@
             // 
             // gridControl1
             // 
-            gridLevelNode1.RelationName = "Level1";
-            gridLevelNode2.RelationName = "Level2";
-            gridLevelNode3.RelationName = "Level3";
+            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode5.RelationName = "Level2";
+            gridLevelNode6.RelationName = "Level3";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1,
-            gridLevelNode2,
-            gridLevelNode3});
+            gridLevelNode4,
+            gridLevelNode5,
+            gridLevelNode6});
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit1});
             // 
             // gridView1
             // 
@@ -95,7 +101,8 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
-            this.gridColumn10});
+            this.gridColumn10,
+            this.gridColumn11});
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -195,15 +202,36 @@
             this.gridColumn10.FieldName = "attrBanBie";
             this.gridColumn10.Name = "gridColumn10";
             // 
+            // gridColumn11
+            // 
+            resources.ApplyResources(this.gridColumn11, "gridColumn11");
+            this.gridColumn11.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.gridColumn11.FieldName = "IsChecked";
+            this.gridColumn11.Name = "gridColumn11";
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemCheckEdit1, "repositoryItemCheckEdit1");
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
+            // btn_OK
+            // 
+            resources.ApplyResources(this.btn_OK, "btn_OK");
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
+            // 
             // ListForm
             // 
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.che_Out);
             this.Controls.Add(this.che_HomeMade);
             this.Name = "ListForm";
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             this.Controls.SetChildIndex(this.che_HomeMade, 0);
             this.Controls.SetChildIndex(this.che_Out, 0);
+            this.Controls.SetChildIndex(this.btn_OK, 0);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
@@ -213,6 +241,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.che_Out.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.che_HomeMade.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +261,8 @@
         private DevExpress.XtraEditors.CheckEdit che_Out;
         private DevExpress.XtraEditors.CheckEdit che_HomeMade;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraEditors.SimpleButton btn_OK;
     }
 }

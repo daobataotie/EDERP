@@ -58,6 +58,11 @@ namespace Book.BL
         {
             accessor.DeleteByHeaderId(invoiceid);
         }
+
+        public IList<Book.Model.InvoiceXJDetail> SelectLevel0(string InvoiceId)
+        {
+            return accessor.SelectLevel0(InvoiceId);
+        }
     }
 }
 

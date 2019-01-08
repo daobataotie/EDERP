@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<!--<?xml version="1.0" encoding="utf-8" ?>--> 
 <sqlMap namespace="InvoiceXJDetail" xmlns="http://ibatis.apache.org/mapping" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<statements>
@@ -23,5 +23,9 @@
       from dbo.invoicexjdetail
       where invoiceid=#value#
     </delete>
+
+    <select id="SelectLevel0" parameterClass="string" resultMap="InvoiceXJDetailResult">
+      select * from InvoiceXJDetail where  InvoiceId=#value# and ParentId='000'
+    </select>
   </statements>
 </sqlMap>

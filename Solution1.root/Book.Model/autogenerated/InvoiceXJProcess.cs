@@ -125,7 +125,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 单价
+        /// 报价
         /// </summary>
         public double? InvoiceXJProcessPrice
         {

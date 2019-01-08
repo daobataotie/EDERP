@@ -29,6 +29,11 @@ namespace Book.UI.produceManager.PCFogCheck
             this.nccEmployee0.Choose = new ChooseEmployee();
             this.newChooseContorlAuditEmp.Choose = new ChooseEmployee();
             this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
+
+            foreach (Model.Setting SET in new BL.SettingManager().SelectByName("FogMethod"))
+            {
+                this.repositoryItemComboBox1.Properties.Items.Add(SET.SettingCurrentValue);
+            }
         }
 
         int LastFlag = 0;
@@ -154,6 +159,11 @@ namespace Book.UI.produceManager.PCFogCheck
 
         protected override void MoveLast()
         {
+            if (this.LastFlag == 1)
+            {
+                this.LastFlag = 0;
+                return;
+            }
             this._pcfog = this._pcfogManager.GetLast();
         }
 
@@ -254,6 +264,8 @@ namespace Book.UI.produceManager.PCFogCheck
                     this._pcfog.ProductId = currentModel.ProductId;
                     this._pcfog.mCheckStandard = currentModel.CustomerCheckStandard;
                     this._pcfog.InvoiceXOQuantity = currentModel.InvoiceXODetailQuantity;
+                    this._pcfog.ProductUnitId = this._pcfog.Product.BuyUnitId;
+                    this._pcfog.ProductUnit = this._pcfog.Product.BuyUnit;
 
                     this.Refresh();
                 }

@@ -137,6 +137,10 @@ namespace Book.UI.produceManager.PCParameterSet
             dr["SettingSetId"] = "ASWANSignature";
             dr["SettingName"] = "ASWAN外销报告署名";
             da.Rows.Add(dr);
+            dr = da.NewRow();
+            dr["SettingSetId"] = "FogMethod";
+            dr["SettingName"] = "霧都測試單Method";
+            da.Rows.Add(dr);
 
             this._detail = this.settingManager.SelectTagOrderDefault("PCISO");
             this.requireValueExceptions.Add(Model.Setting.PRO_SettingName, new AA(Properties.Resources.NameIsNotNull, this.gridControl1));

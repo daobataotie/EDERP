@@ -68,7 +68,7 @@ namespace Book.UI.Invoices.XJ
             foreach (var item in list)
             {
                 item.InvoiceXJProcessCB1 = item.InvoiceXJProcessCB1 == 0 ? null : item.InvoiceXJProcessCB1;
-                item.InvoiceXJProcessCB2 = item.InvoiceXJProcessCB2 == 0 ? null : item.InvoiceXJProcessCB1;
+                item.InvoiceXJProcessCB2 = item.InvoiceXJProcessCB2 == 0 ? null : item.InvoiceXJProcessCB2;
                 item.InvoiceXJProcessPrice = item.InvoiceXJProcessPrice == 0 ? null : item.InvoiceXJProcessPrice;
                 item.InvoiceXJProcessQuantity = item.InvoiceXJProcessQuantity == 0 ? null : item.InvoiceXJProcessQuantity;
                 item.DanJia = item.DanJia == 0 ? null : item.DanJia;

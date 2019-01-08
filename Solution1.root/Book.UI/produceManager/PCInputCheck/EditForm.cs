@@ -212,6 +212,11 @@ namespace Book.UI.produceManager.PCInputCheck
 
             this._PCInputCheck.TestQuantity = this.spe_TestQuantity.Value;
 
+            this._PCInputCheck.PCImpactCheckId = this.btn_Impact.Text;
+            this._PCInputCheck.PCFogCheckId = this.btn_Fog.Text;
+            this._PCInputCheck.PCFlameRetardantId = this.btn_FlameRetardant.Text;
+
+
             switch (this.action)
             {
                 case "insert":
@@ -305,6 +310,10 @@ namespace Book.UI.produceManager.PCInputCheck
 
             }
 
+            this.btn_Impact.EditValue = this._PCInputCheck.PCImpactCheckId;
+            this.btn_Fog.EditValue = this._PCInputCheck.PCFogCheckId;
+            this.btn_FlameRetardant.EditValue = this._PCInputCheck.PCFlameRetardantId;
+
             base.Refresh();
 
             switch (this.action)
@@ -320,6 +329,9 @@ namespace Book.UI.produceManager.PCInputCheck
                     this.btn_InvoiceCOId2.Properties.ReadOnly = true;
                     this.btn_InvoiceCOId3.Properties.ReadOnly = true;
                     this.btn_Product.Properties.ReadOnly = true;
+                    //this.btn_Impact.Properties.ReadOnly = true;
+                    //this.btn_Fog.Properties.ReadOnly = true;
+                    //this.btn_FlameRetardant.Properties.ReadOnly = true;
                     break;
                 default:
                     this.btn_InvoiceCGId1.Properties.Buttons[1].Visible = true;
@@ -332,6 +344,9 @@ namespace Book.UI.produceManager.PCInputCheck
                     this.btn_InvoiceCOId2.Properties.ReadOnly = true;
                     this.btn_InvoiceCOId3.Properties.ReadOnly = true;
                     this.btn_Product.Properties.ReadOnly = true;
+                    //this.btn_Impact.Properties.ReadOnly = true;
+                    //this.btn_Fog.Properties.ReadOnly = true;
+                    //this.btn_FlameRetardant.Properties.ReadOnly = true;
                     break;
             }
             updateCaption();
@@ -650,6 +665,60 @@ namespace Book.UI.produceManager.PCInputCheck
             else
                 this.barButtonItem4.Caption = "結案";
             this.barButtonItem4.Enabled = this.action == "view" ? true : false;
+        }
+
+        private void btn_Impact_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            PCImpactCheck.ListForm f = new Book.UI.produceManager.PCImpactCheck.ListForm(true);
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                this.btn_Impact.EditValue = f.PCImpactCheckId;
+            }
+        }
+
+        private void btn_Impact_DoubleClick(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.btn_Impact.Text))
+            {
+                PCImpactCheck.EditForm f = new Book.UI.produceManager.PCImpactCheck.EditForm(this.btn_Impact.Text);
+                f.ShowDialog(this);
+            }
+        }
+
+        private void btn_Fog_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            PCFogCheck.ListForm f = new Book.UI.produceManager.PCFogCheck.ListForm(true);
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                this.btn_Fog.EditValue = f.PCFogCheckId;
+            }
+        }
+
+        private void btn_Fog_DoubleClick(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.btn_Fog.Text))
+            {
+                PCFogCheck.EditForm f = new Book.UI.produceManager.PCFogCheck.EditForm(this.btn_Fog.Text);
+                f.ShowDialog(this);
+            }
+        }
+
+        private void btn_FlameRetardant_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            PCFlameRetardant.ListForm f = new Book.UI.produceManager.PCFlameRetardant.ListForm(true);
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                this.btn_FlameRetardant.EditValue = f.PCFlameRetardantId;
+            }
+        }
+
+        private void btn_FlameRetardant_DoubleClick(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.btn_FlameRetardant.Text))
+            {
+                PCFlameRetardant.EditForm f = new Book.UI.produceManager.PCFlameRetardant.EditForm(this.btn_FlameRetardant.Text);
+                f.ShowDialog(this);
+            }
         }
     }
 }

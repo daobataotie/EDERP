@@ -27,6 +27,8 @@ namespace Book.DA
         Hashtable getRecursiveInvoiceXJDetails(string invoiceXJid);
 
         void DeleteByHeaderId(string invoiceid);
+
+        IList<Book.Model.InvoiceXJDetail> SelectLevel0(string InvoiceId);
     }
 }
 

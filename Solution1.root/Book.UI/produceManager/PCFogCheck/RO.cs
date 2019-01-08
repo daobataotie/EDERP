@@ -46,8 +46,8 @@ namespace Book.UI.produceManager.PCFogCheck
             this.TCChkPassR.DataBindings.Add("Checked", this.DataSource, Model.PCFogCheckDetail.PRO_PassingR);
             this.TClblCL.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_attrCL);
             this.TClblCR.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_attrCR);
-            this.TClblCommentL.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_CommentLTime);
-            this.TClblCommentR.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_CommentRTime);
+            this.TClblCommentL.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_CommentLTime, "{0:yyyy-MM-dd}");
+            this.TClblCommentR.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_CommentRTime, "{0:yyyy-MM-dd}");
             this.TClblHL.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_attrHL);
             this.TClblHR.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_attrHR);
             this.TClblTL.DataBindings.Add("Text", this.DataSource, Model.PCFogCheckDetail.PRO_attrTL);

@@ -155,5 +155,10 @@ namespace Book.DA.SQLServer
         {
             sqlmapper.Delete("InvoiceXJDetail.delete_by_invoiceid", invoiceid);
         }
+
+        public IList<Book.Model.InvoiceXJDetail> SelectLevel0(string InvoiceId)
+        {
+            return sqlmapper.QueryForList<Model.InvoiceXJDetail>("InvoiceXJDetail.SelectLevel0", InvoiceId);
+        }
     }
 }

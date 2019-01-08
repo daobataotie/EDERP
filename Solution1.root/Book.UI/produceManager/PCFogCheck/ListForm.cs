@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Book.UI.produceManager.PCFogCheck
 {
@@ -15,7 +16,24 @@ namespace Book.UI.produceManager.PCFogCheck
         {
             InitializeComponent();
             this.manager = new BL.PCFogCheckManager();
+
+            this.gridColumn10.Visible = false;
+            this.btn_OK.Visible = false;
         }
+
+        /// <summary>
+        /// 用于入料检验单选择雾都测试单
+        /// </summary>
+        /// <param name="ShowCheck"></param>
+        public ListForm(bool ShowCheck)
+            : this()
+        {
+            this.gridView1.OptionsBehavior.Editable = true;
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 0;
+            this.btn_OK.Visible = true;
+        }
+
 
         protected override void RefreshData()
         {
@@ -53,6 +71,20 @@ namespace Book.UI.produceManager.PCFogCheck
         {
             Type type = typeof(EditForm);
             return (EditForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, args, null, null);
+        }
+
+        public string PCFogCheckId { get; set; }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            IList<Model.PCFogCheck> list = this.bindingSource1.DataSource as IList<Model.PCFogCheck>;
+            if (list != null)
+            {
+                Model.PCFogCheck pcFogCheck = list.FirstOrDefault(P => P.IsChecked == true);
+                if (pcFogCheck != null)
+                    this.PCFogCheckId = pcFogCheck.PCFogCheckId;
+            }
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

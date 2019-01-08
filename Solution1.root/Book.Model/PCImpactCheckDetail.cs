@@ -472,5 +472,7 @@ namespace Book.Model
         }
 
         public readonly static string PRO_SecondTestTime = "SecondTestTime";
+
+        public bool IsChecked { get; set; }
     }
 }

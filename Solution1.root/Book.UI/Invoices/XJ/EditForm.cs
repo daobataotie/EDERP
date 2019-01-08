@@ -13,6 +13,7 @@ using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
+using System.IO;
 
 namespace Book.UI.Invoices.XJ
 {
@@ -1018,7 +1019,7 @@ namespace Book.UI.Invoices.XJ
             return gn.LevelTemplate as GridView;
         }
 
-        private void BuildGridClumns(GridView gv, DataTable dt)
+        private void BuildGridClumns(GridView gv, System.Data.DataTable dt)
         {
             GridColumn col;
             foreach (DataColumn c in dt.Columns)
@@ -1919,6 +1920,255 @@ namespace Book.UI.Invoices.XJ
                         this.UpgradeDataRow(tabindex + 1, inParentId, mynewParentId);
                     }
                 }
+            }
+        }
+
+        //導出成本單
+        private void bar_ExportChengbendan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (this.invoice != null)
+            {
+                Type objClassType = null;
+                objClassType = Type.GetTypeFromProgID("Excel.Application");
+                if (objClassType == null)
+                {
+                    MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
+                    return;
+                }
+
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Application.Workbooks.Add(true);
+
+                #region Sheet1-商品明細
+                Microsoft.Office.Interop.Excel.Worksheet sheet = (Microsoft.Office.Interop.Excel.Worksheet)excel.Sheets[1];
+                sheet.Name = "商品明細";
+
+                Microsoft.Office.Interop.Excel.Range r = sheet.get_Range(sheet.Cells[1, 2], sheet.Cells[1, 5]);
+                r.MergeCells = true;//合并单元格
+                sheet.Cells.ColumnWidth = 25;
+                sheet.Cells[1, 1] = "成品名稱*：";
+                sheet.Cells[1, 2] = this.invoice.ProductModel;
+                sheet.get_Range(sheet.Cells[1, 1], sheet.Cells[1, 1]).RowHeight = 25;
+                sheet.get_Range(sheet.Cells[1, 1], sheet.Cells[1, 1]).Font.Size = 18;
+                sheet.get_Range(sheet.Cells[3, 1], sheet.Cells[3, 5]).ColumnWidth = 8;
+                sheet.get_Range(sheet.Cells[3, 1], sheet.Cells[3, 1]).ColumnWidth = 35;
+
+                sheet.Cells[3, 1] = "商品名稱*";
+                sheet.Cells[3, 2] = "數量*";
+                sheet.Cells[3, 3] = "單價*";
+                sheet.Cells[3, 4] = "成本*";
+                sheet.Cells[3, 5] = "報價";
+                sheet.get_Range(sheet.Cells[3, 1], sheet.Cells[3, 5]).Interior.Color = 12566463;
+
+                int row = 4;
+
+                this.invoice.Details = _invoiceXJDetailManager.SelectLevel0(this.invoice.InvoiceId);
+                foreach (var item in this.invoice.Details)
+                {
+                    sheet.Cells[row, 1] = item.ProductName;
+                    sheet.Cells[row, 2] = item.InvoiceXJDetailQuantity;
+                    sheet.Cells[row, 3] = item.InvoiceXJDetailPrice;
+                    sheet.Cells[row, 4] = item.InvoiceXJDetailMoney;
+                    sheet.Cells[row, 5] = item.InvoiceXJDetailQuote;
+
+                    row++;
+                }
+                #endregion
+
+                #region Sheet2-包裝明細
+                excel.Sheets.Add(Type.Missing, sheet, Type.Missing, Type.Missing);
+                Microsoft.Office.Interop.Excel.Worksheet sheet2 = (Microsoft.Office.Interop.Excel.Worksheet)excel.Sheets[2];
+                sheet2.Name = "包裝明細";
+
+                sheet2.get_Range(sheet2.Cells[1, 1], sheet2.Cells[1, 5]).ColumnWidth = 8;
+                sheet2.get_Range(sheet2.Cells[1, 1], sheet2.Cells[1, 1]).ColumnWidth = 35;
+
+                sheet2.Cells[1, 1] = "商品名稱*";
+                sheet2.Cells[1, 2] = "數量*";
+                sheet2.Cells[1, 3] = "單價*";
+                sheet2.Cells[1, 4] = "成本*";
+                sheet2.Cells[1, 5] = "報價";
+                sheet2.get_Range(sheet2.Cells[1, 1], sheet2.Cells[1, 5]).Interior.Color = 12566463;
+
+                int row2 = 2;
+                foreach (var item in this.invoice.DetailPackage)
+                {
+                    sheet2.Cells[row2, 1] = item.ProductName;
+                    sheet2.Cells[row2, 2] = item.InvoiceXJPackageDetailsQuantity;
+                    sheet2.Cells[row2, 3] = item.DanJia;
+                    sheet2.Cells[row2, 4] = item.InvoiceXJProcessCB1;
+                    sheet2.Cells[row2, 5] = item.PackagePrice;
+
+                    row2++;
+                }
+                #endregion
+
+                #region Sheet3-加工明細
+                excel.Sheets.Add(Type.Missing, sheet2, Type.Missing, Type.Missing);
+                Microsoft.Office.Interop.Excel.Worksheet sheet3 = (Microsoft.Office.Interop.Excel.Worksheet)excel.Sheets[3];
+                sheet3.Name = "加工明細";
+
+                sheet3.get_Range(sheet3.Cells[1, 1], sheet3.Cells[1, 5]).ColumnWidth = 8;
+                sheet3.get_Range(sheet3.Cells[1, 1], sheet3.Cells[1, 1]).ColumnWidth = 35;
+
+                sheet3.Cells[1, 1] = "商品名稱*";
+                sheet3.Cells[1, 2] = "數量*";
+                sheet3.Cells[1, 3] = "單價*";
+                sheet3.Cells[1, 4] = "成本*";
+                sheet3.Cells[1, 5] = "報價";
+                sheet3.get_Range(sheet3.Cells[1, 1], sheet3.Cells[1, 5]).Interior.Color = 12566463;
+
+                int row3 = 2;
+                foreach (var item in this.invoice.DetailsProcess)
+                {
+                    sheet3.Cells[row3, 1] = item.ProductName;
+                    sheet3.Cells[row3, 2] = item.InvoiceXJProcessQuantity;
+                    sheet3.Cells[row3, 3] = item.DanJia;
+                    sheet3.Cells[row3, 4] = item.InvoiceXJProcessCB1;
+                    sheet3.Cells[row3, 5] = item.InvoiceXJProcessPrice;
+
+                    row3++;
+                }
+                #endregion
+
+                excel.Visible = true;
+            }
+        }
+
+        //導入成本單
+        private void bar_ImportChengbendan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Type objClassType = null;
+            objClassType = Type.GetTypeFromProgID("Excel.Application");
+            if (objClassType == null)
+            {
+                MessageBox.Show("本機沒有安裝Excel", "提示！", MessageBoxButtons.OK);
+                return;
+            }
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Excel(*.xls,*.xlsx)|*.xls;*.xlsx";
+            ofd.Multiselect = false;
+            if (ofd.ShowDialog(this) == DialogResult.OK)
+            {
+                string fileName = ofd.FileName;
+
+                if (!string.IsNullOrEmpty(fileName))
+                {
+                    this.action = "insert";
+                    this.invoice = new Model.InvoiceXJ();
+                    this.invoice.InvoiceId = this._invoiceManager.GetNewId();
+                    this.invoice.InvoiceDate = DateTime.Now;
+                    this.invoice.InvoiceYxrq = DateTime.Now;
+                    this.invoice.Details = new List<Model.InvoiceXJDetail>();
+                    this.invoice.DetailsProcess = new List<Model.InvoiceXJProcess>();
+                    this.invoice.DetailPackage = new List<Model.InvoiceXJPackageDetails>();
+
+                    Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                    excel.Workbooks.Open(fileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
+                    try
+                    {
+
+                        #region Sheet1-商品明細
+                        Microsoft.Office.Interop.Excel.Worksheet sheet = (Microsoft.Office.Interop.Excel.Worksheet)excel.Sheets[1];
+                        int rowCount = sheet.UsedRange.Rows.Count;
+
+                        this.invoice.ProductModel = string.IsNullOrEmpty(((Microsoft.Office.Interop.Excel.Range)sheet.Cells[1, 2]).Text.ToString()) ? "" : ((Microsoft.Office.Interop.Excel.Range)sheet.Cells[1, 2]).Text.ToString().Trim();
+
+                        for (int i = 4; i <= rowCount; i++)
+                        {
+                            if (sheet.Cells[i, 1] != null)
+                                this.invoice.Details.Add(new Book.Model.InvoiceXJDetail()
+                                {
+                                    InvoiceXJDetailId = Guid.NewGuid().ToString(),
+                                    ProductName = ((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 1]).Text.ToString(),
+                                    InvoiceXJDetailQuantity = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 2]).Text.ToString()),
+                                    InvoiceXJDetailPrice = Convert.ToDecimal(((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 3]).Text.ToString()),
+                                    InvoiceXJDetailMoney = Convert.ToDecimal(((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 4]).Text.ToString()),
+                                    InvoiceXJDetailQuote = Convert.ToDecimal(((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 5]).Text.ToString())
+                                });
+                        }
+                        #endregion
+
+                        #region Sheet2-包裝明細
+                        Microsoft.Office.Interop.Excel.Worksheet sheet2 = (Microsoft.Office.Interop.Excel.Worksheet)excel.Sheets[2];
+                        int rowCount2 = sheet2.UsedRange.Rows.Count;
+
+                        for (int i = 2; i <= rowCount2; i++)
+                        {
+                            if (sheet2.Cells[i, 1] != null)
+                                this.invoice.DetailPackage.Add(new Book.Model.InvoiceXJPackageDetails()
+                                {
+                                    InvoiceXJPackageDetailsId = Guid.NewGuid().ToString(),
+                                    ProductName = ((Microsoft.Office.Interop.Excel.Range)sheet2.Cells[i, 1]).Text.ToString(),
+                                    InvoiceXJPackageDetailsQuantity = Convert.ToDouble(Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet2.Cells[i, 2]).Text.ToString())),
+                                    DanJia = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet2.Cells[i, 3]).Text.ToString()),
+                                    InvoiceXJProcessCB1 = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet2.Cells[i, 4]).Text.ToString()),
+                                    PackagePrice = Convert.ToDecimal(((Microsoft.Office.Interop.Excel.Range)sheet2.Cells[i, 5]).Text.ToString())
+                                });
+                        }
+                        #endregion
+
+                        #region Sheet3-加工明細
+                        Microsoft.Office.Interop.Excel.Worksheet sheet3 = (Microsoft.Office.Interop.Excel.Worksheet)excel.Sheets[3];
+                        int rowCount3 = sheet3.UsedRange.Rows.Count;
+
+                        for (int i = 2; i <= rowCount3; i++)
+                        {
+                            if (sheet3.Cells[i, 1] != null)
+                                this.invoice.DetailsProcess.Add(new Book.Model.InvoiceXJProcess()
+                                {
+                                    InvoiceXJProcessId = Guid.NewGuid().ToString(),
+                                    ProductName = ((Microsoft.Office.Interop.Excel.Range)sheet3.Cells[i, 1]).Text.ToString(),
+                                    InvoiceXJProcessQuantity = Convert.ToDouble(Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet3.Cells[i, 2]).Text.ToString())),
+                                    DanJia = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet3.Cells[i, 3]).Text.ToString()),
+                                    InvoiceXJProcessCB1 = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet3.Cells[i, 4]).Text.ToString()),
+                                    InvoiceXJProcessPrice = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet3.Cells[i, 5]).Text.ToString())
+                                });
+                        }
+                        #endregion
+
+                    }
+                    catch (Exception ex)
+                    {
+                        excel.Quit();
+                        MessageBox.Show(ex.Message);
+                        return;
+                    }
+
+                    this.Refresh();
+
+                    excel.Quit();
+                }
+            }
+        }
+
+        //下載成本單模版
+        private void bar_DownloadModel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "成本單模版.xlsx";
+            if (sf.ShowDialog(this) == DialogResult.OK)
+            {
+                string sourceFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Excel\\成本單模版.xlsx");
+                string destFile = sf.FileName;
+
+                File.Copy(sourceFile, destFile, true);
+            }
+        }
+
+        //下載成本單範例
+        private void bar_DownloadExample_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = "成本單範例.xlsx";
+            if (sf.ShowDialog(this) == DialogResult.OK)
+            {
+                string sourceFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Excel\\成本單範例.xlsx");
+                string destFile = sf.FileName;
+
+                File.Copy(sourceFile, destFile, true);
             }
         }
     }

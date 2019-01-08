@@ -120,9 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>317, 17</value>
   </metadata>
-  <data name="barBtn_Search.Caption" xml:space="preserve">
-    <value>查询</value>
-  </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
@@ -360,7 +357,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="repositoryItemCheckEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
     <value>gridControl1</value>
@@ -374,18 +375,20 @@
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="barBtn_Search.Caption" xml:space="preserve">
+    <value>查询</value>
+  </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>编号</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>107</value>
+    <value>109</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>日期</value>
@@ -394,7 +397,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
     <value>70</value>
@@ -406,7 +409,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
     <value>110</value>
@@ -418,7 +421,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
     <value>129</value>
@@ -433,10 +436,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="gridColumn6.Width" type="System.Int32, mscorlib">
-    <value>60</value>
+    <value>56</value>
   </data>
   <data name="gridColumn7.Caption" xml:space="preserve">
     <value>商品</value>
@@ -445,7 +448,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="gridColumn7.Width" type="System.Int32, mscorlib">
     <value>151</value>
@@ -457,25 +460,13 @@
     <value>True</value>
   </data>
   <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
     <value>56</value>
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
     <value>备注</value>
-  </data>
-  <data name="gridColumn10.Caption" xml:space="preserve">
-    <value>班別</value>
-  </data>
-  <data name="gridColumn10.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="gridColumn10.Width" type="System.Int32, mscorlib">
-    <value>60</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="che_Out.Location" type="System.Drawing.Point, System.Drawing">
@@ -500,7 +491,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;che_Out.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="che_HomeMade.Location" type="System.Drawing.Point, System.Drawing">
     <value>468, 12</value>
@@ -524,7 +515,55 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;che_HomeMade.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="gridColumn10.Caption" xml:space="preserve">
+    <value>班別</value>
+  </data>
+  <data name="gridColumn10.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gridColumn10.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="gridColumn11.Caption" xml:space="preserve">
+    <value>選擇</value>
+  </data>
+  <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn11.Width" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="btn_OK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 385</value>
+  </data>
+  <data name="btn_OK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_OK.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btn_OK.Text" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="&gt;&gt;btn_OK.Name" xml:space="preserve">
+    <value>btn_OK</value>
+  </data>
+  <data name="&gt;&gt;btn_OK.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_OK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_OK.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -639,6 +678,18 @@
   </data>
   <data name="&gt;&gt;gridColumn10.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn11.Name" xml:space="preserve">
+    <value>gridColumn11</value>
+  </data>
+  <data name="&gt;&gt;gridColumn11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemCheckEdit1.Name" xml:space="preserve">
+    <value>repositoryItemCheckEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemCheckEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ListForm</value>

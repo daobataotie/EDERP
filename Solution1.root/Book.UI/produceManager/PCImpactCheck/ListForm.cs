@@ -20,6 +20,9 @@ namespace Book.UI.produceManager.PCImpactCheck
         {
             InitializeComponent();
             //this.manager = new BL.PCImpactCheckManager();
+
+            this.gridColumn11.Visible = false;
+            this.btn_OK.Visible = false;
         }
 
         public ListForm(string InvoiceCusId)
@@ -27,6 +30,19 @@ namespace Book.UI.produceManager.PCImpactCheck
         {
             this.tag = 1;
             this.bindingSource1.DataSource = this.detailList = this.detailManager.SelectByDateRage(global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, InvoiceCusId);
+        }
+
+        /// <summary>
+        /// 用于入料检验单选择冲击测试单
+        /// </summary>
+        /// <param name="ShowCheck"></param>
+        public ListForm(bool ShowCheck)
+            : this()
+        {
+            this.gridView1.OptionsBehavior.Editable = true;
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 0;
+            this.btn_OK.Visible = true;
         }
 
         protected override void RefreshData()
@@ -125,6 +141,24 @@ namespace Book.UI.produceManager.PCImpactCheck
             //        e.DisplayText = this.detailManager.SelectChecker(detailList[e.ListSourceRowIndex].PCImpactCheckId);
             //    }
             //}
+        }
+
+        public string PCImpactCheckId { get; set; }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            this.gridView1.PostEditor();
+            this.gridView1.UpdateCurrentRow();
+
+            IList<Model.PCImpactCheckDetail> list = this.bindingSource1.DataSource as IList<Model.PCImpactCheckDetail>;
+            if (list != null)
+            {
+                Model.PCImpactCheckDetail detail = list.FirstOrDefault(P => P.IsChecked == true);
+                if (detail != null)
+                    this.PCImpactCheckId = detail.PCImpactCheckId;
+            }
+
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

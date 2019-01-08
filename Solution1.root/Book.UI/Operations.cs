@@ -763,6 +763,9 @@ namespace Book.UI
 
             //厂商交货准时率
             operations.Add("Settings.BasicData.Supplier.SupplierJiaohuoZhunshilv", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Supplier.SupplierJiaohuoZhunshilv", form); });
+
+            //阻燃性测试表
+            operations.Add("produceManager.PCFlameRetardant.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCFlameRetardant.EditForm", form); });
         }
 
         static Form CreateForm(string formTypeName)
