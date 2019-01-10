@@ -2060,6 +2060,10 @@ namespace Book.UI.Invoices.XJ
                     this.invoice.InvoiceId = this._invoiceManager.GetNewId();
                     this.invoice.InvoiceDate = DateTime.Now;
                     this.invoice.InvoiceYxrq = DateTime.Now;
+                    //this.invoice.CompanyId = (this.bindingSourceCompany.DataSource as IList<Model.Company>) == null ? null : (this.bindingSourceCompany.DataSource as IList<Model.Company>)[0].CompanyId;
+                    this.invoice.Employee0 = BL.V.ActiveOperator.Employee;
+                    this.invoice.InvoiceNote = "從Excel導入";
+
                     this.invoice.Details = new List<Model.InvoiceXJDetail>();
                     this.invoice.DetailsProcess = new List<Model.InvoiceXJProcess>();
                     this.invoice.DetailPackage = new List<Model.InvoiceXJPackageDetails>();
@@ -2082,6 +2086,9 @@ namespace Book.UI.Invoices.XJ
                                 this.invoice.Details.Add(new Book.Model.InvoiceXJDetail()
                                 {
                                     InvoiceXJDetailId = Guid.NewGuid().ToString(),
+                                    InvoiceId = this.invoice.InvoiceId,
+                                    ParentId = "000",
+
                                     ProductName = ((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 1]).Text.ToString(),
                                     InvoiceXJDetailQuantity = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 2]).Text.ToString()),
                                     InvoiceXJDetailPrice = Convert.ToDecimal(((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 3]).Text.ToString()),
@@ -2089,6 +2096,44 @@ namespace Book.UI.Invoices.XJ
                                     InvoiceXJDetailQuote = Convert.ToDecimal(((Microsoft.Office.Interop.Excel.Range)sheet.Cells[i, 5]).Text.ToString())
                                 });
                         }
+
+                        DataTable dtNew = new DataTable("Level0");
+                        dtNew.Columns.Add("Inumber", typeof(int));
+                        dtNew.Columns.Add("IsChecked", typeof(bool));
+                        dtNew.Columns.Add("InvoiceXJDetailId", typeof(string));
+                        dtNew.Columns.Add("InvoiceId", typeof(string));
+                        dtNew.Columns.Add("ProductName", typeof(string));
+                        dtNew.Columns.Add("Unit", typeof(string));
+                        dtNew.Columns.Add("InvoiceXJDetailPrice", typeof(decimal));
+                        dtNew.Columns.Add("InvoiceXJDetailQuantity", typeof(double));
+                        dtNew.Columns.Add("InvoiceXJDetailMoney", typeof(decimal));
+                        dtNew.Columns.Add("InvoiceXJDetailMoney2", typeof(decimal));
+                        dtNew.Columns.Add("InvoiceXJDetailQuote", typeof(decimal));
+                        dtNew.Columns.Add("ParentId", typeof(string));
+
+                        foreach (var item in this.invoice.Details)
+                        {
+                            DataRow dr = dtNew.NewRow();
+                            dr["InvoiceXJDetailId"] = item.InvoiceXJDetailId;
+                            dr["InvoiceId"] = item.InvoiceId;
+                            dr["ParentId"] = item.ParentId;
+
+                            dr["ProductName"] = item.ProductName;
+                            dr["InvoiceXJDetailPrice"] = item.InvoiceXJDetailPrice;
+                            dr["InvoiceXJDetailQuantity"] = item.InvoiceXJDetailQuantity;
+                            dr["InvoiceXJDetailMoney"] = item.InvoiceXJDetailMoney;
+                            dr["InvoiceXJDetailQuote"] = item.InvoiceXJDetailQuote;
+
+                            dtNew.Rows.Add(dr);
+                        }
+
+                        this._ds = new DataSet();
+                        this._ds.Tables.Add(dtNew);
+
+                        this._MaxRelations = 0;
+                        this.bindingSourceInvoiceXJDetail.DataSource = this._ds.Tables["Level0"];
+                        this.gridControl2.RefreshDataSource();
+
                         #endregion
 
                         #region Sheet2-包裝明細
@@ -2101,6 +2146,8 @@ namespace Book.UI.Invoices.XJ
                                 this.invoice.DetailPackage.Add(new Book.Model.InvoiceXJPackageDetails()
                                 {
                                     InvoiceXJPackageDetailsId = Guid.NewGuid().ToString(),
+                                    InvoiceId = this.invoice.InvoiceId,
+
                                     ProductName = ((Microsoft.Office.Interop.Excel.Range)sheet2.Cells[i, 1]).Text.ToString(),
                                     InvoiceXJPackageDetailsQuantity = Convert.ToDouble(Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet2.Cells[i, 2]).Text.ToString())),
                                     DanJia = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet2.Cells[i, 3]).Text.ToString()),
@@ -2120,6 +2167,7 @@ namespace Book.UI.Invoices.XJ
                                 this.invoice.DetailsProcess.Add(new Book.Model.InvoiceXJProcess()
                                 {
                                     InvoiceXJProcessId = Guid.NewGuid().ToString(),
+                                    InvoiceXJId = this.invoice.InvoiceId,
                                     ProductName = ((Microsoft.Office.Interop.Excel.Range)sheet3.Cells[i, 1]).Text.ToString(),
                                     InvoiceXJProcessQuantity = Convert.ToDouble(Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet3.Cells[i, 2]).Text.ToString())),
                                     DanJia = Convert.ToDouble(((Microsoft.Office.Interop.Excel.Range)sheet3.Cells[i, 3]).Text.ToString()),
@@ -2129,6 +2177,31 @@ namespace Book.UI.Invoices.XJ
                         }
                         #endregion
 
+                        decimal spCBTotal = 0;
+                        decimal spQuoteTotal = 0;
+                        foreach (var detail in this.invoice.Details)
+                        {
+                            spCBTotal += detail.InvoiceXJDetailMoney.HasValue ? detail.InvoiceXJDetailMoney.Value : 0;
+                            spQuoteTotal += detail.InvoiceXJDetailQuote.HasValue ? detail.InvoiceXJDetailQuote.Value : 0;
+                        }
+                        this.invoice.InvoiceProductTotal = spCBTotal;
+                        this.invoice.InvoiceBJProductTotal = spQuoteTotal;
+
+
+                        decimal bzCBTotal = Convert.ToDecimal((this.bindingSourcePackageDetails.DataSource as IList<Model.InvoiceXJPackageDetails>).Sum(d => d.InvoiceXJProcessCB1));
+                        decimal? bcBJTotal = (this.bindingSourcePackageDetails.DataSource as IList<Model.InvoiceXJPackageDetails>).Sum(d => d.PackagePrice);
+                        this.invoice.InvoicePackTotal = bzCBTotal;
+                        this.invoice.InvoiceBJPackTotal = bcBJTotal;
+
+
+                        decimal jgCBTotal = Convert.ToDecimal((this.bindingSourceProcess.DataSource as IList<Model.InvoiceXJProcess>).Sum(d => d.InvoiceXJProcessCB1));
+                        decimal jgBJTotal = Convert.ToDecimal((this.bindingSourceProcess.DataSource as IList<Model.InvoiceXJProcess>).Sum(d => d.InvoiceXJProcessPrice));
+
+                        this.invoice.InvoiceProcessTotal = jgCBTotal;
+                        this.invoice.InvoiceBJProcessTotal = jgBJTotal;
+
+                        this.invoice.InvoiceTotal = this.spinSPCBjinE.Value + this.spinBCCBjinE.Value + this.spinJGCBjinE.Value;
+                        this.invoice.InvoiceBJTotal = this.spinSPBJjinE.Value + this.spinBCBJjinE.Value + this.spinJGBJjinE.Value;
                     }
                     catch (Exception ex)
                     {
