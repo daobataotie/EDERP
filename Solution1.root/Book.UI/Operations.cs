@@ -47,6 +47,7 @@ namespace Book.UI
             operations.Add("produceManager.produceOtherExitMaterial.editForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.ProduceOtherExitMaterial.EditForm", form); });
             operations.Add("produceManager.pronotePackage.editForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PronotePackage.EditForm", form); });
             operations.Add("accountPayable.acInvoiceCOBill.editForm", (D1)delegate(System.Windows.Forms.Form form) { M1("AccountPayable.AcInvoiceCOBill.EditForm", form); });
+            //œ˙ €∑¢∆±
             operations.Add("accountPayable.acInvoiceXOBill.editForm", (D1)delegate(System.Windows.Forms.Form form) { M1("AccountPayable.AcInvoiceXOBill.EditForm", form); });
 
             operations.Add("accountPayable.acCollection.editForm", (D1)delegate(System.Windows.Forms.Form form) { M1("AccountPayable.AcCollection.EditForm", form); });

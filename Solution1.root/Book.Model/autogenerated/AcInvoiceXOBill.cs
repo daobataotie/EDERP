@@ -761,8 +761,8 @@ namespace Book.Model
 
         public readonly static string PRO_AuditEmpId = "AuditEmpId";
         #endregion
-        private int _IsCancel;
 
+        private int _IsCancel;
 
         public int IsCancel
         {
@@ -770,6 +770,95 @@ namespace Book.Model
             set { _IsCancel = value; }
         }
 
+        private string _invoiceType;
+
+        /// <summary>
+        /// 发票类别
+        /// </summary>
+        public string InvoiceType
+        {
+            get { return _invoiceType; }
+            set { _invoiceType = value; }
+        }
+
+        private string _clearanceType;
+
+        /// <summary>
+        /// 通关方式注记
+        /// </summary>
+        public string ClearanceType
+        {
+            get { return _clearanceType; }
+            set { _clearanceType = value; }
+        }
+
+        private decimal _exchangeRate;
+
+        /// <summary>
+        /// 汇率
+        /// </summary>
+        public decimal ExchangeRate
+        {
+            get { return _exchangeRate; }
+            set { _exchangeRate = value; }
+        }
+
+        private string _currency;
+
+        /// <summary>
+        /// 币别
+        /// </summary>
+        public string Currency
+        {
+            get { return _currency; }
+            set { _currency = value; }
+        }
+
+        private bool _huikaiNote;
+
+        public bool HuikaiNote
+        {
+            get { return _huikaiNote; }
+            set { _huikaiNote = value; }
+        }
+
+        private string _salesType;
+
+        /// <summary>
+        /// 销售类别
+        /// </summary>
+        public string SalesType
+        {
+            get { return _salesType; }
+            set { _salesType = value; }
+        }
+
+        private string _relatedNumbers;
+
+        /// <summary>
+        /// 相关号码
+        /// </summary>
+        public string RelatedNumbers
+        {
+            get { return _relatedNumbers; }
+            set { _relatedNumbers = value; }
+        }
+
+
         public readonly static string PRO_IsCancel = "IsCancel";
+
+        public readonly static string PRO_InvoiceType = "InvoiceType";
+
+        public readonly static string PRO_ClearanceType = "ClearanceType";
+
+        public readonly static string PRO_ExchangeRate = "ExchangeRate";
+
+        public readonly static string PRO_Currency = "Currency";
+
+        public readonly static string PRO_HuikaiNote = "HuikaiNote";
+
+        public readonly static string PRO_SalesType = "SalesType";
+
+        public readonly static string PRO_RelatedNumbers = "RelatedNumbers";
     }
 }

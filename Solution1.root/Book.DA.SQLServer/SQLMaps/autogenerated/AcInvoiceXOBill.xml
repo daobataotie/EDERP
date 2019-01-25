@@ -33,6 +33,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="AuditState" column="AuditState" />
       <result property="AuditEmpId" column="AuditEmpId" />
       <result property="IsCancel" column="IsCancel"/>
+      <result property="InvoiceType" column="InvoiceType"/>
+      <result property="ClearanceType" column="ClearanceType"/>
+      <result property="ExchangeRate" column="ExchangeRate"/>
+      <result property="Currency" column="Currency"/>
+      <result property="HuikaiNote" column="HuikaiNote"/>
+      <result property="SalesType" column="SalesType"/>
+      <result property="RelatedNumbers" column="RelatedNumbers"/>
       <result property="CustomerShouPiao" column="CustomerShouPiaoId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Employee1" column="Employee1Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -152,7 +159,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[CustomerShouPiaoId],
         [AuditState],
         [AuditEmpId],
-        [IsCancel]
+        [IsCancel],
+        [InvoiceType],
+        [ClearanceType],
+        [ExchangeRate], 
+        [Currency],
+        [HuikaiNote],
+        [SalesType],
+        [RelatedNumbers]
+        
         
 			FROM
 				[dbo].[AcInvoiceXOBill]
@@ -234,7 +249,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[CustomerShouPiaoId],
         [AuditState],
         [AuditEmpId],
-        [IsCancel]
+        [IsCancel],
+        [InvoiceType],
+        [ClearanceType],
+        [ExchangeRate], 
+        [Currency],
+        [HuikaiNote],
+        [SalesType],
+        [RelatedNumbers]
 			) 
 			VALUES 
 			(
@@ -264,7 +286,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#CustomerShouPiaoId#,
         #AuditState#,
         #AuditEmpId#,
-        #IsCancel#
+        #IsCancel#,
+        #InvoiceType#,
+        #ClearanceType#,
+        #ExchangeRate#, 
+        #Currency#,
+        #HuikaiNote#,
+        #SalesType#,
+        #RelatedNumbers#
 			)
              ]]>
     </insert>
@@ -297,7 +326,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[CustomerShouPiaoId] = #CustomerShouPiaoId#,
         [AuditState]=#AuditState#,
         [AuditEmpId]=#AuditEmpId#,
-        [IsCancel]=#IsCancel#
+        [IsCancel]=#IsCancel#,
+        [InvoiceType]=#InvoiceType#,
+        [ClearanceType]=#ClearanceType#,
+        [ExchangeRate]=#ExchangeRate#, 
+        [Currency]=#Currency#,
+        [HuikaiNote]=#HuikaiNote#,
+        [SalesType]=#SalesType#,
+        [RelatedNumbers]=#RelatedNumbers#
 			WHERE
 				[AcInvoiceXOBillId] = #AcInvoiceXOBillId#
                     ]]>

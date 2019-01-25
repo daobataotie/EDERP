@@ -4269,6 +4269,14 @@
       <DependentUpon>FPRO1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="AccountPayable\AcInvoiceXOBill\EditForm_BackUp.resx">
+      <DependentUpon>EditForm_BackUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountPayable\AcInvoiceXOBill\EditForm_BackUp.zh-CHT.resx">
+      <DependentUpon>EditForm_BackUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnnualCarryoverForm.resx">
       <DependentUpon>AnnualCarryoverForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11667,6 +11675,12 @@
     </Compile>
     <Compile Include="AccountPayable\AcInvoiceXOBill\FPRO1.Designer.cs">
       <DependentUpon>FPRO1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountPayable\AcInvoiceXOBill\EditForm_BackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountPayable\AcInvoiceXOBill\EditForm_BackUp.designer.cs">
+      <DependentUpon>EditForm_BackUp.cs</DependentUpon>
     </Compile>
     <Compile Include="AnnualCarryoverForm.cs">
       <SubType>Form</SubType>

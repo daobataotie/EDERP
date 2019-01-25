@@ -20,6 +20,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="InvoiceXODetailId" column="InvoiceXODetailId" />
       <result property="InvoiceProductUnit" column="InvoiceProductUnit" />
       <result property="InvoiceCOIdNote" column="InvoiceCOIdNote"/>
+      <result property="Price2" column="Price2"/>
+      <result property="Quantity2" column="Quantity2"/>
+      <result property="ProductUnit2" column="ProductUnit2"/>
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
       <result property="AcInvoiceXOBill" column="AcInvoiceXOBillId" lazyLoad="false" select="AcInvoiceXOBill.select_by_primary_key" />
       <result property="Invoice" column="InvoiceId" lazyLoad="false" select="InvoiceXS.select_by_primary_key" />
@@ -66,7 +69,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXODetaiInQuantity],
 				[InvoiceXODetailId],
 				[InvoiceProductUnit],
-        [InvoiceCOIdNote]
+        [InvoiceCOIdNote],
+        [Price2],
+        [Quantity2],
+        [ProductUnit2]
+                
 			FROM
 				[dbo].[AcInvoiceXOBillDetail]
 			WHERE
@@ -133,7 +140,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXODetaiInQuantity],
 				[InvoiceXODetailId],
 				[InvoiceProductUnit],
-        [InvoiceCOIdNote]
+        [InvoiceCOIdNote],
+        [Price2],
+        [Quantity2],
+        [ProductUnit2]
        
 			) 
 			VALUES 
@@ -151,7 +161,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#InvoiceXODetaiInQuantity#,
 				#InvoiceXODetailId#,
 				#InvoiceProductUnit#,
-        #InvoiceCOIdNote#
+        #InvoiceCOIdNote#,
+        #Price2#,
+        #Quantity2#,
+        #ProductUnit2#
 			)
              ]]>
     </insert>
@@ -171,7 +184,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[InvoiceXODetaiInQuantity] = #InvoiceXODetaiInQuantity#,
 				[InvoiceXODetailId] = #InvoiceXODetailId#,
 				[InvoiceProductUnit] = #InvoiceProductUnit#,
-        [InvoiceCOIdNote] = #InvoiceCOIdNote#
+        [InvoiceCOIdNote] = #InvoiceCOIdNote#,
+        [Price2]=#Price2#,
+        [Quantity2]=#Quantity2#,
+        [ProductUnit2]=#ProductUnit2#
 			WHERE
 				[AcInvoiceXOBillDetailId] = #AcInvoiceXOBillDetailId#
                     ]]>

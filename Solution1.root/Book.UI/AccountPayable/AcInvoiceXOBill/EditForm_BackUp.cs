@@ -14,7 +14,7 @@ using System.Linq;
 
 namespace Book.UI.AccountPayable.AcInvoiceXOBill
 {
-    public partial class EditForm : BaseEditForm
+    public partial class EditForm_BackUp : BaseEditForm
     {
         private BL.AcInvoiceXOBillManager _acInvoiceXoBillManager = new BL.AcInvoiceXOBillManager();
         private Model.AcInvoiceXOBill _acInvoiceXoBill;
@@ -25,7 +25,7 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
         int billIdIsDeleted = 0;
 
         int IsCancel = 0;
-        public EditForm()
+        public EditForm_BackUp()
         {
             InitializeComponent();
             this.requireValueExceptions.Add(Model.AcInvoiceXOBill.PRO_Id, new AA(Properties.Resources.AcInvoiceXOBillfpbh, this.XoId));
@@ -38,192 +38,6 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             this.newChooseCustomerId.Choose = new ChooseCustoms();
             this.newChooseCustomer2.Choose = new ChooseCustoms();
             this.action = "view";
-
-            #region LookUpEdit
-
-            #region 發票類別
-
-            DataTable dtInvoiceType = new DataTable();
-            dtInvoiceType.Columns.Add("Key", typeof(string));
-            dtInvoiceType.Columns.Add("Value", typeof(string));
-            DataRow dr = null;
-            dr = dtInvoiceType.NewRow();
-            dr[0] = "01";
-            dr[1] = "三聯式發票";
-            dtInvoiceType.Rows.Add(dr);
-            dr = dtInvoiceType.NewRow();
-            dr[0] = "02";
-            dr[1] = "二聯式發票";
-            dtInvoiceType.Rows.Add(dr);
-            dr = dtInvoiceType.NewRow();
-            dr[0] = "03";
-            dr[1] = "二聯式收銀機發票";
-            dtInvoiceType.Rows.Add(dr);
-            dr = dtInvoiceType.NewRow();
-            dr[0] = "04";
-            dr[1] = "特種稅額發票";
-            dtInvoiceType.Rows.Add(dr);
-            dr = dtInvoiceType.NewRow();
-            dr[0] = "05";
-            dr[1] = "電子計算機發票";
-            dtInvoiceType.Rows.Add(dr);
-            dr = dtInvoiceType.NewRow();
-            dr[0] = "06";
-            dr[1] = "三聯式收銀機發票";
-            dtInvoiceType.Rows.Add(dr);
-            dr = dtInvoiceType.NewRow();
-            dr[0] = "07";
-            dr[1] = "一般稅額計算電子發票";
-            dtInvoiceType.Rows.Add(dr);
-            dr = dtInvoiceType.NewRow();
-            dr[0] = "08";
-            dr[1] = "特種稅額計算電子發票";
-            dtInvoiceType.Rows.Add(dr);
-
-            this.lue_InvoiceType.Properties.DataSource = dtInvoiceType;
-            this.lue_InvoiceType.Properties.ValueMember = "Key";
-            this.lue_InvoiceType.Properties.DisplayMember = "Key";
-
-            #endregion
-
-            #region 通關方式註記
-            DataTable dtClearanceType = new DataTable();
-            dtClearanceType.Columns.Add("Key", typeof(string));
-            dtClearanceType.Columns.Add("Value", typeof(string));
-            DataRow drClearanceType = null;
-            drClearanceType = dtClearanceType.NewRow();
-            drClearanceType[0] = "1";
-            drClearanceType[1] = "非經海關出口";
-            dtClearanceType.Rows.Add(drClearanceType);
-            drClearanceType = dtClearanceType.NewRow();
-            drClearanceType[0] = "2";
-            drClearanceType[1] = "經海關出口";
-            dtClearanceType.Rows.Add(drClearanceType);
-
-            this.lue_ClearanceType.Properties.DataSource = dtClearanceType;
-            this.lue_ClearanceType.Properties.ValueMember = "Key";
-            this.lue_ClearanceType.Properties.DisplayMember = "Key";
-            #endregion
-
-            #region 幣別
-
-            DataTable dtCurrency = new DataTable();
-            dtCurrency.Columns.Add("Key", typeof(string));
-            dtCurrency.Columns.Add("Value", typeof(string));
-            DataRow drCurrency = null;
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "TWD";
-            drCurrency[1] = "新台幣";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "USD";
-            drCurrency[1] = "美金";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "GBP";
-            drCurrency[1] = "英鎊";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "DEM";
-            drCurrency[1] = "德國馬克";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "AUD";
-            drCurrency[1] = "澳大利亞幣";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "HKD";
-            drCurrency[1] = "港幣";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "SGD";
-            drCurrency[1] = "新加坡幣";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "CAD";
-            drCurrency[1] = "加拿大幣";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "CHF";
-            drCurrency[1] = "瑞士法郎";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "MYR";
-            drCurrency[1] = "馬來西亞幣";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "FRF";
-            drCurrency[1] = "法國法郎";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "BEF";
-            drCurrency[1] = "比利時法郎";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "SEK";
-            drCurrency[1] = "瑞典幣";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "JPY";
-            drCurrency[1] = "日圓";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "ITL";
-            drCurrency[1] = "義大利里拉";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "THB";
-            drCurrency[1] = "泰銖";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "NTD";
-            drCurrency[1] = "CURRENCY_NTD";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "EUR";
-            drCurrency[1] = "歐洲共同貨幣";
-            dtCurrency.Rows.Add(drCurrency);
-            drCurrency = dtCurrency.NewRow();
-            drCurrency[0] = "NZD";
-            drCurrency[1] = "紐西蘭幣";
-            dtCurrency.Rows.Add(drCurrency);
-
-            this.lue_Currency.Properties.DataSource = dtCurrency;
-            this.lue_Currency.Properties.ValueMember = "Key";
-            this.lue_Currency.Properties.DisplayMember = "Key";
-            #endregion
-
-            #region 銷售類別
-
-            DataTable dtSalesType = new DataTable();
-            dtSalesType.Columns.Add("Key", typeof(string));
-            dtSalesType.Columns.Add("Value", typeof(string));
-            DataRow drSalesType = null;
-            drSalesType = dtSalesType.NewRow();
-            drSalesType[0] = "0";
-            drSalesType[1] = "一般銷售";
-            dtSalesType.Rows.Add(drSalesType);
-            drSalesType = dtSalesType.NewRow();
-            drSalesType[0] = "1";
-            drSalesType[1] = "洋煙酒類";
-            dtSalesType.Rows.Add(drSalesType);
-            drSalesType = dtSalesType.NewRow();
-            drSalesType[0] = "2";
-            drSalesType[1] = "固定資產";
-            dtSalesType.Rows.Add(drSalesType);
-            drSalesType = dtSalesType.NewRow();
-            drSalesType[0] = "3";
-            drSalesType[1] = "土地";
-            dtSalesType.Rows.Add(drSalesType);
-
-            this.lue_SalesType.Properties.DataSource = dtSalesType;
-            this.lue_SalesType.Properties.ValueMember = "Key";
-            this.lue_SalesType.Properties.DisplayMember = "Key";
-
-            #endregion
-
-            #endregion
-
         }
 
         #region override
@@ -287,8 +101,6 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             this._acInvoiceXoBill.TaxRateType = 1;
             this._acInvoiceXoBill.TaxRate = 5;
             this._acInvoiceXoBill.IsCancel = 0;
-            this._acInvoiceXoBill.ClearanceType = "1";
-            this._acInvoiceXoBill.SalesType = "0";
             this._acInvoiceXoBill.Details = new List<Model.AcInvoiceXOBillDetail>();
 
             //生成發票編號
@@ -360,8 +172,7 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
                 this._acInvoiceXoBill.CustomerId = this._acInvoiceXoBill.Customer.CustomerId;
             this._acInvoiceXoBill.TaxRate = Convert.ToDouble(this.calcTaxRate.Value);
             this._acInvoiceXoBill.TaxRateMoney = this.calcTaxRateMoney.Value;
-            //this._acInvoiceXoBill.TaxRateType = this.TaxType.SelectedIndex;
-            this._acInvoiceXoBill.TaxRateType = this.TaxType.SelectedIndex + 1;
+            this._acInvoiceXoBill.TaxRateType = this.TaxType.SelectedIndex;
             this._acInvoiceXoBill.HeJiMoney = this.calcHeJiMoney.Value;
             this._acInvoiceXoBill.ZongMoney = this.calcZongMoney.Value;
             this._acInvoiceXoBill.mHeXiaoJingE = this.calcmHeXiaoJingE.Value;
@@ -373,14 +184,6 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
                 this._acInvoiceXoBill.AcInvoiceXOBillDate = global::Helper.DateTimeParse.NullDate;
             else
                 this._acInvoiceXoBill.AcInvoiceXOBillDate = this.dateAcInvoiceXOBillDate.DateTime;
-
-            this._acInvoiceXoBill.InvoiceType = this.lue_InvoiceType.EditValue == null ? null : this.lue_InvoiceType.EditValue.ToString();
-            this._acInvoiceXoBill.ClearanceType = this.lue_ClearanceType.EditValue == null ? null : this.lue_ClearanceType.EditValue.ToString();
-            this._acInvoiceXoBill.ExchangeRate = this.spe_ExchangeRate.Value;
-            this._acInvoiceXoBill.Currency = this.lue_Currency.EditValue == null ? null : this.lue_Currency.EditValue.ToString();
-            this._acInvoiceXoBill.HuikaiNote = this.che_HuikaiNote.Checked;
-            this._acInvoiceXoBill.SalesType = this.lue_SalesType.EditValue == null ? null : this.lue_SalesType.EditValue.ToString();
-            this._acInvoiceXoBill.RelatedNumbers = this.txt_RelatedNumbers.Text;
 
             if (this.action == "insert")
             {
@@ -451,8 +254,7 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             this.memoAcInvoiceXOBillDesc.Text = this._acInvoiceXoBill.AcInvoiceXOBillDesc;
             this.dateAcInvoiceXOBillDate.DateTime = this._acInvoiceXoBill.AcInvoiceXOBillDate.Value;
             this.calcHeJiMoney.Value = this._acInvoiceXoBill.HeJiMoney == null ? 0 : this._acInvoiceXoBill.HeJiMoney.Value;
-            //this.TaxType.SelectedIndex = Convert.ToInt32(this._acInvoiceXoBill.TaxRateType);
-            this.TaxType.SelectedIndex = Convert.ToInt32(this._acInvoiceXoBill.TaxRateType) - 1;
+            this.TaxType.SelectedIndex = Convert.ToInt32(this._acInvoiceXoBill.TaxRateType);
             this.calcTaxRate.Value = Convert.ToDecimal(this._acInvoiceXoBill.TaxRate == null ? 0 : this._acInvoiceXoBill.TaxRate.Value);
             this.calcTaxRateMoney.Value = this._acInvoiceXoBill.TaxRateMoney == null ? 0 : this._acInvoiceXoBill.TaxRateMoney.Value;
             this.calcZongMoney.Value = this._acInvoiceXoBill.ZongMoney == null ? 0 : this._acInvoiceXoBill.ZongMoney.Value;
@@ -465,15 +267,6 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             this.newChooseCustomerId.EditValue = this._acInvoiceXoBill.Customer;
 
             this.txt_AuditState.EditValue = this.GetAuditName(this._acInvoiceXoBill.AuditState);
-
-            this.lue_InvoiceType.EditValue = this._acInvoiceXoBill.InvoiceType;
-            this.lue_ClearanceType.EditValue = this._acInvoiceXoBill.ClearanceType;
-            this.spe_ExchangeRate.Value = this._acInvoiceXoBill.ExchangeRate;
-            this.lue_Currency.EditValue = this._acInvoiceXoBill.Currency;
-            this.che_HuikaiNote.Checked = this._acInvoiceXoBill.HuikaiNote;
-            this.lue_SalesType.EditValue = this._acInvoiceXoBill.SalesType;
-            this.txt_RelatedNumbers.Text = this._acInvoiceXoBill.RelatedNumbers;
-
             this.bindingSourceDetails.DataSource = this._acInvoiceXoBill.Details;
 
             base.Refresh();
@@ -834,6 +627,31 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             UpdateMoneyFields();
         }
 
+        private void gridView1_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            if (this.action == "insert" || this.action == "update")
+            {
+                if (this.gridView1.FocusedColumn.Name == "colInvoiceProductUnit")
+                {
+                    Model.Product p = (this.gridView1.GetRow(this.gridView1.FocusedRowHandle) as Model.AcInvoiceXOBillDetail).Product;
+                    if (p == null)
+                        return;
+                    this.repositoryItemComboBox1.Items.Clear();
+
+                    if (!string.IsNullOrEmpty(p.BasedUnitGroupId))
+                    {
+                        BL.ProductUnitManager manager = new Book.BL.ProductUnitManager();
+                        Model.UnitGroup ug = new BL.UnitGroupManager().Get(p.BasedUnitGroupId);
+                        IList<Model.ProductUnit> unitList = manager.Select(ug);
+                        foreach (Model.ProductUnit item in unitList)
+                        {
+                            this.repositoryItemComboBox1.Items.Add(item.CnName);
+                        }
+                    }
+                }
+            }
+        }
+
         private void calcHeJiMoney_EditValueChanged(object sender, EventArgs e)
         {
             UpdateZongMoney();
@@ -908,11 +726,6 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
                 return;
             }
             this.Refresh();
-        }
-
-        private void bar_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
         }
 
     }

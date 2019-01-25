@@ -420,7 +420,36 @@ namespace Book.Model
             set { _InvoiceCOIdNote = value; }
         }
 
+        private decimal _price2;
 
+        public decimal Price2
+        {
+            get { return _price2; }
+            set { _price2 = value; }
+        }
+
+        private decimal _quantity2;
+
+        public decimal Quantity2
+        {
+            get { return _quantity2; }
+            set { _quantity2 = value; }
+        }
+
+        private string _productUnit2;
+
+        public string ProductUnit2
+        {
+            get { return _productUnit2; }
+            set { _productUnit2 = value; }
+        }
+        
         public readonly static string PRO_InvoiceCOIdNote = "InvoiceCOIdNote";
+
+        public readonly static string PRO_Price2 = "Price2";
+
+        public readonly static string PRO_Quantity2 = "Quantity2";
+
+        public readonly static string PRO_ProductUnit2 = "ProductUnit2";
 	}
 }
