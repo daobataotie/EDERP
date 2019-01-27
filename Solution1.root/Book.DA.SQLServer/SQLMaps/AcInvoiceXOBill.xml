@@ -12,7 +12,8 @@
       AcInvoiceXOBillDate 
       BETWEEN #StartDate# 
       AND 
-      #EndDate#
+      #EndDate# 
+      order by AcInvoiceXOBillDate,Id
     ]]>
     </select>
 

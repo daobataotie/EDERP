@@ -200,7 +200,7 @@ namespace Book.BL
         {
             foreach (Model.AcInvoiceXOBillDetail Detail in acInvoiceXOBill.Details)
             {
-                if (string.IsNullOrEmpty(Detail.InvoiceId)) continue;
+                //if (string.IsNullOrEmpty(Detail.InvoiceId)) continue;
                 Detail.AcInvoiceXOBillId = acInvoiceXOBill.AcInvoiceXOBillId;
                 accessorDetails.Insert(Detail);
                 Model.InvoiceXSDetail ixsd = mInvoiceXSDetailAccessor.Get(Detail.InvoiceXODetailId);

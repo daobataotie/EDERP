@@ -48,6 +48,7 @@ namespace Book.BL
             //
             accessor.Update(acInvoiceXOBillDetail);
         }
+
         public IList<Model.AcInvoiceXOBillDetail> SelectByAcInvoiceXOBill(Model.AcInvoiceXOBill acInvoiceXoBill)
         {
             return accessor.SelectByAcInvoiceXOBill(acInvoiceXoBill);

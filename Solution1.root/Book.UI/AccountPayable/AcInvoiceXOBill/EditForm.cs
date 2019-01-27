@@ -816,10 +816,10 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             int index = TaxType.SelectedIndex;
             switch (index)
             {
-                case 1:
+                case 0:
                     flag = 1;
                     break;
-                case 2:
+                case 1:
                     flag = 2;
                     break;
                 default:
@@ -912,7 +912,8 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
 
         private void bar_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            ListForm f = new ListForm(true);
+            f.ShowDialog(this);
         }
 
     }

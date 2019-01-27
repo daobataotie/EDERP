@@ -420,17 +420,17 @@ namespace Book.Model
             set { _InvoiceCOIdNote = value; }
         }
 
-        private decimal _price2;
+        private decimal? _price2;
 
-        public decimal Price2
+        public decimal? Price2
         {
             get { return _price2; }
             set { _price2 = value; }
         }
 
-        private decimal _quantity2;
+        private decimal? _quantity2;
 
-        public decimal Quantity2
+        public decimal? Quantity2
         {
             get { return _quantity2; }
             set { _quantity2 = value; }
