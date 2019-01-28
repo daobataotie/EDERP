@@ -89,6 +89,7 @@
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn8});
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
