@@ -60,7 +60,6 @@ namespace Book.UI.Hr.Attendance.Atten
             this.bindingSource_atten = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.DutyDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemHyperLinkEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.ShouldCheckIn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTimeEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
             this.ShouldCheckOut = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -78,6 +77,7 @@ namespace Book.UI.Hr.Attendance.Atten
             this.DayFactor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MonthFactor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemHyperLinkEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -126,13 +126,13 @@ namespace Book.UI.Hr.Attendance.Atten
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_atten)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -428,11 +428,6 @@ namespace Book.UI.Hr.Attendance.Atten
             this.DutyDate.FieldName = "DutyDate";
             this.DutyDate.Name = "DutyDate";
             // 
-            // repositoryItemHyperLinkEdit2
-            // 
-            resources.ApplyResources(this.repositoryItemHyperLinkEdit2, "repositoryItemHyperLinkEdit2");
-            this.repositoryItemHyperLinkEdit2.Name = "repositoryItemHyperLinkEdit2";
-            // 
             // ShouldCheckIn
             // 
             resources.ApplyResources(this.ShouldCheckIn, "ShouldCheckIn");
@@ -560,6 +555,11 @@ namespace Book.UI.Hr.Attendance.Atten
             resources.ApplyResources(this.gridColumn6, "gridColumn6");
             this.gridColumn6.FieldName = "Note";
             this.gridColumn6.Name = "gridColumn6";
+            // 
+            // repositoryItemHyperLinkEdit2
+            // 
+            resources.ApplyResources(this.repositoryItemHyperLinkEdit2, "repositoryItemHyperLinkEdit2");
+            this.repositoryItemHyperLinkEdit2.Name = "repositoryItemHyperLinkEdit2";
             // 
             // layoutControlGroup1
             // 
@@ -802,13 +802,13 @@ namespace Book.UI.Hr.Attendance.Atten
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_atten)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();

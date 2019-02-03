@@ -1019,12 +1019,6 @@
   <data name="&gt;&gt;DutyDate.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;repositoryItemHyperLinkEdit2.Name" xml:space="preserve">
-    <value>repositoryItemHyperLinkEdit2</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemHyperLinkEdit2.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;ShouldCheckIn.Name" xml:space="preserve">
     <value>ShouldCheckIn</value>
   </data>
@@ -1126,6 +1120,12 @@
   </data>
   <data name="&gt;&gt;gridColumn6.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHyperLinkEdit2.Name" xml:space="preserve">
+    <value>repositoryItemHyperLinkEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHyperLinkEdit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
     <value>layoutControlGroup1</value>

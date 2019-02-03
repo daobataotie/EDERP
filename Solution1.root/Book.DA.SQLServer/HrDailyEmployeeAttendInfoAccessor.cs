@@ -82,6 +82,7 @@ namespace Book.DA.SQLServer
                 sqlBuilder.Append(" and   year(o.DutyDate)=" + year + " and month(o.DutyDate)=" + month + "");
             sqlBuilder.Append(" ORDER By (case when left(idno,1) like '[A-Za-z]' then (case when convert(int,substring(idno,2,2)) between 30 and 99 then left(idno,1)+cast(1911+convert(int,substring(idno,2,2)) as varchar(10))+ substring(idno,4,len(idno)) else left(idno,1)+convert(varchar(10),1911+convert(int,'1'+substring(idno,2,2)))+substring(idno,4,len(idno)) end ) else idno end),o.DutyDate ASC");
             SqlDataAdapter adapter = new SqlDataAdapter(sqlBuilder.ToString(), con);
+            adapter.SelectCommand.CommandTimeout = 600;
             DataSet data = new DataSet();
             adapter.Fill(data);
             return data;
