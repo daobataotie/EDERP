@@ -24,6 +24,7 @@ namespace Book.UI.Invoices.XS
             this.dateEditStart.DateTime = DateTime.Now.Date.AddMonths(-1);
             this.dateEditEnd.DateTime = DateTime.Now.Date.AddDays(1).AddSeconds(-1);
             this.nccChuHuoCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
+
         }
 
         protected override void LoadData()
@@ -123,6 +124,11 @@ namespace Book.UI.Invoices.XS
                 //this.SelectAll((this.bsHeader.Current as Model.InvoiceXS).Details);
                 this.bindingSource1.DataSource = (this.bsHeader.Current as Model.InvoiceXS).Details;
             }
+            else
+            {
+                this.bindingSource1.DataSource = null;
+                this.gridControl3.RefreshDataSource();
+            }
         }
 
         //记录选择保存
@@ -155,6 +161,22 @@ namespace Book.UI.Invoices.XS
 
             this.gridControl3.RefreshDataSource();
             this.gridControl2.RefreshDataSource();
+        }
+
+        private void gridView3_RowCountChanged(object sender, EventArgs e)
+        {
+            if (this.gridView3.RowCount < 1)
+            {
+                this.bindingSource1.DataSource = null;
+                this.gridControl3.RefreshDataSource();
+            }
+           else if (this.bsHeader.Current != null)
+            {
+                Model.InvoiceXS xs = this.bsHeader.Current as Model.InvoiceXS;
+                IList<Model.InvoiceXSDetail> xsd = this._mInvoiceXSDetailManager.Select(xs);
+                (this.bsHeader.Current as Model.InvoiceXS).Details = xsd;
+                this.bindingSource1.DataSource = (this.bsHeader.Current as Model.InvoiceXS).Details;
+            }
         }
     }
 }

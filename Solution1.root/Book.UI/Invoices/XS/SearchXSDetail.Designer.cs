@@ -503,6 +503,7 @@
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ShowAutoFilterRow = true;
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.RowCountChanged += new System.EventHandler(this.gridView3_RowCountChanged);
             // 
             // gridColumn16
             // 
