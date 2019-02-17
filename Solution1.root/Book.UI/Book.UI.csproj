@@ -4390,6 +4390,12 @@
     <EmbeddedResource Include="produceManager\PCFlameRetardant\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\Customs\ChooseCustomsForm2.resx">
+      <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BasicData\Customs\ChooseCustomsForm2.zh-CHT.resx">
+      <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Supplier\SupplierJiaohuoZhunshilv.resx">
       <DependentUpon>SupplierJiaohuoZhunshilv.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11717,6 +11723,12 @@
     </Compile>
     <Compile Include="produceManager\PCFlameRetardant\RO.Designer.cs">
       <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BasicData\Customs\ChooseCustomsForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\BasicData\Customs\ChooseCustomsForm2.Designer.cs">
+      <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\Supplier\SupplierJiaohuoZhunshilv.cs">
       <SubType>Form</SubType>

@@ -55,7 +55,13 @@
       <result property="ProductCategory" column="ProductCategoryId" lazyLoad="false" select="ProductCategory.select_by_primary_key" />
       <result property="DepotUnit" column="DepotUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
     </resultMap>
-
+    <resultMap id="ProductResult5" class="Product">
+      <result property="ProductId" column="ProductId" />
+      <result property="Id" column="Id" />
+      <result property="ProductName" column="ProductName" />
+      <result property="CustomerProductName" column="CustomerProductName"/>
+      <result property="ProductVersion" column="ProductVersion"/>
+    </resultMap>
     <resultMap id="ProductResultBomPar" class="Product">
       <result property="ProductId" column="ProductId" />
       <result property="Id" column="Id" />
@@ -498,11 +504,10 @@ where ProductId = #productid#
       <!--CustomerProductName desc-->
     </select>
 
-    <select id="SelectAllProductByCustomer" resultMap="ProductResult1" parameterClass="Map">
+    <select id="SelectAllProductByCustomers" resultMap="ProductResult5" parameterClass="Map">
       <![CDATA[
-      select ProductId,ProductName,product.ProductCategoryId,ProductVersion,ProduceUnitId,SupplierId,StocksQuantity,ProductCategoryName,DepotPositionId,DepotUnitId,ProductDescription, product.Id,MainUnitId,BasedUnitGroupId,CustomerProductName,CustomerId from product left join ProductCategory
-      on ProductCategory.ProductCategoryId=Product.ProductCategoryId
-      where customerid=#CustomerId# and 1=1 $sql$
+      select ProductId,Id,ProductName,ProductVersion,CustomerProductName from product 
+      where customerid in ($CustomerIds$) and 1=1 $sql$ order by Id
       ]]>
       <!--CustomerProductName desc-->
     </select>

@@ -30,25 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btn_Customer = new DevExpress.XtraEditors.ButtonEdit();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.btn_ChooseCustomerProduct = new DevExpress.XtraEditors.SimpleButton();
             this.date_End = new DevExpress.XtraEditors.DateEdit();
             this.date_Start = new DevExpress.XtraEditors.DateEdit();
-            this.nccCustomer = new Book.UI.Invoices.NewChooseContorl();
             this.btn_Search = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSourceHeader = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceProduct = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceCustomer = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceDetail = new System.Windows.Forms.BindingSource(this.components);
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Customer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_End.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_End.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Start.Properties.VistaTimeProperties)).BeginInit();
@@ -56,24 +58,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btn_Customer);
             this.layoutControl1.Controls.Add(this.radioGroup1);
             this.layoutControl1.Controls.Add(this.btn_ChooseCustomerProduct);
             this.layoutControl1.Controls.Add(this.date_End);
             this.layoutControl1.Controls.Add(this.date_Start);
-            this.layoutControl1.Controls.Add(this.nccCustomer);
             this.layoutControl1.Controls.Add(this.btn_Search);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -82,6 +83,30 @@
             this.layoutControl1.Size = new System.Drawing.Size(543, 100);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btn_Customer
+            // 
+            this.btn_Customer.Location = new System.Drawing.Point(76, 12);
+            this.btn_Customer.Name = "btn_Customer";
+            this.btn_Customer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.btn_Customer.Properties.ReadOnly = true;
+            this.btn_Customer.Size = new System.Drawing.Size(193, 21);
+            this.btn_Customer.StyleController = this.layoutControl1;
+            this.btn_Customer.TabIndex = 14;
+            this.btn_Customer.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btn_Customer_ButtonClick);
+            // 
+            // radioGroup1
+            // 
+            this.radioGroup1.EditValue = "0";
+            this.radioGroup1.Location = new System.Drawing.Point(76, 63);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "年"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "年.月")});
+            this.radioGroup1.Size = new System.Drawing.Size(193, 25);
+            this.radioGroup1.StyleController = this.layoutControl1;
+            this.radioGroup1.TabIndex = 13;
             // 
             // btn_ChooseCustomerProduct
             // 
@@ -119,14 +144,6 @@
             this.date_Start.StyleController = this.layoutControl1;
             this.date_Start.TabIndex = 10;
             // 
-            // nccCustomer
-            // 
-            this.nccCustomer.EditValue = null;
-            this.nccCustomer.Location = new System.Drawing.Point(76, 12);
-            this.nccCustomer.Name = "nccCustomer";
-            this.nccCustomer.Size = new System.Drawing.Size(193, 21);
-            this.nccCustomer.TabIndex = 8;
-            // 
             // btn_Search
             // 
             this.btn_Search.Location = new System.Drawing.Point(273, 63);
@@ -145,10 +162,10 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5,
             this.layoutControlItem7,
             this.layoutControlItem6,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(543, 100);
@@ -176,16 +193,6 @@
             this.layoutControlItem4.Text = "結束日期：";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(60, 14);
             // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.nccCustomer;
-            this.layoutControlItem5.CustomizationFormText = "客戶：";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(261, 26);
-            this.layoutControlItem5.Text = "客戶：";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btn_ChooseCustomerProduct;
@@ -210,18 +217,6 @@
             this.layoutControlItem6.TextToControlDistance = 0;
             this.layoutControlItem6.TextVisible = false;
             // 
-            // radioGroup1
-            // 
-            this.radioGroup1.EditValue = "0";
-            this.radioGroup1.Location = new System.Drawing.Point(76, 63);
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("0", "年"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("1", "年.月")});
-            this.radioGroup1.Size = new System.Drawing.Size(193, 25);
-            this.radioGroup1.StyleController = this.layoutControl1;
-            this.radioGroup1.TabIndex = 13;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.radioGroup1;
@@ -231,6 +226,16 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(261, 29);
             this.layoutControlItem1.Text = "顯示方式：";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 14);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.btn_Customer;
+            this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(261, 26);
+            this.layoutControlItem2.Text = "客戶：";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 14);
             // 
             // AnnualShipmentByCustomer
             // 
@@ -244,6 +249,8 @@
             this.Text = "客戶商品年度出貨查詢";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Customer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_End.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_End.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Start.Properties.VistaTimeProperties)).EndInit();
@@ -251,15 +258,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHeader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,8 +275,6 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraEditors.SimpleButton btn_Search;
-        private Book.UI.Invoices.NewChooseContorl nccCustomer;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.DateEdit date_End;
         private DevExpress.XtraEditors.DateEdit date_Start;
@@ -284,5 +288,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.ButtonEdit btn_Customer;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

@@ -79,5 +79,7 @@ namespace Book.Model
         //    get { return marks; }
         //    set { marks = value; }
         //}
+
+        public bool IsChecked { get; set; }
     }
 }

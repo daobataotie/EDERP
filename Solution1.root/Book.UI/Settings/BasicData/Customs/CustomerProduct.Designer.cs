@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.che_IsShowUnuseProduct = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -43,11 +44,11 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.che_IsShowUnuseProduct = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.che_IsShowUnuseProduct.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -55,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.che_IsShowUnuseProduct.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +71,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(640, 481);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // che_IsShowUnuseProduct
+            // 
+            this.che_IsShowUnuseProduct.Location = new System.Drawing.Point(85, 450);
+            this.che_IsShowUnuseProduct.Name = "che_IsShowUnuseProduct";
+            this.che_IsShowUnuseProduct.Properties.Caption = "不顯示停用商品";
+            this.che_IsShowUnuseProduct.Size = new System.Drawing.Size(543, 19);
+            this.che_IsShowUnuseProduct.StyleController = this.layoutControl1;
+            this.che_IsShowUnuseProduct.TabIndex = 7;
+            this.che_IsShowUnuseProduct.CheckedChanged += new System.EventHandler(this.che_IsShowUnuseProduct_CheckedChanged);
             // 
             // checkEdit1
             // 
@@ -105,6 +115,9 @@
             this.gridColumn5});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsView.ShowAutoFilterRow = true;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.RowCountChanged += new System.EventHandler(this.gridView2_RowCountChanged);
             // 
             // gridColumn1
             // 
@@ -198,16 +211,6 @@
             this.layoutControlItem3.TextToControlDistance = 0;
             this.layoutControlItem3.TextVisible = false;
             // 
-            // che_IsShowUnuseProduct
-            // 
-            this.che_IsShowUnuseProduct.Location = new System.Drawing.Point(85, 450);
-            this.che_IsShowUnuseProduct.Name = "che_IsShowUnuseProduct";
-            this.che_IsShowUnuseProduct.Properties.Caption = "不顯示停用商品";
-            this.che_IsShowUnuseProduct.Size = new System.Drawing.Size(543, 19);
-            this.che_IsShowUnuseProduct.StyleController = this.layoutControl1;
-            this.che_IsShowUnuseProduct.TabIndex = 7;
-            this.che_IsShowUnuseProduct.CheckedChanged += new System.EventHandler(this.che_IsShowUnuseProduct_CheckedChanged);
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.che_IsShowUnuseProduct;
@@ -233,6 +236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.che_IsShowUnuseProduct.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -240,7 +244,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.che_IsShowUnuseProduct.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 

@@ -575,9 +575,9 @@ namespace Book.BL
 
         }
 
-        public IList<Model.Product> SelectAllProductByCustomer(Model.Customer customer, bool isShowUnuseProduct)
+        public IList<Model.Product> SelectAllProductByCustomers(string customerIds, bool isShowUnuseProduct)
         {
-            return accessor.SelectAllProductByCustomer(customer, isShowUnuseProduct);
+            return accessor.SelectAllProductByCustomers(customerIds, isShowUnuseProduct);
         }
 
         public Model.Product Get(Model.Customer customer, Model.Product product)
