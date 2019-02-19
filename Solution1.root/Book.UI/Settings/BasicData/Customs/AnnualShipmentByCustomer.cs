@@ -106,6 +106,8 @@ namespace Book.UI.Settings.BasicData.Customs
             //this.gridControl1.RefreshDataSource();
 
             System.Data.DataTable dt;
+
+
             foreach (var item in customerProductList)
             {
                 dt = invoiceXSDetailManager.SelectAnnualShipment(item.ProductId, this.date_Start.DateTime, this.date_End.DateTime, null, showType);
@@ -129,6 +131,7 @@ namespace Book.UI.Settings.BasicData.Customs
                     ps = new ProductShipment();
                     ps.ProductName = item.ProductName;
                     ps.CustomerProductName = item.CustomerProductName;
+                    ps.ProductNameGroup = item.ProductCategoryName;
                     ps.ShipmentDetail = new List<ShipmentDetail>();
 
                     if (dt != null && dt.Rows.Count != 0)
@@ -182,7 +185,9 @@ namespace Book.UI.Settings.BasicData.Customs
             }
             try
             {
-                productShipmentList = productShipmentList.OrderBy(P => P.CustomerProductName).ToList();
+                productShipmentList = productShipmentList.OrderBy(P => P.ProductName).ToList();
+                var group = productShipmentList.GroupBy(G => G.ProductNameGroup).ToList();
+                int moreCol = group.Count;
 
                 Type objClassType = null;
                 objClassType = Type.GetTypeFromProgID("Excel.Application");
@@ -215,19 +220,23 @@ namespace Book.UI.Settings.BasicData.Customs
                 excel.Application.Workbooks.Add(true);
                 //Microsoft.Office.Interop.Excel.Line l = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
 
-                Microsoft.Office.Interop.Excel.Range r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, productShipmentList.Count]);
+                #region 明细
+                Microsoft.Office.Interop.Excel.Worksheet sheet = (Microsoft.Office.Interop.Excel.Worksheet)excel.Worksheets[1];
+                Microsoft.Office.Interop.Excel.Range r = sheet.get_Range(sheet.Cells[1, 1], sheet.Cells[1, productShipmentList.Count + moreCol - 1]);
                 //dynamic r = excel.get_Range(excel.Cells[1, 1], excel.Cells[1, productShipmentList.Count]);
                 r.MergeCells = true;//合并单元格
 
                 //Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignCenter = -4108;
                 //Microsoft.Office.Interop.Excel.XlBorderWeight.xlMedium= -4138;
                 //Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic= -4105;
-                excel.Cells.ColumnWidth = 25;
-                excel.Cells[1, 1] = this.CustomerNames;
-                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
-                excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).Font.Size = 20;
-                excel.Cells[1, productShipmentList.Count + 1] = DateTime.Now.ToString("yyyy.MM.dd");
-                excel.get_Range(excel.Cells[1, productShipmentList.Count + 1], excel.Cells[1, productShipmentList.Count + 1]).HorizontalAlignment = -4108;
+
+
+                sheet.Cells.ColumnWidth = 12;
+                sheet.Cells[1, 1] = this.CustomerNames;
+                sheet.get_Range(sheet.Cells[1, 1], sheet.Cells[1, 1]).RowHeight = 25;
+                sheet.get_Range(sheet.Cells[1, 1], sheet.Cells[1, 1]).Font.Size = 20;
+                sheet.Cells[1, productShipmentList.Count + moreCol] = DateTime.Now.ToString("yyyy.MM.dd");
+                sheet.get_Range(sheet.Cells[1, productShipmentList.Count + moreCol], sheet.Cells[1, productShipmentList.Count + moreCol]).HorizontalAlignment = -4108;
 
                 int rowCount = this.date_End.DateTime.Year - this.date_Start.DateTime.Year + 1;
                 if (showType != 0)
@@ -235,38 +244,38 @@ namespace Book.UI.Settings.BasicData.Customs
 
                 //excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 1]).BorderAround(1, -4138, -4105, "#000000");
                 //excel.get_Range(excel.Cells[2, 1], excel.Cells[2, 1]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[3, productShipmentList.Count + 1]).Interior.ColorIndex = 15;
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 3, productShipmentList.Count + 1]).HorizontalAlignment = -4108;
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 3, productShipmentList.Count + 1]).WrapText = true;
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 3, productShipmentList.Count + 1]).EntireRow.AutoFit();
-                excel.get_Range(excel.Cells[4, 1], excel.Cells[rowCount + 3, productShipmentList.Count + 1]).RowHeight = 20;
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 3, productShipmentList.Count + 1]).Font.Size = 13;
-                //excel.get_Range(excel.Cells[2, 1], excel.Cells[this.date_End.DateTime.Year - this.date_Start.DateTime.Year + 1 + 2, productShipmentList.Count + 1]).BorderAround(LineStyle.SingleLine, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 3, productShipmentList.Count + 1]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic,null);
-                excel.get_Range(excel.Cells[2, 1], excel.Cells[rowCount + 3, productShipmentList.Count + 1]).Borders.Value=1;
-
-                for (int j = 0; j < productShipmentList.Count; j++)
-                {
-                    excel.Cells[2, j + 2] = productShipmentList[j].CustomerProductName;
-                    //excel.get_Range(excel.Cells[2, j + 2], excel.Cells[2, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
-
-                    //2017年5月13日21:00:53  第三行加商品名稱
-                    excel.Cells[3, j + 2] = productShipmentList[j].ProductName;
-                    //excel.get_Range(excel.Cells[3, j + 2], excel.Cells[3, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
-                }
+                sheet.get_Range(sheet.Cells[2, 1], sheet.Cells[3, productShipmentList.Count + moreCol]).Interior.ColorIndex = 15;
+                sheet.get_Range(sheet.Cells[2, 1], sheet.Cells[rowCount + 3, productShipmentList.Count + moreCol]).HorizontalAlignment = -4108;
+                sheet.get_Range(sheet.Cells[2, 1], sheet.Cells[rowCount + 3, productShipmentList.Count + moreCol]).WrapText = true;
+                sheet.get_Range(sheet.Cells[2, 1], sheet.Cells[rowCount + 3, productShipmentList.Count + moreCol]).EntireRow.AutoFit();
+                sheet.get_Range(sheet.Cells[4, 1], sheet.Cells[rowCount + 3, productShipmentList.Count + moreCol]).RowHeight = 20;
+                sheet.get_Range(sheet.Cells[2, 1], sheet.Cells[rowCount + 3, productShipmentList.Count + moreCol + 1]).Font.Size = 12;
+                //sheet.get_Range(sheet.Cells[2, 1], sheet.Cells[this.date_End.DateTime.Year - this.date_Start.DateTime.Year + 1 + 2, productShipmentList.Count + 1]).BorderAround(LineStyle.SingleLine, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                sheet.get_Range(sheet.Cells[2, 1], sheet.Cells[rowCount + 3, productShipmentList.Count + moreCol]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, null);
+                sheet.get_Range(sheet.Cells[2, 1], sheet.Cells[rowCount + 3, productShipmentList.Count + moreCol]).Borders.Value = 1;
 
                 int rows = 4;
                 if (showType == 0)  //年
                 {
+                    for (int j = 0; j < productShipmentList.Count; j++)
+                    {
+                        sheet.Cells[2, j + 2] = productShipmentList[j].CustomerProductName;
+                        //sheet.get_Range(sheet.Cells[2, j + 2], sheet.Cells[2, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+
+                        //2017年5月13日21:00:53  第三行加商品名稱
+                        sheet.Cells[3, j + 2] = productShipmentList[j].ProductName;
+                        //sheet.get_Range(sheet.Cells[3, j + 2], sheet.Cells[3, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                    }
+
                     for (int i = this.date_Start.DateTime.Year; i <= this.date_End.DateTime.Year; i++)
                     {
-                        excel.Cells[rows, 1] = i.ToString() + "年";
-                        //excel.get_Range(excel.Cells[rows, 1], excel.Cells[rows, 1]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                        sheet.Cells[rows, 1] = i.ToString() + "年";
+                        //sheet.get_Range(sheet.Cells[rows, 1], sheet.Cells[rows, 1]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
 
                         for (int j = 0; j < productShipmentList.Count; j++)
                         {
-                            excel.Cells[rows, j + 2] = productShipmentList[j].ShipmentDetail.First(d => d.Year == i.ToString()).Quantity;
-                            //excel.get_Range(excel.Cells[rows, j + 2], excel.Cells[rows, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                            sheet.Cells[rows, j + 2] = productShipmentList[j].ShipmentDetail.First(d => d.Year == i.ToString()).Quantity;
+                            //sheet.get_Range(sheet.Cells[rows, j + 2], sheet.Cells[rows, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
                         }
 
                         rows++;
@@ -274,32 +283,78 @@ namespace Book.UI.Settings.BasicData.Customs
                 }
                 else                //月
                 {
+                    //for (int j = 0; j < productShipmentList.Count; j++)
+                    //{
+                    //    sheet.Cells[2, j + 2] = productShipmentList[j].CustomerProductName;
+                    //    sheet.Cells[3, j + 2] = productShipmentList[j].ProductName;
+
+
+                    //}
+
+                    int col = 2;
+                    foreach (var g in group)
+                    {
+                        foreach (var pro in g)
+                        {
+                            sheet.Cells[2, col] = pro.CustomerProductName;
+                            sheet.Cells[3, col] = pro.ProductName;
+
+                            col++;
+                        }
+
+                        col++;
+                    }
+
                     for (int i = this.date_Start.DateTime.Year; i <= this.date_End.DateTime.Year; i++)
                     {
                         for (int l = 1; l <= 13; l++)
                         {
                             if (l <= 12)
                             {
-                                excel.Cells[rows, 1] = i.ToString() + "年" + l.ToString() + "月";
-                                //excel.get_Range(excel.Cells[rows, 1], excel.Cells[rows, 1]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                                sheet.Cells[rows, 1] = i.ToString() + "年" + l.ToString() + "月";
 
-                                for (int j = 0; j < productShipmentList.Count; j++)
+                                //for (int j = 0; j < productShipmentList.Count; j++)
+                                //{
+                                //    sheet.Cells[rows, j + 2] = productShipmentList[j].ShipmentDetail.First(d => d.Year == i.ToString() + "." + l.ToString()).Quantity;
+                                //}
+
+                                col = 2;
+                                foreach (var g in group)
                                 {
-                                    excel.Cells[rows, j + 2] = productShipmentList[j].ShipmentDetail.First(d => d.Year == i.ToString() + "." + l.ToString()).Quantity;
-                                    //excel.get_Range(excel.Cells[rows, j + 2], excel.Cells[rows, j + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, "#000000");
+                                    foreach (var pro in g)
+                                    {
+                                        sheet.Cells[rows, col] = pro.ShipmentDetail.First(d => d.Year == i.ToString() + "." + l.ToString()).Quantity;
+
+                                        col++;
+                                    }
+
+                                    col++;
                                 }
                             }
                             else
                             {
-                                excel.Cells[rows, 1] = "合計";
-                                excel.get_Range(excel.Cells[rows, 1], excel.Cells[rows, productShipmentList.Count + 2]).Interior.Color = "6750207";
+                                sheet.Cells[rows, 1] = "合計";
+                                sheet.get_Range(sheet.Cells[rows, 1], sheet.Cells[rows, productShipmentList.Count + moreCol + 1]).Interior.Color = "6750207";
 
-                                for (int j = 0; j < productShipmentList.Count; j++)
+                                //for (int j = 0; j < productShipmentList.Count; j++)
+                                //{
+                                //    sheet.get_Range(sheet.Cells[rows, j + 2], sheet.Cells[rows, j + 2]).Formula = string.Format("=SUM({2}{0}:{2}{1})", rows - 12, rows - 1, CountExcelColumnName(j + 2));
+                                //}
+                                col = 2;
+                                foreach (var g in group)
                                 {
-                                    excel.get_Range(excel.Cells[rows, j + 2], excel.Cells[rows, j + 2]).Formula = string.Format("=SUM({2}{0}:{2}{1})", rows - 12, rows - 1, CountExcelColumnName(j + 2));
+                                    foreach (var pro in g)
+                                    {
+                                        sheet.get_Range(sheet.Cells[rows, col], sheet.Cells[rows, col]).Formula = string.Format("=SUM({2}{0}:{2}{1})", rows - 12, rows - 1, CountExcelColumnName(col));
+
+                                        col++;
+                                    }
+
+                                    sheet.Cells[rows, col] = string.Format("=SUM({2}{0}:{1}{0})", rows, CountExcelColumnName(col - 1), CountExcelColumnName(col - g.Count()));
+                                    col++;
                                 }
 
-                                excel.Cells[rows, productShipmentList.Count + 2] = string.Format("=SUM(B{0}:{1}{0})", rows, CountExcelColumnName(productShipmentList.Count + 1));
+                                //sheet.Cells[rows, productShipmentList.Count + 2] = string.Format("=SUM(B{0}:{1}{0})", rows, CountExcelColumnName(productShipmentList.Count + 1));
                                 //以上是兩種設置Excel格式的寫法
                             }
 
@@ -307,12 +362,51 @@ namespace Book.UI.Settings.BasicData.Customs
                         }
                     }
                 }
+                #endregion
 
+                #region 汇总
+                if (group.Count > 1)
+                {
+                    excel.Worksheets.Add(Missing.Value, sheet, Missing.Value, Missing.Value);
+                    Microsoft.Office.Interop.Excel.Worksheet sheet2 = ((Microsoft.Office.Interop.Excel.Worksheet)excel.Worksheets[2]);
+                    sheet2.Rows.AutoFit();
+                    sheet2.Rows.WrapText = true;
+                    sheet2.Rows.RowHeight = 20;
+                    sheet2.Rows.Font.Size = 12;
+                    sheet2.Columns.ColumnWidth = 20;
+                    sheet2.get_Range(sheet2.Cells[1, 1], sheet2.Cells[group.Count + 1, (this.date_End.DateTime.Year - this.date_Start.DateTime.Year) + 2]).BorderAround(1, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic, null);
+                    sheet2.get_Range(sheet2.Cells[1, 1], sheet2.Cells[group.Count + 1, (this.date_End.DateTime.Year - this.date_Start.DateTime.Year) + 2]).Borders.Value = 1;
+
+                    sheet2.Cells[1, 2] = "";
+
+                    int yearCol = 2;
+                    int dataRow = 2;
+
+                    foreach (var g in group)
+                    {
+                        sheet2.Cells[dataRow, 1] = g.Key;
+                        dataRow++;
+                    }
+                    for (int i = this.date_Start.DateTime.Year; i <= this.date_End.DateTime.Year; i++)
+                    {
+                        sheet2.Cells[1, yearCol] = i.ToString() + "年";
+
+                        dataRow = 2;
+                        foreach (var g in group)
+                        {
+                            sheet2.Cells[dataRow, yearCol] = g.Sum(D => D.ShipmentDetail.Where(P => P.Year.Contains(i.ToString())).Sum(S => decimal.Parse(S.Quantity)));
+                            dataRow++;
+                        }
+                        yearCol++;
+                    }
+                }
+
+                #endregion
 
                 excel.Visible = true;//是否打开该Excel文件
                 excel.WindowState = XlWindowState.xlMaximized;
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Excel未生成完畢，請勿操作，并重新點擊按鈕生成數據！", "提示！", MessageBoxButtons.OK);
                 return;
@@ -346,7 +440,6 @@ namespace Book.UI.Settings.BasicData.Customs
                     f = new CustomerProduct(this.CustomerIds);
                 f.ShowDialog(this);
                 this.customerProductList = f.SelectProduct;
-
             }
             else
             {
@@ -394,6 +487,8 @@ namespace Book.UI.Settings.BasicData.Customs
         public string ProductName { get; set; }
 
         public string CustomerProductName { get; set; }
+
+        public string ProductNameGroup { get; set; }
 
         public List<ShipmentDetail> ShipmentDetail { get; set; }
     }

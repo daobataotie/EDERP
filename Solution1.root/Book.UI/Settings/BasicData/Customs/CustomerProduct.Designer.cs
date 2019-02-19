@@ -74,10 +74,10 @@
             // 
             // che_IsShowUnuseProduct
             // 
-            this.che_IsShowUnuseProduct.Location = new System.Drawing.Point(85, 450);
+            this.che_IsShowUnuseProduct.Location = new System.Drawing.Point(168, 450);
             this.che_IsShowUnuseProduct.Name = "che_IsShowUnuseProduct";
             this.che_IsShowUnuseProduct.Properties.Caption = "不顯示停用商品";
-            this.che_IsShowUnuseProduct.Size = new System.Drawing.Size(543, 19);
+            this.che_IsShowUnuseProduct.Size = new System.Drawing.Size(460, 19);
             this.che_IsShowUnuseProduct.StyleController = this.layoutControl1;
             this.che_IsShowUnuseProduct.TabIndex = 7;
             this.che_IsShowUnuseProduct.CheckedChanged += new System.EventHandler(this.che_IsShowUnuseProduct_CheckedChanged);
@@ -87,7 +87,7 @@
             this.checkEdit1.Location = new System.Drawing.Point(12, 450);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "全選";
-            this.checkEdit1.Size = new System.Drawing.Size(69, 19);
+            this.checkEdit1.Size = new System.Drawing.Size(152, 19);
             this.checkEdit1.StyleController = this.layoutControl1;
             this.checkEdit1.TabIndex = 6;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
@@ -205,7 +205,7 @@
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 438);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(73, 23);
+            this.layoutControlItem3.Size = new System.Drawing.Size(156, 23);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;
@@ -215,9 +215,9 @@
             // 
             this.layoutControlItem1.Control = this.che_IsShowUnuseProduct;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(73, 438);
+            this.layoutControlItem1.Location = new System.Drawing.Point(156, 438);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(547, 23);
+            this.layoutControlItem1.Size = new System.Drawing.Size(464, 23);
             this.layoutControlItem1.Text = "layoutControlItem1";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;

@@ -39,8 +39,12 @@ namespace Book.UI.Settings.BasicData.Customs
 
             foreach (var item in customerProductList)
             {
-                if (productList.Any(d => d.ProductId == item.ProductId))
+                Model.Product p = productList.FirstOrDefault(d => d.ProductId == item.ProductId);
+                if (p != null)
+                {
                     item.Checked = true;
+                    item.ProductCategoryName = p.ProductCategoryName;
+                }
             }
             this.bindingSource1.DataSource = customerProductList;
         }
@@ -60,11 +64,19 @@ namespace Book.UI.Settings.BasicData.Customs
             //}
 
             //筛选过后全选，只选中/取消 筛选后的数据
+            string proNameCat = null;      //用于筛选商品的关键字，按照这个分类
+
+            if (this.gridView2.RowFilter.Contains("ProductName"))
+                proNameCat = this.gridView2.RowFilter.Substring(this.gridView2.RowFilter.IndexOf("'") + 1, this.gridView2.RowFilter.LastIndexOf("'") - this.gridView2.RowFilter.IndexOf("'") - 2);
+
             foreach (var item in customerProductList)
             {
                 if (this.ShowProduct.Count > 0 && this.ShowProduct.Exists(P => P.ProductId == item.ProductId))
                 {
                     item.Checked = this.checkEdit1.Checked;
+
+                    //暂用商品类型名称存放该字段
+                    item.ProductCategoryName = proNameCat;
                 }
             }
 
