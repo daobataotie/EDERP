@@ -372,6 +372,9 @@ namespace Book.UI.produceManager.PCImpactCheck
             Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm pronoForm = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm(null, 0);
             if (pronoForm.ShowDialog(this) == DialogResult.OK)
             {
+                if (this._PCIC.Details.Count > 0 && string.IsNullOrEmpty(this._PCIC.Details[0].ProductId))
+                    this._PCIC.Details.RemoveAt(0);
+
                 this._PCIC.PCFromType = -1;     //单据类型
                 //this._PCIC.Details.Clear();
                 //Model.PronoteHeader currentModel = pronoForm.SelectItem;
@@ -440,6 +443,9 @@ namespace Book.UI.produceManager.PCImpactCheck
                 //    //    this._PCIC.PronoteHeaderId = currentModel.ProduceOtherCompactId;
                 //    //    this._PCIC.PCFromType = 1;      //单据类型
                 //    //}
+                if (this._PCIC.Details.Count > 0 && string.IsNullOrEmpty(this._PCIC.Details[0].ProductId))
+                    this._PCIC.Details.RemoveAt(0);
+
                 Model.PCImpactCheckDetail detail;
                 foreach (var item in f.key)
                 {
@@ -477,6 +483,9 @@ namespace Book.UI.produceManager.PCImpactCheck
             Invoices.CG.CGForm form = new Book.UI.Invoices.CG.CGForm();
             if (form.ShowDialog() == DialogResult.OK)
             {
+                if (this._PCIC.Details.Count > 0 && string.IsNullOrEmpty(this._PCIC.Details[0].ProductId))
+                    this._PCIC.Details.RemoveAt(0);
+
                 if (form.key != null && form.key.Count > 0)
                 {
                     this._PCIC.PCFromType = 2;     //单据类型

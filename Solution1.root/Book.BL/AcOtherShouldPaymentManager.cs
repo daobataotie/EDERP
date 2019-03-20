@@ -181,6 +181,8 @@ namespace Book.BL
             {
                 throw new Helper.InvalidValueException(Model.AcOtherShouldPayment.PRO_InvoiceHeji);
             }
+            if (string.IsNullOrEmpty(acOtherShouldPayment.SupplierId))
+                throw new Helper.RequireValueException(Model.AcOtherShouldPayment.PRO_SupplierId);
         }
 
         public IList<Model.AcOtherShouldPayment> SelectByDateRange(DateTime startdate, DateTime enddate)

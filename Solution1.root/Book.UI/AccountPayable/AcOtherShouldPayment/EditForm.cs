@@ -23,6 +23,8 @@ namespace Book.UI.AccountPayable.AcOtherShouldPayment
 
             this.requireValueExceptions.Add(Model.AcOtherShouldPayment.PRO_AcOtherShouldPaymentId, new AA(Properties.Resources.RequireDataForId, this.textEditAcOtherShouldPaymentId));
             this.invalidValueExceptions.Add(Model.AcOtherShouldPayment.PRO_InvoiceHeji, new AA("違反規則:<稅額+合計=總額>,請檢查數據", this.calcHeJiMoney));
+            this.requireValueExceptions.Add(Model.AcOtherShouldPayment.PRO_SupplierId, new AA("供應商不能為空", this.newChooseContorlSupplierId));
+
             //  this.newChooseContorlAtCurrencyCategoryId.Choose = new Accounting.CurrencyCategory.ChooseAtCurrencyCategory();
             this.newChooseContorlSupplierId.Choose = new Settings.BasicData.Supplier.ChooseSupplier();
             this.newChooseContorlEmployeeId.Choose = new Settings.BasicData.Employees.ChooseEmployee();

@@ -517,6 +517,7 @@ where ProductId = #productid#
     <select id="SelectByCategoryAndCustomer" resultMap="ProductResult" parameterClass="string">
       <![CDATA[   select * from product where  (ProductCategoryId=#productcategoryid# and customerid=#customerid#) or       (ProductCategoryId=#productcategoryid# and (IsCustomerProduct=0 or IsCustomerProduct is null)  )   order by Id 	]]>
     </select>
+    
     <delete id="deleteByCustomPro"  parameterClass="Map">
       delete * from product where productid=#productid# and customerid=#customerid#
     </delete>
@@ -805,7 +806,7 @@ where ProductId = #productid#
     </select>
     <select id="StockPrompt" resultClass="Product">
       <![CDATA[
-      SELECT Id,ProductName,StocksQuantity,SafeStock,CustomerProductName FROM product WHERE StocksQuantity<SafeStock
+      SELECT Id,ProductName,StocksQuantity,SafeStock,CustomerProductName FROM product WHERE StocksQuantity<SafeStock and SafeStock<>0
       ]]>
     </select>
 
