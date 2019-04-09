@@ -423,8 +423,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.PanDing11 = 2;
                 this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.PanDingShu12 = 2;
                 this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.PanDingShu13 = 2;
-                this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.PanDingShu15 = 1;
-                this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.PanDingShu16 = 1;
+                this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.PanDingShu15 = 2;
+                this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.PanDingShu16 = 2;
                 #endregion
             //}
             this.InitControls();
