@@ -423,307 +423,14 @@
         PiydRVvthbEShq0tdS1YP1XNB1WKv8rxjMwZjD8BORXH707ETOoAAAAASUVORK5CYIIL
 </value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="radio_AttrDGBLTest.Properties.Items" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="radio_AttrESSFYGZTZ.Properties.Items5" xml:space="preserve">
+    <value>無此項目</value>
   </data>
-  <data name="radio_AttrDGBLTest.Properties.Items1" xml:space="preserve">
-    <value>合格</value>
-  </data>
-  <data name="radio_AttrDGBLTest.Properties.Items2" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="radio_AttrDGBLTest.Properties.Items3" xml:space="preserve">
-    <value>不合格</value>
-  </data>
-  <data name="radio_AttrDGBLTest.Properties.Items4" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="radio_AttrDGBLTest.Properties.Items5" xml:space="preserve">
-    <value>无此项目</value>
-  </data>
-  <data name="lookUpEditUnit.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lookUpEditUnit.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lookUpEditUnit.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txt_AuditState.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="DevExpress.XtraEditors.v10.2" name="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="txt_AuditState.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="txt_AuditState.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txt_AuditState.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txt_AuditState.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_AuditState.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="txt_AuditState.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="txt_AuditState.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_AuditState.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txt_AuditState.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txt_AuditState.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txt_AuditState.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="chkMuShiJianYan.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chkMuShiJianYan.Properties.DisplayValueChecked" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkMuShiJianYan.Properties.DisplayValueGrayed" xml:space="preserve">
-    <value />
-  </data>
-  <data name="chkMuShiJianYan.Properties.DisplayValueUnchecked" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtCustomerProductName.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtCustomerProductName.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtCustomerProductName.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtPronoteHeaderId.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtPronoteHeaderId.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="radio_AttrESSSFZH.Properties.Items5" xml:space="preserve">
+    <value>無此項目</value>
   </data>
   <data name="btnGetPronoteHeader.Text" xml:space="preserve">
     <value>選擇加工單</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.EditMask" xml:space="preserve">
-    <value>d</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DE_JYDRQ.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.EditMask" xml:space="preserve">
-    <value>T</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>DateTime</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DE_JYDRQ.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtPCFinishCheckDesc.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtPCFinishCheckDesc.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="CE_InCount.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CE_InCount.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="CE_InCount.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="CE_InCount.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CE_InCount.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CE_InCount.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="CE_InCount.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="CE_InCount.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CE_InCount.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CE_InCount.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="CE_InCount.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CE_InCount.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="CE_Count.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CE_Count.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="CE_Count.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="CE_Count.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CE_Count.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CE_Count.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>Numeric</value>
-  </data>
-  <data name="CE_Count.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="CE_Count.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CE_Count.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CE_Count.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="CE_Count.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CE_Count.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="radio_AttrSLDNHWXTMSFZQ.Properties.Items5" xml:space="preserve">
     <value>無此項目</value>
@@ -779,42 +486,6 @@
   <data name="radio_AttrGZBKYRL.Properties.Items5" xml:space="preserve">
     <value>無此項目</value>
   </data>
-  <data name="txtProduct.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtProduct.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="txtProduct.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtProduct.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtProduct.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtProduct.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="txtProduct.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="txtProduct.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtProduct.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtProduct.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtProduct.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtProduct.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="radio_AttrJWYHWRL.Properties.Items5" xml:space="preserve">
     <value>無此項目</value>
   </data>
@@ -823,78 +494,6 @@
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>驗收項目</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtInvoiceCusXOId.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v10.2">
-    <value>Default</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txtPCFinishCheckID.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtPCFinishCheckID.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>驗收項目</value>
@@ -956,9 +555,6 @@
   <data name="layoutControlItem29.Text" xml:space="preserve">
     <value>泡殼置入方式：</value>
   </data>
-  <data name="layoutControlItem30.Text" xml:space="preserve">
-    <value>塑料袋/内盒/外箱條碼貼標是否正確：</value>
-  </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>數量：</value>
   </data>
@@ -995,11 +591,20 @@
   <data name="layoutControlItem41.Text" xml:space="preserve">
     <value>審核狀態：</value>
   </data>
+  <data name="layoutControlItem42.Text" xml:space="preserve">
+    <value>電鍍剝離測試：</value>
+  </data>
   <data name="layoutControlItem43.Text" xml:space="preserve">
     <value>單位：</value>
   </data>
-  <data name="layoutControlItem42.Text" xml:space="preserve">
-    <value>電鍍剝離測試：</value>
+  <data name="layoutControlItem46.Text" xml:space="preserve">
+    <value>耳塞繩是否粘好：</value>
+  </data>
+  <data name="layoutControlItem30.Text" xml:space="preserve">
+    <value>塑料袋/内盒/外箱條碼貼標是否正確：</value>
+  </data>
+  <data name="layoutControlItem47.Text" xml:space="preserve">
+    <value>耳塞是否有鋼珠/銅柱：</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>組裝成品檢驗單</value>

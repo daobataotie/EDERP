@@ -76,6 +76,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.lblPKZRFS.Text = Trans(_pcfc.AttrPKZRFS);
             this.lblSLDNHWXTMTBSFZQ.Text = Trans(_pcfc.AttrSLDNHWXTMSFZQ);
             this.TCAttrDGBLTest.Text = Trans(_pcfc.AttrDGBLTest);
+            this.lblESSSFZH.Text = Trans(_pcfc.AttrESSSFZH);
+            this.lblESSFYGZTZ.Text = Trans(_pcfc.AttrESSFYGZTZ);
 
             listOpticsTest = new BL.OpticsTestManager().FSelect(this._PCFinishCheckId);
             if (listOpticsTest != null && listOpticsTest.Count > 0)

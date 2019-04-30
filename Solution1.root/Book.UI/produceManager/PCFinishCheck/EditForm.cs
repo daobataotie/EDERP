@@ -224,6 +224,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             this._PCFC.AttrZMCM = this.radio_AttrZMCM.SelectedIndex;
             this._PCFC.AttrZZWBXGJ = this.radio_AttrZZWBXGJ.SelectedIndex;
             this._PCFC.AttrDGBLTest = this.radio_AttrDGBLTest.SelectedIndex;
+            this._PCFC.AttrESSSFZH = this.radio_AttrESSSFZH.SelectedIndex;
+            this._PCFC.AttrESSFYGZTZ = this.radio_AttrESSFYGZTZ.SelectedIndex;
             #endregion
 
             string strCusXoId = this.txtInvoiceCusXOId.Text;
@@ -350,6 +352,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.radio_AttrTSL.SelectedIndex = this._PCFC.AttrTSL.HasValue ? this._PCFC.AttrTSL.Value : Def_select;
             this.radio_AttrCJBZ.SelectedIndex = this._PCFC.AttrCJBZ.HasValue ? this._PCFC.AttrCJBZ.Value : Def_select;
             this.radio_AttrDGBLTest.SelectedIndex = this._PCFC.AttrDGBLTest.HasValue ? this._PCFC.AttrDGBLTest.Value : Def_select;
+            this.radio_AttrESSSFZH.SelectedIndex = this._PCFC.AttrESSSFZH.HasValue ? this._PCFC.AttrESSSFZH.Value : Def_select;
+            this.radio_AttrESSFYGZTZ.SelectedIndex = this._PCFC.AttrESSFYGZTZ.HasValue ? this._PCFC.AttrESSFYGZTZ.Value : Def_select;
         }
 
         private void txtPCFinishCheckDesc_DoubleClick(object sender, EventArgs e)

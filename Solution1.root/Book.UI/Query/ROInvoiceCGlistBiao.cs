@@ -37,7 +37,8 @@ namespace Book.UI.Query
             this.DataSource = this.invoicecgmanager.SelectByConditionCOBiao(condition.StartInvoiceDate, condition.EndInvoiceDate, condition.StartJHDate, condition.EndJHDate, condition.StartFKDate, condition.EndFKDate, condition.SupplierStart, condition.SupplierEnd, condition.ProductStart, condition.ProductEnd, condition.COStartId, condition.COEndId, condition.CusXOId, condition.EmpStart, condition.EmpEnd);
 
             if (this.DataSource == null || (this.DataSource as DataTable).Rows.Count == 0)
-                throw new Helper.InvalidValueException("≤Èüo”õ‰õ!");
+                throw new Exception("≤Èüo”õ‰õ!");
+           
 
             string sF;
             decimal jine = 0, shuie = 0, zonge = 0;

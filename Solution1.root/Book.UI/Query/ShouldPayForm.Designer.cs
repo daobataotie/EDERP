@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShouldPayForm));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.nccEmployee = new Book.UI.Invoices.NewChooseContorl();
             this.spe_Total = new DevExpress.XtraEditors.SpinEdit();
@@ -305,6 +305,7 @@
             this.layoutControl1.Controls.Add(this.spe_FKZheRang);
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(336, 338, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
             // nccEmployee
@@ -419,9 +420,9 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bindingSourceAtDetail;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             resources.ApplyResources(this.gridControl1, "gridControl1");
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";

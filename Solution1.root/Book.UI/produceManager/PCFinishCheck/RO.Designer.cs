@@ -135,9 +135,9 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.TCAttrDGBLTest = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell61 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblESSSFZH = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell73 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lblESSFYGZTZ = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblInvoiceCusXOId = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
@@ -150,8 +150,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblEmployee0 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblEmployee1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
@@ -270,10 +270,19 @@ namespace Book.UI.produceManager.PCFinishCheck
             // checkEdit1
             // 
             resources.ApplyResources(this.checkEdit1, "checkEdit1");
+            this.checkEdit1.BackgroundImage = null;
             this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.AccessibleDescription = null;
+            this.checkEdit1.Properties.AccessibleName = null;
             this.checkEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkEdit1.Properties.Appearance.Font")));
+            this.checkEdit1.Properties.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("checkEdit1.Properties.Appearance.GradientMode")));
+            this.checkEdit1.Properties.Appearance.Image = null;
             this.checkEdit1.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit1.Properties.AutoHeight = ((bool)(resources.GetObject("checkEdit1.Properties.AutoHeight")));
             this.checkEdit1.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
+            this.checkEdit1.Properties.DisplayValueChecked = resources.GetString("checkEdit1.Properties.DisplayValueChecked");
+            this.checkEdit1.Properties.DisplayValueGrayed = resources.GetString("checkEdit1.Properties.DisplayValueGrayed");
+            this.checkEdit1.Properties.DisplayValueUnchecked = resources.GetString("checkEdit1.Properties.DisplayValueUnchecked");
             // 
             // lbl_JHDate
             // 
@@ -1139,9 +1148,9 @@ namespace Book.UI.produceManager.PCFinishCheck
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell61,
-            this.xrTableCell1,
+            this.lblESSSFZH,
             this.xrTableCell73,
-            this.xrTableCell2});
+            this.lblESSFYGZTZ});
             resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 1;
@@ -1152,11 +1161,12 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.xrTableCell61.Name = "xrTableCell61";
             this.xrTableCell61.Weight = 0.60407250839717563;
             // 
-            // xrTableCell1
+            // lblESSSFZH
             // 
-            resources.ApplyResources(this.xrTableCell1, "xrTableCell1");
-            this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Weight = 0.459275999821653;
+            resources.ApplyResources(this.lblESSSFZH, "lblESSSFZH");
+            this.lblESSSFZH.Name = "lblESSSFZH";
+            this.lblESSSFZH.StylePriority.UseTextAlignment = false;
+            this.lblESSSFZH.Weight = 0.459275999821653;
             // 
             // xrTableCell73
             // 
@@ -1164,11 +1174,12 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.xrTableCell73.Name = "xrTableCell73";
             this.xrTableCell73.Weight = 0.61990864770961829;
             // 
-            // xrTableCell2
+            // lblESSFYGZTZ
             // 
-            resources.ApplyResources(this.xrTableCell2, "xrTableCell2");
-            this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Weight = 0.48904234573781535;
+            resources.ApplyResources(this.lblESSFYGZTZ, "lblESSFYGZTZ");
+            this.lblESSFYGZTZ.Name = "lblESSFYGZTZ";
+            this.lblESSFYGZTZ.StylePriority.UseTextAlignment = false;
+            this.lblESSFYGZTZ.Weight = 0.48904234573781535;
             // 
             // xrLabel5
             // 
@@ -1291,17 +1302,17 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.lblEmployee1.StylePriority.UseFont = false;
             this.lblEmployee1.StylePriority.UseTextAlignment = false;
             // 
-            // ReportFooter
-            // 
-            resources.ApplyResources(this.ReportFooter, "ReportFooter");
-            this.ReportFooter.Name = "ReportFooter";
-            // 
             // xrLabel23
             // 
             resources.ApplyResources(this.xrLabel23, "xrLabel23");
             this.xrLabel23.Name = "xrLabel23";
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel23.StylePriority.UseTextAlignment = false;
+            // 
+            // ReportFooter
+            // 
+            resources.ApplyResources(this.ReportFooter, "ReportFooter");
+            this.ReportFooter.Name = "ReportFooter";
             // 
             // xrPageInfo1
             // 
@@ -1362,9 +1373,9 @@ namespace Book.UI.produceManager.PCFinishCheck
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel lblPCFinishCheckID;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
+        private DevExpress.XtraReports.UI.XRTableCell lblESSFYGZTZ;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell73;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
+        private DevExpress.XtraReports.UI.XRTableCell lblESSSFZH;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell61;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell72;

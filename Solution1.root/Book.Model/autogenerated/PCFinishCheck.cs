@@ -200,6 +200,10 @@ namespace Book.Model
         /// </summary>
         private int? _attrDGBLTest;
 
+        private int? _attrESSSFZH;
+
+        private int? _attrESSFYGZTZ;
+
         /// <summary>
         /// 年轮
         /// </summary>
@@ -807,6 +811,24 @@ namespace Book.Model
             set { _annualRing = value; }
         }
 
+        /// <summary>
+        /// 耳塞绳是否粘好
+        /// </summary>
+        public int? AttrESSSFZH
+        {
+            get { return _attrESSSFZH; }
+            set { _attrESSSFZH = value; }
+        }
+
+        /// <summary>
+        /// 耳塞是否有钢珠/铜柱
+        /// </summary>
+        public int? AttrESSFYGZTZ
+        {
+            get { return _attrESSFYGZTZ; }
+            set { _attrESSFYGZTZ = value; }
+        }
+
         public virtual Employee AuditEmp
         {
             get
@@ -1085,6 +1107,11 @@ namespace Book.Model
         public readonly static string PRO_AttrDGBLTest = "AttrDGBLTest";
 
         public readonly static string PRO_AnnualRing = "AnnualRing";
+
+        public readonly static string PRO_AttrESSSFZH = "AttrESSSFZH";
+
+        public readonly static string PRO_AttrESSFYGZTZ = "AttrESSFYGZTZ";
+
         #endregion
 
         private string _pihao;

@@ -579,8 +579,16 @@ namespace Book.UI.Query
                 ConditionCO condition = f.Condition as ConditionCO;
                 if (this.action == "view")
                 {
-                    ROInvoiceCGlistBiao ro = new ROInvoiceCGlistBiao(condition);
-                    ro.ShowPreviewDialog();
+                    try
+                    {
+                        ROInvoiceCGlistBiao ro = new ROInvoiceCGlistBiao(condition);
+                        ro.ShowPreviewDialog();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK);
+                        return;
+                    }
                 }
                 else
                 {

@@ -225,6 +225,12 @@
   <data name="xrTableCell72.Text" xml:space="preserve">
     <value>電鍍剝離測試</value>
   </data>
+  <data name="xrTableCell61.Text" xml:space="preserve">
+    <value>耳塞繩是否粘好</value>
+  </data>
+  <data name="xrTableCell73.Text" xml:space="preserve">
+    <value>耳塞是否有鋼珠/銅柱</value>
+  </data>
   <data name="xrLabel5.Text" xml:space="preserve">
     <value>訂單：</value>
   </data>
