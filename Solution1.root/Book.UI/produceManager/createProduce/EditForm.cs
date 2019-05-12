@@ -124,7 +124,7 @@ namespace Book.UI.produceManager.createProduce
                     //    e.DisplayText = Convert.ToDateTime(detail.Invoice.InvoieDate).ToString("yyyy/MM/dd"); ;
                     //    break;
                     case "gridColumnUnit":
-                        e.DisplayText = detail.InvoiceProductUnit; 
+                        e.DisplayText = detail.InvoiceProductUnit;
                         break;
                     //case "gridColumn3":
                     //    e.DisplayText = detail.Invoice.InvoiceYjrq == null ? "" : Convert.ToDateTime(detail.Invoice.InvoiceYjrq).ToString("yyyy/MM/dd");
@@ -161,6 +161,8 @@ namespace Book.UI.produceManager.createProduce
         {
             if (this.bindingSourceHeader.Current == null) return;
             this.XOdetail = this.invoiceXODetailManager.Select(this.bindingSourceHeader.Current as Model.InvoiceXO, IsDetailsFlag);
+            if (this.XOdetail != null && this.XOdetail.Count > 0)
+                this.XOdetail = this.XOdetail.Where(D => D.InvoiceXODetailQuantity < D.InvoiceMPSQuantity).ToList();
             this.bindingSource1.DataSource = this.XOdetail;
             this.gridControl1.RefreshDataSource();
             this.checkEditAll.Checked = false;
@@ -187,6 +189,8 @@ namespace Book.UI.produceManager.createProduce
             // }
             if (this.bindingSourceHeader.Current == null) return;
             this.XOdetail = this.invoiceXODetailManager.Select(this.bindingSourceHeader.Current as Model.InvoiceXO, false);
+            if (this.XOdetail != null && this.XOdetail.Count > 0)
+                this.XOdetail = this.XOdetail.Where(D => D.InvoiceXODetailQuantity < D.InvoiceMPSQuantity).ToList();
             this.bindingSource1.DataSource = this.XOdetail;
             this.gridControl1.RefreshDataSource();
         }

@@ -139,7 +139,17 @@ namespace Book.UI.produceManager.PCParameterSet
             da.Rows.Add(dr);
             dr = da.NewRow();
             dr["SettingSetId"] = "FogMethod";
-            dr["SettingName"] = "霧都測試單Method";
+            dr["SettingName"] = "霧度測試單Method";
+            da.Rows.Add(dr);
+
+            dr = da.NewRow();
+            dr["SettingSetId"] = "EarplugsResilience";
+            dr["SettingName"] = "耳塞回彈力測試表-砝碼設置";
+            da.Rows.Add(dr);
+
+            dr = da.NewRow();
+            dr["SettingSetId"] = "EarplugsDecibel";
+            dr["SettingName"] = "耳塞分貝測試表-音頻設置";
             da.Rows.Add(dr);
 
             this._detail = this.settingManager.SelectTagOrderDefault("PCISO");

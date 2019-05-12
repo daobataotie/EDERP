@@ -20,10 +20,11 @@ namespace Book.UI.Settings.StockLimitations
 
             this.TCProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
             this.TCCustomerProductName.DataBindings.Add("Text", this.DataSource, "CustomerProductName");
-            this.TCLastDepotoutDate.DataBindings.Add("Text", this.DataSource, "LastDepotoutDate");
+            this.TCLastDepotoutDate.DataBindings.Add("Text", this.DataSource, "LastDepotoutDate", "{0:yyyy-MM-dd}");
             this.TCStockQuantity.DataBindings.Add("Text", this.DataSource, "StocksQuantity");
             this.TCCustomer.DataBindings.Add("Text", this.DataSource, "CustomerShortName");
             this.TC_Version.DataBindings.Add("Text", this.DataSource, "ProductVersion");
+            this.TCLastDepotInDate.DataBindings.Add("Text", this.DataSource, "LastDepotInDate");
         }
 
     }

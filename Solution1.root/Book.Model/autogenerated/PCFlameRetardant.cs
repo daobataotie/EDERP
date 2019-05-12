@@ -10,6 +10,9 @@
 using System;
 namespace Book.Model
 {
+    /// <summary>
+    /// 阻燃性测试
+    /// </summary>
 	public partial class PCFlameRetardant
 	{
 		#region Data

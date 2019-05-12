@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCEarplugsResilienceCheckDetail" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PCEarplugsResilienceCheckDetail" type="Book.Model.PCEarplugsResilienceCheckDetail, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PCEarplugsResilienceCheckDetailResult" class="PCEarplugsResilienceCheckDetail">
+      <result property="PCEarplugsResilienceCheckDetailId" column="PCEarplugsResilienceCheckDetailId" />
+      <result property="PCEarplugsResilienceCheckId" column="PCEarplugsResilienceCheckId" />
+      <result property="Number" column="Number"/>
+      <result property="FromId" column="FromId" />
+      <result property="InvoiceXOId" column="InvoiceXOId" />
+      <result property="InvoiceXOQuantity" column="InvoiceXOQuantity" />
+      <result property="ProductId" column="ProductId" />
+      <result property="ProductUnit" column="ProductUnit" />
+      <result property="TestQuantity" column="TestQuantity" />
+      <result property="Waiguan" column="Waiguan" />
+      <result property="Duise" column="Duise" />
+      <result property="Chicun" column="Chicun" />
+      <result property="Seconds" column="Seconds" />
+      <result property="Judge" column="Judge" />
+      <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_SimpleInvoicexo" />
+      <result property="PCEarplugsResilienceCheck" column="PCEarplugsResilienceCheckId" lazyLoad="false" select="PCEarplugsResilienceCheck.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsResilienceCheckDetail]
+				WHERE
+				[PCEarplugsResilienceCheckDetailId] = #PCEarplugsResilienceCheckDetailId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsResilienceCheckDetail]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PCEarplugsResilienceCheckDetailResult" parameterClass="PCEarplugsResilienceCheckDetail">
+      <![CDATA[SELECT
+				[PCEarplugsResilienceCheckDetailId],
+				[PCEarplugsResilienceCheckId],
+        [Number],
+				[FromId],
+				[InvoiceXOId],
+				[InvoiceXOQuantity],
+				[ProductId],
+				[ProductUnit],
+				[TestQuantity],
+				[Waiguan],
+				[Duise],
+				[Chicun],
+				[Seconds],
+				[Judge]
+			FROM
+				[dbo].[PCEarplugsResilienceCheckDetail]
+			WHERE
+				[PCEarplugsResilienceCheckDetailId] = #PCEarplugsResilienceCheckDetailId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[PCEarplugsResilienceCheckDetail]
+			WHERE            
+				[PCEarplugsResilienceCheckDetailId] = #PCEarplugsResilienceCheckDetailId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="PCEarplugsResilienceCheckDetailResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[PCEarplugsResilienceCheckDetail]
+                			                   
+
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[PCEarplugsResilienceCheckDetail]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PCEarplugsResilienceCheckDetailResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCEarplugsResilienceCheckDetail]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PCEarplugsResilienceCheckDetail">
+      <![CDATA[ INSERT INTO [dbo].[PCEarplugsResilienceCheckDetail] 
+			(
+				[PCEarplugsResilienceCheckDetailId],
+				[PCEarplugsResilienceCheckId],
+        [Number],
+				[FromId],
+				[InvoiceXOId],
+				[InvoiceXOQuantity],
+				[ProductId],
+				[ProductUnit],
+				[TestQuantity],
+				[Waiguan],
+				[Duise],
+				[Chicun],
+				[Seconds],
+				[Judge]
+			) 
+			VALUES 
+			(
+				#PCEarplugsResilienceCheckDetailId#,
+				#PCEarplugsResilienceCheckId#,
+        #Number#,
+				#FromId#,
+				#InvoiceXOId#,
+				#InvoiceXOQuantity#,
+				#ProductId#,
+				#ProductUnit#,
+				#TestQuantity#,
+				#Waiguan#,
+				#Duise#,
+				#Chicun#,
+				#Seconds#,
+				#Judge#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PCEarplugsResilienceCheckDetail">
+      <![CDATA[ 	UPDATE [PCEarplugsResilienceCheckDetail] SET
+				[PCEarplugsResilienceCheckId] = #PCEarplugsResilienceCheckId#,
+        [Number]=#Number#,
+				[FromId] = #FromId#,
+				[InvoiceXOId] = #InvoiceXOId#,
+				[InvoiceXOQuantity] = #InvoiceXOQuantity#,
+				[ProductId] = #ProductId#,
+				[ProductUnit] = #ProductUnit#,
+				[TestQuantity] = #TestQuantity#,
+				[Waiguan] = #Waiguan#,
+				[Duise] = #Duise#,
+				[Chicun] = #Chicun#,
+				[Seconds] = #Seconds#,
+				[Judge] = #Judge#
+			WHERE
+				[PCEarplugsResilienceCheckDetailId] = #PCEarplugsResilienceCheckDetailId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCEarplugsResilienceCheckDetail]
+				where  PCEarplugsResilienceCheckDetailId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

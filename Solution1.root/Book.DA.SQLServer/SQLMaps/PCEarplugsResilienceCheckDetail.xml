@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCEarplugsResilienceCheckDetail" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByHeaderId" resultMap="PCEarplugsResilienceCheckDetailResult" parameterClass="string">
+      select * from PCEarplugsResilienceCheckDetail where PCEarplugsResilienceCheckId=#value# order by Number
+    </select>
+
+    <delete id="DeleteByHeaderId" parameterClass="string">
+      <![CDATA[
+      delete from PCEarplugsResilienceCheckDetail where PCEarplugsResilienceCheckId=#value#
+      ]]>
+    </delete>
+    <select id="SelectByDateRage" resultMap="PCEarplugsResilienceCheckDetailResult" parameterClass="Map">
+      <![CDATA[
+      select pcd.* from PCEarplugsResilienceCheckDetail pcd left join InvoiceXO xo on pcd.InvoiceXOId=xo.InvoiceId where PCEarplugsResilienceCheckId in (select PCEarplugsResilienceCheckId from PCEarplugsResilienceCheck where PCEarplugsResilienceCheckDate between #startDate# and #endDate#)
+and (ProductId=#productId# or #productId# is null) and (xo.CustomerInvoiceXOId=#cusXOId# or #cusXOId# is null)  order by pcd.Number
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

@@ -387,7 +387,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 
+        /// 已排單數量
         /// </summary>
         public double? InvoiceMPSQuantity
         {

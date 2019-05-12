@@ -115,5 +115,18 @@
       select isnull(Sum(StockQuantity1),0) from Stock where DepotId='6326657f-2160-42ee-94cd-11b302676192' and ProductId=#value#
       ]]>
     </select>
+
+    <select id="GetLastDepotInDate" parameterClass="string" resultClass="string">
+      <![CDATA[
+      select ISNULL(Convert(varchar(50),MAX(bb.InvoiceDate),23),'') from (
+select * from (select top 1 InvoiceDate from InvoiceCG where InvoiceId in (select InvoiceId from InvoiceCGDetail where ProductId=#value#) order by InvoiceDate desc) as aa
+union all
+select * from (select top 1 ProduceInDepotDate as IndepotDate from ProduceInDepot where ProduceInDepotId in (select ProduceInDepotId from ProduceInDepotDetail where ProductId=#value#) order by ProduceInDepotDate desc) as aa
+union all
+select * from (select top 1 DepotInDate as IndepotDate from DepotIn where DepotInId in (select DepotInId from DepotInDetail where ProductId=#value#) order by DepotInDate desc) as aa
+union all
+select * from (select top 1 ProduceOtherInDepotDate as IndepotDate from ProduceOtherInDepot where ProduceOtherInDepotId in ( select ProduceOtherInDepotId from ProduceOtherInDepotDetail where ProductId=#value#) order by ProduceOtherInDepotDate desc) as aa ) bb
+      ]]>
+    </select>
   </statements>
 </sqlMap>

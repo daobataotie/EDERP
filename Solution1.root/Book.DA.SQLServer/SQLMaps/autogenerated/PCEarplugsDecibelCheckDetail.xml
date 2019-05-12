@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCEarplugsDecibelCheckDetail" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PCEarplugsDecibelCheckDetail" type="Book.Model.PCEarplugsDecibelCheckDetail, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PCEarplugsDecibelCheckDetailResult" class="PCEarplugsDecibelCheckDetail">
+      <result property="PCEarplugsDecibelCheckDetailId" column="PCEarplugsDecibelCheckDetailId" />
+      <result property="PCEarplugsDecibelCheckId" column="PCEarplugsDecibelCheckId" />
+      <result property="Number" column="Number" />
+      <result property="TestTime" column="TestTime" />
+      <result property="FromId" column="FromId" />
+      <result property="InvoiceXOId" column="InvoiceXOId" />
+      <result property="InvoiceXOQuantity" column="InvoiceXOQuantity" />
+      <result property="ProductId" column="ProductId" />
+      <result property="ProductUnit" column="ProductUnit" />
+      <result property="TestQuantity" column="TestQuantity" />
+      <result property="Yinpin" column="Yinpin" />
+      <result property="Judge" column="Judge" />
+      <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_SimpleInvoicexo" />
+      <result property="PCEarplugsDecibelCheck" column="PCEarplugsDecibelCheckId" lazyLoad="false" select="PCEarplugsDecibelCheck.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsDecibelCheckDetail]
+				WHERE
+				[PCEarplugsDecibelCheckDetailId] = #PCEarplugsDecibelCheckDetailId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsDecibelCheckDetail]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PCEarplugsDecibelCheckDetailResult" parameterClass="PCEarplugsDecibelCheckDetail">
+      <![CDATA[SELECT
+				[PCEarplugsDecibelCheckDetailId],
+				[PCEarplugsDecibelCheckId],
+				[Number],
+				[TestTime],
+				[FromId],
+				[InvoiceXOId],
+				[InvoiceXOQuantity],
+				[ProductId],
+				[ProductUnit],
+				[TestQuantity],
+				[Yinpin],
+				[Judge]
+			FROM
+				[dbo].[PCEarplugsDecibelCheckDetail]
+			WHERE
+				[PCEarplugsDecibelCheckDetailId] = #PCEarplugsDecibelCheckDetailId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[PCEarplugsDecibelCheckDetail]
+			WHERE            
+				[PCEarplugsDecibelCheckDetailId] = #PCEarplugsDecibelCheckDetailId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="PCEarplugsDecibelCheckDetailResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[PCEarplugsDecibelCheckDetail]
+                			                   
+
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[PCEarplugsDecibelCheckDetail]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PCEarplugsDecibelCheckDetailResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCEarplugsDecibelCheckDetail]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PCEarplugsDecibelCheckDetail">
+      <![CDATA[ INSERT INTO [dbo].[PCEarplugsDecibelCheckDetail] 
+			(
+				[PCEarplugsDecibelCheckDetailId],
+				[PCEarplugsDecibelCheckId],
+				[Number],
+				[TestTime],
+				[FromId],
+				[InvoiceXOId],
+				[InvoiceXOQuantity],
+				[ProductId],
+				[ProductUnit],
+				[TestQuantity],
+				[Yinpin],
+				[Judge]
+			) 
+			VALUES 
+			(
+				#PCEarplugsDecibelCheckDetailId#,
+				#PCEarplugsDecibelCheckId#,
+				#Number#,
+				#TestTime#,
+				#FromId#,
+				#InvoiceXOId#,
+				#InvoiceXOQuantity#,
+				#ProductId#,
+				#ProductUnit#,
+				#TestQuantity#,
+				#Yinpin#,
+				#Judge#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PCEarplugsDecibelCheckDetail">
+      <![CDATA[ 	UPDATE [PCEarplugsDecibelCheckDetail] SET
+				[PCEarplugsDecibelCheckId] = #PCEarplugsDecibelCheckId#,
+				[Number] = #Number#,
+				[TestTime] = #TestTime#,
+				[FromId] = #FromId#,
+				[InvoiceXOId] = #InvoiceXOId#,
+				[InvoiceXOQuantity] = #InvoiceXOQuantity#,
+				[ProductId] = #ProductId#,
+				[ProductUnit] = #ProductUnit#,
+				[TestQuantity] = #TestQuantity#,
+				[Yinpin] = #Yinpin#,
+				[Judge] = #Judge#
+			WHERE
+				[PCEarplugsDecibelCheckDetailId] = #PCEarplugsDecibelCheckDetailId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCEarplugsDecibelCheckDetail]
+				where  PCEarplugsDecibelCheckDetailId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

@@ -320,6 +320,8 @@ namespace Book.UI
 
             operations.Add("settings.producemanager.manprocedureprocess", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.ProduceManager.ManProcedureProcess.EditForm", form); });
             #endregion
+            
+            //貨品一覽
             operations.Add("settings.basicdata.list1form", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Products.List1Form", form); });
             //客户包装信息
             operations.Add("settings.basicdata.customs.customerpackage", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Customs.CustomerPackage.EditForm", form); });
@@ -767,6 +769,12 @@ namespace Book.UI
 
             //阻燃性测试表
             operations.Add("produceManager.PCFlameRetardant.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCFlameRetardant.EditForm", form); });
+
+            //耳塞回彈力測試表
+            operations.Add("produceManager.PCEarplugs.EditFormResilience", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCEarplugs.EditFormResilience", form); });
+
+            //耳塞分贝测试表
+            operations.Add("produceManager.PCEarplugs.EditFormDecibel", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCEarplugs.EditFormDecibel", form); });
         }
 
         static Form CreateForm(string formTypeName)

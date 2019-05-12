@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCEarplugsResilienceCheck" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="PCEarplugsResilienceCheck" type="Book.Model.PCEarplugsResilienceCheck, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="PCEarplugsResilienceCheckResult" class="PCEarplugsResilienceCheck">
+			<result property="PCEarplugsResilienceCheckId" column="PCEarplugsResilienceCheckId" />
+			<result property="PCEarplugsResilienceCheckDate" column="PCEarplugsResilienceCheckDate" />
+			<result property="EmployeeId" column="EmployeeId" />
+			<result property="Note" column="Note" />
+			<result property="InsertTime" column="InsertTime" />
+			<result property="UpdateTime" column="UpdateTime" />
+		<result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key" />        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsResilienceCheck]
+				WHERE
+				[PCEarplugsResilienceCheckId] = #PCEarplugsResilienceCheckId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsResilienceCheck]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="get_first" resultMap="PCEarplugsResilienceCheckResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsResilienceCheck
+			 
+			order by InsertTime 
+			]]>
+		</select>
+		<select id="get_last" resultMap="PCEarplugsResilienceCheckResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsResilienceCheck
+						
+            order by InsertTime desc
+			]]>
+            
+		</select>
+		<select id="get_prev" resultMap="PCEarplugsResilienceCheckResult" parameterClass="PCEarplugsResilienceCheck">
+			<![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsResilienceCheck
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+		</select>
+		<select id="get_next" resultMap="PCEarplugsResilienceCheckResult" parameterClass="PCEarplugsResilienceCheck">
+			<![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsResilienceCheck
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+		</select>
+		
+		<select id="has_rows_before" resultClass="bool" parameterClass="PCEarplugsResilienceCheck">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCEarplugsResilienceCheck
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+		</select>
+		
+		<select id="has_rows_after" resultClass="bool" parameterClass="PCEarplugsResilienceCheck">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCEarplugsResilienceCheck
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="PCEarplugsResilienceCheckResult" parameterClass="PCEarplugsResilienceCheck">
+			<![CDATA[SELECT
+				[PCEarplugsResilienceCheckId],
+				[PCEarplugsResilienceCheckDate],
+				[EmployeeId],
+				[Note],
+				[InsertTime],
+				[UpdateTime]
+			FROM
+				[dbo].[PCEarplugsResilienceCheck]
+			WHERE
+				[PCEarplugsResilienceCheckId] = #PCEarplugsResilienceCheckId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[PCEarplugsResilienceCheck]
+			WHERE            
+				[PCEarplugsResilienceCheckId] = #PCEarplugsResilienceCheckId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="PCEarplugsResilienceCheckResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[PCEarplugsResilienceCheck]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[PCEarplugsResilienceCheck]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="PCEarplugsResilienceCheckResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCEarplugsResilienceCheck]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="PCEarplugsResilienceCheck">
+			 <![CDATA[ INSERT INTO [dbo].[PCEarplugsResilienceCheck] 
+			(
+				[PCEarplugsResilienceCheckId],
+				[PCEarplugsResilienceCheckDate],
+				[EmployeeId],
+				[Note],
+				[InsertTime],
+				[UpdateTime]
+			) 
+			VALUES 
+			(
+				#PCEarplugsResilienceCheckId#,
+				#PCEarplugsResilienceCheckDate#,
+				#EmployeeId#,
+				#Note#,
+				#InsertTime#,
+				#UpdateTime#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="PCEarplugsResilienceCheck">
+		 <![CDATA[ 	UPDATE [PCEarplugsResilienceCheck] SET
+				[PCEarplugsResilienceCheckDate] = #PCEarplugsResilienceCheckDate#,
+				[EmployeeId] = #EmployeeId#,
+				[Note] = #Note#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#
+			WHERE
+				[PCEarplugsResilienceCheckId] = #PCEarplugsResilienceCheckId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCEarplugsResilienceCheck]
+				where  PCEarplugsResilienceCheckId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

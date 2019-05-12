@@ -35,7 +35,9 @@ namespace Book.UI.Settings.StockLimitations
             this.TCProductName = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCCustomerProductName = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCCustomer = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TC_Version = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCLastDepotoutDate = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCLastDepotInDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCStockQuantity = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -48,12 +50,12 @@ namespace Book.UI.Settings.StockLimitations
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.客户 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TC_Version = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -84,6 +86,7 @@ namespace Book.UI.Settings.StockLimitations
             this.TCCustomer,
             this.TC_Version,
             this.TCLastDepotoutDate,
+            this.TCLastDepotInDate,
             this.TCStockQuantity});
             resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             this.xrTableRow1.Name = "xrTableRow1";
@@ -93,34 +96,47 @@ namespace Book.UI.Settings.StockLimitations
             // 
             resources.ApplyResources(this.TCProductName, "TCProductName");
             this.TCProductName.Name = "TCProductName";
-            this.TCProductName.Weight = 0.96157198074427708;
+            this.TCProductName.Weight = 0.88471613922635528;
             // 
             // TCCustomerProductName
             // 
             resources.ApplyResources(this.TCCustomerProductName, "TCCustomerProductName");
             this.TCCustomerProductName.Name = "TCCustomerProductName";
-            this.TCCustomerProductName.Weight = 0.56021441957138518;
+            this.TCCustomerProductName.Weight = 0.51324712502725878;
             // 
             // TCCustomer
             // 
             resources.ApplyResources(this.TCCustomer, "TCCustomer");
             this.TCCustomer.Name = "TCCustomer";
             this.TCCustomer.StylePriority.UseTextAlignment = false;
-            this.TCCustomer.Weight = 0.46348813675448047;
+            this.TCCustomer.Weight = 0.41652044822330553;
+            // 
+            // TC_Version
+            // 
+            resources.ApplyResources(this.TC_Version, "TC_Version");
+            this.TC_Version.Name = "TC_Version";
+            this.TC_Version.Weight = 0.15488753738198358;
             // 
             // TCLastDepotoutDate
             // 
             resources.ApplyResources(this.TCLastDepotoutDate, "TCLastDepotoutDate");
             this.TCLastDepotoutDate.Name = "TCLastDepotoutDate";
             this.TCLastDepotoutDate.StylePriority.UseTextAlignment = false;
-            this.TCLastDepotoutDate.Weight = 0.4793910299786715;
+            this.TCLastDepotoutDate.Weight = 0.51781914773115667;
+            // 
+            // TCLastDepotInDate
+            // 
+            resources.ApplyResources(this.TCLastDepotInDate, "TCLastDepotInDate");
+            this.TCLastDepotInDate.Name = "TCLastDepotInDate";
+            this.TCLastDepotInDate.StylePriority.UseTextAlignment = false;
+            this.TCLastDepotInDate.Weight = 0.50191664849401407;
             // 
             // TCStockQuantity
             // 
             resources.ApplyResources(this.TCStockQuantity, "TCStockQuantity");
             this.TCStockQuantity.Name = "TCStockQuantity";
             this.TCStockQuantity.StylePriority.UseTextAlignment = false;
-            this.TCStockQuantity.Weight = 0.35482788774284629;
+            this.TCStockQuantity.Weight = 0.21584186463038402;
             // 
             // TopMargin
             // 
@@ -181,6 +197,7 @@ namespace Book.UI.Settings.StockLimitations
             this.客户,
             this.xrTableCell2,
             this.xrTableCell1,
+            this.xrTableCell3,
             this.xrTableCell6});
             resources.ApplyResources(this.xrTableRow2, "xrTableRow2");
             this.xrTableRow2.Name = "xrTableRow2";
@@ -193,7 +210,7 @@ namespace Book.UI.Settings.StockLimitations
             this.xrTableCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 254F);
             this.xrTableCell4.StylePriority.UsePadding = false;
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
-            this.xrTableCell4.Weight = 0.96157198074427708;
+            this.xrTableCell4.Weight = 0.8847160407295932;
             // 
             // xrTableCell5
             // 
@@ -202,25 +219,37 @@ namespace Book.UI.Settings.StockLimitations
             this.xrTableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 254F);
             this.xrTableCell5.StylePriority.UsePadding = false;
             this.xrTableCell5.StylePriority.UseTextAlignment = false;
-            this.xrTableCell5.Weight = 0.56021441957138529;
+            this.xrTableCell5.Weight = 0.51324722352402086;
             // 
             // 客户
             // 
             resources.ApplyResources(this.客户, "客户");
             this.客户.Name = "客户";
-            this.客户.Weight = 0.46348857998991022;
+            this.客户.Weight = 0.41652044822330581;
+            // 
+            // xrTableCell2
+            // 
+            resources.ApplyResources(this.xrTableCell2, "xrTableCell2");
+            this.xrTableCell2.Name = "xrTableCell2";
+            this.xrTableCell2.Weight = 0.15488773437550796;
             // 
             // xrTableCell1
             // 
             resources.ApplyResources(this.xrTableCell1, "xrTableCell1");
             this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Weight = 0.4793908329851474;
+            this.xrTableCell1.Weight = 0.51781895073763251;
+            // 
+            // xrTableCell3
+            // 
+            resources.ApplyResources(this.xrTableCell3, "xrTableCell3");
+            this.xrTableCell3.Name = "xrTableCell3";
+            this.xrTableCell3.Weight = 0.50191664849401418;
             // 
             // xrTableCell6
             // 
             resources.ApplyResources(this.xrTableCell6, "xrTableCell6");
             this.xrTableCell6.Name = "xrTableCell6";
-            this.xrTableCell6.Weight = 0.35482798623960843;
+            this.xrTableCell6.Weight = 0.21584186463038407;
             // 
             // PageFooter
             // 
@@ -236,18 +265,6 @@ namespace Book.UI.Settings.StockLimitations
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrPageInfo1.StylePriority.UseTextAlignment = false;
             // 
-            // xrTableCell2
-            // 
-            resources.ApplyResources(this.xrTableCell2, "xrTableCell2");
-            this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Weight = 0.180506200469672;
-            // 
-            // TC_Version
-            // 
-            resources.ApplyResources(this.TC_Version, "TC_Version");
-            this.TC_Version.Name = "TC_Version";
-            this.TC_Version.Weight = 0.18050654520833936;
-            // 
             // NoDepotOutProductsReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -258,7 +275,7 @@ namespace Book.UI.Settings.StockLimitations
             this.PageHeader,
             this.PageFooter});
             resources.ApplyResources(this, "$this");
-            this.Margins = new System.Drawing.Printing.Margins(150, 150, 80, 80);
+            this.Margins = new System.Drawing.Printing.Margins(80, 80, 80, 80);
             this.PageHeight = 2794;
             this.PageWidth = 2159;
             this.Version = "10.2";
@@ -295,5 +312,7 @@ namespace Book.UI.Settings.StockLimitations
         private DevExpress.XtraReports.UI.XRTableCell 客户;
         private DevExpress.XtraReports.UI.XRTableCell TC_Version;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
+        private DevExpress.XtraReports.UI.XRTableCell TCLastDepotInDate;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
     }
 }

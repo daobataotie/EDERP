@@ -43,6 +43,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -135,6 +136,7 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn4,
+            this.gridColumn7,
             this.gridColumn3,
             this.gridColumn5,
             this.gridColumn6});
@@ -158,6 +160,12 @@
             resources.ApplyResources(this.gridColumn4, "gridColumn4");
             this.gridColumn4.FieldName = "LastDepotoutDate";
             this.gridColumn4.Name = "gridColumn4";
+            // 
+            // gridColumn7
+            // 
+            resources.ApplyResources(this.gridColumn7, "gridColumn7");
+            this.gridColumn7.FieldName = "LastDepotInDate";
+            this.gridColumn7.Name = "gridColumn7";
             // 
             // gridColumn3
             // 
@@ -192,7 +200,7 @@
             this.layoutControlItem8});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(757, 458);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(790, 458);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -202,7 +210,7 @@
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(737, 388);
+            this.layoutControlItem1.Size = new System.Drawing.Size(770, 388);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
@@ -211,9 +219,9 @@
             // 
             this.layoutControlItem2.Control = this.btn_Search;
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
-            this.layoutControlItem2.Location = new System.Drawing.Point(571, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(593, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(85, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(91, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
@@ -224,7 +232,7 @@
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(83, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(87, 26);
             this.layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(24, 14);
             this.layoutControlItem3.TextToControlDistance = 5;
@@ -233,7 +241,7 @@
             // 
             this.layoutControlItem4.Control = this.labelControl1;
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
-            this.layoutControlItem4.Location = new System.Drawing.Point(83, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(87, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(230, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -246,7 +254,7 @@
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 414);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(737, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(770, 24);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextToControlDistance = 0;
             this.layoutControlItem5.TextVisible = false;
@@ -255,9 +263,9 @@
             // 
             this.layoutControlItem7.Control = this.btn_Print;
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(656, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(684, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(81, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(86, 26);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
             this.layoutControlItem7.TextVisible = false;
@@ -266,9 +274,9 @@
             // 
             this.layoutControlItem8.Control = this.newChooseContorl1;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(313, 0);
+            this.layoutControlItem8.Location = new System.Drawing.Point(317, 0);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(258, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(276, 26);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 14);
             // 
             // NoDepotOutProducts
@@ -321,5 +329,6 @@
         private Book.UI.Invoices.NewChooseContorl newChooseContorl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     }
 }

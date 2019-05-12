@@ -54,6 +54,9 @@ namespace Book.DA
         string GetLastDepotoutDate(string productid);
         double GetQuantityByStockAndProduct(string ProductId);
         void AnnualknotturnForm(string startdate, string enddate);
+
+        string GetLastDepotInDate(string productid);
+
     }
 }
 

@@ -131,7 +131,7 @@
     <value>0</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>41</value>
+    <value>74</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>项目名称</value>
@@ -162,7 +162,7 @@
     <value>1</value>
   </data>
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
-    <value>120</value>
+    <value>135</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>值</value>
@@ -174,7 +174,7 @@
     <value>2</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
-    <value>225</value>
+    <value>177</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>質檢標準</value>

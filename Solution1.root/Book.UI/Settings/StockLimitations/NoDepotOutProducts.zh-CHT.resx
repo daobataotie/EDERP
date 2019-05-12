@@ -210,7 +210,7 @@
     <value>商品名稱</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
-    <value>商品編號</value>
+    <value>客戶型號</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>最後一次出倉日期</value>

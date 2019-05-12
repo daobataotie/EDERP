@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCEarplugsDecibelCheck" xmlns="http://ibatis.apache.org/mapping" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <alias>
+        <typeAlias alias="PCEarplugsDecibelCheck" type="Book.Model.PCEarplugsDecibelCheck, Book.Model" />
+    </alias>
+    <resultMaps>                                    
+        <resultMap id="PCEarplugsDecibelCheckResult" class="PCEarplugsDecibelCheck">
+			<result property="PCEarplugsDecibelCheckId" column="PCEarplugsDecibelCheckId" />
+			<result property="PCEarplugsDecibelCheckDate" column="PCEarplugsDecibelCheckDate" />
+			<result property="EmployeeId" column="EmployeeId" />
+			<result property="Note" column="Note" />
+			<result property="InsertTime" column="InsertTime" />
+			<result property="UpdateTime" column="UpdateTime" />
+			<result property="AuditState" column="AuditState" />
+			<result property="AuditEmpId" column="AuditEmpId" />
+		<result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_by_primary_key" />		<result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key" />        </resultMap>
+    </resultMaps>
+		
+    <statements>
+		<select id="has_rows_of" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsDecibelCheck]
+				WHERE
+				[PCEarplugsDecibelCheckId] = #PCEarplugsDecibelCheckId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="has_rows" resultClass="bool">
+			<![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsDecibelCheck]
+ 								
+				) then 1 else 0 end
+                ]]>
+		</select>
+		<select id="get_first" resultMap="PCEarplugsDecibelCheckResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsDecibelCheck
+			 
+			order by InsertTime 
+			]]>
+		</select>
+		<select id="get_last" resultMap="PCEarplugsDecibelCheckResult">
+			<![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsDecibelCheck
+						
+            order by InsertTime desc
+			]]>
+            
+		</select>
+		<select id="get_prev" resultMap="PCEarplugsDecibelCheckResult" parameterClass="PCEarplugsDecibelCheck">
+			<![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsDecibelCheck
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+		</select>
+		<select id="get_next" resultMap="PCEarplugsDecibelCheckResult" parameterClass="PCEarplugsDecibelCheck">
+			<![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsDecibelCheck
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+		</select>
+		
+		<select id="has_rows_before" resultClass="bool" parameterClass="PCEarplugsDecibelCheck">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCEarplugsDecibelCheck
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+		</select>
+		
+		<select id="has_rows_after" resultClass="bool" parameterClass="PCEarplugsDecibelCheck">
+			<![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCEarplugsDecibelCheck
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+		</select>
+		<!-- select by primary key -->
+        <select id="select_by_primary_key" resultMap="PCEarplugsDecibelCheckResult" parameterClass="PCEarplugsDecibelCheck">
+			<![CDATA[SELECT
+				[PCEarplugsDecibelCheckId],
+				[PCEarplugsDecibelCheckDate],
+				[EmployeeId],
+				[Note],
+				[InsertTime],
+				[UpdateTime],
+				[AuditState],
+				[AuditEmpId]
+			FROM
+				[dbo].[PCEarplugsDecibelCheck]
+			WHERE
+				[PCEarplugsDecibelCheckId] = #PCEarplugsDecibelCheckId#
+                			          
+         		]]>
+        </select>
+		
+		<!-- delete -->
+        <delete id="delete" parameterClass="string">
+				<![CDATA[                
+                DELETE FROM [dbo].[PCEarplugsDecibelCheck]
+			WHERE            
+				[PCEarplugsDecibelCheckId] = #PCEarplugsDecibelCheckId#
+                    		]]>
+        </delete>
+
+		<!-- select all -->
+        <select id="select_all" resultMap="PCEarplugsDecibelCheckResult" >
+			<![CDATA[SELECT *
+			FROM 
+				[dbo].[PCEarplugsDecibelCheck]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+        </select>
+        
+		<select id="count_all" resultClass="int">
+		<![CDATA[	select count(*)
+			from 
+				[dbo].[PCEarplugsDecibelCheck]
+                			          
+         ]]>
+		</select>
+		
+		<select id="select_all_with_paging" resultMap="PCEarplugsDecibelCheckResult">
+        <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCEarplugsDecibelCheck]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+		</select>
+		
+		<!-- insert -->
+        <insert id="insert" parameterClass="PCEarplugsDecibelCheck">
+			 <![CDATA[ INSERT INTO [dbo].[PCEarplugsDecibelCheck] 
+			(
+				[PCEarplugsDecibelCheckId],
+				[PCEarplugsDecibelCheckDate],
+				[EmployeeId],
+				[Note],
+				[InsertTime],
+				[UpdateTime],
+				[AuditState],
+				[AuditEmpId]
+			) 
+			VALUES 
+			(
+				#PCEarplugsDecibelCheckId#,
+				#PCEarplugsDecibelCheckDate#,
+				#EmployeeId#,
+				#Note#,
+				#InsertTime#,
+				#UpdateTime#,
+				#AuditState#,
+				#AuditEmpId#
+			)
+             ]]>
+        </insert>
+		
+		<!-- update -->
+        <update id="update" parameterClass="PCEarplugsDecibelCheck">
+		 <![CDATA[ 	UPDATE [PCEarplugsDecibelCheck] SET
+				[PCEarplugsDecibelCheckDate] = #PCEarplugsDecibelCheckDate#,
+				[EmployeeId] = #EmployeeId#,
+				[Note] = #Note#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+				[AuditState] = #AuditState#,
+				[AuditEmpId] = #AuditEmpId#
+			WHERE
+				[PCEarplugsDecibelCheckId] = #PCEarplugsDecibelCheckId#
+                    ]]>
+        </update>
+		<select id="existsPrimary" resultClass="bool" parameterClass="string">
+			<![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCEarplugsDecibelCheck]
+				where  PCEarplugsDecibelCheckId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+		</select>
+		
+    </statements>
+</sqlMap>

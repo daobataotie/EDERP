@@ -4372,6 +4372,48 @@
       <DependentUpon>AnnualSalaryForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ConditionForm.zh-CHT.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\EditFormResilience.resx">
+      <DependentUpon>EditFormResilience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\EditFormResilience.zh-CHT.resx">
+      <DependentUpon>EditFormResilience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ListFormResilience.resx">
+      <DependentUpon>ListFormResilience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ListFormResilience.zh-CHT.resx">
+      <DependentUpon>ListFormResilience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ROResilience.resx">
+      <DependentUpon>ROResilience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ROResilience.zh-CHT.resx">
+      <DependentUpon>ROResilience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\EditFormDecibel.resx">
+      <DependentUpon>EditFormDecibel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\EditFormDecibel.zh-CHT.resx">
+      <DependentUpon>EditFormDecibel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ListFormDecibel.resx">
+      <DependentUpon>ListFormDecibel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ListFormDecibel.zh-CHT.resx">
+      <DependentUpon>ListFormDecibel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\RODecibel.resx">
+      <DependentUpon>RODecibel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\RODecibel.zh-CHT.resx">
+      <DependentUpon>RODecibel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFlameRetardant\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -11708,6 +11750,48 @@
     </Compile>
     <Compile Include="Hr\Attendance\ClockData\NewClockForm.Designer.cs">
       <DependentUpon>NewClockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\EditFormResilience.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\EditFormResilience.Designer.cs">
+      <DependentUpon>EditFormResilience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ListFormResilience.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ListFormResilience.Designer.cs">
+      <DependentUpon>ListFormResilience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ROResilience.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ROResilience.Designer.cs">
+      <DependentUpon>ROResilience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\EditFormDecibel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\EditFormDecibel.Designer.cs">
+      <DependentUpon>EditFormDecibel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ListFormDecibel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ListFormDecibel.Designer.cs">
+      <DependentUpon>ListFormDecibel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\RODecibel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\RODecibel.Designer.cs">
+      <DependentUpon>RODecibel.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCFlameRetardant\ConditionForm.cs">
       <SubType>Form</SubType>

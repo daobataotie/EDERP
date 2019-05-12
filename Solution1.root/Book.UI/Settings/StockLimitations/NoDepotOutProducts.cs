@@ -37,6 +37,13 @@ namespace Book.UI.Settings.StockLimitations
         {
             this.dt = stockManager.SelectProductNoDepotout(Convert.ToDouble(this.txt_Years.Text == "" ? null : this.txt_Years.Text), (this.newChooseContorl1.EditValue as Model.ProductCategory) == null ? null : (this.newChooseContorl1.EditValue as Model.ProductCategory).ProductCategoryId);
             //GetLastDepotoutDate(this.dt);
+
+            if (dt != null && dt.Rows.Count > 0)
+                foreach (DataRow item in dt.Rows)
+                {
+                    item["LastDepotInDate"] = stockManager.GetLastDepotInDate(item["productid"].ToString());
+                }
+
             this.bindingSource1.DataSource = dt;
             this.label1.Text = this.bindingSource1.Count.ToString() + " 項";
             this.year = Convert.ToDouble(this.txt_Years.Text == "" ? null : this.txt_Years.Text);

@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_Print.Location" type="System.Drawing.Point, System.Drawing">
-    <value>668, 12</value>
+    <value>696, 12</value>
   </data>
   <data name="btn_Print.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 22</value>
+    <value>82, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_Print.TabIndex" type="System.Int32, mscorlib">
@@ -147,7 +147,7 @@
     <value>12, 426</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>733, 20</value>
+    <value>766, 20</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -168,7 +168,7 @@
     <value>5</value>
   </data>
   <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 12</value>
+    <value>99, 12</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labelControl1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -196,10 +196,10 @@
     <value>6</value>
   </data>
   <data name="newChooseContorl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 12</value>
+    <value>393, 12</value>
   </data>
   <data name="newChooseContorl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 21</value>
+    <value>208, 21</value>
   </data>
   <data name="newChooseContorl1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -220,7 +220,7 @@
     <value>41, 12</value>
   </data>
   <data name="txt_Years.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 21</value>
+    <value>54, 21</value>
   </data>
   <data name="txt_Years.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -238,10 +238,10 @@
     <value>8</value>
   </data>
   <data name="btn_Search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>583, 12</value>
+    <value>605, 12</value>
   </data>
   <data name="btn_Search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 22</value>
+    <value>87, 22</value>
   </data>
   <data name="btn_Search.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -277,7 +277,7 @@
     <value>0</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>256</value>
+    <value>232</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>客户型号</value>
@@ -289,7 +289,7 @@
     <value>1</value>
   </data>
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
-    <value>116</value>
+    <value>111</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>最后一次出仓日期</value>
@@ -301,7 +301,19 @@
     <value>4</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
-    <value>106</value>
+    <value>110</value>
+  </data>
+  <data name="gridColumn7.Caption" xml:space="preserve">
+    <value>最後一次入庫日期</value>
+  </data>
+  <data name="gridColumn7.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="gridColumn7.Width" type="System.Int32, mscorlib">
+    <value>111</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>库存</value>
@@ -310,10 +322,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
-    <value>73</value>
+    <value>52</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>客户</value>
@@ -325,7 +337,7 @@
     <value>2</value>
   </data>
   <data name="gridColumn5.Width" type="System.Int32, mscorlib">
-    <value>97</value>
+    <value>92</value>
   </data>
   <data name="gridColumn6.Caption" xml:space="preserve">
     <value>版本</value>
@@ -337,10 +349,10 @@
     <value>3</value>
   </data>
   <data name="gridColumn6.Width" type="System.Int32, mscorlib">
-    <value>67</value>
+    <value>40</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>733, 384</value>
+    <value>766, 384</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -412,7 +424,7 @@
     <value>layoutControlGroup1</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>757, 458</value>
+    <value>790, 458</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -439,7 +451,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>757, 458</value>
+    <value>790, 458</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value> 长期未出仓商品</value>
@@ -472,6 +484,12 @@
     <value>gridColumn4</value>
   </data>
   <data name="&gt;&gt;gridColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Name" xml:space="preserve">
+    <value>gridColumn7</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">

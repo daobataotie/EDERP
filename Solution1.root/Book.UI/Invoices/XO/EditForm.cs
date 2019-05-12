@@ -1552,6 +1552,8 @@ namespace Book.UI.Invoices.XO
                 MessageBox.Show("請先保存單據！", this.Text, MessageBoxButtons.OK);
                 return;
             }
+            
+            this.Refresh();
             IList<Model.InvoiceXODetail> list = this.bindingSource1.DataSource as List<Model.InvoiceXODetail>;
             if (list != null)
             {
@@ -1560,14 +1562,15 @@ namespace Book.UI.Invoices.XO
                               select n;
                 if (details != null && details.Count() > 0)
                 {
+
                     foreach (Model.InvoiceXODetail item in details)
                     {
                         if (item.InvoiceMPSQuantity >= item.InvoiceXODetailQuantity)
                         {
-                            if (MessageBox.Show("序號：" + item.Inumber.ToString() + "已排單，是否繼續", this.Text, MessageBoxButtons.YesNo) == DialogResult.No)
-                                return;
-                            else
-                                break;
+                            MessageBox.Show("序號：" + item.Inumber.ToString() + "已排單，請勿重複排單", this.Text, MessageBoxButtons.OK);
+                            return;
+                            //else
+                            //    break;
                         }
                         if (!(bool)item.IsNeedMPS)
                         {

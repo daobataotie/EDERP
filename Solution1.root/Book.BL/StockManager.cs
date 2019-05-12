@@ -206,6 +206,16 @@ namespace Book.BL
         {
             accessor.AnnualknotturnForm(startdate, enddate);
         }
+
+        /// <summary>
+        /// 获取商品最后一次入库日期
+        /// </summary>
+        /// <param name="productid"></param>
+        /// <returns></returns>
+        public string  GetLastDepotInDate(string productid)
+        {
+            return accessor.GetLastDepotInDate(productid);
+        }
     }
 }
 

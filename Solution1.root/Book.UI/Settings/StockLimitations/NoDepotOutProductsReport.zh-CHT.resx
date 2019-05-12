@@ -126,6 +126,12 @@
   <data name="客户.Text" xml:space="preserve">
     <value>客戶</value>
   </data>
+  <data name="xrTableCell1.Text" xml:space="preserve">
+    <value>最後一次出倉日期</value>
+  </data>
+  <data name="xrTableCell3.Text" xml:space="preserve">
+    <value>最後一次入庫日期</value>
+  </data>
   <data name="xrTableCell6.Text" xml:space="preserve">
     <value>庫存</value>
   </data>
