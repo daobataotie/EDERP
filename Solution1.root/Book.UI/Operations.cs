@@ -775,6 +775,9 @@ namespace Book.UI
 
             //耳塞分贝测试表
             operations.Add("produceManager.PCEarplugs.EditFormDecibel", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCEarplugs.EditFormDecibel", form); });
+
+            //耳塞拉線测试表
+            operations.Add("produceManager.PCEarplugs.EditFormStayWire", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCEarplugs.EditFormStayWire", form); });
         }
 
         static Form CreateForm(string formTypeName)

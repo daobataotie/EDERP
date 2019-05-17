@@ -36,6 +36,10 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		private string _note;
+
+        private string _tiekuaiyaCondition;
+
+        private string _shoucuorouCondition;
 		
 		/// <summary>
 		/// 
@@ -144,7 +148,19 @@ namespace Book.Model
 			{
 				this._updateTime = value;
 			}
-		}
+        }
+
+        public string TiekuaiyaCondition
+        {
+            get { return _tiekuaiyaCondition; }
+            set { _tiekuaiyaCondition = value; }
+        }
+
+        public string ShoucuorouCondition
+        {
+            get { return _shoucuorouCondition; }
+            set { _shoucuorouCondition = value; }
+        }
 	
 		/// <summary>
 		/// 员工
@@ -190,7 +206,11 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		public readonly static string PRO_UpdateTime = "UpdateTime";
-		
+
+
+        public readonly static string PRO_TiekuaiyaCondition = "TiekuaiyaCondition";
+
+        public readonly static string PRO_ShoucuorouCondition = "ShoucuorouCondition";
 
 		#endregion
 	}

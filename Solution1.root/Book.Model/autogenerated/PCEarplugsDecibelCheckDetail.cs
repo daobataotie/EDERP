@@ -67,7 +67,7 @@ namespace Book.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		private string _yinpin;
+		private decimal _yinpin;
 		
 		/// <summary>
 		/// 
@@ -244,7 +244,7 @@ namespace Book.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Yinpin
+        public decimal Yinpin
 		{
 			get 
 			{

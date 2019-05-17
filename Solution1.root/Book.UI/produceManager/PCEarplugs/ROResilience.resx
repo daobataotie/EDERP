@@ -168,7 +168,16 @@
   <data name="xrTableCell13.Text" xml:space="preserve">
     <value>秒数</value>
   </data>
-  <data name="TCSeconds.Dpi" type="System.Single, mscorlib">
+  <data name="TCTiekuaiya.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell14.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrTableCell14.Text" xml:space="preserve">
+    <value>秒数</value>
+  </data>
+  <data name="TCShoucuorou.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="TCJudge.Dpi" type="System.Single, mscorlib">
@@ -307,11 +316,11 @@
   <data name="xrTableCell10.Text" xml:space="preserve">
     <value>尺寸            (3格内)</value>
   </data>
-  <data name="TCParameter.Dpi" type="System.Single, mscorlib">
+  <data name="TCTiekuaiyaCondition.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="TCParameter.Text" xml:space="preserve">
-    <value>TCParameter</value>
+  <data name="TCShoucuorouCondition.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="xrTableCell8.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -323,7 +332,7 @@
     <value>254</value>
   </data>
   <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>2608.99976, 92.60417</value>
+    <value>2608.99976, 131</value>
   </data>
   <data name="xrTable1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -365,7 +374,7 @@
     <value>254</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>235.479172</value>
+    <value>273.875</value>
   </data>
   <data name="xrPageInfo1.Dpi" type="System.Single, mscorlib">
     <value>254</value>

@@ -35,7 +35,7 @@ namespace Book.DA.SQLServer
             ht.Add("startDate", startDate);
             ht.Add("endDate", endDate);
             ht.Add("productId", productId);
-            ht.Add("cusXOId", cusXOId);
+            ht.Add("cusXOId", (string.IsNullOrEmpty(cusXOId) ? null : cusXOId));
 
             return sqlmapper.QueryForList<Model.PCEarplugsDecibelCheckDetail>("PCEarplugsDecibelCheckDetail.SelectByDateRage", ht);
         }

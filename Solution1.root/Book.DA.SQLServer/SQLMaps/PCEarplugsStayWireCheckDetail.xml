@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCEarplugsStayWireCheckDetail" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="SelectByHeaderId" resultMap="PCEarplugsStayWireCheckDetailResult" parameterClass="string">
+      <![CDATA[
+      select * from PCEarplugsStayWireCheckDetail where PCEarplugsStayWireCheckId=#value# order by Number
+      ]]>
+    </select>
+
+    <delete id="DeleteByHeaderId" parameterClass="string">
+      <![CDATA[
+      delete from PCEarplugsStayWireCheckDetail where PCEarplugsStayWireCheckId=#value#
+      ]]>
+    </delete>
+    <select id="SelectByDateRage" resultMap="PCEarplugsStayWireCheckDetailResult" parameterClass="Map">
+      <![CDATA[
+       select pcd.* from PCEarplugsStayWireCheckDetail pcd left join InvoiceXO xo on pcd.InvoiceXOId=xo.InvoiceId where PCEarplugsStayWireCheckId in (select PCEarplugsStayWireCheckId from PCEarplugsStayWireCheck where PCEarplugsStayWireCheckDate between #startDate# and #endDate#)
+and (ProductId=#productId# or #productId# is null) and (xo.CustomerInvoiceXOId=#cusXOId# or #cusXOId# is null)  order by pcd.Number
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

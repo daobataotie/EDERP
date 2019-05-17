@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCEarplugsStayWireCheckDetail" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PCEarplugsStayWireCheckDetail" type="Book.Model.PCEarplugsStayWireCheckDetail, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PCEarplugsStayWireCheckDetailResult" class="PCEarplugsStayWireCheckDetail">
+      <result property="PCEarplugsStayWireCheckDetailId" column="PCEarplugsStayWireCheckDetailId" />
+      <result property="PCEarplugsStayWireCheckId" column="PCEarplugsStayWireCheckId" />
+      <result property="Number" column="Number" />
+      <result property="TestTime" column="TestTime" />
+      <result property="FromId" column="FromId" />
+      <result property="InvoiceXOId" column="InvoiceXOId" />
+      <result property="InvoiceXOQuantity" column="InvoiceXOQuantity" />
+      <result property="ProductId" column="ProductId" />
+      <result property="ProductUnit" column="ProductUnit" />
+      <result property="TestQuantity" column="TestQuantity" />
+      <result property="Waiguan" column="Waiguan" />
+      <result property="Duise" column="Duise" />
+      <result property="Fama" column="Fama" />
+      <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_SimpleInvoicexo" />
+      <result property="PCEarplugsStayWireCheck" column="PCEarplugsStayWireCheckId" lazyLoad="false" select="PCEarplugsStayWireCheck.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsStayWireCheckDetail]
+				WHERE
+				[PCEarplugsStayWireCheckDetailId] = #PCEarplugsStayWireCheckDetailId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsStayWireCheckDetail]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PCEarplugsStayWireCheckDetailResult" parameterClass="PCEarplugsStayWireCheckDetail">
+      <![CDATA[SELECT
+				[PCEarplugsStayWireCheckDetailId],
+				[PCEarplugsStayWireCheckId],
+				[Number],
+				[TestTime],
+				[FromId],
+				[InvoiceXOId],
+				[InvoiceXOQuantity],
+				[ProductId],
+				[ProductUnit],
+				[TestQuantity],
+				[Waiguan],
+				[Duise],
+				[Fama]
+			FROM
+				[dbo].[PCEarplugsStayWireCheckDetail]
+			WHERE
+				[PCEarplugsStayWireCheckDetailId] = #PCEarplugsStayWireCheckDetailId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[PCEarplugsStayWireCheckDetail]
+			WHERE            
+				[PCEarplugsStayWireCheckDetailId] = #PCEarplugsStayWireCheckDetailId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="PCEarplugsStayWireCheckDetailResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[PCEarplugsStayWireCheckDetail]
+                			                   
+
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[PCEarplugsStayWireCheckDetail]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PCEarplugsStayWireCheckDetailResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCEarplugsStayWireCheckDetail]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PCEarplugsStayWireCheckDetail">
+      <![CDATA[ INSERT INTO [dbo].[PCEarplugsStayWireCheckDetail] 
+			(
+				[PCEarplugsStayWireCheckDetailId],
+				[PCEarplugsStayWireCheckId],
+				[Number],
+				[TestTime],
+				[FromId],
+				[InvoiceXOId],
+				[InvoiceXOQuantity],
+				[ProductId],
+				[ProductUnit],
+				[TestQuantity],
+				[Waiguan],
+				[Duise],
+				[Fama]
+			) 
+			VALUES 
+			(
+				#PCEarplugsStayWireCheckDetailId#,
+				#PCEarplugsStayWireCheckId#,
+				#Number#,
+				#TestTime#,
+				#FromId#,
+				#InvoiceXOId#,
+				#InvoiceXOQuantity#,
+				#ProductId#,
+				#ProductUnit#,
+				#TestQuantity#,
+				#Waiguan#,
+				#Duise#,
+				#Fama#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PCEarplugsStayWireCheckDetail">
+      <![CDATA[ 	UPDATE [PCEarplugsStayWireCheckDetail] SET
+				[PCEarplugsStayWireCheckId] = #PCEarplugsStayWireCheckId#,
+				[Number] = #Number#,
+				[TestTime] = #TestTime#,
+				[FromId] = #FromId#,
+				[InvoiceXOId] = #InvoiceXOId#,
+				[InvoiceXOQuantity] = #InvoiceXOQuantity#,
+				[ProductId] = #ProductId#,
+				[ProductUnit] = #ProductUnit#,
+				[TestQuantity] = #TestQuantity#,
+				[Waiguan] = #Waiguan#,
+				[Duise] = #Duise#,
+				[Fama] = #Fama#
+			WHERE
+				[PCEarplugsStayWireCheckDetailId] = #PCEarplugsStayWireCheckDetailId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCEarplugsStayWireCheckDetail]
+				where  PCEarplugsStayWireCheckDetailId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

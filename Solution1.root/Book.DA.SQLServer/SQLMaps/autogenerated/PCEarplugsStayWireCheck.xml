@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCEarplugsStayWireCheck" xmlns="http://ibatis.apache.org/mapping"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PCEarplugsStayWireCheck" type="Book.Model.PCEarplugsStayWireCheck, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PCEarplugsStayWireCheckResult" class="PCEarplugsStayWireCheck">
+      <result property="PCEarplugsStayWireCheckId" column="PCEarplugsStayWireCheckId" />
+      <result property="PCEarplugsStayWireCheckDate" column="PCEarplugsStayWireCheckDate" />
+      <result property="EmployeeId" column="EmployeeId" />
+      <result property="Note" column="Note" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="AuditState" column="AuditState" />
+      <result property="AuditEmpId" column="AuditEmpId" />
+      <result property="TestCondition" column="TestCondition"/>
+      <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_by_primary_key" />
+      <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsStayWireCheck]
+				WHERE
+				[PCEarplugsStayWireCheckId] = #PCEarplugsStayWireCheckId#
+                        			                   
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
+				SELECT
+					*
+				FROM
+					[dbo].[PCEarplugsStayWireCheck]
+ 								
+				) then 1 else 0 end
+                ]]>
+    </select>
+    <select id="get_first" resultMap="PCEarplugsStayWireCheckResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsStayWireCheck
+			 
+			order by InsertTime 
+			]]>
+    </select>
+    <select id="get_last" resultMap="PCEarplugsStayWireCheckResult">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsStayWireCheck
+						
+            order by InsertTime desc
+			]]>
+
+    </select>
+    <select id="get_prev" resultMap="PCEarplugsStayWireCheckResult" parameterClass="PCEarplugsStayWireCheck">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsStayWireCheck
+			where InsertTime < #InsertTime#	
+            			          
+            order by InsertTime desc
+			]]>
+    </select>
+    <select id="get_next" resultMap="PCEarplugsStayWireCheckResult" parameterClass="PCEarplugsStayWireCheck">
+      <![CDATA[
+			select top 1 *
+			from dbo.PCEarplugsStayWireCheck
+			where InsertTime > #InsertTime#	
+                			                   
+            order by InsertTime
+			]]>
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="PCEarplugsStayWireCheck">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCEarplugsStayWireCheck
+				where InsertTime < #InsertTime#
+                			                   
+				) then 1 else 0 end
+			]]>
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="PCEarplugsStayWireCheck">
+      <![CDATA[
+			select case when exists(
+				select * 
+				from dbo.PCEarplugsStayWireCheck
+				where InsertTime > #InsertTime#
+                			          
+         
+				) then 1 else 0 end
+			]]>
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PCEarplugsStayWireCheckResult" parameterClass="PCEarplugsStayWireCheck">
+      <![CDATA[SELECT
+				[PCEarplugsStayWireCheckId],
+				[PCEarplugsStayWireCheckDate],
+				[EmployeeId],
+				[Note],
+				[InsertTime],
+				[UpdateTime],
+				[AuditState],
+				[AuditEmpId],
+        [TestCondition]
+			FROM
+				[dbo].[PCEarplugsStayWireCheck]
+			WHERE
+				[PCEarplugsStayWireCheckId] = #PCEarplugsStayWireCheckId#
+                			          
+         		]]>
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
+                DELETE FROM [dbo].[PCEarplugsStayWireCheck]
+			WHERE            
+				[PCEarplugsStayWireCheckId] = #PCEarplugsStayWireCheckId#
+                    		]]>
+    </delete>
+
+    <!-- select all -->
+    <select id="select_all" resultMap="PCEarplugsStayWireCheckResult" >
+      <![CDATA[SELECT *
+			FROM 
+				[dbo].[PCEarplugsStayWireCheck]
+                			                   
+  ORDER BY InsertTime DESC  
+			]]>
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
+			from 
+				[dbo].[PCEarplugsStayWireCheck]
+                			          
+         ]]>
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PCEarplugsStayWireCheckResult">
+      <![CDATA[    SELECT *
+            FROM
+            (
+                SELECT *, row_number() over(order by $OrderStatement$) rownumber
+                FROM    
+                    [dbo].[PCEarplugsStayWireCheck]
+                    			          
+         
+            ) t
+            WHERE t.rownumber between #Row1# and #Row2#
+             ]]>
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PCEarplugsStayWireCheck">
+      <![CDATA[ INSERT INTO [dbo].[PCEarplugsStayWireCheck] 
+			(
+				[PCEarplugsStayWireCheckId],
+				[PCEarplugsStayWireCheckDate],
+				[EmployeeId],
+				[Note],
+				[InsertTime],
+				[UpdateTime],
+				[AuditState],
+				[AuditEmpId],
+        [TestCondition]
+			) 
+			VALUES 
+			(
+				#PCEarplugsStayWireCheckId#,
+				#PCEarplugsStayWireCheckDate#,
+				#EmployeeId#,
+				#Note#,
+				#InsertTime#,
+				#UpdateTime#,
+				#AuditState#,
+				#AuditEmpId#,
+        #TestCondition#
+			)
+             ]]>
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PCEarplugsStayWireCheck">
+      <![CDATA[ 	UPDATE [PCEarplugsStayWireCheck] SET
+				[PCEarplugsStayWireCheckDate] = #PCEarplugsStayWireCheckDate#,
+				[EmployeeId] = #EmployeeId#,
+				[Note] = #Note#,
+				[InsertTime] = #InsertTime#,
+				[UpdateTime] = #UpdateTime#,
+				[AuditState] = #AuditState#,
+				[AuditEmpId] = #AuditEmpId#,
+        [TestCondition] = #TestCondition#
+			WHERE
+				[PCEarplugsStayWireCheckId] = #PCEarplugsStayWireCheckId#
+                    ]]>
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
+			select case when exists(
+				select *
+				from [dbo].[PCEarplugsStayWireCheck]
+				where  PCEarplugsStayWireCheckId = #value#                 			                   
+				)
+				then 1 else 0 end
+			]]>
+    </select>
+
+  </statements>
+</sqlMap>

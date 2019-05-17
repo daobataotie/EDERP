@@ -74,7 +74,9 @@ namespace Book.Model
         /// <summary>
         /// 
         /// </summary>
-        private decimal? _seconds;
+        private decimal? _tiekuaiya;
+
+        private decimal? _shoucuorou;
 
         /// <summary>
         /// 
@@ -272,16 +274,22 @@ namespace Book.Model
         /// <summary>
         /// 
         /// </summary>
-        public decimal? Seconds
+        public decimal? Tiekuaiya
         {
             get
             {
-                return this._seconds;
+                return this._tiekuaiya;
             }
             set
             {
-                this._seconds = value;
+                this._tiekuaiya = value;
             }
+        }
+
+        public decimal? Shoucuorou
+        {
+            get { return _shoucuorou; }
+            set { _shoucuorou = value; }
         }
 
         /// <summary>
@@ -401,10 +409,12 @@ namespace Book.Model
         /// </summary>
         public readonly static string PRO_Chicun = "Chicun";
 
+        public readonly static string PRO_Tiekuaiya = "Tiekuaiya";
+
         /// <summary>
         /// 
         /// </summary>
-        public readonly static string PRO_Seconds = "Seconds";
+        public readonly static string PRO_Shoucuorou = "Shoucuorou";
 
         /// <summary>
         /// 

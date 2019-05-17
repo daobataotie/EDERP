@@ -156,13 +156,13 @@
             // 
             resources.ApplyResources(this.TCCheckedStandard, "TCCheckedStandard");
             this.TCCheckedStandard.Name = "TCCheckedStandard";
-            this.TCCheckedStandard.Weight = 0.64678764805956779;
+            this.TCCheckedStandard.Weight = 0.8759544876442722;
             // 
             // TCTestQuantity
             // 
             resources.ApplyResources(this.TCTestQuantity, "TCTestQuantity");
             this.TCTestQuantity.Name = "TCTestQuantity";
-            this.TCTestQuantity.Weight = 0.59470496740012291;
+            this.TCTestQuantity.Weight = 0.36553812781541845;
             // 
             // TCYinpin
             // 
@@ -281,13 +281,13 @@
             // 
             resources.ApplyResources(this.xrTableCell7, "xrTableCell7");
             this.xrTableCell7.Name = "xrTableCell7";
-            this.xrTableCell7.Weight = 0.646787648059568;
+            this.xrTableCell7.Weight = 0.87595496823608066;
             // 
             // xrTableCell9
             // 
             resources.ApplyResources(this.xrTableCell9, "xrTableCell9");
             this.xrTableCell9.Name = "xrTableCell9";
-            this.xrTableCell9.Weight = 0.59470496740012291;
+            this.xrTableCell9.Weight = 0.36553764722361026;
             // 
             // TCParameter
             // 

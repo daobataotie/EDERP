@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListFormDecibel));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,22 +61,55 @@
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
             this.bar1.OptionsBar.UseWholeRow = true;
+            resources.ApplyResources(this.bar1, "bar1");
             // 
             // imageCollection1
             // 
+            resources.ApplyResources(this.imageCollection1, "imageCollection1");
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.AccessibleDescription = null;
+            this.barStaticItem1.AccessibleName = null;
+            resources.ApplyResources(this.barStaticItem1, "barStaticItem1");
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.AccessibleDescription = null;
+            this.layoutControl1.AccessibleName = null;
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
+            this.layoutControl1.BackgroundImage = null;
+            this.layoutControl1.Font = null;
             this.layoutControl1.Controls.SetChildIndex(this.gridControl1, 0);
             // 
             // gridControl1
             // 
-            gridLevelNode1.RelationName = "Level1";
+            this.gridControl1.AccessibleDescription = null;
+            this.gridControl1.AccessibleName = null;
+            resources.ApplyResources(this.gridControl1, "gridControl1");
+            this.gridControl1.BackgroundImage = null;
+            this.gridControl1.EmbeddedNavigator.AccessibleDescription = null;
+            this.gridControl1.EmbeddedNavigator.AccessibleName = null;
+            this.gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("gridControl1.EmbeddedNavigator.AllowHtmlTextInToolTip")));
+            this.gridControl1.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("gridControl1.EmbeddedNavigator.Anchor")));
+            this.gridControl1.EmbeddedNavigator.BackgroundImage = null;
+            this.gridControl1.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("gridControl1.EmbeddedNavigator.BackgroundImageLayout")));
+            this.gridControl1.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("gridControl1.EmbeddedNavigator.ImeMode")));
+            this.gridControl1.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("gridControl1.EmbeddedNavigator.TextLocation")));
+            this.gridControl1.EmbeddedNavigator.ToolTip = resources.GetString("gridControl1.EmbeddedNavigator.ToolTip");
+            this.gridControl1.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("gridControl1.EmbeddedNavigator.ToolTipIconType")));
+            this.gridControl1.EmbeddedNavigator.ToolTipTitle = resources.GetString("gridControl1.EmbeddedNavigator.ToolTipTitle");
+            this.gridControl1.Font = null;
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
             // 
             // gridView1
             // 
+            resources.ApplyResources(this.gridView1, "gridView1");
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn7,
             this.gridColumn1,
@@ -135,6 +168,8 @@
             // 
             // barButtonItem1
             // 
+            this.barButtonItem1.AccessibleDescription = null;
+            this.barButtonItem1.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
             this.barButtonItem1.Id = 13;
             this.barButtonItem1.Name = "barButtonItem1";
@@ -149,6 +184,8 @@
             // 
             // repositoryItemCheckEdit1
             // 
+            this.repositoryItemCheckEdit1.AccessibleDescription = null;
+            this.repositoryItemCheckEdit1.AccessibleName = null;
             resources.ApplyResources(this.repositoryItemCheckEdit1, "repositoryItemCheckEdit1");
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -161,8 +198,11 @@
             // 
             // ListFormDecibel
             // 
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Icon = null;
             this.Name = "ListFormDecibel";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

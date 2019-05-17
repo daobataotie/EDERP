@@ -99,12 +99,12 @@ namespace Book.BL
             // todo: add other logic here.
             //
 
-            try
-            {
-                BL.V.BeginTransaction();
+                try
+                {
+                    BL.V.BeginTransaction();
 
-                Validate(pCEarplugsResilienceCheck);
-                pCEarplugsResilienceCheck.UpdateTime = DateTime.Now;
+                    Validate(pCEarplugsResilienceCheck);
+                    pCEarplugsResilienceCheck.UpdateTime = DateTime.Now;
                 accessor.Update(pCEarplugsResilienceCheck);
 
                 accessorDetail.DeleteByHeaderId(pCEarplugsResilienceCheck.PCEarplugsResilienceCheckId);

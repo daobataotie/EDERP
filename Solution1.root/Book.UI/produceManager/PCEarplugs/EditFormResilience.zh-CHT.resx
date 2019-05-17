@@ -508,4 +508,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>耳塞回彈力測試表</value>
   </data>
+  <data name="layoutControlItem10.Text" xml:space="preserve">
+    <value>手搓揉條件：</value>
+  </data>
+  <data name="layoutControlItem8.Text" xml:space="preserve">
+    <value>鐵塊壓條件：</value>
+  </data>
 </root>

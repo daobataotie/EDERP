@@ -144,13 +144,25 @@ namespace Book.UI.produceManager.PCParameterSet
 
             dr = da.NewRow();
             dr["SettingSetId"] = "EarplugsResilience";
-            dr["SettingName"] = "耳塞回彈力測試表-砝碼設置";
+            dr["SettingName"] = "耳塞回彈力測試表-鐵塊壓設置";
             da.Rows.Add(dr);
 
             dr = da.NewRow();
             dr["SettingSetId"] = "EarplugsDecibel";
             dr["SettingName"] = "耳塞分貝測試表-音頻設置";
             da.Rows.Add(dr);
+
+            dr = da.NewRow();
+            dr["SettingSetId"] = "EarplugsStayWire";
+            dr["SettingName"] = "耳塞拉線測試表-砝碼設置";
+            da.Rows.Add(dr);
+
+
+            dr = da.NewRow();
+            dr["SettingSetId"] = "EarplugsResilience2";
+            dr["SettingName"] = "耳塞回彈力測試表-手搓揉設置";
+            da.Rows.Add(dr);
+                       
 
             this._detail = this.settingManager.SelectTagOrderDefault("PCISO");
             this.requireValueExceptions.Add(Model.Setting.PRO_SettingName, new AA(Properties.Resources.NameIsNotNull, this.gridControl1));

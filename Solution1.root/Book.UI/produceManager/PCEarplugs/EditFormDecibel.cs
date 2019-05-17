@@ -25,50 +25,53 @@ namespace Book.UI.produceManager.PCEarplugs
             this.action = "view";
 
             #region LookUpEdit
-            DataTable dt = new DataTable();
-            dt.Columns.Add("id", typeof(string));
-            //dt.Columns.Add("name", typeof(string));
-            DataRow dr;
-            dr = dt.NewRow();
-            //dr[0] = "";
-            dr[0] = " ";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            //dr[0] = "0";
-            dr[0] = "√";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            //dr[0] = "1";
-            dr[0] = "×";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            //dr[0] = "2";
-            dr[0] = "△";
-            dt.Rows.Add(dr);
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("id", typeof(string));
+            ////dt.Columns.Add("name", typeof(string));
+            //DataRow dr;
+            //dr = dt.NewRow();
+            ////dr[0] = "";
+            //dr[0] = " ";
+            //dt.Rows.Add(dr);
+            //dr = dt.NewRow();
+            ////dr[0] = "0";
+            //dr[0] = "√";
+            //dt.Rows.Add(dr);
+            //dr = dt.NewRow();
+            ////dr[0] = "1";
+            //dr[0] = "×";
+            //dt.Rows.Add(dr);
+            //dr = dt.NewRow();
+            ////dr[0] = "2";
+            //dr[0] = "△";
+            //dt.Rows.Add(dr);
 
-            for (int i = 0; i < this.gridView1.Columns.Count; i++)
-            {
-                if (this.gridView1.Columns[i].Name == "colParameter")
-                {
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DataSource = dt;
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.Clear();
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).NullText = "";
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-                    new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id",25, "标识"),
-                     });
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DisplayMember = "id";
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).ValueMember = "id";
-                }
-            }
+            //for (int i = 0; i < this.gridView1.Columns.Count; i++)
+            //{
+            //    if (this.gridView1.Columns[i].Name == "colParameter")
+            //    {
+            //        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DataSource = dt;
+            //        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.Clear();
+            //        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).NullText = "";
+            //        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            //        new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id",25, "标识"),
+            //         });
+            //        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DisplayMember = "id";
+            //        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).ValueMember = "id";
+            //    }
+            //}
             #endregion
 
             this.bindingSourceProduct.DataSource = this._pCEarplugsDecibelCheckManager.Query("select ProductId,Id,ProductName from Product", 30, "Product").Tables[0];
 
-            var columnCaption = new BL.SettingManager().SelectByName("EarplugsDecibel");
-            if (columnCaption != null && columnCaption.Count > 0)
-                this.colParameter.Caption = "音頻  " + columnCaption[0].SettingCurrentValue;
-            else
-                this.colParameter.Caption = "";
+            var testCondition = new BL.SettingManager().SelectByName("EarplugsDecibel");
+            if (testCondition != null && testCondition.Count > 0)
+            {
+                foreach (var item in testCondition)
+                {
+                    this.cob_TestCondition.Properties.Items.Add(item.SettingCurrentValue);
+                }
+            }
         }
 
         int LastFlag = 0; //页面载 入时是否执行 last方法
@@ -102,6 +105,9 @@ namespace Book.UI.produceManager.PCEarplugs
 
             this._pCEarplugsDecibelCheck.Employee = BL.V.ActiveOperator.Employee;
             this._pCEarplugsDecibelCheck.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
+            if (this.cob_TestCondition.Properties.Items.Count > 0)
+                this._pCEarplugsDecibelCheck.TestCondition = this.cob_TestCondition.Properties.Items[0].ToString();
 
             this.action = "insert";
         }
@@ -165,7 +171,7 @@ namespace Book.UI.produceManager.PCEarplugs
             this.txt_Id.EditValue = this._pCEarplugsDecibelCheck.PCEarplugsDecibelCheckId;
             this.date_Check.EditValue = this._pCEarplugsDecibelCheck.PCEarplugsDecibelCheckDate;
             this.ncc_Employee.EditValue = this._pCEarplugsDecibelCheck.Employee;
-
+            this.cob_TestCondition.Text = this._pCEarplugsDecibelCheck.TestCondition;
             this.txt_Note.EditValue = this._pCEarplugsDecibelCheck.Note;
 
             this.bindingSourceDetail.DataSource = this._pCEarplugsDecibelCheck.Details;
@@ -183,6 +189,9 @@ namespace Book.UI.produceManager.PCEarplugs
             }
 
             this.txt_Id.Properties.ReadOnly = true;
+
+
+            this.colParameter.Caption = "音頻  " + this._pCEarplugsDecibelCheck.TestCondition;
         }
 
         protected override void Save()
@@ -194,6 +203,7 @@ namespace Book.UI.produceManager.PCEarplugs
             if (this.date_Check.EditValue != null)
                 this._pCEarplugsDecibelCheck.PCEarplugsDecibelCheckDate = this.date_Check.DateTime;
             this._pCEarplugsDecibelCheck.EmployeeId = this.ncc_Employee.EditValue == null ? null : (this.ncc_Employee.EditValue as Model.Employee).EmployeeId;
+            this._pCEarplugsDecibelCheck.TestCondition = this.cob_TestCondition.Text;
             this._pCEarplugsDecibelCheck.Note = this.txt_Note.Text;
 
             switch (this.action)
@@ -251,12 +261,12 @@ namespace Book.UI.produceManager.PCEarplugs
                         detail.ProductId = item.ProductId;
                         detail.ProductUnit = item.ProductUnit;
                         detail.InvoiceXOId = item.InvoiceXOId;
+                        detail.InvoiceXOQuantity = item.InvoiceXODetailQuantity;
 
                         Model.InvoiceXO xo = invoiceXOManager.Get(detail.InvoiceXOId);
                         if (xo != null)
                         {
                             detail.InvoiceXO = xo;
-                            detail.InvoiceXOQuantity = item.InvoiceXODetailQuantity;
                         }
 
 

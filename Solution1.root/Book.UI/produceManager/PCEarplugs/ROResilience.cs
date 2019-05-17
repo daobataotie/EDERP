@@ -14,11 +14,8 @@ namespace Book.UI.produceManager.PCEarplugs
 
             this.DataSource = pCEarplugsResilienceCheck.Details;
 
-            var columnCaption = new BL.SettingManager().SelectByName("EarplugsResilience");
-            if (columnCaption != null && columnCaption.Count > 0)
-                this.TCParameter.Text = columnCaption[0].SettingCurrentValue;
-            else
-                this.TCParameter.Text = "";
+            this.TCTiekuaiyaCondition.Text = pCEarplugsResilienceCheck.TiekuaiyaCondition;
+            this.TCShoucuorouCondition.Text = pCEarplugsResilienceCheck.ShoucuorouCondition;
 
             this.lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
             this.lbl_ReportDate.Text += DateTime.Now.ToString("yyyy-MM-dd");
@@ -36,7 +33,8 @@ namespace Book.UI.produceManager.PCEarplugs
             this.TCWaiguan.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Waiguan);
             this.TCDuise.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Duise);
             this.TCChicun.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Chicun);
-            this.TCSeconds.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Seconds);
+            this.TCTiekuaiya.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Tiekuaiya, "{0:0.#}");
+            this.TCShoucuorou.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Shoucuorou, "{0:0.#}");
             this.TCJudge.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Judge);
         }
 

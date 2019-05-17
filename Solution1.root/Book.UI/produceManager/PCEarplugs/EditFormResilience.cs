@@ -20,7 +20,7 @@ namespace Book.UI.produceManager.PCEarplugs
         {
             InitializeComponent();
 
-            this.invalidValueExceptions.Add(Model.PCEarplugsResilienceCheck.PRO_PCEarplugsResilienceCheckDate,new AA("日期不能爲空",this.date_Check));
+            this.invalidValueExceptions.Add(Model.PCEarplugsResilienceCheck.PRO_PCEarplugsResilienceCheckDate, new AA("日期不能爲空", this.date_Check));
 
             this.ncc_Employee.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.action = "view";
@@ -65,11 +65,22 @@ namespace Book.UI.produceManager.PCEarplugs
 
             this.bindingSourceProduct.DataSource = this._pCEarplugsResilienceCheckManager.Query("select ProductId,Id,ProductName from Product", 30, "Product").Tables[0];
 
-            var columnCaption = new BL.SettingManager().SelectByName("EarplugsResilience");
-            if (columnCaption != null && columnCaption.Count > 0)
-                this.colParameter.Caption = columnCaption[0].SettingCurrentValue;
-            else
-                this.colParameter.Caption = "";
+            var tiekuaiya = new BL.SettingManager().SelectByName("EarplugsResilience");
+            if (tiekuaiya != null && tiekuaiya.Count > 0)
+            {
+                foreach (var item in tiekuaiya)
+                {
+                    this.cob_Tiekuaiya.Properties.Items.Add(item.SettingCurrentValue);
+                }
+            }
+            var shoucuorou = new BL.SettingManager().SelectByName("EarplugsResilience2");
+            if (shoucuorou != null && shoucuorou.Count > 0)
+            {
+                foreach (var item in shoucuorou)
+                {
+                    this.cob_Shoucuorou.Properties.Items.Add(item.SettingCurrentValue);
+                }
+            }
         }
 
         int LastFlag = 0; //页面载 入时是否执行 last方法
@@ -103,6 +114,11 @@ namespace Book.UI.produceManager.PCEarplugs
 
             this._pCEarplugsResilienceCheck.Employee = BL.V.ActiveOperator.Employee;
             this._pCEarplugsResilienceCheck.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
+            if (this.cob_Tiekuaiya.Properties.Items.Count > 0)
+                this._pCEarplugsResilienceCheck.TiekuaiyaCondition = this.cob_Tiekuaiya.Properties.Items[0].ToString();
+            if (this.cob_Shoucuorou.Properties.Items.Count > 0)
+                this._pCEarplugsResilienceCheck.ShoucuorouCondition = this.cob_Shoucuorou.Properties.Items[0].ToString();
 
             this.action = "insert";
         }
@@ -166,7 +182,8 @@ namespace Book.UI.produceManager.PCEarplugs
             this.txt_Id.EditValue = this._pCEarplugsResilienceCheck.PCEarplugsResilienceCheckId;
             this.date_Check.EditValue = this._pCEarplugsResilienceCheck.PCEarplugsResilienceCheckDate;
             this.ncc_Employee.EditValue = this._pCEarplugsResilienceCheck.Employee;
-
+            this.cob_Tiekuaiya.Text = this._pCEarplugsResilienceCheck.TiekuaiyaCondition;
+            this.cob_Shoucuorou.Text = this._pCEarplugsResilienceCheck.ShoucuorouCondition;
             this.txt_Note.EditValue = this._pCEarplugsResilienceCheck.Note;
 
             this.bindingSourceDetail.DataSource = this._pCEarplugsResilienceCheck.Details;
@@ -184,6 +201,9 @@ namespace Book.UI.produceManager.PCEarplugs
             }
 
             this.txt_Id.Properties.ReadOnly = true;
+
+            this.gcTiekuaiya.Caption = this._pCEarplugsResilienceCheck.TiekuaiyaCondition;
+            this.gcShoucuorou.Caption = this._pCEarplugsResilienceCheck.ShoucuorouCondition;
         }
 
         protected override void Save()
@@ -195,6 +215,8 @@ namespace Book.UI.produceManager.PCEarplugs
             if (this.date_Check.EditValue != null)
                 this._pCEarplugsResilienceCheck.PCEarplugsResilienceCheckDate = this.date_Check.DateTime;
             this._pCEarplugsResilienceCheck.EmployeeId = this.ncc_Employee.EditValue == null ? null : (this.ncc_Employee.EditValue as Model.Employee).EmployeeId;
+            this._pCEarplugsResilienceCheck.TiekuaiyaCondition = this.cob_Tiekuaiya.Text;
+            this._pCEarplugsResilienceCheck.ShoucuorouCondition = this.cob_Shoucuorou.Text;
             this._pCEarplugsResilienceCheck.Note = this.txt_Note.Text;
 
             switch (this.action)
@@ -258,12 +280,12 @@ namespace Book.UI.produceManager.PCEarplugs
                         detail.ProductId = item.ProductId;
                         detail.ProductUnit = item.ProductUnit;
                         detail.InvoiceXOId = item.InvoiceXOId;
+                        detail.InvoiceXOQuantity = item.InvoiceXODetailQuantity;
 
                         Model.InvoiceXO xo = invoiceXOManager.Get(detail.InvoiceXOId);
                         if (xo != null)
                         {
                             detail.InvoiceXO = xo;
-                            detail.InvoiceXOQuantity = item.InvoiceXODetailQuantity;
                         }
 
 

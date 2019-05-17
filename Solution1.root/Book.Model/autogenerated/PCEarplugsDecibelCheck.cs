@@ -53,6 +53,8 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		private string _auditEmpId;
+
+        private string _testCondition;
 		
 		/// <summary>
 		/// 员工
@@ -185,7 +187,13 @@ namespace Book.Model
 			{
 				this._auditEmpId = value;
 			}
-		}
+        }
+
+        public string TestCondition
+        {
+            get { return _testCondition; }
+            set { _testCondition = value; }
+        }
 	
 		/// <summary>
 		/// 员工
@@ -256,7 +264,9 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		public readonly static string PRO_AuditEmpId = "AuditEmpId";
-		
+
+
+        public readonly static string PRO_TestCondition = "TestCondition";
 
 		#endregion
 	}

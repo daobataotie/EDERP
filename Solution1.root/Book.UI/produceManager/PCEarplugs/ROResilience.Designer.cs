@@ -44,7 +44,7 @@
             this.TCDuise = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCChicun = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCSeconds = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCJudge = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -64,7 +64,7 @@
             this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCParameter = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCTiekuaiyaCondition = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.lbl_ReportDate = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_ReportName = new DevExpress.XtraReports.UI.XRLabel();
@@ -77,6 +77,9 @@
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TCShoucuorouCondition = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCTiekuaiya = new DevExpress.XtraReports.UI.XRTableCell();
+            this.TCShoucuorou = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -116,7 +119,9 @@
             this.TCDuise,
             this.TCChicun,
             this.xrTableCell13,
-            this.TCSeconds,
+            this.TCTiekuaiya,
+            this.xrTableCell14,
+            this.TCShoucuorou,
             this.TCJudge});
             resources.ApplyResources(this.xrTableRow2, "xrTableRow2");
             this.xrTableRow2.Name = "xrTableRow2";
@@ -175,37 +180,37 @@
             // 
             resources.ApplyResources(this.TCWaiguan, "TCWaiguan");
             this.TCWaiguan.Name = "TCWaiguan";
-            this.TCWaiguan.Weight = 0.40933154820069095;
+            this.TCWaiguan.Weight = 0.354330248751304;
             // 
             // TCDuise
             // 
             resources.ApplyResources(this.TCDuise, "TCDuise");
             this.TCDuise.Name = "TCDuise";
-            this.TCDuise.Weight = 0.44424894508788892;
+            this.TCDuise.Weight = 0.35433072840749069;
             // 
             // TCChicun
             // 
             resources.ApplyResources(this.TCChicun, "TCChicun");
             this.TCChicun.Name = "TCChicun";
-            this.TCChicun.Weight = 0.53956910071920294;
+            this.TCChicun.Weight = 0.47244195932081146;
             // 
             // xrTableCell13
             // 
             resources.ApplyResources(this.xrTableCell13, "xrTableCell13");
             this.xrTableCell13.Name = "xrTableCell13";
-            this.xrTableCell13.Weight = 0.53584300076380909;
+            this.xrTableCell13.Weight = 0.3718675311291405;
             // 
-            // TCSeconds
+            // xrTableCell14
             // 
-            resources.ApplyResources(this.TCSeconds, "TCSeconds");
-            this.TCSeconds.Name = "TCSeconds";
-            this.TCSeconds.Weight = 0.656249090682059;
+            resources.ApplyResources(this.xrTableCell14, "xrTableCell14");
+            this.xrTableCell14.Name = "xrTableCell14";
+            this.xrTableCell14.Weight = 0.3718691531264931;
             // 
             // TCJudge
             // 
             resources.ApplyResources(this.TCJudge, "TCJudge");
             this.TCJudge.Name = "TCJudge";
-            this.TCJudge.Weight = 0.4999997452008097;
+            this.TCJudge.Weight = 0.41666512566358727;
             // 
             // TopMargin
             // 
@@ -269,7 +274,8 @@
             this.xrTableCell11,
             this.xrTableCell12,
             this.xrTableCell10,
-            this.TCParameter,
+            this.TCTiekuaiyaCondition,
+            this.TCShoucuorouCondition,
             this.xrTableCell8});
             resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             this.xrTableRow1.Name = "xrTableRow1";
@@ -327,31 +333,31 @@
             // 
             resources.ApplyResources(this.xrTableCell11, "xrTableCell11");
             this.xrTableCell11.Name = "xrTableCell11";
-            this.xrTableCell11.Weight = 0.409331548200691;
+            this.xrTableCell11.Weight = 0.35433072934311222;
             // 
             // xrTableCell12
             // 
             resources.ApplyResources(this.xrTableCell12, "xrTableCell12");
             this.xrTableCell12.Name = "xrTableCell12";
-            this.xrTableCell12.Weight = 0.444248945087889;
+            this.xrTableCell12.Weight = 0.35433072840749069;
             // 
             // xrTableCell10
             // 
             resources.ApplyResources(this.xrTableCell10, "xrTableCell10");
             this.xrTableCell10.Name = "xrTableCell10";
-            this.xrTableCell10.Weight = 0.53957006190281931;
+            this.xrTableCell10.Weight = 0.47244099813719509;
             // 
-            // TCParameter
+            // TCTiekuaiyaCondition
             // 
-            resources.ApplyResources(this.TCParameter, "TCParameter");
-            this.TCParameter.Name = "TCParameter";
-            this.TCParameter.Weight = 1.192091670928036;
+            resources.ApplyResources(this.TCTiekuaiyaCondition, "TCTiekuaiyaCondition");
+            this.TCTiekuaiyaCondition.Name = "TCTiekuaiyaCondition";
+            this.TCTiekuaiyaCondition.Weight = 0.74373671429262167;
             // 
             // xrTableCell8
             // 
             resources.ApplyResources(this.xrTableCell8, "xrTableCell8");
             this.xrTableCell8.Name = "xrTableCell8";
-            this.xrTableCell8.Weight = 0.4999997452008097;
+            this.xrTableCell8.Weight = 0.41666608684720363;
             // 
             // lbl_ReportDate
             // 
@@ -436,6 +442,24 @@
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             // 
+            // TCShoucuorouCondition
+            // 
+            resources.ApplyResources(this.TCShoucuorouCondition, "TCShoucuorouCondition");
+            this.TCShoucuorouCondition.Name = "TCShoucuorouCondition";
+            this.TCShoucuorouCondition.Weight = 0.74373671429262167;
+            // 
+            // TCTiekuaiya
+            // 
+            resources.ApplyResources(this.TCTiekuaiya, "TCTiekuaiya");
+            this.TCTiekuaiya.Name = "TCTiekuaiya";
+            this.TCTiekuaiya.Weight = 0.3718675311291405;
+            // 
+            // TCShoucuorou
+            // 
+            resources.ApplyResources(this.TCShoucuorou, "TCShoucuorou");
+            this.TCShoucuorou.Name = "TCShoucuorou";
+            this.TCShoucuorou.Weight = 0.3718691531264931;
+            // 
             // ROResilience
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -486,7 +510,7 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
-        private DevExpress.XtraReports.UI.XRTableCell TCParameter;
+        private DevExpress.XtraReports.UI.XRTableCell TCTiekuaiyaCondition;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
         private DevExpress.XtraReports.UI.XRTableCell TCDate;
@@ -500,7 +524,7 @@
         private DevExpress.XtraReports.UI.XRTableCell TCWaiguan;
         private DevExpress.XtraReports.UI.XRTableCell TCDuise;
         private DevExpress.XtraReports.UI.XRTableCell TCChicun;
-        private DevExpress.XtraReports.UI.XRTableCell TCSeconds;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell14;
         private DevExpress.XtraReports.UI.XRTableCell TCJudge;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
         private DevExpress.XtraReports.UI.XRLabel lbl_Employee;
@@ -508,5 +532,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel lbl_Note;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
+        private DevExpress.XtraReports.UI.XRTableCell TCTiekuaiya;
+        private DevExpress.XtraReports.UI.XRTableCell TCShoucuorouCondition;
+        private DevExpress.XtraReports.UI.XRTableCell TCShoucuorou;
     }
 }

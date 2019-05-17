@@ -18,7 +18,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Waiguan" column="Waiguan" />
       <result property="Duise" column="Duise" />
       <result property="Chicun" column="Chicun" />
-      <result property="Seconds" column="Seconds" />
+      <result property="Tiekuaiya" column="Tiekuaiya" />
+      <result property="Shoucuorou" column="Shoucuorou"/>
       <result property="Judge" column="Judge" />
       <result property="InvoiceXO" column="InvoiceXOId" lazyLoad="false" select="InvoiceXO.select_SimpleInvoicexo" />
       <result property="PCEarplugsResilienceCheck" column="PCEarplugsResilienceCheckId" lazyLoad="false" select="PCEarplugsResilienceCheck.select_by_primary_key" />
@@ -64,7 +65,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Waiguan],
 				[Duise],
 				[Chicun],
-				[Seconds],
+				[Tiekuaiya],
+        [Shoucuorou],
 				[Judge]
 			FROM
 				[dbo].[PCEarplugsResilienceCheckDetail]
@@ -131,7 +133,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Waiguan],
 				[Duise],
 				[Chicun],
-				[Seconds],
+				[Tiekuaiya],
+        [Shoucuorou],
 				[Judge]
 			) 
 			VALUES 
@@ -148,7 +151,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#Waiguan#,
 				#Duise#,
 				#Chicun#,
-				#Seconds#,
+				#Tiekuaiya#,
+        #Shoucuorou#,
 				#Judge#
 			)
              ]]>
@@ -168,7 +172,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[Waiguan] = #Waiguan#,
 				[Duise] = #Duise#,
 				[Chicun] = #Chicun#,
-				[Seconds] = #Seconds#,
+				[Tiekuaiya] = #Tiekuaiya#,
+        [Shoucuorou] = #Shoucuorou#,
 				[Judge] = #Judge#
 			WHERE
 				[PCEarplugsResilienceCheckDetailId] = #PCEarplugsResilienceCheckDetailId#

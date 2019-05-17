@@ -4414,6 +4414,24 @@
     <EmbeddedResource Include="produceManager\PCEarplugs\RODecibel.zh-CHT.resx">
       <DependentUpon>RODecibel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\EditFormStayWire.resx">
+      <DependentUpon>EditFormStayWire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\EditFormStayWire.zh-CHT.resx">
+      <DependentUpon>EditFormStayWire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ListFormStayWire.resx">
+      <DependentUpon>ListFormStayWire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ListFormStayWire.zh-CHT.resx">
+      <DependentUpon>ListFormStayWire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ROStayWire.resx">
+      <DependentUpon>ROStayWire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ROStayWire.zh-CHT.resx">
+      <DependentUpon>ROStayWire.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFlameRetardant\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -11792,6 +11810,24 @@
     </Compile>
     <Compile Include="produceManager\PCEarplugs\RODecibel.Designer.cs">
       <DependentUpon>RODecibel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\EditFormStayWire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\EditFormStayWire.Designer.cs">
+      <DependentUpon>EditFormStayWire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ListFormStayWire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ListFormStayWire.Designer.cs">
+      <DependentUpon>ListFormStayWire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ROStayWire.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ROStayWire.Designer.cs">
+      <DependentUpon>ROStayWire.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCFlameRetardant\ConditionForm.cs">
       <SubType>Form</SubType>

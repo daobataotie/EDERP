@@ -488,4 +488,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>耳塞分貝測試表</value>
   </data>
+  <data name="layoutControlItem8.Text" xml:space="preserve">
+    <value>測試條件：</value>
+  </data>
 </root>
