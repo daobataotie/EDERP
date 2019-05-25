@@ -120,24 +120,12 @@
             this.label45 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.SpinJudgeInternal = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTestInternal = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeInformation = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinTestInformation = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeMarking = new DevExpress.XtraEditors.SpinEdit();
+            this.SpinTestPackaging = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTestMarking = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeRobustness = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTestRobustness = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeSurface = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTestHighSpeed = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeHighSpeed = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTestSurface = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeTrans = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeDiffrence = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgePrism = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeAst = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeSp = new DevExpress.XtraEditors.SpinEdit();
-            this.SpinJudgeConstruction = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTestDiffrence = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTestAst = new DevExpress.XtraEditors.SpinEdit();
             this.SpinTestPrism = new DevExpress.XtraEditors.SpinEdit();
@@ -242,24 +230,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textProtectiontwo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textProtectionone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoTrans.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeInternal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestInternal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeInformation.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinTestInformation.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeMarking.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpinTestPackaging.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestMarking.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeRobustness.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestRobustness.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeSurface.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestHighSpeed.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeHighSpeed.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSurface.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeTrans.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeDiffrence.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgePrism.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeAst.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeSp.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeConstruction.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestDiffrence.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestAst.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPrism.Properties)).BeginInit();
@@ -477,7 +453,7 @@
             this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1096, 615);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1096, 581);
             this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -538,9 +514,9 @@
             // emptySpaceItem2
             // 
             resources.ApplyResources(this.emptySpaceItem2, "emptySpaceItem2");
-            this.emptySpaceItem2.Location = new System.Drawing.Point(882, 312);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(882, 298);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(194, 31);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(194, 29);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
@@ -549,47 +525,47 @@
             this.emptySpaceItem1.Location = new System.Drawing.Point(892, 124);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.emptySpaceItem1.Size = new System.Drawing.Size(184, 163);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(184, 151);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             resources.ApplyResources(this.emptySpaceItem3, "emptySpaceItem3");
-            this.emptySpaceItem3.Location = new System.Drawing.Point(882, 287);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(882, 275);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(194, 13);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(194, 12);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             resources.ApplyResources(this.emptySpaceItem4, "emptySpaceItem4");
-            this.emptySpaceItem4.Location = new System.Drawing.Point(882, 300);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(882, 287);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(194, 12);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(194, 11);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
             // 
             resources.ApplyResources(this.emptySpaceItem6, "emptySpaceItem6");
-            this.emptySpaceItem6.Location = new System.Drawing.Point(591, 441);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(591, 419);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(485, 154);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(485, 142);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem7
             // 
             resources.ApplyResources(this.emptySpaceItem7, "emptySpaceItem7");
-            this.emptySpaceItem7.Location = new System.Drawing.Point(882, 343);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(882, 327);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(194, 35);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(194, 33);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
             // 
             resources.ApplyResources(this.emptySpaceItem8, "emptySpaceItem8");
-            this.emptySpaceItem8.Location = new System.Drawing.Point(881, 378);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(881, 360);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(195, 63);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(195, 59);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem89
@@ -668,63 +644,63 @@
             resources.ApplyResources(this.emptySpaceItem10, "emptySpaceItem10");
             this.emptySpaceItem10.Location = new System.Drawing.Point(0, 124);
             this.emptySpaceItem10.Name = "emptySpaceItem10";
-            this.emptySpaceItem10.Size = new System.Drawing.Size(892, 163);
+            this.emptySpaceItem10.Size = new System.Drawing.Size(892, 151);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem11
             // 
             resources.ApplyResources(this.emptySpaceItem11, "emptySpaceItem11");
-            this.emptySpaceItem11.Location = new System.Drawing.Point(591, 287);
+            this.emptySpaceItem11.Location = new System.Drawing.Point(591, 275);
             this.emptySpaceItem11.Name = "emptySpaceItem11";
-            this.emptySpaceItem11.Size = new System.Drawing.Size(291, 14);
+            this.emptySpaceItem11.Size = new System.Drawing.Size(291, 13);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem12
             // 
             resources.ApplyResources(this.emptySpaceItem12, "emptySpaceItem12");
-            this.emptySpaceItem12.Location = new System.Drawing.Point(591, 301);
+            this.emptySpaceItem12.Location = new System.Drawing.Point(591, 288);
             this.emptySpaceItem12.Name = "emptySpaceItem12";
-            this.emptySpaceItem12.Size = new System.Drawing.Size(291, 42);
+            this.emptySpaceItem12.Size = new System.Drawing.Size(291, 39);
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem13
             // 
             resources.ApplyResources(this.emptySpaceItem13, "emptySpaceItem13");
-            this.emptySpaceItem13.Location = new System.Drawing.Point(591, 343);
+            this.emptySpaceItem13.Location = new System.Drawing.Point(591, 327);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(291, 35);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(291, 33);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem14
             // 
             resources.ApplyResources(this.emptySpaceItem14, "emptySpaceItem14");
-            this.emptySpaceItem14.Location = new System.Drawing.Point(591, 378);
+            this.emptySpaceItem14.Location = new System.Drawing.Point(591, 360);
             this.emptySpaceItem14.Name = "emptySpaceItem14";
-            this.emptySpaceItem14.Size = new System.Drawing.Size(290, 63);
+            this.emptySpaceItem14.Size = new System.Drawing.Size(290, 59);
             this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem9
             // 
             resources.ApplyResources(this.emptySpaceItem9, "emptySpaceItem9");
-            this.emptySpaceItem9.Location = new System.Drawing.Point(361, 287);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(361, 275);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(230, 308);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(230, 286);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             resources.ApplyResources(this.emptySpaceItem5, "emptySpaceItem5");
-            this.emptySpaceItem5.Location = new System.Drawing.Point(252, 287);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(252, 275);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(109, 308);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(109, 286);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem16
             // 
             resources.ApplyResources(this.emptySpaceItem16, "emptySpaceItem16");
-            this.emptySpaceItem16.Location = new System.Drawing.Point(0, 287);
+            this.emptySpaceItem16.Location = new System.Drawing.Point(0, 275);
             this.emptySpaceItem16.Name = "emptySpaceItem16";
-            this.emptySpaceItem16.Size = new System.Drawing.Size(252, 308);
+            this.emptySpaceItem16.Size = new System.Drawing.Size(252, 286);
             this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem10
@@ -835,24 +811,12 @@
             this.panel1.Controls.Add(this.label45);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.SpinJudgeInternal);
             this.panel1.Controls.Add(this.SpinTestInternal);
-            this.panel1.Controls.Add(this.SpinJudgeInformation);
-            this.panel1.Controls.Add(this.SpinTestInformation);
-            this.panel1.Controls.Add(this.SpinJudgeMarking);
+            this.panel1.Controls.Add(this.SpinTestPackaging);
             this.panel1.Controls.Add(this.SpinTestMarking);
-            this.panel1.Controls.Add(this.SpinJudgeRobustness);
             this.panel1.Controls.Add(this.SpinTestRobustness);
-            this.panel1.Controls.Add(this.SpinJudgeSurface);
             this.panel1.Controls.Add(this.SpinTestHighSpeed);
-            this.panel1.Controls.Add(this.SpinJudgeHighSpeed);
             this.panel1.Controls.Add(this.SpinTestSurface);
-            this.panel1.Controls.Add(this.SpinJudgeTrans);
-            this.panel1.Controls.Add(this.SpinJudgeDiffrence);
-            this.panel1.Controls.Add(this.SpinJudgePrism);
-            this.panel1.Controls.Add(this.SpinJudgeAst);
-            this.panel1.Controls.Add(this.SpinJudgeSp);
-            this.panel1.Controls.Add(this.SpinJudgeConstruction);
             this.panel1.Controls.Add(this.SpinTestDiffrence);
             this.panel1.Controls.Add(this.SpinTestAst);
             this.panel1.Controls.Add(this.SpinTestPrism);
@@ -1098,16 +1062,6 @@
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
             // 
-            // SpinJudgeInternal
-            // 
-            resources.ApplyResources(this.SpinJudgeInternal, "SpinJudgeInternal");
-            this.SpinJudgeInternal.MenuManager = this.barManager1;
-            this.SpinJudgeInternal.Name = "SpinJudgeInternal";
-            this.SpinJudgeInternal.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeInternal.Properties.AutoHeight")));
-            this.SpinJudgeInternal.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeInternal.StyleController = this.layoutControl1;
-            // 
             // SpinTestInternal
             // 
             resources.ApplyResources(this.SpinTestInternal, "SpinTestInternal");
@@ -1119,36 +1073,16 @@
             this.SpinTestInternal.StyleController = this.layoutControl1;
             this.SpinTestInternal.EditValueChanged += new System.EventHandler(this.SpinTestInternal_EditValueChanged);
             // 
-            // SpinJudgeInformation
+            // SpinTestPackaging
             // 
-            resources.ApplyResources(this.SpinJudgeInformation, "SpinJudgeInformation");
-            this.SpinJudgeInformation.MenuManager = this.barManager1;
-            this.SpinJudgeInformation.Name = "SpinJudgeInformation";
-            this.SpinJudgeInformation.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeInformation.Properties.AutoHeight")));
-            this.SpinJudgeInformation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            resources.ApplyResources(this.SpinTestPackaging, "SpinTestPackaging");
+            this.SpinTestPackaging.MenuManager = this.barManager1;
+            this.SpinTestPackaging.Name = "SpinTestPackaging";
+            this.SpinTestPackaging.Properties.AutoHeight = ((bool)(resources.GetObject("SpinTestPackaging.Properties.AutoHeight")));
+            this.SpinTestPackaging.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeInformation.StyleController = this.layoutControl1;
-            // 
-            // SpinTestInformation
-            // 
-            resources.ApplyResources(this.SpinTestInformation, "SpinTestInformation");
-            this.SpinTestInformation.MenuManager = this.barManager1;
-            this.SpinTestInformation.Name = "SpinTestInformation";
-            this.SpinTestInformation.Properties.AutoHeight = ((bool)(resources.GetObject("SpinTestInformation.Properties.AutoHeight")));
-            this.SpinTestInformation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinTestInformation.StyleController = this.layoutControl1;
-            this.SpinTestInformation.EditValueChanged += new System.EventHandler(this.SpinTestInformation_EditValueChanged);
-            // 
-            // SpinJudgeMarking
-            // 
-            resources.ApplyResources(this.SpinJudgeMarking, "SpinJudgeMarking");
-            this.SpinJudgeMarking.MenuManager = this.barManager1;
-            this.SpinJudgeMarking.Name = "SpinJudgeMarking";
-            this.SpinJudgeMarking.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeMarking.Properties.AutoHeight")));
-            this.SpinJudgeMarking.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeMarking.StyleController = this.layoutControl1;
+            this.SpinTestPackaging.StyleController = this.layoutControl1;
+            this.SpinTestPackaging.EditValueChanged += new System.EventHandler(this.SpinTestInformation_EditValueChanged);
             // 
             // SpinTestMarking
             // 
@@ -1161,16 +1095,6 @@
             this.SpinTestMarking.StyleController = this.layoutControl1;
             this.SpinTestMarking.EditValueChanged += new System.EventHandler(this.SpinTestMarking_EditValueChanged_1);
             // 
-            // SpinJudgeRobustness
-            // 
-            resources.ApplyResources(this.SpinJudgeRobustness, "SpinJudgeRobustness");
-            this.SpinJudgeRobustness.MenuManager = this.barManager1;
-            this.SpinJudgeRobustness.Name = "SpinJudgeRobustness";
-            this.SpinJudgeRobustness.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeRobustness.Properties.AutoHeight")));
-            this.SpinJudgeRobustness.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeRobustness.StyleController = this.layoutControl1;
-            // 
             // SpinTestRobustness
             // 
             resources.ApplyResources(this.SpinTestRobustness, "SpinTestRobustness");
@@ -1181,16 +1105,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.SpinTestRobustness.StyleController = this.layoutControl1;
             this.SpinTestRobustness.EditValueChanged += new System.EventHandler(this.SpinTestRobustness_EditValueChanged);
-            // 
-            // SpinJudgeSurface
-            // 
-            resources.ApplyResources(this.SpinJudgeSurface, "SpinJudgeSurface");
-            this.SpinJudgeSurface.MenuManager = this.barManager1;
-            this.SpinJudgeSurface.Name = "SpinJudgeSurface";
-            this.SpinJudgeSurface.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeSurface.Properties.AutoHeight")));
-            this.SpinJudgeSurface.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeSurface.StyleController = this.layoutControl1;
             // 
             // SpinTestHighSpeed
             // 
@@ -1203,16 +1117,6 @@
             this.SpinTestHighSpeed.StyleController = this.layoutControl1;
             this.SpinTestHighSpeed.EditValueChanged += new System.EventHandler(this.SpinTestHighSpeed_EditValueChanged);
             // 
-            // SpinJudgeHighSpeed
-            // 
-            resources.ApplyResources(this.SpinJudgeHighSpeed, "SpinJudgeHighSpeed");
-            this.SpinJudgeHighSpeed.MenuManager = this.barManager1;
-            this.SpinJudgeHighSpeed.Name = "SpinJudgeHighSpeed";
-            this.SpinJudgeHighSpeed.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeHighSpeed.Properties.AutoHeight")));
-            this.SpinJudgeHighSpeed.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeHighSpeed.StyleController = this.layoutControl1;
-            // 
             // SpinTestSurface
             // 
             resources.ApplyResources(this.SpinTestSurface, "SpinTestSurface");
@@ -1223,66 +1127,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.SpinTestSurface.StyleController = this.layoutControl1;
             this.SpinTestSurface.EditValueChanged += new System.EventHandler(this.SpinTestSurface_EditValueChanged);
-            // 
-            // SpinJudgeTrans
-            // 
-            resources.ApplyResources(this.SpinJudgeTrans, "SpinJudgeTrans");
-            this.SpinJudgeTrans.MenuManager = this.barManager1;
-            this.SpinJudgeTrans.Name = "SpinJudgeTrans";
-            this.SpinJudgeTrans.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeTrans.Properties.AutoHeight")));
-            this.SpinJudgeTrans.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeTrans.StyleController = this.layoutControl1;
-            // 
-            // SpinJudgeDiffrence
-            // 
-            resources.ApplyResources(this.SpinJudgeDiffrence, "SpinJudgeDiffrence");
-            this.SpinJudgeDiffrence.MenuManager = this.barManager1;
-            this.SpinJudgeDiffrence.Name = "SpinJudgeDiffrence";
-            this.SpinJudgeDiffrence.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeDiffrence.Properties.AutoHeight")));
-            this.SpinJudgeDiffrence.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeDiffrence.StyleController = this.layoutControl1;
-            // 
-            // SpinJudgePrism
-            // 
-            resources.ApplyResources(this.SpinJudgePrism, "SpinJudgePrism");
-            this.SpinJudgePrism.MenuManager = this.barManager1;
-            this.SpinJudgePrism.Name = "SpinJudgePrism";
-            this.SpinJudgePrism.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgePrism.Properties.AutoHeight")));
-            this.SpinJudgePrism.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgePrism.StyleController = this.layoutControl1;
-            // 
-            // SpinJudgeAst
-            // 
-            resources.ApplyResources(this.SpinJudgeAst, "SpinJudgeAst");
-            this.SpinJudgeAst.MenuManager = this.barManager1;
-            this.SpinJudgeAst.Name = "SpinJudgeAst";
-            this.SpinJudgeAst.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeAst.Properties.AutoHeight")));
-            this.SpinJudgeAst.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeAst.StyleController = this.layoutControl1;
-            // 
-            // SpinJudgeSp
-            // 
-            resources.ApplyResources(this.SpinJudgeSp, "SpinJudgeSp");
-            this.SpinJudgeSp.MenuManager = this.barManager1;
-            this.SpinJudgeSp.Name = "SpinJudgeSp";
-            this.SpinJudgeSp.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeSp.Properties.AutoHeight")));
-            this.SpinJudgeSp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeSp.StyleController = this.layoutControl1;
-            // 
-            // SpinJudgeConstruction
-            // 
-            resources.ApplyResources(this.SpinJudgeConstruction, "SpinJudgeConstruction");
-            this.SpinJudgeConstruction.MenuManager = this.barManager1;
-            this.SpinJudgeConstruction.Name = "SpinJudgeConstruction";
-            this.SpinJudgeConstruction.Properties.AutoHeight = ((bool)(resources.GetObject("SpinJudgeConstruction.Properties.AutoHeight")));
-            this.SpinJudgeConstruction.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.SpinJudgeConstruction.StyleController = this.layoutControl1;
             // 
             // SpinTestDiffrence
             // 
@@ -1691,24 +1535,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textProtectiontwo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textProtectionone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoTrans.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeInternal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestInternal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeInformation.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinTestInformation.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeMarking.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpinTestPackaging.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestMarking.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeRobustness.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestRobustness.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeSurface.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestHighSpeed.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeHighSpeed.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSurface.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeTrans.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeDiffrence.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgePrism.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeAst.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeSp.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpinJudgeConstruction.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestDiffrence.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestAst.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPrism.Properties)).EndInit();
@@ -1800,25 +1632,13 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeInternal;
         private DevExpress.XtraEditors.SpinEdit SpinTestInternal;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeInformation;
-        private DevExpress.XtraEditors.SpinEdit SpinTestInformation;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeMarking;
+        private DevExpress.XtraEditors.SpinEdit SpinTestPackaging;
         private DevExpress.XtraEditors.SpinEdit SpinTestMarking;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeRobustness;
         private DevExpress.XtraEditors.SpinEdit SpinTestRobustness;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeSurface;
         private DevExpress.XtraEditors.SpinEdit SpinTestHighSpeed;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeHighSpeed;
         private DevExpress.XtraEditors.SpinEdit SpinTestSurface;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeTrans;
         private DevExpress.XtraEditors.SpinEdit SpinTestTrans;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeDiffrence;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgePrism;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeAst;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeSp;
-        private DevExpress.XtraEditors.SpinEdit SpinJudgeConstruction;
         private DevExpress.XtraEditors.SpinEdit SpinTestDiffrence;
         private DevExpress.XtraEditors.SpinEdit SpinTestAst;
         private DevExpress.XtraEditors.SpinEdit SpinTestPrism;

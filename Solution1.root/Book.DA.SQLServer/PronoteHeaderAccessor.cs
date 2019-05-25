@@ -51,21 +51,21 @@ namespace Book.DA.SQLServer
             else
                 parames[4].Value = DBNull.Value;
             StringBuilder sql = new StringBuilder();
-            sql.Append("SELECT  w.Workhousename as WorkHouseNextName,a.Checkeds,a.IsClose,a.InvoiceXOId,a.PronoteHeaderID,a.InvoiceCusId,a.InvoiceXODetailQuantity,a.PronoteDate,a.Pronotedesc,a.MRSHeaderId,a.MRSdetailsId, a.DetailsSum,a.ProductId,a.ProductUnit,a.InvoiceXODetailQuantity,b.ProductDescription as ProductDesc");
-            sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee0Id) as Employee0Name, (select  EmployeeName from employee where employee.employeeid=a.Employee1Id) as Employee1Name");
-            sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee2Id) as Employee2Name ");
+            sql.Append("SELECT  w.Workhousename as WorkHouseNextName,a.Checkeds,a.IsClose,a.InvoiceXOId,a.PronoteHeaderID,a.InvoiceCusId,a.InvoiceXODetailQuantity,a.PronoteDate,a.Pronotedesc,a.MRSHeaderId,a.MRSdetailsId, a.DetailsSum,a.ProductId,a.ProductUnit,a.InvoiceXODetailQuantity");
+            //sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee0Id) as Employee0Name, (select  EmployeeName from employee where employee.employeeid=a.Employee1Id) as Employee1Name");
+            //sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee2Id) as Employee2Name ");
             //sql.Append(" , (SELECT  Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId =(SELECT TOP 1 WorkHouseId FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID ORDER BY ProduceInDepotId DESC  ) ) AS WorkHouseNextName ");
             //   sql.Append(" , (SELECT TOP 1  ProduceTransferQuantity  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID ORDER BY ProduceInDepotId DESC  )  AS ProduceTransferQuantity");
             // 本车间合格数量
-            sql.Append(" , (SELECT sum(CheckOutSum)  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID and pr.ProduceInDepotId in (select ProduceInDepotid from ProduceInDepot where WorkHouseId='" + workhouseIndepot + "'))  AS HeJiCheckOutSum");
-            //前车间合格数量
-            sql.Append(" , (SELECT sum(CheckOutSum)  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID and  WorkHouseId='" + workhouseIndepot + "') AS ProduceTransferQuantity");
-            //当前部门合计生产数量,出自<生产入库详细>
-            sql.Append(", (SELECT sum(isnull(p.ProceduresSum,0)) FROM ProduceInDepotDetail p WHERE p.PronoteHeaderId = a.PronoteHeaderID AND p.ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId = '" + workhouseIndepot + "')) AS HeJiProceduresSum");
-            //当前部门合计转生产数量
-            sql.Append(", (SELECT SUM(HeJiProduceTransferQuantity) FROM ProduceInDepotDetail p WHERE p.PronoteHeaderId = a.PronoteHeaderId AND p.ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId = '" + workhouseIndepot + "')) AS HeJiProduceTransferQuantity");
-            //当前部门合计入库数量
-            sql.Append(", (SELECT SUM(HeJiProduceQuantity) FROM ProduceInDepotDetail p WHERE p.PronoteHeaderId = a.PronoteHeaderId AND p.ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId = '" + workhouseIndepot + "')) AS HeJiProduceQuantity");
+            //sql.Append(" , (SELECT sum(CheckOutSum)  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID and pr.ProduceInDepotId in (select ProduceInDepotid from ProduceInDepot where WorkHouseId='" + workhouseIndepot + "'))  AS HeJiCheckOutSum");
+            ////前车间合格数量
+            //sql.Append(" , (SELECT sum(CheckOutSum)  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID and  WorkHouseId='" + workhouseIndepot + "') AS ProduceTransferQuantity");
+            ////当前部门合计生产数量,出自<生产入库详细>
+            //sql.Append(", (SELECT sum(isnull(p.ProceduresSum,0)) FROM ProduceInDepotDetail p WHERE p.PronoteHeaderId = a.PronoteHeaderID AND p.ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId = '" + workhouseIndepot + "')) AS HeJiProceduresSum");
+            ////当前部门合计转生产数量
+            //sql.Append(", (SELECT SUM(HeJiProduceTransferQuantity) FROM ProduceInDepotDetail p WHERE p.PronoteHeaderId = a.PronoteHeaderId AND p.ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId = '" + workhouseIndepot + "')) AS HeJiProduceTransferQuantity");
+            ////当前部门合计入库数量
+            //sql.Append(", (SELECT SUM(HeJiProduceQuantity) FROM ProduceInDepotDetail p WHERE p.PronoteHeaderId = a.PronoteHeaderId AND p.ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId = '" + workhouseIndepot + "')) AS HeJiProduceQuantity");
             //PronoteProceduresDate 订单交期
             sql.Append(",  i.CustomerInvoiceXOId,i.InvoiceYjrq as PronoteProceduresDate, (SELECT CheckedStandard FROM Customer c WHERE c.CustomerId = i.xocustomerId) as CustomerCheckStandard");
             sql.Append(", (SELECT CustomerShortName FROM Customer c WHERE c.CustomerId = i.xocustomerId) as CustomerShortName");
@@ -73,7 +73,7 @@ namespace Book.DA.SQLServer
             //{
             //    sql.Append(", (select top 1 PronoteProceduresDate from PronoteProceduresDetail u  where  u.PronoteHeaderID=a.PronoteHeaderID and u.WorkHouseId='" + workhouseIndepot + "'  order by PronoteProceduresDate ) as PronoteProceduresDate");
             //}
-            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
+            //sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
             sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
             sql.Append(",b.ProductName,b.id, b.CustomerProductName  FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
 
@@ -163,7 +163,7 @@ namespace Book.DA.SQLServer
                 parames[4].Value = DBNull.Value;
             StringBuilder sql = new StringBuilder();
             sql.Append("SELECT  w.Workhousename,a.Checkeds,a.IsClose,a.InvoiceXOId,a.PronoteHeaderID,a.InvoiceCusId,a.InvoiceXODetailQuantity,a.PronoteDate,a.Pronotedesc,a.MRSHeaderId,a.MRSdetailsId, a.DetailsSum,a.ProductId,a.ProductUnit,a.InvoiceXODetailQuantity");
-            sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee0Id) as Employee0Name, (select  EmployeeName from employee where employee.employeeid=a.AuditEmpId) as AuditEmpName");
+            //sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee0Id) as Employee0Name, (select  EmployeeName from employee where employee.employeeid=a.AuditEmpId) as AuditEmpName");
             //  sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee2Id) as Employee2Name ");
             //  sql.Append(" , (SELECT  Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId =(SELECT TOP 1 WorkHouseId FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID ORDER BY ProduceInDepotId DESC  ) ) AS WorkHouseNextName ");
             //   sql.Append(" , (SELECT TOP 1  ProduceTransferQuantity  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID ORDER BY ProduceInDepotId DESC  )  AS ProduceTransferQuantity");
@@ -184,9 +184,9 @@ namespace Book.DA.SQLServer
             //{
             //    sql.Append(", (select top 1 PronoteProceduresDate from PronoteProceduresDetail u  where  u.PronoteHeaderID=a.PronoteHeaderID and u.WorkHouseId='" + workhouseIndepot + "'  order by PronoteProceduresDate ) as PronoteProceduresDate");
             //}
-            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
+            //sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
             sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
-            sql.Append(",b.ProductName,b.id, b.CustomerProductName, b.ProductDescription as ProductDesc,a.Chakuang,a.Paihe,a.Moshu,a.Materialprocessum  FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
+            sql.Append(",b.ProductName,b.id, b.CustomerProductName,a.Chakuang,a.Paihe,a.Moshu,a.Materialprocessum  FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
 
             sql.Append("  where    PronoteDate between @startdate and @enddate  ");
             if (!string.IsNullOrEmpty(cusxoid))
@@ -258,14 +258,14 @@ namespace Book.DA.SQLServer
                 parames[4].Value = DBNull.Value;
             StringBuilder sql = new StringBuilder();
             sql.Append("SELECT  w.Workhousename as WorkHouseNextName,a.Checkeds,a.IsClose,a.InvoiceXOId,a.PronoteHeaderID,a.InvoiceCusId,a.InvoiceXODetailQuantity,a.PronoteDate,a.Pronotedesc,a.MRSHeaderId,a.MRSdetailsId, a.DetailsSum,a.ProductId,a.ProductUnit,a.InvoiceXODetailQuantity");
-            sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee0Id) as Employee0Name, (select  EmployeeName from employee where employee.employeeid=a.Employee1Id) as Employee1Name");
-            sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee2Id) as Employee2Name ");
+            //sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee0Id) as Employee0Name, (select  EmployeeName from employee where employee.employeeid=a.Employee1Id) as Employee1Name");
+            //sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee2Id) as Employee2Name ");
             //  sql.Append(" , (SELECT  Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId =(SELECT TOP 1 WorkHouseId FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID ORDER BY ProduceInDepotId DESC  ) ) AS WorkHouseNextName ");
             //   sql.Append(" , (SELECT TOP 1  ProduceTransferQuantity  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID ORDER BY ProduceInDepotId DESC  )  AS ProduceTransferQuantity");
             // 本车间合格数量
             //  sql.Append(" , (SELECT sum(CheckOutSum)  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID and pr.ProduceInDepotId in (select ProduceInDepotid from ProduceInDepot where WorkHouseId='" + workhouseIndepot + "'))  AS HeJiCheckOutSum");
             //前车间合格数量
-            sql.Append(" , (SELECT sum(CheckOutSum)  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID and  WorkHouseId = (select WorkHouseId from WorkHouse where WorkHousename = '射出' )) AS ProduceTransferQuantity");
+            //sql.Append(" , (SELECT sum(CheckOutSum)  FROM ProduceInDepotDetail pr WHERE pr.PronoteHeaderId= a.PronoteHeaderID and  WorkHouseId = (select WorkHouseId from WorkHouse where WorkHousename = '射出' )) AS ProduceTransferQuantity");
             //当前部门合计生产数量,出自<生产入库详细>
             // sql.Append(", (SELECT sum(isnull(p.ProceduresSum,0)) FROM ProduceInDepotDetail p WHERE p.PronoteHeaderId = a.PronoteHeaderID AND p.ProduceInDepotId IN (SELECT ProduceInDepotId FROM ProduceInDepot WHERE WorkHouseId = '" + workhouseIndepot + "')) AS HeJiProceduresSum");
             //当前部门合计转生产数量
@@ -279,7 +279,7 @@ namespace Book.DA.SQLServer
             //{
             //    sql.Append(", (select top 1 PronoteProceduresDate from PronoteProceduresDetail u  where  u.PronoteHeaderID=a.PronoteHeaderID and u.WorkHouseId='" + workhouseIndepot + "'  order by PronoteProceduresDate ) as PronoteProceduresDate");
             //}
-            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
+            //sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
             sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
             sql.Append(",b.ProductName,b.id, b.CustomerProductName FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid left join   WorkHouse w  on a.WorkHouseId=w.WorkHouseId");
 

@@ -4432,6 +4432,9 @@
     <EmbeddedResource Include="produceManager\PCEarplugs\ROStayWire.zh-CHT.resx">
       <DependentUpon>ROStayWire.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\ANSI2015RO.zh-CHT.resx">
+      <DependentUpon>ANSI2015RO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFlameRetardant\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
     </EmbeddedResource>

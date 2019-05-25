@@ -359,6 +359,7 @@ namespace Book.UI.produceManager.PronoteHeader
             return dt;
         }
 
+        //射出交期预期
         private void btn_Excel_Click(object sender, EventArgs e)
         {
             Type objClassType = null;

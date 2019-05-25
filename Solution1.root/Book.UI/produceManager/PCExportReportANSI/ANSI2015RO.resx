@@ -1729,7 +1729,7 @@
     <value>473.600647, 51.940033</value>
   </data>
   <data name="xrLabel17.Text" xml:space="preserve">
-    <value>Sampling Quantity(抽樣數量)：</value>
+    <value>Sampling Piece(取样计划)：</value>
   </data>
   <data name="xrLabel17.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>BottomLeft</value>

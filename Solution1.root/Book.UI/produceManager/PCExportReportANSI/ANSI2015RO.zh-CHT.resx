@@ -138,95 +138,16 @@
         PmVTwmVVEMat2HfsG3FZdRpcVp0Gl1UnwePxB5K4acfdd1GYAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="xrTableCell72.Text" xml:space="preserve">
-    <value>≧ 380 NM</value>
-  </data>
-  <data name="LbJudgeUT.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.908936, 95.24939</value>
-  </data>
-  <data name="LbJudgeMK.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.910156, 95.24951</value>
-  </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="LbJudgeHS.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0.000122070313, 0.00048828125</value>
-  </data>
-  <data name="LbJudgeHS.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.912964, 224.895508</value>
-  </data>
-  <data name="LbJudgeIR.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.91272, 190.5</value>
-  </data>
-  <data name="LbJudgeSQ.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0.0009765625, 0.000122070313</value>
-  </data>
-  <data name="LbJudgeSQ.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.90918, 95.24988</value>
-  </data>
-  <data name="LbClearlens.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>9.12348041E-05, 0.000122070313</value>
-  </data>
-  <data name="LbClearlens.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>697.4322, 116.416504</value>
-  </data>
-  <data name="LbJudgeTS.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.912842, 116.416504</value>
-  </data>
-  <data name="LbJudgeDP.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.9104, 111.124878</value>
-  </data>
-  <data name="LbJudgePR.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.910156, 95.25</value>
-  </data>
-  <data name="LbJudgeAR.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.912842, 95.25</value>
-  </data>
-  <data name="LbJudgeSP.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.910278, 95.25</value>
-  </data>
-  <data name="xrLabel24.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>666.3312, 137.583344</value>
-  </data>
   <data name="xrLabel15.Text" xml:space="preserve">
-    <value>Order Quantity(訂單數量)：
-
-</value>
-  </data>
-  <data name="xrLabel13.Text" xml:space="preserve">
-    <value>Technician(檢測人員)        ：
-
-</value>
-  </data>
-  <data name="xrLabel19.Text" xml:space="preserve">
-    <value>Report Date(報告日期)     ：
+    <value>Order Quantity(訂單數量)  ：
 
 </value>
   </data>
   <data name="xrLabel17.Text" xml:space="preserve">
-    <value>Quantity tested(測試數量)：
-
-</value>
+    <value>Sampling Piece(取樣計劃)：</value>
   </data>
   <data name="xrLabel3.Text" xml:space="preserve">
     <value>Buyer(客戶)   ：
 </value>
-  </data>
-  <data name="xrLabel4.Text" xml:space="preserve">
-    <value>Product Standard(技術標準)：</value>
-  </data>
-  <data name="xrLabel7.Text" xml:space="preserve">
-    <value>P.O.#(訂單編號)：
-
-</value>
-  </data>
-  <data name="LbTestCS.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>370.412354, 95.25</value>
-  </data>
-  <data name="LbJudgeCS.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>295.912964, 95.25</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>2339.00024</value>
   </data>
 </root>
