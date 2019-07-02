@@ -13,7 +13,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             InitializeComponent();
         }
 
-        public DataInputANSI2015ENRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI pcExportReportANSI, Model.PCExportReportANSI pcEN, int tag)
+        public DataInputANSI2015ENRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI pcExportReportANSI, Model.PCExportReportANSI pcEN, int tag, int ENType)
             : this()
         {
             if (pcDataInput == null)
@@ -31,7 +31,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             }
             if (pcEN != null)
             {
-                this.xrSubreportEN.ReportSource = new CEENRO(pcEN, tag);
+                if (ENType != 1)
+                    this.xrSubreportEN.ReportSource = new CEENRO(pcEN, tag);
+                else
+                    this.xrSubreportEN.ReportSource = new CEENRO_WURTH(pcEN, tag);
                 customer = pcEN.Customer.CustomerName;
             }
             if (string.IsNullOrEmpty(customer))

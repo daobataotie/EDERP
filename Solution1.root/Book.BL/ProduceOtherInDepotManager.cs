@@ -272,7 +272,14 @@ namespace Book.BL
             {
                 throw new Helper.InvalidValueException(Model.ProduceOtherInDepot.PRO_SupplierId);
             }
-            
+
+            foreach (var item in produceOtherInDepot.Details)
+            {
+                if (item.ProduceQuantity == null || item.ProduceQuantity == 0)
+                    throw new Helper.InvalidValueException(Model.ProduceOtherInDepotDetail.PRO_ProduceQuantity);
+                if ((item.ProduceTransferQuantity == null || item.ProduceTransferQuantity <= 0) && (item.ProduceInDepotQuantity == null || item.ProduceInDepotQuantity <= 0))
+                    throw new Helper.InvalidValueException(Model.ProduceOtherInDepotDetail.PRO_ProduceTransferQuantity);
+            }
             //if (string.IsNullOrEmpty(produceOtherInDepot.WorkHouseId))
             //{
             //    throw new Helper.RequireValueException(Model.ProduceOtherInDepot.PROPERTY_WORKHOUSEID);

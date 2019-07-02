@@ -40,6 +40,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.newChooseContorlAuditEmp.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
             this.action = "view";
+
+            var jiShuBiaoZhun = new BL.SettingManager().SelectByName("CEEN_Tran");
+            foreach (var item in jiShuBiaoZhun)
+            {
+                cob_Trans.Properties.Items.Add(item.SettingCurrentValue);
+            }
         }
 
         int sign = 0;
@@ -155,7 +161,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.AmountTest = this.SpinTestAmount.EditValue == null ? 0 : double.Parse(this.SpinTestAmount.EditValue.ToString());
             this._PCExportReportANSI.InvoiceCusXOId = this.TxtCustomersId.Text == null ? null : this.TxtCustomersId.Text.ToString();
             this._PCExportReportANSI.Customer = (this.NccCustomer.EditValue as Model.Customer);
-            this._PCExportReportANSI.Clearlens = this.memoTrans.EditValue == null ? "" : this.memoTrans.EditValue.ToString();
+            this._PCExportReportANSI.Clearlens = this.cob_Trans.Text;
             this._PCExportReportANSI.TraceMarking = this.textTraceMarking.Text == null ? null : this.textTraceMarking.Text.ToString();
             this._PCExportReportANSI.Protectionone = this.textProtectionone.Text == null ? null : this.textProtectionone.Text.ToString();
             this._PCExportReportANSI.Protectiontwo = this.textProtectiontwo.Text == null ? null : this.textProtectiontwo.Text.ToString();
@@ -275,7 +281,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.SpinTestAmount.EditValue = this._PCExportReportANSI.AmountTest.HasValue ? this._PCExportReportANSI.AmountTest.Value : 0;
             this.DateReportDate.EditValue = this._PCExportReportANSI.ReportDate.Value;
             this.TxtProduct.EditValue = this._PCExportReportANSI.Product;
-            this.memoTrans.EditValue = this._PCExportReportANSI.Clearlens;
+            this.cob_Trans.EditValue = this._PCExportReportANSI.Clearlens;
             this.textTraceMarking.Text = this._PCExportReportANSI.TraceMarking == null ? null : this._PCExportReportANSI.TraceMarking;
             this.textProtectionone.Text = this._PCExportReportANSI.Protectionone == null ? null : this._PCExportReportANSI.Protectionone;
             this.textProtectiontwo.Text = this._PCExportReportANSI.Protectiontwo == null ? null : this._PCExportReportANSI.Protectiontwo;
@@ -404,6 +410,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             //this._PCExportReportANSI.QuYangShu11 = _PCExportReportANSIDetail.qCEENZX;
             //this._PCExportReportANSI.PanDingShu12 = _PCExportReportANSIDetail.pCEENUVCF;
             //this._PCExportReportANSI.QuYangShu12 = _PCExportReportANSIDetail.qCEENUVCF;
+
+            this._PCExportReportANSI.ShouCeShu13 = this._PCExportReportANSI.AmountTest;
 
             #endregion
             //}

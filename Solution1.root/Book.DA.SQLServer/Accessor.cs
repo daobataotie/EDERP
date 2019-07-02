@@ -24,7 +24,7 @@ namespace Book.DA.SQLServer
     /// </summary>
     public class Accessor : IAccessor
     {
- 
+
         #region IBATIS sql mapper
 
         public static volatile IBatisNet.DataMapper.ISqlMapper _sqlmapper = null;
@@ -41,7 +41,6 @@ namespace Book.DA.SQLServer
 
         public static void Configure(object obj)
         {
-            
             _sqlmapper = (IBatisNet.DataMapper.SqlMapper)obj;
         }
 
@@ -59,7 +58,7 @@ namespace Book.DA.SQLServer
                     try
                     {
                         _sqlmapper = builder.ConfigureAndWatch("Book.SQLServer.SQLMap.config", handler);
-                
+
                     }
                     catch (Exception ex)
                     {

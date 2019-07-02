@@ -26,6 +26,7 @@ namespace Book.UI.Query
         IList<Model.AtAccountSubject> subjectList;
         IList<Model.AtBillsIncome> atBillsIncomeList = new List<Model.AtBillsIncome>();
         Model.ShouldPayAccountCondition shouldPayAccountCondition;
+        BL.AtAccountSubjectManager atAccountSubjectManager = new Book.BL.AtAccountSubjectManager();
 
 
         int flag = 0;
@@ -63,8 +64,6 @@ namespace Book.UI.Query
             this.atSummon.Id = this.atSummonManager.GetId();
             this.atSummon.SummonId = Guid.NewGuid().ToString();
             this.atSummon.Details = new List<Model.AtSummonDetail>();
-            this.atSummon.CreditTotal = 0;
-            this.atSummon.TotalDebits = 0;
 
             this.shouldPayAccount = new Book.Model.ShouldPayAccount();
             this.shouldPayAccount.ShouldPayAccountId = Guid.NewGuid().ToString();
@@ -83,16 +82,16 @@ namespace Book.UI.Query
             //this.AtBillsIncome.BillsOften = "0";
             //this.AtBillsIncome.TheOpenDate = DateTime.Now;
             this.atBillsIncomeList = new List<Model.AtBillsIncome>();
-            Model.AtBillsIncome model = new Book.Model.AtBillsIncome();
-            model.BillsId = Guid.NewGuid().ToString();
-            model.TheOpenDate = DateTime.Now;
-            model.ShouldPayAccountId = this.shouldPayAccount.ShouldPayAccountId;
-            if ((this.bindingSourceBank.DataSource as List<Model.Bank>) != null)
-                if ((this.bindingSourceBank.DataSource as List<Model.Bank>).Any(d => d.BankName.Contains("萬泰")))
-                {
-                    model.BankId = (this.bindingSourceBank.DataSource as List<Model.Bank>).First(d => d.BankName.Contains("萬泰")).BankId;
-                }
-            this.atBillsIncomeList.Add(model);
+            //Model.AtBillsIncome model = new Book.Model.AtBillsIncome();
+            //model.BillsId = Guid.NewGuid().ToString();
+            //model.TheOpenDate = DateTime.Now;
+            //model.ShouldPayAccountId = this.shouldPayAccount.ShouldPayAccountId;
+            //if ((this.bindingSourceBank.DataSource as List<Model.Bank>) != null)
+            //    if ((this.bindingSourceBank.DataSource as List<Model.Bank>).Any(d => d.BankName.Contains("萬泰")))
+            //    {
+            //        model.BankId = (this.bindingSourceBank.DataSource as List<Model.Bank>).First(d => d.BankName.Contains("萬泰")).BankId;
+            //    }
+            //this.atBillsIncomeList.Add(model);
 
             this.action = "insert";
         }
@@ -290,7 +289,7 @@ namespace Book.UI.Query
                     throw null;
             }
 
-            //借贷平衡
+            //借貸平衡
             if (this.cobAtSummonCategory.SelectedIndex == 2)
             {
                 if (this.txt_DaiTotal.EditValue != null && this.txt_JieTaotal.EditValue != null)
@@ -394,7 +393,7 @@ namespace Book.UI.Query
                 if (string.IsNullOrEmpty(item.Id))
                     throw new Helper.MessageValueException("請輸入支票編號");
                 if ((this.bindingSourceBank.DataSource as List<Model.Bank>) != null)
-                    item.Bank = (this.bindingSourceBank.DataSource as List<Model.Bank>).First(d => d.BankId == item.BankId);
+                    item.Bank = (this.bindingSourceBank.DataSource as List<Model.Bank>).FirstOrDefault(d => d.BankId == item.BankId);
                 item.NotesAccount = item.Bank == null ? null : item.Bank.Id;
             }
 
@@ -493,12 +492,39 @@ namespace Book.UI.Query
         {
             if (this.bindingSourceAtDetail.Current != null)
             {
+                //删除对应的应付票据
+                Model.AtSummonDetail mdetail = this.bindingSourceAtDetail.Current as Model.AtSummonDetail;
+
+                if (mdetail != null && !string.IsNullOrEmpty(mdetail.SubjectId))
+                {
+                    Model.AtAccountSubject atSub = atAccountSubjectManager.Get(mdetail.SubjectId);
+                    if (atSub != null && !string.IsNullOrEmpty(atSub.BankId))
+                    {
+                        if (this.atBillsIncomeList.Any(D => D.BankId == atSub.BankId))
+                        {
+                            this.atBillsIncomeList.Remove(this.atBillsIncomeList.First(D => D.BankId == atSub.BankId));
+
+                            this.gridControl3.RefreshDataSource();
+
+
+                            decimal pmtotal = 0;
+                            foreach (var item in this.atBillsIncomeList)
+                            {
+                                pmtotal += Convert.ToDecimal(item.NotesMoney);
+                            }
+                            this.spe_PMTotal.EditValue = pmtotal;
+                        }
+                    }
+                }
+
+
                 this.atSummon.Details.Remove(this.bindingSourceAtDetail.Current as Book.Model.AtSummonDetail);
 
                 this.gridControl1.RefreshDataSource();
 
                 this.bindingSourceAtDetail.Position = this.atSummon.Details.Count - 1;
                 this.CountJieDaiTotal(this.atSummon.Details);
+
             }
         }
 
@@ -539,12 +565,96 @@ namespace Book.UI.Query
                 this.txt_AtSummonId.Text = this.atSummonManager.GetId(this.date_AtSummonDate.DateTime);
         }
 
+        //会计科目变化
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             if (e.Column == this.colJinE || e.Column == this.colJieorDai)
             {
+                if (e.Column == this.colJinE)
+                {
+                    Model.AtSummonDetail detail = this.bindingSourceAtDetail.Current as Model.AtSummonDetail;
+                    if (detail != null && detail.SubjectId != null)
+                    {
+                        Model.AtAccountSubject atSub = atAccountSubjectManager.Get(detail.SubjectId);
+                        if (atSub != null && !string.IsNullOrEmpty(atSub.BankId))
+                        {
+                            Model.AtBillsIncome atBill = this.atBillsIncomeList.FirstOrDefault(D => D.BankId == atSub.BankId);
+                            if (atBill != null)
+                            {
+                                atBill.NotesMoney = detail.AMoney;
+
+                                this.gridControl3.RefreshDataSource();
+                            }
+                        }
+                    }
+                }
+
                 IList<Model.AtSummonDetail> _detailList = this.bindingSourceAtDetail.DataSource as IList<Model.AtSummonDetail>;
                 this.CountJieDaiTotal(_detailList);
+            }
+            else if (e.Column == this.colKeMuMingCheng || e.Column == this.colKemuBianHao)
+            {
+                Model.AtSummonDetail mdetail = this.bindingSourceAtDetail.Current as Model.AtSummonDetail;
+                //2019年6月9日23:17:33
+                if (mdetail != null && !string.IsNullOrEmpty(mdetail.SubjectId))
+                {
+                    Model.AtAccountSubject atSub = atAccountSubjectManager.Get(mdetail.SubjectId);
+                    if (atSub != null && !string.IsNullOrEmpty(atSub.BankId))
+                    {
+                        if (!this.atBillsIncomeList.Any(D => D.BankId == atSub.BankId))
+                        {
+                            Model.AtBillsIncome atbill = new Book.Model.AtBillsIncome();
+                            atbill.BillsId = Guid.NewGuid().ToString();
+                            atbill.TheOpenDate = DateTime.Now;
+                            atbill.ShouldPayAccountId = this.shouldPayAccount.ShouldPayAccountId;
+                            atbill.NotesMoney = mdetail.AMoney;
+                            atbill.PassingObject = this.shouldPayAccountCondition == null ? null : this.shouldPayAccountCondition.SupplierStartId;
+                            atbill.BankId = atSub.BankId;
+                            atbill.Bank = atSub.Bank;
+
+                            this.atBillsIncomeList.Add(atbill);
+
+                            this.gridControl3.RefreshDataSource();
+
+
+                            decimal pmtotal = 0;
+                            foreach (var item in this.atBillsIncomeList)
+                            {
+                                pmtotal += Convert.ToDecimal(item.NotesMoney);
+                            }
+                            this.spe_PMTotal.EditValue = pmtotal;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void gridView1_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column == this.colKeMuMingCheng || e.Column == this.colKemuBianHao)
+            {
+                Model.AtSummonDetail mdetail = this.bindingSourceAtDetail.Current as Model.AtSummonDetail;
+
+                if (mdetail != null && !string.IsNullOrEmpty(mdetail.SubjectId))
+                {
+                    Model.AtAccountSubject atSub = atAccountSubjectManager.Get(mdetail.SubjectId);
+                    if (atSub != null && !string.IsNullOrEmpty(atSub.BankId))
+                    {
+                        if (this.atBillsIncomeList.Any(D => D.BankId == atSub.BankId))
+                        {
+                            this.atBillsIncomeList.Remove(this.atBillsIncomeList.First(D => D.BankId == atSub.BankId));
+
+                            this.gridControl3.RefreshDataSource();
+
+                            decimal pmtotal = 0;
+                            foreach (var item in this.atBillsIncomeList)
+                            {
+                                pmtotal += Convert.ToDecimal(item.NotesMoney);
+                            }
+                            this.spe_PMTotal.EditValue = pmtotal;
+                        }
+                    }
+                }
             }
         }
 
@@ -556,10 +666,10 @@ namespace Book.UI.Query
             //应付票据作业
             if (this.atBillsIncomeList.Count > 0)
             {
-                Model.AtBillsIncome atbill = this.atBillsIncomeList[0];
+                //Model.AtBillsIncome atbill = this.atBillsIncomeList[0];
 
-                atbill.NotesMoney = this.spe_Total.Value;
-                this.gridControl3.RefreshDataSource();
+                //atbill.NotesMoney = this.spe_Total.Value;
+                //this.gridControl3.RefreshDataSource();
 
                 decimal pmtotal = 0;
                 foreach (var item in this.atBillsIncomeList)
@@ -647,11 +757,12 @@ namespace Book.UI.Query
                     }
                     #region//添加、删除会计传票详细
                     int count = this.atSummon.Details.Count;
-                    for (int i = 0; i < count; i++)
-                    {
-                        if (this.atSummon.Details.Any(d => d.Lending == "借"))
-                            this.atSummon.Details.Remove(this.atSummon.Details.First(d => d.Lending == "借"));
-                    }
+                    this.atSummon.Details.Clear();
+                    //for (int i = 0; i < count; i++)
+                    //{
+                    //    if (this.atSummon.Details.Any(d => d.Lending == "借"))
+                    //        this.atSummon.Details.Remove(this.atSummon.Details.First(d => d.Lending == "借"));
+                    //}
 
                     atSummondetail = new Book.Model.AtSummonDetail();
                     atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
@@ -666,37 +777,73 @@ namespace Book.UI.Query
                     atSummondetail.AMoney = Convert.ToDecimal(this.spe_ShuiE.EditValue);
                     this.atSummon.Details.Add(atSummondetail);
 
-                    //根据应付票据的银行增删会计传票信息
-                    if (this.atBillsIncomeList.Count > 0)
+                    //貸
+                    atSummondetail = new Book.Model.AtSummonDetail();
+                    atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
+                    atSummondetail.Lending = "貸";
+                    atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "2141700").SubjectId;
+                    //atSummondetail.AMoney = Convert.ToDecimal(this.spe_JinE.EditValue) - Convert.ToDecimal(this.spe_ZheRang.EditValue);
+
+
+                    //这笔会计科目对应的 应付票据
+                    Model.AtAccountSubject atSub = atAccountSubjectManager.Get(atSummondetail.SubjectId);
+                    if (atSub != null && !string.IsNullOrEmpty(atSub.BankId))
                     {
-                        Model.AtBillsIncome AtBillsIncome = this.atBillsIncomeList[0];
-                        Model.Bank bank = new BL.BankManager().Get(AtBillsIncome.BankId);
-                        if (bank != null)
-                        {
-                            //添加、删除会计传票详细
-                            int count1 = this.atSummon.Details.Count;
-                            for (int i = 0; i < count1; i++)
-                            {
-                                if (this.atSummon.Details.Any(d => d.Lending == "貸"))
-                                    this.atSummon.Details.Remove(this.atSummon.Details.First(d => d.Lending == "貸"));
-                            }
-
-                            this.atSummondetail = new Book.Model.AtSummonDetail();
-                            atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
-                            atSummondetail.Lending = "貸";
-                            if (this.subjectList.Any(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))))
-                                atSummondetail.SubjectId = this.subjectList.First(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))).SubjectId;
-                            atSummondetail.AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
-                            this.atSummon.Details.Add(atSummondetail);
-
-                            this.atSummondetail = new Book.Model.AtSummonDetail();
-                            atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
-                            atSummondetail.Lending = "貸";
-                            atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "7101000").SubjectId;
-                            atSummondetail.AMoney = Convert.ToDecimal(this.spe_FKZheRang.EditValue);
-                            this.atSummon.Details.Add(atSummondetail);
-                        }
+                        Model.AtBillsIncome atbill = new Book.Model.AtBillsIncome();
+                        atbill.BillsId = Guid.NewGuid().ToString();
+                        atbill.TheOpenDate = DateTime.Now;
+                        atbill.ShouldPayAccountId = this.shouldPayAccount.ShouldPayAccountId;
+                        atbill.NotesMoney = atSummondetail.AMoney;
+                        atbill.PassingObject = this.shouldPayAccountCondition == null ? null : this.shouldPayAccountCondition.SupplierStartId;
+                        atbill.BankId = atSub.BankId;
+                        atbill.Bank = atSub.Bank;
+                        this.atBillsIncomeList.Add(atbill);
                     }
+
+                    this.atSummon.Details.Add(atSummondetail);
+
+
+                    atSummondetail = new Book.Model.AtSummonDetail();
+                    atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
+                    atSummondetail.Lending = "貸";
+                    atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "7101000").SubjectId;
+                    //atSummondetail.AMoney = Convert.ToDecimal(this.spe_ShuiE.EditValue);
+                    this.atSummon.Details.Add(atSummondetail);
+
+
+
+
+                    //根据应付票据的银行增删会计传票信息
+                    //if (this.atBillsIncomeList.Count > 0)
+                    //{
+                    //    Model.AtBillsIncome AtBillsIncome = this.atBillsIncomeList[0];
+                    //    Model.Bank bank = new BL.BankManager().Get(AtBillsIncome.BankId);
+                    //    if (bank != null)
+                    //    {
+                    //        //添加、删除会计传票详细
+                    //        int count1 = this.atSummon.Details.Count;
+                    //        for (int i = 0; i < count1; i++)
+                    //        {
+                    //            if (this.atSummon.Details.Any(d => d.Lending == "貸"))
+                    //                this.atSummon.Details.Remove(this.atSummon.Details.First(d => d.Lending == "貸"));
+                    //        }
+
+                    //        this.atSummondetail = new Book.Model.AtSummonDetail();
+                    //        atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
+                    //        atSummondetail.Lending = "貸";
+                    //        if (this.subjectList.Any(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))))
+                    //            atSummondetail.SubjectId = this.subjectList.First(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))).SubjectId;
+                    //        atSummondetail.AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
+                    //        this.atSummon.Details.Add(atSummondetail);
+
+                    //        this.atSummondetail = new Book.Model.AtSummonDetail();
+                    //        atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
+                    //        atSummondetail.Lending = "貸";
+                    //        atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "7101000").SubjectId;
+                    //        atSummondetail.AMoney = Convert.ToDecimal(this.spe_FKZheRang.EditValue);
+                    //        this.atSummon.Details.Add(atSummondetail);
+                    //    }
+                    //}
 
                     this.CountJieDaiTotal(this.atSummon.Details);
                     this.gridControl1.RefreshDataSource();
@@ -705,25 +852,25 @@ namespace Book.UI.Query
                     this.spe_FKZheRang.EditValue = 0;
                     this.spe_ZheRang.EditValue = 0;
 
-                    //应付票据作业
-                    if (this.atBillsIncomeList.Count > 0)
-                    {
-                        Model.AtBillsIncome atbill = this.atBillsIncomeList[0];
+                    //应付票据作业   2019年6月9日23:10:43 改 為顯示會計科目綁定的銀行
+                    //if (this.atBillsIncomeList.Count > 0)
+                    //{
+                    //    Model.AtBillsIncome atbill = this.atBillsIncomeList[0];
 
-                        atbill.NotesMoney = this.spe_Total.Value;
-                        atbill.PassingObject = this.shouldPayAccountCondition.SupplierStartId;
-                    }
-                    else
-                    {
-                        Model.AtBillsIncome atbill = new Book.Model.AtBillsIncome();
-                        atbill.BillsId = Guid.NewGuid().ToString();
-                        atbill.TheOpenDate = DateTime.Now;
-                        atbill.ShouldPayAccountId = this.shouldPayAccount.ShouldPayAccountId;
-                        atbill.NotesMoney = this.spe_Total.Value;
-                        atbill.PassingObject = this.shouldPayAccountCondition.SupplierStartId;
-                        this.atBillsIncomeList.Add(atbill);
+                    //    atbill.NotesMoney = this.spe_Total.Value;
+                    //    atbill.PassingObject = this.shouldPayAccountCondition.SupplierStartId;
+                    //}
+                    //else
+                    //{
+                    //    Model.AtBillsIncome atbill = new Book.Model.AtBillsIncome();
+                    //    atbill.BillsId = Guid.NewGuid().ToString();
+                    //    atbill.TheOpenDate = DateTime.Now;
+                    //    atbill.ShouldPayAccountId = this.shouldPayAccount.ShouldPayAccountId;
+                    //    atbill.NotesMoney = this.spe_Total.Value;
+                    //    atbill.PassingObject = this.shouldPayAccountCondition.SupplierStartId;
+                    //    this.atBillsIncomeList.Add(atbill);
 
-                    }
+                    //}
 
                     this.gridControl3.RefreshDataSource();
 
@@ -879,7 +1026,7 @@ namespace Book.UI.Query
             }
         }
 
-        //查询
+        //搜索
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ShouldPayFormList f = new ShouldPayFormList();
@@ -954,41 +1101,41 @@ namespace Book.UI.Query
 
         private void gridView3_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if ((e.Column.Name == "gridColumn13" || e.Column.Name == "gridColumn14") && this.action == "insert")
-            {
-                Model.Bank bank = new BL.BankManager().Get(e.Value.ToString());
-                if (bank != null)
-                {
-                    //添加、删除会计传票详细
-                    int count = this.atSummon.Details.Count;
-                    for (int i = 0; i < count; i++)
-                    {
-                        if (this.atSummon.Details.Any(d => d.Lending == "貸"))
-                            this.atSummon.Details.Remove(this.atSummon.Details.First(d => d.Lending == "貸"));
-                    }
+            //if ((e.Column.Name == "gridColumn13" || e.Column.Name == "gridColumn14") && this.action == "insert")
+            //{
+            //    Model.Bank bank = new BL.BankManager().Get(e.Value.ToString());
+            //    if (bank != null)
+            //    {
+            //        //添加、删除会计传票详细
+            //        int count = this.atSummon.Details.Count;
+            //        for (int i = 0; i < count; i++)
+            //        {
+            //            if (this.atSummon.Details.Any(d => d.Lending == "貸"))
+            //                this.atSummon.Details.Remove(this.atSummon.Details.First(d => d.Lending == "貸"));
+            //        }
 
-                    this.atSummondetail = new Book.Model.AtSummonDetail();
-                    atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
-                    atSummondetail.Lending = "貸";
-                    try
-                    {
-                        if (this.subjectList.Any(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))))
-                            atSummondetail.SubjectId = this.subjectList.First(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))).SubjectId;
-                    }
-                    catch { }
-                    atSummondetail.AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
-                    this.atSummon.Details.Add(atSummondetail);
+            //        this.atSummondetail = new Book.Model.AtSummonDetail();
+            //        atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
+            //        atSummondetail.Lending = "貸";
+            //        try
+            //        {
+            //            if (this.subjectList.Any(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))))
+            //                atSummondetail.SubjectId = this.subjectList.First(d => d.SubjectName.Contains(bank.BankName.Substring(0, bank.BankName.IndexOf("銀行")))).SubjectId;
+            //        }
+            //        catch { }
+            //        atSummondetail.AMoney = Convert.ToDecimal(this.spe_Total.EditValue);
+            //        this.atSummon.Details.Add(atSummondetail);
 
-                    this.atSummondetail = new Book.Model.AtSummonDetail();
-                    atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
-                    atSummondetail.Lending = "貸";
-                    atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "7101000").SubjectId;
-                    atSummondetail.AMoney = Convert.ToDecimal(this.spe_FKZheRang.EditValue);
-                    this.atSummon.Details.Add(atSummondetail);
-                    this.CountJieDaiTotal(this.atSummon.Details);
-                    this.gridControl1.RefreshDataSource();
-                }
-            }
+            //        this.atSummondetail = new Book.Model.AtSummonDetail();
+            //        atSummondetail.SummonDetailId = Guid.NewGuid().ToString();
+            //        atSummondetail.Lending = "貸";
+            //        atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "7101000").SubjectId;
+            //        atSummondetail.AMoney = Convert.ToDecimal(this.spe_FKZheRang.EditValue);
+            //        this.atSummon.Details.Add(atSummondetail);
+            //        this.CountJieDaiTotal(this.atSummon.Details);
+            //        this.gridControl1.RefreshDataSource();
+            //    }
+            //}
 
             if (e.Column.Name == "gridColumn12")
             {

@@ -138,6 +138,11 @@ namespace Book.BL
         {
             return accessor.SelectByCODetailId(Id);
         }
+
+        public System.Data.DataTable SelectAllSupplierShouldPay(DateTime startdate, DateTime enddate)
+        {
+            return accessor.SelectAllSupplierShouldPay(startdate, enddate);
+        }
     }
 }
 

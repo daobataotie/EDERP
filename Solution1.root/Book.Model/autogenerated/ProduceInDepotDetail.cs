@@ -441,7 +441,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 数量
+        /// 入库数量
         /// </summary>
         public double? ProduceQuantity
         {

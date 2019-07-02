@@ -160,6 +160,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.txt_InvoiceCusId.Properties.ReadOnly = true;
             this.txt_Customer.Properties.ReadOnly = true;
             this.radioGroup1.Properties.ReadOnly = false;
+            this.rg_CEENType.Properties.ReadOnly = false;
         }
 
         protected override void Save()
@@ -283,7 +284,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             model.PCPerspectiveId = Guid.NewGuid().ToString();
             this._PCDataInput.PCPerspectiveList.Add(model);
             this.gridControl4.RefreshDataSource();
-        } 
+        }
 
         private void btn_PCPerspectiveRemove_Click(object sender, EventArgs e)
         {
@@ -412,7 +413,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             }
         }
 
-        //生成对应安规
+        //生成对应安规的外銷報告
         private void barMadeReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             switch (this._PCDataInput.CheckStandard)
@@ -430,7 +431,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     break;
                 case "EN":
                     Model.PCExportReportANSI en = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CEEN");
-                    DataInputENRO enro = new DataInputENRO(this._PCDataInput, en, this.radioGroup1.SelectedIndex);
+                    DataInputENRO enro = new DataInputENRO(this._PCDataInput, en, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex);
                     enro.ShowPreviewDialog();
                     break;
                 case "AS/NZS":
@@ -461,14 +462,14 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 case "ANSI2015/EN":
                     Model.PCExportReportANSI ansi20154 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
                     Model.PCExportReportANSI en4 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CEEN");
-                    DataInputANSI2015ENRO ansiEN = new DataInputANSI2015ENRO(this._PCDataInput, ansi20154, en4, this.radioGroup1.SelectedIndex);
+                    DataInputANSI2015ENRO ansiEN = new DataInputANSI2015ENRO(this._PCDataInput, ansi20154, en4, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex);
                     ansiEN.ShowPreviewDialog();
                     break;
                 case "ANSI2015/EN/AS2017":
                     Model.PCExportReportANSI ansi20155 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
                     Model.PCExportReportANSI en5 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CEEN");
                     Model.PCExportReportANSI aso20175 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "AS");
-                    DataInputANSI2015ENASRO ansiASEN = new DataInputANSI2015ENASRO(this._PCDataInput, ansi20155, en5, aso20175, this.radioGroup1.SelectedIndex);
+                    DataInputANSI2015ENASRO ansiASEN = new DataInputANSI2015ENASRO(this._PCDataInput, ansi20155, en5, aso20175, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex);
                     ansiASEN.ShowPreviewDialog();
                     break;
             }

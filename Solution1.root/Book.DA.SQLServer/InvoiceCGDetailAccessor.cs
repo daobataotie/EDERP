@@ -281,5 +281,39 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<Model.InvoiceCGDetail>("InvoiceCGDetail.SelectByCODetailId", Id);
         }
+
+        //查詢所有廠商指定日期的應付賬款，金額為0不顯示
+        public DataTable SelectAllSupplierShouldPay(DateTime startdate, DateTime enddate)
+        {
+            StringBuilder sb_cg = new StringBuilder("SELECT ISNULL(InvoiceCGDetailMoney,0) AS JinE,isnull(InvoiceCGDetailTax,0) AS ShuiE,ISNULL(InvoiceCGDetailMoney,0)+isnull(InvoiceCGDetailTax,0) as Total,cg.SupplierId FROM InvoiceCGDetail cgd left join InvoiceCG cg on cgd.InvoiceId=cg.InvoiceId WHERE InvoiceCGDetailMoney<>0");            //进货
+            StringBuilder sb_ct = new StringBuilder("SELECT ISNULL((0-InvoiceCTDetailMoney1) ,0) AS JinE,ISNULL((0-InvoiceCTDetailMoney1) ,0)*0.05 AS ShuiE,ISNULL((0-InvoiceCTDetailMoney1) ,0)+ ISNULL((0-InvoiceCTDetailMoney1) ,0)*0.05 as Total ,ct.SupplierId FROM InvoiceCTDetail ctd left join InvoiceCT ct on ctd.InvoiceId=ct.InvoiceId WHERE InvoiceCTDetailMoney1<>0 ");            //退货
+            StringBuilder sb_sr = new StringBuilder("SELECT isnull(ProduceMoney,0) AS JinE,isnull(ProduceMoney,0)*0.05 AS ShuiE,isnull(ProduceMoney,0)*0.05+ isnull(ProduceMoney,0) as Total ,s.SupplierId FROM ProduceInDepotDetail pid left join ProduceInDepot pi on pid.ProduceInDepotId=pi.ProduceInDepotId left join WorkHouse wh on pi.WorkHouseId=wh.WorkHouseId left join Supplier s on s.SupplierFullName like '%'+wh.Workhousename+'%' WHERE pid.ProduceMoney<>0 and s.SupplierId is not null");      //生产入库
+            StringBuilder sb_wr = new StringBuilder("SELECT isnull(ProduceQuantity,0)*cast(ISNULL(ProcessPrice,0) as decimal(18,4)) AS JinE,isnull(ProduceQuantity,0)*cast(ISNULL(ProcessPrice,0) as decimal(18,4))*0.05 AS ShuiE,isnull(ProduceQuantity,0)*cast(ISNULL(ProcessPrice,0) as decimal(18,4))+ isnull(ProduceQuantity,0)*cast(ISNULL(ProcessPrice,0) as decimal(18,4))*0.05 as Total ,po.SupplierId FROM ProduceOtherInDepotDetail pod left join ProduceOtherInDepot po on pod.ProduceOtherInDepotId=po.ProduceOtherInDepotId  WHERE (isnull(ProduceQuantity,0)*cast(ISNULL(ProcessPrice,0) as decimal(18,4)))<>0");    //委外入库
+            StringBuilder sb_wt = new StringBuilder("SELECT isnull((0-Amount),0) AS JinE,isnull((0-Amount),0)*0.05 AS ShuiE,isnull((0-Amount),0)*0.05+isnull((0-Amount),0) AS Total ,pm.SupplierId FROM ProduceOtherReturnDetail  pd left join ProduceOtherReturnMaterial pm on pd.ProduceOtherReturnMaterialId=pm.ProduceOtherReturnMaterialId WHERE Amount<>0");    //委外退库
+            StringBuilder sb_qf = new StringBuilder("SELECT AcMoney AS JinE,CONVERT(float,ap.InvoiceTaxrate)*AcMoney / 100 AS ShuiE,AcMoney+CONVERT(float,ap.InvoiceTaxrate)*AcMoney / 100 AS Total ,ap.SupplierId FROM AcOtherShouldPaymentDetail apd left join AcOtherShouldPayment ap on apd.AcOtherShouldPaymentId=ap.AcOtherShouldPaymentId WHERE AcMoney<>0");     //其它应付款
+            //日期
+
+            sb_cg.Append(" and cg.InvoiceDate between '" + startdate.ToString("yyyy-MM-dd") + "' and '" + enddate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            sb_ct.Append("and ct.InvoiceDate between '" + startdate.ToString("yyyy-MM-dd") + "' and '" + enddate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            sb_sr.Append(" and pi.ProduceInDepotDate between '" + startdate.ToString("yyyy-MM-dd") + "' and '" + enddate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            sb_wr.Append(" and po.ProduceOtherInDepotDate between '" + startdate.ToString("yyyy-MM-dd") + "' and '" + enddate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            sb_wt.Append(" and pm.ProduceOtherReturnMaterialDate between '" + startdate.ToString("yyyy-MM-dd") + "' and '" + enddate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            sb_qf.Append(" and ap.AcOtherShouldPaymentDate between '" + startdate.ToString("yyyy-MM-dd") + "' and '" + enddate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+
+
+            string sql = sb_cg.ToString() + " UNION ALL " + sb_ct.ToString() + " UNION ALL " + sb_sr.ToString() + " UNION ALL " + sb_wr.ToString() + " UNION ALL " + sb_qf.ToString() + " UNION ALL " + sb_wt.ToString();
+            sql = "select b.*,Supplier.SupplierShortName from ( SELECT a.SupplierId,SUM(a.JinE) as JinE,SUM(a.ShuiE) as ShuiE,SUM(a.Total) as Total FROM ( " + sql + " ) a group by a.SupplierId ) b left join Supplier on b.SupplierId=Supplier.SupplierId";
+
+            using (SqlConnection con = new SqlConnection(sqlmapper.DataSource.ConnectionString))
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(sql, con);
+                DataSet ds = new DataSet();
+                sda.Fill(ds);
+                if (ds != null && ds.Tables.Count > 0)
+                    return ds.Tables[0];
+            }
+
+            return null;
+        }
     }
 }

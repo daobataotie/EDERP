@@ -14,9 +14,6 @@ namespace Book.UI.produceManager.PCEarplugs
 
             this.DataSource = pCEarplugsResilienceCheck.Details;
 
-            this.TCTiekuaiyaCondition.Text = pCEarplugsResilienceCheck.TiekuaiyaCondition;
-            this.TCShoucuorouCondition.Text = pCEarplugsResilienceCheck.ShoucuorouCondition;
-
             this.lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
             this.lbl_ReportDate.Text += DateTime.Now.ToString("yyyy-MM-dd");
             this.lbl_Note.Text = pCEarplugsResilienceCheck.Note;
@@ -33,9 +30,9 @@ namespace Book.UI.produceManager.PCEarplugs
             this.TCWaiguan.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Waiguan);
             this.TCDuise.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Duise);
             this.TCChicun.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Chicun);
-            this.TCTiekuaiya.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Tiekuaiya, "{0:0.#}");
-            this.TCShoucuorou.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Shoucuorou, "{0:0.#}");
             this.TCJudge.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Judge);
+
+            this.xrSubreport1.ReportSource = new ROResilienceConditionSet(pCEarplugsResilienceCheck.TiekuaiyaCondition, pCEarplugsResilienceCheck.ShoucuorouCondition, pCEarplugsResilienceCheck.PCEarplugsResilienceCheckId);
         }
 
     }

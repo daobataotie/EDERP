@@ -118,12 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="xrTable2.Dpi" type="System.Single, mscorlib">
+  <data name="xrSubreport1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrSubreport1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>4.99999762, 59.99997</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrSubreport1.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>2081.95825, 58.4199677</value>
+  </data>
+  <data name="xrTable2.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>10.583252, 0</value>
+    <value>5, 0</value>
   </data>
   <data name="TCDate.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -162,33 +172,14 @@
   <data name="TCChicun.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="xrTableCell13.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrTableCell13.Text" xml:space="preserve">
-    <value>秒数</value>
-  </data>
-  <data name="TCTiekuaiya.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrTableCell14.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrTableCell14.Text" xml:space="preserve">
-    <value>秒数</value>
-  </data>
-  <data name="TCShoucuorou.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
   <data name="TCJudge.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrTableRow2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrTable2.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>2608.99976, 60</value>
+    <value>2081.958, 60</value>
   </data>
   <data name="xrTable2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -197,7 +188,7 @@
     <value>254</value>
   </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
-    <value>60</value>
+    <value>118.419937</value>
   </data>
   <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
@@ -206,7 +197,7 @@
     <value>254</value>
   </data>
   <data name="TopMargin.HeightF" type="System.Single, mscorlib">
-    <value>80</value>
+    <value>79</value>
   </data>
   <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
@@ -215,7 +206,7 @@
     <value>254</value>
   </data>
   <data name="BottomMargin.HeightF" type="System.Single, mscorlib">
-    <value>80</value>
+    <value>89</value>
   </data>
   <data name="BottomMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
@@ -230,7 +221,7 @@
     <value>10.583333, 0</value>
   </data>
   <data name="lbl_CompanyName.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>2608.99976, 80</value>
+    <value>2083.41675, 80</value>
   </data>
   <data name="lbl_CompanyName.Text" xml:space="preserve">
     <value>lbl_CompanyName</value>
@@ -248,7 +239,7 @@
     <value>254</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>10.583333, 142.875</value>
+    <value>5, 142.875</value>
   </data>
   <data name="xrTableCell1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -316,12 +307,6 @@
   <data name="xrTableCell10.Text" xml:space="preserve">
     <value>尺寸            (3格内)</value>
   </data>
-  <data name="TCTiekuaiyaCondition.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="TCShoucuorouCondition.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
   <data name="xrTableCell8.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -332,7 +317,7 @@
     <value>254</value>
   </data>
   <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>2608.99976, 131</value>
+    <value>2081.958, 131</value>
   </data>
   <data name="xrTable1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -341,7 +326,7 @@
     <value>254</value>
   </data>
   <data name="lbl_ReportDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2168.62476, 64.99999</value>
+    <value>1643.0415, 64.99999</value>
   </data>
   <data name="lbl_ReportDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>450.958374, 58.42</value>
@@ -362,7 +347,7 @@
     <value>10.583333, 0</value>
   </data>
   <data name="lbl_ReportName.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>2608.99976, 64.99999</value>
+    <value>2083.41675, 64.99999</value>
   </data>
   <data name="lbl_ReportName.Text" xml:space="preserve">
     <value>耳塞回弹力测试表</value>
@@ -380,7 +365,7 @@
     <value>254</value>
   </data>
   <data name="xrPageInfo1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2452.89575, 0</value>
+    <value>1927.31238, 0</value>
   </data>
   <data name="xrPageInfo1.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>166.6875, 58.42</value>
@@ -401,7 +386,7 @@
     <value>156.1042, 0</value>
   </data>
   <data name="lbl_Note.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>2463.47852, 58.4199638</value>
+    <value>1937.89575, 58.4199638</value>
   </data>
   <data name="lbl_Note.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -425,7 +410,7 @@
     <value>254</value>
   </data>
   <data name="lbl_Employee.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1549.69678, 66.1458</value>
+    <value>1462.38428, 66.1458359</value>
   </data>
   <data name="lbl_Employee.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>209.020874, 58.42</value>
@@ -437,7 +422,7 @@
     <value>254</value>
   </data>
   <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1340.6759, 66.1458</value>
+    <value>1253.3634, 66.1458359</value>
   </data>
   <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>209.020874, 58.42</value>
@@ -467,7 +452,7 @@
     <value>254</value>
   </data>
   <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2365.58325, 66.1458</value>
+    <value>1840.00012, 58.4199638</value>
   </data>
   <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>254, 58.42</value>
@@ -482,7 +467,7 @@
     <value>254</value>
   </data>
   <data name="ReportFooter.HeightF" type="System.Single, mscorlib">
-    <value>124.565796</value>
+    <value>124.565834</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

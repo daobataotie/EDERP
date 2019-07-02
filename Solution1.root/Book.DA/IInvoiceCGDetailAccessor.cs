@@ -45,6 +45,8 @@ namespace Book.DA
         double CountInDepotQuantity(string id);
 
         Model.InvoiceCGDetail SelectByCODetailId(string Id);
+
+        System.Data.DataTable SelectAllSupplierShouldPay(DateTime startdate, DateTime enddate);
     }
 }
 

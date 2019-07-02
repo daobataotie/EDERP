@@ -584,7 +584,7 @@ namespace Book.DA.SQLServer.SQLDB
             }
         }
 
-        public static object QueryObject(string SQLString)
+        public static object QueryObject(string SQLString, int Times)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -592,6 +592,7 @@ namespace Book.DA.SQLServer.SQLDB
                 {
                     connection.Open();
                     SqlCommand cmd = new SqlCommand(SQLString, connection);
+                    cmd.CommandTimeout = Times;
                     object obj = cmd.ExecuteScalar();
                     obj = ((obj is DBNull) ? null : obj);
                     return obj;

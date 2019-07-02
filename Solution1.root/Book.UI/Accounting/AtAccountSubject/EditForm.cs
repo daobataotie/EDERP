@@ -25,6 +25,7 @@ namespace Book.UI.Accounting.AtAccountSubject
 
             this.newChooseAccountingCategoryId.Choose = new Accounting.AccountingCategory.ChooseAccountingCategory();
             this.nccAtAccountSubject.Choose = new Accounting.AtAccountSubject.ChooseAccountSubject();
+            this.ncc_Bank.Choose = new Settings.BasicData.Bank.ChooseBank();
 
             this.action = "view";
         }
@@ -61,6 +62,8 @@ namespace Book.UI.Accounting.AtAccountSubject
             }
             this.AtAccountSubject.TheBalance = this.spinEditTheBalance.EditValue == null ? 0 : decimal.Parse(this.spinEditTheBalance.EditValue.ToString());
             this.AtAccountSubject.IsCash = this.comboBoxEditCash.SelectedItem == null ? null : this.comboBoxEditCash.SelectedItem.ToString();
+            this.AtAccountSubject.BankId = this.ncc_Bank.EditValue == null ? null : (this.ncc_Bank.EditValue as Model.Bank).BankId;
+
             switch (this.action)
             {
                 case "insert":
@@ -81,6 +84,10 @@ namespace Book.UI.Accounting.AtAccountSubject
                 this.AddNew();
                 this.action = "insert";
             }
+            else if (this.AtAccountSubject != null)
+            {
+                this.AtAccountSubject = this.AtAccountSubjectManager.Get(this.AtAccountSubject.SubjectId);
+            }
 
             //排序
             //this.bindingSource1.DataSource = this.MXsrot(this.AtAccountSubjectManager.Select());
@@ -94,6 +101,7 @@ namespace Book.UI.Accounting.AtAccountSubject
 
             this.nccAtAccountSubject.EditValue = this.AtAccountSubjectManager.Get(this.AtAccountSubject.UnderSubject);
             this.comboBoxEditCash.EditValue = this.AtAccountSubject.IsCash;
+            this.ncc_Bank.EditValue = this.AtAccountSubject.Bank;
 
             if (this.AtAccountSubject.TheLending == "借")
             {

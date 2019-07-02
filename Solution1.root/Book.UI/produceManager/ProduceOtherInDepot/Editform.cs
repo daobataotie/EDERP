@@ -39,6 +39,8 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             //this.requireValueExceptions.Add(Model.ProduceOtherInDepot.PROPERTY_WORKHOUSEID, new AA(Properties.Resources.WorkHouse, this.newChooseWorkHorseId));
             this.invalidValueExceptions.Add(Model.ProduceOtherInDepot.PRO_ProduceOtherInDepotId, new AA(Properties.Resources.EntityExists, this.textEditProduceOtherInDepotId));
             this.invalidValueExceptions.Add(Model.ProduceOtherInDepot.PRO_SupplierId, new AA(Properties.Resources.Supplier, this.newChooseContorlSipu));
+            this.invalidValueExceptions.Add(Model.ProduceOtherInDepotDetail.PRO_ProduceQuantity, new AA("進貨數量不能為空", this.gridControl1));
+            this.invalidValueExceptions.Add(Model.ProduceOtherInDepotDetail.PRO_ProduceTransferQuantity,new AA("轉生產數量或入庫數量必須填寫一項",this.gridControl1));
 
             this.action = "view";
             this.newChooseEmployee0.Choose = new ChooseEmployee();
@@ -767,7 +769,8 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                 detail.Product = item.Product;
                 detail.ProductId = item.ProductId;
                 detail.ProductUnit = item.ProductUnit;
-                detail.ProduceQuantity = item.OtherCompactCount - Convert.ToDouble(item.InDepotCount);
+                //detail.ProduceQuantity = item.OtherCompactCount - Convert.ToDouble(item.InDepotCount);
+                detail.ProduceQuantity = 0;
                 detail.ProduceInDepotQuantity = 0;
                 detail.ProduceTransferQuantity = 0;
                 detail.ProcessPrice = item.OtherCompactPrice;

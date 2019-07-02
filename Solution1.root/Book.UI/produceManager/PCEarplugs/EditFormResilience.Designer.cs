@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditFormResilience));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cob_Shoucuorou = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cob_Tiekuaiya = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txt_Note = new DevExpress.XtraEditors.MemoEdit();
             this.btn_Remove = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Add = new DevExpress.XtraEditors.SimpleButton();
@@ -55,11 +57,11 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gcTiekuaiya = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
+            this.gcShoucuorou = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemHyperLinkEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.repositoryItemLookUpEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ncc_Employee = new Book.UI.Invoices.NewChooseContorl();
             this.date_Check = new DevExpress.XtraEditors.DateEdit();
@@ -77,6 +79,8 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -84,16 +88,12 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.cob_Tiekuaiya = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cob_Shoucuorou = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gcShoucuorou = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemSpinEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Shoucuorou.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Tiekuaiya.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Note.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetail)).BeginInit();
@@ -104,10 +104,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties)).BeginInit();
@@ -123,12 +122,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cob_Tiekuaiya.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cob_Shoucuorou.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -172,6 +168,26 @@
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(126, 316, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
+            // cob_Shoucuorou
+            // 
+            resources.ApplyResources(this.cob_Shoucuorou, "cob_Shoucuorou");
+            this.cob_Shoucuorou.MenuManager = this.barManager1;
+            this.cob_Shoucuorou.Name = "cob_Shoucuorou";
+            this.cob_Shoucuorou.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_Shoucuorou.Properties.Buttons"))))});
+            this.cob_Shoucuorou.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cob_Shoucuorou.StyleController = this.layoutControl1;
+            // 
+            // cob_Tiekuaiya
+            // 
+            resources.ApplyResources(this.cob_Tiekuaiya, "cob_Tiekuaiya");
+            this.cob_Tiekuaiya.MenuManager = this.barManager1;
+            this.cob_Tiekuaiya.Name = "cob_Tiekuaiya";
+            this.cob_Tiekuaiya.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_Tiekuaiya.Properties.Buttons"))))});
+            this.cob_Tiekuaiya.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cob_Tiekuaiya.StyleController = this.layoutControl1;
+            // 
             // txt_Note
             // 
             resources.ApplyResources(this.txt_Note, "txt_Note");
@@ -206,11 +222,9 @@
             this.repositoryItemLookUpEdit1,
             this.repositoryItemLookUpEdit2,
             this.repositoryItemLookUpEdit3,
-            this.repositoryItemComboBox2,
             this.repositoryItemLookUpEdit4,
-            this.repositoryItemLookUpEdit5,
-            this.repositoryItemSpinEdit2,
-            this.repositoryItemSpinEdit3});
+            this.repositoryItemHyperLinkEdit1,
+            this.repositoryItemHyperLinkEdit3});
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
             this.gridView2});
@@ -352,19 +366,27 @@
             // 
             // gcTiekuaiya
             // 
-            this.gcTiekuaiya.ColumnEdit = this.repositoryItemSpinEdit2;
-            this.gcTiekuaiya.FieldName = "Tiekuaiya";
+            this.gcTiekuaiya.ColumnEdit = this.repositoryItemHyperLinkEdit1;
             this.gcTiekuaiya.Name = "gcTiekuaiya";
             resources.ApplyResources(this.gcTiekuaiya, "gcTiekuaiya");
             // 
-            // repositoryItemSpinEdit2
+            // repositoryItemHyperLinkEdit1
             // 
-            resources.ApplyResources(this.repositoryItemSpinEdit2, "repositoryItemSpinEdit2");
-            this.repositoryItemSpinEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryItemSpinEdit2.EditFormat.FormatString = "0.#";
-            this.repositoryItemSpinEdit2.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryItemSpinEdit2.Name = "repositoryItemSpinEdit2";
+            resources.ApplyResources(this.repositoryItemHyperLinkEdit1, "repositoryItemHyperLinkEdit1");
+            this.repositoryItemHyperLinkEdit1.Name = "repositoryItemHyperLinkEdit1";
+            this.repositoryItemHyperLinkEdit1.Click += new System.EventHandler(this.repositoryItemHyperLinkEdit1_Click);
+            // 
+            // gcShoucuorou
+            // 
+            resources.ApplyResources(this.gcShoucuorou, "gcShoucuorou");
+            this.gcShoucuorou.ColumnEdit = this.repositoryItemHyperLinkEdit3;
+            this.gcShoucuorou.Name = "gcShoucuorou";
+            // 
+            // repositoryItemHyperLinkEdit3
+            // 
+            resources.ApplyResources(this.repositoryItemHyperLinkEdit3, "repositoryItemHyperLinkEdit3");
+            this.repositoryItemHyperLinkEdit3.Name = "repositoryItemHyperLinkEdit3";
+            this.repositoryItemHyperLinkEdit3.Click += new System.EventHandler(this.repositoryItemHyperLinkEdit3_Click);
             // 
             // gridColumn10
             // 
@@ -384,28 +406,6 @@
             resources.GetString("repositoryItemComboBox1.Items2")});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             this.repositoryItemComboBox1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            // 
-            // repositoryItemComboBox2
-            // 
-            resources.ApplyResources(this.repositoryItemComboBox2, "repositoryItemComboBox2");
-            this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemComboBox2.Buttons"))))});
-            this.repositoryItemComboBox2.Items.AddRange(new object[] {
-            resources.GetString("repositoryItemComboBox2.Items"),
-            resources.GetString("repositoryItemComboBox2.Items1")});
-            this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
-            this.repositoryItemComboBox2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            // 
-            // repositoryItemLookUpEdit5
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit5, "repositoryItemLookUpEdit5");
-            this.repositoryItemLookUpEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit5.Buttons"))))});
-            this.repositoryItemLookUpEdit5.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("repositoryItemLookUpEdit5.Columns"), resources.GetString("repositoryItemLookUpEdit5.Columns1"))});
-            this.repositoryItemLookUpEdit5.DisplayMember = "EmployeeName";
-            this.repositoryItemLookUpEdit5.Name = "repositoryItemLookUpEdit5";
-            this.repositoryItemLookUpEdit5.ValueMember = "EmployeeId";
             // 
             // gridView2
             // 
@@ -573,6 +573,24 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(277, 25);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(72, 14);
             // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.cob_Tiekuaiya;
+            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(280, 25);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.cob_Shoucuorou;
+            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
+            this.layoutControlItem10.Location = new System.Drawing.Point(280, 26);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(263, 25);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(72, 14);
+            // 
             // barButtonItem1
             // 
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
@@ -618,58 +636,6 @@
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSearch_ItemClick);
             // 
-            // cob_Tiekuaiya
-            // 
-            resources.ApplyResources(this.cob_Tiekuaiya, "cob_Tiekuaiya");
-            this.cob_Tiekuaiya.MenuManager = this.barManager1;
-            this.cob_Tiekuaiya.Name = "cob_Tiekuaiya";
-            this.cob_Tiekuaiya.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit1.Properties.Buttons"))))});
-            this.cob_Tiekuaiya.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cob_Tiekuaiya.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.cob_Tiekuaiya;
-            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 26);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(280, 25);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(72, 14);
-            // 
-            // cob_Shoucuorou
-            // 
-            resources.ApplyResources(this.cob_Shoucuorou, "cob_Shoucuorou");
-            this.cob_Shoucuorou.MenuManager = this.barManager1;
-            this.cob_Shoucuorou.Name = "cob_Shoucuorou";
-            this.cob_Shoucuorou.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit2.Properties.Buttons"))))});
-            this.cob_Shoucuorou.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cob_Shoucuorou.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.cob_Shoucuorou;
-            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(280, 26);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(263, 25);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(72, 14);
-            // 
-            // gcShoucuorou
-            // 
-            resources.ApplyResources(this.gcShoucuorou, "gcShoucuorou");
-            this.gcShoucuorou.ColumnEdit = this.repositoryItemSpinEdit3;
-            this.gcShoucuorou.FieldName = "Shoucuorou";
-            this.gcShoucuorou.Name = "gcShoucuorou";
-            // 
-            // repositoryItemSpinEdit3
-            // 
-            resources.ApplyResources(this.repositoryItemSpinEdit3, "repositoryItemSpinEdit3");
-            this.repositoryItemSpinEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryItemSpinEdit3.Name = "repositoryItemSpinEdit3";
-            // 
             // EditFormResilience
             // 
             resources.ApplyResources(this, "$this");
@@ -681,6 +647,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Shoucuorou.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Tiekuaiya.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Note.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDetail)).EndInit();
@@ -691,10 +659,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties)).EndInit();
@@ -710,12 +677,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cob_Tiekuaiya.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cob_Shoucuorou.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -754,7 +718,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit3;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
@@ -767,20 +730,19 @@
         private DevExpress.XtraEditors.MemoEdit txt_Note;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit4;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit5;
         private System.Windows.Forms.BindingSource bindingSourceProduct;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.ComboBoxEdit cob_Shoucuorou;
         private DevExpress.XtraEditors.ComboBoxEdit cob_Tiekuaiya;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraGrid.Columns.GridColumn gcShoucuorou;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit3;
     }
 }

@@ -161,8 +161,8 @@ namespace Book.UI.produceManager.createProduce
         {
             if (this.bindingSourceHeader.Current == null) return;
             this.XOdetail = this.invoiceXODetailManager.Select(this.bindingSourceHeader.Current as Model.InvoiceXO, IsDetailsFlag);
-            if (this.XOdetail != null && this.XOdetail.Count > 0)
-                this.XOdetail = this.XOdetail.Where(D => D.InvoiceXODetailQuantity < D.InvoiceMPSQuantity).ToList();
+            //if (this.XOdetail != null && this.XOdetail.Count > 0)
+            //    this.XOdetail = this.XOdetail.Where(D => D.InvoiceXODetailQuantity < D.InvoiceMPSQuantity || D.InvoiceMPSQuantity == null).ToList();
             this.bindingSource1.DataSource = this.XOdetail;
             this.gridControl1.RefreshDataSource();
             this.checkEditAll.Checked = false;
@@ -189,8 +189,8 @@ namespace Book.UI.produceManager.createProduce
             // }
             if (this.bindingSourceHeader.Current == null) return;
             this.XOdetail = this.invoiceXODetailManager.Select(this.bindingSourceHeader.Current as Model.InvoiceXO, false);
-            if (this.XOdetail != null && this.XOdetail.Count > 0)
-                this.XOdetail = this.XOdetail.Where(D => D.InvoiceXODetailQuantity < D.InvoiceMPSQuantity).ToList();
+            //if (this.XOdetail != null && this.XOdetail.Count > 0)
+            //    this.XOdetail = this.XOdetail.Where(D => D.InvoiceXODetailQuantity < D.InvoiceMPSQuantity).ToList();
             this.bindingSource1.DataSource = this.XOdetail;
             this.gridControl1.RefreshDataSource();
         }

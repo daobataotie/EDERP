@@ -94,7 +94,6 @@
             this.label66 = new System.Windows.Forms.Label();
             this.textProtectionone = new DevExpress.XtraEditors.TextEdit();
             this.label65 = new System.Windows.Forms.Label();
-            this.memoTrans = new DevExpress.XtraEditors.MemoEdit();
             this.label62 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
@@ -176,6 +175,7 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.cob_Trans = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -229,7 +229,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestTrans.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textProtectiontwo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textProtectionone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoTrans.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestInternal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPackaging.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestMarking.Properties)).BeginInit();
@@ -241,6 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPrism.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestConstruction.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Trans.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -785,7 +785,6 @@
             this.panel1.Controls.Add(this.label66);
             this.panel1.Controls.Add(this.textProtectionone);
             this.panel1.Controls.Add(this.label65);
-            this.panel1.Controls.Add(this.memoTrans);
             this.panel1.Controls.Add(this.label62);
             this.panel1.Controls.Add(this.label61);
             this.panel1.Controls.Add(this.label60);
@@ -859,6 +858,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.cob_Trans);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
@@ -901,16 +901,6 @@
             // 
             resources.ApplyResources(this.label65, "label65");
             this.label65.Name = "label65";
-            // 
-            // memoTrans
-            // 
-            resources.ApplyResources(this.memoTrans, "memoTrans");
-            this.memoTrans.MenuManager = this.barManager1;
-            this.memoTrans.Name = "memoTrans";
-            this.memoTrans.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("memoTrans.Properties.Appearance.BorderColor")));
-            this.memoTrans.Properties.Appearance.Options.UseBorderColor = true;
-            this.memoTrans.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.memoTrans.StyleController = this.layoutControl1;
             // 
             // label62
             // 
@@ -1472,6 +1462,18 @@
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPrintPPE_ItemClick);
             // 
+            // cob_Trans
+            // 
+            resources.ApplyResources(this.cob_Trans, "cob_Trans");
+            this.cob_Trans.MenuManager = this.barManager1;
+            this.cob_Trans.Name = "cob_Trans";
+            this.cob_Trans.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("memoTrans.Properties.Appearance.BorderColor")));
+            this.cob_Trans.Properties.Appearance.Options.UseBorderColor = true;
+            this.cob_Trans.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cob_Trans.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("memoTrans.Properties.Buttons"))))});
+            this.cob_Trans.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
             // CEENEditsForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1534,7 +1536,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestTrans.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textProtectiontwo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textProtectionone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoTrans.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestInternal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPackaging.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestMarking.Properties)).EndInit();
@@ -1546,6 +1547,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestPrism.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestConstruction.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_Trans.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1607,7 +1609,6 @@
         private System.Windows.Forms.Label label66;
         private DevExpress.XtraEditors.TextEdit textProtectionone;
         private System.Windows.Forms.Label label65;
-        private DevExpress.XtraEditors.MemoEdit memoTrans;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label60;
@@ -1698,5 +1699,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraEditors.ComboBoxEdit cob_Trans;
     }
 }

@@ -1552,16 +1552,20 @@ namespace Book.UI.Invoices.XO
                 MessageBox.Show("請先保存單據！", this.Text, MessageBoxButtons.OK);
                 return;
             }
-            
-            this.Refresh();
+
             IList<Model.InvoiceXODetail> list = this.bindingSource1.DataSource as List<Model.InvoiceXODetail>;
             if (list != null)
             {
-                var details = from n in list
+                var detailIds = from n in list
                               where n.IsConfirmed == true
-                              select n;
-                if (details != null && details.Count() > 0)
+                              select n.InvoiceXODetailId;
+                if (detailIds != null && detailIds.Count() > 0)
                 {
+                    //多这些步骤是为了每次排单时刷新一次数据
+                    this.Refresh();
+
+                    list = this.bindingSource1.DataSource as List<Model.InvoiceXODetail>;
+                    var details = list.Where(L => detailIds.Contains(L.InvoiceXODetailId));
 
                     foreach (Model.InvoiceXODetail item in details)
                     {

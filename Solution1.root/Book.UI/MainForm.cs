@@ -63,6 +63,11 @@ namespace Book.UI
             //this.appUpdater1.UpdateUrl = url;
         }
 
+        /// <summary>
+        /// 点击按钮，打开窗体
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void barManager1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (e.Item.Tag == null || e.Item.Tag.ToString() == "")

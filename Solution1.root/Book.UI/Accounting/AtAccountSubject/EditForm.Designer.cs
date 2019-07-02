@@ -59,6 +59,8 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ncc_Bank = new Book.UI.Invoices.NewChooseContorl();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -83,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
             // imageCollection1
@@ -103,6 +106,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.ncc_Bank);
             this.layoutControl1.Controls.Add(this.comboBoxEditCash);
             this.layoutControl1.Controls.Add(this.nccAtAccountSubject);
             this.layoutControl1.Controls.Add(this.spinEditTheBalance);
@@ -255,7 +259,8 @@
             this.layoutControlItem7,
             this.layoutControlItem8,
             this.emptySpaceItem1,
-            this.layoutControlItem9});
+            this.layoutControlItem9,
+            this.layoutControlItem10});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(650, 396);
@@ -274,9 +279,9 @@
             // 
             this.layoutControlItem2.Control = this.gridControl1;
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 104);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 128);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(630, 272);
+            this.layoutControlItem2.Size = new System.Drawing.Size(630, 248);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
@@ -352,6 +357,21 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(157, 25);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 14);
             // 
+            // ncc_Bank
+            // 
+            this.ncc_Bank.EditValue = null;
+            resources.ApplyResources(this.ncc_Bank, "ncc_Bank");
+            this.ncc_Bank.Name = "ncc_Bank";
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.ncc_Bank;
+            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 104);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(630, 24);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(60, 14);
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -383,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,5 +439,7 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditCash;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private Book.UI.Invoices.NewChooseContorl ncc_Bank;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }

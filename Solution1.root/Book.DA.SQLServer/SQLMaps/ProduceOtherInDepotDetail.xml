@@ -1,9 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sqlMap namespace="ProduceOtherInDepotDetail" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <resultMaps>
+    <resultMap id="ProduceOtherInDepotDetailResult1" class="ProduceOtherInDepotDetail">    
+      <result property="ProduceOtherInDepotDetailId" column="ProduceOtherInDepotDetailId" />
+      <result property="ProductId" column="ProductId" />
+      <result property="DepotPositionId" column="DepotPositionId" />
+      <result property="ProduceOtherInDepotId" column="ProduceOtherInDepotId" />
+      <result property="ProductGuige" column="ProductGuige" />
+      <result property="ProductUnit" column="ProductUnit" />
+      <result property="ProduceQuantity" column="ProduceQuantity" />
+      <result property="ProducePrice" column="ProducePrice" />
+      <result property="ProduceMoney" column="ProduceMoney" />
+      <result property="ProcessPrice" column="ProcessPrice" />
+      <result property="ProduceIsEnd" column="ProduceIsEnd" />
+      <result property="InvoiceXOId" column="InvoiceXOId" />
+      <result property="InvoiceXODetailId" column="InvoiceXODetailId" />
+      <result property="PrimaryKeyId" column="PrimaryKeyId" />
+      <result property="ProduceOtherCompactDetailId" column="ProduceOtherCompactDetailId" />
+      <result property="Description" column="Description" />
+      <result property="ProduceTransferQuantity" column="ProduceTransferQuantity" />
+      <result property="ProduceInDepotQuantity" column="ProduceInDepotQuantity" />
+      <result property="CustomerId" column="CustomerId" />
+      <result property="InvoiceCusId" column="InvoiceCusId" />
+      <result property="ProduceOtherCompactId" column="ProduceOtherCompactId" />
+      <result property="GenerateInputCheck" column="GenerateInputCheck"/>
+      <result property="OrderQuantity" column="OrderQuantity"/>
+      <result property="NotArriveQuantity" column="NotArriveQuantity"/>
+      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
+      <result property="PrimaryKey" column="PrimaryKeyId" lazyLoad="false" select="CustomerProducts.select_by_primary_key" />
+      <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />
+      <result property="ProduceOtherInDepot" column="ProduceOtherInDepotId" lazyLoad="false" select="ProduceOtherInDepot.select_by_primary_key" />
+      <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+    </resultMap>
+  </resultMaps>
+  
   <statements>
-    <select id="select_byProduceOtherInDepotId" resultMap="ProduceOtherInDepotDetailResult" parameterClass="string">
-      select * from ProduceOtherInDepotDetail where ProduceOtherInDepotId=#value#
+    <select id="select_byProduceOtherInDepotId" resultMap="ProduceOtherInDepotDetailResult1" parameterClass="string">
+      <!--select * from ProduceOtherInDepotDetail where ProduceOtherInDepotId=#value#-->
+      select pid.*,pcd.OtherCompactCount as OrderQuantity,(pcd.OtherCompactCount-pid.ProduceQuantity) as NotArriveQuantity from ProduceOtherInDepotDetail pid left join ProduceOtherCompactDetail pcd on pid.ProduceOtherCompactDetailId =pcd.OtherCompactDetailId where ProduceOtherInDepotId=#value#
     </select>
     <select id="select_byProduceInDateAndPronote" resultMap="ProduceOtherInDepotDetailResult" parameterClass="Map">
       <![CDATA[

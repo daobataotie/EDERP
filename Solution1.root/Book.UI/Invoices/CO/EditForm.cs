@@ -597,6 +597,8 @@ namespace Book.UI.Invoices.CO
             }
 
             this.newChooseContorlAtCurrencyCate.EditValue = this.invoice.AtCurrencyCategory;
+            this.date_Update.EditValue = this.invoice.UpdateTime;
+
             base.Refresh();
 
             this.buttonEditEmployee.Enabled = false;

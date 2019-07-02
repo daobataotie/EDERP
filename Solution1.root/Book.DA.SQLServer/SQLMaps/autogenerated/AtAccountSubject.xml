@@ -21,7 +21,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="UpdateTime" column="UpdateTime" />
       <result property="Id" column="Id" />
       <result property ="IsCash" column="IsCash"/>
+      <result property="BankId" column="BankId"/>
       <result property="AccountingCategory" column="AccountingCategoryId" lazyLoad="false" select="AtAccountingCategory.select_by_primary_key" />
+      <result property="Bank" column="BankId" lazyLoad="false" select="Bank.select_by_primary_key"/>
     </resultMap>
   </resultMaps>
 
@@ -112,7 +114,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [InsertTime],
       [UpdateTime],
       [Id],
-      [IsCash]
+      [IsCash],
+      [BankId]
       FROM
       [dbo].[AtAccountSubject]
       WHERE
@@ -173,7 +176,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [InsertTime],
       [UpdateTime],
       [Id],
-      [IsCash]
+      [IsCash],
+      [BankId]
       )
       VALUES
       (
@@ -191,7 +195,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #InsertTime#,
       #UpdateTime#,
       #Id#,
-      #IsCash#
+      #IsCash#,
+      #BankId#
       )
     </insert>
 
@@ -211,7 +216,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [InsertTime] = #InsertTime#,
       [UpdateTime] = #UpdateTime#,
       [Id] = #Id#,
-      [IsCash]=#IsCash#
+      [IsCash]=#IsCash#,
+      [BankId]=#BankId#
       WHERE
       [SubjectId] = #SubjectId#
     </update>

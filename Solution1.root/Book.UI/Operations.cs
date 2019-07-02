@@ -320,7 +320,7 @@ namespace Book.UI
 
             operations.Add("settings.producemanager.manprocedureprocess", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.ProduceManager.ManProcedureProcess.EditForm", form); });
             #endregion
-            
+
             //貨品一覽
             operations.Add("settings.basicdata.list1form", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.BasicData.Products.List1Form", form); });
             //客户包装信息
@@ -778,6 +778,11 @@ namespace Book.UI
 
             //耳塞拉線测试表
             operations.Add("produceManager.PCEarplugs.EditFormStayWire", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCEarplugs.EditFormStayWire", form); });
+
+            //採購管理-應付賬款一覽表
+            operations.Add("Invoices.CO.SupplierShouldPay", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.CO.SupplierShouldPay", form); });
+            //CEEN_WURTH
+            operations.Add("produceManager.PCExportReportANSI.CEENEditsForm_WURTH", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.CEENEditsForm_WURTH", form); });
         }
 
         static Form CreateForm(string formTypeName)

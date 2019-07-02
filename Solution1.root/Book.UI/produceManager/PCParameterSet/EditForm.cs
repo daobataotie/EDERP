@@ -162,7 +162,12 @@ namespace Book.UI.produceManager.PCParameterSet
             dr["SettingSetId"] = "EarplugsResilience2";
             dr["SettingName"] = "耳塞回彈力測試表-手搓揉設置";
             da.Rows.Add(dr);
-                       
+
+
+            dr = da.NewRow();
+            dr["SettingSetId"] = "CEEN_Tran";
+            dr["SettingName"] = "CEEN外銷報告-Transmittance";
+            da.Rows.Add(dr);
 
             this._detail = this.settingManager.SelectTagOrderDefault("PCISO");
             this.requireValueExceptions.Add(Model.Setting.PRO_SettingName, new AA(Properties.Resources.NameIsNotNull, this.gridControl1));

@@ -85,11 +85,15 @@ namespace Book.Model
 		private string _id;
 
         private string _isCash;
+
+        private string _bankId;
 		
 		/// <summary>
 		/// 
 		/// </summary>
 		private AtAccountingCategory _accountingCategory;
+
+        private Bank _bank;
 		 
 		#endregion
 		
@@ -310,6 +314,12 @@ namespace Book.Model
             get { return _isCash; }
             set { _isCash = value; }
         }
+
+        public string BankId
+        {
+            get { return _bankId; }
+            set { _bankId = value; }
+        }
 	
 		/// <summary>
 		/// 
@@ -324,8 +334,15 @@ namespace Book.Model
 			{
 				this._accountingCategory = value;
 			}
-			
-		}
+
+        }
+
+        public Bank Bank
+        {
+            get { return _bank; }
+            set { _bank = value; }
+        }
+
 		/// <summary>
 		/// 
 		/// </summary>
@@ -397,7 +414,8 @@ namespace Book.Model
 		public readonly static string PRO_Id = "Id";
 
         public readonly static string PRO_IsCash = "IsCash";
-		
+
+        public readonly static string PRO_BankId = "BankId";
 
 		#endregion
 	}

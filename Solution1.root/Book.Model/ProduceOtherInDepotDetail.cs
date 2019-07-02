@@ -40,5 +40,17 @@ namespace Book.Model
         public DateTime? JiaoQi { get; set; }
 
         public bool IsCheck { get; set; }
+
+        public double? OrderQuantity { get; set; }
+
+        public double? NotArriveQuantity { get; set; }
+
+        public double? NotArrive
+        {
+            get
+            {
+                return NotArriveQuantity <= 0 ? 0 : NotArriveQuantity;
+            }
+        }
     }
 }

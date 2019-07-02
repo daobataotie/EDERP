@@ -345,6 +345,28 @@
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ncc_Bank.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 116</value>
+  </data>
+  <data name="ncc_Bank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>562, 21</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ncc_Bank.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;ncc_Bank.Name" xml:space="preserve">
+    <value>ncc_Bank</value>
+  </data>
+  <data name="&gt;&gt;ncc_Bank.Type" xml:space="preserve">
+    <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ncc_Bank.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ncc_Bank.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="comboBoxEditCash.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 91</value>
   </data>
@@ -360,7 +382,6 @@
   <data name="comboBoxEditCash.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="comboBoxEditCash.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
@@ -374,7 +395,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;comboBoxEditCash.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="nccAtAccountSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 91</value>
@@ -395,7 +416,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;nccAtAccountSubject.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="spinEditTheBalance.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -419,7 +440,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spinEditTheBalance.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="radioGroupTheLending.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 62</value>
@@ -452,7 +473,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;radioGroupTheLending.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="newChooseAccountingCategoryId.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 37</value>
@@ -473,7 +494,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseAccountingCategoryId.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="textEditCommonSummary.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 37</value>
@@ -494,7 +515,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCommonSummary.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="textEditSubjectName.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 12</value>
@@ -515,13 +536,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditSubjectName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>303, 17</value>
   </metadata>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 116</value>
+    <value>12, 140</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>科目编号</value>
@@ -578,7 +599,7 @@
     <value>5</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>626, 268</value>
+    <value>626, 244</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -593,7 +614,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="textEditSubjectId.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 12</value>
@@ -614,7 +635,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditSubjectId.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -685,6 +706,12 @@
   </data>
   <data name="layoutControlItem9.Text" xml:space="preserve">
     <value>是否現金：</value>
+  </data>
+  <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
+    <value>綁定銀行：</value>
+  </data>
+  <data name="layoutControlItem10.Text" xml:space="preserve">
+    <value>綁定銀行：</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -864,6 +891,12 @@
     <value>layoutControlItem9</value>
   </data>
   <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

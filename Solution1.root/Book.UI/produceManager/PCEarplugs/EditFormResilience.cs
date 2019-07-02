@@ -193,10 +193,28 @@ namespace Book.UI.produceManager.PCEarplugs
             switch (this.action)
             {
                 case "view":
-                    this.gridView1.OptionsBehavior.Editable = false;
+                    //this.gridView1.OptionsBehavior.Editable = false;
+                    gridColumn3.OptionsColumn.AllowEdit = false;
+                    gridColumn13.OptionsColumn.AllowEdit = false;
+                    gridColumn14.OptionsColumn.AllowEdit = false;
+                    gridColumn15.OptionsColumn.AllowEdit = false;
+                    gridColumn9.OptionsColumn.AllowEdit = false;
+                    gridColumn4.OptionsColumn.AllowEdit = false;
+                    gridColumn5.OptionsColumn.AllowEdit = false;
+                    gridColumn6.OptionsColumn.AllowEdit = false;
+                    gridColumn10.OptionsColumn.AllowEdit = false;
                     break;
                 default:
-                    this.gridView1.OptionsBehavior.Editable = true;
+                    //this.gridView1.OptionsBehavior.Editable = true;
+                    gridColumn3.OptionsColumn.AllowEdit = true;
+                    gridColumn13.OptionsColumn.AllowEdit = true;
+                    gridColumn14.OptionsColumn.AllowEdit = true;
+                    gridColumn15.OptionsColumn.AllowEdit = true;
+                    gridColumn9.OptionsColumn.AllowEdit = true;
+                    gridColumn4.OptionsColumn.AllowEdit = true;
+                    gridColumn5.OptionsColumn.AllowEdit = true;
+                    gridColumn6.OptionsColumn.AllowEdit = true;
+                    gridColumn10.OptionsColumn.AllowEdit = true;
                     break;
             }
 
@@ -356,6 +374,18 @@ namespace Book.UI.produceManager.PCEarplugs
 
                 this.gridControl1.RefreshDataSource();
             }
+        }
+
+        private void repositoryItemHyperLinkEdit1_Click(object sender, EventArgs e)
+        {
+            ResilienceConditionSet f = new ResilienceConditionSet(this._pCEarplugsResilienceCheck.PCEarplugsResilienceCheckId);
+            f.ShowDialog();
+        }
+
+        private void repositoryItemHyperLinkEdit3_Click(object sender, EventArgs e)
+        {
+            ResilienceConditionSet f = new ResilienceConditionSet(this._pCEarplugsResilienceCheck.PCEarplugsResilienceCheckId);
+            f.ShowDialog();
         }
     }
 }

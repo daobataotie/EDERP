@@ -436,7 +436,7 @@
   <data name="cob_Shoucuorou.Location" type="System.Drawing.Point, System.Drawing">
     <value>368, 38</value>
   </data>
-  <data name="comboBoxEdit2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+  <data name="cob_Shoucuorou.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cob_Shoucuorou.Size" type="System.Drawing.Size, System.Drawing">
@@ -461,7 +461,7 @@
   <data name="cob_Tiekuaiya.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 38</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+  <data name="cob_Tiekuaiya.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cob_Tiekuaiya.Size" type="System.Drawing.Size, System.Drawing">
@@ -728,8 +728,11 @@
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="repositoryItemSpinEdit2.AutoHeight" type="System.Boolean, mscorlib">
+  <data name="repositoryItemHyperLinkEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="repositoryItemHyperLinkEdit1.NullText" xml:space="preserve">
+    <value>測試詳細</value>
   </data>
   <data name="gcTiekuaiya.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -738,13 +741,16 @@
     <value>11</value>
   </data>
   <data name="gcTiekuaiya.Width" type="System.Int32, mscorlib">
-    <value>100</value>
+    <value>150</value>
   </data>
   <data name="gcShoucuorou.Caption" xml:space="preserve">
     <value>手搓揉</value>
   </data>
-  <data name="repositoryItemSpinEdit3.AutoHeight" type="System.Boolean, mscorlib">
+  <data name="repositoryItemHyperLinkEdit3.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="repositoryItemHyperLinkEdit3.NullText" xml:space="preserve">
+    <value>測試詳細</value>
   </data>
   <data name="gcShoucuorou.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -753,7 +759,7 @@
     <value>12</value>
   </data>
   <data name="gcShoucuorou.Width" type="System.Int32, mscorlib">
-    <value>100</value>
+    <value>120</value>
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>判定</value>
@@ -781,33 +787,6 @@
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
     <value>50</value>
-  </data>
-  <data name="repositoryItemComboBox2.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemComboBox2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="repositoryItemComboBox2.Items" xml:space="preserve">
-    <value>是</value>
-  </data>
-  <data name="repositoryItemComboBox2.Items1" xml:space="preserve">
-    <value>否</value>
-  </data>
-  <data name="repositoryItemLookUpEdit5.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="repositoryItemLookUpEdit5.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="repositoryItemLookUpEdit5.Columns" xml:space="preserve">
-    <value>EmployeeName</value>
-  </data>
-  <data name="repositoryItemLookUpEdit5.Columns1" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="repositoryItemLookUpEdit5.NullText" xml:space="preserve">
-    <value />
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>816, 357</value>
@@ -1233,11 +1212,23 @@
   <data name="&gt;&gt;gcTiekuaiya.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;repositoryItemSpinEdit2.Name" xml:space="preserve">
-    <value>repositoryItemSpinEdit2</value>
+  <data name="&gt;&gt;repositoryItemHyperLinkEdit1.Name" xml:space="preserve">
+    <value>repositoryItemHyperLinkEdit1</value>
   </data>
-  <data name="&gt;&gt;repositoryItemSpinEdit2.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;repositoryItemHyperLinkEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gcShoucuorou.Name" xml:space="preserve">
+    <value>gcShoucuorou</value>
+  </data>
+  <data name="&gt;&gt;gcShoucuorou.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHyperLinkEdit3.Name" xml:space="preserve">
+    <value>repositoryItemHyperLinkEdit3</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHyperLinkEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn10.Name" xml:space="preserve">
     <value>gridColumn10</value>
@@ -1250,18 +1241,6 @@
   </data>
   <data name="&gt;&gt;repositoryItemComboBox1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemComboBox2.Name" xml:space="preserve">
-    <value>repositoryItemComboBox2</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemComboBox2.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemLookUpEdit5.Name" xml:space="preserve">
-    <value>repositoryItemLookUpEdit5</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemLookUpEdit5.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridView2.Name" xml:space="preserve">
     <value>gridView2</value>
@@ -1335,6 +1314,18 @@
   <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;barButtonItem1.Name" xml:space="preserve">
     <value>barButtonItem1</value>
   </data>
@@ -1376,30 +1367,6 @@
   </data>
   <data name="&gt;&gt;barButtonItem6.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
-    <value>layoutControlItem8</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
-    <value>layoutControlItem10</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gcShoucuorou.Name" xml:space="preserve">
-    <value>gcShoucuorou</value>
-  </data>
-  <data name="&gt;&gt;gcShoucuorou.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemSpinEdit3.Name" xml:space="preserve">
-    <value>repositoryItemSpinEdit3</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemSpinEdit3.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditFormResilience</value>

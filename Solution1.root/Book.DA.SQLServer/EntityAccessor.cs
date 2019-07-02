@@ -119,13 +119,13 @@ namespace Book.DA.SQLServer
                     {
                         //T _t = default(T);
                         //创建泛型对象的实例
-                         _t = Activator.CreateInstance<T>();
+                        _t = Activator.CreateInstance<T>();
 
                         //下标，通过下标获取数据库字段的名称
 
                         for (int i = 0; i < dataReader.FieldCount; i++)
                         {
-                          
+
                             foreach (var item in _t.GetType().GetProperties())
                             {
                                 string fieldName = item.Name;//属性名
@@ -162,18 +162,18 @@ namespace Book.DA.SQLServer
             return list;
         }
 
-        public DataSet Query(string SQLString, int Times,string tabelName)
+        public DataSet Query(string SQLString, int Times, string tabelName)
         {
-           return SQLDB.DbHelperSQL.Query(SQLString, Times, tabelName);
+            return SQLDB.DbHelperSQL.Query(SQLString, Times, tabelName);
         }
         public DataSet QueryProc(string procName, SqlParameter[] pars, string tabelName)
         {
-            return SQLDB.DbHelperSQL.RunProcedure(procName, pars,tabelName);
+            return SQLDB.DbHelperSQL.RunProcedure(procName, pars, tabelName);
         }
 
-        public object QueryObject(string SQLString)
+        public object QueryObject(string SQLString, int Times)
         {
-            return SQLDB.DbHelperSQL.QueryObject(SQLString);
+            return SQLDB.DbHelperSQL.QueryObject(SQLString, Times);
         }
 
         /// <summary>
@@ -222,8 +222,8 @@ namespace Book.DA.SQLServer
                     }
                     else if (p.PropertyType == typeof(int?))
                     {
-                        if(!string.IsNullOrEmpty(dr[colNames[i++]].ToString()))
-                        p.SetValue(model, int.Parse(dr[colNames[i++]].ToString()), null);
+                        if (!string.IsNullOrEmpty(dr[colNames[i++]].ToString()))
+                            p.SetValue(model, int.Parse(dr[colNames[i++]].ToString()), null);
                     }
                     else if (p.PropertyType == typeof(DateTime?))
                     {
@@ -251,7 +251,7 @@ namespace Book.DA.SQLServer
             }
             return list;
         }
-        private IList<string> GetColumnNames<T>( Hashtable hh)
+        private IList<string> GetColumnNames<T>(Hashtable hh)
         {
             PropertyInfo[] properties = typeof(T).GetProperties();
             IList<string> ilist = new List<string>();

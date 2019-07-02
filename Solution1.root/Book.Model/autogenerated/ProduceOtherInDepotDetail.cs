@@ -235,7 +235,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 数量
+		/// 进货数量
 		/// </summary>
 		public double? ProduceQuantity
 		{
@@ -385,7 +385,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 
+		/// 转生产数量
 		/// </summary>
 		public double? ProduceTransferQuantity
 		{
@@ -400,7 +400,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 
+		/// 入库数量
 		/// </summary>
 		public double? ProduceInDepotQuantity
 		{

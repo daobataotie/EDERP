@@ -1447,6 +1447,13 @@ namespace Book.UI.Invoices.CG
                 {
                     item.InvoiceCGDetailPrice = codetail.InvoiceCODetailPrice;
                     item.InvoiceCGDetailMoney = item.InvoiceCGDetailPrice * Convert.ToDecimal(item.InvoiceCGDetailQuantity);
+                    if (flag == 1)
+                    {
+                        item.InvoiceCGDetailTax = item.InvoiceCGDetailMoney * this.spinEditInvoiceTaxRate.Value / 100;
+                        item.InvoiceCGDetailTax = this.GetDecimal(item.InvoiceCGDetailTax.Value, BL.V.SetDataFormat.CGJEXiao.Value);
+                    }
+                    else
+                        item.InvoiceCGDetailTax = 0;
                     item.InvoiceCGDetailTaxMoney = item.InvoiceCGDetailMoney + item.InvoiceCGDetailTax;
                 }
             }
