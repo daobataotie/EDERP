@@ -315,6 +315,45 @@ namespace Book.UI.produceManager.PCEarplugs
             }
         }
 
+
+        //選擇採購單
+        private void btn_SelectInvoiceCO_Click(object sender, EventArgs e)
+        {
+            Invoices.CG.CGForm form = new Book.UI.Invoices.CG.CGForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                if (form.key != null && form.key.Count > 0)
+                {
+                    //this._PCIC.Details.Clear();
+                    Model.PCEarplugsResilienceCheckDetail detail;
+                    foreach (var item in form.key)
+                    {
+                        detail = new Book.Model.PCEarplugsResilienceCheckDetail();
+                        detail.PCEarplugsResilienceCheckDetailId = Guid.NewGuid().ToString();
+                        detail.Number = (this._pCEarplugsResilienceCheck.Details.Count + 1).ToString();
+
+                        detail.FromId = item.InvoiceId;
+                        detail.Product = item.Product;
+                        detail.ProductId = item.ProductId;
+                        detail.ProductUnit = item.InvoiceProductUnit;
+                        detail.InvoiceXOId = item.Invoice.InvoiceXOId;
+                        detail.InvoiceXOQuantity = item.OrderQuantity;
+
+                        Model.InvoiceXO xo = invoiceXOManager.Get(detail.InvoiceXOId);
+                        if (xo != null)
+                        {
+                            detail.InvoiceXO = xo;
+                        }
+
+                        this._pCEarplugsResilienceCheck.Details.Add(detail);
+                    }
+                }
+            }
+            this.gridControl1.RefreshDataSource();
+            form.Dispose();
+            GC.Collect();
+        }
+
         #region 审核
 
         //protected override string AuditKeyId()
@@ -378,14 +417,20 @@ namespace Book.UI.produceManager.PCEarplugs
 
         private void repositoryItemHyperLinkEdit1_Click(object sender, EventArgs e)
         {
-            ResilienceConditionSet f = new ResilienceConditionSet(this._pCEarplugsResilienceCheck.PCEarplugsResilienceCheckId);
-            f.ShowDialog();
+            if (this.bindingSourceDetail.Current != null)
+            {
+                ResilienceConditionSet f = new ResilienceConditionSet((this.bindingSourceDetail.Current as Model.PCEarplugsResilienceCheckDetail).PCEarplugsResilienceCheckDetailId);
+                f.ShowDialog();
+            }
         }
 
         private void repositoryItemHyperLinkEdit3_Click(object sender, EventArgs e)
         {
-            ResilienceConditionSet f = new ResilienceConditionSet(this._pCEarplugsResilienceCheck.PCEarplugsResilienceCheckId);
-            f.ShowDialog();
+            if (this.bindingSourceDetail.Current != null)
+            {
+                ResilienceConditionSet f = new ResilienceConditionSet((this.bindingSourceDetail.Current as Model.PCEarplugsResilienceCheckDetail).PCEarplugsResilienceCheckDetailId);
+                f.ShowDialog();
+            }
         }
     }
 }

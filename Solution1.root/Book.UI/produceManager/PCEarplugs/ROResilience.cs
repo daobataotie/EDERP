@@ -32,7 +32,14 @@ namespace Book.UI.produceManager.PCEarplugs
             this.TCChicun.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Chicun);
             this.TCJudge.DataBindings.Add("Text", this.DataSource, Model.PCEarplugsResilienceCheckDetail.PRO_Judge);
 
-            this.xrSubreport1.ReportSource = new ROResilienceConditionSet(pCEarplugsResilienceCheck.TiekuaiyaCondition, pCEarplugsResilienceCheck.ShoucuorouCondition, pCEarplugsResilienceCheck.PCEarplugsResilienceCheckId);
+            this.xrSubreport1.ReportSource = new ROResilienceConditionSet(pCEarplugsResilienceCheck.TiekuaiyaCondition, pCEarplugsResilienceCheck.ShoucuorouCondition);
+        }
+
+        private void xrSubreport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            ROResilienceConditionSet ro = this.xrSubreport1.ReportSource as ROResilienceConditionSet;
+
+            ro.PCEarplugsResilienceCheckDetailId = (this.GetCurrentRow() as Model.PCEarplugsResilienceCheckDetail).PCEarplugsResilienceCheckDetailId;
         }
 
     }

@@ -63,6 +63,7 @@
             this.date_Check = new DevExpress.XtraEditors.DateEdit();
             this.txt_Id = new DevExpress.XtraEditors.TextEdit();
             this.btn_SelectPronoteheader = new DevExpress.XtraEditors.SimpleButton();
+            this.cob_TestCondition = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -75,6 +76,7 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -82,8 +84,8 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.cob_TestCondition = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btn_SelectInvoiceCO = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -107,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Id.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_TestCondition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -118,9 +121,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cob_TestCondition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -148,6 +151,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btn_SelectInvoiceCO);
             this.layoutControl1.Controls.Add(this.txt_Note);
             this.layoutControl1.Controls.Add(this.btn_Remove);
             this.layoutControl1.Controls.Add(this.btn_Add);
@@ -417,6 +421,16 @@
             this.btn_SelectPronoteheader.StyleController = this.layoutControl1;
             this.btn_SelectPronoteheader.Click += new System.EventHandler(this.btn_PronoteHeader_Click);
             // 
+            // cob_TestCondition
+            // 
+            resources.ApplyResources(this.cob_TestCondition, "cob_TestCondition");
+            this.cob_TestCondition.MenuManager = this.barManager1;
+            this.cob_TestCondition.Name = "cob_TestCondition";
+            this.cob_TestCondition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_TestCondition.Properties.Buttons"))))});
+            this.cob_TestCondition.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cob_TestCondition.StyleController = this.layoutControl1;
+            // 
             // labelControl1
             // 
             resources.ApplyResources(this.labelControl1, "labelControl1");
@@ -439,7 +453,8 @@
             this.emptySpaceItem2,
             this.layoutControlItem6,
             this.layoutControlItem9,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem10});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(840, 476);
@@ -470,7 +485,7 @@
             resources.ApplyResources(this.layoutControlItem23, "layoutControlItem23");
             this.layoutControlItem23.Location = new System.Drawing.Point(644, 0);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(176, 26);
+            this.layoutControlItem23.Size = new System.Drawing.Size(89, 26);
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem23.TextToControlDistance = 0;
             this.layoutControlItem23.TextVisible = false;
@@ -545,6 +560,15 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(599, 25);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 14);
             // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.cob_TestCondition;
+            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(221, 25);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 14);
+            // 
             // barButtonItem1
             // 
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
@@ -590,24 +614,23 @@
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSearch_ItemClick);
             // 
-            // cob_TestCondition
+            // btn_SelectInvoiceCO
             // 
-            resources.ApplyResources(this.cob_TestCondition, "cob_TestCondition");
-            this.cob_TestCondition.MenuManager = this.barManager1;
-            this.cob_TestCondition.Name = "cob_TestCondition";
-            this.cob_TestCondition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit1.Properties.Buttons"))))});
-            this.cob_TestCondition.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cob_TestCondition.StyleController = this.layoutControl1;
+            resources.ApplyResources(this.btn_SelectInvoiceCO, "btn_SelectInvoiceCO");
+            this.btn_SelectInvoiceCO.Name = "btn_SelectInvoiceCO";
+            this.btn_SelectInvoiceCO.StyleController = this.layoutControl1;
+            this.btn_SelectInvoiceCO.Click += new System.EventHandler(this.btn_SelectInvoiceCO_Click);
             // 
-            // layoutControlItem8
+            // layoutControlItem10
             // 
-            this.layoutControlItem8.Control = this.cob_TestCondition;
-            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 26);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(221, 25);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(60, 14);
+            this.layoutControlItem10.Control = this.btn_SelectInvoiceCO;
+            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
+            this.layoutControlItem10.Location = new System.Drawing.Point(733, 0);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(87, 26);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextToControlDistance = 0;
+            this.layoutControlItem10.TextVisible = false;
             // 
             // EditFormDecibel
             // 
@@ -639,6 +662,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Id.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_TestCondition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -650,9 +674,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cob_TestCondition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -713,5 +737,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit3;
         private DevExpress.XtraEditors.ComboBoxEdit cob_TestCondition;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraEditors.SimpleButton btn_SelectInvoiceCO;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }

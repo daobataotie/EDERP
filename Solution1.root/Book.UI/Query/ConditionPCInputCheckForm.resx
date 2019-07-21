@@ -118,36 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="che_IsClosed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 87</value>
+  <data name="txt_Id.Location" type="System.Drawing.Point, System.Drawing">
+    <value>324, 87</value>
   </data>
-  <data name="checkEdit1.Properties.Caption" xml:space="preserve">
-    <value>只查詢未結案</value>
-  </data>
-  <data name="che_IsClosed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 19</value>
+  <data name="txt_Id.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="che_IsClosed.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="txt_Id.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;che_IsClosed.Name" xml:space="preserve">
-    <value>che_IsClosed</value>
+  <data name="&gt;&gt;txt_Id.Name" xml:space="preserve">
+    <value>txt_Id</value>
   </data>
-  <data name="&gt;&gt;che_IsClosed.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;txt_Id.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;che_IsClosed.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txt_Id.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="&gt;&gt;che_IsClosed.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txt_Id.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="btn_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 147</value>
+    <value>243, 147</value>
   </data>
   <data name="btn_Cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 22</value>
+    <value>229, 22</value>
   </data>
   <data name="btn_Cancel.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -171,7 +168,7 @@
     <value>12, 147</value>
   </data>
   <data name="btn_OK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="btn_OK.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -192,10 +189,10 @@
     <value>6</value>
   </data>
   <data name="txt_LotNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 111</value>
+    <value>92, 112</value>
   </data>
   <data name="txt_LotNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 21</value>
+    <value>148, 21</value>
   </data>
   <data name="txt_LotNumber.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -216,7 +213,7 @@
     <value>92, 87</value>
   </data>
   <data name="nccSupplier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 21</value>
+    <value>148, 21</value>
   </data>
   <data name="nccSupplier.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -276,14 +273,14 @@
     <value>10</value>
   </data>
   <data name="date_End.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 12</value>
+    <value>323, 12</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="date_End.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="date_End.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 21</value>
+    <value>149, 21</value>
   </data>
   <data name="date_End.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -307,7 +304,7 @@
     <value>Combo</value>
   </data>
   <data name="date_Start.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 21</value>
+    <value>147, 21</value>
   </data>
   <data name="date_Start.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -323,6 +320,30 @@
   </data>
   <data name="&gt;&gt;date_Start.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="che_IsClosed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>244, 112</value>
+  </data>
+  <data name="che_IsClosed.Properties.Caption" xml:space="preserve">
+    <value>只查詢未結案</value>
+  </data>
+  <data name="che_IsClosed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 19</value>
+  </data>
+  <data name="che_IsClosed.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;che_IsClosed.Name" xml:space="preserve">
+    <value>che_IsClosed</value>
+  </data>
+  <data name="&gt;&gt;che_IsClosed.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;che_IsClosed.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;che_IsClosed.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -387,6 +408,12 @@
   </data>
   <data name="emptySpaceItem1.Text" xml:space="preserve">
     <value>emptySpaceItem1</value>
+  </data>
+  <data name="layoutControlItem10.CustomizationFormText" xml:space="preserve">
+    <value>单据编号：</value>
+  </data>
+  <data name="layoutControlItem10.Text" xml:space="preserve">
+    <value>单据编号：</value>
   </data>
   <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem9</value>
@@ -489,6 +516,12 @@
   </data>
   <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
     <value>layoutControlItem9</value>

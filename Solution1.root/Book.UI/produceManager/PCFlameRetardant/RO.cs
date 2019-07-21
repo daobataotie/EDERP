@@ -15,7 +15,7 @@ namespace Book.UI.produceManager.PCFlameRetardant
             this.DataSource = pCFlameRetardant.Details;
 
             this.lbl_CompanyName.Text = BL.Settings.CompanyChineseName;
-            this.lbl_ReportName.Text = "阻燃性测试表";
+            this.lbl_ReportName.Text = "阻燃性測試表";
             this.lbl_ReportDate.Text += DateTime.Now.ToString("yyyy-MM-dd");
 
             this.lbl_ID.Text = pCFlameRetardant.PCFlameRetardantId;
@@ -23,6 +23,8 @@ namespace Book.UI.produceManager.PCFlameRetardant
             this.lbl_Employee.Text = pCFlameRetardant.Employee.ToString();
             this.lbl_Note.Text = pCFlameRetardant.Note;
 
+            this.TC_NO.DataBindings.Add("Text", this.DataSource, Model.PCFlameRetardantDetail.PRO_Number);
+            this.TC_FromId.DataBindings.Add("Text", this.DataSource, Model.PCFlameRetardantDetail.PRO_FromId);
             this.TC_Product.DataBindings.Add("Text", this.DataSource, "Product.ProductName");
             this.TCPihao.DataBindings.Add("Text", this.DataSource, Model.PCFlameRetardantDetail.PRO_Pihao);
             this.TCYanse.DataBindings.Add("Text", this.DataSource, Model.PCFlameRetardantDetail.PRO_Yanse);

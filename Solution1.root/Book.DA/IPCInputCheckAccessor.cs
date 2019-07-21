@@ -16,7 +16,7 @@ namespace Book.DA
     /// </summary>
     public partial interface IPCInputCheckAccessor : IAccessor
     {
-        IList<Model.PCInputCheck> SelectByCondition(DateTime startdate, DateTime enddate, string productid, string testProductid, string supplierid, string lotnumber, bool IsClosed);
+        IList<Model.PCInputCheck> SelectByCondition(DateTime startdate, DateTime enddate, string productid, string testProductid, string supplierid, string lotnumber, bool IsClosed, string pCInputCheckId);
         IList<Model.PCInputCheck> SelectByInvoiceCusId(string invoiceCusId);
         bool ExistsLotNumberInsert(string lotNumber, string ProductId);
         bool ExistsLotNumberUpdate(string lotNumber, string PCInputCheckId, string ProductId);

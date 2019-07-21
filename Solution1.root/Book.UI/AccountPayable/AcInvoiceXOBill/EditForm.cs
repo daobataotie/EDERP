@@ -291,6 +291,7 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             this._acInvoiceXoBill.SalesType = "0";
             this._acInvoiceXoBill.Details = new List<Model.AcInvoiceXOBillDetail>();
 
+
             //生成發票編號
             GenerateBillId();
         }
@@ -298,16 +299,16 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
         /// <summary>
         /// 生成發票編號
         /// </summary>
-        private void GenerateBillId()
+        public void GenerateBillId()
         {
             Model.BillIdSet billIdSet = this.BillIdSetManager.SelectEnable();
             if (billIdSet != null)
             {
                 if (DateTime.Now.Date > billIdSet.EndDate.Value.Date || DateTime.Now.Date < billIdSet.StartDate.Value.Date)
                 {
-                    //throw new Helper.MessageValueException("當前日期已超出編號使用日期！");
-                    MessageBox.Show("當前日期已超出發票編號使用日期！", this.Text, MessageBoxButtons.OK);
-                    return;
+                    throw new Helper.MessageValueException("當前日期已超出發票編號使用日期！");
+                    //MessageBox.Show("當前日期已超出發票編號使用日期！", this.Text, MessageBoxButtons.OK);
+                    //return;
                 }
                 //this._acInvoiceXoBill.Id = this.BillIdDeletedManager.SelectBillIdByBillIdSetId(billIdSet.BillIdSetId);
                 //this.billIdIsDeleted = 1;        //发票编号不能回收
@@ -317,18 +318,18 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
                 int id = Convert.ToInt32(billIdSet.StartBillId) + (billIdSet.IdNumber.HasValue ? billIdSet.IdNumber.Value : 0);
                 if (id > Convert.ToInt32(billIdSet.EndBillId))
                 {
-                    //throw new Helper.MessageValueException("發票編號已超出編號使用範圍！");
-                    MessageBox.Show("發票編號已超出編號使用範圍！", this.Text, MessageBoxButtons.OK);
-                    return;
+                    throw new Helper.MessageValueException("發票編號已超出編號使用範圍！");
+                    //MessageBox.Show("發票編號已超出編號使用範圍！", this.Text, MessageBoxButtons.OK);
+                    //return;
                 }
                 this._acInvoiceXoBill.Id = billIdSet.EnglishId + id.ToString("00000000"); //发票采用八位编码，如1显示为00000001
                 //}
             }
             else
             {
-                //throw new Helper.MessageValueException("請先設置發票編碼！");
-                MessageBox.Show("請先設置發票編碼！", this.Text, MessageBoxButtons.OK);
-                return;
+                throw new Helper.MessageValueException("請先設置發票編碼！");
+                //MessageBox.Show("請先設置發票編碼！", this.Text, MessageBoxButtons.OK);
+                //return;
             }
         }
 

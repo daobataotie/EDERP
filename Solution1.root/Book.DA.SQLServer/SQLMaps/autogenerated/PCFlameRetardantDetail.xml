@@ -21,6 +21,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Judge" column="Judge" />
       <result property="Note" column="Note" />
       <result property="InvoiceXOId" column="InvoiceXOId" />
+      <result property="InvoiceCOId" column="InvoiceCOId"/>
+      <result property="PronoteHeaderId" column="PronoteHeaderId"/>
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_by_primary_key" />
       <result property="PCFlameRetardant" column="PCFlameRetardantId" lazyLoad="false" select="PCFlameRetardant.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
@@ -67,7 +69,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[TestQty],
 				[Judge],
 				[Note],
-				[InvoiceXOId]
+				[InvoiceXOId],
+        [InvoiceCOId],
+        [PronoteHeaderId]
 			FROM
 				[dbo].[PCFlameRetardantDetail]
 			WHERE
@@ -135,7 +139,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[TestQty],
 				[Judge],
 				[Note],
-				[InvoiceXOId]
+				[InvoiceXOId],
+        [InvoiceCOId],
+        [PronoteHeaderId]
 			) 
 			VALUES 
 			(
@@ -153,7 +159,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#TestQty#,
 				#Judge#,
 				#Note#,
-				#InvoiceXOId#
+				#InvoiceXOId#,        
+        #InvoiceCOId#,
+        #PronoteHeaderId#
 			)
              ]]>
     </insert>
@@ -174,7 +182,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[TestQty] = #TestQty#,
 				[Judge] = #Judge#,
 				[Note] = #Note#,
-				[InvoiceXOId] = #InvoiceXOId#
+				[InvoiceXOId] = #InvoiceXOId#,
+        [InvoiceCOId]=#InvoiceCOId#,
+        [PronoteHeaderId]=#PronoteHeaderId#
 			WHERE
 				[PCFlameRetardantDetailId] = #PCFlameRetardantDetailId#
                     ]]>

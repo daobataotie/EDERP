@@ -4482,6 +4482,9 @@
     <EmbeddedResource Include="produceManager\PCFlameRetardant\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCFlameRetardant\RO.zh-CHT.resx">
+      <DependentUpon>RO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ChooseCustomsForm2.resx">
       <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
     </EmbeddedResource>

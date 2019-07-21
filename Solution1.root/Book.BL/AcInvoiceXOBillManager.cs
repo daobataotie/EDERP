@@ -50,11 +50,11 @@ namespace Book.BL
                 //Model.BillIdDeleted billIdDeleted = new Book.Model.BillIdDeleted();
                 //billIdDeleted.BillId = acInvoiceXOBill.Id;
                 //billIdDeleted.DeleteTime = DateTime.Now;
-                Model.BillIdSet billIdSet = new BL.BillIdSetManager().SelectEnable();
                 //billIdDeleted.BillIdSetId = billIdSet.BillIdSetId;
                 //BillIdDeletedManager.Insert(billIdDeleted);
 
 
+                Model.BillIdSet billIdSet = new BL.BillIdSetManager().SelectEnable();
                 billIdSet.IdNumber = Convert.ToInt32(billIdSet.IdNumber) - 1;
                 new BL.BillIdSetManager().UpdateIdnumber(billIdSet);
 
@@ -99,14 +99,12 @@ namespace Book.BL
                 ////发票编码,如果是新增的则编码数加1，如果从回收站拉取的，则删除回收站该笔编号
                 //if (i == 0)
                 //{
-                Model.BillIdSet billIdSet = new BL.BillIdSetManager().SelectEnable();
-                billIdSet.IdNumber = Convert.ToInt32(billIdSet.IdNumber) + 1;
-                new BL.BillIdSetManager().UpdateIdnumber(billIdSet);
                 //}
                 //else
                 //{
                 //    BillIdDeletedManager.Delete(acInvoiceXOBill.Id);
                 //}
+                AddIdNumber();
 
                 BL.V.CommitTransaction();
             }
@@ -158,6 +156,32 @@ namespace Book.BL
                 TiGuiExists(model);
                 //throw new Helper.InvalidValueException(Model.Product.PRO_Id);               
             }
+            if (this.IsExistsId(model.Id))   //发票编号重复
+            {
+                model.Id = GetIdNumber();
+
+                while (this.IsExistsId(model.Id))
+                {
+                    AddIdNumber();
+                    model.Id = GetIdNumber();
+                }
+            }
+
+        }
+
+        private string GetIdNumber()
+        {
+            Model.BillIdSet billIdSet = new BL.BillIdSetManager().SelectEnable();
+            int id = Convert.ToInt32(billIdSet.StartBillId) + (billIdSet.IdNumber.HasValue ? billIdSet.IdNumber.Value : 0);
+            string strId = billIdSet.EnglishId + id.ToString("00000000");
+            return strId;
+        }
+
+        private void AddIdNumber()
+        {
+            Model.BillIdSet billIdSet = new BL.BillIdSetManager().SelectEnable();
+            billIdSet.IdNumber = Convert.ToInt32(billIdSet.IdNumber) + 1;
+            new BL.BillIdSetManager().UpdateIdnumber(billIdSet);
         }
 
         private void Validate(Model.AcInvoiceXOBill AcInvoiceXOBill)
@@ -226,6 +250,11 @@ namespace Book.BL
         public DateTime SelectLastDate(DateTime date)
         {
             return accessor.SelectLastDate(date);
+        }
+
+        public bool IsExistsId(string id)
+        {
+            return accessor.IsExistsId(id);
         }
     }
 }

@@ -184,9 +184,9 @@ namespace Book.BL
             }
         }
 
-        public IList<Model.PCInputCheck> SelectByCondition(DateTime startdate, DateTime enddate, string productid, string testProductid, string supplierid, string lotnumber, bool IsClosed)
+        public IList<Model.PCInputCheck> SelectByCondition(DateTime startdate, DateTime enddate, string productid, string testProductid, string supplierid, string lotnumber, bool IsClosed, string pCInputCheckId)
         {
-            return accessor.SelectByCondition(startdate, enddate, productid, testProductid, supplierid, lotnumber, IsClosed);
+            return accessor.SelectByCondition(startdate, enddate, productid, testProductid, supplierid, lotnumber, IsClosed, pCInputCheckId);
         }
 
         public IList<Model.PCInputCheck> SelectByInvoiceCusId(string invoiceCusId)

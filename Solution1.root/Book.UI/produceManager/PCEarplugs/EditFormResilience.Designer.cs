@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditFormResilience));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btn_SelectInvoiceCO = new DevExpress.XtraEditors.SimpleButton();
             this.cob_Shoucuorou = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cob_Tiekuaiya = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txt_Note = new DevExpress.XtraEditors.MemoEdit();
@@ -81,6 +82,7 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -124,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +155,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btn_SelectInvoiceCO);
             this.layoutControl1.Controls.Add(this.cob_Shoucuorou);
             this.layoutControl1.Controls.Add(this.cob_Tiekuaiya);
             this.layoutControl1.Controls.Add(this.txt_Note);
@@ -167,6 +171,13 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(126, 316, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // btn_SelectInvoiceCO
+            // 
+            resources.ApplyResources(this.btn_SelectInvoiceCO, "btn_SelectInvoiceCO");
+            this.btn_SelectInvoiceCO.Name = "btn_SelectInvoiceCO";
+            this.btn_SelectInvoiceCO.StyleController = this.layoutControl1;
+            this.btn_SelectInvoiceCO.Click += new System.EventHandler(this.btn_SelectInvoiceCO_Click);
             // 
             // cob_Shoucuorou
             // 
@@ -307,6 +318,7 @@
             resources.ApplyResources(this.gridColumn15, "gridColumn15");
             this.gridColumn15.FieldName = "InvoiceXO.xocustomer.CheckedStandard";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn9
             // 
@@ -467,7 +479,8 @@
             this.layoutControlItem6,
             this.layoutControlItem9,
             this.layoutControlItem8,
-            this.layoutControlItem10});
+            this.layoutControlItem10,
+            this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(840, 476);
@@ -498,7 +511,7 @@
             resources.ApplyResources(this.layoutControlItem23, "layoutControlItem23");
             this.layoutControlItem23.Location = new System.Drawing.Point(644, 0);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(176, 26);
+            this.layoutControlItem23.Size = new System.Drawing.Size(89, 26);
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem23.TextToControlDistance = 0;
             this.layoutControlItem23.TextVisible = false;
@@ -591,6 +604,17 @@
             this.layoutControlItem10.Size = new System.Drawing.Size(263, 25);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(72, 14);
             // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.btn_SelectInvoiceCO;
+            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
+            this.layoutControlItem11.Location = new System.Drawing.Point(733, 0);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(87, 26);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextToControlDistance = 0;
+            this.layoutControlItem11.TextVisible = false;
+            // 
             // barButtonItem1
             // 
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
@@ -679,6 +703,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
@@ -744,5 +769,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcShoucuorou;
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit3;
+        private DevExpress.XtraEditors.SimpleButton btn_SelectInvoiceCO;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

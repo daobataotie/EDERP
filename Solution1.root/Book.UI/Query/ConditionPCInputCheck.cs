@@ -7,6 +7,8 @@ namespace Book.UI.Query
 {
     public class ConditionPCInputCheck
     {
+        public string PCInputCheckId { get; set; }
+
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }

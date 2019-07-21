@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConditionPCInputCheckForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txt_Id = new DevExpress.XtraEditors.TextEdit();
             this.btn_Cancel = new DevExpress.XtraEditors.SimpleButton();
             this.btn_OK = new DevExpress.XtraEditors.SimpleButton();
             this.txt_LotNumber = new DevExpress.XtraEditors.TextEdit();
@@ -38,6 +39,7 @@
             this.btn_Product = new DevExpress.XtraEditors.ButtonEdit();
             this.date_End = new DevExpress.XtraEditors.DateEdit();
             this.date_Start = new DevExpress.XtraEditors.DateEdit();
+            this.che_IsClosed = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -48,10 +50,11 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.che_IsClosed = new DevExpress.XtraEditors.CheckEdit();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Id.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_LotNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_TestProduct.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Product.Properties)).BeginInit();
@@ -59,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.date_End.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Start.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Start.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.che_IsClosed.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -69,13 +73,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.che_IsClosed.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.che_IsClosed);
+            this.layoutControl1.Controls.Add(this.txt_Id);
             this.layoutControl1.Controls.Add(this.btn_Cancel);
             this.layoutControl1.Controls.Add(this.btn_OK);
             this.layoutControl1.Controls.Add(this.txt_LotNumber);
@@ -84,9 +88,16 @@
             this.layoutControl1.Controls.Add(this.btn_Product);
             this.layoutControl1.Controls.Add(this.date_End);
             this.layoutControl1.Controls.Add(this.date_Start);
+            this.layoutControl1.Controls.Add(this.che_IsClosed);
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // txt_Id
+            // 
+            resources.ApplyResources(this.txt_Id, "txt_Id");
+            this.txt_Id.Name = "txt_Id";
+            this.txt_Id.StyleController = this.layoutControl1;
             // 
             // btn_Cancel
             // 
@@ -156,6 +167,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.date_Start.StyleController = this.layoutControl1;
             // 
+            // che_IsClosed
+            // 
+            resources.ApplyResources(this.che_IsClosed, "che_IsClosed");
+            this.che_IsClosed.Name = "che_IsClosed";
+            this.che_IsClosed.Properties.Caption = resources.GetString("che_IsClosed.Properties.Caption");
+            this.che_IsClosed.StyleController = this.layoutControl1;
+            // 
             // layoutControlGroup1
             // 
             resources.ApplyResources(this.layoutControlGroup1, "layoutControlGroup1");
@@ -171,6 +189,7 @@
             this.layoutControlItem7,
             this.layoutControlItem8,
             this.emptySpaceItem1,
+            this.layoutControlItem10,
             this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
@@ -184,16 +203,16 @@
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(232, 25);
+            this.layoutControlItem1.Size = new System.Drawing.Size(231, 25);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.date_End;
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
-            this.layoutControlItem2.Location = new System.Drawing.Point(232, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(231, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(232, 25);
+            this.layoutControlItem2.Size = new System.Drawing.Size(233, 25);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem3
@@ -220,16 +239,16 @@
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(316, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(232, 25);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txt_LotNumber;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 99);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 100);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(464, 25);
+            this.layoutControlItem6.Size = new System.Drawing.Size(232, 25);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem7
@@ -238,7 +257,7 @@
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 135);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(232, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(231, 26);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
             this.layoutControlItem7.TextVisible = false;
@@ -247,9 +266,9 @@
             // 
             this.layoutControlItem8.Control = this.btn_Cancel;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(232, 135);
+            this.layoutControlItem8.Location = new System.Drawing.Point(231, 135);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(232, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(233, 26);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
             this.layoutControlItem8.TextVisible = false;
@@ -257,25 +276,27 @@
             // emptySpaceItem1
             // 
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 124);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 125);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(464, 11);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(464, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // che_IsClosed
+            // layoutControlItem10
             // 
-            resources.ApplyResources(this.che_IsClosed, "che_IsClosed");
-            this.che_IsClosed.Name = "che_IsClosed";
-            this.che_IsClosed.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
-            this.che_IsClosed.StyleController = this.layoutControl1;
+            this.layoutControlItem10.Control = this.txt_Id;
+            resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
+            this.layoutControlItem10.Location = new System.Drawing.Point(232, 75);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(232, 25);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.che_IsClosed;
             resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
-            this.layoutControlItem9.Location = new System.Drawing.Point(316, 75);
+            this.layoutControlItem9.Location = new System.Drawing.Point(232, 100);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(148, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(232, 25);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextToControlDistance = 0;
             this.layoutControlItem9.TextVisible = false;
@@ -290,6 +311,7 @@
             this.Name = "ConditionPCInputCheckForm";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Id.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_LotNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_TestProduct.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Product.Properties)).EndInit();
@@ -297,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.date_End.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Start.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Start.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.che_IsClosed.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -307,7 +330,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.che_IsClosed.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
@@ -336,5 +359,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.CheckEdit che_IsClosed;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraEditors.TextEdit txt_Id;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }

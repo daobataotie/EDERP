@@ -34,6 +34,7 @@ namespace Book.UI.Query
             condition.SupplierId = (this.nccSupplier.EditValue as Model.Supplier) == null ? null : (this.nccSupplier.EditValue as Model.Supplier).SupplierId;
             condition.LotNumber = this.txt_LotNumber.Text;
             condition.IsClosed = this.che_IsClosed.Checked;
+            condition.PCInputCheckId = this.txt_Id.Text;
 
             this.DialogResult = DialogResult.OK;
         }

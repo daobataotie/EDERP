@@ -31,5 +31,11 @@
       select top 1 AcInvoiceXOBillDate from AcInvoiceXOBill where InsertTime<#value# order by InsertTime desc
       ]]>
     </select>
+
+    <select id="IsExistsId" parameterClass="string" resultClass="bool">
+     <![CDATA[
+      select case when exists(select * from AcInvoiceXOBill where Id=#value#) then 1 else 0 end
+     ]]>
+    </select>
   </statements>
 </sqlMap>

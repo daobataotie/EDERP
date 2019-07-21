@@ -274,6 +274,7 @@ namespace Book.UI.produceManager.PCFlameRetardant
                         detail.ProductId = item.ProductId;
                         detail.EmployeeId = BL.V.ActiveOperator.EmployeeId;
                         detail.InvoiceXOId = item.InvoiceXOId;
+                        detail.PronoteHeaderId = item.PronoteHeaderID;
 
                         if (string.IsNullOrEmpty(this.Pihao))
                         {
@@ -312,6 +313,7 @@ namespace Book.UI.produceManager.PCFlameRetardant
                     detail.ProductId = item.ProductId;
                     detail.EmployeeId = BL.V.ActiveOperator.EmployeeId;
                     detail.InvoiceXOId = item.Invoice.InvoiceXOId;
+                    detail.InvoiceCOId = item.InvoiceId;
 
                     if (string.IsNullOrEmpty(this.Pihao))
                     {

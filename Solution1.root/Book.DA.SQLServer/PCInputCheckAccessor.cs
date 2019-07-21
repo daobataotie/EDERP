@@ -19,7 +19,7 @@ namespace Book.DA.SQLServer
     /// </summary>
     public partial class PCInputCheckAccessor : EntityAccessor, IPCInputCheckAccessor
     {
-        public IList<Model.PCInputCheck> SelectByCondition(DateTime startdate, DateTime enddate, string productid, string testProductid, string supplierid, string lotnumber, bool IsClosed)
+        public IList<Model.PCInputCheck> SelectByCondition(DateTime startdate, DateTime enddate, string productid, string testProductid, string supplierid, string lotnumber, bool IsClosed, string pCInputCheckId)
         {
             Hashtable ht = new Hashtable();
             ht.Add("startdate", startdate);
@@ -36,6 +36,8 @@ namespace Book.DA.SQLServer
                 sql.Append(" and LotNumber='" + lotnumber + "'");
             if (IsClosed)
                 sql.Append(" and (IsClosed=0 or IsClosed is null)");
+            if (!string.IsNullOrEmpty(pCInputCheckId))
+                sql.Append(" and PCInputCheckId='" + pCInputCheckId + "'");
             ht.Add("sql", sql);
             return sqlmapper.QueryForList<Model.PCInputCheck>("PCInputCheck.SelectByCondition", ht);
         }

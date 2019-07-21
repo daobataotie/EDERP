@@ -278,6 +278,44 @@ namespace Book.UI.produceManager.PCEarplugs
             }
         }
 
+        //選取採購單
+        private void btn_SelectInvoiceCO_Click(object sender, EventArgs e)
+        {
+            Invoices.CG.CGForm form = new Book.UI.Invoices.CG.CGForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                if (form.key != null && form.key.Count > 0)
+                {
+                    Model.PCEarplugsDecibelCheckDetail detail;
+                    foreach (var item in form.key)
+                    {
+                        detail = new Book.Model.PCEarplugsDecibelCheckDetail();
+                        detail.PCEarplugsDecibelCheckDetailId = Guid.NewGuid().ToString();
+                        detail.Number = (this._pCEarplugsDecibelCheck.Details.Count + 1).ToString();
+                        detail.FromId = item.InvoiceId;
+                        detail.Product = item.Product;
+                        detail.ProductId = item.ProductId;
+                        detail.ProductUnit = item.InvoiceProductUnit;
+                        detail.InvoiceXOId = item.Invoice.InvoiceXOId;
+                        detail.InvoiceXOQuantity = item.OrderQuantity;
+
+                        Model.InvoiceXO xo = invoiceXOManager.Get(detail.InvoiceXOId);
+                        if (xo != null)
+                        {
+                            detail.InvoiceXO = xo;
+                        }
+
+
+                        this._pCEarplugsDecibelCheck.Details.Add(detail);
+                    }
+
+                    this.gridControl1.RefreshDataSource();
+                    form.Dispose();
+                    GC.Collect();
+                }
+            }
+        }
+
         #region 审核
 
         protected override string AuditKeyId()

@@ -21,7 +21,8 @@ namespace Book.DA
         DataSet SelectCuiShou(Model.Customer customer1, Model.Customer customer2, Model.Employee employee1, Model.Employee employee2, DateTime ysdate);
         DataSet SelectMayShou(Model.Customer customer1, Model.Customer customer2, Model.Employee employee1, Model.Employee employee2, DateTime startDate, DateTime endDate);
         DateTime SelectLastDate(DateTime date);
-     
+
+        bool IsExistsId(string id);
     }
 }
 

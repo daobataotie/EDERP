@@ -170,9 +170,17 @@ namespace Book.UI.Settings.BasicData
                     this.Refresh();
                     break;
                 case "new":
-                    this.AddNew();
-                    this.action = "insert";
-                    this.Refresh();
+                    try
+                    {
+                        this.AddNew();
+                        this.action = "insert";
+                        this.Refresh();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                     break;
                 case "update":
                     if (MessageBox.Show("確定要修改？", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)

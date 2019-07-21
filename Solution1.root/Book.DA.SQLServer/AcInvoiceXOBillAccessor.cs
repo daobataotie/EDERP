@@ -67,5 +67,10 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<DateTime>("AcInvoiceXOBill.SelectLastDate", date);
         }
+
+        public bool IsExistsId(string id)
+        {
+            return sqlmapper.QueryForObject<bool>("AcInvoiceXOBill.IsExistsId", id);
+        }
     }
 }

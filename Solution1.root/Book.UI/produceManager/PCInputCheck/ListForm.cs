@@ -46,7 +46,7 @@ namespace Book.UI.produceManager.PCInputCheck
                 tag = 0;
                 return;
             }
-            this.bindingSource1.DataSource = this.pCInputCheckManager.SelectByCondition(DateTime.Now.AddMonths(-1), DateTime.Now, null, null, null, null, false);
+            this.bindingSource1.DataSource = this.pCInputCheckManager.SelectByCondition(DateTime.Now.AddMonths(-1), DateTime.Now, null, null, null, null, false, null);
             this.gridView1.GroupPanelText = "默認顯示一个月内的記錄";
         }
 
@@ -67,7 +67,7 @@ namespace Book.UI.produceManager.PCInputCheck
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 Query.ConditionPCInputCheck model = f.condition;
-                this.bindingSource1.DataSource = this.pCInputCheckManager.SelectByCondition(model.StartDate, model.EndDate, model.ProductId, model.TestProductId, model.SupplierId, model.LotNumber, model.IsClosed);
+                this.bindingSource1.DataSource = this.pCInputCheckManager.SelectByCondition(model.StartDate, model.EndDate, model.ProductId, model.TestProductId, model.SupplierId, model.LotNumber, model.IsClosed, model.PCInputCheckId);
                 this.gridControl1.RefreshDataSource();
                 this.barStaticItem1.Caption = string.Format("{0}項", this.bindingSource1.Count);
             }

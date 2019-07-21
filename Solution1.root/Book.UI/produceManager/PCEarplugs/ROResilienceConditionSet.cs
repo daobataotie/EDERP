@@ -8,14 +8,20 @@ namespace Book.UI.produceManager.PCEarplugs
 {
     public partial class ROResilienceConditionSet : DevExpress.XtraReports.UI.XtraReport
     {
-        public ROResilienceConditionSet(string tkyName, string scrName, string PCEarplugsResilienceCheckId)
+        public string PCEarplugsResilienceCheckDetailId { get; set; }
+
+        public ROResilienceConditionSet(string tkyName, string scrName)
         {
             InitializeComponent();
 
             this.TC_TKYName.Text = tkyName;
             this.TC_SCRName.Text = scrName;
 
-            Model.PCEarplugsResilienceConditionSet set = new BL.PCEarplugsResilienceConditionSetManager().mGetLast(PCEarplugsResilienceCheckId);
+        }
+
+        private void ROResilienceConditionSet_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            Model.PCEarplugsResilienceConditionSet set = new BL.PCEarplugsResilienceConditionSetManager().mGetLast(PCEarplugsResilienceCheckDetailId);
             if (set != null)
             {
                 this.TC_TKY1.Text = set.TKY1.HasValue ? set.TKY1.Value.ToString("0.#") + " 秒" : "";
@@ -32,6 +38,23 @@ namespace Book.UI.produceManager.PCEarplugs
                 this.TC_SCR4.Text = set.SCR4.HasValue ? set.SCR4.Value.ToString("0.#") + " 秒" : "";
                 this.TC_SCR5.Text = set.SCR5.HasValue ? set.SCR5.Value.ToString("0.#") + " 秒" : "";
                 this.TC_SCR6.Text = set.SCR6.HasValue ? set.SCR6.Value.ToString("0.#") + " 秒" : "";
+            }
+            else
+            {
+                this.TC_TKY1.Text = "";
+                this.TC_TKY2.Text = "";
+                this.TC_TKY3.Text = "";
+                this.TC_TKY4.Text = "";
+                this.TC_TKY5.Text = "";
+                this.TC_TKY6.Text = "";
+
+
+                this.TC_SCR1.Text = "";
+                this.TC_SCR2.Text = "";
+                this.TC_SCR3.Text = "";
+                this.TC_SCR4.Text = "";
+                this.TC_SCR5.Text = "";
+                this.TC_SCR6.Text = "";
             }
         }
     }

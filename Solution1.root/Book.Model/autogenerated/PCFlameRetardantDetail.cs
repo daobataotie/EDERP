@@ -88,6 +88,10 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		private string _invoiceXOId;
+
+        private string _invoiceCOId;
+
+        private string _pronoteHeaderId;
 		
 		/// <summary>
 		/// 员工
@@ -329,7 +333,19 @@ namespace Book.Model
 			{
 				this._invoiceXOId = value;
 			}
-		}
+        }
+
+        public string InvoiceCOId
+        {
+            get { return _invoiceCOId; }
+            set { _invoiceCOId = value; }
+        }
+
+        public string PronoteHeaderId
+        {
+            get { return _pronoteHeaderId; }
+            set { _pronoteHeaderId = value; }
+        }
 	
 		/// <summary>
 		/// 员工
@@ -450,7 +466,10 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		public readonly static string PRO_InvoiceXOId = "InvoiceXOId";
-		
+
+        public readonly static string PRO_InvoiceCOId = "InvoiceCOId";
+
+        public readonly static string PRO_PronoteHeaderId = "PronoteHeaderId";
 
 		#endregion
 	}

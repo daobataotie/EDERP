@@ -8,12 +8,12 @@
 using System;
 namespace Book.Model
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	[Serializable]
-	public partial class PCFlameRetardantDetail
-	{
+    /// <summary>
+    /// 
+    /// </summary>
+    [Serializable]
+    public partial class PCFlameRetardantDetail
+    {
         public string ProductName { get; set; }
 
         public string EmployeeName { get; set; }
@@ -23,5 +23,15 @@ namespace Book.Model
         public DateTime InvoiceDate { get; set; }
 
         public bool IsChecked { get; set; }
-	}
+
+        public string FromId
+        {
+            get
+            {
+                return this.InvoiceCOId + this.PronoteHeaderId;
+            }
+        }
+
+        public readonly static string PRO_FromId = "FromId";
+    }
 }

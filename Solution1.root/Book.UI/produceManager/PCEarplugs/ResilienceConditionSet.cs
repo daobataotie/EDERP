@@ -14,7 +14,7 @@ namespace Book.UI.produceManager.PCEarplugs
     {
         Model.PCEarplugsResilienceConditionSet _pCEarplugsResilienceConditionSet;
         BL.PCEarplugsResilienceConditionSetManager manager = new Book.BL.PCEarplugsResilienceConditionSetManager();
-        private string _PCEarplugsResilienceCheckId = string.Empty;
+        private string _PCEarplugsResilienceCheckDetailId = string.Empty;
 
         public ResilienceConditionSet()
         {
@@ -25,17 +25,17 @@ namespace Book.UI.produceManager.PCEarplugs
             this.action = "view";
         }
 
-        public ResilienceConditionSet(string PCEarplugsResilienceCheckId)
+        public ResilienceConditionSet(string PCEarplugsResilienceCheckDetailId)
             : this()
         {
-            this._PCEarplugsResilienceCheckId = PCEarplugsResilienceCheckId;
+            this._PCEarplugsResilienceCheckDetailId = PCEarplugsResilienceCheckDetailId;
         }
 
         protected override void AddNew()
         {
             this._pCEarplugsResilienceConditionSet = new Book.Model.PCEarplugsResilienceConditionSet();
             this._pCEarplugsResilienceConditionSet.PCEarplugsResilienceConditionSetId = Guid.NewGuid().ToString();
-            this._pCEarplugsResilienceConditionSet.PCEarplugsResilienceCheckId = this._PCEarplugsResilienceCheckId;
+            this._pCEarplugsResilienceConditionSet.PCEarplugsResilienceCheckId = this._PCEarplugsResilienceCheckDetailId;
         }
 
         protected override void Delete()
@@ -45,14 +45,14 @@ namespace Book.UI.produceManager.PCEarplugs
             if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
                 return;
             this.manager.Delete(this._pCEarplugsResilienceConditionSet.PCEarplugsResilienceConditionSetId);
-            this._pCEarplugsResilienceConditionSet = this.manager.mGetLast(this._PCEarplugsResilienceCheckId);
+            this._pCEarplugsResilienceConditionSet = this.manager.mGetLast(this._PCEarplugsResilienceCheckDetailId);
 
         }
 
         protected override void MoveLast()
         {
             //this._pCEarplugsResilienceConditionSet = this.manager.Get(this._OpticsTestManager.FGetLast(this._PCFinishCheckId) == null ? "" : this._OpticsTestManager.FGetLast(this._PCFinishCheckId).OpticsTestId);
-            this._pCEarplugsResilienceConditionSet = this.manager.mGetLast(this._PCEarplugsResilienceCheckId);
+            this._pCEarplugsResilienceConditionSet = this.manager.mGetLast(this._PCEarplugsResilienceCheckDetailId);
         }
 
         protected override void MoveFirst()
@@ -102,7 +102,7 @@ namespace Book.UI.produceManager.PCEarplugs
 
         protected override bool HasRows()
         {
-            return this.manager.mHasRows(this._PCEarplugsResilienceCheckId);
+            return this.manager.mHasRows(this._PCEarplugsResilienceCheckDetailId);
         }
 
         protected override bool HasRowsNext()

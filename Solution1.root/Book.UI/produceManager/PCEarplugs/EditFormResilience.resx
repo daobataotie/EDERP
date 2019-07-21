@@ -433,6 +433,31 @@
 </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_SelectInvoiceCO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>745, 12</value>
+  </data>
+  <data name="btn_SelectInvoiceCO.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 22</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_SelectInvoiceCO.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="btn_SelectInvoiceCO.Text" xml:space="preserve">
+    <value>選取採購單</value>
+  </data>
+  <data name="&gt;&gt;btn_SelectInvoiceCO.Name" xml:space="preserve">
+    <value>btn_SelectInvoiceCO</value>
+  </data>
+  <data name="&gt;&gt;btn_SelectInvoiceCO.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_SelectInvoiceCO.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btn_SelectInvoiceCO.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="cob_Shoucuorou.Location" type="System.Drawing.Point, System.Drawing">
     <value>368, 38</value>
   </data>
@@ -442,7 +467,6 @@
   <data name="cob_Shoucuorou.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cob_Shoucuorou.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
@@ -456,7 +480,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;cob_Shoucuorou.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="cob_Tiekuaiya.Location" type="System.Drawing.Point, System.Drawing">
     <value>88, 38</value>
@@ -480,7 +504,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;cob_Tiekuaiya.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txt_Note.Location" type="System.Drawing.Point, System.Drawing">
     <value>631, 38</value>
@@ -501,7 +525,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Note.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btn_Remove.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 424</value>
@@ -525,7 +549,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_Remove.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btn_Add.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 424</value>
@@ -549,7 +573,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_Add.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <metadata name="bindingSourceDetail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>303, 17</value>
@@ -804,7 +828,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="ncc_Employee.Location" type="System.Drawing.Point, System.Drawing">
     <value>465, 12</value>
@@ -825,7 +849,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;ncc_Employee.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="date_Check.Location" type="System.Drawing.Point, System.Drawing">
     <value>289, 12</value>
@@ -849,7 +873,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;date_Check.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="txt_Id.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -873,13 +897,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Id.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="btn_SelectPronoteheader.Location" type="System.Drawing.Point, System.Drawing">
     <value>656, 12</value>
   </data>
   <data name="btn_SelectPronoteheader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
+    <value>85, 22</value>
   </data>
   <data name="btn_SelectPronoteheader.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -897,7 +921,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btn_SelectPronoteheader.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 450</value>
@@ -921,7 +945,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -1004,6 +1028,12 @@
   </data>
   <data name="layoutControlItem10.Text" xml:space="preserve">
     <value>手搓揉条件：</value>
+  </data>
+  <data name="layoutControlItem11.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="layoutControlItem11.Text" xml:space="preserve">
+    <value>layoutControlItem11</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
@@ -1324,6 +1354,12 @@
     <value>layoutControlItem10</value>
   </data>
   <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barButtonItem1.Name" xml:space="preserve">

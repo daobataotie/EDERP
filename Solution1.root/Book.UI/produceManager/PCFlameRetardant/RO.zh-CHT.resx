@@ -117,28 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btn_OK.Text" xml:space="preserve">
-    <value>確定</value>
+  <data name="xrTableCell11.Text" xml:space="preserve">
+    <value>序號</value>
   </data>
-  <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>單據日期 自：</value>
+  <data name="xrTableCell12.Text" xml:space="preserve">
+    <value>訂單編號</value>
   </data>
-  <data name="layoutControlItem3.Text" xml:space="preserve">
-    <value>商品名稱：</value>
+  <data name="xrTableCell4.Text" xml:space="preserve">
+    <value>批號</value>
   </data>
-  <data name="layoutControlItem4.Text" xml:space="preserve">
-    <value>測試商品：</value>
+  <data name="xrTableCell2.Text" xml:space="preserve">
+    <value>顏色</value>
   </data>
-  <data name="layoutControlItem5.Text" xml:space="preserve">
-    <value>廠商：</value>
+  <data name="xrTableCell5.Text" xml:space="preserve">
+    <value>強化</value>
   </data>
-  <data name="layoutControlItem6.Text" xml:space="preserve">
-    <value>批號：</value>
+  <data name="xrTableCell7.Text" xml:space="preserve">
+    <value>防霧</value>
   </data>
-  <data name="layoutControlItem10.Text" xml:space="preserve">
+  <data name="xrTableCell3.Text" xml:space="preserve">
+    <value>無強化</value>
+  </data>
+  <data name="xrTableCell8.Text" xml:space="preserve">
+    <value>燃燒</value>
+  </data>
+  <data name="xrTableCell6.Text" xml:space="preserve">
+    <value>測試者</value>
+  </data>
+  <data name="xrTableCell9.Text" xml:space="preserve">
+    <value>檢驗數量</value>
+  </data>
+  <data name="xrLabel3.Text" xml:space="preserve">
+    <value>檢驗員：</value>
+  </data>
+  <data name="xrLabel2.Text" xml:space="preserve">
+    <value>檢驗日期：</value>
+  </data>
+  <data name="xrLabel1.Text" xml:space="preserve">
     <value>單據編號：</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>查詢條件</value>
+  <data name="xrLabel4.Text" xml:space="preserve">
+    <value>備註：</value>
   </data>
 </root>
