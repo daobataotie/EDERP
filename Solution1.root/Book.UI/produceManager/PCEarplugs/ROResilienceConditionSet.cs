@@ -21,6 +21,7 @@ namespace Book.UI.produceManager.PCEarplugs
 
         private void ROResilienceConditionSet_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
+            //鐵塊壓，手搓揉
             Model.PCEarplugsResilienceConditionSet set = new BL.PCEarplugsResilienceConditionSetManager().mGetLast(PCEarplugsResilienceCheckDetailId);
             if (set != null)
             {
@@ -55,6 +56,24 @@ namespace Book.UI.produceManager.PCEarplugs
                 this.TC_SCR4.Text = "";
                 this.TC_SCR5.Text = "";
                 this.TC_SCR6.Text = "";
+            }
+
+            //重量
+            Model.PCEarplugsResilienceWeight weight = new BL.PCEarplugsResilienceWeightManager().mGetLast(PCEarplugsResilienceCheckDetailId);
+            if (weight != null)
+            {
+                this.TC_Weight1.Text = weight.Weight1.HasValue ? weight.Weight1.Value.ToString("0.#") : "";
+                this.TC_Weight2.Text = weight.Weight2.HasValue ? weight.Weight2.Value.ToString("0.#") : "";
+                this.TC_Weight3.Text = weight.Weight3.HasValue ? weight.Weight3.Value.ToString("0.#") : "";
+                this.TC_Weight4.Text = weight.Weight4.HasValue ? weight.Weight4.Value.ToString("0.#") : "";
+                this.TC_Weight5.Text = weight.Weight5.HasValue ? weight.Weight5.Value.ToString("0.#") : "";
+                this.TC_Weight6.Text = weight.Weight6.HasValue ? weight.Weight6.Value.ToString("0.#") : "";
+            }
+            else
+            {
+                this.xrTable4.Visible = false;
+                this.xrTable4.HeightF = 0;
+                this.ReportHeader.HeightF = 180;
             }
         }
     }

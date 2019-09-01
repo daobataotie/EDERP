@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrSubreportEN = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
@@ -54,7 +55,7 @@
             this.xrSubreportANSI = new DevExpress.XtraReports.UI.XRSubreport();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrSubreportEN = new DevExpress.XtraReports.UI.XRSubreport();
+            this.subReport_PCDefinition = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -62,6 +63,7 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.subReport_PCDefinition,
             this.xrSubreportEN,
             this.xrLabel7,
             this.xrLabel5,
@@ -77,10 +79,17 @@
             this.xrLabel1,
             this.xrSubreportANSI});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 1262.169F;
+            this.Detail.HeightF = 1307.148F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrSubreportEN
+            // 
+            this.xrSubreportEN.Dpi = 254F;
+            this.xrSubreportEN.LocationFloat = new DevExpress.Utils.PointFloat(0F, 153.4583F);
+            this.xrSubreportEN.Name = "xrSubreportEN";
+            this.xrSubreportEN.SizeF = new System.Drawing.SizeF(1988.417F, 95.46167F);
             // 
             // xrLabel7
             // 
@@ -114,7 +123,7 @@
             // 
             this.xrLabel6.Dpi = 254F;
             this.xrLabel6.Font = new System.Drawing.Font("新細明體", 12F);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(892.8333F, 1203.749F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(890.1875F, 1248.728F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(317.4998F, 58.42004F);
@@ -325,12 +334,12 @@
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // xrSubreportEN
+            // subReport_PCDefinition
             // 
-            this.xrSubreportEN.Dpi = 254F;
-            this.xrSubreportEN.LocationFloat = new DevExpress.Utils.PointFloat(0F, 153.4583F);
-            this.xrSubreportEN.Name = "xrSubreportEN";
-            this.xrSubreportEN.SizeF = new System.Drawing.SizeF(1988.417F, 95.46167F);
+            this.subReport_PCDefinition.Dpi = 254F;
+            this.subReport_PCDefinition.LocationFloat = new DevExpress.Utils.PointFloat(25.00017F, 1166.707F);
+            this.subReport_PCDefinition.Name = "subReport_PCDefinition";
+            this.subReport_PCDefinition.SizeF = new System.Drawing.SizeF(1963.417F, 58.42004F);
             // 
             // DataInputANSI2015ENRO
             // 
@@ -382,5 +391,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreportEN;
+        private DevExpress.XtraReports.UI.XRSubreport subReport_PCDefinition;
     }
 }

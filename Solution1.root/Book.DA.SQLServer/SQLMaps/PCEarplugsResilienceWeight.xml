@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<sqlMap namespace="PCEarplugsResilienceWeight" xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="mHasRows" resultClass="bool" parameterClass="string">
+      <![CDATA[
+      select case when exists (select * from PCEarplugsResilienceWeight where PCEarplugsResilienceCheckId=#value#) then 1 else 0 end
+      ]]>
+    </select>
+
+    <select id="mGetLast" resultMap="PCEarplugsResilienceWeightResult" parameterClass="string">
+      <![CDATA[
+      select top 1 * from PCEarplugsResilienceWeight where PCEarplugsResilienceCheckId=#value#
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

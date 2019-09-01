@@ -785,6 +785,21 @@
   <data name="gcShoucuorou.Width" type="System.Int32, mscorlib">
     <value>120</value>
   </data>
+  <data name="gridColumn7.Caption" xml:space="preserve">
+    <value>重量</value>
+  </data>
+  <data name="repositoryItemHyperLinkEdit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemHyperLinkEdit2.NullText" xml:space="preserve">
+    <value>測試詳細</value>
+  </data>
+  <data name="gridColumn7.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>判定</value>
   </data>
@@ -807,7 +822,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
     <value>50</value>
@@ -1258,6 +1273,18 @@
     <value>repositoryItemHyperLinkEdit3</value>
   </data>
   <data name="&gt;&gt;repositoryItemHyperLinkEdit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Name" xml:space="preserve">
+    <value>gridColumn7</value>
+  </data>
+  <data name="&gt;&gt;gridColumn7.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHyperLinkEdit2.Name" xml:space="preserve">
+    <value>repositoryItemHyperLinkEdit2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHyperLinkEdit2.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn10.Name" xml:space="preserve">

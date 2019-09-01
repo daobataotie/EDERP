@@ -55,11 +55,12 @@ namespace Book.BL
             {
                 BL.V.BeginTransaction();
 
-                Validate(pCEarplugsResilienceCheck);
-                this.TiGuiExists(pCEarplugsResilienceCheck);
-
                 pCEarplugsResilienceCheck.InsertTime = DateTime.Now;
                 pCEarplugsResilienceCheck.UpdateTime = DateTime.Now;
+
+
+                Validate(pCEarplugsResilienceCheck);
+                this.TiGuiExists(pCEarplugsResilienceCheck);
 
                 accessor.Insert(pCEarplugsResilienceCheck);
 

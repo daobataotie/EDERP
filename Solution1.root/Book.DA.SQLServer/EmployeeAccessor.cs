@@ -354,5 +354,11 @@ namespace Book.DA.SQLServer
 
             return sqlmapper.QueryForObject<Model.Employee>("Employee.SelectIdByNameAnId", ht);
         }
+
+
+        public IList<Model.Employee> SelectIdAndName()
+        {
+            return sqlmapper.QueryForList<Model.Employee>("Employee.SelectIdAndName", null);
+        }
     }
 }

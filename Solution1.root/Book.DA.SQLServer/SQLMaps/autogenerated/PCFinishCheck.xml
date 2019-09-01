@@ -49,6 +49,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Pihao" column="Pihao"/>
       <result property="AttrESSSFZH" column="AttrESSSFZH"/>
       <result property="AttrESSFYGZTZ" column="AttrESSFYGZTZ"/>
+      <result property="InvoiceCountNum" column="InvoiceCountNum"/>
       <result property="PronoteHeader" column="PronoteHeaderID" lazyLoad="false" select="PronoteHeader.select_by_primary_key" />
       <result property="Employee0" column="Employee0Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
@@ -185,7 +186,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [AnnualRing],
         [Pihao],
         [AttrESSSFZH],
-        [AttrESSFYGZTZ]
+        [AttrESSFYGZTZ],
+        [InvoiceCountNum]
 			FROM
 				[dbo].[PCFinishCheck]
 			WHERE
@@ -281,7 +283,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [AnnualRing],
         [Pihao],        
         [AttrESSSFZH],
-        [AttrESSFYGZTZ]
+        [AttrESSFYGZTZ],
+        [InvoiceCountNum]
 			) 
 			VALUES 
 			(
@@ -327,7 +330,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #AnnualRing#,
         #Pihao#,        
         #AttrESSSFZH#,
-        #AttrESSFYGZTZ#
+        #AttrESSFYGZTZ#,
+        #InvoiceCountNum#
 			)
              ]]>
     </insert>
@@ -376,7 +380,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [AnnualRing]=#AnnualRing#,
         [Pihao]=#Pihao#,
         [AttrESSSFZH]=#AttrESSSFZH#,
-        [AttrESSFYGZTZ]=#AttrESSFYGZTZ#
+        [AttrESSFYGZTZ]=#AttrESSFYGZTZ#,
+        [InvoiceCountNum]=#InvoiceCountNum#
 			WHERE
 				[PCFinishCheckID] = #PCFinishCheckID#
                     ]]>

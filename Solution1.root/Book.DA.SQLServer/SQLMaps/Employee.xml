@@ -437,5 +437,11 @@
       select top 1 EmployeeId,CardNo from Employee where EmployeeName=#name# and IDNo=#IDNo#
     </select>
     
+    <select id="SelectIdAndName"  resultClass="Employee">
+      <![CDATA[
+      SELECT EmployeeId,IDNo,EmployeeName FROM Employee ORDER BY IDNo
+      ]]>
+    </select>
+
   </statements>
 </sqlMap>

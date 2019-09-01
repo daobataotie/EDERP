@@ -609,6 +609,31 @@ namespace Book.DA.SQLServer.SQLDB
             }
         }
 
+        public static object QueryObject(string SQLString, SqlParameter[] parms)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(SQLString, connection);
+                    cmd.Parameters.AddRange(parms);
+                    object obj = cmd.ExecuteScalar();
+                    obj = ((obj is DBNull) ? null : obj);
+                    return obj;
+                }
+                catch (System.Data.SqlClient.SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                        connection.Close();
+                }
+            }
+        }
+
         #endregion
 
         #region 执行带参数的SQL语句
@@ -964,7 +989,7 @@ namespace Book.DA.SQLServer.SQLDB
         /// <param name="storedProcName">存储过程名</param>
         /// <param name="parameters">存储过程参数</param>
         /// <returns>SqlDataReader</returns>
-        public static SqlDataReader RunProcedure(string storedProcName, IDataParameter[] parameters)
+        public static SqlDataReader RunProcedureForReader(string storedProcName, IDataParameter[] parameters)
         {
             SqlConnection connection = new SqlConnection(connectionString);
             SqlDataReader returnReader;
@@ -976,6 +1001,21 @@ namespace Book.DA.SQLServer.SQLDB
 
         }
 
+        public static object RunProcedureForObject(string storedProcName, IDataParameter[] parameters)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = storedProcName;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = connection;
+                cmd.Parameters.AddRange(parameters);
+
+                object obj = cmd.ExecuteScalar(); ;
+                return obj;
+            }
+        }
 
         /// <summary>
         /// 执行存储过程
@@ -997,6 +1037,7 @@ namespace Book.DA.SQLServer.SQLDB
                 return dataSet;
             }
         }
+
         public static DataSet RunProcedure(string storedProcName, IDataParameter[] parameters, string tableName, int Times)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

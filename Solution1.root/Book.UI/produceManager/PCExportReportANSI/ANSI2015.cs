@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Linq;
 
 namespace Book.UI.produceManager.PCExportReportANSI
 {
@@ -16,6 +17,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
         BL.PCExportReportANSIManager _pcExpANSIManager = new Book.BL.PCExportReportANSIManager();
         string _ServerSavePath = string.Empty;      //附件存放地址
         int tag;                                    //列印标志
+        IList<Model.ProductUnit> UnitList = null;
 
         public ANSI2015()
         {
@@ -36,7 +38,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.NccTestPerson3.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.NccTestPerson4.Choose = new Settings.BasicData.Employees.ChooseEmployee();
             this.newChooseContorlAuditEmp.Choose = new Settings.BasicData.Employees.ChooseEmployee();
-            this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
+            this.bindingSourceUnit.DataSource = UnitList = (new BL.ProductUnitManager()).Select();
             this.action = "view";
 
             var jiShuBiaoZhun = new BL.SettingManager().SelectByName("ANSI2015JiShuBiaoZhun");
@@ -384,48 +386,55 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.Product = xd.Product;
             this._PCExportReportANSI.InvoiceCusXOId = xd.Invoice.CustomerInvoiceXOId;
             this._PCExportReportANSI.Amount = xd.InvoiceXODetailQuantity.HasValue ? xd.InvoiceXODetailQuantity.Value : 0;
-            this._PCExportReportANSI.ProductUnitId = xd.Product.SellUnitId;
+            //this._PCExportReportANSI.ProductUnitId = xd.Product.SellUnitId;
+
+            var unit = UnitList.ToList().FirstOrDefault(D => D.CnName == xd.InvoiceProductUnit);
+            if (unit != null)
+            {
+                this._PCExportReportANSI.ProductUnit = unit;
+                this._PCExportReportANSI.ProductUnitId = unit.ProductUnitId;
+            }
 
             //获取质检统计记录
             //Model.PCExportReportANSIDetail _PCExportReportANSIDetail = new BL.PCExportReportANSIDetailManager().SelectForExpCEENDetailsSUM(xd.Invoice.CustomerInvoiceXOId, xd.Product.ProductId);
 
             //if (_PCExportReportANSIDetail != null)
             //{
-                #region 测试数量、合格数量
+            #region 测试数量、合格数量
 
-                //受测数量默认为订单数量的1/500,无条件进位，最大为12
-                //int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
-                //double MustCheck = 0;
+            //受测数量默认为订单数量的1/500,无条件进位，最大为12
+            //int Orderamount = int.Parse(this._PCExportReportANSI.Amount.HasValue ? this._PCExportReportANSI.Amount.ToString() : "0");
+            //double MustCheck = 0;
 
-                //if (Orderamount < 500)
-                //    MustCheck = 1;
-                //else
-                //    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
+            //if (Orderamount < 500)
+            //    MustCheck = 1;
+            //else
+            //    MustCheck = Orderamount % 500 == 0 ? Orderamount / 500 : Orderamount / 500 + 1;
 
-                //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
-                this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("ansi", Convert.ToInt32(this._PCExportReportANSI.Amount));
+            //this._PCExportReportANSI.AmountTest = MustCheck > 12 ? 12 : MustCheck;//受测数量12个，无条件进位
+            this._PCExportReportANSI.AmountTest = Common.AutoCalculation.Calculation("ansi", Convert.ToInt32(this._PCExportReportANSI.Amount));
 
-                //this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.PanDing7 = this._PCExportReportANSI.PanDing8 = this._PCExportReportANSI.PanDing9 = this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.PanDingShu12 = this._PCExportReportANSI.PanDingShu13 = this._PCExportReportANSI.PanDingShu15 = this._PCExportReportANSI.PanDingShu16 = 
-                this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDingShu17 = this._PCExportReportANSI.PanDingShu18 = this._PCExportReportANSI.AmountTest;
+            //this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDing2 = this._PCExportReportANSI.PanDing3 = this._PCExportReportANSI.PanDing4 = this._PCExportReportANSI.PanDing5 = this._PCExportReportANSI.PanDing6 = this._PCExportReportANSI.PanDing7 = this._PCExportReportANSI.PanDing8 = this._PCExportReportANSI.PanDing9 = this._PCExportReportANSI.PanDing10 = this._PCExportReportANSI.PanDing11 = this._PCExportReportANSI.PanDingShu12 = this._PCExportReportANSI.PanDingShu13 = this._PCExportReportANSI.PanDingShu15 = this._PCExportReportANSI.PanDingShu16 = 
+            this._PCExportReportANSI.QuYangShu17 = this._PCExportReportANSI.QuYangShu18 = this._PCExportReportANSI.PanDingShu17 = this._PCExportReportANSI.PanDingShu18 = this._PCExportReportANSI.AmountTest;
 
-                this._PCExportReportANSI.QuYangShu1 = this._PCExportReportANSI.QuYangShu14 = this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.PanDingShu14 = 100;
+            this._PCExportReportANSI.QuYangShu1 = this._PCExportReportANSI.QuYangShu14 = this._PCExportReportANSI.PanDing1 = this._PCExportReportANSI.PanDingShu14 = 100;
 
-                //2017年9月28日22:58:08  Cindy要求设为固定
-                this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.PanDing2 = 1;
-                this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.PanDing3 = 0;
-                this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.PanDing4 = 2;
-                this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.PanDing5 = 2;
-                this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.PanDing6 = 2;
-                this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.PanDing7 = 2;
-                this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.PanDing8 = 2;
-                this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.PanDing9 = 1;
-                this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.PanDing10 = 2;
-                this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.PanDing11 = 2;
-                this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.PanDingShu12 = 2;
-                this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.PanDingShu13 = 2;
-                this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.PanDingShu15 = 2;
-                this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.PanDingShu16 = 2;
-                #endregion
+            //2017年9月28日22:58:08  Cindy要求设为固定
+            this._PCExportReportANSI.QuYangShu2 = this._PCExportReportANSI.PanDing2 = 1;
+            this._PCExportReportANSI.QuYangShu3 = this._PCExportReportANSI.PanDing3 = 0;
+            this._PCExportReportANSI.QuYangShu4 = this._PCExportReportANSI.PanDing4 = 2;
+            this._PCExportReportANSI.QuYangShu5 = this._PCExportReportANSI.PanDing5 = 2;
+            this._PCExportReportANSI.QuYangShu6 = this._PCExportReportANSI.PanDing6 = 2;
+            this._PCExportReportANSI.QuYangShu7 = this._PCExportReportANSI.PanDing7 = 2;
+            this._PCExportReportANSI.QuYangShu8 = this._PCExportReportANSI.PanDing8 = 2;
+            this._PCExportReportANSI.QuYangShu9 = this._PCExportReportANSI.PanDing9 = 1;
+            this._PCExportReportANSI.QuYangShu10 = this._PCExportReportANSI.PanDing10 = 2;
+            this._PCExportReportANSI.QuYangShu11 = this._PCExportReportANSI.PanDing11 = 2;
+            this._PCExportReportANSI.QuYangShu12 = this._PCExportReportANSI.PanDingShu12 = 2;
+            this._PCExportReportANSI.QuYangShu13 = this._PCExportReportANSI.PanDingShu13 = 2;
+            this._PCExportReportANSI.QuYangShu15 = this._PCExportReportANSI.PanDingShu15 = 4;
+            this._PCExportReportANSI.QuYangShu16 = this._PCExportReportANSI.PanDingShu16 = 2;
+            #endregion
             //}
             this.InitControls();
         }

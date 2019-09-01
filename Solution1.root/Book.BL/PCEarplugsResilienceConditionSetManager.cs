@@ -48,6 +48,8 @@ namespace Book.BL
             try
             {
                 BL.V.BeginTransaction();
+                pCEarplugsResilienceConditionSet.InsertTime = DateTime.Now;
+                pCEarplugsResilienceConditionSet.UpdateTime = DateTime.Now;
                 accessor.Insert(pCEarplugsResilienceConditionSet);
                 BL.V.CommitTransaction();
             }
@@ -69,6 +71,7 @@ namespace Book.BL
             try
             {
                 BL.V.BeginTransaction();
+                pCEarplugsResilienceConditionSet.UpdateTime = DateTime.Now;
                 accessor.Update(pCEarplugsResilienceConditionSet);
                 BL.V.CommitTransaction();
             }

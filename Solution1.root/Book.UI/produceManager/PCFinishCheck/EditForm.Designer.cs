@@ -122,7 +122,6 @@
             this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem38 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem43 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -134,6 +133,8 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.txt_InvoiceCountNum = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -220,7 +221,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
@@ -228,6 +228,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_InvoiceCountNum.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -239,21 +241,14 @@
             // 
             // imageCollection1
             // 
-            resources.ApplyResources(this.imageCollection1, "imageCollection1");
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
             // 
             // barButtonItemFirst
             // 
-            this.barButtonItemFirst.AccessibleDescription = null;
-            this.barButtonItemFirst.AccessibleName = null;
-            resources.ApplyResources(this.barButtonItemFirst, "barButtonItemFirst");
             this.barButtonItemFirst.Enabled = false;
             // 
             // barButtonItemPrint
             // 
-            this.barButtonItemPrint.AccessibleDescription = null;
-            this.barButtonItemPrint.AccessibleName = null;
-            resources.ApplyResources(this.barButtonItemPrint, "barButtonItemPrint");
             this.barButtonItemPrint.Enabled = false;
             // 
             // bar1
@@ -262,14 +257,10 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtn_Search, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3)});
             this.bar1.OptionsBar.UseWholeRow = true;
-            resources.ApplyResources(this.bar1, "bar1");
             // 
             // layoutControl1
             // 
-            this.layoutControl1.AccessibleDescription = null;
-            this.layoutControl1.AccessibleName = null;
-            resources.ApplyResources(this.layoutControl1, "layoutControl1");
-            this.layoutControl1.BackgroundImage = null;
+            this.layoutControl1.Controls.Add(this.txt_InvoiceCountNum);
             this.layoutControl1.Controls.Add(this.radio_AttrESSFYGZTZ);
             this.layoutControl1.Controls.Add(this.radio_AttrESSSFZH);
             this.layoutControl1.Controls.Add(this.txt_Pihao);
@@ -317,19 +308,15 @@
             this.layoutControl1.Controls.Add(this.label2);
             this.layoutControl1.Controls.Add(this.txtPCFinishCheckID);
             this.layoutControl1.Controls.Add(this.label4);
-            this.layoutControl1.Font = null;
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             // 
             // radio_AttrESSFYGZTZ
             // 
             resources.ApplyResources(this.radio_AttrESSFYGZTZ, "radio_AttrESSFYGZTZ");
-            this.radio_AttrESSFYGZTZ.BackgroundImage = null;
-            this.radio_AttrESSFYGZTZ.EditValue = null;
             this.radio_AttrESSFYGZTZ.MenuManager = this.barManager1;
             this.radio_AttrESSFYGZTZ.Name = "radio_AttrESSFYGZTZ";
-            this.radio_AttrESSFYGZTZ.Properties.AccessibleDescription = null;
-            this.radio_AttrESSFYGZTZ.Properties.AccessibleName = null;
             this.radio_AttrESSFYGZTZ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrESSFYGZTZ.Properties.Items"))), resources.GetString("radio_AttrESSFYGZTZ.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrESSFYGZTZ.Properties.Items2"))), resources.GetString("radio_AttrESSFYGZTZ.Properties.Items3")),
@@ -339,12 +326,8 @@
             // radio_AttrESSSFZH
             // 
             resources.ApplyResources(this.radio_AttrESSSFZH, "radio_AttrESSSFZH");
-            this.radio_AttrESSSFZH.BackgroundImage = null;
-            this.radio_AttrESSSFZH.EditValue = null;
             this.radio_AttrESSSFZH.MenuManager = this.barManager1;
             this.radio_AttrESSSFZH.Name = "radio_AttrESSSFZH";
-            this.radio_AttrESSSFZH.Properties.AccessibleDescription = null;
-            this.radio_AttrESSSFZH.Properties.AccessibleName = null;
             this.radio_AttrESSSFZH.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrESSSFZH.Properties.Items"))), resources.GetString("radio_AttrESSSFZH.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrESSSFZH.Properties.Items2"))), resources.GetString("radio_AttrESSSFZH.Properties.Items3")),
@@ -354,35 +337,15 @@
             // txt_Pihao
             // 
             resources.ApplyResources(this.txt_Pihao, "txt_Pihao");
-            this.txt_Pihao.BackgroundImage = null;
-            this.txt_Pihao.EditValue = null;
             this.txt_Pihao.MenuManager = this.barManager1;
             this.txt_Pihao.Name = "txt_Pihao";
-            this.txt_Pihao.Properties.AccessibleDescription = null;
-            this.txt_Pihao.Properties.AccessibleName = null;
-            this.txt_Pihao.Properties.AutoHeight = ((bool)(resources.GetObject("txt_Pihao.Properties.AutoHeight")));
-            this.txt_Pihao.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txt_Pihao.Properties.Mask.AutoComplete")));
-            this.txt_Pihao.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txt_Pihao.Properties.Mask.BeepOnError")));
-            this.txt_Pihao.Properties.Mask.EditMask = resources.GetString("txt_Pihao.Properties.Mask.EditMask");
-            this.txt_Pihao.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txt_Pihao.Properties.Mask.IgnoreMaskBlank")));
-            this.txt_Pihao.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txt_Pihao.Properties.Mask.MaskType")));
-            this.txt_Pihao.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txt_Pihao.Properties.Mask.PlaceHolder")));
-            this.txt_Pihao.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txt_Pihao.Properties.Mask.SaveLiteral")));
-            this.txt_Pihao.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txt_Pihao.Properties.Mask.ShowPlaceHolders")));
-            this.txt_Pihao.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txt_Pihao.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txt_Pihao.Properties.NullValuePrompt = resources.GetString("txt_Pihao.Properties.NullValuePrompt");
-            this.txt_Pihao.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txt_Pihao.Properties.NullValuePromptShowForEmptyValue")));
             this.txt_Pihao.StyleController = this.layoutControl1;
             // 
             // radio_AttrDGBLTest
             // 
             resources.ApplyResources(this.radio_AttrDGBLTest, "radio_AttrDGBLTest");
-            this.radio_AttrDGBLTest.BackgroundImage = null;
-            this.radio_AttrDGBLTest.EditValue = null;
             this.radio_AttrDGBLTest.MenuManager = this.barManager1;
             this.radio_AttrDGBLTest.Name = "radio_AttrDGBLTest";
-            this.radio_AttrDGBLTest.Properties.AccessibleDescription = null;
-            this.radio_AttrDGBLTest.Properties.AccessibleName = null;
             this.radio_AttrDGBLTest.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrDGBLTest.Properties.Items"))), resources.GetString("radio_AttrDGBLTest.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrDGBLTest.Properties.Items2"))), resources.GetString("radio_AttrDGBLTest.Properties.Items3")),
@@ -392,13 +355,8 @@
             // lookUpEditUnit
             // 
             resources.ApplyResources(this.lookUpEditUnit, "lookUpEditUnit");
-            this.lookUpEditUnit.BackgroundImage = null;
-            this.lookUpEditUnit.EditValue = null;
             this.lookUpEditUnit.MenuManager = this.barManager1;
             this.lookUpEditUnit.Name = "lookUpEditUnit";
-            this.lookUpEditUnit.Properties.AccessibleDescription = null;
-            this.lookUpEditUnit.Properties.AccessibleName = null;
-            this.lookUpEditUnit.Properties.AutoHeight = ((bool)(resources.GetObject("lookUpEditUnit.Properties.AutoHeight")));
             this.lookUpEditUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lookUpEditUnit.Properties.Buttons"))))});
             this.lookUpEditUnit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -406,50 +364,25 @@
             this.lookUpEditUnit.Properties.DataSource = this.bindingSourceUnit;
             this.lookUpEditUnit.Properties.DisplayMember = "CnName";
             this.lookUpEditUnit.Properties.NullText = resources.GetString("lookUpEditUnit.Properties.NullText");
-            this.lookUpEditUnit.Properties.NullValuePrompt = resources.GetString("lookUpEditUnit.Properties.NullValuePrompt");
-            this.lookUpEditUnit.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("lookUpEditUnit.Properties.NullValuePromptShowForEmptyValue")));
             this.lookUpEditUnit.Properties.ValueMember = "ProductUnitId";
             this.lookUpEditUnit.StyleController = this.layoutControl1;
             // 
             // txt_AuditState
             // 
             resources.ApplyResources(this.txt_AuditState, "txt_AuditState");
-            this.txt_AuditState.BackgroundImage = null;
-            this.txt_AuditState.EditValue = null;
             this.txt_AuditState.MenuManager = this.barManager1;
             this.txt_AuditState.Name = "txt_AuditState";
-            this.txt_AuditState.Properties.AccessibleDescription = null;
-            this.txt_AuditState.Properties.AccessibleName = null;
-            this.txt_AuditState.Properties.AutoHeight = ((bool)(resources.GetObject("txt_AuditState.Properties.AutoHeight")));
-            this.txt_AuditState.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txt_AuditState.Properties.Mask.AutoComplete")));
-            this.txt_AuditState.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txt_AuditState.Properties.Mask.BeepOnError")));
-            this.txt_AuditState.Properties.Mask.EditMask = resources.GetString("txt_AuditState.Properties.Mask.EditMask");
-            this.txt_AuditState.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txt_AuditState.Properties.Mask.IgnoreMaskBlank")));
-            this.txt_AuditState.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txt_AuditState.Properties.Mask.MaskType")));
-            this.txt_AuditState.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txt_AuditState.Properties.Mask.PlaceHolder")));
-            this.txt_AuditState.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txt_AuditState.Properties.Mask.SaveLiteral")));
-            this.txt_AuditState.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txt_AuditState.Properties.Mask.ShowPlaceHolders")));
-            this.txt_AuditState.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txt_AuditState.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txt_AuditState.Properties.NullValuePrompt = resources.GetString("txt_AuditState.Properties.NullValuePrompt");
-            this.txt_AuditState.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txt_AuditState.Properties.NullValuePromptShowForEmptyValue")));
             this.txt_AuditState.StyleController = this.layoutControl1;
             // 
             // newChooseContorlAuditEmp
             // 
-            this.newChooseContorlAuditEmp.AccessibleDescription = null;
-            this.newChooseContorlAuditEmp.AccessibleName = null;
-            resources.ApplyResources(this.newChooseContorlAuditEmp, "newChooseContorlAuditEmp");
-            this.newChooseContorlAuditEmp.BackgroundImage = null;
             this.newChooseContorlAuditEmp.EditValue = null;
-            this.newChooseContorlAuditEmp.Font = null;
+            resources.ApplyResources(this.newChooseContorlAuditEmp, "newChooseContorlAuditEmp");
             this.newChooseContorlAuditEmp.Name = "newChooseContorlAuditEmp";
             // 
             // linkLabelGuangxue
             // 
-            this.linkLabelGuangxue.AccessibleDescription = null;
-            this.linkLabelGuangxue.AccessibleName = null;
             resources.ApplyResources(this.linkLabelGuangxue, "linkLabelGuangxue");
-            this.linkLabelGuangxue.Font = null;
             this.linkLabelGuangxue.Name = "linkLabelGuangxue";
             this.linkLabelGuangxue.TabStop = true;
             this.linkLabelGuangxue.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGuangxue_LinkClicked);
@@ -457,55 +390,20 @@
             // txtCustomerProductName
             // 
             resources.ApplyResources(this.txtCustomerProductName, "txtCustomerProductName");
-            this.txtCustomerProductName.BackgroundImage = null;
-            this.txtCustomerProductName.EditValue = null;
             this.txtCustomerProductName.MenuManager = this.barManager1;
             this.txtCustomerProductName.Name = "txtCustomerProductName";
-            this.txtCustomerProductName.Properties.AccessibleDescription = null;
-            this.txtCustomerProductName.Properties.AccessibleName = null;
-            this.txtCustomerProductName.Properties.AutoHeight = ((bool)(resources.GetObject("txtCustomerProductName.Properties.AutoHeight")));
-            this.txtCustomerProductName.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txtCustomerProductName.Properties.Mask.AutoComplete")));
-            this.txtCustomerProductName.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txtCustomerProductName.Properties.Mask.BeepOnError")));
-            this.txtCustomerProductName.Properties.Mask.EditMask = resources.GetString("txtCustomerProductName.Properties.Mask.EditMask");
-            this.txtCustomerProductName.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txtCustomerProductName.Properties.Mask.IgnoreMaskBlank")));
-            this.txtCustomerProductName.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtCustomerProductName.Properties.Mask.MaskType")));
-            this.txtCustomerProductName.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txtCustomerProductName.Properties.Mask.PlaceHolder")));
-            this.txtCustomerProductName.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txtCustomerProductName.Properties.Mask.SaveLiteral")));
-            this.txtCustomerProductName.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txtCustomerProductName.Properties.Mask.ShowPlaceHolders")));
-            this.txtCustomerProductName.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtCustomerProductName.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txtCustomerProductName.Properties.NullValuePrompt = resources.GetString("txtCustomerProductName.Properties.NullValuePrompt");
-            this.txtCustomerProductName.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txtCustomerProductName.Properties.NullValuePromptShowForEmptyValue")));
             this.txtCustomerProductName.StyleController = this.layoutControl1;
             // 
             // txtPronoteHeaderId
             // 
             resources.ApplyResources(this.txtPronoteHeaderId, "txtPronoteHeaderId");
-            this.txtPronoteHeaderId.BackgroundImage = null;
-            this.txtPronoteHeaderId.EditValue = null;
             this.txtPronoteHeaderId.MenuManager = this.barManager1;
             this.txtPronoteHeaderId.Name = "txtPronoteHeaderId";
-            this.txtPronoteHeaderId.Properties.AccessibleDescription = null;
-            this.txtPronoteHeaderId.Properties.AccessibleName = null;
-            this.txtPronoteHeaderId.Properties.AutoHeight = ((bool)(resources.GetObject("txtPronoteHeaderId.Properties.AutoHeight")));
-            this.txtPronoteHeaderId.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txtPronoteHeaderId.Properties.Mask.AutoComplete")));
-            this.txtPronoteHeaderId.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txtPronoteHeaderId.Properties.Mask.BeepOnError")));
-            this.txtPronoteHeaderId.Properties.Mask.EditMask = resources.GetString("txtPronoteHeaderId.Properties.Mask.EditMask");
-            this.txtPronoteHeaderId.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txtPronoteHeaderId.Properties.Mask.IgnoreMaskBlank")));
-            this.txtPronoteHeaderId.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtPronoteHeaderId.Properties.Mask.MaskType")));
-            this.txtPronoteHeaderId.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txtPronoteHeaderId.Properties.Mask.PlaceHolder")));
-            this.txtPronoteHeaderId.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txtPronoteHeaderId.Properties.Mask.SaveLiteral")));
-            this.txtPronoteHeaderId.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txtPronoteHeaderId.Properties.Mask.ShowPlaceHolders")));
-            this.txtPronoteHeaderId.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtPronoteHeaderId.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txtPronoteHeaderId.Properties.NullValuePrompt = resources.GetString("txtPronoteHeaderId.Properties.NullValuePrompt");
-            this.txtPronoteHeaderId.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txtPronoteHeaderId.Properties.NullValuePromptShowForEmptyValue")));
             this.txtPronoteHeaderId.StyleController = this.layoutControl1;
             // 
             // btnGetPronoteHeader
             // 
-            this.btnGetPronoteHeader.AccessibleDescription = null;
-            this.btnGetPronoteHeader.AccessibleName = null;
             resources.ApplyResources(this.btnGetPronoteHeader, "btnGetPronoteHeader");
-            this.btnGetPronoteHeader.BackgroundImage = null;
             this.btnGetPronoteHeader.Name = "btnGetPronoteHeader";
             this.btnGetPronoteHeader.StyleController = this.layoutControl1;
             this.btnGetPronoteHeader.Click += new System.EventHandler(this.btnGetPronoteHeader_Click);
@@ -513,176 +411,74 @@
             // txt_AnnualRing
             // 
             resources.ApplyResources(this.txt_AnnualRing, "txt_AnnualRing");
-            this.txt_AnnualRing.BackgroundImage = null;
-            this.txt_AnnualRing.EditValue = null;
             this.txt_AnnualRing.MenuManager = this.barManager1;
             this.txt_AnnualRing.Name = "txt_AnnualRing";
-            this.txt_AnnualRing.Properties.AccessibleDescription = null;
-            this.txt_AnnualRing.Properties.AccessibleName = null;
-            this.txt_AnnualRing.Properties.AutoHeight = ((bool)(resources.GetObject("txt_AnnualRing.Properties.AutoHeight")));
-            this.txt_AnnualRing.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txt_AnnualRing.Properties.Mask.AutoComplete")));
-            this.txt_AnnualRing.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txt_AnnualRing.Properties.Mask.BeepOnError")));
-            this.txt_AnnualRing.Properties.Mask.EditMask = resources.GetString("txt_AnnualRing.Properties.Mask.EditMask");
-            this.txt_AnnualRing.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txt_AnnualRing.Properties.Mask.IgnoreMaskBlank")));
-            this.txt_AnnualRing.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txt_AnnualRing.Properties.Mask.MaskType")));
-            this.txt_AnnualRing.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txt_AnnualRing.Properties.Mask.PlaceHolder")));
-            this.txt_AnnualRing.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txt_AnnualRing.Properties.Mask.SaveLiteral")));
-            this.txt_AnnualRing.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txt_AnnualRing.Properties.Mask.ShowPlaceHolders")));
-            this.txt_AnnualRing.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txt_AnnualRing.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txt_AnnualRing.Properties.NullValuePrompt = resources.GetString("txt_AnnualRing.Properties.NullValuePrompt");
-            this.txt_AnnualRing.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txt_AnnualRing.Properties.NullValuePromptShowForEmptyValue")));
             this.txt_AnnualRing.StyleController = this.layoutControl1;
             // 
             // DE_JYDRQ
             // 
-            resources.ApplyResources(this.DE_JYDRQ, "DE_JYDRQ");
-            this.DE_JYDRQ.BackgroundImage = null;
             this.DE_JYDRQ.EditValue = null;
+            resources.ApplyResources(this.DE_JYDRQ, "DE_JYDRQ");
             this.DE_JYDRQ.MenuManager = this.barManager1;
             this.DE_JYDRQ.Name = "DE_JYDRQ";
-            this.DE_JYDRQ.Properties.AccessibleDescription = null;
-            this.DE_JYDRQ.Properties.AccessibleName = null;
-            this.DE_JYDRQ.Properties.AutoHeight = ((bool)(resources.GetObject("DE_JYDRQ.Properties.AutoHeight")));
             this.DE_JYDRQ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("DE_JYDRQ.Properties.Buttons"))))});
-            this.DE_JYDRQ.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("DE_JYDRQ.Properties.Mask.AutoComplete")));
-            this.DE_JYDRQ.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("DE_JYDRQ.Properties.Mask.BeepOnError")));
-            this.DE_JYDRQ.Properties.Mask.EditMask = resources.GetString("DE_JYDRQ.Properties.Mask.EditMask");
-            this.DE_JYDRQ.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("DE_JYDRQ.Properties.Mask.IgnoreMaskBlank")));
-            this.DE_JYDRQ.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("DE_JYDRQ.Properties.Mask.MaskType")));
-            this.DE_JYDRQ.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("DE_JYDRQ.Properties.Mask.PlaceHolder")));
-            this.DE_JYDRQ.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("DE_JYDRQ.Properties.Mask.SaveLiteral")));
-            this.DE_JYDRQ.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("DE_JYDRQ.Properties.Mask.ShowPlaceHolders")));
-            this.DE_JYDRQ.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("DE_JYDRQ.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.DE_JYDRQ.Properties.NullValuePrompt = resources.GetString("DE_JYDRQ.Properties.NullValuePrompt");
-            this.DE_JYDRQ.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("DE_JYDRQ.Properties.NullValuePromptShowForEmptyValue")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.AccessibleDescription = null;
-            this.DE_JYDRQ.Properties.VistaTimeProperties.AccessibleName = null;
-            this.DE_JYDRQ.Properties.VistaTimeProperties.AutoHeight = ((bool)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.AutoHeight")));
             this.DE_JYDRQ.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.Mask.AutoComplete")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.BeepOnError = ((bool)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.Mask.BeepOnError")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.EditMask = resources.GetString("DE_JYDRQ.Properties.VistaTimeProperties.Mask.EditMask");
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.Mask.MaskType")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.PlaceHolder = ((char)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.Mask.PlaceHolder")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.SaveLiteral = ((bool)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.Mask.SaveLiteral")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.Mask.ShowPlaceHolders")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.Mask.UseMaskAsDisplayFormat")));
-            this.DE_JYDRQ.Properties.VistaTimeProperties.NullValuePrompt = resources.GetString("DE_JYDRQ.Properties.VistaTimeProperties.NullValuePrompt");
-            this.DE_JYDRQ.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("DE_JYDRQ.Properties.VistaTimeProperties.NullValuePromptShowForEmptyValue")));
             this.DE_JYDRQ.StyleController = this.layoutControl1;
             // 
             // chkMuShiJianYan
             // 
             resources.ApplyResources(this.chkMuShiJianYan, "chkMuShiJianYan");
-            this.chkMuShiJianYan.BackgroundImage = null;
             this.chkMuShiJianYan.MenuManager = this.barManager1;
             this.chkMuShiJianYan.Name = "chkMuShiJianYan";
-            this.chkMuShiJianYan.Properties.AccessibleDescription = null;
-            this.chkMuShiJianYan.Properties.AccessibleName = null;
-            this.chkMuShiJianYan.Properties.AutoHeight = ((bool)(resources.GetObject("chkMuShiJianYan.Properties.AutoHeight")));
             this.chkMuShiJianYan.Properties.Caption = resources.GetString("chkMuShiJianYan.Properties.Caption");
-            this.chkMuShiJianYan.Properties.DisplayValueChecked = resources.GetString("chkMuShiJianYan.Properties.DisplayValueChecked");
-            this.chkMuShiJianYan.Properties.DisplayValueGrayed = resources.GetString("chkMuShiJianYan.Properties.DisplayValueGrayed");
-            this.chkMuShiJianYan.Properties.DisplayValueUnchecked = resources.GetString("chkMuShiJianYan.Properties.DisplayValueUnchecked");
             this.chkMuShiJianYan.StyleController = this.layoutControl1;
             // 
             // txtPCFinishCheckDesc
             // 
             resources.ApplyResources(this.txtPCFinishCheckDesc, "txtPCFinishCheckDesc");
-            this.txtPCFinishCheckDesc.BackgroundImage = null;
-            this.txtPCFinishCheckDesc.EditValue = null;
             this.txtPCFinishCheckDesc.MenuManager = this.barManager1;
             this.txtPCFinishCheckDesc.Name = "txtPCFinishCheckDesc";
-            this.txtPCFinishCheckDesc.Properties.AccessibleDescription = null;
-            this.txtPCFinishCheckDesc.Properties.AccessibleName = null;
-            this.txtPCFinishCheckDesc.Properties.NullValuePrompt = resources.GetString("txtPCFinishCheckDesc.Properties.NullValuePrompt");
-            this.txtPCFinishCheckDesc.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txtPCFinishCheckDesc.Properties.NullValuePromptShowForEmptyValue")));
             this.txtPCFinishCheckDesc.StyleController = this.layoutControl1;
             this.txtPCFinishCheckDesc.DoubleClick += new System.EventHandler(this.txtPCFinishCheckDesc_DoubleClick);
             // 
             // nccEmployee1
             // 
-            this.nccEmployee1.AccessibleDescription = null;
-            this.nccEmployee1.AccessibleName = null;
-            resources.ApplyResources(this.nccEmployee1, "nccEmployee1");
-            this.nccEmployee1.BackgroundImage = null;
             this.nccEmployee1.EditValue = null;
-            this.nccEmployee1.Font = null;
+            resources.ApplyResources(this.nccEmployee1, "nccEmployee1");
             this.nccEmployee1.Name = "nccEmployee1";
             // 
             // nccEmployee0
             // 
-            this.nccEmployee0.AccessibleDescription = null;
-            this.nccEmployee0.AccessibleName = null;
-            resources.ApplyResources(this.nccEmployee0, "nccEmployee0");
-            this.nccEmployee0.BackgroundImage = null;
             this.nccEmployee0.EditValue = null;
-            this.nccEmployee0.Font = null;
+            resources.ApplyResources(this.nccEmployee0, "nccEmployee0");
             this.nccEmployee0.Name = "nccEmployee0";
             // 
             // CE_InCount
             // 
             resources.ApplyResources(this.CE_InCount, "CE_InCount");
-            this.CE_InCount.BackgroundImage = null;
-            this.CE_InCount.EditValue = null;
             this.CE_InCount.MenuManager = this.barManager1;
             this.CE_InCount.Name = "CE_InCount";
-            this.CE_InCount.Properties.AccessibleDescription = null;
-            this.CE_InCount.Properties.AccessibleName = null;
-            this.CE_InCount.Properties.AutoHeight = ((bool)(resources.GetObject("CE_InCount.Properties.AutoHeight")));
             this.CE_InCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("CE_InCount.Properties.Buttons"))))});
-            this.CE_InCount.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("CE_InCount.Properties.Mask.AutoComplete")));
-            this.CE_InCount.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("CE_InCount.Properties.Mask.BeepOnError")));
-            this.CE_InCount.Properties.Mask.EditMask = resources.GetString("CE_InCount.Properties.Mask.EditMask");
-            this.CE_InCount.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("CE_InCount.Properties.Mask.IgnoreMaskBlank")));
-            this.CE_InCount.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("CE_InCount.Properties.Mask.MaskType")));
-            this.CE_InCount.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("CE_InCount.Properties.Mask.PlaceHolder")));
-            this.CE_InCount.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("CE_InCount.Properties.Mask.SaveLiteral")));
-            this.CE_InCount.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("CE_InCount.Properties.Mask.ShowPlaceHolders")));
-            this.CE_InCount.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("CE_InCount.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.CE_InCount.Properties.NullValuePrompt = resources.GetString("CE_InCount.Properties.NullValuePrompt");
-            this.CE_InCount.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("CE_InCount.Properties.NullValuePromptShowForEmptyValue")));
             this.CE_InCount.StyleController = this.layoutControl1;
             this.CE_InCount.EditValueChanged += new System.EventHandler(this.CE_InCount_EditValueChanged);
             // 
             // CE_Count
             // 
             resources.ApplyResources(this.CE_Count, "CE_Count");
-            this.CE_Count.BackgroundImage = null;
-            this.CE_Count.EditValue = null;
             this.CE_Count.MenuManager = this.barManager1;
             this.CE_Count.Name = "CE_Count";
-            this.CE_Count.Properties.AccessibleDescription = null;
-            this.CE_Count.Properties.AccessibleName = null;
-            this.CE_Count.Properties.AutoHeight = ((bool)(resources.GetObject("CE_Count.Properties.AutoHeight")));
             this.CE_Count.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("CE_Count.Properties.Buttons"))))});
-            this.CE_Count.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("CE_Count.Properties.Mask.AutoComplete")));
-            this.CE_Count.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("CE_Count.Properties.Mask.BeepOnError")));
-            this.CE_Count.Properties.Mask.EditMask = resources.GetString("CE_Count.Properties.Mask.EditMask");
-            this.CE_Count.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("CE_Count.Properties.Mask.IgnoreMaskBlank")));
-            this.CE_Count.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("CE_Count.Properties.Mask.MaskType")));
-            this.CE_Count.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("CE_Count.Properties.Mask.PlaceHolder")));
-            this.CE_Count.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("CE_Count.Properties.Mask.SaveLiteral")));
-            this.CE_Count.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("CE_Count.Properties.Mask.ShowPlaceHolders")));
-            this.CE_Count.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("CE_Count.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.CE_Count.Properties.NullValuePrompt = resources.GetString("CE_Count.Properties.NullValuePrompt");
-            this.CE_Count.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("CE_Count.Properties.NullValuePromptShowForEmptyValue")));
             this.CE_Count.StyleController = this.layoutControl1;
             // 
             // radio_AttrSLDNHWXTMSFZQ
             // 
             resources.ApplyResources(this.radio_AttrSLDNHWXTMSFZQ, "radio_AttrSLDNHWXTMSFZQ");
-            this.radio_AttrSLDNHWXTMSFZQ.BackgroundImage = null;
-            this.radio_AttrSLDNHWXTMSFZQ.EditValue = null;
             this.radio_AttrSLDNHWXTMSFZQ.MenuManager = this.barManager1;
             this.radio_AttrSLDNHWXTMSFZQ.Name = "radio_AttrSLDNHWXTMSFZQ";
-            this.radio_AttrSLDNHWXTMSFZQ.Properties.AccessibleDescription = null;
-            this.radio_AttrSLDNHWXTMSFZQ.Properties.AccessibleName = null;
             this.radio_AttrSLDNHWXTMSFZQ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrSLDNHWXTMSFZQ.Properties.Items"))), resources.GetString("radio_AttrSLDNHWXTMSFZQ.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrSLDNHWXTMSFZQ.Properties.Items2"))), resources.GetString("radio_AttrSLDNHWXTMSFZQ.Properties.Items3")),
@@ -692,12 +488,8 @@
             // radio_AttrPKZRFS
             // 
             resources.ApplyResources(this.radio_AttrPKZRFS, "radio_AttrPKZRFS");
-            this.radio_AttrPKZRFS.BackgroundImage = null;
-            this.radio_AttrPKZRFS.EditValue = null;
             this.radio_AttrPKZRFS.MenuManager = this.barManager1;
             this.radio_AttrPKZRFS.Name = "radio_AttrPKZRFS";
-            this.radio_AttrPKZRFS.Properties.AccessibleDescription = null;
-            this.radio_AttrPKZRFS.Properties.AccessibleName = null;
             this.radio_AttrPKZRFS.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrPKZRFS.Properties.Items"))), resources.GetString("radio_AttrPKZRFS.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrPKZRFS.Properties.Items2"))), resources.GetString("radio_AttrPKZRFS.Properties.Items3")),
@@ -707,12 +499,8 @@
             // radio_AttrJDZRFS
             // 
             resources.ApplyResources(this.radio_AttrJDZRFS, "radio_AttrJDZRFS");
-            this.radio_AttrJDZRFS.BackgroundImage = null;
-            this.radio_AttrJDZRFS.EditValue = null;
             this.radio_AttrJDZRFS.MenuManager = this.barManager1;
             this.radio_AttrJDZRFS.Name = "radio_AttrJDZRFS";
-            this.radio_AttrJDZRFS.Properties.AccessibleDescription = null;
-            this.radio_AttrJDZRFS.Properties.AccessibleName = null;
             this.radio_AttrJDZRFS.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJDZRFS.Properties.Items"))), resources.GetString("radio_AttrJDZRFS.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJDZRFS.Properties.Items2"))), resources.GetString("radio_AttrJDZRFS.Properties.Items3")),
@@ -722,12 +510,8 @@
             // radio_AttrJSSFZQ
             // 
             resources.ApplyResources(this.radio_AttrJSSFZQ, "radio_AttrJSSFZQ");
-            this.radio_AttrJSSFZQ.BackgroundImage = null;
-            this.radio_AttrJSSFZQ.EditValue = null;
             this.radio_AttrJSSFZQ.MenuManager = this.barManager1;
             this.radio_AttrJSSFZQ.Name = "radio_AttrJSSFZQ";
-            this.radio_AttrJSSFZQ.Properties.AccessibleDescription = null;
-            this.radio_AttrJSSFZQ.Properties.AccessibleName = null;
             this.radio_AttrJSSFZQ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJSSFZQ.Properties.Items"))), resources.GetString("radio_AttrJSSFZQ.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJSSFZQ.Properties.Items2"))), resources.GetString("radio_AttrJSSFZQ.Properties.Items3")),
@@ -737,12 +521,8 @@
             // radio_AttrNHTB
             // 
             resources.ApplyResources(this.radio_AttrNHTB, "radio_AttrNHTB");
-            this.radio_AttrNHTB.BackgroundImage = null;
-            this.radio_AttrNHTB.EditValue = null;
             this.radio_AttrNHTB.MenuManager = this.barManager1;
             this.radio_AttrNHTB.Name = "radio_AttrNHTB";
-            this.radio_AttrNHTB.Properties.AccessibleDescription = null;
-            this.radio_AttrNHTB.Properties.AccessibleName = null;
             this.radio_AttrNHTB.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrNHTB.Properties.Items"))), resources.GetString("radio_AttrNHTB.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrNHTB.Properties.Items2"))), resources.GetString("radio_AttrNHTB.Properties.Items3")),
@@ -752,12 +532,8 @@
             // radio_AttrNHDQSFZQ
             // 
             resources.ApplyResources(this.radio_AttrNHDQSFZQ, "radio_AttrNHDQSFZQ");
-            this.radio_AttrNHDQSFZQ.BackgroundImage = null;
-            this.radio_AttrNHDQSFZQ.EditValue = null;
             this.radio_AttrNHDQSFZQ.MenuManager = this.barManager1;
             this.radio_AttrNHDQSFZQ.Name = "radio_AttrNHDQSFZQ";
-            this.radio_AttrNHDQSFZQ.Properties.AccessibleDescription = null;
-            this.radio_AttrNHDQSFZQ.Properties.AccessibleName = null;
             this.radio_AttrNHDQSFZQ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrNHDQSFZQ.Properties.Items"))), resources.GetString("radio_AttrNHDQSFZQ.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrNHDQSFZQ.Properties.Items2"))), resources.GetString("radio_AttrNHDQSFZQ.Properties.Items3")),
@@ -767,12 +543,8 @@
             // radio_AttrSLDSFMF
             // 
             resources.ApplyResources(this.radio_AttrSLDSFMF, "radio_AttrSLDSFMF");
-            this.radio_AttrSLDSFMF.BackgroundImage = null;
-            this.radio_AttrSLDSFMF.EditValue = null;
             this.radio_AttrSLDSFMF.MenuManager = this.barManager1;
             this.radio_AttrSLDSFMF.Name = "radio_AttrSLDSFMF";
-            this.radio_AttrSLDSFMF.Properties.AccessibleDescription = null;
-            this.radio_AttrSLDSFMF.Properties.AccessibleName = null;
             this.radio_AttrSLDSFMF.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrSLDSFMF.Properties.Items"))), resources.GetString("radio_AttrSLDSFMF.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrSLDSFMF.Properties.Items2"))), resources.GetString("radio_AttrSLDSFMF.Properties.Items3")),
@@ -782,12 +554,8 @@
             // radio_AttrZMCM
             // 
             resources.ApplyResources(this.radio_AttrZMCM, "radio_AttrZMCM");
-            this.radio_AttrZMCM.BackgroundImage = null;
-            this.radio_AttrZMCM.EditValue = null;
             this.radio_AttrZMCM.MenuManager = this.barManager1;
             this.radio_AttrZMCM.Name = "radio_AttrZMCM";
-            this.radio_AttrZMCM.Properties.AccessibleDescription = null;
-            this.radio_AttrZMCM.Properties.AccessibleName = null;
             this.radio_AttrZMCM.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrZMCM.Properties.Items"))), resources.GetString("radio_AttrZMCM.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrZMCM.Properties.Items2"))), resources.GetString("radio_AttrZMCM.Properties.Items3")),
@@ -797,12 +565,8 @@
             // radio_AttrWXTB
             // 
             resources.ApplyResources(this.radio_AttrWXTB, "radio_AttrWXTB");
-            this.radio_AttrWXTB.BackgroundImage = null;
-            this.radio_AttrWXTB.EditValue = null;
             this.radio_AttrWXTB.MenuManager = this.barManager1;
             this.radio_AttrWXTB.Name = "radio_AttrWXTB";
-            this.radio_AttrWXTB.Properties.AccessibleDescription = null;
-            this.radio_AttrWXTB.Properties.AccessibleName = null;
             this.radio_AttrWXTB.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrWXTB.Properties.Items"))), resources.GetString("radio_AttrWXTB.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrWXTB.Properties.Items2"))), resources.GetString("radio_AttrWXTB.Properties.Items3")),
@@ -812,12 +576,8 @@
             // radio_AttrCJBZ
             // 
             resources.ApplyResources(this.radio_AttrCJBZ, "radio_AttrCJBZ");
-            this.radio_AttrCJBZ.BackgroundImage = null;
-            this.radio_AttrCJBZ.EditValue = null;
             this.radio_AttrCJBZ.MenuManager = this.barManager1;
             this.radio_AttrCJBZ.Name = "radio_AttrCJBZ";
-            this.radio_AttrCJBZ.Properties.AccessibleDescription = null;
-            this.radio_AttrCJBZ.Properties.AccessibleName = null;
             this.radio_AttrCJBZ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrCJBZ.Properties.Items"))), resources.GetString("radio_AttrCJBZ.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrCJBZ.Properties.Items2"))), resources.GetString("radio_AttrCJBZ.Properties.Items3")),
@@ -827,12 +587,8 @@
             // radio_AttrTSL
             // 
             resources.ApplyResources(this.radio_AttrTSL, "radio_AttrTSL");
-            this.radio_AttrTSL.BackgroundImage = null;
-            this.radio_AttrTSL.EditValue = null;
             this.radio_AttrTSL.MenuManager = this.barManager1;
             this.radio_AttrTSL.Name = "radio_AttrTSL";
-            this.radio_AttrTSL.Properties.AccessibleDescription = null;
-            this.radio_AttrTSL.Properties.AccessibleName = null;
             this.radio_AttrTSL.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrTSL.Properties.Items"))), resources.GetString("radio_AttrTSL.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrTSL.Properties.Items2"))), resources.GetString("radio_AttrTSL.Properties.Items3")),
@@ -842,12 +598,8 @@
             // radio_AttrGX
             // 
             resources.ApplyResources(this.radio_AttrGX, "radio_AttrGX");
-            this.radio_AttrGX.BackgroundImage = null;
-            this.radio_AttrGX.EditValue = null;
             this.radio_AttrGX.MenuManager = this.barManager1;
             this.radio_AttrGX.Name = "radio_AttrGX";
-            this.radio_AttrGX.Properties.AccessibleDescription = null;
-            this.radio_AttrGX.Properties.AccessibleName = null;
             this.radio_AttrGX.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrGX.Properties.Items"))), resources.GetString("radio_AttrGX.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrGX.Properties.Items2"))), resources.GetString("radio_AttrGX.Properties.Items3")),
@@ -857,12 +609,8 @@
             // radio_AttrJJSFTSYH
             // 
             resources.ApplyResources(this.radio_AttrJJSFTSYH, "radio_AttrJJSFTSYH");
-            this.radio_AttrJJSFTSYH.BackgroundImage = null;
-            this.radio_AttrJJSFTSYH.EditValue = null;
             this.radio_AttrJJSFTSYH.MenuManager = this.barManager1;
             this.radio_AttrJJSFTSYH.Name = "radio_AttrJJSFTSYH";
-            this.radio_AttrJJSFTSYH.Properties.AccessibleDescription = null;
-            this.radio_AttrJJSFTSYH.Properties.AccessibleName = null;
             this.radio_AttrJJSFTSYH.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJJSFTSYH.Properties.Items"))), resources.GetString("radio_AttrJJSFTSYH.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJJSFTSYH.Properties.Items2"))), resources.GetString("radio_AttrJJSFTSYH.Properties.Items3")),
@@ -872,12 +620,8 @@
             // radio_AttrJPSX
             // 
             resources.ApplyResources(this.radio_AttrJPSX, "radio_AttrJPSX");
-            this.radio_AttrJPSX.BackgroundImage = null;
-            this.radio_AttrJPSX.EditValue = null;
             this.radio_AttrJPSX.MenuManager = this.barManager1;
             this.radio_AttrJPSX.Name = "radio_AttrJPSX";
-            this.radio_AttrJPSX.Properties.AccessibleDescription = null;
-            this.radio_AttrJPSX.Properties.AccessibleName = null;
             this.radio_AttrJPSX.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJPSX.Properties.Items"))), resources.GetString("radio_AttrJPSX.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJPSX.Properties.Items2"))), resources.GetString("radio_AttrJPSX.Properties.Items3")),
@@ -887,12 +631,8 @@
             // radio_AttrJPJHZQ
             // 
             resources.ApplyResources(this.radio_AttrJPJHZQ, "radio_AttrJPJHZQ");
-            this.radio_AttrJPJHZQ.BackgroundImage = null;
-            this.radio_AttrJPJHZQ.EditValue = null;
             this.radio_AttrJPJHZQ.MenuManager = this.barManager1;
             this.radio_AttrJPJHZQ.Name = "radio_AttrJPJHZQ";
-            this.radio_AttrJPJHZQ.Properties.AccessibleDescription = null;
-            this.radio_AttrJPJHZQ.Properties.AccessibleName = null;
             this.radio_AttrJPJHZQ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJPJHZQ.Properties.Items"))), resources.GetString("radio_AttrJPJHZQ.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJPJHZQ.Properties.Items2"))), resources.GetString("radio_AttrJPJHZQ.Properties.Items3")),
@@ -902,12 +642,8 @@
             // radio_AttrJPBKGS
             // 
             resources.ApplyResources(this.radio_AttrJPBKGS, "radio_AttrJPBKGS");
-            this.radio_AttrJPBKGS.BackgroundImage = null;
-            this.radio_AttrJPBKGS.EditValue = null;
             this.radio_AttrJPBKGS.MenuManager = this.barManager1;
             this.radio_AttrJPBKGS.Name = "radio_AttrJPBKGS";
-            this.radio_AttrJPBKGS.Properties.AccessibleDescription = null;
-            this.radio_AttrJPBKGS.Properties.AccessibleName = null;
             this.radio_AttrJPBKGS.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJPBKGS.Properties.Items"))), resources.GetString("radio_AttrJPBKGS.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJPBKGS.Properties.Items2"))), resources.GetString("radio_AttrJPBKGS.Properties.Items3")),
@@ -917,12 +653,8 @@
             // radio_AttrZZWBXGJ
             // 
             resources.ApplyResources(this.radio_AttrZZWBXGJ, "radio_AttrZZWBXGJ");
-            this.radio_AttrZZWBXGJ.BackgroundImage = null;
-            this.radio_AttrZZWBXGJ.EditValue = null;
             this.radio_AttrZZWBXGJ.MenuManager = this.barManager1;
             this.radio_AttrZZWBXGJ.Name = "radio_AttrZZWBXGJ";
-            this.radio_AttrZZWBXGJ.Properties.AccessibleDescription = null;
-            this.radio_AttrZZWBXGJ.Properties.AccessibleName = null;
             this.radio_AttrZZWBXGJ.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrZZWBXGJ.Properties.Items"))), resources.GetString("radio_AttrZZWBXGJ.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrZZWBXGJ.Properties.Items2"))), resources.GetString("radio_AttrZZWBXGJ.Properties.Items3")),
@@ -932,12 +664,8 @@
             // radio_AttrGZBKYRL
             // 
             resources.ApplyResources(this.radio_AttrGZBKYRL, "radio_AttrGZBKYRL");
-            this.radio_AttrGZBKYRL.BackgroundImage = null;
-            this.radio_AttrGZBKYRL.EditValue = null;
             this.radio_AttrGZBKYRL.MenuManager = this.barManager1;
             this.radio_AttrGZBKYRL.Name = "radio_AttrGZBKYRL";
-            this.radio_AttrGZBKYRL.Properties.AccessibleDescription = null;
-            this.radio_AttrGZBKYRL.Properties.AccessibleName = null;
             this.radio_AttrGZBKYRL.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrGZBKYRL.Properties.Items"))), resources.GetString("radio_AttrGZBKYRL.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrGZBKYRL.Properties.Items2"))), resources.GetString("radio_AttrGZBKYRL.Properties.Items3")),
@@ -947,35 +675,15 @@
             // txtProduct
             // 
             resources.ApplyResources(this.txtProduct, "txtProduct");
-            this.txtProduct.BackgroundImage = null;
-            this.txtProduct.EditValue = null;
             this.txtProduct.MenuManager = this.barManager1;
             this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Properties.AccessibleDescription = null;
-            this.txtProduct.Properties.AccessibleName = null;
-            this.txtProduct.Properties.AutoHeight = ((bool)(resources.GetObject("txtProduct.Properties.AutoHeight")));
-            this.txtProduct.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txtProduct.Properties.Mask.AutoComplete")));
-            this.txtProduct.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txtProduct.Properties.Mask.BeepOnError")));
-            this.txtProduct.Properties.Mask.EditMask = resources.GetString("txtProduct.Properties.Mask.EditMask");
-            this.txtProduct.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txtProduct.Properties.Mask.IgnoreMaskBlank")));
-            this.txtProduct.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtProduct.Properties.Mask.MaskType")));
-            this.txtProduct.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txtProduct.Properties.Mask.PlaceHolder")));
-            this.txtProduct.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txtProduct.Properties.Mask.SaveLiteral")));
-            this.txtProduct.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txtProduct.Properties.Mask.ShowPlaceHolders")));
-            this.txtProduct.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtProduct.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txtProduct.Properties.NullValuePrompt = resources.GetString("txtProduct.Properties.NullValuePrompt");
-            this.txtProduct.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txtProduct.Properties.NullValuePromptShowForEmptyValue")));
             this.txtProduct.StyleController = this.layoutControl1;
             // 
             // radio_AttrJWYHWRL
             // 
             resources.ApplyResources(this.radio_AttrJWYHWRL, "radio_AttrJWYHWRL");
-            this.radio_AttrJWYHWRL.BackgroundImage = null;
-            this.radio_AttrJWYHWRL.EditValue = null;
             this.radio_AttrJWYHWRL.MenuManager = this.barManager1;
             this.radio_AttrJWYHWRL.Name = "radio_AttrJWYHWRL";
-            this.radio_AttrJWYHWRL.Properties.AccessibleDescription = null;
-            this.radio_AttrJWYHWRL.Properties.AccessibleName = null;
             this.radio_AttrJWYHWRL.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJWYHWRL.Properties.Items"))), resources.GetString("radio_AttrJWYHWRL.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrJWYHWRL.Properties.Items2"))), resources.GetString("radio_AttrJWYHWRL.Properties.Items3")),
@@ -985,12 +693,8 @@
             // radio_AttrDZDWQDW
             // 
             resources.ApplyResources(this.radio_AttrDZDWQDW, "radio_AttrDZDWQDW");
-            this.radio_AttrDZDWQDW.BackgroundImage = null;
-            this.radio_AttrDZDWQDW.EditValue = null;
             this.radio_AttrDZDWQDW.MenuManager = this.barManager1;
             this.radio_AttrDZDWQDW.Name = "radio_AttrDZDWQDW";
-            this.radio_AttrDZDWQDW.Properties.AccessibleDescription = null;
-            this.radio_AttrDZDWQDW.Properties.AccessibleName = null;
             this.radio_AttrDZDWQDW.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrDZDWQDW.Properties.Items"))), resources.GetString("radio_AttrDZDWQDW.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radio_AttrDZDWQDW.Properties.Items2"))), resources.GetString("radio_AttrDZDWQDW.Properties.Items3")),
@@ -999,90 +703,42 @@
             // 
             // label3
             // 
-            this.label3.AccessibleDescription = null;
-            this.label3.AccessibleName = null;
             resources.ApplyResources(this.label3, "label3");
-            this.label3.Font = null;
             this.label3.Name = "label3";
             // 
             // label1
             // 
-            this.label1.AccessibleDescription = null;
-            this.label1.AccessibleName = null;
             resources.ApplyResources(this.label1, "label1");
-            this.label1.Font = null;
             this.label1.Name = "label1";
             // 
             // txtInvoiceCusXOId
             // 
             resources.ApplyResources(this.txtInvoiceCusXOId, "txtInvoiceCusXOId");
-            this.txtInvoiceCusXOId.BackgroundImage = null;
-            this.txtInvoiceCusXOId.EditValue = null;
             this.txtInvoiceCusXOId.MenuManager = this.barManager1;
             this.txtInvoiceCusXOId.Name = "txtInvoiceCusXOId";
-            this.txtInvoiceCusXOId.Properties.AccessibleDescription = null;
-            this.txtInvoiceCusXOId.Properties.AccessibleName = null;
-            this.txtInvoiceCusXOId.Properties.AutoHeight = ((bool)(resources.GetObject("txtInvoiceCusXOId.Properties.AutoHeight")));
-            this.txtInvoiceCusXOId.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txtInvoiceCusXOId.Properties.Mask.AutoComplete")));
-            this.txtInvoiceCusXOId.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txtInvoiceCusXOId.Properties.Mask.BeepOnError")));
-            this.txtInvoiceCusXOId.Properties.Mask.EditMask = resources.GetString("txtInvoiceCusXOId.Properties.Mask.EditMask");
-            this.txtInvoiceCusXOId.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txtInvoiceCusXOId.Properties.Mask.IgnoreMaskBlank")));
-            this.txtInvoiceCusXOId.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtInvoiceCusXOId.Properties.Mask.MaskType")));
-            this.txtInvoiceCusXOId.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txtInvoiceCusXOId.Properties.Mask.PlaceHolder")));
-            this.txtInvoiceCusXOId.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txtInvoiceCusXOId.Properties.Mask.SaveLiteral")));
-            this.txtInvoiceCusXOId.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txtInvoiceCusXOId.Properties.Mask.ShowPlaceHolders")));
-            this.txtInvoiceCusXOId.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtInvoiceCusXOId.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txtInvoiceCusXOId.Properties.NullValuePrompt = resources.GetString("txtInvoiceCusXOId.Properties.NullValuePrompt");
-            this.txtInvoiceCusXOId.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txtInvoiceCusXOId.Properties.NullValuePromptShowForEmptyValue")));
             this.txtInvoiceCusXOId.StyleController = this.layoutControl1;
             // 
             // nccWorkHouse
             // 
-            this.nccWorkHouse.AccessibleDescription = null;
-            this.nccWorkHouse.AccessibleName = null;
-            resources.ApplyResources(this.nccWorkHouse, "nccWorkHouse");
-            this.nccWorkHouse.BackgroundImage = null;
             this.nccWorkHouse.EditValue = null;
-            this.nccWorkHouse.Font = null;
+            resources.ApplyResources(this.nccWorkHouse, "nccWorkHouse");
             this.nccWorkHouse.Name = "nccWorkHouse";
             // 
             // label2
             // 
-            this.label2.AccessibleDescription = null;
-            this.label2.AccessibleName = null;
             resources.ApplyResources(this.label2, "label2");
-            this.label2.Font = null;
             this.label2.Name = "label2";
             // 
             // txtPCFinishCheckID
             // 
             resources.ApplyResources(this.txtPCFinishCheckID, "txtPCFinishCheckID");
-            this.txtPCFinishCheckID.BackgroundImage = null;
-            this.txtPCFinishCheckID.EditValue = null;
             this.txtPCFinishCheckID.MenuManager = this.barManager1;
             this.txtPCFinishCheckID.Name = "txtPCFinishCheckID";
-            this.txtPCFinishCheckID.Properties.AccessibleDescription = null;
-            this.txtPCFinishCheckID.Properties.AccessibleName = null;
-            this.txtPCFinishCheckID.Properties.AutoHeight = ((bool)(resources.GetObject("txtPCFinishCheckID.Properties.AutoHeight")));
-            this.txtPCFinishCheckID.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("txtPCFinishCheckID.Properties.Mask.AutoComplete")));
-            this.txtPCFinishCheckID.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("txtPCFinishCheckID.Properties.Mask.BeepOnError")));
-            this.txtPCFinishCheckID.Properties.Mask.EditMask = resources.GetString("txtPCFinishCheckID.Properties.Mask.EditMask");
-            this.txtPCFinishCheckID.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("txtPCFinishCheckID.Properties.Mask.IgnoreMaskBlank")));
-            this.txtPCFinishCheckID.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("txtPCFinishCheckID.Properties.Mask.MaskType")));
-            this.txtPCFinishCheckID.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("txtPCFinishCheckID.Properties.Mask.PlaceHolder")));
-            this.txtPCFinishCheckID.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("txtPCFinishCheckID.Properties.Mask.SaveLiteral")));
-            this.txtPCFinishCheckID.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("txtPCFinishCheckID.Properties.Mask.ShowPlaceHolders")));
-            this.txtPCFinishCheckID.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("txtPCFinishCheckID.Properties.Mask.UseMaskAsDisplayFormat")));
-            this.txtPCFinishCheckID.Properties.NullValuePrompt = resources.GetString("txtPCFinishCheckID.Properties.NullValuePrompt");
-            this.txtPCFinishCheckID.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("txtPCFinishCheckID.Properties.NullValuePromptShowForEmptyValue")));
             this.txtPCFinishCheckID.StyleController = this.layoutControl1;
             // 
             // label4
             // 
-            this.label4.AccessibleDescription = null;
-            this.label4.AccessibleName = null;
             resources.ApplyResources(this.label4, "label4");
-            this.label4.Font = null;
             this.label4.Name = "label4";
             // 
             // layoutControlGroup1
@@ -1133,13 +789,13 @@
             this.layoutControlItem45,
             this.layoutControlItem38,
             this.layoutControlItem36,
-            this.emptySpaceItem1,
             this.layoutControlItem44,
             this.layoutControlItem43,
             this.emptySpaceItem3,
             this.layoutControlItem46,
             this.layoutControlItem30,
-            this.layoutControlItem47});
+            this.layoutControlItem47,
+            this.layoutControlItem48});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(896, 541);
@@ -1564,14 +1220,6 @@
             this.layoutControlItem36.TextToControlDistance = 0;
             this.layoutControlItem36.TextVisible = false;
             // 
-            // emptySpaceItem1
-            // 
-            resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
-            this.emptySpaceItem1.Location = new System.Drawing.Point(227, 75);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(219, 26);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem44
             // 
             this.layoutControlItem44.Control = this.txt_AnnualRing;
@@ -1641,8 +1289,6 @@
             // 
             // barBtn_Search
             // 
-            this.barBtn_Search.AccessibleDescription = null;
-            this.barBtn_Search.AccessibleName = null;
             resources.ApplyResources(this.barBtn_Search, "barBtn_Search");
             this.barBtn_Search.Id = 13;
             this.barBtn_Search.ImageIndex = 3;
@@ -1651,36 +1297,43 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.AccessibleDescription = null;
-            this.barButtonItem2.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem2, "barButtonItem2");
             this.barButtonItem2.Id = 15;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.AccessibleDescription = null;
-            this.barButtonItem1.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
             this.barButtonItem1.Id = 14;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
             // barButtonItem3
             // 
-            this.barButtonItem3.AccessibleDescription = null;
-            this.barButtonItem3.AccessibleName = null;
             resources.ApplyResources(this.barButtonItem3, "barButtonItem3");
             this.barButtonItem3.Id = 15;
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
+            // txt_InvoiceCountNum
+            // 
+            resources.ApplyResources(this.txt_InvoiceCountNum, "txt_InvoiceCountNum");
+            this.txt_InvoiceCountNum.MenuManager = this.barManager1;
+            this.txt_InvoiceCountNum.Name = "txt_InvoiceCountNum";
+            this.txt_InvoiceCountNum.StyleController = this.layoutControl1;
+            // 
+            // layoutControlItem48
+            // 
+            this.layoutControlItem48.Control = this.txt_InvoiceCountNum;
+            resources.ApplyResources(this.layoutControlItem48, "layoutControlItem48");
+            this.layoutControlItem48.Location = new System.Drawing.Point(227, 75);
+            this.layoutControlItem48.Name = "layoutControlItem48";
+            this.layoutControlItem48.Size = new System.Drawing.Size(219, 26);
+            this.layoutControlItem48.TextSize = new System.Drawing.Size(125, 14);
+            // 
             // EditForm
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.layoutControl1);
-            this.Icon = null;
             this.Name = "EditForm";
             this.Load += new System.EventHandler(this.EditForm_Load);
             this.Controls.SetChildIndex(this.layoutControl1, 0);
@@ -1770,7 +1423,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
@@ -1778,6 +1430,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_InvoiceCountNum.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1882,11 +1536,12 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraEditors.TextEdit txt_Pihao;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraEditors.RadioGroup radio_AttrESSFYGZTZ;
         private DevExpress.XtraEditors.RadioGroup radio_AttrESSSFZH;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem46;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem47;
+        private DevExpress.XtraEditors.TextEdit txt_InvoiceCountNum;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem48;
     }
 }

@@ -39,6 +39,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             if (pcDataInput.PCOpticalMachineList != null && pcDataInput.PCOpticalMachineList.Count != 0)
                 this.xrSubreportPCOpticalMachine.ReportSource = new PCOpticalMachineRO(pcDataInput.PCOpticalMachineList, pcDataInput);
+
+            if (pcDataInput.PCDefinitionList != null && pcDataInput.PCDefinitionList.Count != 0)
+                this.subReport_PCDefinition.ReportSource = new PCDefinitionRO(pcDataInput.PCDefinitionList);
         }
     }
 }

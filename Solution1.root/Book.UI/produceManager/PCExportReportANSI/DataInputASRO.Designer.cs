@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.subReport_PCDefinition = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreportPCHaze = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable9 = new DevExpress.XtraReports.UI.XRTable();
@@ -61,6 +62,7 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.subReport_PCDefinition,
             this.xrSubreportPCHaze,
             this.xrLabel6,
             this.xrTable9,
@@ -75,10 +77,17 @@
             this.xrLabel4,
             this.xrSubreportAS});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 1974.004F;
+            this.Detail.HeightF = 2003.108F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // subReport_PCDefinition
+            // 
+            this.subReport_PCDefinition.Dpi = 254F;
+            this.subReport_PCDefinition.LocationFloat = new DevExpress.Utils.PointFloat(31.74994F, 1859.915F);
+            this.subReport_PCDefinition.Name = "subReport_PCDefinition";
+            this.subReport_PCDefinition.SizeF = new System.Drawing.SizeF(1963.417F, 66.35754F);
             // 
             // xrSubreportPCHaze
             // 
@@ -91,7 +100,7 @@
             // 
             this.xrLabel6.Dpi = 254F;
             this.xrLabel6.Font = new System.Drawing.Font("新細明體", 12F);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(854.6042F, 1915.584F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(854.6042F, 1944.688F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(317.4998F, 58.42004F);
@@ -372,5 +381,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreportAS;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreportPCHaze;
+        private DevExpress.XtraReports.UI.XRSubreport subReport_PCDefinition;
     }
 }

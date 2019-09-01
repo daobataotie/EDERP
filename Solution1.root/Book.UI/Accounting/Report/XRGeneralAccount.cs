@@ -46,11 +46,11 @@ namespace Book.UI.Accounting.Report
         {
             XRGeneralAccountDetail subreport = this.xrSubreport1.ReportSource as XRGeneralAccountDetail;
             Model.AtAccountSubject ataccountsubject = this.GetCurrentRow() as Model.AtAccountSubject;
-            if (ataccountsubject != null)
-            {
-                subreport.ataccountsubject = ataccountsubject;
-                this._calcSubjects.Add(subreport.ataccountsubject);
-            }
+            //if (ataccountsubject != null)
+            //{
+            subreport.ataccountsubject = ataccountsubject;
+            this._calcSubjects.Add(subreport.ataccountsubject);
+            //}
         }
 
         private void XRGeneralAccount_AfterPrint(object sender, EventArgs e)

@@ -35,6 +35,7 @@ namespace Book.UI.Hr.Attendance.ClockData
             DateTime dateEnd = this.date_End.DateTime.Date.AddDays(1).AddSeconds(-1);
 
             this.gridControl1.DataSource = clockDataManager.getbydate(dateStart, dateEnd);
+            this.labelControl1.Text = "總計：" + this.gridView1.RowCount.ToString();
         }
 
         private void btn_UpdateClockRecord_Click(object sender, EventArgs e)

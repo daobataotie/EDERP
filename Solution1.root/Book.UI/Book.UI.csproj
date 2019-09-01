@@ -4375,6 +4375,24 @@
     <EmbeddedResource Include="Invoices\CO\SupplierShouldPay.resx">
       <DependentUpon>SupplierShouldPay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCClarityCheck\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCClarityCheck\EditForm.zh-CHT.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCClarityCheck\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCClarityCheck\ListForm.zh-CHT.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCClarityCheck\RO.resx">
+      <DependentUpon>RO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCClarityCheck\RO.zh-CHT.resx">
+      <DependentUpon>RO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCEarplugs\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -4396,6 +4414,9 @@
     <EmbeddedResource Include="produceManager\PCEarplugs\ResilienceConditionSet.resx">
       <DependentUpon>ResilienceConditionSet.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ResilienceConditionWeight.zh-CHT.resx">
+      <DependentUpon>ResilienceConditionWeight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCEarplugs\ROResilience.resx">
       <DependentUpon>ROResilience.cs</DependentUpon>
@@ -4442,6 +4463,10 @@
     <EmbeddedResource Include="produceManager\PCEarplugs\ROStayWire.zh-CHT.resx">
       <DependentUpon>ROStayWire.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCEarplugs\ResilienceConditionWeight.resx">
+      <DependentUpon>ResilienceConditionWeight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\ANSI2015RO.zh-CHT.resx">
       <DependentUpon>ANSI2015RO.cs</DependentUpon>
     </EmbeddedResource>
@@ -4459,6 +4484,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCExportReportANSI\CEENRO_WURTH.zh-CHT.resx">
       <DependentUpon>CEENRO_WURTH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCExportReportANSI\PCDefinitionRO.resx">
+      <DependentUpon>PCDefinitionRO.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFlameRetardant\ConditionForm.resx">
@@ -11807,6 +11836,24 @@
     <Compile Include="Invoices\CO\SupplierShouldPay.Designer.cs">
       <DependentUpon>SupplierShouldPay.cs</DependentUpon>
     </Compile>
+    <Compile Include="produceManager\PCClarityCheck\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCClarityCheck\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCClarityCheck\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCClarityCheck\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCClarityCheck\RO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCClarityCheck\RO.Designer.cs">
+      <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
     <Compile Include="produceManager\PCEarplugs\ConditionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11879,6 +11926,12 @@
     <Compile Include="produceManager\PCEarplugs\ROStayWire.Designer.cs">
       <DependentUpon>ROStayWire.cs</DependentUpon>
     </Compile>
+    <Compile Include="produceManager\PCEarplugs\ResilienceConditionWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCEarplugs\ResilienceConditionWeight.Designer.cs">
+      <DependentUpon>ResilienceConditionWeight.cs</DependentUpon>
+    </Compile>
     <Compile Include="produceManager\PCExportReportANSI\CEENEditsForm_WURTH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11890,6 +11943,12 @@
     </Compile>
     <Compile Include="produceManager\PCExportReportANSI\CEENRO_WURTH.Designer.cs">
       <DependentUpon>CEENRO_WURTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\PCDefinitionRO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCExportReportANSI\PCDefinitionRO.Designer.cs">
+      <DependentUpon>PCDefinitionRO.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCFlameRetardant\ConditionForm.cs">
       <SubType>Form</SubType>

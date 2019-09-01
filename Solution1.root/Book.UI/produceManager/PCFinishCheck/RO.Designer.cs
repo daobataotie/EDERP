@@ -270,19 +270,10 @@ namespace Book.UI.produceManager.PCFinishCheck
             // checkEdit1
             // 
             resources.ApplyResources(this.checkEdit1, "checkEdit1");
-            this.checkEdit1.BackgroundImage = null;
             this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.AccessibleDescription = null;
-            this.checkEdit1.Properties.AccessibleName = null;
             this.checkEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkEdit1.Properties.Appearance.Font")));
-            this.checkEdit1.Properties.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("checkEdit1.Properties.Appearance.GradientMode")));
-            this.checkEdit1.Properties.Appearance.Image = null;
             this.checkEdit1.Properties.Appearance.Options.UseFont = true;
-            this.checkEdit1.Properties.AutoHeight = ((bool)(resources.GetObject("checkEdit1.Properties.AutoHeight")));
             this.checkEdit1.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
-            this.checkEdit1.Properties.DisplayValueChecked = resources.GetString("checkEdit1.Properties.DisplayValueChecked");
-            this.checkEdit1.Properties.DisplayValueGrayed = resources.GetString("checkEdit1.Properties.DisplayValueGrayed");
-            this.checkEdit1.Properties.DisplayValueUnchecked = resources.GetString("checkEdit1.Properties.DisplayValueUnchecked");
             // 
             // lbl_JHDate
             // 
@@ -1209,9 +1200,10 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             resources.ApplyResources(this.xrLabel7, "xrLabel7");
             this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 5, 0, 254F);
             this.xrLabel7.StylePriority.UseBorders = false;
             this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UsePadding = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             // 
             // lblPCFinishCheckInCoiunt

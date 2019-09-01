@@ -52,13 +52,14 @@ namespace Book.BL
             //
             try
             {
+                pCFlameRetardant.InsertTime = DateTime.Now;
+                pCFlameRetardant.UpdateTime = DateTime.Now;
+
                 this.Validate(pCFlameRetardant);
                 this.TiGuiExists(pCFlameRetardant);
 
                 BL.V.BeginTransaction();
 
-                pCFlameRetardant.InsertTime = DateTime.Now;
-                pCFlameRetardant.UpdateTime = DateTime.Now;
 
                 accessor.Insert(pCFlameRetardant);
 

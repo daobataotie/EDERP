@@ -354,6 +354,10 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
 
         protected override void Save()
         {
+            if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
+                return;
+            UpdateMoneyFields();       //2019年8月6日22:56:45 ，可能存在总金额计算为0，所以保存时再算一次
+
             this._acInvoiceXoBill.AcInvoiceXOBillId = this.AcInvoiceXOBillId.Text;
             this._acInvoiceXoBill.Id = this.XoId.Text;
             this._acInvoiceXoBill.Customer = this.newChooseCustomerId.EditValue as Model.Customer;
@@ -412,8 +416,6 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             //    this._acInvoiceXoBill.Employee1Id = this._acInvoiceXoBill.Employee1.EmployeeId;
 
             this._acInvoiceXoBill.InvoiceStatus = 1;
-            if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
-                return;
 
             switch (this.action)
             {
@@ -772,6 +774,12 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
                 }
                 else
                 {
+                    //this.calcHeJiMoney.EditValue = yse;
+                    //this.calcTaxRateMoney.EditValue = 0;
+                    //this.calcZongMoney.EditValue = yse;
+                    //this.calcNoHeXiaoTotal.Value = this.GetDecimal(this.calcZongMoney.Value - this.calcmHeXiaoJingE.Value, 0);
+
+
                     //this.calcEditInvoiceTotal.EditValue = tol;
                     //this.calcEditInvoiceHeji.EditValue = yse;
                     //// this.calcEditInvoiceHeji.EditValue = yse * 100 / (100 + this.spinEditInvoiceTaxRate.Value);

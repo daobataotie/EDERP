@@ -532,6 +532,11 @@ namespace Book.BL
         {
             return accessor.SelectIdByNameAnId(name, id);
         }
+
+        public IList<Model.Employee> SelectIdAndName()
+        {
+            return accessor.SelectIdAndName();
+        }
     }
 
     public static class Help

@@ -54,11 +54,11 @@ namespace Book.BL
             {
                 BL.V.BeginTransaction();
 
-                Validate(pCEarplugsDecibelCheck);
-                this.TiGuiExists(pCEarplugsDecibelCheck);
-
                 pCEarplugsDecibelCheck.InsertTime = DateTime.Now;
                 pCEarplugsDecibelCheck.UpdateTime = DateTime.Now;
+
+                Validate(pCEarplugsDecibelCheck);
+                this.TiGuiExists(pCEarplugsDecibelCheck);
 
                 accessor.Insert(pCEarplugsDecibelCheck);
                 string invoiceKind = this.GetInvoiceKind().ToLower();

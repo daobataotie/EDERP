@@ -783,6 +783,9 @@ namespace Book.UI
             operations.Add("Invoices.CO.SupplierShouldPay", (D1)delegate(System.Windows.Forms.Form form) { M1("Invoices.CO.SupplierShouldPay", form); });
             //CEEN_WURTH
             operations.Add("produceManager.PCExportReportANSI.CEENEditsForm_WURTH", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.CEENEditsForm_WURTH", form); });
+
+            //清晰度报告
+            operations.Add("produceManager.PCClarityCheck.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCClarityCheck.EditForm", form); });
         }
 
         static Form CreateForm(string formTypeName)

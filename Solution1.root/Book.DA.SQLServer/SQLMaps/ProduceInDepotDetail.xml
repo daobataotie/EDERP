@@ -95,8 +95,8 @@
     <select id="Get_HJForColumnName_Header" parameterClass="Map" resultClass="Double">
       <![CDATA[
       SELECT ISNULL(SUM($GetColumn$),0) FROM ProduceInDepotDetail
-      WHERE PronoteHeaderId = #PronoteHeaderId#
-      AND ProductId = #ProductId#
+      WHERE PronoteHeaderId = #PronoteHeaderId:varchar#
+      AND ProductId = #ProductId:varchar#
       AND ProduceInDepotId IN 
       (
         SELECT ProduceInDepotId FROM ProduceInDepot 

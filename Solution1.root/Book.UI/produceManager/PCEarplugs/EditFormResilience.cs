@@ -415,6 +415,7 @@ namespace Book.UI.produceManager.PCEarplugs
             }
         }
 
+        //鐵塊壓
         private void repositoryItemHyperLinkEdit1_Click(object sender, EventArgs e)
         {
             if (this.bindingSourceDetail.Current != null)
@@ -424,11 +425,22 @@ namespace Book.UI.produceManager.PCEarplugs
             }
         }
 
+        //手搓揉
         private void repositoryItemHyperLinkEdit3_Click(object sender, EventArgs e)
         {
             if (this.bindingSourceDetail.Current != null)
             {
                 ResilienceConditionSet f = new ResilienceConditionSet((this.bindingSourceDetail.Current as Model.PCEarplugsResilienceCheckDetail).PCEarplugsResilienceCheckDetailId);
+                f.ShowDialog();
+            }
+        }
+
+        //重量
+        private void repositoryItemHyperLinkEdit2_Click(object sender, EventArgs e)
+        {
+            if (this.bindingSourceDetail.Current != null)
+            {
+                ResilienceConditionWeight f = new ResilienceConditionWeight((this.bindingSourceDetail.Current as Model.PCEarplugsResilienceCheckDetail).PCEarplugsResilienceCheckDetailId);
                 f.ShowDialog();
             }
         }

@@ -55,6 +55,7 @@
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.subReport_PCDefinition = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -62,6 +63,7 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.subReport_PCDefinition,
             this.xrLabel7,
             this.xrTable9,
             this.xrTable1,
@@ -77,7 +79,7 @@
             this.xrSubreportPCHaze,
             this.xrLabel6});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 1312.333F;
+            this.Detail.HeightF = 1349.375F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -307,7 +309,7 @@
             // 
             this.xrLabel6.Dpi = 254F;
             this.xrLabel6.Font = new System.Drawing.Font("新細明體", 12F);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(884.8958F, 1251.267F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(876.9583F, 1290.955F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(317.4998F, 58.42004F);
@@ -331,6 +333,13 @@
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // subReport_PCDefinition
+            // 
+            this.subReport_PCDefinition.Dpi = 254F;
+            this.subReport_PCDefinition.LocationFloat = new DevExpress.Utils.PointFloat(25.00001F, 1216.978F);
+            this.subReport_PCDefinition.Name = "subReport_PCDefinition";
+            this.subReport_PCDefinition.SizeF = new System.Drawing.SizeF(1963.417F, 58.42004F);
             // 
             // DataInputCSA2015RO
             // 
@@ -381,5 +390,6 @@
         private DevExpress.XtraReports.UI.XRSubreport xrSubreportPCHaze;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.UI.XRSubreport subReport_PCDefinition;
     }
 }

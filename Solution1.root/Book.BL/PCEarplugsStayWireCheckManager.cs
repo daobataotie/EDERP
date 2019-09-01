@@ -54,11 +54,11 @@ namespace Book.BL
             {
                 BL.V.BeginTransaction();
 
-                Validate(pCEarplugsStayWireCheck);
-                this.TiGuiExists(pCEarplugsStayWireCheck);
-
                 pCEarplugsStayWireCheck.InsertTime = DateTime.Now;
                 pCEarplugsStayWireCheck.UpdateTime = DateTime.Now;
+
+                Validate(pCEarplugsStayWireCheck);
+                this.TiGuiExists(pCEarplugsStayWireCheck);
 
                 accessor.Insert(pCEarplugsStayWireCheck);
 

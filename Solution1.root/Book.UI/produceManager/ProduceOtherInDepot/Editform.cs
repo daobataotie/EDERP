@@ -40,7 +40,7 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             this.invalidValueExceptions.Add(Model.ProduceOtherInDepot.PRO_ProduceOtherInDepotId, new AA(Properties.Resources.EntityExists, this.textEditProduceOtherInDepotId));
             this.invalidValueExceptions.Add(Model.ProduceOtherInDepot.PRO_SupplierId, new AA(Properties.Resources.Supplier, this.newChooseContorlSipu));
             this.invalidValueExceptions.Add(Model.ProduceOtherInDepotDetail.PRO_ProduceQuantity, new AA("進貨數量不能為空", this.gridControl1));
-            this.invalidValueExceptions.Add(Model.ProduceOtherInDepotDetail.PRO_ProduceTransferQuantity,new AA("轉生產數量或入庫數量必須填寫一項",this.gridControl1));
+            this.invalidValueExceptions.Add(Model.ProduceOtherInDepotDetail.PRO_ProduceTransferQuantity, new AA("轉生產數量或入庫數量必須填寫一項", this.gridControl1));
 
             this.action = "view";
             this.newChooseEmployee0.Choose = new ChooseEmployee();
@@ -566,6 +566,7 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                     decimal.TryParse(e.Value == null ? "0" : e.Value.ToString(), out quantity);
                     string PriceRange = string.Empty;
                     Model.ProduceOtherInDepotDetail detail = this.bindingSourceDetails.Current as Model.ProduceOtherInDepotDetail;
+
                     if ((this.newChooseContorlSipu.EditValue as Model.Supplier) == null)
                         MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
                     else
@@ -591,7 +592,8 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                 this.txt_Tax.Text = (Convert.ToDouble(d) * 0.05).ToString();
                 this.txt_Total.Text = (Convert.ToDouble(d) * (1.05)).ToString();
             }
-            //this.gridControl1.RefreshDataSource();
+
+            this.gridControl1.RefreshDataSource();
         }
 
         private void gridView1_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -765,7 +767,11 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                 if (item.ProduceOtherCompact.InvoiceXO == null)
                     detail.InvoiceCusId = item.CustomInvoiceXOId;
                 else
+                {
                     detail.InvoiceCusId = item.ProduceOtherCompact.InvoiceXO.CustomerInvoiceXOId;
+                    detail.OrderQuantity = item.OtherCompactCount;
+                    detail.NotArriveQuantity = item.OtherCompactCount;
+                }
                 detail.Product = item.Product;
                 detail.ProductId = item.ProductId;
                 detail.ProductUnit = item.ProductUnit;

@@ -30,7 +30,9 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.lblBuMen.Text = _pcfc.WorkHouse == null ? "" : _pcfc.WorkHouse.ToString();
             //this.lblInvoiceCusXOId.Text = _pcfc.InvoiceCusXOId;
             this.lblPCFinishCheckCount.Text = _pcfc.PCFinishCheckCount.ToString();
-            this.lblPCFinishCheckInCoiunt.Text = _pcfc.PCFinishCheckInCoiunt.HasValue ? _pcfc.PCFinishCheckInCoiunt.Value.ToString() : "";
+            //this.lblPCFinishCheckInCoiunt.Text = _pcfc.PCFinishCheckInCoiunt.HasValue ? _pcfc.PCFinishCheckInCoiunt.Value.ToString() : "";
+            this.lblPCFinishCheckInCoiunt.Text = (_pcfc.PCFinishCheckInCoiunt.HasValue ? _pcfc.PCFinishCheckInCoiunt.Value.ToString() : "") + Environment.NewLine + Environment.NewLine + (string.IsNullOrEmpty(_pcfc.InvoiceCountNum) ? "" : ("¿Í‘ôÓ††Î“QËã”µÁ¿£º" + Environment.NewLine + _pcfc.InvoiceCountNum));
+
             this.lblPCFinishCheckDesc.Text = _pcfc.PCFinishCheckDesc;
             this.lblEmployee0.Text = _pcfc.Employee0 == null ? "" : _pcfc.Employee0.ToString();
             this.lblEmployee1.Text = _pcfc.Employee1 == null ? "" : _pcfc.Employee1.ToString();

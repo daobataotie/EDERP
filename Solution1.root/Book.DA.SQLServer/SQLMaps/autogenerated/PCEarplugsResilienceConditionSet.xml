@@ -1,33 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<sqlMap namespace="PCEarplugsResilienceConditionSet" xmlns="http://ibatis.apache.org/mapping" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCEarplugsResilienceConditionSet" xmlns="http://ibatis.apache.org/mapping"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <alias>
-        <typeAlias alias="PCEarplugsResilienceConditionSet" type="Book.Model.PCEarplugsResilienceConditionSet, Book.Model" />
-    </alias>
-    <resultMaps>                                    
-        <resultMap id="PCEarplugsResilienceConditionSetResult" class="PCEarplugsResilienceConditionSet">
-			<result property="PCEarplugsResilienceConditionSetId" column="PCEarplugsResilienceConditionSetId" />
-			<result property="PCEarplugsResilienceCheckId" column="PCEarplugsResilienceCheckId" />
-			<result property="InsertTime" column="InsertTime" />
-			<result property="UpdateTime" column="UpdateTime" />
-			<result property="TKY1" column="TKY1" />
-			<result property="TKY2" column="TKY2" />
-			<result property="TKY3" column="TKY3" />
-			<result property="TKY4" column="TKY4" />
-			<result property="TKY5" column="TKY5" />
-			<result property="TKY6" column="TKY6" />
-			<result property="SCR1" column="SCR1" />
-			<result property="SCR2" column="SCR2" />
-			<result property="SCR3" column="SCR3" />
-			<result property="SCR4" column="SCR4" />
-			<result property="SCR5" column="SCR5" />
-			<result property="SCR6" column="SCR6" />
-        </resultMap>
-    </resultMaps>
-		
-    <statements>
-		<select id="has_rows_of" resultClass="bool">
-			<![CDATA[select case when exists(
+  <alias>
+    <typeAlias alias="PCEarplugsResilienceConditionSet" type="Book.Model.PCEarplugsResilienceConditionSet, Book.Model" />
+  </alias>
+  <resultMaps>
+    <resultMap id="PCEarplugsResilienceConditionSetResult" class="PCEarplugsResilienceConditionSet">
+      <result property="PCEarplugsResilienceConditionSetId" column="PCEarplugsResilienceConditionSetId" />
+      <result property="PCEarplugsResilienceCheckId" column="PCEarplugsResilienceCheckId" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="TKY1" column="TKY1" />
+      <result property="TKY2" column="TKY2" />
+      <result property="TKY3" column="TKY3" />
+      <result property="TKY4" column="TKY4" />
+      <result property="TKY5" column="TKY5" />
+      <result property="TKY6" column="TKY6" />
+      <result property="SCR1" column="SCR1" />
+      <result property="SCR2" column="SCR2" />
+      <result property="SCR3" column="SCR3" />
+      <result property="SCR4" column="SCR4" />
+      <result property="SCR5" column="SCR5" />
+      <result property="SCR6" column="SCR6" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+    <select id="has_rows_of" resultClass="bool">
+      <![CDATA[select case when exists(
 				SELECT
 					*
 				FROM
@@ -37,9 +37,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         			                   
 				) then 1 else 0 end
                 ]]>
-		</select>
-		<select id="has_rows" resultClass="bool">
-			<![CDATA[select case when exists(
+    </select>
+    <select id="has_rows" resultClass="bool">
+      <![CDATA[select case when exists(
 				SELECT
 					*
 				FROM
@@ -47,45 +47,45 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  								
 				) then 1 else 0 end
                 ]]>
-		</select>
-		<select id="get_first" resultMap="PCEarplugsResilienceConditionSetResult">
-			<![CDATA[
+    </select>
+    <select id="get_first" resultMap="PCEarplugsResilienceConditionSetResult">
+      <![CDATA[
 			select top 1 *
 			from dbo.PCEarplugsResilienceConditionSet
 			 
 			order by InsertTime 
 			]]>
-		</select>
-		<select id="get_last" resultMap="PCEarplugsResilienceConditionSetResult">
-			<![CDATA[
+    </select>
+    <select id="get_last" resultMap="PCEarplugsResilienceConditionSetResult">
+      <![CDATA[
 			select top 1 *
 			from dbo.PCEarplugsResilienceConditionSet
 						
             order by InsertTime desc
 			]]>
-            
-		</select>
-		<select id="get_prev" resultMap="PCEarplugsResilienceConditionSetResult" parameterClass="PCEarplugsResilienceConditionSet">
-			<![CDATA[
+
+    </select>
+    <select id="get_prev" resultMap="PCEarplugsResilienceConditionSetResult" parameterClass="PCEarplugsResilienceConditionSet">
+      <![CDATA[
 			select top 1 *
 			from dbo.PCEarplugsResilienceConditionSet
 			where InsertTime < #InsertTime#	
             			          
             order by InsertTime desc
 			]]>
-		</select>
-		<select id="get_next" resultMap="PCEarplugsResilienceConditionSetResult" parameterClass="PCEarplugsResilienceConditionSet">
-			<![CDATA[
+    </select>
+    <select id="get_next" resultMap="PCEarplugsResilienceConditionSetResult" parameterClass="PCEarplugsResilienceConditionSet">
+      <![CDATA[
 			select top 1 *
 			from dbo.PCEarplugsResilienceConditionSet
 			where InsertTime > #InsertTime#	
                 			                   
             order by InsertTime
 			]]>
-		</select>
-		
-		<select id="has_rows_before" resultClass="bool" parameterClass="PCEarplugsResilienceConditionSet">
-			<![CDATA[
+    </select>
+
+    <select id="has_rows_before" resultClass="bool" parameterClass="PCEarplugsResilienceConditionSet">
+      <![CDATA[
 			select case when exists(
 				select * 
 				from dbo.PCEarplugsResilienceConditionSet
@@ -93,10 +93,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 			                   
 				) then 1 else 0 end
 			]]>
-		</select>
-		
-		<select id="has_rows_after" resultClass="bool" parameterClass="PCEarplugsResilienceConditionSet">
-			<![CDATA[
+    </select>
+
+    <select id="has_rows_after" resultClass="bool" parameterClass="PCEarplugsResilienceConditionSet">
+      <![CDATA[
 			select case when exists(
 				select * 
 				from dbo.PCEarplugsResilienceConditionSet
@@ -105,10 +105,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          
 				) then 1 else 0 end
 			]]>
-		</select>
-		<!-- select by primary key -->
-        <select id="select_by_primary_key" resultMap="PCEarplugsResilienceConditionSetResult" parameterClass="PCEarplugsResilienceConditionSet">
-			<![CDATA[SELECT
+    </select>
+    <!-- select by primary key -->
+    <select id="select_by_primary_key" resultMap="PCEarplugsResilienceConditionSetResult" parameterClass="PCEarplugsResilienceConditionSet">
+      <![CDATA[SELECT
 				[PCEarplugsResilienceConditionSetId],
 				[PCEarplugsResilienceCheckId],
 				[InsertTime],
@@ -131,37 +131,37 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[PCEarplugsResilienceConditionSetId] = #PCEarplugsResilienceConditionSetId#
                 			          
          		]]>
-        </select>
-		
-		<!-- delete -->
-        <delete id="delete" parameterClass="string">
-				<![CDATA[                
+    </select>
+
+    <!-- delete -->
+    <delete id="delete" parameterClass="string">
+      <![CDATA[                
                 DELETE FROM [dbo].[PCEarplugsResilienceConditionSet]
 			WHERE            
 				[PCEarplugsResilienceConditionSetId] = #PCEarplugsResilienceConditionSetId#
                     		]]>
-        </delete>
+    </delete>
 
-		<!-- select all -->
-        <select id="select_all" resultMap="PCEarplugsResilienceConditionSetResult" >
-			<![CDATA[SELECT *
+    <!-- select all -->
+    <select id="select_all" resultMap="PCEarplugsResilienceConditionSetResult" >
+      <![CDATA[SELECT *
 			FROM 
 				[dbo].[PCEarplugsResilienceConditionSet]
                 			                   
   ORDER BY InsertTime DESC  
 			]]>
-        </select>
-        
-		<select id="count_all" resultClass="int">
-		<![CDATA[	select count(*)
+    </select>
+
+    <select id="count_all" resultClass="int">
+      <![CDATA[	select count(*)
 			from 
 				[dbo].[PCEarplugsResilienceConditionSet]
                 			          
          ]]>
-		</select>
-		
-		<select id="select_all_with_paging" resultMap="PCEarplugsResilienceConditionSetResult">
-        <![CDATA[    SELECT *
+    </select>
+
+    <select id="select_all_with_paging" resultMap="PCEarplugsResilienceConditionSetResult">
+      <![CDATA[    SELECT *
             FROM
             (
                 SELECT *, row_number() over(order by $OrderStatement$) rownumber
@@ -172,11 +172,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             ) t
             WHERE t.rownumber between #Row1# and #Row2#
              ]]>
-		</select>
-		
-		<!-- insert -->
-        <insert id="insert" parameterClass="PCEarplugsResilienceConditionSet">
-			 <![CDATA[ INSERT INTO [dbo].[PCEarplugsResilienceConditionSet] 
+    </select>
+
+    <!-- insert -->
+    <insert id="insert" parameterClass="PCEarplugsResilienceConditionSet">
+      <![CDATA[ INSERT INTO [dbo].[PCEarplugsResilienceConditionSet] 
 			(
 				[PCEarplugsResilienceConditionSetId],
 				[PCEarplugsResilienceCheckId],
@@ -215,11 +215,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#SCR6#
 			)
              ]]>
-        </insert>
-		
-		<!-- update -->
-        <update id="update" parameterClass="PCEarplugsResilienceConditionSet">
-		 <![CDATA[ 	UPDATE [PCEarplugsResilienceConditionSet] SET
+    </insert>
+
+    <!-- update -->
+    <update id="update" parameterClass="PCEarplugsResilienceConditionSet">
+      <![CDATA[ 	UPDATE [PCEarplugsResilienceConditionSet] SET
 				[PCEarplugsResilienceCheckId] = #PCEarplugsResilienceCheckId#,
 				[InsertTime] = #InsertTime#,
 				[UpdateTime] = #UpdateTime#,
@@ -238,9 +238,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			WHERE
 				[PCEarplugsResilienceConditionSetId] = #PCEarplugsResilienceConditionSetId#
                     ]]>
-        </update>
-		<select id="existsPrimary" resultClass="bool" parameterClass="string">
-			<![CDATA[
+    </update>
+    <select id="existsPrimary" resultClass="bool" parameterClass="string">
+      <![CDATA[
 			select case when exists(
 				select *
 				from [dbo].[PCEarplugsResilienceConditionSet]
@@ -248,7 +248,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				)
 				then 1 else 0 end
 			]]>
-		</select>
-		
-    </statements>
+    </select>
+
+  </statements>
 </sqlMap>

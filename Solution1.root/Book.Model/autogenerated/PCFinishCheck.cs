@@ -1122,6 +1122,19 @@ namespace Book.Model
             set { _pihao = value; }
         }
 
+        private string _invoiceCountNum;
+
+        /// <summary>
+        /// 客戶訂單換算數量，有些客戶的單位比較怪，錄單人員手動換算後填寫，有填顯示，不填不顯示
+        /// </summary>
+        public string InvoiceCountNum
+        {
+            get { return _invoiceCountNum; }
+            set { _invoiceCountNum = value; }
+        }
+
         public readonly static string PRO_Pihao = "Pihao";
+
+        public readonly static string PRO_InvoiceCountNum = "InvoiceCountNum";
     }
 }

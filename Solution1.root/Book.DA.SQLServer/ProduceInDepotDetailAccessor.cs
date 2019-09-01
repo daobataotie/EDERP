@@ -1666,6 +1666,30 @@ namespace Book.DA.SQLServer
             ht.Add("GetColumn", GetColumn);
 
             return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.Get_HJForColumnName_Header", ht);
+
+
+            #region 没啥卵用，最后的解决办法是在XML的SQL语句加了数据类型如 “#PronoteHeaderId:varchar#”
+            //string sql = "SELECT SUM(ISNULL(" + GetColumn + ",0)) FROM ProduceInDepotDetail WHERE PronoteHeaderId = @PronoteHeaderId AND ProductId =@ProductId  AND ProduceInDepotId IN ( SELECT ProduceInDepotId FROM ProduceInDepot WHERE (WorkHouseId = @WorkHouseId)  AND InsertTime < @InsertTime)";
+            //SqlParameter[] para = new SqlParameter[]{
+            //new SqlParameter("@PronoteHeaderId", SqlDbType.VarChar),
+            //new SqlParameter("@ProductId", SqlDbType.VarChar),
+            //new SqlParameter("@WorkHouseId", SqlDbType.VarChar),
+            //new SqlParameter("@InsertTime", SqlDbType.VarChar)
+            //};
+            //para[0].Value = PronoteHeaderId;
+            //para[1].Value = ProductId;
+            //para[2].Value = WorkHouseId;
+            //para[3].Value = InsertTime.ToString("yyyy-MM-dd HH:mm:ss");
+
+            //var obj = this.QueryProcObject("ProductIndepot_GetHJ", para);
+            //return (obj == null ? null : (double?)obj);
+
+
+            //string sql = "SELECT SUM(ISNULL(" + GetColumn + ",0)) FROM ProduceInDepotDetail WHERE PronoteHeaderId = '" + PronoteHeaderId + "' AND ProductId ='" + ProductId + "'  AND ProduceInDepotId IN ( SELECT ProduceInDepotId FROM ProduceInDepot WHERE (WorkHouseId = '" + WorkHouseId + "')  AND InsertTime < '" + InsertTime.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+            //var obj = this.QueryObject(sql, 60);
+            //return (obj == null ? null : (double?)obj); 
+            #endregion
+
         }
 
         //加工单 ,工作中心,商品主键,添加时间 查询后面单据 用于更新累计合格的数量 累计生产数量

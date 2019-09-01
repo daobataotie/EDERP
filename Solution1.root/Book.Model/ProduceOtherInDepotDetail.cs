@@ -41,9 +41,28 @@ namespace Book.Model
 
         public bool IsCheck { get; set; }
 
+        /// <summary>
+        /// 订单数量
+        /// </summary>
         public double? OrderQuantity { get; set; }
 
-        public double? NotArriveQuantity { get; set; }
+        private double? _notArriveQuantity;
+
+        /// <summary>
+        /// 未到货数量
+        /// </summary>
+        public double? NotArriveQuantity
+        {
+            get
+            {
+                 _notArriveQuantity=(OrderQuantity.HasValue ? OrderQuantity : 0) - (ProduceQuantity.HasValue ? ProduceQuantity : 0);
+                 return _notArriveQuantity;
+            }
+            set
+            {
+                _notArriveQuantity = value;
+            }
+        }
 
         public double? NotArrive
         {

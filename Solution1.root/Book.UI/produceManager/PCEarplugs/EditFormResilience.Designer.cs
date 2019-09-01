@@ -61,6 +61,8 @@
             this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.gcShoucuorou = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemHyperLinkEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemHyperLinkEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -108,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties.VistaTimeProperties)).BeginInit();
@@ -235,7 +238,8 @@
             this.repositoryItemLookUpEdit3,
             this.repositoryItemLookUpEdit4,
             this.repositoryItemHyperLinkEdit1,
-            this.repositoryItemHyperLinkEdit3});
+            this.repositoryItemHyperLinkEdit3,
+            this.repositoryItemHyperLinkEdit2});
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
             this.gridView2});
@@ -256,6 +260,7 @@
             this.gridColumn6,
             this.gcTiekuaiya,
             this.gcShoucuorou,
+            this.gridColumn7,
             this.gridColumn10});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -399,6 +404,18 @@
             resources.ApplyResources(this.repositoryItemHyperLinkEdit3, "repositoryItemHyperLinkEdit3");
             this.repositoryItemHyperLinkEdit3.Name = "repositoryItemHyperLinkEdit3";
             this.repositoryItemHyperLinkEdit3.Click += new System.EventHandler(this.repositoryItemHyperLinkEdit3_Click);
+            // 
+            // gridColumn7
+            // 
+            resources.ApplyResources(this.gridColumn7, "gridColumn7");
+            this.gridColumn7.ColumnEdit = this.repositoryItemHyperLinkEdit2;
+            this.gridColumn7.Name = "gridColumn7";
+            // 
+            // repositoryItemHyperLinkEdit2
+            // 
+            resources.ApplyResources(this.repositoryItemHyperLinkEdit2, "repositoryItemHyperLinkEdit2");
+            this.repositoryItemHyperLinkEdit2.Name = "repositoryItemHyperLinkEdit2";
+            this.repositoryItemHyperLinkEdit2.Click += new System.EventHandler(this.repositoryItemHyperLinkEdit2_Click);
             // 
             // gridColumn10
             // 
@@ -685,6 +702,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_Check.Properties.VistaTimeProperties)).EndInit();
@@ -771,5 +789,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit3;
         private DevExpress.XtraEditors.SimpleButton btn_SelectInvoiceCO;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit2;
     }
 }

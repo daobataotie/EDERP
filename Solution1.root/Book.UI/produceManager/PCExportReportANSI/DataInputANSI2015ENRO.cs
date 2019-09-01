@@ -46,6 +46,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             if (pcDataInput.PCHazeList != null && pcDataInput.PCHazeList.Count != 0)
                 this.xrSubreportPCHaze.ReportSource = new PCHazeRO(pcDataInput.PCHazeList, pcDataInput);
+
+            if (pcDataInput.PCDefinitionList != null && pcDataInput.PCDefinitionList.Count != 0)
+                this.subReport_PCDefinition.ReportSource = new PCDefinitionRO(pcDataInput.PCDefinitionList);
         }
 
         private void DataInputANSIRO_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

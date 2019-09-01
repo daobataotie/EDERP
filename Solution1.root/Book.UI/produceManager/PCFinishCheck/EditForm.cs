@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Book.UI.Settings.BasicData.Employees;
 using Book.UI.Settings.ProduceManager.Workhouselog;
+using System.Linq;
 
 namespace Book.UI.produceManager.PCFinishCheck
 {
@@ -18,6 +19,7 @@ namespace Book.UI.produceManager.PCFinishCheck
         Model.PCFinishCheck _PCFC = null;
         IList<Model.OpticsTest> ListOpticsTest;
         int Def_select = 2;
+        IList<Model.ProductUnit> UnitList = null;
 
         public EditForm()
         {
@@ -32,7 +34,7 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.nccEmployee0.Choose = new ChooseEmployee();
             this.nccEmployee1.Choose = new ChooseEmployee();
             this.newChooseContorlAuditEmp.Choose = new ChooseEmployee();
-            this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
+            this.bindingSourceUnit.DataSource = UnitList = (new BL.ProductUnitManager()).Select();
             this.action = "view";
         }
 
@@ -66,53 +68,6 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.action = action;
             if (this.action == "view")
                 LastFlag = 1;
-        }
-
-        public override void Refresh()
-        {
-            if (this._PCFC == null)
-            {
-                this.AddNew();
-                this.action = "insert";
-            }
-            else
-            {
-                if (this.action == "view")
-                {
-                    this._PCFC = this._PCFCManager.Get(this._PCFC.PCFinishCheckID);
-                }
-                this.SetDefRadioGroup();
-            }
-
-            this.txtPCFinishCheckID.Text = this._PCFC.PCFinishCheckID;
-            //this.txtInvoiceCusXOId.Text = this._PCFC.InvoiceCusXOId;
-            if (this._PCFC.PronoteHeader != null)
-                this.txtInvoiceCusXOId.Text = (this._PCFC.PronoteHeader.InvoiceXO == null ? null : this._PCFC.PronoteHeader.InvoiceXO.CustomerInvoiceXOId);
-            else
-                this.txtInvoiceCusXOId.Text = null;
-            this.txtPCFinishCheckDesc.Text = this._PCFC.PCFinishCheckDesc;
-            this.DE_JYDRQ.EditValue = this._PCFC.PCFinishCheckDate;
-            this.txtProduct.Text = this._PCFC.Product == null ? "" : this._PCFC.Product.ToString();
-            this.CE_Count.EditValue = this._PCFC.PCFinishCheckCount.HasValue ? this._PCFC.PCFinishCheckCount : 0;
-            this.CE_InCount.EditValue = this._PCFC.PCFinishCheckInCoiunt.HasValue ? this._PCFC.PCFinishCheckInCoiunt : 0;
-            this.txtCustomerProductName.Text = this._PCFC.CustomerProductName;
-            this.txtPronoteHeaderId.Text = this._PCFC.PronoteHeaderID;
-            //this.lblCustomerType.Text = this._PCFC.CustomerType;
-            this.nccEmployee0.EditValue = this._PCFC.Employee0;
-            this.nccEmployee1.EditValue = this._PCFC.Employee1;
-            this.nccWorkHouse.EditValue = this._PCFC.WorkHouse;
-
-            this.chkMuShiJianYan.Checked = this._PCFC.IsMuShiJianYan.HasValue ? this._PCFC.IsMuShiJianYan.Value : false;
-
-            this.newChooseContorlAuditEmp.EditValue = this._PCFC.AuditEmp;
-            this.txt_AuditState.EditValue = this.GetAuditName(this._PCFC.AuditState);
-            this.lookUpEditUnit.EditValue = this._PCFC.ProductUnitId;
-            this.txt_AnnualRing.Text = this._PCFC.AnnualRing;
-            this.txt_Pihao.EditValue = this._PCFC.Pihao;
-
-            base.Refresh();
-
-            this.txtPCFinishCheckID.Properties.ReadOnly = true;
         }
 
         protected override void MoveNext()
@@ -231,6 +186,8 @@ namespace Book.UI.produceManager.PCFinishCheck
             string strCusXoId = this.txtInvoiceCusXOId.Text;
             string sqlJudge = string.Empty;
             this._PCFC.CustomerProductName = this.txtCustomerProductName.Text;
+            this._PCFC.InvoiceCountNum = this.txt_InvoiceCountNum.Text;
+
             switch (this.action)
             {
                 case "insert":
@@ -255,6 +212,54 @@ namespace Book.UI.produceManager.PCFinishCheck
                 }
                 ListOpticsTest.Clear();
             }
+        }
+
+        public override void Refresh()
+        {
+            if (this._PCFC == null)
+            {
+                this.AddNew();
+                this.action = "insert";
+            }
+            else
+            {
+                if (this.action == "view")
+                {
+                    this._PCFC = this._PCFCManager.Get(this._PCFC.PCFinishCheckID);
+                }
+                this.SetDefRadioGroup();
+            }
+
+            this.txtPCFinishCheckID.Text = this._PCFC.PCFinishCheckID;
+            //this.txtInvoiceCusXOId.Text = this._PCFC.InvoiceCusXOId;
+            if (this._PCFC.PronoteHeader != null)
+                this.txtInvoiceCusXOId.Text = (this._PCFC.PronoteHeader.InvoiceXO == null ? null : this._PCFC.PronoteHeader.InvoiceXO.CustomerInvoiceXOId);
+            else
+                this.txtInvoiceCusXOId.Text = null;
+            this.txtPCFinishCheckDesc.Text = this._PCFC.PCFinishCheckDesc;
+            this.DE_JYDRQ.EditValue = this._PCFC.PCFinishCheckDate;
+            this.txtProduct.Text = this._PCFC.Product == null ? "" : this._PCFC.Product.ToString();
+            this.CE_Count.EditValue = this._PCFC.PCFinishCheckCount.HasValue ? this._PCFC.PCFinishCheckCount : 0;
+            this.CE_InCount.EditValue = this._PCFC.PCFinishCheckInCoiunt.HasValue ? this._PCFC.PCFinishCheckInCoiunt : 0;
+            this.txtCustomerProductName.Text = this._PCFC.CustomerProductName;
+            this.txtPronoteHeaderId.Text = this._PCFC.PronoteHeaderID;
+            //this.lblCustomerType.Text = this._PCFC.CustomerType;
+            this.nccEmployee0.EditValue = this._PCFC.Employee0;
+            this.nccEmployee1.EditValue = this._PCFC.Employee1;
+            this.nccWorkHouse.EditValue = this._PCFC.WorkHouse;
+
+            this.chkMuShiJianYan.Checked = this._PCFC.IsMuShiJianYan.HasValue ? this._PCFC.IsMuShiJianYan.Value : false;
+
+            this.newChooseContorlAuditEmp.EditValue = this._PCFC.AuditEmp;
+            this.txt_AuditState.EditValue = this.GetAuditName(this._PCFC.AuditState);
+            this.lookUpEditUnit.EditValue = this._PCFC.ProductUnitId;
+            this.txt_AnnualRing.Text = this._PCFC.AnnualRing;
+            this.txt_Pihao.EditValue = this._PCFC.Pihao;
+            this.txt_InvoiceCountNum.Text = this._PCFC.InvoiceCountNum;
+
+            base.Refresh();
+
+            this.txtPCFinishCheckID.Properties.ReadOnly = true;
         }
 
         protected override void Delete()
@@ -308,8 +313,14 @@ namespace Book.UI.produceManager.PCFinishCheck
                     //this._PCFC.PCFinishCheckCount = Math.Ceiling(Convert.ToDouble(this._PCFC.PCFinishCheckInCoiunt) / 500);
                     this._PCFC.PCFinishCheckCount = Common.AutoCalculation.Calculation(currentModel.CustomerCheckStandard, Convert.ToInt32(this._PCFC.PCFinishCheckInCoiunt));
 
-                    this._PCFC.ProductUnit = this._PCFC.Product.QualityTestUnit;
-                    this._PCFC.ProductUnitId = this._PCFC.Product.QualityTestUnitId;
+                    //this._PCFC.ProductUnit = this._PCFC.Product.QualityTestUnit;
+                    //this._PCFC.ProductUnitId = this._PCFC.Product.QualityTestUnitId;
+                    var unit = UnitList.ToList().FirstOrDefault(D => D.CnName == currentModel.ProductUnit);
+                    if (unit != null)
+                    {
+                        this._PCFC.ProductUnit = unit;
+                        this._PCFC.ProductUnitId = unit.ProductUnitId;
+                    }
 
                     if (currentModel.InvoiceXOId != null)
                     {

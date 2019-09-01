@@ -26,7 +26,6 @@
       <result property="ProduceOtherCompactId" column="ProduceOtherCompactId" />
       <result property="GenerateInputCheck" column="GenerateInputCheck"/>
       <result property="OrderQuantity" column="OrderQuantity"/>
-      <result property="NotArriveQuantity" column="NotArriveQuantity"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="PrimaryKey" column="PrimaryKeyId" lazyLoad="false" select="CustomerProducts.select_by_primary_key" />
       <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />
@@ -38,7 +37,7 @@
   <statements>
     <select id="select_byProduceOtherInDepotId" resultMap="ProduceOtherInDepotDetailResult1" parameterClass="string">
       <!--select * from ProduceOtherInDepotDetail where ProduceOtherInDepotId=#value#-->
-      select pid.*,pcd.OtherCompactCount as OrderQuantity,(pcd.OtherCompactCount-pid.ProduceQuantity) as NotArriveQuantity from ProduceOtherInDepotDetail pid left join ProduceOtherCompactDetail pcd on pid.ProduceOtherCompactDetailId =pcd.OtherCompactDetailId where ProduceOtherInDepotId=#value#
+      select pid.*,pcd.OtherCompactCount as OrderQuantity from ProduceOtherInDepotDetail pid left join ProduceOtherCompactDetail pcd on pid.ProduceOtherCompactDetailId =pcd.OtherCompactDetailId where ProduceOtherInDepotId=#value#
     </select>
     <select id="select_byProduceInDateAndPronote" resultMap="ProduceOtherInDepotDetailResult" parameterClass="Map">
       <![CDATA[
