@@ -4,7 +4,7 @@
   <statements>
     <select id="SelectByPCClarityCheckId" resultMap="PCClarityCheckDetailResult" parameterClass="string">
       <![CDATA[
-      SELECT * FROM PCClarityCheckDetail WHERE PCClarityCheckId=#value#
+      SELECT * FROM PCClarityCheckDetail WHERE PCClarityCheckId=#value# order by Number
       ]]>
     </select>
 

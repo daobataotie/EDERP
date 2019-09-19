@@ -28,7 +28,7 @@ namespace Book.Model
         {
             get
             {
-                return this.InvoiceCOId + this.PronoteHeaderId;
+                return this.InvoiceCOId + this.PronoteHeaderId + this.ProduceOtherCompactId;
             }
         }
 

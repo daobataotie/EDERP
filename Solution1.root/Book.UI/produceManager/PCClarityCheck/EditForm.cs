@@ -251,6 +251,7 @@ namespace Book.UI.produceManager.PCClarityCheck
             clarityDetail.PCClarityCheckDetailId = Guid.NewGuid().ToString();
             clarityDetail.PCClarityCheckId = this._pcClarity.PCClarityCheckId;
             clarityDetail.CheckDate = DateTime.Now;
+            clarityDetail.Number = (this._pcClarity.Details.Count + 1).ToString();
             this._pcClarity.Details.Add(clarityDetail);
 
             this.bindingSourceDetail.Position = this.bindingSourceDetail.IndexOf(clarityDetail);

@@ -336,6 +336,41 @@ namespace Book.UI.produceManager.PCFlameRetardant
             GC.Collect();
         }
 
+        //選取委外合同
+        private void btn_SelectProduceOther_Click(object sender, EventArgs e)
+        {
+            ProduceOtherCompact.ChooseOutContract f = new Book.UI.produceManager.ProduceOtherCompact.ChooseOutContract();
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                foreach (var item in f.key)
+                {
+                    Model.PCFlameRetardantDetail detail = new Book.Model.PCFlameRetardantDetail();
+                    detail.PCFlameRetardantDetailId = Guid.NewGuid().ToString();
+                    detail.Number = this._pCFlameRetardant.Details.Count + 1;
+                    detail.Product = item.Product;
+                    detail.ProductId = item.ProductId;
+                    detail.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+                    detail.InvoiceXOId = item.ProduceOtherCompact.InvoiceXOId;
+                    detail.ProduceOtherCompactId = item.ProduceOtherCompactId;
+
+                    if (string.IsNullOrEmpty(this.Pihao))
+                    {
+                        Model.InvoiceXO xo = invoiceXOManager.Get(detail.InvoiceXOId);
+                        if (xo != null)
+                            detail.Pihao = xo.CustomerLotNumber;
+                    }
+                    else
+                    {
+                        detail.Pihao = this.Pihao;
+                    }
+
+                    this._pCFlameRetardant.Details.Add(detail);
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
         #region 审核
 
         protected override string AuditKeyId()

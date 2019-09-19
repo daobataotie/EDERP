@@ -89,6 +89,10 @@ namespace Book.Model
         /// </summary>
         private string _noteIsPass;
 
+        private string _businessHoursId;
+
+        private string _number;
+
         /// <summary>
         /// 员工
         /// </summary>
@@ -98,22 +102,7 @@ namespace Book.Model
         /// </summary>
         private PCClarityCheck _pCClarityCheck;
 
-        private string _businessHoursId;
-
-        public string BusinessHoursId
-        {
-            get { return _businessHoursId; }
-            set { _businessHoursId = value; }
-        }
-
-
         private BusinessHours businessHours;
-
-        public virtual BusinessHours BusinessHours
-        {
-            get { return businessHours; }
-            set { businessHours = value; }
-        }
         #endregion
 
         #region Properties
@@ -343,6 +332,18 @@ namespace Book.Model
             }
         }
 
+        public string BusinessHoursId
+        {
+            get { return _businessHoursId; }
+            set { _businessHoursId = value; }
+        }
+
+        public string Number
+        {
+            get { return _number; }
+            set { _number = value; }
+        }
+
         /// <summary>
         /// 员工
         /// </summary>
@@ -373,6 +374,13 @@ namespace Book.Model
             }
 
         }
+
+        public virtual BusinessHours BusinessHours
+        {
+            get { return businessHours; }
+            set { businessHours = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -449,6 +457,8 @@ namespace Book.Model
         public readonly static string PRO_NoteIsPass = "NoteIsPass";
 
         public readonly static string PRO_BusinessHoursId = "BusinessHoursId";
+
+        public readonly static string PRO_Number = "Number";
         #endregion
     }
 }

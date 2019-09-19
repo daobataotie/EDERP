@@ -39,7 +39,7 @@ namespace Book.UI.produceManager.PCClarityCheck
                 }
             }
 
-            this.DataSource = PCClarityCheck.Details.OrderBy(d => d.CheckDate).ToList();
+            this.DataSource = PCClarityCheck.Details;  //.OrderBy(d => d.CheckDate).ToList()
 
             this.lblCompanyName.Text = BL.Settings.CompanyChineseName;
             this.lblDataName.Text = "ÇåÎú¶ÈœyÔ‡ˆó¸æ";
@@ -66,6 +66,7 @@ namespace Book.UI.produceManager.PCClarityCheck
                     this.lbl_CustomerProductName.Text = PCClarityCheck.Product.CustomerProductName;
             }
 
+            this.TC_Number.DataBindings.Add("Text", this.DataSource, Model.PCClarityCheckDetail.PRO_Number);
             this.TCDate.DataBindings.Add("Text", this.DataSource, Model.PCClarityCheckDetail.PRO_CheckDate, "{0:yyyy-MM-dd HH:mm:ss}");
             this.TCLeftD1.DataBindings.Add("Text", this.DataSource, Model.PCClarityCheckDetail.PRO_Left1);
             this.TCLeftD2.DataBindings.Add("Text", this.DataSource, Model.PCClarityCheckDetail.PRO_Left2);
