@@ -233,6 +233,7 @@
             this.calcPCFogCheckQuantity.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("calcPCFogCheckQuantity.Properties.Mask.ShowPlaceHolders")));
             this.calcPCFogCheckQuantity.Properties.NullValuePrompt = null;
             this.calcPCFogCheckQuantity.StyleController = this.layoutControl1;
+            this.calcPCFogCheckQuantity.EditValueChanged += new System.EventHandler(this.calcPCFogCheckQuantity_EditValueChanged);
             // 
             // ceInvoiceXOCount
             // 

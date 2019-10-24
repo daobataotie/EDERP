@@ -79,8 +79,11 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.lblPCDoubleImpactCheckCount.Text = _pcdic.PCDoubleImpactCheckCount.HasValue ? _pcdic.PCDoubleImpactCheckCount.ToString() : "";
             this.lbl_productunit.Text = _pcdic.ProductUnit == null ? "" : _pcdic.ProductUnit.ToString();
 
-            if (_pcdic.ZhuiQiuKG != null && _pcdic.ZhuiQiuKG.Contains("44"))
+            //if (_pcdic.ZhuiQiuKG != null && _pcdic.ZhuiQiuKG.Contains("44"))
+            //    this.xrTableCell6.Text = _pcdic.ZhuiQiuKG;
+            if (!string.IsNullOrEmpty(_pcdic.ZhuiQiuKG))
                 this.xrTableCell6.Text = _pcdic.ZhuiQiuKG;
+
             //Details
             #region ¸ü¸ÄÏêÏ¸ÏÔÊ¾
             foreach (Model.PCDoubleImpactCheckDetail detail in details)

@@ -18,10 +18,12 @@ namespace Book.UI
             InitializeComponent();
             this.productList = manager.StockPrompt();
             this.bindingSource1.DataSource = this.productList;
-            if (BL.Settings.StockPromptFlag == "1")
-                this.checkEdit1.Checked = true;
-            else
-                this.checkEdit1.Checked = false;
+            //if (BL.Settings.StockPromptFlag == "1")
+            //    this.checkEdit1.Checked = true;
+            //else
+            //    this.checkEdit1.Checked = false;
+
+            this.checkEdit1.Checked = BL.V.ActiveOperator.IsShowStockPrompt;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -38,10 +40,15 @@ namespace Book.UI
 
         private void checkEdit1_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.checkEdit1.Checked)
-                new BL.SettingManager().Update("StockPromptFlag", "1");
-            else
-                new BL.SettingManager().Update("StockPromptFlag", "2");
+            //if (this.checkEdit1.Checked)
+            //    new BL.SettingManager().Update("StockPromptFlag", "1");
+            //else
+            //    new BL.SettingManager().Update("StockPromptFlag", "2");
+
+            //现在改为 每人单独控制自己账号是否显示此窗口
+            BL.V.ActiveOperator.IsShowStockPrompt = this.checkEdit1.Checked;
+
+            new BL.OperatorsManager().Update(BL.V.ActiveOperator);
         }
     }
 }

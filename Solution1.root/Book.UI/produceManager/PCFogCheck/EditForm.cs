@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Book.UI.Settings.BasicData.Employees;
 using System.Xml;
+using System.Linq;
 
 namespace Book.UI.produceManager.PCFogCheck
 {
@@ -274,7 +275,7 @@ namespace Book.UI.produceManager.PCFogCheck
             GC.Collect();
         }
 
-        //选择测试单据
+        //搜索测试单据
         private void barBtnSearch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ListForm f = new ListForm();
@@ -324,5 +325,34 @@ namespace Book.UI.produceManager.PCFogCheck
         }
 
         #endregion
+
+        //检测数量 改变 （检测数量对应明细条数）
+        private void calcPCFogCheckQuantity_EditValueChanged(object sender, EventArgs e)
+        {
+            var needRows = (int)this.calcPCFogCheckQuantity.Value - this._pcfog.Details.Count;
+            if (needRows >= 0)
+            {
+                for (int i = 0; i < needRows; i++)
+                {
+                    Model.PCFogCheckDetail detail = new Book.Model.PCFogCheckDetail();
+                    detail.PCImpactCheckDetailId = Guid.NewGuid().ToString();
+                    detail.PCFogCheckId = this._pcfog.PCFogCheckId;
+                    detail.CommentLDate = DateTime.Now;
+                    detail.CommentLTime = DateTime.Now;
+                    detail.CommentRDate = DateTime.Now;
+                    detail.CommentRTime = DateTime.Now;
+                    this._pcfog.Details.Add(detail);
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+            else
+            {
+                for (int i = 0; i < Math.Abs(needRows); i++)
+                {
+                    this._pcfog.Details.Remove(this._pcfog.Details.Last());
+                }
+            }
+        }
     }
 }

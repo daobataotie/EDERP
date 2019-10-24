@@ -190,9 +190,6 @@
   <data name="LbJudgeSP.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>295.910278, 79.99982</value>
   </data>
-  <data name="xrLabel24.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>666.331055, 68.79175</value>
-  </data>
   <data name="xrLabel15.Text" xml:space="preserve">
     <value>Order Quantity(訂單數量)：
 

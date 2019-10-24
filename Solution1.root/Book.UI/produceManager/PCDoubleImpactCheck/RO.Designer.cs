@@ -191,7 +191,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrS_SZhongL.Name = "TCattrS_SZhongL";
             this.TCattrS_SZhongL.StylePriority.UseFont = false;
             this.TCattrS_SZhongL.StylePriority.UseTextAlignment = false;
-            this.TCattrS_SZhongL.Weight = 0.18498354776801299;
+            this.TCattrS_SZhongL.Weight = 0.159134974754099;
             // 
             // TCattrS_SShangL
             // 
@@ -199,7 +199,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrS_SShangL.Name = "TCattrS_SShangL";
             this.TCattrS_SShangL.StylePriority.UseFont = false;
             this.TCattrS_SShangL.StylePriority.UseTextAlignment = false;
-            this.TCattrS_SShangL.Weight = 0.16110253660057683;
+            this.TCattrS_SShangL.Weight = 0.15464069614338485;
             // 
             // TCattrS_SXiaL
             // 
@@ -207,7 +207,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrS_SXiaL.Name = "TCattrS_SXiaL";
             this.TCattrS_SXiaL.StylePriority.UseFont = false;
             this.TCattrS_SXiaL.StylePriority.UseTextAlignment = false;
-            this.TCattrS_SXiaL.Weight = 0.15758272371717363;
+            this.TCattrS_SXiaL.Weight = 0.15758302185505577;
             // 
             // TCattrHotL
             // 
@@ -215,7 +215,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrHotL.Name = "TCattrHotL";
             this.TCattrHotL.StylePriority.UseFont = false;
             this.TCattrHotL.StylePriority.UseTextAlignment = false;
-            this.TCattrHotL.Weight = 0.21975773102841045;
+            this.TCattrHotL.Weight = 0.25206769729269318;
             // 
             // TCattrCoolL
             // 
@@ -223,7 +223,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrCoolL.Name = "TCattrCoolL";
             this.TCattrCoolL.StylePriority.UseFont = false;
             this.TCattrCoolL.StylePriority.UseTextAlignment = false;
-            this.TCattrCoolL.Weight = 0.20724469859075417;
+            this.TCattrCoolL.Weight = 0.23955479529036036;
             // 
             // xrTable4
             // 
@@ -254,7 +254,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrS_SZhongR.Name = "TCattrS_SZhongR";
             this.TCattrS_SZhongR.StylePriority.UseFont = false;
             this.TCattrS_SZhongR.StylePriority.UseTextAlignment = false;
-            this.TCattrS_SZhongR.Weight = 0.19462830685209304;
+            this.TCattrS_SZhongR.Weight = 0.16743217932610602;
             // 
             // TCattrS_SShangR
             // 
@@ -262,7 +262,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrS_SShangR.Name = "TCattrS_SShangR";
             this.TCattrS_SShangR.StylePriority.UseFont = false;
             this.TCattrS_SShangR.StylePriority.UseTextAlignment = false;
-            this.TCattrS_SShangR.Weight = 0.1695021789511561;
+            this.TCattrS_SShangR.Weight = 0.16270357838328109;
             // 
             // TCattrS_SXiaR
             // 
@@ -270,7 +270,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrS_SXiaR.Name = "TCattrS_SXiaR";
             this.TCattrS_SXiaR.StylePriority.UseFont = false;
             this.TCattrS_SXiaR.StylePriority.UseTextAlignment = false;
-            this.TCattrS_SXiaR.Weight = 0.1657993187939536;
+            this.TCattrS_SXiaR.Weight = 0.16579929918878894;
             // 
             // TCattrHotR
             // 
@@ -278,7 +278,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrHotR.Name = "TCattrHotR";
             this.TCattrHotR.StylePriority.UseFont = false;
             this.TCattrHotR.StylePriority.UseTextAlignment = false;
-            this.TCattrHotR.Weight = 0.23121579986912177;
+            this.TCattrHotR.Weight = 0.26521086125078241;
             // 
             // TCattrCoolR
             // 
@@ -286,7 +286,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrCoolR.Name = "TCattrCoolR";
             this.TCattrCoolR.StylePriority.UseFont = false;
             this.TCattrCoolR.StylePriority.UseTextAlignment = false;
-            this.TCattrCoolR.Weight = 0.21805034052577646;
+            this.TCattrCoolR.Weight = 0.25204475493700451;
             // 
             // TCNote
             // 
@@ -661,7 +661,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.StylePriority.UseFont = false;
             this.xrTableCell5.StylePriority.UseTextAlignment = false;
-            this.xrTableCell5.Weight = 0.31995205560331208;
+            this.xrTableCell5.Weight = 0.29526309759398084;
             // 
             // xrTableCell4
             // 
@@ -708,7 +708,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.StylePriority.UseFont = false;
             this.xrTableCell11.StylePriority.UseTextAlignment = false;
-            this.xrTableCell11.Weight = 0.23558326518124143;
+            this.xrTableCell11.Weight = 0.20266443301634057;
             // 
             // xrTableCell14
             // 
@@ -716,7 +716,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.StylePriority.UseFont = false;
             this.xrTableCell14.StylePriority.UseTextAlignment = false;
-            this.xrTableCell14.Weight = 0.20517019825875371;
+            this.xrTableCell14.Weight = 0.19694079871559664;
             // 
             // xrTableCell10
             // 
@@ -724,7 +724,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseFont = false;
             this.xrTableCell10.StylePriority.UseTextAlignment = false;
-            this.xrTableCell10.Weight = 0.20068776956459258;
+            this.xrTableCell10.Weight = 0.20068795940955758;
             // 
             // HeadTC_JiaRe
             // 
@@ -732,7 +732,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.HeadTC_JiaRe.Name = "HeadTC_JiaRe";
             this.HeadTC_JiaRe.StylePriority.UseFont = false;
             this.HeadTC_JiaRe.StylePriority.UseTextAlignment = false;
-            this.HeadTC_JiaRe.Weight = 0.27987001656203975;
+            this.HeadTC_JiaRe.Weight = 0.32101805842513265;
             // 
             // HeadTC_LengDong
             // 
@@ -740,7 +740,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.HeadTC_LengDong.Name = "HeadTC_LengDong";
             this.HeadTC_LengDong.StylePriority.UseFont = false;
             this.HeadTC_LengDong.StylePriority.UseTextAlignment = false;
-            this.HeadTC_LengDong.Weight = 0.26393386066439195;
+            this.HeadTC_LengDong.Weight = 0.30508199744996739;
             // 
             // xrTableCell3
             // 
@@ -748,7 +748,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StylePriority.UseFont = false;
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
-            this.xrTableCell3.Weight = 0.31310199218693879;
+            this.xrTableCell3.Weight = 0.2900576611094699;
             // 
             // lblProduct
             // 

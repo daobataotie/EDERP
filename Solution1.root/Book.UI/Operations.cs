@@ -205,6 +205,8 @@ namespace Book.UI
 
             //列印月薪资
             operations.Add("setting.hr.salary.salaryset.CalCrystalReportForm1", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Salary.Salaryset.CalCrystalReportForm1", form); });
+            //列印月薪资 乱数
+            operations.Add("Hr.Salary.Salaryset.PrintMonthSalaryRandomcode", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Salary.Salaryset.PrintMonthSalaryRandomcode", form); });
             //列印月薪资
             operations.Add("Hr.Salary.Salaryset.PrintMonthSalary", (D1)delegate(System.Windows.Forms.Form form) { M1("Hr.Salary.Salaryset.PrintMonthSalary", form); });
             //薪资计算

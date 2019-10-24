@@ -359,6 +359,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.bindingSource1.Position = this.bindingSource1.IndexOf(pcdicDetail);
         }
 
+        //加载时，不同单据不同列头
         private void EditForm_Load(object sender, EventArgs e)
         {
             this.bsLUEemployees.DataSource = new BL.EmployeeManager().SelectOnActive();

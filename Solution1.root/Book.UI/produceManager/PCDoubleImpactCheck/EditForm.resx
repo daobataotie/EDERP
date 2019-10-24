@@ -120,9 +120,6 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
-  <data name="barBtnSearch.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -431,6 +428,9 @@
         rB05zYKMLnD2lkxbMjnUhJsvuK1bcDgn/pv77snfk9bcJSYSVRqz1Z7h4HcgzyPtBp5/+XAlWbKJUTNi
         PiydRVvthbEShq0tdS1YP1XNB1WKv8rxjMwZjD8BORXH707ETOoAAAAASUVORK5CYIIL
 </value>
+  </data>
+  <data name="barBtnSearch.Caption" xml:space="preserve">
+    <value>搜索</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="coBoxLYBTXX.Location" type="System.Drawing.Point, System.Drawing">
@@ -1331,7 +1331,7 @@
     <value>13</value>
   </data>
   <data name="attrHotL.Caption" xml:space="preserve">
-    <value>坠球眼球(左)</value>
+    <value>坠球44g眼球(左)</value>
   </data>
   <data name="repositoryItemLookUpEdit40.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1352,7 +1352,7 @@
     <value>90</value>
   </data>
   <data name="attrHotR.Caption" xml:space="preserve">
-    <value>坠球眼球(右)</value>
+    <value>坠球44g眼球(右)</value>
   </data>
   <data name="repositoryItemLookUpEdit41.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1373,7 +1373,7 @@
     <value>90</value>
   </data>
   <data name="attrCoolL.Caption" xml:space="preserve">
-    <value>坠球侧面(左)</value>
+    <value>坠球44g侧面(左)</value>
   </data>
   <data name="repositoryItemLookUpEdit42.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1394,7 +1394,7 @@
     <value>90</value>
   </data>
   <data name="attrCoolR.Caption" xml:space="preserve">
-    <value>坠球侧面(右)</value>
+    <value>坠球44g侧面(右)</value>
   </data>
   <data name="repositoryItemLookUpEdit43.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1439,7 +1439,7 @@
     <value>18</value>
   </data>
   <data name="attrZhuiQiu68gL.Caption" xml:space="preserve">
-    <value>坠球68Kg(左)</value>
+    <value>坠球42g(左)</value>
   </data>
   <data name="repositoryItemLookUpEdit3.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1460,7 +1460,7 @@
     <value>100</value>
   </data>
   <data name="attrZhuiQiu68gR.Caption" xml:space="preserve">
-    <value>坠球68Kg(右)</value>
+    <value>坠球42g(右)</value>
   </data>
   <data name="repositoryItemLookUpEdit4.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2431,6 +2431,12 @@
   <data name="&gt;&gt;GirdViewLookUpEditEmployee.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
+    <value>gridColumn3</value>
+  </data>
+  <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;RICBattr60L.Name" xml:space="preserve">
     <value>RICBattr60L</value>
   </data>
@@ -2736,12 +2742,6 @@
   </data>
   <data name="&gt;&gt;repositoryItemCheckedComboBoxEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
-    <value>gridColumn3</value>
-  </data>
-  <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

@@ -1053,6 +1053,9 @@
   <data name="barButtonItem480.Caption" xml:space="preserve">
     <value>列印月薪資</value>
   </data>
+  <data name="barButtonItem502.Caption" xml:space="preserve">
+    <value>列印月薪資亂數</value>
+  </data>
   <data name="barButtonItem488.Caption" xml:space="preserve">
     <value>會計年度薪資表</value>
   </data>
@@ -3306,6 +3309,12 @@
   <data name="&gt;&gt;barButtonItem334.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;barButtonItem501.Name" xml:space="preserve">
+    <value>barButtonItem501</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem501.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;barSubItem60.Name" xml:space="preserve">
     <value>barSubItem60</value>
   </data>
@@ -4048,6 +4057,12 @@
     <value>barButtonItem480</value>
   </data>
   <data name="&gt;&gt;barButtonItem480.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem502.Name" xml:space="preserve">
+    <value>barButtonItem502</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem502.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barButtonItem488.Name" xml:space="preserve">
@@ -5933,12 +5948,6 @@
   </data>
   <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
     <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem501.Name" xml:space="preserve">
-    <value>barButtonItem501</value>
-  </data>
-  <data name="&gt;&gt;barButtonItem501.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

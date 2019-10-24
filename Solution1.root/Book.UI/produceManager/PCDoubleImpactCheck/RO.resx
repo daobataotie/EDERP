@@ -123,7 +123,7 @@
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="TCBingDong.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>805.6712, 0</value>
+    <value>794.0303, 0.000161488846</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="TCBingDong.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -140,7 +140,7 @@
     <value>254</value>
   </data>
   <data name="TCJiaRe.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>645.779541, 0</value>
+    <value>634.1386, 0.000161488846</value>
   </data>
   <data name="TCJiaRe.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>159.891663, 119.062584</value>
@@ -155,7 +155,7 @@
     <value>254</value>
   </data>
   <data name="TCattrBiZhong.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>499.838348, 0</value>
+    <value>488.197418, 0.000161488846</value>
   </data>
   <data name="TCattrBiZhong.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>145.9412, 119.062584</value>
@@ -170,7 +170,7 @@
     <value>254</value>
   </data>
   <data name="xrTable5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>965.562744, 0</value>
+    <value>953.9218, 0.000161488846</value>
   </data>
   <data name="TCattrS_SZhongL.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -221,13 +221,13 @@
     <value>254</value>
   </data>
   <data name="xrTable5.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>762.1127, 63.5</value>
+    <value>788.5708, 63.5</value>
   </data>
   <data name="xrTable4.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrTable4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>965.562744, 63.5</value>
+    <value>953.9218, 63.50016</value>
   </data>
   <data name="TCattrS_SZhongR.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -278,7 +278,7 @@
     <value>254</value>
   </data>
   <data name="xrTable4.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>762.1127, 55.5625</value>
+    <value>788.5709, 55.5625</value>
   </data>
   <data name="TCNote.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -287,10 +287,10 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="TCNote.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1727.67542, 0</value>
+    <value>1742.4928, 0.000161488846</value>
   </data>
   <data name="TCNote.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>201.324463, 119.062584</value>
+    <value>186.50708, 119.062584</value>
   </data>
   <data name="TCNote.Text" xml:space="preserve">
     <value>TCNote</value>
@@ -302,7 +302,7 @@
     <value>254</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>205.729126, 0</value>
+    <value>194.0882, 0.000161488846</value>
   </data>
   <data name="xrTableCell26.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -332,10 +332,10 @@
     <value>254</value>
   </data>
   <data name="TCPCDoubleImpactCheckDetailDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 0</value>
+    <value>4.234076, 0.000161488846</value>
   </data>
   <data name="TCPCDoubleImpactCheckDetailDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>205.7292, 119.0625</value>
+    <value>189.8542, 119.0625</value>
   </data>
   <data name="TCPCDoubleImpactCheckDetailDate.Text" xml:space="preserve">
     <value>TCPCDoubleImpactCheckDetailDate</value>
@@ -347,7 +347,7 @@
     <value>254</value>
   </data>
   <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>205.729126, 63.5</value>
+    <value>194.0882, 63.50016</value>
   </data>
   <data name="xrTableCell33.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -377,7 +377,7 @@
     <value>254</value>
   </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
-    <value>119.062584</value>
+    <value>119.062744</value>
   </data>
   <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
@@ -704,10 +704,10 @@
     <value>254</value>
   </data>
   <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 411.562378</value>
+    <value>4.234076, 411.5624</value>
   </data>
   <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>365.592, 154.6458</value>
+    <value>361.357971, 154.645782</value>
   </data>
   <data name="lblChongJiLiDu.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -779,7 +779,7 @@
     <value>254</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 566.208252</value>
+    <value>4.234076, 566.2082</value>
   </data>
   <data name="xrTableCell5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -893,7 +893,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="HeadTC_JiaRe.Text" xml:space="preserve">
-    <value>坠球眼球</value>
+    <value>坠球44g眼球</value>
   </data>
   <data name="HeadTC_JiaRe.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -905,7 +905,7 @@
     <value>新細明體, 10pt</value>
   </data>
   <data name="HeadTC_LengDong.Text" xml:space="preserve">
-    <value>坠球侧面</value>
+    <value>坠球44g侧面</value>
   </data>
   <data name="HeadTC_LengDong.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
@@ -926,7 +926,7 @@
     <value>254</value>
   </data>
   <data name="xrTable1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1929, 91.41666</value>
+    <value>1924.76575, 91.41666</value>
   </data>
   <data name="lblProduct.Dpi" type="System.Single, mscorlib">
     <value>254</value>

@@ -53,7 +53,8 @@ namespace Book.Model
 		/// 员工
 		/// </summary>
 		private Employee employee;
-		 
+
+        private bool _isShowStockPrompt;
 		#endregion
 		
 		#region Properties
@@ -176,8 +177,15 @@ namespace Book.Model
 			{
 				this.employee = value;
 			}
-			
-		}
+
+        }
+
+        public bool IsShowStockPrompt
+        {
+            get { return _isShowStockPrompt; }
+            set { _isShowStockPrompt = value; }
+        }
+		 
 		/// <summary>
 		/// 操作员编号
 		/// </summary>
@@ -212,8 +220,8 @@ namespace Book.Model
 		/// 登陆密码
 		/// </summary>
 		public readonly static string PROPERTY_PASSWORD = "Password";
-		
 
+        public readonly static string PRO_IsShowStockPrompt = "IsShowStockPrompt";
 		#endregion
 	}
 }

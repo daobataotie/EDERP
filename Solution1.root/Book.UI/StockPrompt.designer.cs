@@ -85,9 +85,9 @@
             // 
             // btn_Print
             // 
-            this.btn_Print.Location = new System.Drawing.Point(450, 309);
+            this.btn_Print.Location = new System.Drawing.Point(474, 309);
             this.btn_Print.Name = "btn_Print";
-            this.btn_Print.Size = new System.Drawing.Size(297, 22);
+            this.btn_Print.Size = new System.Drawing.Size(273, 22);
             this.btn_Print.StyleController = this.layoutControl1;
             this.btn_Print.TabIndex = 5;
             this.btn_Print.Text = "打印";
@@ -165,7 +165,7 @@
             // 
             this.btn_OK.Location = new System.Drawing.Point(196, 309);
             this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(250, 22);
+            this.btn_OK.Size = new System.Drawing.Size(274, 22);
             this.btn_OK.StyleController = this.layoutControl1;
             this.btn_OK.TabIndex = 6;
             this.btn_OK.Text = "确定";
@@ -204,9 +204,9 @@
             // 
             this.layoutControlItem2.Control = this.btn_Print;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(438, 297);
+            this.layoutControlItem2.Location = new System.Drawing.Point(462, 297);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(301, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(277, 26);
             this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextToControlDistance = 0;
@@ -218,7 +218,7 @@
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
             this.layoutControlItem3.Location = new System.Drawing.Point(184, 297);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(254, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(278, 26);
             this.layoutControlItem3.Text = "layoutControlItem3";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextToControlDistance = 0;

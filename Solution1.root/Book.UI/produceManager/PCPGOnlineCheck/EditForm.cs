@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using Book.UI.Settings.BasicData.Customs;
 using Book.UI.Settings.BasicData.Employees;
 using Book.UI.Invoices;
+using System.Reflection;
+using DevExpress.XtraEditors.Controls;
 
 namespace Book.UI.produceManager.PCPGOnlineCheck
 {
@@ -18,6 +20,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
         Model.PCPGOnlineCheck _pcpgoc = null;
         int LastFlag = 0;
+
+        List<ColumnHelper> listColumn = new List<ColumnHelper>();
 
         public EditForm()
         {
@@ -32,6 +36,65 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.bindingSourceBusinessHours.DataSource = new BL.BusinessHoursManager().Select();
             this.nccWorkHouse.Choose = new Settings.ProduceManager.Workhouselog.ChooseWorkHouse();
             this.newChooseContorlAuditEmp.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+
+
+            #region LookUpEditor
+
+            DataTable dt = new DataTable();
+            DataColumn dc = new DataColumn("id", typeof(string));
+            DataColumn dc1 = new DataColumn("name", typeof(string));
+            dt.Columns.Add(dc);
+            dt.Columns.Add(dc1);
+            DataRow dr;
+            dr = dt.NewRow();
+            dr[0] = "-1";
+            dr[1] = string.Empty;
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "0";
+            dr[1] = "√";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "1";
+            dr[1] = "△";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "2";
+            dr[1] = "X";
+            dt.Rows.Add(dr);
+
+            for (int i = 0; i < this.gridView1.Columns.Count; i++)
+            {
+                if (this.gridView1.Columns[i].ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)
+                {
+                    //if (this.gridView1.Columns[i].Name == "colattrUVChengFen" || this.gridView1.Columns[i].Name == "attrTouShiLv" || this.gridView1.Columns[i].Name == "attrFangWuMoYingDu" || this.gridView1.Columns[i].Name == "colattrQiangHuaMo" || this.gridView1.Columns[i].Name == "colattrZhePian" || this.gridView1.Columns[i].Name == "colattrMaoBian" || this.gridView1.Columns[i].Name == "ImpactCheck" || this.gridView1.Columns[i].Name == "attrExterior" || this.gridView1.Columns[i].Name == "attrDianDuPDSLv" || this.gridView1.Columns[i].Name == "attrDianDuBOLiTest" || this.gridView1.Columns[i].Name == "attrGaoDiJiaoL" || this.gridView1.Columns[i].Name == "attrGaoDiJiaoR" || this.gridView1.Columns[i].Name == "gridColumn1" || this.gridView1.Columns[i].Name == "colattrFangWuMoYingDu" || this.gridView1.Columns[i].Name == "colattrTouShiLv")
+                    if (this.gridView1.Columns[i].ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit && this.gridView1.Columns[i].Visible == true)
+                    {
+                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DataSource = dt;
+                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.Clear();
+                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).NullText = "";
+                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+                    new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name",25, "標誌"),
+                     });
+                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DisplayMember = "name";
+                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).ValueMember = "name";
+
+                        //获取此类型列的集合
+                        listColumn.Add(new ColumnHelper
+                        {
+                            ColumnName = this.gridView1.Columns[i].Name,
+                            ColumnCaption = this.gridView1.Columns[i].Caption,
+                            ColumnFieldName = this.gridView1.Columns[i].FieldName
+                        });
+                    }
+                }
+            }
+
+            #endregion
+
+            this.ccob_AutoFillColumn.Properties.DataSource = listColumn;
+            this.ccob_AutoFillColumn.Properties.DisplayMember = "ColumnCaption";
+            this.ccob_AutoFillColumn.Properties.ValueMember = "ColumnFieldName";
         }
 
         public EditForm(string invoiceId)
@@ -208,52 +271,6 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.lookUpEditBusinessHours.EditValue = this._pcpgoc.BusinessHoursId;
 
             this.bsPCPGOnlineCheckDetail.DataSource = this._pcpgoc.Details;
-
-            #region LookUpEditor
-
-            DataTable dt = new DataTable();
-            DataColumn dc = new DataColumn("id", typeof(string));
-            DataColumn dc1 = new DataColumn("name", typeof(string));
-            dt.Columns.Add(dc);
-            dt.Columns.Add(dc1);
-            DataRow dr;
-            dr = dt.NewRow();
-            dr[0] = "-1";
-            dr[1] = string.Empty;
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "0";
-            dr[1] = "√";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "1";
-            dr[1] = "△";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "2";
-            dr[1] = "X";
-            dt.Rows.Add(dr);
-
-            for (int i = 0; i < this.gridView1.Columns.Count; i++)
-            {
-                if (this.gridView1.Columns[i].ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)
-                {
-                    if (this.gridView1.Columns[i].Name == "colattrUVChengFen" || this.gridView1.Columns[i].Name == "attrTouShiLv" || this.gridView1.Columns[i].Name == "attrFangWuMoYingDu" || this.gridView1.Columns[i].Name == "colattrQiangHuaMo" || this.gridView1.Columns[i].Name == "colattrZhePian" || this.gridView1.Columns[i].Name == "colattrMaoBian" || this.gridView1.Columns[i].Name == "ImpactCheck" || this.gridView1.Columns[i].Name == "attrExterior" || this.gridView1.Columns[i].Name == "attrDianDuPDSLv" || this.gridView1.Columns[i].Name == "attrDianDuBOLiTest" || this.gridView1.Columns[i].Name == "attrGaoDiJiaoL" || this.gridView1.Columns[i].Name == "attrGaoDiJiaoR" || this.gridView1.Columns[i].Name == "gridColumn1" || this.gridView1.Columns[i].Name == "colattrFangWuMoYingDu" || this.gridView1.Columns[i].Name == "colattrTouShiLv")
-                    {
-                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DataSource = dt;
-                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.Clear();
-                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).NullText = "";
-                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-                    new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name",25, "標誌"),
-                     });
-                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DisplayMember = "name";
-                        ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).ValueMember = "name";
-
-                    }
-                }
-            }
-
-            #endregion
 
             base.Refresh();
             //switch (this.action)
@@ -747,5 +764,70 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             }
         }
 
+        private void btn_AutoFill_Click(object sender, EventArgs e)
+        {
+            List<PropertyInfo> listProInfo = new List<PropertyInfo>();
+
+            foreach (CheckedListBoxItem item in this.ccob_AutoFillColumn.Properties.Items)
+            {
+                if (item.CheckState == CheckState.Checked)
+                {
+                    PropertyInfo pi = new Book.Model.PCPGOnlineCheckDetail().GetType().GetProperty(item.Value.ToString());
+                    if (pi != null)
+                        listProInfo.Add(pi);
+                }
+            }
+            var detailList = this.bsPCPGOnlineCheckDetail.DataSource as IList<Model.PCPGOnlineCheckDetail>;
+            if (detailList != null && detailList.Count > 0)
+            {
+                foreach (var detail in detailList)
+                {
+                    foreach (var item in listProInfo)
+                    {
+                        item.SetValue(detail, "√", null);
+                    }
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        private void btn_AutoClean_Click(object sender, EventArgs e)
+        {
+            List<PropertyInfo> listProInfo = new List<PropertyInfo>();
+
+            foreach (CheckedListBoxItem item in this.ccob_AutoFillColumn.Properties.Items)
+            {
+                if (item.CheckState == CheckState.Checked)
+                {
+                    PropertyInfo pi = new Book.Model.PCPGOnlineCheckDetail().GetType().GetProperty(item.Value.ToString());
+                    if (pi != null)
+                        listProInfo.Add(pi);
+                }
+            }
+            var detailList = this.bsPCPGOnlineCheckDetail.DataSource as IList<Model.PCPGOnlineCheckDetail>;
+            if (detailList != null && detailList.Count > 0)
+            {
+                foreach (var detail in detailList)
+                {
+                    foreach (var item in listProInfo)
+                    {
+                        item.SetValue(detail, null, null);
+                    }
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+    }
+
+    public class ColumnHelper
+    {
+        public string ColumnName { get; set; }
+
+        public string ColumnCaption { get; set; }
+
+        public string ColumnFieldName { get; set; }
     }
 }

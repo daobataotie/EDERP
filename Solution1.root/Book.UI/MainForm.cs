@@ -261,7 +261,7 @@ namespace Book.UI
                 this.barSubItem54.Enabled = false;
 
             //库存预警
-            if (BL.Settings.StockPromptFlag == "1")
+            if (BL.V.ActiveOperator.IsShowStockPrompt)
             {
                 StockPrompt form = new StockPrompt();
                 if (form.productList.Count > 0)

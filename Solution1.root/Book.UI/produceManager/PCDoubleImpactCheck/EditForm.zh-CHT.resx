@@ -923,16 +923,16 @@
     <value>鏡片右(右)</value>
   </data>
   <data name="attrHotL.Caption" xml:space="preserve">
-    <value>墜球眼球(左)</value>
+    <value>墜球44g眼球(左)</value>
   </data>
   <data name="attrHotR.Caption" xml:space="preserve">
-    <value>墜球眼球(右)</value>
+    <value>墜球44g眼球(右)</value>
   </data>
   <data name="attrCoolL.Caption" xml:space="preserve">
-    <value>墜球側面(左)</value>
+    <value>墜球44g側面(左)</value>
   </data>
   <data name="attrCoolR.Caption" xml:space="preserve">
-    <value>墜球側面(右)</value>
+    <value>墜球44g側面(右)</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>加熱(30m)</value>
@@ -941,10 +941,10 @@
     <value>加熱測試</value>
   </data>
   <data name="attrZhuiQiu68gL.Caption" xml:space="preserve">
-    <value>墜球68Kg(左)</value>
+    <value>墜球42g(左)</value>
   </data>
   <data name="attrZhuiQiu68gR.Caption" xml:space="preserve">
-    <value>墜球68Kg(右)</value>
+    <value>墜球42g(右)</value>
   </data>
   <data name="Employee.Caption" xml:space="preserve">
     <value>測試者</value>

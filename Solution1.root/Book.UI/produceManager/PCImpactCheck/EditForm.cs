@@ -8,6 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using Book.UI.Settings.BasicData.Employees;
 using Book.UI.Settings.ProduceManager.Workhouselog;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraGrid.Columns;
+using System.Reflection;
 
 namespace Book.UI.produceManager.PCImpactCheck
 {
@@ -17,6 +20,7 @@ namespace Book.UI.produceManager.PCImpactCheck
         Model.PCImpactCheck _PCIC = null;
         BL.PCImpactCheckManager _PCICManager = new Book.BL.PCImpactCheckManager();
         private BL.ProduceOtherCompactDetailManager OtherCompactDetailManager = new Book.BL.ProduceOtherCompactDetailManager();
+        List<ColumnHelper> listColumn = new List<ColumnHelper>();
 
         public EditForm()
         {
@@ -31,6 +35,61 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.newChooseContorlAuditEmp.Choose = new ChooseEmployee();
             this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
             this.bindingSourceBusiness.DataSource = (new BL.BusinessHoursManager()).Select();
+
+
+
+            #region LookUpEditor
+
+            DataTable dt = new DataTable();
+            DataColumn dc = new DataColumn("id", typeof(string));
+            DataColumn dc1 = new DataColumn("name", typeof(string));
+            dt.Columns.Add(dc);
+            dt.Columns.Add(dc1);
+            DataRow dr;
+            dr = dt.NewRow();
+            dr[0] = "-1";
+            dr[1] = string.Empty;
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "0";
+            dr[1] = "√";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "1";
+            dr[1] = "△";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr[0] = "2";
+            dr[1] = "X";
+            dt.Rows.Add(dr);
+
+            for (int i = 0; i < this.gridView1.Columns.Count - 1; i++)
+            {
+                if (this.gridView1.Columns[i].ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit && this.gridView1.Columns[i].Name != "gridColumn3" && this.gridView1.Columns[i].Name != "gridColumn8" && this.gridView1.Columns[i].Visible == true)
+                {
+                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DataSource = dt;
+                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.Clear();
+                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+                    new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name",25, "标识"),
+                     });
+                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DisplayMember = "name";
+                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).ValueMember = "id";
+
+                    //获取此类型列的集合
+                    listColumn.Add(new ColumnHelper
+                    {
+                        ColumnName = this.gridView1.Columns[i].Name,
+                        ColumnCaption = this.gridView1.Columns[i].Caption,
+                        ColumnFieldName = this.gridView1.Columns[i].FieldName
+                    });
+                }
+            }
+
+            #endregion
+
+            this.ccob_AutoFillColumns.Properties.DataSource = listColumn;
+            this.ccob_AutoFillColumns.Properties.DisplayMember = "ColumnCaption";
+            this.ccob_AutoFillColumns.Properties.ValueMember = "ColumnFieldName";
         }
 
         int LastFlag = 0;
@@ -212,46 +271,6 @@ namespace Book.UI.produceManager.PCImpactCheck
             this.txt_AuditState.EditValue = this.GetAuditName(this._PCIC.AuditState);
             //this.lookUpEditUnit.EditValue = this._PCIC.ProductUnitId;
 
-            #region LookUpEditor
-
-            DataTable dt = new DataTable();
-            DataColumn dc = new DataColumn("id", typeof(string));
-            DataColumn dc1 = new DataColumn("name", typeof(string));
-            dt.Columns.Add(dc);
-            dt.Columns.Add(dc1);
-            DataRow dr;
-            dr = dt.NewRow();
-            dr[0] = "-1";
-            dr[1] = string.Empty;
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "0";
-            dr[1] = "√";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "1";
-            dr[1] = "△";
-            dt.Rows.Add(dr);
-            dr = dt.NewRow();
-            dr[0] = "2";
-            dr[1] = "X";
-            dt.Rows.Add(dr);
-
-            for (int i = 0; i < this.gridView1.Columns.Count - 1; i++)
-            {
-                if (this.gridView1.Columns[i].ColumnEdit is DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit && this.gridView1.Columns[i].Name != "gridColumn3" && this.gridView1.Columns[i].Name != "gridColumn8")
-                {
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DataSource = dt;
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.Clear();
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-                    new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name",25, "标识"),
-                     });
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).DisplayMember = "name";
-                    ((DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit)this.gridView1.Columns[i].ColumnEdit).ValueMember = "id";
-                }
-            }
-
-            #endregion
             this.bsPCImpactCheckDetail.DataSource = this._PCIC.Details;
 
             base.Refresh();
@@ -551,6 +570,71 @@ namespace Book.UI.produceManager.PCImpactCheck
         {
 
         }
+
+        private void btn_AutoFill_Click(object sender, EventArgs e)
+        {
+            List<PropertyInfo> listProInfo = new List<PropertyInfo>();
+
+            foreach (CheckedListBoxItem item in this.ccob_AutoFillColumns.Properties.Items)
+            {
+                if (item.CheckState == CheckState.Checked)
+                {
+                    PropertyInfo pi = new Book.Model.PCImpactCheckDetail().GetType().GetProperty(item.Value.ToString());
+                    if (pi != null)
+                        listProInfo.Add(pi);
+                }
+            }
+            var detailList = this.bsPCImpactCheckDetail.DataSource as IList<Model.PCImpactCheckDetail>;
+            if (detailList != null && detailList.Count > 0)
+            {
+                foreach (var detail in detailList)
+                {
+                    foreach (var item in listProInfo)
+                    {
+                        item.SetValue(detail, "0", null);
+                    }
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        private void btn_AutoClean_Click(object sender, EventArgs e)
+        {
+            List<PropertyInfo> listProInfo = new List<PropertyInfo>();
+
+            foreach (CheckedListBoxItem item in this.ccob_AutoFillColumns.Properties.Items)
+            {
+                if (item.CheckState == CheckState.Checked)
+                {
+                    PropertyInfo pi = new Book.Model.PCImpactCheckDetail().GetType().GetProperty(item.Value.ToString());
+                    if (pi != null)
+                        listProInfo.Add(pi);
+                }
+            }
+            var detailList = this.bsPCImpactCheckDetail.DataSource as IList<Model.PCImpactCheckDetail>;
+            if (detailList != null && detailList.Count > 0)
+            {
+                foreach (var detail in detailList)
+                {
+                    foreach (var item in listProInfo)
+                    {
+                        item.SetValue(detail, null, null);
+                    }
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+    }
+
+    public class ColumnHelper
+    {
+        public string ColumnName { get; set; }
+
+        public string ColumnCaption { get; set; }
+
+        public string ColumnFieldName { get; set; }
     }
 }
 

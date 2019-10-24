@@ -324,6 +324,15 @@ namespace Book.UI.Hr.Salary.Salaryset
                             //    else
                             //        gnDays += 0.5;
                             //}
+                            //else
+                            //{
+                            //    //出去这些关键字长度还大于1的话说明有其他请假信息，否则为正常出勤
+                            //    string tempStr = _ms.mNote.Replace("公假", "").Replace("年假", "").Replace("出差", "").Replace("上半日", "").Replace("下半日", "").Replace("遲到", "").Replace("早退", "").Replace(";", "").Replace("(", "").Replace(")", "");
+                            //    if (tempStr.Length > 1)
+                            //        gnDays += 0.5;
+                            //    else
+                            //        gnDays++;
+                            //}
                         }
                     }
                     //if (_ms.mNote.Contains("隔周休假") && emp.GeZhouChuQinJJ)

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.coBoxLYBTXX = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -120,6 +120,7 @@
             this.repositoryItemLookUpEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.Employee = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GirdViewLookUpEditEmployee = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RICBattr60L = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemLookUpEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -172,7 +173,6 @@
             this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.repositoryItemTrackBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemTrackBar();
             this.repositoryItemCheckedComboBoxEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -416,7 +416,7 @@
             this.ceInvoiceXOCount.MenuManager = this.barManager1;
             this.ceInvoiceXOCount.Name = "ceInvoiceXOCount";
             this.ceInvoiceXOCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons"))), resources.GetString("ceInvoiceXOCount.Properties.Buttons1"), ((int)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons2"))), ((bool)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons3"))), ((bool)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons4"))), ((bool)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("ceInvoiceXOCount.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons8"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons"))), resources.GetString("ceInvoiceXOCount.Properties.Buttons1"), ((int)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons2"))), ((bool)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons3"))), ((bool)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons4"))), ((bool)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, resources.GetString("ceInvoiceXOCount.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("ceInvoiceXOCount.Properties.Buttons8"))))});
             this.ceInvoiceXOCount.StyleController = this.layoutControl1;
             // 
             // coBoxCJLD
@@ -1057,6 +1057,12 @@
             this.GirdViewLookUpEditEmployee.Name = "GirdViewLookUpEditEmployee";
             this.GirdViewLookUpEditEmployee.ValueMember = "EmployeeId";
             // 
+            // gridColumn3
+            // 
+            resources.ApplyResources(this.gridColumn3, "gridColumn3");
+            this.gridColumn3.FieldName = "Note";
+            this.gridColumn3.Name = "gridColumn3";
+            // 
             // RICBattr60L
             // 
             resources.ApplyResources(this.RICBattr60L, "RICBattr60L");
@@ -1510,12 +1516,6 @@
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem(((object)(resources.GetObject("repositoryItemCheckedComboBoxEdit1.Items2"))), resources.GetString("repositoryItemCheckedComboBoxEdit1.Items3"))});
             this.repositoryItemCheckedComboBoxEdit1.Name = "repositoryItemCheckedComboBoxEdit1";
             this.repositoryItemCheckedComboBoxEdit1.SelectAllItemVisible = false;
-            // 
-            // gridColumn3
-            // 
-            resources.ApplyResources(this.gridColumn3, "gridColumn3");
-            this.gridColumn3.FieldName = "Note";
-            this.gridColumn3.Name = "gridColumn3";
             // 
             // EditForm
             // 
