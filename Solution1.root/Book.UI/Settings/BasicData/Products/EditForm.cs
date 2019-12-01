@@ -623,6 +623,10 @@ namespace Book.UI.Settings.BasicData.Products
             //2018年3月28日21:12:51
             this.product.IsDepot = this.checkEditIsDepot.Checked;
 
+            //2019年11月30日21:31:22
+            this.product.Hezhuang = this.spe_Hezhuang.Value == 0 ? 1 : (int)this.spe_Hezhuang.Value;
+            this.product.Xiangzhuang = this.spe_Xiangzhuang.Value == 0 ? 1 : (int)this.spe_Xiangzhuang.Value;
+
             switch (this.action)
             {
                 case "insert":
@@ -1140,6 +1144,10 @@ namespace Book.UI.Settings.BasicData.Products
 
             //2018年3月28日21:11:49
             this.checkEditIsDepot.EditValue = this.product.IsDepot;
+
+            //2019年11月30日20:53:16
+            this.spe_Hezhuang.EditValue = this.product.Hezhuang;
+            this.spe_Xiangzhuang.EditValue = this.product.Xiangzhuang;
 
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {
@@ -1822,6 +1830,12 @@ namespace Book.UI.Settings.BasicData.Products
                 case "insert":
                 case "update":
                     this.barButtonItem8.Enabled = false;
+
+                    this.spinEditNetWeight.Properties.ReadOnly = false;
+                    this.spinEditGrossWeight.Properties.ReadOnly = false;
+                    this.spinEditVolume.Properties.ReadOnly = false;
+
+                    this.spinEditNetWeight.Enabled = true;
                     break;
                 case "view":
                     this.barButtonItem8.Enabled = true;
@@ -1906,7 +1920,7 @@ namespace Book.UI.Settings.BasicData.Products
                     this.newChooseContorlEmployeeCreator.ShowButton = false;
                     this.newChooseContorlEmployeeCreator.ButtonReadOnly = true;
 
-                    this.spinEditGrossWeight.Properties.ReadOnly = true;
+                    //this.spinEditGrossWeight.Properties.ReadOnly = true;
                     this.spinEditHeight.Properties.ReadOnly = true;
                     this.spinEditHighestPurchasingPrice.Properties.ReadOnly = true;
                     this.spinEditHighestStock.Properties.ReadOnly = true;
@@ -1923,7 +1937,7 @@ namespace Book.UI.Settings.BasicData.Products
                     //this.newChooseContorMainUnitId.ShowButton = false;
                     //this.newChooseContorMainUnitId.ButtonReadOnly = true;
 
-                    this.spinEditNetWeight.Properties.ReadOnly = true;
+                    //this.spinEditNetWeight.Properties.ReadOnly = true;
                     this.spinEditNewestCost.Properties.ReadOnly = true;
                     this.spinEditOnMadingQuantity.Properties.ReadOnly = true;
                     //this.spinEditOrderOnWayQuantity.Properties.ReadOnly = true;
@@ -1968,7 +1982,7 @@ namespace Book.UI.Settings.BasicData.Products
 
 
                     this.comboBoxEditValuationWay.Properties.ReadOnly = true;
-                    this.spinEditVolume.Properties.ReadOnly = true;
+                    //this.spinEditVolume.Properties.ReadOnly = true;
 
                     this.newChooseContorVolumeUnit.ShowButton = false;
                     this.newChooseContorVolumeUnit.ButtonReadOnly = true;
@@ -3426,7 +3440,7 @@ namespace Book.UI.Settings.BasicData.Products
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 this.gridViewStock.OptionsPrint.AutoWidth = false;
-                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() {  });
+                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() { });
             }
         }
     }

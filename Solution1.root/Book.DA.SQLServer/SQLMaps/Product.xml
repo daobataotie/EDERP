@@ -251,6 +251,8 @@
       <result property="Paihe" column="Paihe"/>
       <result property="Moshu" column="Moshu"/>
       <result property="IsDepot" column="IsDepot"/>
+      <result property="Hezhuang" column="Hezhuang"/>
+      <result property="Xiangzhuang" column="Xiangzhuang"/>
       <result property="ProductCategory" column="ProductCategoryId" lazyLoad="false" select="ProductCategory.select_by_primary_key" />
       <result property="BuyUnit" column="BuyUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
       <result property="QualityTestUnit" column="QualityTestUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
@@ -329,7 +331,9 @@
       Chakuang,
       Paihe,
       Moshu,
-      IsDepot
+      IsDepot,
+      Hezhuang,
+      Xiangzhuang
       from product
       WHERE
 				[ProductId] = #ProductId#
@@ -517,7 +521,7 @@ where ProductId = #productid#
     <select id="SelectByCategoryAndCustomer" resultMap="ProductResult" parameterClass="string">
       <![CDATA[   select * from product where  (ProductCategoryId=#productcategoryid# and customerid=#customerid#) or       (ProductCategoryId=#productcategoryid# and (IsCustomerProduct=0 or IsCustomerProduct is null)  )   order by Id 	]]>
     </select>
-    
+
     <delete id="deleteByCustomPro"  parameterClass="Map">
       delete * from product where productid=#productid# and customerid=#customerid#
     </delete>

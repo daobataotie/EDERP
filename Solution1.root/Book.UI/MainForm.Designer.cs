@@ -664,6 +664,7 @@
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.barButtonItem503 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -1300,10 +1301,11 @@
             this.barButtonItem499,
             this.barButtonItem500,
             this.barButtonItem501,
-            this.barButtonItem502});
+            this.barButtonItem502,
+            this.barButtonItem503});
             this.barManager1.LargeImages = this.imageCollection1;
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 665;
+            this.barManager1.MaxItemId = 666;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
             this.barManager1.StatusBar = this.bar3;
@@ -2038,7 +2040,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem444, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem443),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem445),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem451)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem451),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem503)});
             this.barSubItem55.Name = "barSubItem55";
             this.barSubItem55.Tag = "XOSystem";
             // 
@@ -6296,6 +6299,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // barButtonItem503
+            // 
+            resources.ApplyResources(this.barButtonItem503, "barButtonItem503");
+            this.barButtonItem503.Id = 665;
+            this.barButtonItem503.Name = "barButtonItem503";
+            this.barButtonItem503.Tag = "Query.CustomerShipment";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -6953,6 +6963,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem499;
         private DevExpress.XtraBars.BarButtonItem barButtonItem500;
         private DevExpress.XtraBars.BarButtonItem barButtonItem501;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem502;        
+        private DevExpress.XtraBars.BarButtonItem barButtonItem502;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem503;        
     }
 }

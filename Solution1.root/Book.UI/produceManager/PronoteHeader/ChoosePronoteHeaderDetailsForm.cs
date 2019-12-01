@@ -385,8 +385,8 @@ namespace Book.UI.produceManager.PronoteHeader
                 excel.Rows.RowHeight = 20;
 
                 #region 表頭
-                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 10]).Borders.LineStyle = XlLineStyle.xlContinuous;
-                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 10]).HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 11]).Borders.LineStyle = XlLineStyle.xlContinuous;
+                excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 11]).HorizontalAlignment = XlHAlign.xlHAlignLeft;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).RowHeight = 25;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1, 1]).ColumnWidth = 18;
                 excel.get_Range(excel.Cells[1, 2], excel.Cells[1, 2]).ColumnWidth = 18;
@@ -402,6 +402,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 excel.Cells[1, 8] = "當前合格";
                 excel.Cells[1, 9] = "單位";
                 excel.Cells[1, 10] = "機台";
+                excel.Cells[1, 11] = "下個生產站";
                 #endregion
 
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -416,7 +417,9 @@ namespace Book.UI.produceManager.PronoteHeader
                     excel.Cells[i + 2, 8] = dt.Rows[i]["TotalPass"] == null ? "" : dt.Rows[i]["TotalPass"].ToString();
                     excel.Cells[i + 2, 9] = dt.Rows[i]["ProductUnit"] == null ? "" : dt.Rows[i]["ProductUnit"].ToString();
                     excel.Cells[i + 2, 10] = dt.Rows[i]["MachineId"] == null ? "" : dt.Rows[i]["MachineId"].ToString();
+                    excel.Cells[i + 2, 11] = dt.Rows[i]["WorkHouseName"] == null ? "" : dt.Rows[i]["WorkHouseName"].ToString();
                 }
+
                 excel.Visible = true;
             }
             catch

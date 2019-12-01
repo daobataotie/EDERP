@@ -8,6 +8,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.DA
 {
@@ -30,6 +31,7 @@ namespace Book.DA
         void UpdateProofUnitPrice(Model.InvoiceXODetail e);
         IList<Book.Model.InvoiceXODetail> SelectDetailMPSState(Book.Model.InvoiceXO invoiceXO, bool isNeedMps);
         IList<string> SelectProductIDs(string PronoteHeaderId);
+        DataTable ShipmentTable(string customerIds, DateTime startDate, DateTime endDate);
     }
 }
 

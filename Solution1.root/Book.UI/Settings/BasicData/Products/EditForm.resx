@@ -4654,6 +4654,93 @@
   <data name="&gt;&gt;xtraTabPage8.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>642, 126</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 14</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>PCS</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>layoutControl6</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="spe_Hezhuang.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="spe_Hezhuang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 126</value>
+  </data>
+  <data name="spe_Hezhuang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 21</value>
+  </data>
+  <data name="spe_Hezhuang.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;spe_Hezhuang.Name" xml:space="preserve">
+    <value>spe_Hezhuang</value>
+  </data>
+  <data name="&gt;&gt;spe_Hezhuang.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spe_Hezhuang.Parent" xml:space="preserve">
+    <value>layoutControl6</value>
+  </data>
+  <data name="&gt;&gt;spe_Hezhuang.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="spe_Xiangzhuang.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="spe_Xiangzhuang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 126</value>
+  </data>
+  <data name="spe_Xiangzhuang.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spe_Xiangzhuang.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spe_Xiangzhuang.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
+    <value>None</value>
+  </data>
+  <data name="spe_Xiangzhuang.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spe_Xiangzhuang.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="spe_Xiangzhuang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 21</value>
+  </data>
+  <data name="spe_Xiangzhuang.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;spe_Xiangzhuang.Name" xml:space="preserve">
+    <value>spe_Xiangzhuang</value>
+  </data>
+  <data name="&gt;&gt;spe_Xiangzhuang.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spe_Xiangzhuang.Parent" xml:space="preserve">
+    <value>layoutControl6</value>
+  </data>
+  <data name="&gt;&gt;spe_Xiangzhuang.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="spinEditSunhao3.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
@@ -4937,7 +5024,7 @@
     <value>layoutControlGroup19</value>
   </data>
   <data name="layoutControl18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>647, 75</value>
+    <value>647, 92</value>
   </data>
   <data name="layoutControl18.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4958,10 +5045,10 @@
     <value>0</value>
   </data>
   <data name="groupControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 292</value>
+    <value>12, 275</value>
   </data>
   <data name="groupControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>651, 100</value>
+    <value>651, 117</value>
   </data>
   <data name="groupControl1.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -4979,13 +5066,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;groupControl1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="spinEditMoshu.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditMoshu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 267</value>
+    <value>87, 250</value>
   </data>
   <data name="spinEditMoshu.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 21</value>
@@ -5003,13 +5090,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditMoshu.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="spinEditPaihe.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditPaihe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 242</value>
+    <value>412, 225</value>
   </data>
   <data name="spinEditPaihe.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 21</value>
@@ -5027,13 +5114,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditPaihe.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="spinEditChakuang.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditChakuang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 242</value>
+    <value>87, 225</value>
   </data>
   <data name="spinEditChakuang.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 21</value>
@@ -5051,10 +5138,10 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditChakuang.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="checkedComboBoxEditJWeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>499, 108</value>
+    <value>499, 101</value>
   </data>
   <data name="checkedComboBoxEditJWeight.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -5078,10 +5165,10 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;checkedComboBoxEditJWeight.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="textEditPowerGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 212</value>
+    <value>412, 200</value>
   </data>
   <data name="textEditPowerGroup.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5096,7 +5183,7 @@
     <value>False</value>
   </data>
   <data name="textEditPowerGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 26</value>
+    <value>251, 21</value>
   </data>
   <data name="textEditPowerGroup.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -5111,13 +5198,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;textEditPowerGroup.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="spinEditVolume.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditVolume.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 56</value>
+    <value>412, 52</value>
   </data>
   <data name="spinEditVolume.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5135,7 +5222,7 @@
     <value>False</value>
   </data>
   <data name="spinEditVolume.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 23</value>
+    <value>251, 21</value>
   </data>
   <data name="spinEditVolume.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -5150,13 +5237,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditVolume.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="dateEditUpdateTime.EditValue" type="System.DateTime, mscorlib">
     <value>2011-02-11</value>
   </data>
   <data name="dateEditUpdateTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 212</value>
+    <value>87, 200</value>
   </data>
   <data name="dateEditUpdateTime.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5192,7 +5279,7 @@
     <value>False</value>
   </data>
   <data name="dateEditUpdateTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 26</value>
+    <value>246, 21</value>
   </data>
   <data name="dateEditUpdateTime.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -5207,10 +5294,10 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;dateEditUpdateTime.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="newChooseContorlEmployeeChange.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 186</value>
+    <value>412, 176</value>
   </data>
   <data name="newChooseContorlEmployeeChange.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 21</value>
@@ -5228,10 +5315,10 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;newChooseContorlEmployeeChange.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="newChooseContorlEmployeeCreator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 186</value>
+    <value>87, 176</value>
   </data>
   <data name="newChooseContorlEmployeeCreator.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 21</value>
@@ -5249,10 +5336,10 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;newChooseContorlEmployeeCreator.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="textEditQualityRequire.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 159</value>
+    <value>87, 151</value>
   </data>
   <data name="textEditQualityRequire.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5267,7 +5354,7 @@
     <value>False</value>
   </data>
   <data name="textEditQualityRequire.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 23</value>
+    <value>576, 21</value>
   </data>
   <data name="textEditQualityRequire.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -5282,10 +5369,10 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;textEditQualityRequire.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="newChooseContorlPackageType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 133</value>
+    <value>87, 126</value>
   </data>
   <data name="newChooseContorlPackageType.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 21</value>
@@ -5303,13 +5390,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;newChooseContorlPackageType.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="spinEditNetWeight.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditNetWeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 108</value>
+    <value>412, 101</value>
   </data>
   <data name="spinEditNetWeight.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5342,13 +5429,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditNetWeight.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="spinEditGrossWeight.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditGrossWeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 108</value>
+    <value>87, 101</value>
   </data>
   <data name="spinEditGrossWeight.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5381,10 +5468,10 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditGrossWeight.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="newChooseContorWeightUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 83</value>
+    <value>412, 77</value>
   </data>
   <data name="newChooseContorWeightUnit.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 21</value>
@@ -5402,10 +5489,10 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;newChooseContorWeightUnit.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="newChooseContorWeightUnitGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 83</value>
+    <value>87, 77</value>
   </data>
   <data name="newChooseContorWeightUnitGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 21</value>
@@ -5423,7 +5510,7 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;newChooseContorWeightUnitGroup.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="newChooseContorVolumeUnit.Location" type="System.Drawing.Point, System.Drawing">
     <value>412, 3</value>
@@ -5444,13 +5531,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;newChooseContorVolumeUnit.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
   </data>
   <data name="spinEditHeight.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 56</value>
+    <value>87, 52</value>
   </data>
   <data name="spinEditHeight.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5468,7 +5555,7 @@
     <value>False</value>
   </data>
   <data name="spinEditHeight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 23</value>
+    <value>246, 21</value>
   </data>
   <data name="spinEditHeight.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -5483,13 +5570,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditHeight.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>24</value>
   </data>
   <data name="spinEditWidth.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 29</value>
+    <value>412, 27</value>
   </data>
   <data name="spinEditWidth.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5507,7 +5594,7 @@
     <value>False</value>
   </data>
   <data name="spinEditWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 23</value>
+    <value>251, 21</value>
   </data>
   <data name="spinEditWidth.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -5522,13 +5609,13 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditWidth.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>25</value>
   </data>
   <data name="spinEditLength.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
   <data name="spinEditLength.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 29</value>
+    <value>87, 27</value>
   </data>
   <data name="spinEditLength.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5546,7 +5633,7 @@
     <value>False</value>
   </data>
   <data name="spinEditLength.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 23</value>
+    <value>246, 21</value>
   </data>
   <data name="spinEditLength.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -5561,7 +5648,7 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;spinEditLength.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>26</value>
   </data>
   <data name="newChooseContorlVolumeUnitGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>87, 3</value>
@@ -5582,7 +5669,7 @@
     <value>layoutControl6</value>
   </data>
   <data name="&gt;&gt;newChooseContorlVolumeUnitGroup.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>27</value>
   </data>
   <data name="layoutControl6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -5671,12 +5758,6 @@
   <data name="layoutControlItem77.Text" xml:space="preserve">
     <value>品质要求:</value>
   </data>
-  <data name="emptySpaceItem5.CustomizationFormText" xml:space="preserve">
-    <value>emptySpaceItem5</value>
-  </data>
-  <data name="emptySpaceItem5.Text" xml:space="preserve">
-    <value>emptySpaceItem5</value>
-  </data>
   <data name="layoutControlItem79.CustomizationFormText" xml:space="preserve">
     <value>变更人:</value>
   </data>
@@ -5730,6 +5811,24 @@
   </data>
   <data name="layoutControlItem180.Text" xml:space="preserve">
     <value>layoutControlItem180</value>
+  </data>
+  <data name="layoutControlItem192.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem192</value>
+  </data>
+  <data name="layoutControlItem192.Text" xml:space="preserve">
+    <value>layoutControlItem192</value>
+  </data>
+  <data name="layoutControlItem193.CustomizationFormText" xml:space="preserve">
+    <value>盒裝：</value>
+  </data>
+  <data name="layoutControlItem193.Text" xml:space="preserve">
+    <value>盒裝/箱裝：</value>
+  </data>
+  <data name="layoutControlItem194.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem194</value>
+  </data>
+  <data name="layoutControlItem194.Text" xml:space="preserve">
+    <value>layoutControlItem194</value>
   </data>
   <data name="layoutControlGroup7.Text" xml:space="preserve">
     <value>Root</value>
@@ -9235,6 +9334,12 @@
   <data name="layoutControlItem161.Text" xml:space="preserve">
     <value>客户货品名称:</value>
   </data>
+  <data name="layoutControlItem191.CustomizationFormText" xml:space="preserve">
+    <value>净重:</value>
+  </data>
+  <data name="layoutControlItem191.Text" xml:space="preserve">
+    <value>净重:</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -10162,12 +10267,6 @@
   <data name="&gt;&gt;layoutControlItem77.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;emptySpaceItem5.Name" xml:space="preserve">
-    <value>emptySpaceItem5</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem5.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem79.Name" xml:space="preserve">
     <value>layoutControlItem79</value>
   </data>
@@ -10220,6 +10319,18 @@
     <value>layoutControlItem180</value>
   </data>
   <data name="&gt;&gt;layoutControlItem180.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem192.Name" xml:space="preserve">
+    <value>layoutControlItem192</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem192.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem193.Name" xml:space="preserve">
+    <value>layoutControlItem193</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem193.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlGroup9.Name" xml:space="preserve">
@@ -11307,6 +11418,18 @@
   </data>
   <data name="&gt;&gt;bar_ReportStockRecord.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem191.Name" xml:space="preserve">
+    <value>layoutControlItem191</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem191.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem194.Name" xml:space="preserve">
+    <value>layoutControlItem194</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem194.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

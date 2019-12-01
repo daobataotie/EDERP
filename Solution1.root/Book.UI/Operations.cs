@@ -788,6 +788,9 @@ namespace Book.UI
 
             //清晰度报告
             operations.Add("produceManager.PCClarityCheck.EditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCClarityCheck.EditForm", form); });
+
+            //客戶出貨表
+            operations.Add("Query.CustomerShipment", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.CustomerShipment", form); });
         }
 
         static Form CreateForm(string formTypeName)

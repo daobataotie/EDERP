@@ -4530,6 +4530,9 @@
     <EmbeddedResource Include="produceManager\PCFlameRetardant\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Query\CustomerShipment.resx">
+      <DependentUpon>CustomerShipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ChooseCustomsForm2.resx">
       <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
     </EmbeddedResource>
@@ -12007,6 +12010,12 @@
     </Compile>
     <Compile Include="produceManager\PCFlameRetardant\RO.Designer.cs">
       <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\CustomerShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\CustomerShipment.Designer.cs">
+      <DependentUpon>CustomerShipment.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\Customs\ChooseCustomsForm2.cs">
       <SubType>Form</SubType>

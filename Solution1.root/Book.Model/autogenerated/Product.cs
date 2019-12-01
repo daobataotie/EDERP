@@ -524,6 +524,10 @@ namespace Book.Model
 
         private bool? _IsDepot;
 
+        private int? _hezhuang;
+
+        private int? _xiangzhuang;
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -2147,6 +2151,18 @@ namespace Book.Model
             set { _SunhaoRage = value; }
         }
 
+        public int? Hezhuang
+        {
+            get { return _hezhuang; }
+            set { _hezhuang = value; }
+        }
+
+        public int? Xiangzhuang
+        {
+            get { return _xiangzhuang; }
+            set { _xiangzhuang = value; }
+        }
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -3016,6 +3032,10 @@ namespace Book.Model
         public readonly static string PRO_SunhaoRage = "SunhaoRage";
 
         public readonly static string PRO_IsDepot = "IsDepot";
+
+        public readonly static string PRO_Hezhuang = "Hezhuang";
+
+        public readonly static string PRO_Xiangzhuang = "Xiangzhuang";
 
         #endregion
     }

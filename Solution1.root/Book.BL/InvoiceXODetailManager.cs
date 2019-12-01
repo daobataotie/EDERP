@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -113,6 +114,11 @@ namespace Book.BL
         public IList<string> SelectProductIDs(string PronoteHeaderId)
         {
             return accessor.SelectProductIDs(PronoteHeaderId);
+        }
+
+        public DataTable ShipmentTable(string customerIds, DateTime startDate, DateTime endDate)
+        {
+            return accessor.ShipmentTable(customerIds, startDate, endDate);
         }
     }
 }
