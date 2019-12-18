@@ -35,6 +35,7 @@ namespace Book.UI.Query
             this.TCOtherCompactID.DataBindings.Add("Text", this.DataSource, "ProduceOtherCompactId");
             this.TCJHR.DataBindings.Add("Text", this.DataSource, "JiaoQi", "{0:yyyy-MM-dd}");
             this.TCYJRQ.DataBindings.Add("Text", this.DataSource, "InvoiceYjrq", "{0:yyyy-MM-dd}");
+            this.TC_InvoiceDate.DataBindings.Add("Text", this.DataSource, "ProduceOtherMaterialDate", "{0:yyyy-MM-dd}");
             this.TCInvoiceCusID.DataBindings.Add("Text", this.DataSource, "CustomerInvoiceXOId");
             this.xrTableProName.DataBindings.Add("Text", this.DataSource, "ProductName");
             this.xrTableQuanTity.DataBindings.Add("Text", this.DataSource, "InvoiceUseQuantity", "{0:0.##}");
