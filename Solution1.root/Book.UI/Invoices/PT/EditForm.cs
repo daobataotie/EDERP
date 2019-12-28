@@ -32,7 +32,7 @@ namespace Book.UI.Invoices.PT
             this.requireValueExceptions.Add("Employee0", new AA(Properties.Resources.RequiredDataOfEmployee0, this.buttonEditEmployee));
             this.requireValueExceptions.Add("Depot0", new AA(Properties.Resources.RequiredDataOfDepot, this.newChooseDepot1));
             this.requireValueExceptions.Add("Depot1", new AA(Properties.Resources.RequiredDataOfDepot, this.newChooseDepot2));
-            this.requireValueExceptions.Add("Details", new AA(Properties.Resources.RequireDataForDetails, this.gridControl1));
+            this.requireValueExceptions.Add("Details", new AA("調撥數量不能為0", this.gridControl1));
 
             this.invalidValueExceptions.Add(Model.InvoicePT.PROPERTY_INVOICEID, new AA(Properties.Resources.EntityExists, this.textEditInvoiceId));
             this.invalidValueExceptions.Add(Model.InvoicePTDetail.PROPERTY_DEPOTPOSITIONID, new AA("調撥數量不能大於當前貨位數量！", this.gridControl1));

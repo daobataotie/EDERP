@@ -456,7 +456,9 @@ where ProductId = #productid#
       Chakuang,
       Paihe,
       Moshu,
-      IsDepot
+      IsDepot,
+      Hezhuang,
+      Xiangzhuang
       from product
       WHERE ProductCategoryId = #value# order by Id
     </select>
@@ -861,7 +863,9 @@ where ProductId = #productid#
       Chakuang,
       Paihe,
       Moshu,
-      IsDepot
+      IsDepot,
+      Hezhuang,
+      Xiangzhuang
       from product
       WHERE
 				[ProductId] = #ProductId#
