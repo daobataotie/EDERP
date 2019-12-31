@@ -38,6 +38,39 @@ namespace Book.BL
             }
         }
 
+
+        public void Delete(Model.ShouldPayAccount shouldPayAccount)
+        {
+            try
+            {
+                //删除应付应收票据
+                var bills = new BL.AtBillsIncomeManager().SelectByShouldPayAccountId(shouldPayAccount.ShouldPayAccountId);
+                if (bills != null && bills.Count > 0)
+                {
+                    foreach (var item in bills)
+                    {
+                        new BL.AtBillsIncomeManager().Delete(item.BillsId);
+                    }
+                }
+
+                //删除本身
+                Delete(shouldPayAccount.ShouldPayAccountId);
+
+                //删除应收账款明细表的查询条件
+                new BL.ShouldPayAccountConditionManager().Delete(shouldPayAccount.ShouldPayAccountConditionId);
+
+                //删除会计传票
+                new BL.AtSummonManager().Delete(shouldPayAccount.AtSummon);
+
+            }
+            catch
+            {
+                BL.V.RollbackTransaction();
+                throw;
+            }
+        }
+
+
         /// <summary>
         /// Insert a ShouldPayAccount.
         /// </summary>

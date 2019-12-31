@@ -440,7 +440,8 @@ namespace Book.UI.Query
             if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Model.ShouldPayAccount model = this.manager.GetNext(this.shouldPayAccount);
-                this.manager.Delete(this.shouldPayAccount.ShouldPayAccountId);
+                //this.manager.Delete(this.shouldPayAccount.ShouldPayAccountId);
+                this.manager.Delete(this.shouldPayAccount);
                 if (model == null)
                     this.shouldPayAccount = this.manager.GetLast();
                 else
