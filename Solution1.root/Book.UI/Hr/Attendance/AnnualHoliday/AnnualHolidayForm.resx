@@ -154,7 +154,7 @@
     <value>92, 21</value>
   </data>
   <data name="comboBoxEdit1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;comboBoxEdit1.Name" xml:space="preserve">
     <value>comboBoxEdit1</value>
@@ -262,7 +262,7 @@
     <value>656, 403</value>
   </data>
   <data name="dataGridViewAnnualHoliday.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;dataGridViewAnnualHoliday.Name" xml:space="preserve">
     <value>dataGridViewAnnualHoliday</value>
@@ -499,17 +499,17 @@
   <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;imageCollection1.Name" xml:space="preserve">
-    <value>imageCollection1</value>
-  </data>
-  <data name="&gt;&gt;imageCollection1.Type" xml:space="preserve">
-    <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;barExport.Name" xml:space="preserve">
     <value>barExport</value>
   </data>
   <data name="&gt;&gt;barExport.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;imageCollection1.Name" xml:space="preserve">
+    <value>imageCollection1</value>
+  </data>
+  <data name="&gt;&gt;imageCollection1.Type" xml:space="preserve">
+    <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AnnualHolidayForm</value>

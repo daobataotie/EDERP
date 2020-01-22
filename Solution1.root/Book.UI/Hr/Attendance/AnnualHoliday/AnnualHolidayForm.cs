@@ -97,9 +97,13 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
                 MessageBox.Show("保存成功！", this.Text, MessageBoxButtons.OK);
             }
 
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("數據庫發生錯誤,請聯繫管理員", this.Text, MessageBoxButtons.OK);
+                if (ex.Message.Contains("PK_AnnualHoliday_1"))
+                    MessageBox.Show("請勿錄入重複日期", this.Text, MessageBoxButtons.OK);
+                else
+                    MessageBox.Show("數據庫發生錯誤,請聯繫管理員", this.Text, MessageBoxButtons.OK);
+
                 BL.V.RollbackTransaction();
             }
         }
@@ -341,7 +345,7 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             string name = string.Empty;
             string department = string.Empty;
             string isHoliday = string.Empty;
-            for (int i = 0; i < dataGridViewAnnualHoliday.Rows.Count-1; i++)
+            for (int i = 0; i < dataGridViewAnnualHoliday.Rows.Count - 1; i++)
             {
                 date = dataGridViewAnnualHoliday.Rows[i].Cells["HolidayDate"].Value == null ? "" : dataGridViewAnnualHoliday.Rows[i].Cells["HolidayDate"].Value.ToString();
                 week = dataGridViewAnnualHoliday.Rows[i].Cells["DayOfWeek"].Value == null ? "" : dataGridViewAnnualHoliday.Rows[i].Cells["DayOfWeek"].Value.ToString();

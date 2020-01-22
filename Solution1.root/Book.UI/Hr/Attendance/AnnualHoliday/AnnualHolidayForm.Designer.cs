@@ -46,13 +46,13 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barExport = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
-            this.barExport = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAnnualHoliday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAnnualHoliday)).BeginInit();
@@ -182,6 +182,13 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
+            // barExport
+            // 
+            resources.ApplyResources(this.barExport, "barExport");
+            this.barExport.Id = 1;
+            this.barExport.Name = "barExport";
+            this.barExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barExport_ItemClick);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -215,13 +222,6 @@ namespace Book.UI.Hr.Attendance.AnnualHoliday
             this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items"))), resources.GetString("radioGroup1.Properties.Items1")),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items2"))), resources.GetString("radioGroup1.Properties.Items3"))});
-            // 
-            // barExport
-            // 
-            resources.ApplyResources(this.barExport, "barExport");
-            this.barExport.Id = 1;
-            this.barExport.Name = "barExport";
-            this.barExport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barExport_ItemClick);
             // 
             // AnnualHolidayForm
             // 
