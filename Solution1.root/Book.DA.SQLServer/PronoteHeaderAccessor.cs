@@ -79,7 +79,7 @@ namespace Book.DA.SQLServer
 
             sql.Append("  where    PronoteDate between @startdate and @enddate  ");
             if (!string.IsNullOrEmpty(cusxoid))
-                sql.Append(" and   i.CustomerInvoiceXOId  like '%'+@CustomerInvoiceXOId+'%'");
+                sql.Append(" and   i.CustomerInvoiceXOId=@CustomerInvoiceXOId");
             if (customer != null)
                 sql.Append(" and  i.xocustomerId=@xocustomerId");
             if (product != null)
@@ -190,7 +190,7 @@ namespace Book.DA.SQLServer
 
             sql.Append("  where    PronoteDate between @startdate and @enddate  ");
             if (!string.IsNullOrEmpty(cusxoid))
-                sql.Append(" and   i.CustomerInvoiceXOId  like '%'+@CustomerInvoiceXOId+'%'");
+                sql.Append(" and   i.CustomerInvoiceXOId=@CustomerInvoiceXOId");
             if (customer != null)
                 sql.Append(" and  i.xocustomerId=@xocustomerId");
             if (product != null)
@@ -286,7 +286,7 @@ namespace Book.DA.SQLServer
 
             sql.Append("  where    PronoteDate between @startdate and @enddate  ");
             if (!string.IsNullOrEmpty(cusxoid))
-                sql.Append(" and   i.CustomerInvoiceXOId  like '%'+@CustomerInvoiceXOId+'%'");
+                sql.Append(" and   i.CustomerInvoiceXOId=@CustomerInvoiceXOId");
             if (customer != null)
                 sql.Append(" and  i.xocustomerId=@xocustomerId");
             if (product != null)
@@ -365,7 +365,7 @@ namespace Book.DA.SQLServer
 
             sql.Append("  where    PronoteDate between @startdate and @enddate  ");
             if (!string.IsNullOrEmpty(cusxoid))
-                sql.Append(" and   i.CustomerInvoiceXOId  like '%'+@CustomerInvoiceXOId+'%'");
+                sql.Append(" and   i.CustomerInvoiceXOId=@CustomerInvoiceXOId");
             if (customer != null)
                 sql.Append(" and  i.xocustomerId=@xocustomerId");
             if (product != null)
