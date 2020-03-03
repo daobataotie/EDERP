@@ -717,7 +717,7 @@ namespace Book.UI.Invoices.XO
             this.bottomMarginBand1});
             resources.ApplyResources(this, "$this");
             this.ExportOptions.Xls.SheetName = resources.GetString("R01.ExportOptions.Xls.SheetName");
-            this.Margins = new System.Drawing.Printing.Margins(150, 90, 90, 80);
+            this.Margins = new System.Drawing.Printing.Margins(150, 89, 79, 79);
             this.PageHeight = 2794;
             this.PageWidth = 2159;
             this.Version = "10.2";

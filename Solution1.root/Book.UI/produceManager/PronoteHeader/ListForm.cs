@@ -177,6 +177,7 @@ namespace Book.UI.produceManager.PronoteHeader
             }
         }
 
+        //列印
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (this.sourceType == 7)
@@ -243,11 +244,7 @@ namespace Book.UI.produceManager.PronoteHeader
                 f.Show();
         }
 
-        /// <summary>
-        /// 领料单列印
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // 领料单列印
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (listDetail == null || listDetail.Count == 0) return;

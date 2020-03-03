@@ -98,6 +98,7 @@ namespace Book.UI.produceManager.ProduceMaterial
             this.GroupHeader1.GroupFields.Add(new GroupField(Model.ProduceMaterial.PRO_ProduceMaterialID));
             this.xrSubreport1.ReportSource = new RODetail1();
 
+            this.lbl_JIS.DataBindings.Add("Text", this.DataSource, "Lbl_JIS");
         }
 
     }

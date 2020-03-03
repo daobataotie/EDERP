@@ -69,6 +69,8 @@ namespace Book.UI.produceManager.PronoteHeader
             this.lbl_MaterialSum.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_Materialprocessum);
             this.xrSubreport1.ReportSource = new RO1();
             this.xrSubreport2.ReportSource = new RO2();
+
+            this.lbl_JIS.DataBindings.Add("Text", this.DataSource, "Lbl_JIS");
         }
         public RODetail(IList<Model.PronoteHeader> headerlist, int sourcetype)
         {
@@ -125,6 +127,8 @@ namespace Book.UI.produceManager.PronoteHeader
             this.RichTextCeMai.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_AttrCeMai);
             this.xrSubreport1.ReportSource = new RO1();
             this.xrSubreport2.ReportSource = new RO2();
+
+            this.lbl_JIS.DataBindings.Add("Text", this.DataSource, "Lbl_JIS");
         }
 
         private void RO_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

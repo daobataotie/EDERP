@@ -74,6 +74,8 @@ namespace Book.UI.produceManager.ProduceOtherCompact
             this.lblFP.DataBindings.Add("Text", this.DataSource, "invoiceXO.xocustomer.CustomerFP");
             this.GroupHeader1.GroupFields.Add(new GroupField(Model.ProduceOtherCompact.PRO_ProduceOtherCompactId));
             this.xrSubreport1.ReportSource = new ROContinuousDetails();
+
+            this.lbl_JIS.DataBindings.Add("Text", this.DataSource, "Lbl_JIS");
         }
 
         private void xrSubreport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

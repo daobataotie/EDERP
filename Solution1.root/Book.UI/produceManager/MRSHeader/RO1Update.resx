@@ -679,7 +679,7 @@
     <value>439.208, 50.0000153</value>
   </data>
   <data name="xrLabelDate.Text" xml:space="preserve">
-    <value>列 表 日  期:</value>
+    <value>列表日期:</value>
   </data>
   <data name="xrLabelDate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -775,7 +775,7 @@
     <value>254</value>
   </data>
   <data name="xrPageInfo2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1499.14734, 0</value>
+    <value>1562.54321, 0</value>
   </data>
   <data name="xrPageInfo2.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>322.791656, 50</value>

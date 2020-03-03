@@ -207,7 +207,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 透视率
+        /// 透视率 后改爲 質檢標準
         /// </summary>
         public string PerspectiveRate
         {

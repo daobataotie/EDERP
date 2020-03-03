@@ -38,5 +38,24 @@ namespace Book.Model
             set { isChecked = value; }
         }
 
+        public string Lbl_JIS
+        {
+            get
+            {
+                if (this.Customer != null && !string.IsNullOrEmpty(this.Customer.CheckedStandard))
+                {
+                    if (this.Customer.CheckedStandard.ToLower().Contains("jis") && this.Customer.CustomerFullName.ToUpper().Contains("MIDORI"))
+                    {
+                        return "JIS";
+                    }
+                    else if (this.Customer.CheckedStandard.ToLower().Contains("as"))
+                    {
+                        return "AS";
+                    }
+                }
+
+                return "";
+            }
+        }
     }
 }

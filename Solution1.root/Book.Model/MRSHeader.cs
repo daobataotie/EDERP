@@ -127,6 +127,29 @@ namespace Book.Model
             get { return _customerShortName; }
             set { _customerShortName = value; }
         }
+
+        public string CheckedStandard { get; set; }
+
+        public string Lbl_JIS
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(CustomerShortName) && !string.IsNullOrEmpty(CheckedStandard))
+                {
+                    if (CheckedStandard.ToLower().Contains("jis") && CustomerShortName.ToUpper().Contains("MIDORI"))
+                    {
+                        return "JIS";
+                    }
+                    else if (CheckedStandard.ToLower().Contains("as"))
+                    {
+                        return "AS";
+                    }
+                }
+
+                return "";
+            }
+        }
+
         public readonly static string PROPERTY_IsChecked = "IsChecked";
     }
 }

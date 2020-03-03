@@ -57,10 +57,22 @@ namespace Book.UI.Invoices.CO
             if (temp != null)
             {
                 this.xrLabelInvoiceXOId.Text = temp.CustomerInvoiceXOId;
-
             }
+
             this.xrLabelPiHao.Text = this.invoice.SupplierLotNumber;
             this.lblMRPId.Text = this.invoice.MRSHeaderId;
+
+            if (this.invoice.Customer != null && !string.IsNullOrEmpty(this.invoice.Customer.CheckedStandard))
+            {
+                if (this.invoice.Customer.CheckedStandard.ToLower().Contains("jis") && this.invoice.Customer.CustomerFullName.ToUpper().Contains("MIDORI"))
+                {
+                    CreateTagLable("JIS");
+                }
+                else if (this.invoice.Customer.CheckedStandard.ToLower().Contains("as"))
+                {
+                    CreateTagLable("AS");
+                }
+            }
 
             //Ã÷Ï¸ÐÅÏ¢
             this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_Inumber);
@@ -78,5 +90,22 @@ namespace Book.UI.Invoices.CO
             this.xrTableCellNextWorkHouse.DataBindings.Add("Text", this.DataSource, "NextWorkHouse." + Model.WorkHouse.PROPERTY_WORKHOUSENAME);
         }
 
+
+        private void CreateTagLable(string tag)
+        {
+            XRLabel lbl_JIS = new XRLabel();
+            this.ReportHeader.Controls.Add(lbl_JIS);
+            lbl_JIS.BorderWidth = 0;
+            lbl_JIS.CanGrow = false;
+            lbl_JIS.Name = "lbl_JIS";
+            lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            lbl_JIS.SizeF = new SizeF(200, 85);
+            lbl_JIS.Text = tag;
+            lbl_JIS.Font = new Font("Times New Roman", 32);
+            lbl_JIS.ForeColor = Color.Red;
+            lbl_JIS.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            lbl_JIS.Visible = true;
+            lbl_JIS.LocationF = new PointF(this.PageWidth - lbl_JIS.SizeF.Width - 10 - Margins.Left - Margins.Right, 0);
+        }
     }
 }

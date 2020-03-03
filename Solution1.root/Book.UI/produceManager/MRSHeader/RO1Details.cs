@@ -14,10 +14,25 @@ namespace Book.UI.produceManager.MRSHeader
         private BL.MRSdetailsManager mRSdetailsManager = new Book.BL.MRSdetailsManager();
         private BL.InvoiceXOManager invoiceXOManager = new Book.BL.InvoiceXOManager();
         private BL.MPSheaderManager mPSheaderManager = new Book.BL.MPSheaderManager();
-
+       
         public RO1Details(ConditionMRS condition)
         {
             InitializeComponent();
+
+            //this.ReportHeader.Controls.Add(lbl_JIS);
+            //lbl_JIS.BorderWidth = 0;
+            //lbl_JIS.CanGrow = false;
+            //lbl_JIS.Name = "lbl_JIS";
+            //lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            ////lbl_JIS.SizeF = new SizeF(200, 85);
+            //lbl_JIS.SizeF = new SizeF(0, 0);
+            ////ljis.Text = "JIS";
+            //lbl_JIS.Font = new Font(this.Font.FontFamily.Name, 32);
+            //lbl_JIS.ForeColor = Color.Red;
+            //lbl_JIS.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            //lbl_JIS.Visible = true;
+            //lbl_JIS.LocationF = new PointF(this.PageWidth - lbl_JIS.SizeF.Width - 10 - Margins.Left - Margins.Right, 0);
+
 
             IList<Model.MRSHeader> list = this.mRSheaderManager.SelectbyCondition(condition.MrsStart, condition.MrsEnd, condition.CustomerStart, condition.CustomerEnd, condition.StartDate, condition.EndDate, condition.SourceType, condition.Id1, condition.Id2, condition.Cusxoid, condition.Product);
             if (list == null || list.Count == 0)
@@ -61,18 +76,20 @@ namespace Book.UI.produceManager.MRSHeader
             //物料需求计划
             this.xrLabelMRSHeaderId.DataBindings.Add("Text", this.DataSource, Model.MRSHeader.PRO_MRSHeaderId);
             this.xrLabelXOCusId.DataBindings.Add("Text", this.DataSource, Model.MRSHeader.PROPERTY_CustomerInvoiceXOId);
-            this.xrLabelXOJiaoQi.DataBindings.Add("Text",this.DataSource, "YjrqDate", "{0:yyyy-MM-dd}");
+            this.xrLabelXOJiaoQi.DataBindings.Add("Text", this.DataSource, "YjrqDate", "{0:yyyy-MM-dd}");
             this.xrLabelMRSCustomer.DataBindings.Add("Text", this.DataSource, "CustomerShortName");
             this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, "PiHao");
             this.xrLabelMPSHeader.DataBindings.Add("Text", this.DataSource, Model.MRSHeader.PRO_MPSheaderId);
             this.xrLabelMRSstate.DataBindings.Add("Text", this.DataSource, Model.MRSHeader.PRO_MRSstate);
             this.xrLabelMRSstartdate.DataBindings.Add("Text", this.DataSource, Model.MRSHeader.PRO_MRSstartdate, "{0:yyyy-MM-dd}");
             this.xrLabelEmployee0.DataBindings.Add("Text", this.DataSource, "Employee1Name");
-            this.xrLabelEmp0.DataBindings.Add("Text", this.DataSource, "Employee0Name") ;
+            this.xrLabelEmp0.DataBindings.Add("Text", this.DataSource, "Employee0Name");
             this.xrLabelMRSheaderDesc.DataBindings.Add("Text", this.DataSource, Model.MRSHeader.PRO_MRSheaderDesc);
             this.xrLabelTpye.DataBindings.Add("Text", this.DataSource, Model.MRSHeader.PROPERTY_GETSOURCETYPE);
             this.GroupHeader1.GroupFields.Add(new GroupField(Model.MRSHeader.PRO_MRSHeaderId));
             this.xrSubreport1.ReportSource = new RO1Details1();
+
+            this.lbl_JIS.DataBindings.Add("Text", this.DataSource, "Lbl_JIS");
         }
 
         private void xrSubreport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

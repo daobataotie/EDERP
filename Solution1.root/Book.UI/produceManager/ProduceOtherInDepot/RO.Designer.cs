@@ -268,6 +268,7 @@
             resources.ApplyResources(this.xrLabelDepot, "xrLabelDepot");
             this.xrLabelDepot.Name = "xrLabelDepot";
             this.xrLabelDepot.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabelDepot.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel2
             // 
@@ -508,7 +509,7 @@
             this.topMarginBand1,
             this.bottomMarginBand1});
             resources.ApplyResources(this, "$this");
-            this.Margins = new System.Drawing.Printing.Margins(150, 80, 80, 80);
+            this.Margins = new System.Drawing.Printing.Margins(150, 79, 79, 79);
             this.PageHeight = 1397;
             this.PageWidth = 2159;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;

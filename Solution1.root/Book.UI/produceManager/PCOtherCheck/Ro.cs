@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
+using System.Linq;
 
 namespace Book.UI.produceManager.PCOtherCheck
 {
@@ -20,13 +21,23 @@ namespace Book.UI.produceManager.PCOtherCheck
             this.lblDataName.Text = Properties.Resources.PCOtherCheck;
             this.lblPrintDate.Text += DateTime.Now.ToShortDateString();
 
-            ////Control
+            //Control
             this.lblPCOtherCheckId.Text = _PCOC.PCOtherCheckId;
             this.lblPCOtherCheckDate.Text = _PCOC.PCOtherCheckDate.Value.ToShortDateString();
             this.lblSupplier.Text = _PCOC.Supplier == null ? "" : _PCOC.Supplier.ToString();
             this.lblEmployee1.Text = _PCOC.Employee1 == null ? "" : _PCOC.Employee1.ToString();
             this.lblEmployee0.Text = _PCOC.Employee0 == null ? "" : _PCOC.Employee0.ToString();
             this.lblPCOtherCheckDesc.Text = _PCOC.PCOtherCheckDesc;
+
+            if (_PCOC.Detail.Any(d => d.PerspectiveRate.ToLower().Contains("jis")))
+            {
+                CreateTagLable("JIS");
+            }
+            else if (_PCOC.Detail.Any(d => d.PerspectiveRate.ToLower().Contains("as")))
+            {
+                CreateTagLable("AS");
+            }
+
 
             //Detail
             #region ×¢ÊÍ
@@ -67,6 +78,23 @@ namespace Book.UI.produceManager.PCOtherCheck
 
             //¿Í‘ôÓ††Î¾ŽÌ–
             this.xrInvoiceCusXoId.DataBindings.Add("Text", this.DataSource, Model.PCOtherCheckDetail.PRO_InvoiceCusXOId);
+        }
+
+        private void CreateTagLable(string tag)
+        {
+            XRLabel lbl_JIS = new XRLabel();
+            this.ReportHeader.Controls.Add(lbl_JIS);
+            lbl_JIS.BorderWidth = 0;
+            lbl_JIS.CanGrow = false;
+            lbl_JIS.Name = "lbl_JIS";
+            lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            lbl_JIS.SizeF = new SizeF(200, 85);
+            lbl_JIS.Text = tag;
+            lbl_JIS.Font = new Font("Times New Roman", 32);
+            lbl_JIS.ForeColor = Color.Red;
+            lbl_JIS.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            lbl_JIS.Visible = true;
+            lbl_JIS.LocationF = new PointF(this.PageWidth - lbl_JIS.SizeF.Width - 10 - Margins.Left - Margins.Right, 0);
         }
     }
 }

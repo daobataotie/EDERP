@@ -93,6 +93,8 @@ namespace Book.UI.produceManager.PronoteHeader
             //this.lblMoshu.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_Moshu);
             this.xrSubreport1.ReportSource = new RO1();
             this.xrSubreport2.ReportSource = new RO2();
+
+            this.lbl_JIS.DataBindings.Add("Text", this.DataSource, "Lbl_JIS");
         }
 
         private void RO_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

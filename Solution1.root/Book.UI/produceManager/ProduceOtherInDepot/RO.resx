@@ -257,7 +257,10 @@
     <value>1526.8125, 270.6667</value>
   </data>
   <data name="xrLabelSupplier.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>402.1875, 49</value>
+    <value>402.1875, 52.00006</value>
+  </data>
+  <data name="xrLabelSupplier.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="xrLabel8.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -266,7 +269,7 @@
     <value>1321.72913, 270.6667</value>
   </data>
   <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>205.083374, 49</value>
+    <value>205.083374, 52</value>
   </data>
   <data name="xrLabel8.Text" xml:space="preserve">
     <value>委外厂商：</value>
@@ -278,19 +281,22 @@
     <value>254</value>
   </data>
   <data name="xrLabelOtherCompact.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>856.926758, 272.666656</value>
+    <value>856.926758, 270.6667</value>
   </data>
   <data name="xrLabelOtherCompact.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>379.999939, 49</value>
+    <value>380, 50.99997</value>
+  </data>
+  <data name="xrLabelOtherCompact.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="xrLabel4.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>642.2808, 272.666656</value>
+    <value>642.2808, 270.6667</value>
   </data>
   <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>214.646, 49</value>
+    <value>214.645935, 50.99997</value>
   </data>
   <data name="xrLabel4.Text" xml:space="preserve">
     <value>委外合同：</value>
@@ -302,19 +308,22 @@
     <value>254</value>
   </data>
   <data name="xrLabelDepot.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>198.770813, 272.666656</value>
+    <value>198.770813, 270.666626</value>
   </data>
   <data name="xrLabelDepot.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>406.125, 50</value>
+    <value>406.125, 52</value>
+  </data>
+  <data name="xrLabelDepot.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleLeft</value>
   </data>
   <data name="xrLabel2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>2.64583325, 272.666656</value>
+    <value>2.64583325, 270.666626</value>
   </data>
   <data name="xrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>196.125031, 50</value>
+    <value>196.125031, 52.00006</value>
   </data>
   <data name="xrLabel2.Text" xml:space="preserve">
     <value>库房:</value>
@@ -635,13 +644,13 @@
     <value>254</value>
   </data>
   <data name="topMarginBand1.HeightF" type="System.Single, mscorlib">
-    <value>80</value>
+    <value>79</value>
   </data>
   <data name="bottomMarginBand1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="bottomMarginBand1.HeightF" type="System.Single, mscorlib">
-    <value>80</value>
+    <value>79</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

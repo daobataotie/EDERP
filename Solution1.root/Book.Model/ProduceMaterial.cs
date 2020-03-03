@@ -100,6 +100,25 @@ namespace Book.Model
             set { _auditEmpName = value; }
         }
 
+        public string Lbl_JIS
+        {
+            get
+            {
+                if (InvoiceXO != null && InvoiceXO.xocustomer != null && !string.IsNullOrEmpty(InvoiceXO.xocustomer.CheckedStandard))
+                {
+                    if (InvoiceXO.xocustomer.CheckedStandard.ToLower().Contains("jis") && InvoiceXO.xocustomer.CustomerFullName.ToUpper().Contains("MIDORI"))
+                    {
+                        return "JIS";
+                    }
+                    else if (InvoiceXO.xocustomer.CheckedStandard.ToLower().Contains("as"))
+                    {
+                        return "AS";
+                    }
+                }
+                return "";
+            }
+        }
+
         public static readonly string PRO_ParenProductName = "ParenProductName";
 
         public static readonly string PRO_WorkhouseName = "WorkhouseName";

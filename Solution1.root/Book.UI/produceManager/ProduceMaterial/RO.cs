@@ -97,6 +97,19 @@ namespace Book.UI.produceManager.ProduceMaterial
                     this.xrLabelXOId.Text = invoiceXO.CustomerInvoiceXOId;
                     this.xrLabelCustomer.Text = invoiceXO.xocustomer == null ? null : invoiceXO.xocustomer.ToString();
                     this.lblCustomerPH.Text = invoiceXO.CustomerLotNumber;
+
+
+                    if (invoiceXO.xocustomer != null && !string.IsNullOrEmpty(invoiceXO.xocustomer.CheckedStandard))
+                    {
+                        if (invoiceXO.xocustomer.CheckedStandard.ToLower().Contains("jis") && invoiceXO.xocustomer.CustomerFullName.ToUpper().Contains("MIDORI"))
+                        {
+                            CreateTagLable("JIS");
+                        }
+                        else if (invoiceXO.xocustomer.CheckedStandard.ToLower().Contains("as"))
+                        {
+                            CreateTagLable("AS");
+                        }
+                    }
                 }
             }
 
@@ -117,9 +130,25 @@ namespace Book.UI.produceManager.ProduceMaterial
             this.xrTableCellPihao.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterialdetails.PRO_Pihao);
             // this.xrTableMRP.DataBindings.Add("Text", this.DataSource, Model.ProduceMaterialdetails.PRO_MRSHeaderId);
             // this.xrTableCusXOID.DataBindings.Add("Text", this.DataSource,  Model.ProduceMaterialdetails.PRO_CustomerInvoiceXOId);
-            this.TCNextWorkstation.DataBindings.Add("Text", this.DataSource, "NextWorkHouse."+Model.WorkHouse.PROPERTY_WORKHOUSENAME);
+            this.TCNextWorkstation.DataBindings.Add("Text", this.DataSource, "NextWorkHouse." + Model.WorkHouse.PROPERTY_WORKHOUSENAME);
             this.xrRichText1.DataBindings.Add("Rtf", this.DataSource, "ProductDescription");
         }
 
+        private void CreateTagLable(string tag)
+        {
+            XRLabel lbl_JIS = new XRLabel();
+            this.ReportHeader.Controls.Add(lbl_JIS);
+            lbl_JIS.BorderWidth = 0;
+            lbl_JIS.CanGrow = false;
+            lbl_JIS.Name = "lbl_JIS";
+            lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            lbl_JIS.SizeF = new SizeF(200, 85);
+            lbl_JIS.Text = tag;
+            lbl_JIS.Font = new Font("Times New Roman", 32);
+            lbl_JIS.ForeColor = Color.Red;
+            lbl_JIS.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            lbl_JIS.Visible = true;
+            lbl_JIS.LocationF = new PointF(this.PageWidth - lbl_JIS.SizeF.Width - 10 - Margins.Left - Margins.Right, 0);
+        }
     }
 }

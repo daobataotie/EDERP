@@ -21,7 +21,7 @@ namespace Book.DA.SQLServer
     {
 
         public IList<Model.Customer> Select(string customerStart, string customerEnd, DateTime dateStart, DateTime dateEnd)
-        {       
+        {
             Hashtable pars = new Hashtable();
             pars.Add("customerStart", customerStart);
             pars.Add("customerEnd", customerEnd);

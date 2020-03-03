@@ -37,7 +37,7 @@ namespace Book.DA.SQLServer
             parames[0].Value = startdate.Date.ToString("yyyy-MM-dd");
             parames[1].Value = enddate.AddDays(1).Date.ToString("yyyy-MM-dd");
             StringBuilder str = new StringBuilder();
-            str.Append(" select m.*,c.CustomerShortName,1 as  IsChecked, (select case WHEN exists(select * FROM MRSdetails WHERE (ArrangeDesc IS  NULL or  ArrangeDesc='' )  and MRSdetails.MRSHeaderId=m.MRSHeaderId ) THEN 0 ELSE 1 END) as IsCloseed ");
+            str.Append(" select m.*,c.CustomerShortName,c.CheckedStandard,1 as  IsChecked, (select case WHEN exists(select * FROM MRSdetails WHERE (ArrangeDesc IS  NULL or  ArrangeDesc='' )  and MRSdetails.MRSHeaderId=m.MRSHeaderId ) THEN 0 ELSE 1 END) as IsCloseed ");
             str.Append(" ,(SELECT  EmployeeName FROM employee where employee.employeeid=m.Employee0Id) as Employee0Name");
             str.Append(" ,(SELECT  EmployeeName FROM employee where employee.employeeid=m.Employee1Id) as Employee1Name");
             str.Append(",(select CustomerInvoiceXOId from invoicexo where invoiceid=(select InvoiceXOId from MPSheader where MPSheader.MPSheaderId=m.MPSheaderId)) as CustomerInvoiceXOId");

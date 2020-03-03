@@ -14,6 +14,7 @@ namespace Book.UI.Invoices.CO
         private BL.InvoiceXOManager invoiceXoManager = new BL.InvoiceXOManager();
         private Model.InvoiceCO invoice;
         int pp = 0;
+        
         public ROList(string invoiceid)
         {
             //InitializeComponent();
@@ -70,14 +71,27 @@ namespace Book.UI.Invoices.CO
             ////this.xrTableCellBulk.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_Bulk, "{0:0}");
             //this.xrRichTextProductDescribe.DataBindings.Add("Rtf", this.DataSource, "Product." + Model.Product.PRO_ProductDescription);
             //this.xrLabelDetailDesc.DataBindings.Add("Text", this.DataSource, Model.InvoiceCODetail.PRO_InvoiceCODetailNote);
-        }
-
+        } 
+        
         public ROList(IList<Model.InvoiceCO> mInvoiceCOList)
         {
             InitializeComponent();
 
             if (mInvoiceCOList == null || mInvoiceCOList.Count == 0)
                 return;
+
+
+            foreach (var item in mInvoiceCOList)
+            {
+                if (!string.IsNullOrEmpty(item.InvoiceXOId))
+                {
+                    Model.InvoiceXO xo = this.invoiceXoManager.Get(item.InvoiceXOId);
+                    if (xo != null)
+                        item.InvoiceCustomXOId = xo.CustomerInvoiceXOId;
+                }
+            }
+
+
             this.DataSource = mInvoiceCOList;
             this.mBand();
         }
@@ -109,6 +123,8 @@ namespace Book.UI.Invoices.CO
             this.lblFP.DataBindings.Add("Text", this.DataSource, "Customer.CustomerFP");
             this.GroupHeader1.GroupFields.Add(new GroupField(Model.InvoiceCO.PROPERTY_INVOICEID));
             this.xrSubreport1.ReportSource = new ROListDetails();
+
+            this.lbl_JIS.DataBindings.Add("Text", this.DataSource, "Lbl_JIS");
         }
 
         private void xrSubreport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

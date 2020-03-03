@@ -66,5 +66,28 @@ namespace Book.Model
         public readonly static string PRO_SupplierName = "SupplierName";
         public readonly static string PRO_RPCustomerInvoiceXOId = "RPCustomerInvoiceXOId";
         #endregion
+
+        public string Lbl_JIS
+        {
+            get
+            {
+                if (this.InvoiceXO != null && this.InvoiceXO.xocustomer != null)
+                {
+                    if (!string.IsNullOrEmpty(this.InvoiceXO.xocustomer.CheckedStandard))
+                    {
+                        if (this.InvoiceXO.xocustomer.CheckedStandard.ToLower().Contains("jis") && this.InvoiceXO.xocustomer.CustomerFullName.ToUpper().Contains("MIDORI"))
+                        {
+                            return "JIS";
+                        }
+                        else if (this.InvoiceXO.xocustomer.CheckedStandard.ToLower().Contains("as"))
+                        {
+                            return "AS";
+                        }
+                    }
+                }
+
+                return "";
+            }
+        }
     }
 }
