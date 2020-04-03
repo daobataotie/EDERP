@@ -91,6 +91,7 @@ namespace Book.UI.Settings.StockLimitations
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -218,10 +219,6 @@ namespace Book.UI.Settings.StockLimitations
             // 
             // ReportHeader
             // 
-            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabelCompanyInfoName,
-            this.xrLabelDataName,
-            this.xrLabelPrintDate});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -252,6 +249,7 @@ namespace Book.UI.Settings.StockLimitations
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_JIS,
             this.lblPiHao,
             this.xrLabel7,
             this.lblXOCustomer,
@@ -274,7 +272,10 @@ namespace Book.UI.Settings.StockLimitations
             this.xrLabel5,
             this.xrLabelDepotOutDate,
             this.xrLabel16,
-            this.txt_ParentProduct});
+            this.txt_ParentProduct,
+            this.xrLabelCompanyInfoName,
+            this.xrLabelDataName,
+            this.xrLabelPrintDate});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             // 
@@ -575,6 +576,16 @@ namespace Book.UI.Settings.StockLimitations
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrPageInfo1.StylePriority.UseTextAlignment = false;
             // 
+            // lbl_JIS
+            // 
+            this.lbl_JIS.CanGrow = false;
+            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
+            this.lbl_JIS.Name = "lbl_JIS";
+            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_JIS.StylePriority.UseFont = false;
+            this.lbl_JIS.StylePriority.UseForeColor = false;
+            this.lbl_JIS.StylePriority.UseTextAlignment = false;
+            // 
             // OutStockReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -662,5 +673,6 @@ namespace Book.UI.Settings.StockLimitations
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel txt_ParentProduct;
+        private DevExpress.XtraReports.UI.XRLabel lbl_JIS;
     }
 }

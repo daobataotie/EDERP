@@ -66,11 +66,15 @@ namespace Book.UI.Invoices.CO
             {
                 if (this.invoice.Customer.CheckedStandard.ToLower().Contains("jis") && this.invoice.Customer.CustomerFullName.ToUpper().Contains("MIDORI"))
                 {
-                    CreateTagLable("JIS");
+                    //CreateTagLable("JIS");
+
+                    this.lbl_JIS.Text = "JIS";
                 }
                 else if (this.invoice.Customer.CheckedStandard.ToLower().Contains("as"))
                 {
-                    CreateTagLable("AS");
+                    //CreateTagLable("AS");
+
+                    this.lbl_JIS.Text = "AS";
                 }
             }
 

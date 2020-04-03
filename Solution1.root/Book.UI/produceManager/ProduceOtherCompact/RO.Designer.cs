@@ -86,6 +86,7 @@
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -193,6 +194,7 @@
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_JIS,
             this.xrLabel17,
             this.lblFP,
             this.xrLabel16,
@@ -213,7 +215,8 @@
             this.xrLabelProduceOtherCompactId,
             this.xrLabel1,
             this.xrLabelDataName,
-            this.xrLabelDate});
+            this.xrLabelDate,
+            this.xrLabelCompanyInfoName});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
@@ -472,8 +475,6 @@
             // 
             // ReportHeader
             // 
-            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabelCompanyInfoName});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -551,6 +552,16 @@
             // 
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
+            // 
+            // lbl_JIS
+            // 
+            this.lbl_JIS.CanGrow = false;
+            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
+            this.lbl_JIS.Name = "lbl_JIS";
+            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_JIS.StylePriority.UseFont = false;
+            this.lbl_JIS.StylePriority.UseForeColor = false;
+            this.lbl_JIS.StylePriority.UseTextAlignment = false;
             // 
             // RO
             // 
@@ -634,5 +645,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel lblFP;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
+        private DevExpress.XtraReports.UI.XRLabel lbl_JIS;
     }
 }

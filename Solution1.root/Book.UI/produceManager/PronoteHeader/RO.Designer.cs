@@ -76,6 +76,7 @@
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.lbl_PageSign = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
@@ -89,7 +90,7 @@
             this.xrLabelCompanyInfoName = new DevExpress.XtraReports.UI.XRLabel();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.lbl_PageSign = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextProDesc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RichTextCeMai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RichTextZhengMai)).BeginInit();
@@ -119,6 +120,7 @@
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_JIS,
             this.lbl_ProduceMaterial,
             this.xrLabel24,
             this.lblInvoiceXODetailQuantity,
@@ -154,7 +156,8 @@
             this.xrLabelDataName,
             this.xrLabelPrintDate,
             this.xrLabel8,
-            this.xrRichTextProDesc});
+            this.xrRichTextProDesc,
+            this.xrLabelCompanyInfoName});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
@@ -502,6 +505,13 @@
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
             // 
+            // lbl_PageSign
+            // 
+            resources.ApplyResources(this.lbl_PageSign, "lbl_PageSign");
+            this.lbl_PageSign.Name = "lbl_PageSign";
+            this.lbl_PageSign.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_PageSign.StylePriority.UseTextAlignment = false;
+            // 
             // xrPanel2
             // 
             this.xrPanel2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -592,8 +602,6 @@
             // 
             // ReportHeader
             // 
-            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabelCompanyInfoName});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -616,12 +624,15 @@
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
-            // lbl_PageSign
+            // lbl_JIS
             // 
-            resources.ApplyResources(this.lbl_PageSign, "lbl_PageSign");
-            this.lbl_PageSign.Name = "lbl_PageSign";
-            this.lbl_PageSign.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.lbl_PageSign.StylePriority.UseTextAlignment = false;
+            this.lbl_JIS.CanGrow = false;
+            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
+            this.lbl_JIS.Name = "lbl_JIS";
+            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_JIS.StylePriority.UseFont = false;
+            this.lbl_JIS.StylePriority.UseForeColor = false;
+            this.lbl_JIS.StylePriority.UseTextAlignment = false;
             // 
             // RO
             // 
@@ -710,5 +721,6 @@
         private DevExpress.XtraReports.UI.XRLabel lbl_ProduceMaterial;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
         private DevExpress.XtraReports.UI.XRLabel lbl_PageSign;
+        private DevExpress.XtraReports.UI.XRLabel lbl_JIS;
     }
 }

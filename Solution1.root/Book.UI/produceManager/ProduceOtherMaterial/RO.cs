@@ -75,11 +75,15 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
                         {
                             if (invoiceXO.xocustomer.CheckedStandard.ToLower().Contains("jis") && invoiceXO.xocustomer.CustomerFullName.ToUpper().Contains("MIDORI"))
                             {
-                                CreateTagLable("JIS");
+                                //CreateTagLable("JIS");
+
+                                this.lbl_JIS.Text = "JIS";
                             }
                             else if (invoiceXO.xocustomer.CheckedStandard.ToLower().Contains("as"))
                             {
-                                CreateTagLable("AS");
+                                //CreateTagLable("AS");
+
+                                this.lbl_JIS.Text = "AS";
                             }
                         }
                     }

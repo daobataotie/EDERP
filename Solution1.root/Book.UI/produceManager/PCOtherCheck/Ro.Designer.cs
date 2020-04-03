@@ -81,6 +81,7 @@ namespace Book.UI.produceManager.PCOtherCheck
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.RTproductDesc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -245,8 +246,6 @@ namespace Book.UI.produceManager.PCOtherCheck
             // 
             // ReportHeader
             // 
-            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.lblCompanyInfoName});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -525,6 +524,7 @@ namespace Book.UI.produceManager.PCOtherCheck
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_JIS,
             this.xrTable1,
             this.xrLabel4,
             this.xrLabel2,
@@ -533,10 +533,21 @@ namespace Book.UI.produceManager.PCOtherCheck
             this.lblPCOtherCheckDate,
             this.lblSupplier,
             this.lblDataName,
-            this.lblPrintDate});
+            this.lblPrintDate,
+            this.lblCompanyInfoName});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.StylePriority.UseFont = false;
+            // 
+            // lbl_JIS
+            // 
+            this.lbl_JIS.CanGrow = false;
+            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
+            this.lbl_JIS.Name = "lbl_JIS";
+            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_JIS.StylePriority.UseFont = false;
+            this.lbl_JIS.StylePriority.UseForeColor = false;
+            this.lbl_JIS.StylePriority.UseTextAlignment = false;
             // 
             // Ro
             // 
@@ -614,5 +625,6 @@ namespace Book.UI.produceManager.PCOtherCheck
         private DevExpress.XtraReports.UI.XRTableCell xrInvoiceCusXoId;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel lbl_JIS;
     }
 }

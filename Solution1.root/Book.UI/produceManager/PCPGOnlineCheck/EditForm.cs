@@ -707,6 +707,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         {
         }
 
+        //光学
         private void ItemHyperLinkGuangXue_Click_1(object sender, EventArgs e)
         {
             Model.PCPGOnlineCheckDetail d = (this.bsPCPGOnlineCheckDetail.Current as Model.PCPGOnlineCheckDetail);
@@ -717,6 +718,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             }
         }
 
+        //厚度
         private void ItemHyperLinkHouDu_Click_1(object sender, EventArgs e)
         {
             Model.PCPGOnlineCheckDetail d = (this.bsPCPGOnlineCheckDetail.Current as Model.PCPGOnlineCheckDetail);

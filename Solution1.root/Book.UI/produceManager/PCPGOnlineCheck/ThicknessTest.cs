@@ -62,7 +62,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
                 return;
             if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
                 return;
-            this._ThicknessTestManager.DeleteByPCPGOnlineCheckDetailId(this._ThicknessTest.ThicknessTestId);
+            //this._ThicknessTestManager.DeleteByPCPGOnlineCheckDetailId(this._ThicknessTest.ThicknessTestId);
+            this._ThicknessTestManager.Delete(this._ThicknessTest.ThicknessTestId);
             this._ThicknessTest = this._ThicknessTestManager.mGetNext(this._ThicknessTest.InsertTime.Value, this._PCPGOnlineCheckDetailId);
             if (this._ThicknessTest == null)
             {
@@ -203,6 +204,33 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
             f.Dispose();
             GC.Collect();
+        }
+
+        private void bar_Copy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (string.IsNullOrEmpty(this._PCPGOnlineCheckDetailId))
+            {
+                MessageBox.Show("複製功能只適用於\"光學/厚度表\"！", "提示", MessageBoxButtons.OK);
+                return;
+            }
+
+            try
+            {
+                ThicknessTestCopyForm f = new ThicknessTestCopyForm(this._PCPGOnlineCheckDetailId);
+                if (f.ShowDialog(this) == DialogResult.OK)
+                {
+                    this._ThicknessTest = this._ThicknessTestManager.Get(this._ThicknessTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._ThicknessTestManager.mGetLast(this._PCPGOnlineCheckDetailId).ThicknessTestId);
+                    if (this._ThicknessTest != null)
+                    {
+                        this.action = "view";
+                        this.Refresh();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "提示", MessageBoxButtons.OK);
+            }
         }
     }
 }

@@ -53,6 +53,7 @@
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelPiHao = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelXOJiaoQi = new DevExpress.XtraReports.UI.XRLabel();
@@ -86,6 +87,7 @@
             this.xrLabelMRSCustomer = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelDataName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelDate = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelCompanyInfoName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelMRSheaderDesc = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
@@ -95,7 +97,6 @@
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
-            this.xrLabelCompanyInfoName = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelEmp0 = new DevExpress.XtraReports.UI.XRLabel();
@@ -300,6 +301,7 @@
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lbl_JIS,
             this.xrLabel12,
             this.xrLabelPiHao,
             this.xrLabelXOJiaoQi,
@@ -320,10 +322,21 @@
             this.xrLabel5,
             this.xrLabelMRSCustomer,
             this.xrLabelDataName,
-            this.xrLabelDate});
+            this.xrLabelDate,
+            this.xrLabelCompanyInfoName});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // lbl_JIS
+            // 
+            this.lbl_JIS.CanGrow = false;
+            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
+            this.lbl_JIS.Name = "lbl_JIS";
+            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_JIS.StylePriority.UseFont = false;
+            this.lbl_JIS.StylePriority.UseForeColor = false;
+            this.lbl_JIS.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel12
             // 
@@ -580,6 +593,15 @@
             this.xrLabelDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabelDate.StylePriority.UseTextAlignment = false;
             // 
+            // xrLabelCompanyInfoName
+            // 
+            resources.ApplyResources(this.xrLabelCompanyInfoName, "xrLabelCompanyInfoName");
+            this.xrLabelCompanyInfoName.Name = "xrLabelCompanyInfoName";
+            this.xrLabelCompanyInfoName.Padding = new DevExpress.XtraPrinting.PaddingInfo(13, 13, 0, 0, 254F);
+            this.xrLabelCompanyInfoName.StylePriority.UseFont = false;
+            this.xrLabelCompanyInfoName.StylePriority.UsePadding = false;
+            this.xrLabelCompanyInfoName.StylePriority.UseTextAlignment = false;
+            // 
             // xrLabel18
             // 
             resources.ApplyResources(this.xrLabel18, "xrLabel18");
@@ -639,19 +661,8 @@
             // 
             // ReportHeader
             // 
-            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabelCompanyInfoName});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
-            // 
-            // xrLabelCompanyInfoName
-            // 
-            resources.ApplyResources(this.xrLabelCompanyInfoName, "xrLabelCompanyInfoName");
-            this.xrLabelCompanyInfoName.Name = "xrLabelCompanyInfoName";
-            this.xrLabelCompanyInfoName.Padding = new DevExpress.XtraPrinting.PaddingInfo(13, 13, 0, 0, 254F);
-            this.xrLabelCompanyInfoName.StylePriority.UseFont = false;
-            this.xrLabelCompanyInfoName.StylePriority.UsePadding = false;
-            this.xrLabelCompanyInfoName.StylePriority.UseTextAlignment = false;
             // 
             // ReportFooter
             // 
@@ -798,5 +809,6 @@
         private DevExpress.XtraReports.UI.XRLabel lbl_lingliaoliang;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
+        private DevExpress.XtraReports.UI.XRLabel lbl_JIS;
     }
 }

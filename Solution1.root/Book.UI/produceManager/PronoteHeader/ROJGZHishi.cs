@@ -77,11 +77,15 @@ namespace Book.UI.produceManager.PronoteHeader
                 {
                     if (xo.xocustomer.CheckedStandard.ToLower().Contains("jis") && xo.xocustomer.CustomerFullName.ToUpper().Contains("MIDORI"))
                     {
-                        CreateTagLable("JIS");
+                        //CreateTagLable("JIS");
+
+                        this.lbl_JIS.Text = "JIS";
                     }
                     else if (xo.xocustomer.CheckedStandard.ToLower().Contains("as"))
                     {
-                        CreateTagLable("AS");
+                        //CreateTagLable("AS");
+
+                        this.lbl_JIS.Text = "AS";
                     }
                 }
             }

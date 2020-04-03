@@ -64,5 +64,27 @@ namespace Book.DA.SQLServer
             sda.Fill(dt);
             return dt;
         }
+
+        public DataTable SelectOpticsTestByFromInvoiceId(string fromInvoiceId)
+        {
+            string sql = "select * from (select pcd.FromInvoiceId,pcd.PCPGOnlineCheckId,pcd.PCPGOnlineCheckDetailId,PCPGOnlineCheckDetailDate,b.BusinessHoursName,(select Count(*) from OpticsTest where PCPGOnlineCheckDetailId=pcd.PCPGOnlineCheckDetailId) as OTCount from PCPGOnlineCheckDetail pcd left join PCPGOnlineCheck pc on pcd.PCPGOnlineCheckId=pc.PCPGOnlineCheckId left join BusinessHours b on b.BusinessHoursId=pc.BusinessHoursId where pcd.FromInvoiceId='" + fromInvoiceId + "') a where a.OTCount>0";
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            sda.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable SelectThicknessTestByFromInvoiceId(string fromInvoiceId)
+        {
+            string sql = "select * from (select pcd.FromInvoiceId,pcd.PCPGOnlineCheckId,pcd.PCPGOnlineCheckDetailId,PCPGOnlineCheckDetailDate,b.BusinessHoursName,(select Count(*) from ThicknessTest where PCPGOnlineCheckDetailId=pcd.PCPGOnlineCheckDetailId) as TTCount from PCPGOnlineCheckDetail pcd left join PCPGOnlineCheck pc on pcd.PCPGOnlineCheckId=pc.PCPGOnlineCheckId left join BusinessHours b on b.BusinessHoursId=pc.BusinessHoursId where pcd.FromInvoiceId='" + fromInvoiceId + "') a where a.TTCount>0";
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            sda.Fill(dt);
+
+            return dt;
+        }
     }
 }

@@ -24,11 +24,15 @@ namespace Book.UI.Invoices.XO
             {
                 if (this.invoice.xocustomer.CheckedStandard.ToLower().Contains("jis") && this.invoice.xocustomer.CustomerName.ToUpper().Contains("MIDORI"))
                 {
-                    CreateTagLable("JIS");
+                    //CreateTagLable("JIS");
+
+                    this.lbl_JIS.Text = "JIS";
                 }
                 else if (this.invoice.xocustomer.CheckedStandard.ToLower().Contains("as"))
                 {
-                    CreateTagLable("AS");
+                    //CreateTagLable("AS");
+
+                    this.lbl_JIS.Text = "AS";
                 }
             }
 

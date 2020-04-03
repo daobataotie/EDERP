@@ -111,11 +111,15 @@ namespace Book.UI.Settings.StockLimitations
             {
                 if (InvoiceXO.xocustomer.CheckedStandard.ToLower().Contains("jis") && InvoiceXO.xocustomer.CustomerFullName.ToUpper().Contains("MIDORI"))
                 {
-                    CreateTagLable("JIS");
+                    //CreateTagLable("JIS");
+
+                    this.lbl_JIS.Text = "JIS";
                 }
                 else if (InvoiceXO.xocustomer.CheckedStandard.ToLower().Contains("as"))
                 {
-                    CreateTagLable("AS");
+                    //CreateTagLable("AS");
+
+                    this.lbl_JIS.Text = "AS";
                 }
             }
 

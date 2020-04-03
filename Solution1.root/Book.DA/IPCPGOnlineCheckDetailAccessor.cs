@@ -23,6 +23,9 @@ namespace Book.DA
         string GetTimerListString(string PCPGOnlineCheckId);
         string SelectByInvoiceCusID(string ID);
         DataTable SelectByHeaderId(string id);
+
+        DataTable SelectOpticsTestByFromInvoiceId(string fromInvoiceId);
+        DataTable SelectThicknessTestByFromInvoiceId(string fromInvoiceId);
     }
 }
 

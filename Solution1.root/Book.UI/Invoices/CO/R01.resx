@@ -280,6 +280,24 @@
   <data name="xrLabel6.Text" xml:space="preserve">
     <value>数量</value>
   </data>
+  <data name="lbl_JIS.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="lbl_JIS.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 32pt</value>
+  </data>
+  <data name="lbl_JIS.ForeColor" type="System.Drawing.Color, System.Drawing">
+    <value>Red</value>
+  </data>
+  <data name="lbl_JIS.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>1734, 0</value>
+  </data>
+  <data name="lbl_JIS.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>200, 85</value>
+  </data>
+  <data name="lbl_JIS.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleRight</value>
+  </data>
   <data name="lblFP.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
@@ -287,7 +305,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="lblFP.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1485.00012, 460.269135</value>
+    <value>1488.646, 538.290039</value>
   </data>
   <data name="lblFP.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>430.749878, 49.99994</value>
@@ -302,7 +320,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1295.00012, 460.269135</value>
+    <value>1298.646, 538.290039</value>
   </data>
   <data name="xrLabel16.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>190, 50.00003</value>
@@ -320,7 +338,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="lblMRPId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>878.8069, 460.269073</value>
+    <value>882.4528, 538.29</value>
   </data>
   <data name="lblMRPId.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>381, 50</value>
@@ -335,7 +353,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>667.806946, 460.269073</value>
+    <value>671.4529, 538.29</value>
   </data>
   <data name="xrLabel15.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>211, 50.00003</value>
@@ -353,7 +371,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="lblBiBie.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>210.056992, 460.269135</value>
+    <value>213.702927, 538.290039</value>
   </data>
   <data name="lblBiBie.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>444, 50</value>
@@ -368,7 +386,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1.05702531, 460.269135</value>
+    <value>4.702959, 538.290039</value>
   </data>
   <data name="xrLabel14.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>209.000046, 50.00003</value>
@@ -386,7 +404,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1295, 396.769</value>
+    <value>1298.646, 474.789978</value>
   </data>
   <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>190.000122, 50.00003</value>
@@ -404,10 +422,10 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelPiHao.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1485.00012, 396.7691</value>
+    <value>1488.646, 474.789978</value>
   </data>
   <data name="xrLabelPiHao.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>443.999634, 50.00003</value>
+    <value>430.749634, 50</value>
   </data>
   <data name="xrLabelJianCe.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -416,10 +434,10 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelJianCe.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1485.00012, 332.8333</value>
+    <value>1488.646, 410.8542</value>
   </data>
   <data name="xrLabelJianCe.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>443.999756, 50</value>
+    <value>430.749756, 49.99994</value>
   </data>
   <data name="xrLabelJianCe.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -431,7 +449,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1295.00012, 332.833374</value>
+    <value>1298.646, 410.854279</value>
   </data>
   <data name="xrLabel12.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>190, 50</value>
@@ -449,7 +467,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelCustomer.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>878.807, 396.769073</value>
+    <value>882.452942, 474.789978</value>
   </data>
   <data name="xrLabelCustomer.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>381, 50</value>
@@ -464,7 +482,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>667.807, 396.769073</value>
+    <value>671.452942, 474.789978</value>
   </data>
   <data name="xrLabel11.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>211, 50.00003</value>
@@ -482,7 +500,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelInvoiceXOId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>210.999924, 396.769135</value>
+    <value>214.645859, 474.79007</value>
   </data>
   <data name="xrLabelInvoiceXOId.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>444, 50</value>
@@ -497,7 +515,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1.99995863, 396.769135</value>
+    <value>5.64589262, 474.79007</value>
   </data>
   <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>209.000046, 50.00003</value>
@@ -515,7 +533,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>667.806946, 208.4792</value>
+    <value>671.4529, 286.500122</value>
   </data>
   <data name="xrLabel10.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>211, 50</value>
@@ -533,7 +551,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelYJDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>878.807, 208.4792</value>
+    <value>882.452942, 286.500122</value>
   </data>
   <data name="xrLabelYJDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>381, 50</value>
@@ -548,7 +566,7 @@
     <value>254</value>
   </data>
   <data name="xrBarCode1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 108.479164</value>
+    <value>0, 186.500076</value>
   </data>
   <data name="xrBarCode1.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>500, 100</value>
@@ -563,7 +581,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 527.9375</value>
+    <value>0, 612.604248</value>
   </data>
   <data name="xrTableCell9.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -644,7 +662,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 272.479156</value>
+    <value>3.64593387, 350.5001</value>
   </data>
   <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>211, 50</value>
@@ -662,7 +680,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>667.807, 272.479156</value>
+    <value>671.452942, 350.5001</value>
   </data>
   <data name="xrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>211, 50</value>
@@ -680,10 +698,10 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelInvoiceId.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1485.00012, 272.479065</value>
+    <value>1488.646, 350.5</value>
   </data>
   <data name="xrLabelInvoiceId.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>443.999756, 50.00003</value>
+    <value>430.749756, 50.00003</value>
   </data>
   <data name="xrLabelInvoiceId.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -695,7 +713,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1292, 272.479156</value>
+    <value>1295.64551, 350.5001</value>
   </data>
   <data name="xrLabel18.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>193.000122, 50.00003</value>
@@ -713,7 +731,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelTongYiNo.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>878.807068, 332.833374</value>
+    <value>882.453, 410.854279</value>
   </data>
   <data name="xrLabelTongYiNo.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>380.999817, 50</value>
@@ -728,7 +746,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>667.806946, 332.833374</value>
+    <value>671.4529, 410.854279</value>
   </data>
   <data name="xrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>211.000061, 50</value>
@@ -746,7 +764,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelCustomTel.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>210.999954, 332.833374</value>
+    <value>214.645889, 410.854279</value>
   </data>
   <data name="xrLabelCustomTel.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>444, 50</value>
@@ -761,7 +779,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1.05702531, 332.833374</value>
+    <value>4.702959, 410.854279</value>
   </data>
   <data name="xrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>209.942978, 50</value>
@@ -779,7 +797,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelLianluoName.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>210.999954, 272.479156</value>
+    <value>214.645889, 350.5001</value>
   </data>
   <data name="xrLabelLianluoName.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>444, 50</value>
@@ -794,7 +812,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelCustomFax.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>878.807, 272.479156</value>
+    <value>882.452942, 350.5001</value>
   </data>
   <data name="xrLabelCustomFax.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>381, 50</value>
@@ -809,10 +827,10 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelInvoiceDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1485.00012, 208.479141</value>
+    <value>1488.646, 286.500031</value>
   </data>
   <data name="xrLabelInvoiceDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>443.999878, 50</value>
+    <value>430.749878, 50.00003</value>
   </data>
   <data name="xrLabelInvoiceDate.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
@@ -824,7 +842,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1295.00012, 208.4792</value>
+    <value>1298.646, 286.500122</value>
   </data>
   <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>190, 50</value>
@@ -842,7 +860,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabelCustomName.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>211, 208.479126</value>
+    <value>214.645935, 286.500031</value>
   </data>
   <data name="xrLabelCustomName.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>444, 50.0000153</value>
@@ -857,7 +875,7 @@
     <value>新宋体, 9.75pt</value>
   </data>
   <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 208.4792</value>
+    <value>3.64593387, 286.500122</value>
   </data>
   <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>211, 50</value>
@@ -875,7 +893,7 @@
     <value>新細明體, 9.75pt</value>
   </data>
   <data name="xrLabelPrintDate.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>1556.07788, 99.9999847</value>
+    <value>1556.078, 186.500076</value>
   </data>
   <data name="xrLabelPrintDate.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>372.921875, 55.291626</value>
@@ -893,12 +911,27 @@
     <value>新宋体, 15pt, style=Bold</value>
   </data>
   <data name="xrLabelData.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 0</value>
+    <value>0, 99.72922</value>
   </data>
   <data name="xrLabelData.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1928.99976, 99.9999847</value>
+    <value>1928.99988, 86.77083</value>
   </data>
   <data name="xrLabelData.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabelCompanyInfoName.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="xrLabelCompanyInfoName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新宋体, 24pt, style=Bold</value>
+  </data>
+  <data name="xrLabelCompanyInfoName.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
+    <value>8.074442E-05, 0</value>
+  </data>
+  <data name="xrLabelCompanyInfoName.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>1928.99988, 99.72919</value>
+  </data>
+  <data name="xrLabelCompanyInfoName.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>
   </data>
   <data name="PageHeader.Dpi" type="System.Single, mscorlib">
@@ -908,7 +941,7 @@
     <value>新細明體, 9.75pt</value>
   </data>
   <data name="PageHeader.HeightF" type="System.Single, mscorlib">
-    <value>577.9375</value>
+    <value>662.604248</value>
   </data>
   <data name="xrLabelYeWuName.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -924,21 +957,6 @@
   </data>
   <data name="xrLabelYeWuName.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>
-  </data>
-  <data name="xrLabelCompanyInfoName.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="xrLabelCompanyInfoName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>新宋体, 24pt, style=Bold</value>
-  </data>
-  <data name="xrLabelCompanyInfoName.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 0</value>
-  </data>
-  <data name="xrLabelCompanyInfoName.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1928.99988, 150.000015</value>
-  </data>
-  <data name="xrLabelCompanyInfoName.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
   </data>
   <data name="xrPageInfo1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -1133,7 +1151,7 @@
     <value>254</value>
   </data>
   <data name="ReportHeader.HeightF" type="System.Single, mscorlib">
-    <value>150.000015</value>
+    <value>0</value>
   </data>
   <data name="topMarginBand1.Dpi" type="System.Single, mscorlib">
     <value>254</value>

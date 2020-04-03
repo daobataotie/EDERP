@@ -4530,6 +4530,12 @@
     <EmbeddedResource Include="produceManager\PCFlameRetardant\RO.zh-CHT.resx">
       <DependentUpon>RO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCPGOnlineCheck\OpticsTestCopyForm.resx">
+      <DependentUpon>OpticsTestCopyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm.resx">
+      <DependentUpon>ThicknessTestCopyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Query\CustomerShipment.resx">
       <DependentUpon>CustomerShipment.cs</DependentUpon>
     </EmbeddedResource>
@@ -12010,6 +12016,18 @@
     </Compile>
     <Compile Include="produceManager\PCFlameRetardant\RO.Designer.cs">
       <DependentUpon>RO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCPGOnlineCheck\OpticsTestCopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCPGOnlineCheck\OpticsTestCopyForm.Designer.cs">
+      <DependentUpon>OpticsTestCopyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm.Designer.cs">
+      <DependentUpon>ThicknessTestCopyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Query\CustomerShipment.cs">
       <SubType>Form</SubType>

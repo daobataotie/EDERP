@@ -79,6 +79,26 @@ namespace Book.BL
         {
             return accessor.SelectByHeaderId(id);
         }
+        
+        /// <summary>
+        /// 根据来源单号查找光学測試明细，并且光学测试笔数大于0
+        /// </summary>
+        /// <param name="fromInvoiceId">来源单号，只能是PNT</param>
+        /// <returns></returns>
+        public DataTable SelectOpticsTestByFromInvoiceId(string fromInvoiceId)
+        {
+            return accessor.SelectOpticsTestByFromInvoiceId(fromInvoiceId);
+        }
+
+        /// <summary>
+        /// 根据来源单号查找厚度測試明细，并且厚度测试笔数大于0
+        /// </summary>
+        /// <param name="fromInvoiceId">来源单号，只能是PNT</param>
+        /// <returns></returns>
+        public DataTable SelectThicknessTestByFromInvoiceId(string fromInvoiceId)
+        {
+            return accessor.SelectThicknessTestByFromInvoiceId(fromInvoiceId);
+        }
     }
 }
 

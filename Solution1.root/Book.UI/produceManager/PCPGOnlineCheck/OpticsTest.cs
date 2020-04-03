@@ -356,5 +356,32 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
                 (sender as DevExpress.XtraEditors.TextEdit).BackColor = Color.PaleVioletRed;
             }
         }
+
+        private void bar_Copy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (string.IsNullOrEmpty(this._PCPGOnlineCheckDetailId))
+            {
+                MessageBox.Show("複製功能只適用於\"光學/厚度表\"！", "提示", MessageBoxButtons.OK);
+                return;
+            }
+
+            try
+            {
+                OpticsTestCopyForm f = new OpticsTestCopyForm(this._PCPGOnlineCheckDetailId);
+                if (f.ShowDialog(this) == DialogResult.OK)
+                {
+                    this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId).OpticsTestId);
+                    if (this._OpticsTest != null)
+                    {
+                        this.action = "view";
+                        this.Refresh();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "提示", MessageBoxButtons.OK);
+            }
+        }
     }
 }

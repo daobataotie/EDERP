@@ -123,6 +123,9 @@
   <data name="barBtn_Search.Caption" xml:space="preserve">
     <value>搜索</value>
   </data>
+  <data name="bar_Copy.Caption" xml:space="preserve">
+    <value>複製單據</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -434,7 +437,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cobRVerticalJudge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 182</value>
+    <value>589, 182</value>
   </data>
   <data name="cobRVerticalJudge.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -446,7 +449,7 @@
     <value>DOWN</value>
   </data>
   <data name="cobRVerticalJudge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 21</value>
+    <value>199, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cobRVerticalJudge.TabIndex" type="System.Int32, mscorlib">
@@ -465,7 +468,7 @@
     <value>4</value>
   </data>
   <data name="cobRLevelJudge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 133</value>
+    <value>589, 133</value>
   </data>
   <data name="cobRLevelJudge.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -477,7 +480,7 @@
     <value>OUT</value>
   </data>
   <data name="cobRLevelJudge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 21</value>
+    <value>199, 21</value>
   </data>
   <data name="cobRLevelJudge.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -495,7 +498,7 @@
     <value>5</value>
   </data>
   <data name="cobLVerticalJudge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 182</value>
+    <value>192, 182</value>
   </data>
   <data name="cobLVerticalJudge.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -507,7 +510,7 @@
     <value>DOWN</value>
   </data>
   <data name="cobLVerticalJudge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 21</value>
+    <value>179, 21</value>
   </data>
   <data name="cobLVerticalJudge.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -525,7 +528,7 @@
     <value>6</value>
   </data>
   <data name="cobLLevelJudge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 133</value>
+    <value>192, 133</value>
   </data>
   <data name="cobLLevelJudge.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -537,7 +540,7 @@
     <value>OUT</value>
   </data>
   <data name="cobLLevelJudge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 21</value>
+    <value>179, 21</value>
   </data>
   <data name="cobLLevelJudge.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -555,10 +558,10 @@
     <value>7</value>
   </data>
   <data name="NewKTxtLup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 158</value>
+    <value>192, 158</value>
   </data>
   <data name="NewKTxtLup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 20</value>
+    <value>179, 20</value>
   </data>
   <data name="NewKTxtLup.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -576,10 +579,10 @@
     <value>9</value>
   </data>
   <data name="NewKTxtRup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 158</value>
+    <value>589, 158</value>
   </data>
   <data name="NewKTxtRup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
+    <value>199, 20</value>
   </data>
   <data name="NewKTxtRup.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -597,10 +600,10 @@
     <value>8</value>
   </data>
   <data name="NewKTxtRs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 37</value>
+    <value>589, 37</value>
   </data>
   <data name="NewKTxtRs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
+    <value>199, 20</value>
   </data>
   <data name="NewKTxtRs.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -618,10 +621,10 @@
     <value>16</value>
   </data>
   <data name="NewKTxtLs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 37</value>
+    <value>192, 37</value>
   </data>
   <data name="NewKTxtLs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 20</value>
+    <value>179, 20</value>
   </data>
   <data name="NewKTxtLs.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -639,10 +642,10 @@
     <value>17</value>
   </data>
   <data name="NewKTxtLc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 61</value>
+    <value>192, 61</value>
   </data>
   <data name="NewKTxtLc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 20</value>
+    <value>179, 20</value>
   </data>
   <data name="NewKTxtLc.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -660,10 +663,10 @@
     <value>15</value>
   </data>
   <data name="NewKTxtRc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 61</value>
+    <value>589, 61</value>
   </data>
   <data name="NewKTxtRc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
+    <value>199, 20</value>
   </data>
   <data name="NewKTxtRc.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -681,10 +684,10 @@
     <value>14</value>
   </data>
   <data name="NewKTxtRa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 85</value>
+    <value>589, 85</value>
   </data>
   <data name="NewKTxtRa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
+    <value>199, 20</value>
   </data>
   <data name="NewKTxtRa.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -702,10 +705,10 @@
     <value>12</value>
   </data>
   <data name="NewKTxtLa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 85</value>
+    <value>192, 85</value>
   </data>
   <data name="NewKTxtLa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 20</value>
+    <value>179, 20</value>
   </data>
   <data name="NewKTxtLa.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -723,10 +726,10 @@
     <value>13</value>
   </data>
   <data name="NewKTxtLin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 109</value>
+    <value>192, 109</value>
   </data>
   <data name="NewKTxtLin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 20</value>
+    <value>179, 20</value>
   </data>
   <data name="NewKTxtLin.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -744,10 +747,10 @@
     <value>11</value>
   </data>
   <data name="NewKTxtRin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 109</value>
+    <value>589, 109</value>
   </data>
   <data name="NewKTxtRin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
+    <value>199, 20</value>
   </data>
   <data name="NewKTxtRin.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -906,7 +909,7 @@
     <value>12, 37</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 166</value>
+    <value>88, 166</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -933,7 +936,7 @@
     <value>375, 37</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 166</value>
+    <value>122, 166</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1342,6 +1345,12 @@
     <value>barBtn_Search</value>
   </data>
   <data name="&gt;&gt;barBtn_Search.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;bar_Copy.Name" xml:space="preserve">
+    <value>bar_Copy</value>
+  </data>
+  <data name="&gt;&gt;bar_Copy.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

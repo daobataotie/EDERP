@@ -9,7 +9,7 @@ using System;
 namespace Book.Model
 {
     /// <summary>
-    /// 品管线上检查详细
+    /// 光學/厚度表明細
     /// </summary>
     [Serializable]
     public partial class PCPGOnlineCheckDetail

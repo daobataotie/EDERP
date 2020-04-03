@@ -31,11 +31,15 @@ namespace Book.UI.produceManager.PCOtherCheck
 
             if (_PCOC.Detail.Any(d => d.PerspectiveRate.ToLower().Contains("jis")))
             {
-                CreateTagLable("JIS");
+                //CreateTagLable("JIS");
+
+                this.lbl_JIS.Text = "JIS";
             }
             else if (_PCOC.Detail.Any(d => d.PerspectiveRate.ToLower().Contains("as")))
             {
-                CreateTagLable("AS");
+                //CreateTagLable("AS");
+
+                this.lbl_JIS.Text = "AS";
             }
 
 
