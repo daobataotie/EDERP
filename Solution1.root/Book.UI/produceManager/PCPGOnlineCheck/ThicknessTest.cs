@@ -14,6 +14,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         public Model.ThicknessTest _ThicknessTest;
         public BL.ThicknessTestManager _ThicknessTestManager = new Book.BL.ThicknessTestManager();
         private string _PCPGOnlineCheckDetailId = string.Empty;
+        private Model.PCPGOnlineCheckDetail _pCPGOnlineCheckDetail;
 
         public ThicknessTest()
         {
@@ -29,10 +30,11 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.action = "view";
         }
 
-        public ThicknessTest(string PCPGOnlineCheckDetailId)
+        public ThicknessTest(Model.PCPGOnlineCheckDetail pCPGOnlineCheckDetail)
             : this()
         {
-            this._PCPGOnlineCheckDetailId = PCPGOnlineCheckDetailId;
+            this._pCPGOnlineCheckDetail = pCPGOnlineCheckDetail;
+            this._PCPGOnlineCheckDetailId = pCPGOnlineCheckDetail.PCPGOnlineCheckDetailId;
         }
 
         protected override void AddNew()
@@ -216,7 +218,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
             try
             {
-                ThicknessTestCopyForm f = new ThicknessTestCopyForm(this._PCPGOnlineCheckDetailId);
+                ThicknessTestCopyForm f = new ThicknessTestCopyForm(this._pCPGOnlineCheckDetail);
                 if (f.ShowDialog(this) == DialogResult.OK)
                 {
                     this._ThicknessTest = this._ThicknessTestManager.Get(this._ThicknessTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._ThicknessTestManager.mGetLast(this._PCPGOnlineCheckDetailId).ThicknessTestId);

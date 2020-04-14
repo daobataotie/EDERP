@@ -506,7 +506,7 @@
     <value>裝腳鬆緊度(右)</value>
   </data>
   <data name="PCPGOnlineCheckDetailDesc.Caption" xml:space="preserve">
-    <value>備註欄</value>
+    <value>折片數量</value>
   </data>
   <data name="btnGetOtherPacmt.Text" xml:space="preserve">
     <value>委外合同單</value>

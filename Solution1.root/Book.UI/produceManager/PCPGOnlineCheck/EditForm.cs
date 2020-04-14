@@ -273,22 +273,26 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.bsPCPGOnlineCheckDetail.DataSource = this._pcpgoc.Details;
 
             base.Refresh();
-            //switch (this.action)
-            //{
-            //    case "insert":
-            //        this.gridView1.OptionsBehavior.Editable = true;
-            //        break;
-            //    case "update":
-            //        this.gridView1.OptionsBehavior.Editable = true;
-            //        break;
-            //    case "view":
-            //        this.gridView1.OptionsBehavior.Editable = false;
-            //        break;
-            //}
+            switch (this.action)
+            {
+                case "insert":
+                    //this.gridView1.OptionsBehavior.Editable = true;
+                    this.timeEdit1.Enabled = true;
+                    break;
+                case "update":
+                    //this.gridView1.OptionsBehavior.Editable = true;
+                    this.timeEdit1.Enabled = true;
+                    break;
+                case "view":
+                    //this.gridView1.OptionsBehavior.Editable = false;
+                    this.timeEdit1.Enabled = false;
+                    this.cob_TestQuantity.SelectedIndex = -1;
+                    this.timeEdit1.Time = DateTime.Now.Date;
+                    break;
+            }
 
             this.txtPCPGOnlineCheckId.Properties.ReadOnly = true;
             this.calcInvoiceXOQuantity.Enabled = false;
-            this.txtProductDescription.Enabled = false;
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
@@ -713,7 +717,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             Model.PCPGOnlineCheckDetail d = (this.bsPCPGOnlineCheckDetail.Current as Model.PCPGOnlineCheckDetail);
             if (d != null)
             {
-                OpticsTest f = new OpticsTest(d.PCPGOnlineCheckDetailId);
+                OpticsTest f = new OpticsTest(d);
                 f.ShowDialog();
             }
         }
@@ -724,7 +728,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             Model.PCPGOnlineCheckDetail d = (this.bsPCPGOnlineCheckDetail.Current as Model.PCPGOnlineCheckDetail);
             if (d != null)
             {
-                ThicknessTest f = new ThicknessTest(d.PCPGOnlineCheckDetailId);
+                ThicknessTest f = new ThicknessTest(d);
                 f.ShowDialog();
             }
         }
@@ -816,6 +820,34 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
                     {
                         item.SetValue(detail, null, null);
                     }
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        //修改折片數量
+        private void cob_TestQuantity_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+            {
+                foreach (var item in this._pcpgoc.Details)
+                {
+                    item.PCPGOnlineCheckDetailDesc = cob_TestQuantity.Text;
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        //修改第二次抽驗外觀
+        private void timeEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+            {
+                foreach (var item in this._pcpgoc.Details)
+                {
+                    item.SecondTestTime = DateTime.Now.Date.AddHours(timeEdit1.Time.Hour).AddMinutes(timeEdit1.Time.Minute);
                 }
 
                 this.gridControl1.RefreshDataSource();

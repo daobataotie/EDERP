@@ -1148,6 +1148,19 @@ namespace Book.UI.Query
                 this.spe_PMTotal.EditValue = pmtotal;
             }
         }
+
+        private void nccSupplier_EditValueChanged(object sender, EventArgs e)
+        {
+            if (nccSupplier.EditValue == null)
+                this.lbl_SupplierNote.Text = "";
+            else
+            {
+                if (string.IsNullOrEmpty((nccSupplier.EditValue as Model.Supplier).NoId))
+                    this.lbl_SupplierNote.Text = "";
+                else
+                    this.lbl_SupplierNote.Text = "注意事項：" + (nccSupplier.EditValue as Model.Supplier).NoId;
+            }
+        }
     }
 
 }

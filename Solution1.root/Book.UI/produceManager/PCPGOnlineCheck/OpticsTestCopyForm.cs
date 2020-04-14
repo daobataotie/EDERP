@@ -15,18 +15,16 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         BL.OpticsTestManager opticsTestManager = new Book.BL.OpticsTestManager();
         string _pCPGOnlineCheckDetailId;
 
-        public OpticsTestCopyForm(string pCPGOnlineCheckDetailId)
+        public OpticsTestCopyForm(Model.PCPGOnlineCheckDetail pCPGOnlineCheckDetail)
         {
             InitializeComponent();
 
             this.StartPosition = FormStartPosition.CenterParent;
-
-            this._pCPGOnlineCheckDetailId = pCPGOnlineCheckDetailId;
+            this._pCPGOnlineCheckDetailId = pCPGOnlineCheckDetail.PCPGOnlineCheckDetailId;
             DataTable dt = new DataTable();
-            Model.PCPGOnlineCheckDetail detail = pCPGOnlineCheckDetailManager.Get(pCPGOnlineCheckDetailId);
-            if (detail != null && detail.FromInvoiceId.StartsWith("PNT"))
+            if (pCPGOnlineCheckDetail != null && pCPGOnlineCheckDetail.FromInvoiceId.StartsWith("PNT"))
             {
-                dt = pCPGOnlineCheckDetailManager.SelectOpticsTestByFromInvoiceId(detail.FromInvoiceId);
+                dt = pCPGOnlineCheckDetailManager.SelectOpticsTestByFromInvoiceId(pCPGOnlineCheckDetail.FromInvoiceId);
             }
 
 

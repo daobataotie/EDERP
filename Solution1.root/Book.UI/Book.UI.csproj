@@ -11252,7 +11252,6 @@
     <Compile Include="Settings\BasicData\SupplierCategory\ChooseSupplierCategoryForm.Designer.cs">
       <DependentUpon>ChooseSupplierCategoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings\BasicData\Supplier\ChooseSupplier.cs" />
     <Compile Include="Settings\BasicData\Supplier\ChooseSupplierForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -13655,6 +13654,7 @@
     <Compile Include="Settings\BasicData\Supplier\SupplierProductProcesscategoryEdit.Designer.cs">
       <DependentUpon>SupplierProductProcesscategoryEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings\BasicData\Supplier\ChooseSupplier.cs" />
     <Compile Include="Settings\Options\SettingDataFormat.cs">
       <SubType>Form</SubType>
     </Compile>

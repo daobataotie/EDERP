@@ -278,12 +278,22 @@ namespace Book.UI.produceManager.PCImpactCheck
             {
                 case "insert":
                     this.gridView1.OptionsBehavior.Editable = true;
+
+                    this.timeEdit1.Enabled = true;
                     break;
                 case "update":
                     this.gridView1.OptionsBehavior.Editable = true;
+
+                    this.timeEdit1.Enabled = true;
                     break;
                 case "view":
                     this.gridView1.OptionsBehavior.Editable = false;
+
+                    this.timeEdit1.Enabled = false;
+
+                    this.cob_TestQuantity.SelectedIndex = -1;
+                    this.lue_BusinessHours.EditValue = null;
+                    this.timeEdit1.Time = DateTime.Now.Date;
                     break;
             }
 
@@ -621,6 +631,48 @@ namespace Book.UI.produceManager.PCImpactCheck
                     {
                         item.SetValue(detail, null, null);
                     }
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        //修改班別
+        private void lue_BusinessHours_EditValueChanged(object sender, EventArgs e)
+        {
+            if (lue_BusinessHours.EditValue != null && this.action != "view")
+            {
+                foreach (var item in this._PCIC.Details)
+                {
+                    item.attrBanBie = lue_BusinessHours.EditValue.ToString();
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        //修改測試數量
+        private void cob_TestQuantity_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+            {
+                foreach (var item in this._PCIC.Details)
+                {
+                    item.PCImpactCheckQuantity = int.Parse(cob_TestQuantity.Text);
+                }
+
+                this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        //修改第二次抽驗外觀
+        private void timeEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+            {
+                foreach (var item in this._PCIC.Details)
+                {
+                    item.SecondTestTime = DateTime.Now.Date.AddHours(timeEdit1.Time.Hour).AddMinutes(timeEdit1.Time.Minute);
                 }
 
                 this.gridControl1.RefreshDataSource();

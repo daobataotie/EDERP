@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.BarBtn_Search = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.timeEdit1 = new DevExpress.XtraEditors.TimeEdit();
+            this.cob_TestQuantity = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.lue_BusinessHours = new DevExpress.XtraEditors.LookUpEdit();
+            this.bindingSourceBusiness = new System.Windows.Forms.BindingSource(this.components);
             this.btn_AutoClean = new DevExpress.XtraEditors.SimpleButton();
             this.btn_AutoFill = new DevExpress.XtraEditors.SimpleButton();
             this.ccob_AutoFillColumns = new DevExpress.XtraEditors.CheckedComboBoxEdit();
@@ -78,18 +82,6 @@
             this.repositoryItemLookUpEdit13 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.attrGuanZuiR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit14 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.attrJieHenL = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit15 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.attrJieHenR = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit16 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.attrWingL = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit17 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.attrWingR = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit18 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.attrFootL = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit35 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.attrFootR = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit36 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.attr_15L = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit19 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.attr_15R = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -102,6 +94,8 @@
             this.repositoryItemLookUpEdit23 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.attr15R = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit24 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.attrFootR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit36 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.attr30L = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit25 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.attr30R = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -124,10 +118,19 @@
             this.repositoryItemLookUpEdit33 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.attrFootL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit35 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.attrJieHenL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit15 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.attrJieHenR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit16 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.attrWingL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit17 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.attrWingR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit18 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.attrRetest = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit37 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.bindingSourceBusiness = new System.Windows.Forms.BindingSource(this.components);
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -164,10 +167,17 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_TestQuantity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_BusinessHours.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBusiness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccob_AutoFillColumns.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPCImpactCheckDesc.Properties)).BeginInit();
@@ -191,18 +201,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit27)).BeginInit();
@@ -213,8 +218,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit37)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBusiness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).BeginInit();
@@ -241,6 +250,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -276,6 +288,9 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.timeEdit1);
+            this.layoutControl1.Controls.Add(this.cob_TestQuantity);
+            this.layoutControl1.Controls.Add(this.lue_BusinessHours);
             this.layoutControl1.Controls.Add(this.btn_AutoClean);
             this.layoutControl1.Controls.Add(this.btn_AutoFill);
             this.layoutControl1.Controls.Add(this.ccob_AutoFillColumns);
@@ -296,6 +311,48 @@
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // timeEdit1
+            // 
+            resources.ApplyResources(this.timeEdit1, "timeEdit1");
+            this.timeEdit1.MenuManager = this.barManager1;
+            this.timeEdit1.Name = "timeEdit1";
+            this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.timeEdit1.Properties.DisplayFormat.FormatString = "HH:mm";
+            this.timeEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.timeEdit1.StyleController = this.layoutControl1;
+            this.timeEdit1.EditValueChanged += new System.EventHandler(this.timeEdit1_EditValueChanged);
+            // 
+            // cob_TestQuantity
+            // 
+            resources.ApplyResources(this.cob_TestQuantity, "cob_TestQuantity");
+            this.cob_TestQuantity.MenuManager = this.barManager1;
+            this.cob_TestQuantity.Name = "cob_TestQuantity";
+            this.cob_TestQuantity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_TestQuantity.Properties.Buttons"))))});
+            this.cob_TestQuantity.Properties.Items.AddRange(new object[] {
+            resources.GetString("cob_TestQuantity.Properties.Items"),
+            resources.GetString("cob_TestQuantity.Properties.Items1")});
+            this.cob_TestQuantity.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cob_TestQuantity.StyleController = this.layoutControl1;
+            this.cob_TestQuantity.EditValueChanged += new System.EventHandler(this.cob_TestQuantity_EditValueChanged);
+            // 
+            // lue_BusinessHours
+            // 
+            resources.ApplyResources(this.lue_BusinessHours, "lue_BusinessHours");
+            this.lue_BusinessHours.MenuManager = this.barManager1;
+            this.lue_BusinessHours.Name = "lue_BusinessHours";
+            this.lue_BusinessHours.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lue_BusinessHours.Properties.Buttons"))))});
+            this.lue_BusinessHours.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lue_BusinessHours.Properties.Columns"), resources.GetString("lue_BusinessHours.Properties.Columns1"))});
+            this.lue_BusinessHours.Properties.DataSource = this.bindingSourceBusiness;
+            this.lue_BusinessHours.Properties.DisplayMember = "BusinessHoursName";
+            this.lue_BusinessHours.Properties.NullText = resources.GetString("lue_BusinessHours.Properties.NullText");
+            this.lue_BusinessHours.Properties.ValueMember = "BusinessHoursName";
+            this.lue_BusinessHours.StyleController = this.layoutControl1;
+            this.lue_BusinessHours.EditValueChanged += new System.EventHandler(this.lue_BusinessHours_EditValueChanged);
             // 
             // btn_AutoClean
             // 
@@ -747,90 +804,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit14.Buttons"))))});
             this.repositoryItemLookUpEdit14.Name = "repositoryItemLookUpEdit14";
             // 
-            // attrJieHenL
-            // 
-            resources.ApplyResources(this.attrJieHenL, "attrJieHenL");
-            this.attrJieHenL.ColumnEdit = this.repositoryItemLookUpEdit15;
-            this.attrJieHenL.FieldName = "attrJieHenL";
-            this.attrJieHenL.Name = "attrJieHenL";
-            // 
-            // repositoryItemLookUpEdit15
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit15, "repositoryItemLookUpEdit15");
-            this.repositoryItemLookUpEdit15.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit15.Buttons"))))});
-            this.repositoryItemLookUpEdit15.Name = "repositoryItemLookUpEdit15";
-            // 
-            // attrJieHenR
-            // 
-            resources.ApplyResources(this.attrJieHenR, "attrJieHenR");
-            this.attrJieHenR.ColumnEdit = this.repositoryItemLookUpEdit16;
-            this.attrJieHenR.FieldName = "attrJieHenR";
-            this.attrJieHenR.Name = "attrJieHenR";
-            // 
-            // repositoryItemLookUpEdit16
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit16, "repositoryItemLookUpEdit16");
-            this.repositoryItemLookUpEdit16.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit16.Buttons"))))});
-            this.repositoryItemLookUpEdit16.Name = "repositoryItemLookUpEdit16";
-            // 
-            // attrWingL
-            // 
-            resources.ApplyResources(this.attrWingL, "attrWingL");
-            this.attrWingL.ColumnEdit = this.repositoryItemLookUpEdit17;
-            this.attrWingL.FieldName = "attrWingL";
-            this.attrWingL.Name = "attrWingL";
-            // 
-            // repositoryItemLookUpEdit17
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit17, "repositoryItemLookUpEdit17");
-            this.repositoryItemLookUpEdit17.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit17.Buttons"))))});
-            this.repositoryItemLookUpEdit17.Name = "repositoryItemLookUpEdit17";
-            // 
-            // attrWingR
-            // 
-            resources.ApplyResources(this.attrWingR, "attrWingR");
-            this.attrWingR.ColumnEdit = this.repositoryItemLookUpEdit18;
-            this.attrWingR.FieldName = "attrWingR";
-            this.attrWingR.Name = "attrWingR";
-            // 
-            // repositoryItemLookUpEdit18
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit18, "repositoryItemLookUpEdit18");
-            this.repositoryItemLookUpEdit18.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit18.Buttons"))))});
-            this.repositoryItemLookUpEdit18.Name = "repositoryItemLookUpEdit18";
-            // 
-            // attrFootL
-            // 
-            resources.ApplyResources(this.attrFootL, "attrFootL");
-            this.attrFootL.ColumnEdit = this.repositoryItemLookUpEdit35;
-            this.attrFootL.FieldName = "attrFootL";
-            this.attrFootL.Name = "attrFootL";
-            // 
-            // repositoryItemLookUpEdit35
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit35, "repositoryItemLookUpEdit35");
-            this.repositoryItemLookUpEdit35.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit35.Buttons"))))});
-            this.repositoryItemLookUpEdit35.Name = "repositoryItemLookUpEdit35";
-            // 
-            // attrFootR
-            // 
-            resources.ApplyResources(this.attrFootR, "attrFootR");
-            this.attrFootR.ColumnEdit = this.repositoryItemLookUpEdit36;
-            this.attrFootR.FieldName = "attrFootR";
-            this.attrFootR.Name = "attrFootR";
-            // 
-            // repositoryItemLookUpEdit36
-            // 
-            resources.ApplyResources(this.repositoryItemLookUpEdit36, "repositoryItemLookUpEdit36");
-            this.repositoryItemLookUpEdit36.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit36.Buttons"))))});
-            this.repositoryItemLookUpEdit36.Name = "repositoryItemLookUpEdit36";
-            // 
             // attr_15L
             // 
             resources.ApplyResources(this.attr_15L, "attr_15L");
@@ -914,6 +887,20 @@
             this.repositoryItemLookUpEdit24.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit24.Buttons"))))});
             this.repositoryItemLookUpEdit24.Name = "repositoryItemLookUpEdit24";
+            // 
+            // attrFootR
+            // 
+            resources.ApplyResources(this.attrFootR, "attrFootR");
+            this.attrFootR.ColumnEdit = this.repositoryItemLookUpEdit36;
+            this.attrFootR.FieldName = "attrFootR";
+            this.attrFootR.Name = "attrFootR";
+            // 
+            // repositoryItemLookUpEdit36
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit36, "repositoryItemLookUpEdit36");
+            this.repositoryItemLookUpEdit36.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit36.Buttons"))))});
+            this.repositoryItemLookUpEdit36.Name = "repositoryItemLookUpEdit36";
             // 
             // attr30L
             // 
@@ -1068,6 +1055,76 @@
             this.gridColumn2.ColumnEdit = this.repositoryItemLookUpEdit32;
             this.gridColumn2.FieldName = "attr90B";
             this.gridColumn2.Name = "gridColumn2";
+            // 
+            // attrFootL
+            // 
+            resources.ApplyResources(this.attrFootL, "attrFootL");
+            this.attrFootL.ColumnEdit = this.repositoryItemLookUpEdit35;
+            this.attrFootL.FieldName = "attrFootL";
+            this.attrFootL.Name = "attrFootL";
+            // 
+            // repositoryItemLookUpEdit35
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit35, "repositoryItemLookUpEdit35");
+            this.repositoryItemLookUpEdit35.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit35.Buttons"))))});
+            this.repositoryItemLookUpEdit35.Name = "repositoryItemLookUpEdit35";
+            // 
+            // attrJieHenL
+            // 
+            resources.ApplyResources(this.attrJieHenL, "attrJieHenL");
+            this.attrJieHenL.ColumnEdit = this.repositoryItemLookUpEdit15;
+            this.attrJieHenL.FieldName = "attrJieHenL";
+            this.attrJieHenL.Name = "attrJieHenL";
+            // 
+            // repositoryItemLookUpEdit15
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit15, "repositoryItemLookUpEdit15");
+            this.repositoryItemLookUpEdit15.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit15.Buttons"))))});
+            this.repositoryItemLookUpEdit15.Name = "repositoryItemLookUpEdit15";
+            // 
+            // attrJieHenR
+            // 
+            resources.ApplyResources(this.attrJieHenR, "attrJieHenR");
+            this.attrJieHenR.ColumnEdit = this.repositoryItemLookUpEdit16;
+            this.attrJieHenR.FieldName = "attrJieHenR";
+            this.attrJieHenR.Name = "attrJieHenR";
+            // 
+            // repositoryItemLookUpEdit16
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit16, "repositoryItemLookUpEdit16");
+            this.repositoryItemLookUpEdit16.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit16.Buttons"))))});
+            this.repositoryItemLookUpEdit16.Name = "repositoryItemLookUpEdit16";
+            // 
+            // attrWingL
+            // 
+            resources.ApplyResources(this.attrWingL, "attrWingL");
+            this.attrWingL.ColumnEdit = this.repositoryItemLookUpEdit17;
+            this.attrWingL.FieldName = "attrWingL";
+            this.attrWingL.Name = "attrWingL";
+            // 
+            // repositoryItemLookUpEdit17
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit17, "repositoryItemLookUpEdit17");
+            this.repositoryItemLookUpEdit17.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit17.Buttons"))))});
+            this.repositoryItemLookUpEdit17.Name = "repositoryItemLookUpEdit17";
+            // 
+            // attrWingR
+            // 
+            resources.ApplyResources(this.attrWingR, "attrWingR");
+            this.attrWingR.ColumnEdit = this.repositoryItemLookUpEdit18;
+            this.attrWingR.FieldName = "attrWingR";
+            this.attrWingR.Name = "attrWingR";
+            // 
+            // repositoryItemLookUpEdit18
+            // 
+            resources.ApplyResources(this.repositoryItemLookUpEdit18, "repositoryItemLookUpEdit18");
+            this.repositoryItemLookUpEdit18.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemLookUpEdit18.Buttons"))))});
+            this.repositoryItemLookUpEdit18.Name = "repositoryItemLookUpEdit18";
             // 
             // attrRetest
             // 
@@ -1260,7 +1317,10 @@
             this.layoutControlItem4,
             this.emptySpaceItem1,
             this.layoutControlItem6,
-            this.layoutControlItem12});
+            this.layoutControlItem12,
+            this.layoutControlItem16,
+            this.layoutControlItem19,
+            this.layoutControlItem20});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(881, 423);
@@ -1304,21 +1364,23 @@
             // 
             this.layoutControlItem8.Control = this.txtPCImpactCheckDesc;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 330);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 355);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(643, 73);
+            this.layoutControlItem8.Size = new System.Drawing.Size(633, 48);
             this.layoutControlItem8.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(50, 20);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(80, 20);
             this.layoutControlItem8.TextToControlDistance = 5;
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.nccEmployee0;
             resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
-            this.layoutControlItem9.Location = new System.Drawing.Point(643, 330);
+            this.layoutControlItem9.Location = new System.Drawing.Point(633, 330);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(218, 24);
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(72, 14);
+            this.layoutControlItem9.Size = new System.Drawing.Size(228, 24);
+            this.layoutControlItem9.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(80, 14);
+            this.layoutControlItem9.TextToControlDistance = 5;
             // 
             // layoutControlItem10
             // 
@@ -1326,7 +1388,7 @@
             resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 304);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(102, 26);
+            this.layoutControlItem10.Size = new System.Drawing.Size(101, 26);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextToControlDistance = 0;
             this.layoutControlItem10.TextVisible = false;
@@ -1335,9 +1397,9 @@
             // 
             this.layoutControlItem11.Control = this.btnDelDetail;
             resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(102, 304);
+            this.layoutControlItem11.Location = new System.Drawing.Point(101, 304);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(111, 26);
+            this.layoutControlItem11.Size = new System.Drawing.Size(110, 26);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextToControlDistance = 0;
             this.layoutControlItem11.TextVisible = false;
@@ -1346,9 +1408,9 @@
             // 
             this.layoutControlItem14.Control = this.label1;
             resources.ApplyResources(this.layoutControlItem14, "layoutControlItem14");
-            this.layoutControlItem14.Location = new System.Drawing.Point(213, 304);
+            this.layoutControlItem14.Location = new System.Drawing.Point(211, 304);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(159, 26);
+            this.layoutControlItem14.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextToControlDistance = 0;
             this.layoutControlItem14.TextVisible = false;
@@ -1379,19 +1441,23 @@
             // 
             this.layoutControlItem17.Control = this.txt_AuditState;
             resources.ApplyResources(this.layoutControlItem17, "layoutControlItem17");
-            this.layoutControlItem17.Location = new System.Drawing.Point(643, 378);
+            this.layoutControlItem17.Location = new System.Drawing.Point(633, 378);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(218, 25);
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(72, 14);
+            this.layoutControlItem17.Size = new System.Drawing.Size(228, 25);
+            this.layoutControlItem17.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(80, 14);
+            this.layoutControlItem17.TextToControlDistance = 5;
             // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.newChooseContorlAuditEmp;
             resources.ApplyResources(this.layoutControlItem18, "layoutControlItem18");
-            this.layoutControlItem18.Location = new System.Drawing.Point(643, 354);
+            this.layoutControlItem18.Location = new System.Drawing.Point(633, 354);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(218, 24);
-            this.layoutControlItem18.TextSize = new System.Drawing.Size(72, 14);
+            this.layoutControlItem18.Size = new System.Drawing.Size(228, 24);
+            this.layoutControlItem18.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(80, 14);
+            this.layoutControlItem18.TextToControlDistance = 5;
             // 
             // layoutControlItem5
             // 
@@ -1419,26 +1485,28 @@
             // 
             this.layoutControlItem4.Control = this.ccob_AutoFillColumns;
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
-            this.layoutControlItem4.Location = new System.Drawing.Point(432, 304);
+            this.layoutControlItem4.Location = new System.Drawing.Point(426, 304);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(211, 26);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 14);
+            this.layoutControlItem4.Size = new System.Drawing.Size(207, 26);
+            this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(80, 14);
+            this.layoutControlItem4.TextToControlDistance = 5;
             // 
             // emptySpaceItem1
             // 
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
-            this.emptySpaceItem1.Location = new System.Drawing.Point(372, 304);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(367, 304);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(60, 26);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(59, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btn_AutoFill;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(643, 304);
+            this.layoutControlItem6.Location = new System.Drawing.Point(633, 304);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(109, 26);
+            this.layoutControlItem6.Size = new System.Drawing.Size(114, 26);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
             this.layoutControlItem6.TextVisible = false;
@@ -1447,12 +1515,43 @@
             // 
             this.layoutControlItem12.Control = this.btn_AutoClean;
             resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
-            this.layoutControlItem12.Location = new System.Drawing.Point(752, 304);
+            this.layoutControlItem12.Location = new System.Drawing.Point(747, 304);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(109, 26);
+            this.layoutControlItem12.Size = new System.Drawing.Size(114, 26);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextToControlDistance = 0;
             this.layoutControlItem12.TextVisible = false;
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.lue_BusinessHours;
+            resources.ApplyResources(this.layoutControlItem16, "layoutControlItem16");
+            this.layoutControlItem16.Location = new System.Drawing.Point(0, 330);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(222, 25);
+            this.layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem16.TextToControlDistance = 5;
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.cob_TestQuantity;
+            resources.ApplyResources(this.layoutControlItem19, "layoutControlItem19");
+            this.layoutControlItem19.Location = new System.Drawing.Point(222, 330);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(165, 25);
+            this.layoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(80, 20);
+            this.layoutControlItem19.TextToControlDistance = 5;
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.Control = this.timeEdit1;
+            resources.ApplyResources(this.layoutControlItem20, "layoutControlItem20");
+            this.layoutControlItem20.Location = new System.Drawing.Point(387, 330);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(246, 25);
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(120, 14);
             // 
             // EditForm
             // 
@@ -1464,6 +1563,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cob_TestQuantity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_BusinessHours.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBusiness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccob_AutoFillColumns.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_AuditState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPCImpactCheckDesc.Properties)).EndInit();
@@ -1487,18 +1590,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit27)).EndInit();
@@ -1509,8 +1607,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit37)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBusiness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).EndInit();
@@ -1537,6 +1639,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1677,5 +1782,11 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.SimpleButton btn_AutoClean;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.TimeEdit timeEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cob_TestQuantity;
+        private DevExpress.XtraEditors.LookUpEdit lue_BusinessHours;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
     }
 }

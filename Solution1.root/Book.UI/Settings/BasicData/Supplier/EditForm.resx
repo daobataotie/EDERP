@@ -1158,10 +1158,10 @@
     <value>行动电话:</value>
   </data>
   <data name="layoutControlItem46.CustomizationFormText" xml:space="preserve">
-    <value>編號：</value>
+    <value>注意事项：</value>
   </data>
   <data name="layoutControlItem46.Text" xml:space="preserve">
-    <value>編號：</value>
+    <value>注意事項：</value>
   </data>
   <data name="layoutControlItem49.CustomizationFormText" xml:space="preserve">
     <value>商品：</value>

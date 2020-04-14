@@ -15,6 +15,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         Model.OpticsTest _OpticsTest;
         BL.OpticsTestManager _OpticsTestManager = new Book.BL.OpticsTestManager();
         private string _PCPGOnlineCheckDetailId = string.Empty;
+        private Model.PCPGOnlineCheckDetail _pCPGOnlineCheckDetail;
         private string _PCFinishCheckId = string.Empty;
         int _FromPcFinishCheck = 0;
 
@@ -46,10 +47,11 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.action = "view";
         }
 
-        public OpticsTest(string PCPGOnlineCheckDetailId)
+        public OpticsTest(Model.PCPGOnlineCheckDetail pCPGOnlineCheckDetail)
             : this()
         {
-            this._PCPGOnlineCheckDetailId = PCPGOnlineCheckDetailId;
+            this._pCPGOnlineCheckDetail = pCPGOnlineCheckDetail;
+            this._PCPGOnlineCheckDetailId = pCPGOnlineCheckDetail.PCPGOnlineCheckDetailId;
         }
         public OpticsTest(string PCFinishCheckId, int i)
             : this()
@@ -367,7 +369,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
             try
             {
-                OpticsTestCopyForm f = new OpticsTestCopyForm(this._PCPGOnlineCheckDetailId);
+                OpticsTestCopyForm f = new OpticsTestCopyForm(this._pCPGOnlineCheckDetail);
                 if (f.ShowDialog(this) == DialogResult.OK)
                 {
                     this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId).OpticsTestId);

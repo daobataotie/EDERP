@@ -40,6 +40,18 @@ namespace Book.UI.Settings.BasicData.Customs
         {
             this.Close();
         }
+
+        private void checkAll_CheckStateChanged(object sender, EventArgs e)
+        {
+            var list = this.gridView1.DataController.GetAllFilteredAndSortedRows();
+
+            foreach (Model.Customer item in list)
+            {
+                Customers.First(c => c.CustomerId == item.CustomerId).IsChecked = checkAll.Checked;
+            }
+
+            this.gridControl1.RefreshDataSource();
+        }
     }
 
     public class CustomerComparer : IEqualityComparer<Model.Customer>

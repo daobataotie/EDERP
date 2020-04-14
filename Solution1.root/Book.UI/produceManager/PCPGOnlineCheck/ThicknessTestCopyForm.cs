@@ -17,18 +17,17 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
         string _pCPGOnlineCheckDetailId;
 
-        public ThicknessTestCopyForm(string pCPGOnlineCheckDetailId)
+        public ThicknessTestCopyForm(Model.PCPGOnlineCheckDetail pCPGOnlineCheckDetail)
         {
             InitializeComponent();
 
             this.StartPosition = FormStartPosition.CenterParent;
 
-            this._pCPGOnlineCheckDetailId = pCPGOnlineCheckDetailId;
+            this._pCPGOnlineCheckDetailId = pCPGOnlineCheckDetail.PCPGOnlineCheckDetailId;
             DataTable dt = new DataTable();
-            Model.PCPGOnlineCheckDetail detail = pCPGOnlineCheckDetailManager.Get(pCPGOnlineCheckDetailId);
-            if (detail != null && detail.FromInvoiceId.StartsWith("PNT"))
+            if (pCPGOnlineCheckDetail != null && pCPGOnlineCheckDetail.FromInvoiceId.StartsWith("PNT"))
             {
-                dt = pCPGOnlineCheckDetailManager.SelectThicknessTestByFromInvoiceId(detail.FromInvoiceId);
+                dt = pCPGOnlineCheckDetailManager.SelectThicknessTestByFromInvoiceId(pCPGOnlineCheckDetail.FromInvoiceId);
             }
 
 
