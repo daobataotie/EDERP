@@ -37,7 +37,7 @@ namespace Book.DA.SQLServer
         }
 
         //ProductState -1全部 0 正常 1非   //用于listForm
-        public IList<Book.Model.ProduceInDepotDetail> SelectList(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Book.Model.Product product, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState)
+        public IList<Book.Model.ProduceInDepotDetail> SelectList(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Book.Model.Product product, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState, bool isClosed)
         {
             //Hashtable ht = new Hashtable();
             //ht.Add("startpronoteid", string.IsNullOrEmpty(startPronoteHeader) ? null : startPronoteHeader);
@@ -46,7 +46,7 @@ namespace Book.DA.SQLServer
             //ht.Add("enddate", endDate);
             //ht.Add("productid", product == null ? null : product.ProductId);
             StringBuilder str = new StringBuilder();
-            str.Append("   select d.*,i.ProduceInDepotDate as mProduceInDepotDate,pr.IsClose as PIsClose , p.ProductName as ProductName,p.CustomerProductName,(SELECT Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId = (SELECT ProduceInDepot.WorkHouseId FROM ProduceInDepot WHERE ProduceInDepot.ProduceInDepotId = d.ProduceInDepotId)) as WorkHousename,(select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pr.PronoteHeaderId)) AS CusXOId,(SELECT LEFT(a,isnull(len(a)-1,0)) AS c FROM (SELECT (SELECT (cast(PronoteMachineId AS varchar)+',')  FROM PronoteProceduresDetail WHERE PronoteHeaderID=d.PronoteHeaderId AND PronoteMachineId IS NOT NULL AND PronoteMachineId<>'' FOR xml path('')) AS a) AS b) AS Machine,pr.JieAnDate from ProduceInDepotDetail d left join PronoteHeader pr on pr.PronoteHeaderId=d.PronoteHeaderId  left join ProduceInDepot i on d.ProduceInDepotId=i.ProduceInDepotId left join  product p on d.productid=p.productid where d.ProduceInDepotId in(select ProduceInDepotId from ProduceInDepot where ProduceInDepotDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "') ");
+            str.Append(" select d.*,i.ProduceInDepotDate as mProduceInDepotDate,pr.IsClose as PIsClose , p.ProductName as ProductName,p.CustomerProductName,(SELECT Workhousename FROM WorkHouse WHERE WorkHouse.WorkHouseId = (SELECT ProduceInDepot.WorkHouseId FROM ProduceInDepot WHERE ProduceInDepot.ProduceInDepotId = d.ProduceInDepotId)) as WorkHousename,(select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pr.PronoteHeaderId)) AS CusXOId,(SELECT LEFT(a,isnull(len(a)-1,0)) AS c FROM (SELECT (SELECT (cast(PronoteMachineId AS varchar)+',')  FROM PronoteProceduresDetail WHERE PronoteHeaderID=d.PronoteHeaderId AND PronoteMachineId IS NOT NULL AND PronoteMachineId<>'' FOR xml path('')) AS a) AS b) AS Machine,pr.JieAnDate from ProduceInDepotDetail d left join PronoteHeader pr on pr.PronoteHeaderId=d.PronoteHeaderId  left join ProduceInDepot i on d.ProduceInDepotId=i.ProduceInDepotId left join  product p on d.productid=p.productid where d.ProduceInDepotId in(select ProduceInDepotId from ProduceInDepot where ProduceInDepotDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "') ");
             if (!string.IsNullOrEmpty(startPronoteHeader) && !string.IsNullOrEmpty(endPronoteHeader))
             {
                 str.Append(" and (d.PronoteHeaderId between '" + startPronoteHeader + "' and  '" + endPronoteHeader + "')");
@@ -89,6 +89,10 @@ namespace Book.DA.SQLServer
                     str.Append(" AND d.ProductId IN (SELECT Product.ProductId FROM Product WHERE ProductType = '1')");
                     break;
             }
+            if (isClosed)
+            {
+                str.Append(" and (pr.IsClose = 0 or pr.IsClose is null)");
+            }
             str.Append(" order by ProductName desc");
             // ht.Add("sql", str.ToString());
             // return sqlmapper.QueryForList<Model.ProduceInDepotDetail>("ProduceInDepotDetail.select_byProduceInDateAndPronote", ht);
@@ -96,7 +100,7 @@ namespace Book.DA.SQLServer
         }
 
         //ProductState -1全部 0 正常 1非   //用于月报表
-        public IList<Book.Model.ProduceInDepotDetail> SelectMonthCount(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Book.Model.Product product, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState)
+        public IList<Book.Model.ProduceInDepotDetail> SelectMonthCount(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Book.Model.Product product, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState, bool isClosed)
         {
             Hashtable ht = new Hashtable();
             ht.Add("startpronoteid", string.IsNullOrEmpty(startPronoteHeader) ? null : startPronoteHeader);
@@ -138,12 +142,15 @@ namespace Book.DA.SQLServer
                     str.Append(" AND ProductId IN (SELECT Product.ProductId FROM Product WHERE ProductType = '1')");
                     break;
             }
+            if (isClosed)
+                str.Append(" and PronoteHeaderId in(select PronoteHeaderId from PronoteHeader where (IsClose = 0 or IsClose  is null))");
+
             ht.Add("sql", str.ToString());
             return sqlmapper.QueryForList<Model.ProduceInDepotDetail>("ProduceInDepotDetail.select_byProduceInDateAndPronote", ht);
         }
 
         //ProductState -1全部 0 正常 1非
-        public IList<Book.Model.ProduceInDepotDetail> Select(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Book.Model.Product product, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState)
+        public IList<Book.Model.ProduceInDepotDetail> Select(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Book.Model.Product product, Book.Model.WorkHouse work, Book.Model.Depot mDepot, Book.Model.DepotPosition mDepotPositioin, string id1, string id2, string cusxoid, Book.Model.Customer customer1, Book.Model.Customer customer2, int ProductState, bool isClosed)
         {
             //Hashtable ht = new Hashtable();
             //ht.Add("startpronoteid", string.IsNullOrEmpty(startPronoteHeader) ? null : startPronoteHeader);
@@ -187,7 +194,7 @@ namespace Book.DA.SQLServer
             //}
             //ht.Add("sql", str.ToString());
             //return sqlmapper.QueryForList<Model.ProduceInDepotDetail>("ProduceInDepotDetail.select_byProduceInDateAndPronote", ht);
-            StringBuilder sb = new StringBuilder("select pid.ProduceInDepotId,pi.ProduceInDepotDate as HeaderDate,pid.PronoteHeaderId,p.ProductName,wh.Workhousename,pid.ProceduresSum,pid.ProduceTransferQuantity,pid.ProduceQuantity,pid.ProductUnit,d.DepotName, (select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pid.PronoteHeaderId)) as CusXOId  from ProduceInDepotDetail pid left join Product p on p.ProductId=pid.ProductId left join ProduceInDepot pi on pi.ProduceInDepotId=pid.ProduceInDepotId  left join WorkHouse wh on wh.WorkHouseId=pi.WorkHouseId left join Depot d on d.DepotId=pi.DepotId where pi.ProduceInDepotDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+            StringBuilder sb = new StringBuilder("select pid.ProduceInDepotId,pi.ProduceInDepotDate as HeaderDate,pid.PronoteHeaderId,p.ProductName,wh.Workhousename,pid.ProceduresSum,pid.ProduceTransferQuantity,pid.ProduceQuantity,pid.ProductUnit,d.DepotName, (select CustomerInvoiceXOId from InvoiceXO where InvoiceId=(select InvoiceXOId from PronoteHeader where PronoteHeaderID=pid.PronoteHeaderId)) as CusXOId  from ProduceInDepotDetail pid left join Product p on p.ProductId=pid.ProductId left join ProduceInDepot pi on pi.ProduceInDepotId=pid.ProduceInDepotId  left join WorkHouse wh on wh.WorkHouseId=pi.WorkHouseId left join Depot d on d.DepotId=pi.DepotId left join PronoteHeader ph on pid.PronoteHeaderId=ph.PronoteHeaderID where pi.ProduceInDepotDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "'");
 
             if (!string.IsNullOrEmpty(startPronoteHeader) && !string.IsNullOrEmpty(endPronoteHeader))
                 sb.Append(" and pid.PronoteHeaderId between '" + startPronoteHeader + "' and '" + endPronoteHeader + "'");
@@ -214,6 +221,9 @@ namespace Book.DA.SQLServer
                     sb.Append(" AND pid.ProductId IN (SELECT ProductId FROM Product WHERE ProductType = '1')");
                     break;
             }
+            if (isClosed)
+                sb.Append(" And (ph.IsClose=0 or ph.IsClose is null)");
+
             sb.Append(" order by pid.ProduceInDepotId desc");
 
             return this.DataReaderBind<Model.ProduceInDepotDetail>(sb.ToString(), null, CommandType.Text);

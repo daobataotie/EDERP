@@ -906,7 +906,6 @@
             resources.ApplyResources(this.gridColumnName, "gridColumnName");
             this.gridColumnName.FieldName = "Product";
             this.gridColumnName.Name = "gridColumnName";
-            this.gridColumnName.OptionsColumn.AllowEdit = false;
             // 
             // gridColumnGuiGe
             // 

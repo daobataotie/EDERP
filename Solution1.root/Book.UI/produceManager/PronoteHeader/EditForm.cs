@@ -396,7 +396,7 @@ namespace Book.UI.produceManager.PronoteHeader
                     //this.gridView2.OptionsBehavior.Editable = false;
                     this.gridColumn24.OptionsColumn.AllowEdit = false;
                     this.gridColumnProductId.OptionsColumn.AllowEdit = false;
-                    this.gridColumnName.OptionsColumn.AllowEdit = false;
+                    this.gridColumnName.OptionsColumn.AllowEdit = true;
                     this.gridColumnGuiGe.OptionsColumn.AllowEdit = false;
                     //this.gridColumnQuantity.OptionsColumn.AllowEdit = false;
                     this.gridColumn2.OptionsColumn.AllowEdit = false;

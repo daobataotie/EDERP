@@ -652,21 +652,6 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             GC.Collect();
         }
 
-        private void ItemHyperLinkGuangXue_Click(object sender, EventArgs e)
-        {
-            //Model.PCPGOnlineCheckDetail d = (this.bsPCPGOnlineCheckDetail.Current as Model.PCPGOnlineCheckDetail);
-            //if (d != null)
-            //{
-            //    OpticsTest f = new OpticsTest(d.PCPGOnlineCheckDetailId);
-            //    f.ShowDialog();
-            //}
-        }
-
-        private void ItemHyperLinkHouDu_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //条件打印
         private void barBtnContionPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

@@ -26,5 +26,17 @@ namespace Book.DA.SQLServer
             ht.Add("EndDate", EndDate);
             return sqlmapper.QueryForList<Model.PCClarityCheck>("PCClarityCheck.SelectByDateRage", ht);
         }
+
+        public DataTable SelectByProductName(string productName)
+        {
+            int length = productName.Length;
+            string sql = "select pcc.PCClarityCheckId,pcc.CheckDate,pcc.PronoteHeaderId,p.ProductName,ppd.PronoteMachineId from PCClarityCheck pcc left join PronoteProceduresDetail ppd on ppd.PronoteHeaderID=pcc.PronoteHeaderID left join Product p on pcc.ProductId=p.ProductId where pcc.ProductId in (select ProductId from Product where left(ProductName," + length + ")='" + productName + "') and ppd.PronoteMachineId is not null and ppd.PronoteMachineId<>''";
+
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            return dt;
+        }
     }
 }

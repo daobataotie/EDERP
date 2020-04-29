@@ -25,6 +25,9 @@ namespace Book.UI.Settings.BasicData
         //  private Workflowinsert wfinsertManager = new Workflowinsert();
         // private BL.ProcessManager processManager = new BL.ProcessManager();
         //  private BL.wfrecordManager wfrecordManager = new BL.wfrecordManager();
+        /// <summary>
+        /// 單據狀態(insert，update，view)
+        /// </summary>
         protected string action;
         protected int saveAuditState;//保存时审核   状态 为 等待审核
         protected bool flagSave = false;//保存时 确认

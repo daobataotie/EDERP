@@ -121,9 +121,9 @@
             // 
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonProduceSum, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonCheckSum),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonCheckPercent),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonProduceSum, true),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonCheckSum, false),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.barButtonCheckPercent, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.barBtnPrint)});
             this.bar1.OptionsBar.UseWholeRow = true;
             // 

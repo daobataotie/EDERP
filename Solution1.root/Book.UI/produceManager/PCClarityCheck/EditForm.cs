@@ -156,7 +156,7 @@ namespace Book.UI.produceManager.PCClarityCheck
             {
                 if (this.action == "view")
                 {
-                    this._pcClarity = this._pcClarityManager.Get(this._pcClarity);
+                    this._pcClarity = this._pcClarityManager.GetDetail(this._pcClarity);
                 }
             }
 
@@ -252,6 +252,7 @@ namespace Book.UI.produceManager.PCClarityCheck
             clarityDetail.PCClarityCheckId = this._pcClarity.PCClarityCheckId;
             clarityDetail.CheckDate = DateTime.Now;
             clarityDetail.Number = (this._pcClarity.Details.Count + 1).ToString();
+            clarityDetail.EmployeeId = BL.V.ActiveOperator.EmployeeId;
             this._pcClarity.Details.Add(clarityDetail);
 
             this.bindingSourceDetail.Position = this.bindingSourceDetail.IndexOf(clarityDetail);
@@ -312,7 +313,7 @@ namespace Book.UI.produceManager.PCClarityCheck
                 if (currentModel != null)
                 {
                     this._pcClarity = currentModel;
-                    this._pcClarity = this._pcClarityManager.Get(this._pcClarity);
+                    this._pcClarity = this._pcClarityManager.GetDetail(this._pcClarity);
                     this.Refresh();
                 }
             }
@@ -347,5 +348,62 @@ namespace Book.UI.produceManager.PCClarityCheck
         }
 
         #endregion
+
+        //複製
+        private void bar_Copy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //只在新增時複製生效
+            if (this.action == "insert")
+            {
+                try
+                {
+                    if (this._pcClarity.Product == null)
+                    {
+                        MessageBox.Show("請先選擇加工單", "提示", MessageBoxButtons.OK);
+                        return;
+                    }
+
+                    string productName = this._pcClarity.Product.ProductName.Contains("-") ? this._pcClarity.Product.ProductName.Split('-')[0].Trim() : this._pcClarity.Product.ProductName;
+                    CopyForm f = new CopyForm(productName);
+                    if (f.ShowDialog() == DialogResult.OK)
+                    {
+                        if (f.PCClarityCheck != null && f.PCClarityCheck.Details != null)
+                        {
+                            this._pcClarity.Details.Clear();
+                            foreach (var item in f.PCClarityCheck.Details)
+                            {
+                                Model.PCClarityCheckDetail clarityDetail = new Book.Model.PCClarityCheckDetail();
+                                clarityDetail.PCClarityCheckDetailId = Guid.NewGuid().ToString();
+                                clarityDetail.PCClarityCheckId = this._pcClarity.PCClarityCheckId;
+                                clarityDetail.CheckDate = DateTime.Now;
+                                clarityDetail.Number = (this._pcClarity.Details.Count + 1).ToString();
+
+                                clarityDetail.Left1 = item.Left1;
+                                clarityDetail.Left2 = item.Left2;
+                                clarityDetail.Right1 = item.Right1;
+                                clarityDetail.Right2 = item.Right2;
+                                clarityDetail.ClarityL = item.ClarityL;
+                                clarityDetail.ClarityR = item.ClarityR;
+                                clarityDetail.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+                                clarityDetail.NoteIsPass = item.NoteIsPass;
+
+                                this._pcClarity.Details.Add(clarityDetail);
+                            }
+
+                            this.gridControl1.RefreshDataSource();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "提示", MessageBoxButtons.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("請在新增狀態下複製", "提示", MessageBoxButtons.OK);
+                return;
+            }
+        }
     }
 }

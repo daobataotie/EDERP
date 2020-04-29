@@ -85,6 +85,7 @@ namespace Book.UI.Query
             this.condition.Customer1 = this.newChooseCustomer1.EditValue as Model.Customer;
             this.condition.Customer2 = this.newChooseCustomer2.EditValue as Model.Customer;
             this.condition.ProductState = this.comBoxProductState.SelectedIndex;
+            this.condition.IsClosed = this.checkEdit1.Checked;
         }
 
         private void ConditionProInDepotChooseForm_Load(object sender, EventArgs e)

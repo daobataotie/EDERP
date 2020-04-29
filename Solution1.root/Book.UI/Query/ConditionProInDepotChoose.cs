@@ -108,6 +108,9 @@ namespace Book.UI.Query
         //商品状态
         public int ProductState { get; set; }
 
-
+        /// <summary>
+        /// 只顯示未結案
+        /// </summary>
+        public bool IsClosed { get; set; }
     }
 }

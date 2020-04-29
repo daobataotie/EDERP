@@ -56,15 +56,15 @@ namespace Book.BL
             return accessor.Select(produceInDepot);
         }
 
-        public IList<Book.Model.ProduceInDepotDetail> Select(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Model.Product product, Model.WorkHouse work, Model.Depot mDepot, Model.DepotPosition mDepotPosition, string id1, string id2, string cusxoid, Model.Customer customer1, Model.Customer customer2, int ProductState)
+        public IList<Book.Model.ProduceInDepotDetail> Select(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Model.Product product, Model.WorkHouse work, Model.Depot mDepot, Model.DepotPosition mDepotPosition, string id1, string id2, string cusxoid, Model.Customer customer1, Model.Customer customer2, int ProductState, bool isClosed)
         {
-            return accessor.Select(startPronoteHeader, endPronoteHeader, startDate, endDate, product, work, mDepot, mDepotPosition, id1, id2, cusxoid, customer1, customer2, ProductState);
+            return accessor.Select(startPronoteHeader, endPronoteHeader, startDate, endDate, product, work, mDepot, mDepotPosition, id1, id2, cusxoid, customer1, customer2, ProductState, isClosed);
 
         }
 
-        public IList<Book.Model.ProduceInDepotDetail> SelectMonthCount(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Model.Product product, Model.WorkHouse work, Model.Depot mDepot, Model.DepotPosition mDepotPosition, string id1, string id2, string cusxoid, Model.Customer customer1, Model.Customer customer2, int ProductState)
+        public IList<Book.Model.ProduceInDepotDetail> SelectMonthCount(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Model.Product product, Model.WorkHouse work, Model.Depot mDepot, Model.DepotPosition mDepotPosition, string id1, string id2, string cusxoid, Model.Customer customer1, Model.Customer customer2, int ProductState, bool isClosed)
         {
-            return accessor.SelectMonthCount(startPronoteHeader, endPronoteHeader, startDate, endDate, product, work, mDepot, mDepotPosition, id1, id2, cusxoid, customer1, customer2, ProductState);
+            return accessor.SelectMonthCount(startPronoteHeader, endPronoteHeader, startDate, endDate, product, work, mDepot, mDepotPosition, id1, id2, cusxoid, customer1, customer2, ProductState, isClosed);
 
         }
 
@@ -73,9 +73,9 @@ namespace Book.BL
             return accessor.Select(PronoteHeaderId, startDate, endDate, workhouseId, product, CusXOId);
         }
 
-        public IList<Book.Model.ProduceInDepotDetail> SelectList(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Model.Product product, Model.WorkHouse work, Model.Depot mDepot, Model.DepotPosition mDepotPosition, string id1, string id2, string cusxoid, Model.Customer customer1, Model.Customer customer2, int ProductState)
+        public IList<Book.Model.ProduceInDepotDetail> SelectList(string startPronoteHeader, string endPronoteHeader, DateTime startDate, DateTime endDate, Model.Product product, Model.WorkHouse work, Model.Depot mDepot, Model.DepotPosition mDepotPosition, string id1, string id2, string cusxoid, Model.Customer customer1, Model.Customer customer2, int ProductState, bool isClosed)
         {
-            return accessor.SelectList(startPronoteHeader, endPronoteHeader, startDate, endDate, product, work, mDepot, mDepotPosition, id1, id2, cusxoid, customer1, customer2, ProductState);
+            return accessor.SelectList(startPronoteHeader, endPronoteHeader, startDate, endDate, product, work, mDepot, mDepotPosition, id1, id2, cusxoid, customer1, customer2, ProductState, isClosed);
 
         }
 

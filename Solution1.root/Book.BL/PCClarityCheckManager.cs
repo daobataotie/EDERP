@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -145,7 +146,7 @@ namespace Book.BL
         /// </summary>
         /// <param name="pCClarityCheck"></param>
         /// <returns></returns>
-        public Book.Model.PCClarityCheck Get(Book.Model.PCClarityCheck pCClarityCheck)
+        public Book.Model.PCClarityCheck GetDetail(Book.Model.PCClarityCheck pCClarityCheck)
         {
             Model.PCClarityCheck model = this.Get(pCClarityCheck.PCClarityCheckId);
             if (model != null)
@@ -153,9 +154,22 @@ namespace Book.BL
             return model;
         }
 
+        public Book.Model.PCClarityCheck GetDetail(string pCClarityCheckId)
+        {
+            Model.PCClarityCheck model = this.Get(pCClarityCheckId);
+            if (model != null)
+                model.Details = new BL.PCClarityCheckDetailManager().SelectByPCClarityCheckId(pCClarityCheckId);
+            return model;
+        }
+
         public IList<Model.PCClarityCheck> SelectByDateRage(DateTime StartDate, DateTime EndDate)
         {
             return accessor.SelectByDateRage(StartDate, EndDate);
+        }
+
+        public DataTable SelectByProductName(string productName)
+        {
+            return accessor.SelectByProductName(productName);
         }
     }
 }

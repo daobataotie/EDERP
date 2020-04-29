@@ -39,17 +39,15 @@ namespace Book.UI.Hr.Attendance.Atten
             dateEdit1.EditValue = DateTime.Now;
             InitAnormalySalaryInfo(dateEdit1.DateTime);
         }
+
         private void InitAnormalySalaryInfo(DateTime dutyDate)
         {
             mPrintDs = this._hrManager.SelectHrInfoByStateAndDate(this.dateEdit1.DateTime);
             //根据考勤日期来查询考勤信息
-            this.bindingSource1.DataSource = this._hrManager.SelectHrInfoByStateAndDate(this.dateEdit1.DateTime).Tables[0];
+            this.bindingSource1.DataSource = mPrintDs.Tables[0];
         }
-        /// <summary>
-        /// 转向异常的数据进行编辑
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+       //转向异常的数据进行编辑
         private void repositoryItemHyperLinkEdit1_Click(object sender, EventArgs e)
         {
             string id = ((this.bindingSource1.Current as DataRowView))[Model.HrDailyEmployeeAttendInfo.PRO_HrDailyEmployeeAttendInfoId].ToString();
@@ -67,6 +65,7 @@ namespace Book.UI.Hr.Attendance.Atten
             salaryFrm.ShowDialog();
             this.bindingSource1.DataSource = this._hrManager.SelectHrInfoByStateAndDate(this.dateEdit1.DateTime).Tables[0];
         }
+
         /// <summary>
         /// 自定义列数据显示格式
         /// </summary>
@@ -91,6 +90,7 @@ namespace Book.UI.Hr.Attendance.Atten
             AttenreporCrystalForm acf = new AttenreporCrystalForm(this.mPrintDs, this.dateEdit1.DateTime);
             acf.Show();
         }
+
         //选择时间,绑定数据
         private void dateEdit1_EditValueChanged(object sender, EventArgs e)
         {

@@ -74,6 +74,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
             this._OpticsTest.Employee = BL.V.ActiveOperator.Employee;
             this._OpticsTest.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
+            this._OpticsTest.MachineName = "TOPCON CL-2800";  //默认此机型
         }
 
         protected override void Delete()

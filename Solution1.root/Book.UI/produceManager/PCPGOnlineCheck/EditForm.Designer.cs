@@ -335,7 +335,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_TestQuantity.Properties.Buttons"))))});
             this.cob_TestQuantity.Properties.Items.AddRange(new object[] {
             resources.GetString("cob_TestQuantity.Properties.Items"),
-            resources.GetString("cob_TestQuantity.Properties.Items1")});
+            resources.GetString("cob_TestQuantity.Properties.Items1"),
+            resources.GetString("cob_TestQuantity.Properties.Items2")});
             this.cob_TestQuantity.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cob_TestQuantity.StyleController = this.layoutControl1;
             this.cob_TestQuantity.EditValueChanged += new System.EventHandler(this.cob_TestQuantity_EditValueChanged);

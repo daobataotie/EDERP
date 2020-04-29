@@ -120,6 +120,12 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
+  <data name="barBtnSearch.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="barBtnContionPrint.Caption" xml:space="preserve">
+    <value>条件列印</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -465,6 +471,9 @@
   </data>
   <data name="cob_TestQuantity.Properties.Items1" xml:space="preserve">
     <value>折片12支</value>
+  </data>
+  <data name="cob_TestQuantity.Properties.Items2" xml:space="preserve">
+    <value>折片6支</value>
   </data>
   <data name="cob_TestQuantity.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 21</value>
@@ -1714,12 +1723,6 @@
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>班別：</value>
-  </data>
-  <data name="barBtnSearch.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="barBtnContionPrint.Caption" xml:space="preserve">
-    <value>条件列印</value>
   </data>
   <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
     <value>商品描述：</value>

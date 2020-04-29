@@ -118,11 +118,12 @@ namespace Book.UI.Query
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 13]).Borders.LineStyle = 1;
                 excel.get_Range(excel.Cells[1, 1], excel.Cells[1 + dt.Rows.Count, 13]).HorizontalAlignment = -4108;
 
-                excel.Cells[1, 1] = "客戶名稱";
+                excel.Cells[1, 1] = "出货客戶名稱";
                 excel.Cells[1, 2] = "訂單號碼";
                 excel.Cells[1, 3] = "產品型號";
                 excel.Cells[1, 4] = "數量";
-                excel.Cells[1, 5] = "單位PCS/PRS";
+                //excel.Cells[1, 5] = "單位PCS/PRS";
+                excel.Cells[1, 5] = "單位";
                 excel.Cells[1, 6] = "訂單交貨日";
                 excel.Cells[1, 7] = "盒裝/箱裝";
                 excel.Cells[1, 8] = "淨重KG";
@@ -135,31 +136,6 @@ namespace Book.UI.Query
 
                 int row = 2;
                 double startNumber = 0;
-                //foreach (DataRow dr in dt.Rows)
-                //{
-                //    double boxCount = Math.Ceiling(Convert.ToDouble(dr["BoxCount"]));
-
-                //    dr["BoxNumber"] = string.Format("{0}-{1}", startNumber + 1, startNumber + boxCount);
-
-                //    startNumber += boxCount;
-
-                //    excel.Cells[row, 1] = dr["CustomerFullName"] == null ? "" : dr["CustomerFullName"].ToString();
-                //    excel.Cells[row, 2] = dr["CustomerInvoiceXOId"] == null ? "" : dr["CustomerInvoiceXOId"].ToString();
-                //    excel.Cells[row, 3] = dr["CustomerProductName"] == null ? "" : dr["CustomerProductName"].ToString();
-                //    excel.Cells[row, 4] = dr["InvoiceXODetailQuantity"] == null ? "" : dr["InvoiceXODetailQuantity"].ToString();
-                //    excel.Cells[row, 5] = "PCS/PRS";
-                //    excel.Cells[row, 6] = dr["InvoiceYjrq"] == null ? "" : dr["InvoiceYjrq"].ToString();
-                //    excel.Cells[row, 7] = dr["Guige"] == null ? "" : dr["Guige"].ToString();
-                //    excel.Cells[row, 8] = dr["NetWeight"] == null ? "" : dr["NetWeight"].ToString();
-                //    excel.Cells[row, 9] = dr["GrossWeight"] == null ? "" : dr["GrossWeight"].ToString();
-                //    excel.Cells[row, 10] = dr["Volume"] == null ? "" : dr["Volume"].ToString();
-                //    excel.Cells[row, 11] = dr["BoxCount"] == null ? "" : dr["BoxCount"].ToString();
-                //    excel.Cells[row, 12] = dr["BoxNumber"] == null ? "" : dr["BoxNumber"].ToString();
-                //    excel.Cells[row, 13] = dr["Workhousename"] == null ? "" : dr["Workhousename"].ToString();
-
-                //    row++;
-                //}
-
 
                 excel.get_Range(excel.Cells[2, 2], excel.Cells[1 + dt.Rows.Count, 2]).NumberFormatLocal = "@";
 
@@ -178,7 +154,7 @@ namespace Book.UI.Query
                     excel.Cells[row, 2] = dt.Rows[i]["CustomerInvoiceXOId"] == null ? "" : dt.Rows[i]["CustomerInvoiceXOId"].ToString();
                     excel.Cells[row, 3] = dt.Rows[i]["CustomerProductName"] == null ? "" : dt.Rows[i]["CustomerProductName"].ToString();
                     excel.Cells[row, 4] = dt.Rows[i]["InvoiceXODetailQuantity"] == null ? "" : dt.Rows[i]["InvoiceXODetailQuantity"].ToString();
-                    excel.Cells[row, 5] = "PCS/PRS";
+                    excel.Cells[row, 5] = dt.Rows[i]["SellUnit"] == null ? "" : dt.Rows[i]["SellUnit"].ToString();
                     excel.Cells[row, 6] = dt.Rows[i]["InvoiceYjrq"] == null ? "" : dt.Rows[i]["InvoiceYjrq"].ToString();
                     excel.Cells[row, 7] = dt.Rows[i]["Guige"] == null ? "" : dt.Rows[i]["Guige"].ToString();
                     excel.Cells[row, 8] = dt.Rows[i]["NetWeight"] == null ? "" : dt.Rows[i]["NetWeight"].ToString();

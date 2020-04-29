@@ -4403,6 +4403,9 @@
     <EmbeddedResource Include="produceManager\PCClarityCheck\ListForm.zh-CHT.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCClarityCheck\CopyForm.resx">
+      <DependentUpon>CopyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCClarityCheck\RO.resx">
       <DependentUpon>RO.cs</DependentUpon>
     </EmbeddedResource>
@@ -11889,6 +11892,12 @@
     </Compile>
     <Compile Include="produceManager\PCClarityCheck\ListForm.Designer.cs">
       <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCClarityCheck\CopyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCClarityCheck\CopyForm.Designer.cs">
+      <DependentUpon>CopyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCClarityCheck\RO.cs">
       <SubType>Component</SubType>
