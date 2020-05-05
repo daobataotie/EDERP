@@ -312,10 +312,10 @@ namespace Book.UI.produceManager.MRSHeader
                             this.gridColumnSupplierId.Visible = false;
                             this.simpleButtonPronoteHeader.Enabled = true;
                             this.simplePronoteHeaderQuery.Enabled = true;
-
+                            this.gridColumn13.Visible = true;
                         }
 
-                        if (this.mrsheader.SourceType == "1")
+                        else if (this.mrsheader.SourceType == "1")
                         {
                             this.sbtn_buitInvoice.Enabled = true;
                             this.simpleButton_ViewInvoiceCO.Enabled = true;
@@ -323,9 +323,10 @@ namespace Book.UI.produceManager.MRSHeader
                             this.simpleButtonOther.Enabled = false;
                             //this.sbtn_buitProg.Enabled = false;
                             this.gridColumnSupplierId.Visible = true;
+                            this.gridColumn13.Visible = false;
                         }
 
-                        if (this.mrsheader.SourceType == "3" || this.mrsheader.SourceType == "6")
+                        else if (this.mrsheader.SourceType == "3" || this.mrsheader.SourceType == "6")
                         {
                             this.simpleButtonOther.Enabled = true;
                             this.simpleButton_ViewTrust.Enabled = true;
@@ -333,6 +334,7 @@ namespace Book.UI.produceManager.MRSHeader
                             this.sbtn_buitInvoice.Enabled = false;
                             //this.sbtn_buitProg.Enabled = false;
                             this.gridColumnSupplierId.Visible = true;
+                            this.gridColumn13.Visible = false;
                         }
                     }
                     else
@@ -345,10 +347,10 @@ namespace Book.UI.produceManager.MRSHeader
                             this.gridColumnSupplierId.Visible = false;
                             this.simpleButtonPronoteHeader.Enabled = true;
                             this.simplePronoteHeaderQuery.Enabled = true;
-
+                            this.gridColumn13.Visible = true;
                         }
 
-                        if (this.mrsheader.SourceType == "1")
+                        else if (this.mrsheader.SourceType == "1")
                         {
                             //sbtn_buitInvoice.Text = "生成采購單";
                             this.sbtn_buitInvoice.Enabled = true;
@@ -357,9 +359,10 @@ namespace Book.UI.produceManager.MRSHeader
                             this.simpleButtonOther.Enabled = false;
                             //this.sbtn_buitProg.Enabled = false;
                             this.gridColumnSupplierId.Visible = true;
+                            this.gridColumn13.Visible = false;
                         }
 
-                        if (this.mrsheader.SourceType == "3" || this.mrsheader.SourceType == "6")
+                        else if (this.mrsheader.SourceType == "3" || this.mrsheader.SourceType == "6")
                         {
                             //simpleButtonOther.Text = "形成委外合同";
                             this.simpleButtonOther.Enabled = true;
@@ -368,6 +371,7 @@ namespace Book.UI.produceManager.MRSHeader
                             this.sbtn_buitInvoice.Enabled = false;
                             // this.sbtn_buitProg.Enabled = false;
                             this.gridColumnSupplierId.Visible = true;
+                            this.gridColumn13.Visible = false;
                         }
                     }
 
@@ -1818,6 +1822,23 @@ namespace Book.UI.produceManager.MRSHeader
 
                 }
                 this.gridControl1.RefreshDataSource();
+            }
+        }
+
+        //加工單-對應的生產入庫，未入庫數量
+        private void repositoryItemHyperLinkEdit2_Click(object sender, EventArgs e)
+        {
+            Model.MRSdetails m_detail = this.bindingSourceDetails.Current as Model.MRSdetails;
+            if (m_detail != null)
+            {
+                if (m_detail.ProductId != null)
+                {
+                    double sumProduceQuantity = new BL.ProduceInDepotDetailManager().SelectSumProduceQuantity(m_detail.MRSdetailsId);
+                    double diff = m_detail.MRSdetailssum.HasValue ? m_detail.MRSdetailssum.Value - sumProduceQuantity : 0;
+                    diff = diff < 0 ? 0 : diff;
+
+                    MessageBox.Show(diff.ToString(), "未入庫數量", MessageBoxButtons.OK);
+                }
             }
         }
     }

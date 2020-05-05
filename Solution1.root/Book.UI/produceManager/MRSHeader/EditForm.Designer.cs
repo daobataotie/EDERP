@@ -130,6 +130,8 @@
             this.barBtnSomeParmSearch = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemHyperLinkEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -192,6 +194,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -290,7 +293,8 @@
             this.repositoryItemDateEdit1,
             this.repositoryItemLookUpEdit2,
             this.repositoryItemLookUpEdit3,
-            this.repositoryItemHyperLinkEdit1});
+            this.repositoryItemHyperLinkEdit1,
+            this.repositoryItemHyperLinkEdit2});
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -321,7 +325,8 @@
             this.gridColumn1,
             this.gridColumn7,
             this.gridColumn10,
-            this.gridColumn12});
+            this.gridColumn12,
+            this.gridColumn13});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -1122,6 +1127,18 @@
             this.layoutControlItem25.TextSize = new System.Drawing.Size(60, 14);
             this.layoutControlItem25.TextToControlDistance = 5;
             // 
+            // gridColumn13
+            // 
+            resources.ApplyResources(this.gridColumn13, "gridColumn13");
+            this.gridColumn13.ColumnEdit = this.repositoryItemHyperLinkEdit2;
+            this.gridColumn13.Name = "gridColumn13";
+            // 
+            // repositoryItemHyperLinkEdit2
+            // 
+            resources.ApplyResources(this.repositoryItemHyperLinkEdit2, "repositoryItemHyperLinkEdit2");
+            this.repositoryItemHyperLinkEdit2.Name = "repositoryItemHyperLinkEdit2";
+            this.repositoryItemHyperLinkEdit2.Click += new System.EventHandler(this.repositoryItemHyperLinkEdit2_Click);
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1192,6 +1209,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1298,5 +1316,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraEditors.SimpleButton btn_ChangeInvoiceState;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit2;
     }
 }

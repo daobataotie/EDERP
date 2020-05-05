@@ -60,6 +60,8 @@ namespace Book.DA
         string SelectByInvoiceCusID(string ID);
 
         string SelectCustomerProductNameByPronoteHeaderId(string pronoteHeaderId);
+
+        double SelectSumProduceQuantity(string mRSdetailsId);
     }
 }
 

@@ -180,6 +180,11 @@ namespace Book.BL
         {
             return accessor.SelectCustomerProductNameByPronoteHeaderId(pronoteHeaderId);
         }
+
+        public double SelectSumProduceQuantity(string mRSdetailsId)
+        {
+            return accessor.SelectSumProduceQuantity(mRSdetailsId);
+        }
     }
 }
 
