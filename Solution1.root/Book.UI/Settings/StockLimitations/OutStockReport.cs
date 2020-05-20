@@ -50,6 +50,9 @@ namespace Book.UI.Settings.StockLimitations
             {
                 this.xrLabelProduceInDepotId.Text = DepotOut.Depot.DepotName;
             }
+            if (this.DepotOut.LingLiaoEmployee != null)
+                this.lbl_LingLiaoEmployee.Text = this.DepotOut.LingLiaoEmployee.ToString();
+
             Model.InvoiceXO InvoiceXO = null;
 
             if (this.DepotOut.SourceType == "îIÁÏ†Î")

@@ -232,6 +232,7 @@ namespace Book.BL
                 invoiceCODetailAccessor.Insert(detail);
             }
         }
+
         private void _Update(Model.InvoiceCO invoice)
         {
 

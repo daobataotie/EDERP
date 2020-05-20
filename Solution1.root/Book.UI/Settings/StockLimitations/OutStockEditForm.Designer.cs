@@ -102,6 +102,8 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.ncc_LingLiaoEmployee = new Book.UI.Invoices.NewChooseContorl();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -147,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -179,6 +182,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.ncc_LingLiaoEmployee);
             this.layoutControl1.Controls.Add(this.txt_ParentProduct);
             this.layoutControl1.Controls.Add(this.newChooseContorlAuditEmp);
             this.layoutControl1.Controls.Add(this.txt_AuditState);
@@ -579,7 +583,8 @@
             this.layoutControlItem14,
             this.layoutControlItem15,
             this.emptySpaceItem2,
-            this.layoutControlItem16});
+            this.layoutControlItem16,
+            this.layoutControlItem17});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1000, 467);
@@ -675,7 +680,7 @@
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(274, 24);
+            this.layoutControlItem8.Size = new System.Drawing.Size(276, 24);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(84, 14);
             // 
             // layoutControlItem10
@@ -702,7 +707,7 @@
             // 
             this.layoutControlItem12.Control = this.newChooseInvoiceEmployee0;
             resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
-            this.layoutControlItem12.Location = new System.Drawing.Point(274, 50);
+            this.layoutControlItem12.Location = new System.Drawing.Point(276, 50);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(329, 24);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(84, 14);
@@ -711,9 +716,9 @@
             // 
             this.layoutControlItem13.Control = this.newChooseWorkHouse;
             resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
-            this.layoutControlItem13.Location = new System.Drawing.Point(603, 50);
+            this.layoutControlItem13.Location = new System.Drawing.Point(605, 50);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(377, 24);
+            this.layoutControlItem13.Size = new System.Drawing.Size(375, 24);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(84, 14);
             // 
             // layoutControlItem14
@@ -746,9 +751,9 @@
             // 
             this.layoutControlItem16.Control = this.txt_ParentProduct;
             resources.ApplyResources(this.layoutControlItem16, "layoutControlItem16");
-            this.layoutControlItem16.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem16.Location = new System.Drawing.Point(276, 74);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(980, 25);
+            this.layoutControlItem16.Size = new System.Drawing.Size(704, 25);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(84, 14);
             // 
             // barButtonItem1
@@ -789,6 +794,21 @@
             this.barButtonItem5.ImageIndex = 3;
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            // 
+            // ncc_LingLiaoEmployee
+            // 
+            this.ncc_LingLiaoEmployee.EditValue = null;
+            resources.ApplyResources(this.ncc_LingLiaoEmployee, "ncc_LingLiaoEmployee");
+            this.ncc_LingLiaoEmployee.Name = "ncc_LingLiaoEmployee";
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.ncc_LingLiaoEmployee;
+            resources.ApplyResources(this.layoutControlItem17, "layoutControlItem17");
+            this.layoutControlItem17.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(276, 25);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(84, 14);
             // 
             // OutStockEditForm
             // 
@@ -842,6 +862,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -920,5 +941,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraEditors.TextEdit txt_ParentProduct;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private Book.UI.Invoices.NewChooseContorl ncc_LingLiaoEmployee;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
     }
 }

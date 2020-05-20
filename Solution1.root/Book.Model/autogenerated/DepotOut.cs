@@ -75,6 +75,8 @@ namespace Book.Model
 
         private string _parentProduct;
 
+        private string _lingLiaoEmployeeId;
+
         private Employee _auditEmp;
 		
 		/// <summary>
@@ -89,6 +91,8 @@ namespace Book.Model
 		/// 库房
 		/// </summary>
 		private Depot _depot;
+
+        private Employee _lingLiaoEmployee;
 		 
 		#endregion
 		
@@ -290,6 +294,12 @@ namespace Book.Model
             set { _parentProduct = value; }
         }
 
+        public string LingLiaoEmployeeId
+        {
+            get { return _lingLiaoEmployeeId; }
+            set { _lingLiaoEmployeeId = value; }
+        }
+
         public virtual Employee AuditEmp
         {
             get
@@ -346,8 +356,15 @@ namespace Book.Model
 			{
 				this._depot = value;
 			}
-			
-		}
+
+        }
+
+        public Employee LingLiaoEmployee
+        {
+            get { return _lingLiaoEmployee; }
+            set { _lingLiaoEmployee = value; }
+        }
+
 		/// <summary>
 		/// 主键
 		/// </summary>
@@ -409,6 +426,7 @@ namespace Book.Model
 
         public readonly static string PRO_ParentProduct = "ParentProduct";
 
+        public readonly static string PRO_LingLiaoEmployeeId = "LingLiaoEmployeeId";
 		#endregion
 	}
 }

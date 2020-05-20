@@ -181,9 +181,14 @@ namespace Book.BL
             return accessor.SelectCustomerProductNameByPronoteHeaderId(pronoteHeaderId);
         }
 
-        public double SelectSumProduceQuantity(string mRSdetailsId)
+        /// <summary>
+        /// 查询当前最后一道工序的合计合格数量
+        /// </summary>
+        /// <param name="mRSdetailsId"></param>
+        /// <returns></returns>
+        public double SelectHeJiCheckOutSum(string mRSdetailsId)
         {
-            return accessor.SelectSumProduceQuantity(mRSdetailsId);
+            return accessor.SelectHeJiCheckOutSum(mRSdetailsId);
         }
     }
 }

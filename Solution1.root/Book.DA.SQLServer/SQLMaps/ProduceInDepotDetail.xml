@@ -148,9 +148,10 @@
       select CustomerProductName from Product where ProductId=(select ProductId from MPSdetails where MPSdetailsId =(select MPSdetailsId from MRSdetails where MRSdetailsId = (select MRSdetailsId from PronoteHeader where PronoteHeaderID=#value#)))
       ]]>
     </select>
-    <select id="SelectSumProduceQuantity" resultClass ="double" parameterClass="string">
+    <select id="SelectHeJiCheckOutSum" resultClass ="double" parameterClass="string">
       <![CDATA[
-      select ISNULL(SUM(ProduceQuantity),0) from ProduceInDepotDetail where PronoteHeaderId=(select PronoteHeaderId from PronoteHeader where MRSdetailsId=#MRSdetailsId#) and DepotPositionId is not null
+     select top 1 ISNULL(HeJiCheckOutSum,0) from ProduceInDepotDetail pid 
+ where PronoteHeaderId=(select PronoteHeaderId from PronoteHeader where MRSdetailsId=#MRSdetailsId#) order by ProduceInDepotId desc
       ]]>
     </select>
   

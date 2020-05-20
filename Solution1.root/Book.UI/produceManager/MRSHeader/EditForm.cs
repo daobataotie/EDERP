@@ -1833,7 +1833,7 @@ namespace Book.UI.produceManager.MRSHeader
             {
                 if (m_detail.ProductId != null)
                 {
-                    double sumProduceQuantity = new BL.ProduceInDepotDetailManager().SelectSumProduceQuantity(m_detail.MRSdetailsId);
+                    double sumProduceQuantity = new BL.ProduceInDepotDetailManager().SelectHeJiCheckOutSum(m_detail.MRSdetailsId);
                     double diff = m_detail.MRSdetailssum.HasValue ? m_detail.MRSdetailssum.Value - sumProduceQuantity : 0;
                     diff = diff < 0 ? 0 : diff;
 

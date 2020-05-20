@@ -45,11 +45,11 @@ namespace Book.BL
                             else
                                 mrsDal.DetailsFlag = 0;
                         }
-                        //修改派单描述
+                        //修改排单描述
                         if (mrsDal.DetailsFlag != 2)
                             mrsDal.ArrangeDesc = string.Empty;
                         new BL.MRSdetailsManager().Update(mrsDal);
-                        UpdateMRSHeaderFlag(mrsDal.MRSHeader);
+                        new MRSHeaderManager().UpdateMRSHeaderFlag(mrsDal.MRSHeader);
                     }
                 }
                 //
@@ -106,8 +106,6 @@ namespace Book.BL
 
         public void InsertWithOutTrans(Model.PronoteHeader pronoteHeader)
         {
-
-
             pronoteHeader.InsertTime = DateTime.Now;
             pronoteHeader.UpdateTime = DateTime.Now;
             TiGuiExists(pronoteHeader);
@@ -155,7 +153,7 @@ namespace Book.BL
                 if (mrsDal.DetailsFlag == 2)
                     mrsDal.ArrangeDesc = "已經排單";
                 mRSdetailsManager.Update(mrsDal);
-                UpdateMRSHeaderFlag(mrsDal.MRSHeader);
+                new MRSHeaderManager().UpdateMRSHeaderFlag(mrsDal.MRSHeader);
             }
 
             foreach (Model.PronotedetailsMaterial proMaterial in pronoteHeader.DetailsMaterial)
@@ -186,26 +184,6 @@ namespace Book.BL
                         ProceduresMachineAccessor.Insert(item);
                 }
             }
-        }
-
-        public void UpdateMRSHeaderFlag(Model.MRSHeader mRSHeader)
-        {
-            int flag = 0;
-            //IList<Model.MRSdetails> list = mRSdetailsManager.Select(mRSHeader);
-            IList<Model.MRSdetails> list = mRSdetailsManager.SelectBySqlMap(mRSHeader);
-
-
-            foreach (Model.MRSdetails detail in list)
-            {
-                flag += detail.DetailsFlag == null ? 0 : detail.DetailsFlag.Value;
-            }
-            if (flag == 0)
-                mRSHeader.InvoiceFlag = 0;
-            else if (flag < list.Count * 2)
-                mRSHeader.InvoiceFlag = 1;
-            else if (flag == list.Count * 2)
-                mRSHeader.InvoiceFlag = 2;
-            new BL.MRSHeaderManager().UpdateHeader(mRSHeader);
         }
 
         public void Update(Model.PronoteHeader pronoteHeader)
@@ -271,7 +249,7 @@ namespace Book.BL
                         if (mrsDal.DetailsFlag == 2)
                             mrsDal.ArrangeDesc = "已經排單";
                         mRSdetailsManager.Update(mrsDal);
-                        UpdateMRSHeaderFlag(mrsDal.MRSHeader);
+                        new MRSHeaderManager().UpdateMRSHeaderFlag(mrsDal.MRSHeader);
                     }
                     //foreach (Model.Pronotedetails pronotedetails in pronoteHeader.Details)
                     //{

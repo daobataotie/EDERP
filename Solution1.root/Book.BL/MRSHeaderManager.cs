@@ -18,6 +18,7 @@ namespace Book.BL
     {
         private static readonly DA.IMRSdetailsAccessor MRSdetailsAccessor = (DA.IMRSdetailsAccessor)Accessors.Get("MRSdetailsAccessor");
         private readonly DA.IProductAccessor ProductAccessor = (DA.IProductAccessor)Accessors.Get("ProductAccessor");
+        private MRSdetailsManager mRSdetailsManager = new MRSdetailsManager();
         byte[] pic = new byte[] { };
         /// <summary>
         /// Delete MRSHeader by primary key.
@@ -255,6 +256,27 @@ namespace Book.BL
         public string SelectByInvoiceCusIdAndType(string CustomerInvoiceXOId, string SourceType)
         {
             return accessor.SelectByInvoiceCusIdAndType(CustomerInvoiceXOId, SourceType);
+        }
+
+        public void UpdateMRSHeaderFlag(Model.MRSHeader mRSHeader)
+        {
+            int flag = 0;
+            //IList<Model.MRSdetails> list = mRSdetailsManager.Select(mRSHeader);
+            IList<Model.MRSdetails> list = mRSdetailsManager.SelectBySqlMap(mRSHeader);
+
+
+            foreach (Model.MRSdetails detail in list)
+            {
+                flag += detail.DetailsFlag == null ? 0 : detail.DetailsFlag.Value;
+            }
+            if (flag == 0)
+                mRSHeader.InvoiceFlag = 0;
+            else if (flag < list.Count * 2)
+                mRSHeader.InvoiceFlag = 1;
+            else if (flag == list.Count * 2)
+                mRSHeader.InvoiceFlag = 2;
+
+            UpdateHeader(mRSHeader);
         }
     }
 }

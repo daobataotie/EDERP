@@ -1778,9 +1778,9 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<string>("ProduceInDepotDetail.SelectCustomerProductNameByPronoteHeaderId", pronoteHeaderId);
         }
 
-        public double SelectSumProduceQuantity(string mRSdetailsId)
+        public double SelectHeJiCheckOutSum(string mRSdetailsId)
         {
-            return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.SelectSumProduceQuantity", mRSdetailsId);
+            return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.SelectHeJiCheckOutSum", mRSdetailsId);
         }
     }
 }

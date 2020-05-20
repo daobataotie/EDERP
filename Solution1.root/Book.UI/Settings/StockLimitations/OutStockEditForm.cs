@@ -53,6 +53,7 @@ namespace Book.UI.Settings.StockLimitations
             this.newChooseContorlEmployee.Choose = new ChooseEmployee();
             this.newChooseInvoiceEmployee0.Choose = new ChooseEmployee();
             this.newChooseContorlAuditEmp.Choose = new ChooseEmployee();
+            this.ncc_LingLiaoEmployee.Choose = new ChooseEmployee();
             this.newChooseWorkHouse.Choose = new Settings.ProduceManager.Workhouselog.ChooseWorkHouse();
             IList<Model.Depot> list = this._depotManager.Select();
             this.bindingSourceDepot.DataSource = list;
@@ -142,6 +143,8 @@ namespace Book.UI.Settings.StockLimitations
             //}
             this._depotOut.ParentProduct = this.txt_ParentProduct.Text;
 
+            this._depotOut.LingLiaoEmployeeId = this.ncc_LingLiaoEmployee.EditValue == null ? null : (this.ncc_LingLiaoEmployee.EditValue as Model.Employee).EmployeeId;
+
             if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
                 return;
 
@@ -189,6 +192,7 @@ namespace Book.UI.Settings.StockLimitations
             this.newChooseContorlEmployee.EditValue = this._depotOut.Employee;
             this.textBoxSourceType.Text = this._depotOut.SourceType;
             this.textBoxInvioiceId.Text = this._depotOut.InvioiceId;
+            this.ncc_LingLiaoEmployee.EditValue = this._depotOut.LingLiaoEmployee;
 
             if (this._depotOut.SourceType == "領料單")
             {

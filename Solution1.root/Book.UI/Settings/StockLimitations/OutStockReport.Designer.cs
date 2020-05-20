@@ -50,6 +50,7 @@ namespace Book.UI.Settings.StockLimitations
             this.xrLabelDataName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelPrintDate = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
             this.lblPiHao = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblXOCustomer = new DevExpress.XtraReports.UI.XRLabel();
@@ -91,7 +92,8 @@ namespace Book.UI.Settings.StockLimitations
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_LingLiaoEmployee = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -278,6 +280,16 @@ namespace Book.UI.Settings.StockLimitations
             this.xrLabelPrintDate});
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
+            // 
+            // lbl_JIS
+            // 
+            this.lbl_JIS.CanGrow = false;
+            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
+            this.lbl_JIS.Name = "lbl_JIS";
+            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_JIS.StylePriority.UseFont = false;
+            this.lbl_JIS.StylePriority.UseForeColor = false;
+            this.lbl_JIS.StylePriority.UseTextAlignment = false;
             // 
             // lblPiHao
             // 
@@ -561,6 +573,8 @@ namespace Book.UI.Settings.StockLimitations
             // PageFooter
             // 
             this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel14,
+            this.lbl_LingLiaoEmployee,
             this.xrPageInfo1,
             this.xrLabel12,
             this.xrLabelEmployeeId,
@@ -576,15 +590,19 @@ namespace Book.UI.Settings.StockLimitations
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrPageInfo1.StylePriority.UseTextAlignment = false;
             // 
-            // lbl_JIS
+            // lbl_LingLiaoEmployee
             // 
-            this.lbl_JIS.CanGrow = false;
-            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
-            this.lbl_JIS.Name = "lbl_JIS";
-            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_JIS.StylePriority.UseFont = false;
-            this.lbl_JIS.StylePriority.UseForeColor = false;
-            this.lbl_JIS.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.lbl_LingLiaoEmployee, "lbl_LingLiaoEmployee");
+            this.lbl_LingLiaoEmployee.Name = "lbl_LingLiaoEmployee";
+            this.lbl_LingLiaoEmployee.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_LingLiaoEmployee.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel14
+            // 
+            resources.ApplyResources(this.xrLabel14, "xrLabel14");
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel14.StylePriority.UseTextAlignment = false;
             // 
             // OutStockReport
             // 
@@ -674,5 +692,7 @@ namespace Book.UI.Settings.StockLimitations
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel txt_ParentProduct;
         private DevExpress.XtraReports.UI.XRLabel lbl_JIS;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel14;
+        private DevExpress.XtraReports.UI.XRLabel lbl_LingLiaoEmployee;
     }
 }
