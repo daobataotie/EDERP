@@ -550,6 +550,9 @@ namespace Book.UI.produceManager.ProduceInDepot
                 case "ColCusPro":
                     e.DisplayText = product.CustomerProductName;
                     break;
+                case "colInvoiceXOCusId":
+                    e.DisplayText = invoiceXOManager.SelectCusXOIdByPronoteHeaderId(details[e.ListSourceRowIndex].PronoteHeaderId);
+                    break;
             }
         }
 
@@ -746,6 +749,7 @@ namespace Book.UI.produceManager.ProduceInDepot
                         }
                     }
                 }
+
                 this.gridControl1.RefreshDataSource();
             }
         }

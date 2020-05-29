@@ -69,6 +69,7 @@
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colInvoiceXOCusId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox3 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ColProduceInDepotPrice = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -452,6 +453,7 @@
             this.gridColumn45,
             this.gridColumn44,
             this.gridColumn6,
+            this.colInvoiceXOCusId,
             this.gridColumn12,
             this.ColProduceInDepotPrice,
             this.ColProduceQuantity,
@@ -639,6 +641,11 @@
             this.gridColumn6.FieldName = "PronoteHeaderId";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
+            // 
+            // colInvoiceXOCusId
+            // 
+            resources.ApplyResources(this.colInvoiceXOCusId, "colInvoiceXOCusId");
+            this.colInvoiceXOCusId.Name = "colInvoiceXOCusId";
             // 
             // gridColumn12
             // 
@@ -1641,5 +1648,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
         private DevExpress.XtraBars.BarButtonItem bar_ExportExcel;
+        private DevExpress.XtraGrid.Columns.GridColumn colInvoiceXOCusId;
     }
 }
