@@ -27,12 +27,12 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             lblTestEmployee.Text = opticsTest.Employee.ToString();
             lblPrintTime.Text += DateTime.Now.ToString("yyyy-MM-dd");
             //lblRemarks.Text=opticsTest.
+            lblLeftS.Text = opticsTest.LattrS.Value.ToString("F2");
             lblLeftA.Text = opticsTest.LattrA.Value.ToString("F2");
             lblLeftC.Text = opticsTest.LattrC.Value.ToString("F2");
             lblLeftDOWN.Text = opticsTest.LeftVerticalJudge;
             lblLeftIN.Text = opticsTest.LinPSM.Value.ToString("F2");
             lblLeftOUT.Text = opticsTest.LeftLevelJudge;
-            lblLeftS.Text = opticsTest.LattrS.Value.ToString("F2");
             lblLeftUP.Text = opticsTest.LupPSM.Value.ToString("F2");
 
             lblRightS.Text = opticsTest.RattrS.Value.ToString("F2");

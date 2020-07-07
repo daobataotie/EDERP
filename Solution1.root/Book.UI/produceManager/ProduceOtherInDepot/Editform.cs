@@ -631,12 +631,19 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             if (e.ListSourceRowIndex < 0) return;
             IList<Model.ProduceOtherInDepotDetail> details = this.bindingSourceDetails.DataSource as IList<Model.ProduceOtherInDepotDetail>;
             if (details == null || details.Count < 1) return;
-            Model.Product detail = details[e.ListSourceRowIndex].Product;
+
+            Model.ProduceOtherInDepotDetail detail = details[e.ListSourceRowIndex];
             switch (e.Column.Name)
             {
                 case "ColProductId":
                     if (detail == null) return;
-                    e.DisplayText = string.IsNullOrEmpty(detail.Id) ? "" : detail.Id;
+                    e.DisplayText = string.IsNullOrEmpty(detail.Product.Id) ? "" : detail.Product.Id;
+                    break;
+                case "gridColumn15":    //未到货数量，订单数量-截止到该入库单所有已进货数量
+                    double hasInQty = produceOtherInDepotDetailManager.SelectHasInQty(detail.ProduceOtherCompactDetailId, detail.ProduceOtherInDepotId);
+                    double noInQty = detail.OrderQuantity.Value - hasInQty;
+
+                    e.DisplayText = (noInQty < 0 ? 0 : noInQty).ToString();
                     break;
             }
         }

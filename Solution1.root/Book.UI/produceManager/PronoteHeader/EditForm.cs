@@ -1369,6 +1369,7 @@ namespace Book.UI.produceManager.PronoteHeader
 
         }
 
+        //查询
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 

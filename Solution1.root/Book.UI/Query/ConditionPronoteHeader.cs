@@ -70,5 +70,7 @@ namespace Book.UI.Query
             get { return _customerProductName; }
             set { _customerProductName = value; }
         }
+
+        public string WorkHouseId { get; set; }
     }
 }

@@ -487,5 +487,45 @@ namespace Book.UI.produceManager.PCExportReportANSI
             return "PCDataInput" + "," + this._PCDataInput.PCDataInputId;
         }
 
+
+        //光學機複製
+        private void btn_CopyGXJ_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txt_InvoiceCusId.Text))
+                return;
+
+            CopyOpticsTest f = new CopyOpticsTest(this.txt_InvoiceCusId.Text);
+            if (f.ShowDialog() == DialogResult.OK && f.List != null && f.List.Count > 0)
+            {
+                foreach (var item in f.List)
+                {
+                    Model.PCOpticalMachine model = new Book.Model.PCOpticalMachine();
+                    model.PCOpticalMachineId = Guid.NewGuid().ToString();
+
+                    model.LeftA = Convert.ToDecimal(item.LattrA);
+                    model.LeftC = Convert.ToDecimal(item.LattrC);
+                    model.LeftS = Convert.ToDecimal(item.LattrS);
+                    model.LeftLevelNum = Convert.ToDecimal(item.LinPSM);
+                    model.LeftLevelJudge = item.LeftLevelJudge;
+                    model.LeftVerticalNum = Convert.ToDecimal(item.LupPSM);
+                    model.LeftVerticalJudge = item.LeftVerticalJudge;
+
+                    model.RightA = Convert.ToDecimal(item.RattrA);
+                    model.RightC = Convert.ToDecimal(item.RattrC);
+                    model.RightS = Convert.ToDecimal(item.RattrS);
+                    model.RightLevelNum = Convert.ToDecimal(item.RinPSM);
+                    model.RightLevelJudge = item.RightLevelJudge;
+                    model.RightVerticalNum = Convert.ToDecimal(item.RupPSM);
+                    model.RightVerticalJudge = item.RightVerticalJudge;
+
+                    model.Condition = item.Condition;
+                    model.NoId = (this._PCDataInput.PCOpticalMachineList.Count + 1).ToString();
+
+                    this._PCDataInput.PCOpticalMachineList.Add(model);
+                    this.gridControl1.RefreshDataSource();
+                }
+            }
+        }
+
     }
 }

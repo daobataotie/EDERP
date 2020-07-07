@@ -190,6 +190,16 @@ namespace Book.BL
         {
             return accessor.SelectHeJiCheckOutSum(mRSdetailsId);
         }
+
+        /// <summary>
+        /// 查询商品对应的所有未结案订单对应的 订单数量-合格数量(射出部门的)
+        /// </summary>
+        /// <param name="productId">商品Id</param>
+        /// <returns></returns>
+        public double SelectAllNotInStockByProduct(string productId)
+        {
+            return accessor.SelectAllNotInStockByProduct(productId);
+        }
     }
 }
 

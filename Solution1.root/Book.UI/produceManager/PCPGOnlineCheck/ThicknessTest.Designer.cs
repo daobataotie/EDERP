@@ -64,6 +64,10 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btn_Add = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btn_Remove = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -86,6 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -138,6 +144,8 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btn_Remove);
+            this.layoutControl1.Controls.Add(this.btn_Add);
             this.layoutControl1.Controls.Add(this.spinPerspectiverateR);
             this.layoutControl1.Controls.Add(this.txtThicknessDescript);
             this.layoutControl1.Controls.Add(this.spinPerspectiverateL);
@@ -212,7 +220,6 @@
             resources.ApplyResources(this.gridColumn1, "gridColumn1");
             this.gridColumn1.FieldName = "HouduBiao";
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
             // 
             // gridColumn2
             // 
@@ -337,7 +344,9 @@
             this.layoutControlItem6,
             this.layoutControlItem3,
             this.emptySpaceItem1,
-            this.layoutControlItem7});
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(800, 363);
@@ -377,7 +386,7 @@
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(780, 260);
+            this.layoutControlItem5.Size = new System.Drawing.Size(780, 258);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextToControlDistance = 0;
             this.layoutControlItem5.TextVisible = false;
@@ -397,17 +406,17 @@
             // 
             this.layoutControlItem3.Control = this.txtThicknessDescript;
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 285);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 309);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(390, 58);
+            this.layoutControlItem3.Size = new System.Drawing.Size(390, 34);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(84, 14);
             // 
             // emptySpaceItem1
             // 
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
-            this.emptySpaceItem1.Location = new System.Drawing.Point(390, 285);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(390, 309);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(390, 34);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(390, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
@@ -420,6 +429,42 @@
             this.layoutControlItem7.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(50, 20);
             this.layoutControlItem7.TextToControlDistance = 5;
+            // 
+            // btn_Add
+            // 
+            resources.ApplyResources(this.btn_Add, "btn_Add");
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.StyleController = this.layoutControl1;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.btn_Add;
+            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 283);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(390, 26);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextToControlDistance = 0;
+            this.layoutControlItem8.TextVisible = false;
+            // 
+            // btn_Remove
+            // 
+            resources.ApplyResources(this.btn_Remove, "btn_Remove");
+            this.btn_Remove.Name = "btn_Remove";
+            this.btn_Remove.StyleController = this.layoutControl1;
+            this.btn_Remove.Click += new System.EventHandler(this.btn_Remove_Click);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.btn_Remove;
+            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
+            this.layoutControlItem9.Location = new System.Drawing.Point(390, 283);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(390, 26);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextToControlDistance = 0;
+            this.layoutControlItem9.TextVisible = false;
             // 
             // ThicknessTest
             // 
@@ -450,6 +495,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -490,5 +537,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraEditors.SimpleButton btn_Remove;
+        private DevExpress.XtraEditors.SimpleButton btn_Add;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
     }
 }

@@ -29,3 +29,5 @@ bld/
 /Solution1.root/UT/obj
 /Solution1.root/Book.UI/bin/x86/connections.xml
 /Solution1.root/Book.UI/bin/x86/connections2.xml
+/Solution1.root/Book.UI/bin/x86/*.Config
+/Solution1.root/Book.UI/bin

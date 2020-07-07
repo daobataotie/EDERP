@@ -62,6 +62,8 @@ namespace Book.DA
         string SelectCustomerProductNameByPronoteHeaderId(string pronoteHeaderId);
 
         double SelectHeJiCheckOutSum(string mRSdetailsId);
+
+        double SelectAllNotInStockByProduct(string productId);
     }
 }
 

@@ -206,6 +206,12 @@ namespace Book.BL
         {
             return accessor.FSelectByDateRage(startdate, enddate, PCFinishCheckId);
         }
+
+
+        public IList<Model.OpticsTest> SelectByInvoiceCusXOId(string invoiceCusXOId)
+        {
+            return accessor.SelectByInvoiceCusXOId(invoiceCusXOId);
+        }
     }
 }
 

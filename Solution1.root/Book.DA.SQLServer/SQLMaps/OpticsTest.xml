@@ -165,5 +165,11 @@
       AND PCFinishCheckId = #PCFinishCheckId#
       ]]>
     </select>
+
+    <select id="SelectByInvoiceCusXOId" resultMap="OpticsTestResult" parameterClass="string">
+      <![CDATA[
+      select * from OpticsTest where PCPGOnlineCheckDetailId in (select PCPGOnlineCheckDetailId from PCPGOnlineCheckDetail where InvoiceCusXOId=#value#)
+      ]]>
+    </select>
   </statements>
 </sqlMap>

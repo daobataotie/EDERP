@@ -2,7 +2,7 @@
 <sqlMap namespace="ProduceOtherInDepotDetail" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <resultMaps>
-    <resultMap id="ProduceOtherInDepotDetailResult1" class="ProduceOtherInDepotDetail">    
+    <resultMap id="ProduceOtherInDepotDetailResult1" class="ProduceOtherInDepotDetail">
       <result property="ProduceOtherInDepotDetailId" column="ProduceOtherInDepotDetailId" />
       <result property="ProductId" column="ProductId" />
       <result property="DepotPositionId" column="DepotPositionId" />
@@ -33,7 +33,7 @@
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
     </resultMap>
   </resultMaps>
-  
+
   <statements>
     <select id="select_byProduceOtherInDepotId" resultMap="ProduceOtherInDepotDetailResult1" parameterClass="string">
       <!--select * from ProduceOtherInDepotDetail where ProduceOtherInDepotId=#value#-->
@@ -73,5 +73,12 @@ LEFT JOIN Supplier s ON s.SupplierId = po.SupplierId
 WHERE po.ProduceOtherInDepotDate BETWEEN #startdate# AND #enddate# and $sql$
       ]]>
     </select>
+
+    <select id="SelectHasInQty" resultClass="double" parameterClass="Map">
+      <![CDATA[
+      select isnull(SUM(ProduceQuantity),0) from ProduceOtherInDepotDetail where  ProduceOtherCompactDetailId=#produceOtherCompactDetailId# and ProduceOtherInDepotId<=#produceOtherInDepotId#
+      ]]>
+    </select>
+
   </statements>
 </sqlMap>

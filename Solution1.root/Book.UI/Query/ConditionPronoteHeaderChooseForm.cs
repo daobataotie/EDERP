@@ -20,6 +20,23 @@ namespace Book.UI.Query
             InitializeComponent();
             this.newChooseCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
             this.coBoxSourceType.SelectedIndex = 0;
+
+            //生產站隱藏
+            this.layoutControlItem13.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+        }
+
+        public ConditionPronoteHeaderChooseForm(bool b)
+        {
+            InitializeComponent();
+            this.newChooseCustomer.Choose = new Settings.BasicData.Customs.ChooseCustoms();
+            this.coBoxSourceType.SelectedIndex = 0;
+
+            //生產站顯示
+            this.layoutControlItem13.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            this.Height += 20;
+            this.layoutControl1.Height = 170;
+
+            this.bindingSourceWorkhouse.DataSource = new BL.WorkHouseManager().Select();
         }
 
         public ConditionPronoteHeaderChooseForm(int flagIsProcee)
@@ -33,6 +50,8 @@ namespace Book.UI.Query
             else if (flagIsProcee == 2)
                 this.coBoxSourceType.SelectedIndex = 3;
 
+            //生產站隱藏
+            this.layoutControlItem13.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
         }
 
         public override Condition Condition
@@ -90,6 +109,8 @@ namespace Book.UI.Query
             this.condition.PronoteHeaderIdKey = this.txtpronoteHeaderIdKey.Text;
             this.condition.CusXOId = this.textEditCusXOId.Text;
             this.condition.CustomerProductName = this.txt_CustomerProductName.Text;
+
+            this.condition.WorkHouseId = this.lue_WorkHouse.EditValue == null ? null : this.lue_WorkHouse.EditValue.ToString();
         }
 
         private void buttonEditPro_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

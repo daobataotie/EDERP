@@ -153,27 +153,51 @@ namespace Book.UI.produceManager.PronoteHeader
             return (EditForm)type.Assembly.CreateInstance(type.FullName, false, System.Reflection.BindingFlags.CreateInstance, null, new object[] { args[0], sourceType }, null, null);
         }
 
+        //多条件查询
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ConditionPronoteHeaderChooseForm f = new ConditionPronoteHeaderChooseForm();
-            if (f.ShowDialog(this) == DialogResult.OK)
+            if (sourceType == 4)
             {
-                ConditionPronoteHeader condition = f.Condition as ConditionPronoteHeader;
-                if (sourceType == 0)
-                    listDetail = (this.manager as BL.PronoteHeaderManager).GetByDateMa(condition.StartDate, condition.EndDate, condition.Customer, condition.CusXOId, condition.Product, condition.PronoteHeaderIdStart, condition.PronoteHeaderIdEnd, condition.SourceTpye, null, false, condition.ProNameKey, condition.ProCusNameKey, condition.PronoteHeaderIdKey, true, false, false, false);
-                else if (sourceType == 4)
-                    listDetail = (this.manager as BL.PronoteHeaderManager).GetByDateMa(condition.StartDate, condition.EndDate, condition.Customer, condition.CusXOId, condition.Product, condition.PronoteHeaderIdStart, condition.PronoteHeaderIdEnd, condition.SourceTpye, null, false, condition.ProNameKey, condition.ProCusNameKey, condition.PronoteHeaderIdKey, false, true, false, false);
-                else
-                    listDetail = (this.manager as BL.PronoteHeaderManager).GetByDateMa(condition.StartDate, condition.EndDate, condition.Customer, condition.CusXOId, condition.Product, condition.PronoteHeaderIdStart, condition.PronoteHeaderIdEnd, condition.SourceTpye, null, false, condition.ProNameKey, condition.ProCusNameKey, condition.PronoteHeaderIdKey, false, false, true, true);
-
-                foreach (Model.PronoteHeader pronoteHeader in listDetail)
+                ConditionPronoteHeaderChooseForm f = new ConditionPronoteHeaderChooseForm(true);
+                if (f.ShowDialog(this) == DialogResult.OK)
                 {
-                    pronoteHeader.Checkeds = true;
+                    ConditionPronoteHeader condition = f.Condition as ConditionPronoteHeader;
+                    listDetail = (this.manager as BL.PronoteHeaderManager).GetByDateForZuZhuang(condition.StartDate, condition.EndDate, condition.Customer, condition.CusXOId, condition.Product, condition.PronoteHeaderIdStart, condition.PronoteHeaderIdEnd, condition.SourceTpye, null, false, condition.ProNameKey, condition.ProCusNameKey, condition.PronoteHeaderIdKey, false, true, false, false, condition.WorkHouseId);
+
+                    foreach (Model.PronoteHeader pronoteHeader in listDetail)
+                    {
+                        pronoteHeader.Checkeds = true;
+                    }
+
+                    this.bindingSource1.DataSource = listDetail;
+                    this.barStaticItem1.Caption = string.Format("{0}項", this.bindingSource1.Count);
+                    f.Dispose();
+                    GC.Collect();
                 }
-                this.barStaticItem1.Caption = string.Format("{0}項", this.bindingSource1.Count);
-                this.bindingSource1.DataSource = listDetail;
-                f.Dispose();
-                GC.Collect();
+            }
+            else
+            {
+                ConditionPronoteHeaderChooseForm f = new ConditionPronoteHeaderChooseForm();
+                if (f.ShowDialog(this) == DialogResult.OK)
+                {
+                    ConditionPronoteHeader condition = f.Condition as ConditionPronoteHeader;
+                    if (sourceType == 0)
+                        listDetail = (this.manager as BL.PronoteHeaderManager).GetByDateMa(condition.StartDate, condition.EndDate, condition.Customer, condition.CusXOId, condition.Product, condition.PronoteHeaderIdStart, condition.PronoteHeaderIdEnd, condition.SourceTpye, null, false, condition.ProNameKey, condition.ProCusNameKey, condition.PronoteHeaderIdKey, true, false, false, false);
+                    //else if (sourceType == 4)
+                    //    listDetail = (this.manager as BL.PronoteHeaderManager).GetByDateMa(condition.StartDate, condition.EndDate, condition.Customer, condition.CusXOId, condition.Product, condition.PronoteHeaderIdStart, condition.PronoteHeaderIdEnd, condition.SourceTpye, null, false, condition.ProNameKey, condition.ProCusNameKey, condition.PronoteHeaderIdKey, false, true, false, false);
+                    else
+                        listDetail = (this.manager as BL.PronoteHeaderManager).GetByDateMa(condition.StartDate, condition.EndDate, condition.Customer, condition.CusXOId, condition.Product, condition.PronoteHeaderIdStart, condition.PronoteHeaderIdEnd, condition.SourceTpye, null, false, condition.ProNameKey, condition.ProCusNameKey, condition.PronoteHeaderIdKey, false, false, true, true);
+
+                    foreach (Model.PronoteHeader pronoteHeader in listDetail)
+                    {
+                        pronoteHeader.Checkeds = true;
+                    }
+
+                    this.bindingSource1.DataSource = listDetail;
+                    this.barStaticItem1.Caption = string.Format("{0}項", this.bindingSource1.Count);
+                    f.Dispose();
+                    GC.Collect();
+                }
             }
         }
 

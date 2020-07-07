@@ -602,7 +602,6 @@
             // gridColumn15
             // 
             resources.ApplyResources(this.gridColumn15, "gridColumn15");
-            this.gridColumn15.FieldName = "NotArrive";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.AllowEdit = false;
             // 

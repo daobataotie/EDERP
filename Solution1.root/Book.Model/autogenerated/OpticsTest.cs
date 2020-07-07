@@ -277,7 +277,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// LinPSM
+        /// 水平坐標(左)
         /// </summary>
         public double? LinPSM
         {
@@ -307,7 +307,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// LupPSM
+        /// 垂直坐標(左)
         /// </summary>
         public double? LupPSM
         {

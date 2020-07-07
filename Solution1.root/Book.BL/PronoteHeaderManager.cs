@@ -382,6 +382,11 @@ namespace Book.BL
             return accessor.GetByDateMa(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, sourcetype, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5, sourcetype7);
         }
 
+        public IList<Book.Model.PronoteHeader> GetByDateForZuZhuang(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, int sourcetype, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7, string workhouseId)
+        {
+            return accessor.GetByDateForZuZhuang(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, sourcetype, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sourcetype0, sourcetype4, sourcetype5, sourcetype7, workhouseId);
+        }
+
         public IList<Book.Model.PronoteHeader> GetByDateZJ(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, string sign, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7)
         {
             return accessor.GetByDateZJ(startDate, endDate, customer, cusxoid, product, PronoteHeaderIdStart, PronoteHeaderIdEnd, workhouseIndepot, jiean, proNameKey, proCusNameKey, pronoteHeaderIdKey, sign, sourcetype0, sourcetype4, sourcetype5, sourcetype7);

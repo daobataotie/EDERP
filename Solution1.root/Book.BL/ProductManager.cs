@@ -162,6 +162,26 @@ namespace Book.BL
             }
 
 
+            //雪芬-貼標籤  和  安適康 两家厂商自动带入 厂商商品对照表
+            if (product.SupplierId == "e94591ac-aab4-47f0-b5bb-110e72cf155e" || product.SupplierId == "a7622c31-7d70-45de-a407-595dae617d36")
+            {
+                Model.SupplierProduct supplierProduct = new Book.Model.SupplierProduct();
+                supplierProduct.SupplierProductId = Guid.NewGuid().ToString();
+                supplierProduct.SupplierId = product.SupplierId;
+                supplierProduct.ProductId = product.ProductId;
+                supplierProduct.InsertTime = DateTime.Now;
+                supplierProduct.UpdateTime = DateTime.Now;
+
+                if (product.SupplierId == "e94591ac-aab4-47f0-b5bb-110e72cf155e")
+                    supplierProduct.SupplierProductPriceRange = "1/999999999999/0.092";
+                else
+                    supplierProduct.SupplierProductPriceRange = "1/999999999999/0";
+
+                supplierProduct.BuildEmployeeId = BL.V.ActiveOperator.EmployeeId;
+
+                new SupplierProductManager().Insert(supplierProduct);
+            }
+
             //foreach (Model.ProductProcess Pro in product.ProductProcess)
             //{
             //    if (string.IsNullOrEmpty(Pro.ProcessCategoryId)) continue;

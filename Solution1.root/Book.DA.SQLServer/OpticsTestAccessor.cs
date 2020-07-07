@@ -96,8 +96,7 @@ namespace Book.DA.SQLServer
 
 
 
-        //为组装成品检验单所加
-
+        #region 为组装成品检验单所加
 
         public Book.Model.OpticsTest FGetFirst(string PCFinishCheckId)
         {
@@ -159,7 +158,13 @@ namespace Book.DA.SQLServer
             ht.Add("PCFinishCheckId", PCFinishCheckId);
 
             return sqlmapper.QueryForList<Model.OpticsTest>("OpticsTest.FSelectByDateRage", ht);
-        }
+        } 
+	#endregion
 
+
+        public IList<Model.OpticsTest> SelectByInvoiceCusXOId(string invoiceCusXOId)
+        {
+            return sqlmapper.QueryForList<Model.OpticsTest>("OpticsTest.SelectByInvoiceCusXOId", invoiceCusXOId);
+        }
     }
 }

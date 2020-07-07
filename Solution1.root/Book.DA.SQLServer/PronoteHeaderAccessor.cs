@@ -238,6 +238,91 @@ namespace Book.DA.SQLServer
             return this.DataReaderBind<Model.PronoteHeader>(sql.ToString(), parames, CommandType.Text);
         }
 
+        public IList<Book.Model.PronoteHeader> GetByDateForZuZhuang(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, int sourcetype, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7, string workhouseId)
+        {
+            SqlParameter[] parames = { new SqlParameter("@startdate", DbType.DateTime), new SqlParameter("@enddate", DbType.DateTime), new SqlParameter("@xocustomerId", DbType.String), new SqlParameter("@CustomerInvoiceXOId", DbType.String), new SqlParameter("@productid", DbType.String) };
+            parames[0].Value = startDate;
+            parames[1].Value = endDate;
+            if (customer != null)
+                parames[2].Value = customer.CustomerId;
+            else
+                parames[2].Value = DBNull.Value;
+            if (!string.IsNullOrEmpty(cusxoid))
+                parames[3].Value = cusxoid;
+            else
+                parames[3].Value = DBNull.Value; ;
+            if (product != null)
+                parames[4].Value = product.ProductId;
+            else
+                parames[4].Value = DBNull.Value;
+            StringBuilder sql = new StringBuilder();
+            sql.Append("SELECT  a.Checkeds,a.IsClose,a.InvoiceXOId,a.PronoteHeaderID,a.InvoiceCusId,a.InvoiceXODetailQuantity,a.PronoteDate,a.Pronotedesc,a.MRSHeaderId,a.MRSdetailsId, a.DetailsSum,a.ProductId,a.ProductUnit,a.InvoiceXODetailQuantity");
+            sql.Append(",  (SELECT  EmployeeName FROM employee where employee.employeeid=a.Employee0Id) as Employee0Name, (select  EmployeeName from employee where employee.employeeid=a.AuditEmpId) as AuditEmpName");
+
+            sql.Append(",  i.CustomerInvoiceXOId,i.InvoiceYjrq as PronoteProceduresDate, (SELECT CheckedStandard FROM Customer c WHERE c.CustomerId = i.xocustomerId) as CustomerCheckStandard");
+            sql.Append(", (SELECT CustomerShortName FROM Customer c WHERE c.CustomerId = i.xocustomerId) as CustomerShortName");
+            //if (!string.IsNullOrEmpty(workhouseIndepot))
+            //{
+            //    sql.Append(", (select top 1 PronoteProceduresDate from PronoteProceduresDetail u  where  u.PronoteHeaderID=a.PronoteHeaderID and u.WorkHouseId='" + workhouseIndepot + "'  order by PronoteProceduresDate ) as PronoteProceduresDate");
+            //}
+            sql.Append(", (SELECT TOP 1 PronoteMachineId FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as PronoteMachineId");
+            sql.Append(", (SELECT TOP 1 PronoteProceduresDate FROM PronoteProceduresDetail WHERE PronoteHeaderID=a.PronoteHeaderId ORDER BY ProceduresNo)  as Shechudata");
+            sql.Append(",b.ProductName,b.id, b.CustomerProductName,a.Chakuang,a.Paihe,a.Moshu,a.Materialprocessum  FROM PronoteHeader a left join   Product b  on a.productid=b.productid  left join invoicexo i on a.invoicexoid=i.invoiceid ");
+
+            sql.Append("  where    PronoteDate between @startdate and @enddate  ");
+            if (!string.IsNullOrEmpty(cusxoid))
+                sql.Append(" and   i.CustomerInvoiceXOId=@CustomerInvoiceXOId");
+            if (customer != null)
+                sql.Append(" and  i.xocustomerId=@xocustomerId");
+            if (product != null)
+                sql.Append(" and  a.productid=@productid");
+            if (!string.IsNullOrEmpty(PronoteHeaderIdStart) && !string.IsNullOrEmpty(PronoteHeaderIdEnd))
+                sql.Append(" and  a.PronoteHeaderID between '" + PronoteHeaderIdStart + "' and '" + PronoteHeaderIdEnd + "'");
+            if (sourcetype != -1)   //全部时为-1
+                sql.Append(" and  a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType=" + sourcetype + ")");
+            if (jiean) // 只显示未结案
+                sql.Append(" and  a.IsClose=0");
+            if (!string.IsNullOrEmpty(proNameKey)) // 商品名称关键字
+                sql.Append(" and b.ProductName like '%" + proNameKey + "%'");
+            if (!string.IsNullOrEmpty(proCusNameKey)) //客户型号名称关键字
+                sql.Append(" and b.CustomerProductName like '%" + proCusNameKey + "%'");
+            if (!string.IsNullOrEmpty(pronoteHeaderIdKey)) // 加工单号关键字
+                sql.Append(" and  a.PronoteHeaderID like '%" + pronoteHeaderIdKey + "%'");
+            if (!string.IsNullOrEmpty(workhouseIndepot))   //公司部门
+                sql.Append(" and w.WorkHouseId='" + workhouseIndepot + "'");
+
+            //三种自制条件
+            if (sourcetype0 && sourcetype4 && !sourcetype5)
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4')) and 2=2)");
+            else if (sourcetype0 && sourcetype5 && !sourcetype4)
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','5')) and 2=2)");
+            else if (sourcetype4 && sourcetype5 && !sourcetype0)
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4','5')) and 2=2)");
+            else if (sourcetype0 && !sourcetype5 && !sourcetype4)
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0')) and 2=2)");
+            else if (sourcetype4 && !sourcetype0 && !sourcetype5)
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('4')) and 2=2)");
+            else if (sourcetype5 && !sourcetype0 && !sourcetype4)
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('5')) and 2=2)");
+            else if (sourcetype0 && sourcetype4 && sourcetype5)
+                sql.Append(" and  (a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('0','4','5')) and 2=2)");
+            //在加一种自制条件--仓库(半成品加工)
+            if (sourcetype7)
+            {
+                if (sql.ToString().Contains("and 2=2"))
+                    sql.Replace("and 2=2", "or a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+                else
+                    sql.Append(" and a.MRSHeaderId IN(SELECT MRSHeaderId FROM MRSHeader WHERE SourceType in ('7'))");
+            }
+            if (!string.IsNullOrEmpty(workhouseId))
+            {
+                sql.Append(" and a.PronoteHeaderID in (select PronoteHeaderID from PronoteProceduresDetail where WorkHouseId='" + workhouseId + "')");
+            }
+
+            sql.Append(" order by a.PronoteHeaderID desc ");
+            return this.DataReaderBind<Model.PronoteHeader>(sql.ToString(), parames, CommandType.Text);
+        }
+
         //质检选择加工单      
         public IList<Book.Model.PronoteHeader> GetByDateZJ(DateTime startDate, DateTime endDate, Model.Customer customer, string cusxoid, Model.Product product, string PronoteHeaderIdStart, string PronoteHeaderIdEnd, string workhouseIndepot, bool jiean, string proNameKey, string proCusNameKey, string pronoteHeaderIdKey, string sign, bool sourcetype0, bool sourcetype4, bool sourcetype5, bool sourcetype7)
         {

@@ -47,15 +47,17 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this._ThicknessTest.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 
             this._ThicknessTest.Details = new List<Model.ThicknessTestDetails>();
-            for (int i = 1; i < 9; i++)
-            {
-                Model.ThicknessTestDetails d = new Book.Model.ThicknessTestDetails();
-                d.ThicknessTestDetailsId = Guid.NewGuid().ToString();
-                d.ThicknessTestId = this._ThicknessTest.ThicknessTestId;
-                d.HouduBiao = "#" + i.ToString() + " 號片";
 
-                this._ThicknessTest.Details.Add(d);
-            }
+            //改为只添加一项
+            //for (int i = 1; i < 9; i++)
+            //{
+            Model.ThicknessTestDetails d = new Book.Model.ThicknessTestDetails();
+            d.ThicknessTestDetailsId = Guid.NewGuid().ToString();
+            d.ThicknessTestId = this._ThicknessTest.ThicknessTestId;
+            d.HouduBiao = "#1 號片";
+
+            this._ThicknessTest.Details.Add(d);
+            //}
         }
 
         protected override void Delete()
@@ -232,6 +234,29 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "提示", MessageBoxButtons.OK);
+            }
+        }
+
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            Model.ThicknessTestDetails d = new Book.Model.ThicknessTestDetails();
+            d.ThicknessTestDetailsId = Guid.NewGuid().ToString();
+            d.ThicknessTestId = this._ThicknessTest.ThicknessTestId;
+            d.HouduBiao = "#" + (this._ThicknessTest.Details.Count + 1) + " 號片";
+
+            this._ThicknessTest.Details.Add(d);
+
+            this.gridControl1.RefreshDataSource();
+        }
+
+        private void btn_Remove_Click(object sender, EventArgs e)
+        {
+            if (this.bindingSource1.Current != null)
+            {
+                this.bindingSource1.Remove(this.bindingSource1.Current);
+
+                this.gridControl1.RefreshDataSource();
             }
         }
     }

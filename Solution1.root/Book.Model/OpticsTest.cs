@@ -8,12 +8,12 @@
 using System;
 namespace Book.Model
 {
-	/// <summary>
-	/// 光学制程测试
-	/// </summary>
-	[Serializable]
-	public partial class OpticsTest
-	{
-
-	}
+    /// <summary>
+    /// 光学制程测试
+    /// </summary>
+    [Serializable]
+    public partial class OpticsTest
+    {
+        public bool IsChecked { get; set; }
+    }
 }

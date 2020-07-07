@@ -73,6 +73,11 @@ namespace Book.BL
         {
             return accessor.SelectByCondition(startdate, enddate, supper1, supper2, ProduceOtherCompactId1, ProduceOtherCompactId2, startPro, endPro, invouceCusidStart, invouceCusidEnd);
         }
+
+        public double SelectHasInQty(string produceOtherCompactDetailId, string produceOtherInDepotId)
+        {
+            return accessor.SelectHasInQty(produceOtherCompactDetailId, produceOtherInDepotId);
+        }
     }
 }
 

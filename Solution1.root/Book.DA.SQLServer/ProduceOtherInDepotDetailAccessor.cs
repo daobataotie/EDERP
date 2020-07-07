@@ -100,15 +100,19 @@ namespace Book.DA.SQLServer
             return this.DataReaderBind<Model.ProduceOtherInDepotDetail>(sql.ToString(), null, CommandType.Text);
         }
 
-        #region IProduceOtherInDepotDetailAccessor 成员
-
-
         public IList<Book.Model.ProduceOtherInDepotDetail> SelectByProduceotherInDepotId(string id)
         {
             return sqlmapper.QueryForList<Model.ProduceOtherInDepotDetail>("ProduceOtherInDepotDetail.SelectByProduceotherInDepotId", id);
         }
 
-        #endregion
+        public double SelectHasInQty(string produceOtherCompactDetailId, string produceOtherInDepotId)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("produceOtherCompactDetailId", produceOtherCompactDetailId);
+            ht.Add("produceOtherInDepotId", produceOtherInDepotId);
+
+            return sqlmapper.QueryForObject<double>("ProduceOtherInDepotDetail.SelectHasInQty", ht);
+        }
     }
 
 }

@@ -240,6 +240,11 @@ namespace Book.UI.Settings.BasicData.Supplier
         //选择供应商改变
         private void bsSupplier_CurrentChanged(object sender, EventArgs e)
         {
+           
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
             this._CurrentSupplier = this.bsSupplier.Current as Model.Supplier;
 
             this._SupProList = this._SupplierProductManager.mSelect(this._CurrentSupplier.SupplierId);
@@ -452,6 +457,7 @@ namespace Book.UI.Settings.BasicData.Supplier
         {
 
         }
+
     }
 
     public class PriceRange

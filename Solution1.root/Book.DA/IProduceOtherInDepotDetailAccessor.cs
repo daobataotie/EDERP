@@ -22,6 +22,8 @@ namespace Book.DA
         IList<Model.ProduceOtherInDepotDetail> SelectByProduceotherInDepotId(string id);
         void Delete(Model.ProduceOtherInDepot indepot);
         IList<Model.ProduceOtherInDepotDetail> SelectByCondition(DateTime startdate, DateTime enddate, Book.Model.Supplier supper1, Book.Model.Supplier supper2, string ProduceOtherCompactId1, string ProduceOtherCompactId2, Book.Model.Product startPro, Book.Model.Product endPro, string invouceCusidStart, string invouceCusidEnd);
+
+        double SelectHasInQty(string produceOtherCompactDetailId, string produceOtherInDepotId);
     }
 }
 

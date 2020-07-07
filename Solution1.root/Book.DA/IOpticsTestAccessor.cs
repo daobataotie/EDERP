@@ -57,6 +57,8 @@ namespace Book.DA
         IList<Book.Model.OpticsTest> FSelect(string PCFinishCheckId);
 
         IList<Book.Model.OpticsTest> FSelectByDateRage(DateTime startdate, DateTime enddate, string PCFinishCheckId);
+
+        IList<Model.OpticsTest> SelectByInvoiceCusXOId(string invoiceCusXOId);
     }
 }
 

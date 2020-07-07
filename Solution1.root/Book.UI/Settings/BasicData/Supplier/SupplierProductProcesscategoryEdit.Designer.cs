@@ -55,6 +55,7 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdConSupProductPric = new DevExpress.XtraGrid.GridControl();
             this.bsPriceAndRange = new System.Windows.Forms.BindingSource(this.components);
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -96,7 +97,6 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -172,7 +172,7 @@
             resources.ApplyResources(this.splitContainerControl1.Panel1, "splitContainerControl1.Panel1");
             this.splitContainerControl1.Panel2.Controls.Add(this.xtraTabControl1);
             resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
-            this.splitContainerControl1.SplitterPosition = 170;
+            this.splitContainerControl1.SplitterPosition = 166;
             // 
             // grdConSupplier
             // 
@@ -203,6 +203,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             // 
             // gridColumn1
             // 
@@ -377,6 +378,12 @@
             this.gridColumn9.FieldName = "ProductVersion";
             this.gridColumn9.Name = "gridColumn9";
             // 
+            // gridColumn11
+            // 
+            resources.ApplyResources(this.gridColumn11, "gridColumn11");
+            this.gridColumn11.FieldName = "CustomerName";
+            this.gridColumn11.Name = "gridColumn11";
+            // 
             // grdConSupProductPric
             // 
             this.grdConSupProductPric.DataSource = this.bsPriceAndRange;
@@ -507,7 +514,7 @@
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(778, 430);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(782, 430);
             this.layoutControlGroup3.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup3.TextVisible = false;
             // 
@@ -517,7 +524,7 @@
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(778, 356);
+            this.layoutControlItem1.Size = new System.Drawing.Size(782, 356);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
@@ -528,16 +535,16 @@
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(529, 25);
+            this.layoutControlItem5.Size = new System.Drawing.Size(532, 25);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.nccAtCurrencyCategory;
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
-            this.layoutControlItem4.Location = new System.Drawing.Point(529, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(532, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(249, 25);
+            this.layoutControlItem4.Size = new System.Drawing.Size(250, 25);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem9
@@ -546,43 +553,43 @@
             resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 381);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(313, 24);
+            this.layoutControlItem9.Size = new System.Drawing.Size(315, 24);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.nccBuildEmployee;
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
-            this.layoutControlItem7.Location = new System.Drawing.Point(313, 381);
+            this.layoutControlItem7.Location = new System.Drawing.Point(315, 381);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(237, 24);
+            this.layoutControlItem7.Size = new System.Drawing.Size(238, 24);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.nccChangeEmployee;
             resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(550, 381);
+            this.layoutControlItem10.Location = new System.Drawing.Point(553, 381);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(228, 24);
+            this.layoutControlItem10.Size = new System.Drawing.Size(229, 24);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.date_Create;
             resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
-            this.layoutControlItem11.Location = new System.Drawing.Point(313, 405);
+            this.layoutControlItem11.Location = new System.Drawing.Point(315, 405);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(237, 25);
+            this.layoutControlItem11.Size = new System.Drawing.Size(238, 25);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.date_Update;
             resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
-            this.layoutControlItem12.Location = new System.Drawing.Point(550, 405);
+            this.layoutControlItem12.Location = new System.Drawing.Point(553, 405);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(228, 25);
+            this.layoutControlItem12.Size = new System.Drawing.Size(229, 25);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(60, 14);
             // 
             // emptySpaceItem1
@@ -590,7 +597,7 @@
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 405);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(313, 25);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(315, 25);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // xTabSearch
@@ -768,12 +775,6 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
             this.layoutControlItem6.TextVisible = false;
-            // 
-            // gridColumn11
-            // 
-            resources.ApplyResources(this.gridColumn11, "gridColumn11");
-            this.gridColumn11.FieldName = "CustomerName";
-            this.gridColumn11.Name = "gridColumn11";
             // 
             // SupplierProductProcesscategoryEdit
             // 

@@ -1826,19 +1826,16 @@ namespace Book.UI.produceManager.MRSHeader
         }
 
         //加工單-對應的生產入庫，未入庫數量
+        //改为查询该商品对应的所有未结案订单对应的 订单数量-合格数量(射出部门的)
         private void repositoryItemHyperLinkEdit2_Click(object sender, EventArgs e)
         {
-            Model.MRSdetails m_detail = this.bindingSourceDetails.Current as Model.MRSdetails;
-            if (m_detail != null)
+            Model.MRSdetails detail = this.bindingSourceDetails.Current as Model.MRSdetails;
+            if (detail != null && detail.ProductId != null)
             {
-                if (m_detail.ProductId != null)
-                {
-                    double sumProduceQuantity = new BL.ProduceInDepotDetailManager().SelectHeJiCheckOutSum(m_detail.MRSdetailsId);
-                    double diff = m_detail.MRSdetailssum.HasValue ? m_detail.MRSdetailssum.Value - sumProduceQuantity : 0;
-                    diff = diff < 0 ? 0 : diff;
+                double value = new BL.ProduceInDepotDetailManager().SelectAllNotInStockByProduct(detail.ProductId);
+                value = value < 0 ? 0 : value;
 
-                    MessageBox.Show(diff.ToString(), "未入庫數量", MessageBoxButtons.OK);
-                }
+                MessageBox.Show(value.ToString(), "未入庫數量", MessageBoxButtons.OK);
             }
         }
     }

@@ -117,19 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
-  </data>
-  <data name="barBtn_Search.Caption" xml:space="preserve">
-    <value>搜索</value>
-  </data>
-  <data name="bar_Copy.Caption" xml:space="preserve">
-    <value>複製單據</value>
-  </data>
-  <data name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  </metadata>
+  <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </data>
+  </metadata>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="imageCollection1.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v10.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -436,16 +429,71 @@
         PiydRVvthbEShq0tdS1YP1XNB1WKv8rxjMwZjD8BORXH707ETOoAAAAASUVORK5CYIIL
 </value>
   </data>
-  <data name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>303, 17</value>
+  </metadata>
+  <data name="barBtn_Search.Caption" xml:space="preserve">
+    <value>搜索</value>
   </data>
+  <data name="bar_Copy.Caption" xml:space="preserve">
+    <value>複製單據</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtThicknessTestId.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 12</value>
   </data>
   <data name="txtThicknessTestId.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 21</value>
   </data>
+  <data name="btn_Remove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>402, 295</value>
+  </data>
+  <data name="btn_Remove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>386, 22</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_Remove.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btn_Remove.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="&gt;&gt;btn_Remove.Name" xml:space="preserve">
+    <value>btn_Remove</value>
+  </data>
+  <data name="&gt;&gt;btn_Remove.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_Remove.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btn_Remove.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btn_Add.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 295</value>
+  </data>
+  <data name="btn_Add.Size" type="System.Drawing.Size, System.Drawing">
+    <value>386, 22</value>
+  </data>
+  <data name="btn_Add.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btn_Add.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btn_Add.Name" xml:space="preserve">
+    <value>btn_Add</value>
+  </data>
+  <data name="&gt;&gt;btn_Add.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_Add.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btn_Add.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="spinPerspectiverateR.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
   </data>
@@ -468,13 +516,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spinPerspectiverateR.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="txtThicknessDescript.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 297</value>
+    <value>100, 321</value>
   </data>
   <data name="txtThicknessDescript.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 54</value>
+    <value>298, 30</value>
   </data>
   <data name="txtThicknessDescript.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -489,7 +537,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtThicknessDescript.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="spinPerspectiverateL.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -513,7 +561,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spinPerspectiverateL.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 37</value>
@@ -675,7 +723,7 @@
     <value>69</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 256</value>
+    <value>776, 254</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -690,7 +738,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="nccEmployee.Location" type="System.Drawing.Point, System.Drawing">
     <value>490, 331</value>
@@ -711,7 +759,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;nccEmployee.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="deThicknessTestDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>663, 12</value>
@@ -735,7 +783,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;deThicknessTestDate.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -795,6 +843,18 @@
   <data name="layoutControlItem7.Text" xml:space="preserve">
     <value>透視率R：</value>
   </data>
+  <data name="layoutControlItem8.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="layoutControlItem8.Text" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="layoutControlItem9.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="layoutControlItem9.Text" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
   </data>
@@ -832,11 +892,11 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txtThicknessTestId.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>7, 14</value>
   </data>
@@ -1030,6 +1090,18 @@
     <value>layoutControlItem7</value>
   </data>
   <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -1782,5 +1782,10 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.SelectHeJiCheckOutSum", mRSdetailsId);
         }
+
+        public double SelectAllNotInStockByProduct(string productId)
+        {
+            return sqlmapper.QueryForObject<double>("ProduceInDepotDetail.SelectAllNotInStockByProduct", productId);
+        }
     }
 }

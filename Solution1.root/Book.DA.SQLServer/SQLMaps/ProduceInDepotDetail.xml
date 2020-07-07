@@ -148,10 +148,19 @@
       select CustomerProductName from Product where ProductId=(select ProductId from MPSdetails where MPSdetailsId =(select MPSdetailsId from MRSdetails where MRSdetailsId = (select MRSdetailsId from PronoteHeader where PronoteHeaderID=#value#)))
       ]]>
     </select>
+    
     <select id="SelectHeJiCheckOutSum" resultClass ="double" parameterClass="string">
       <![CDATA[
      select top 1 ISNULL(HeJiCheckOutSum,0) from ProduceInDepotDetail pid 
  where PronoteHeaderId=(select PronoteHeaderId from PronoteHeader where MRSdetailsId=#MRSdetailsId#) order by ProduceInDepotId desc
+      ]]>
+    </select>
+
+    <select id="SelectAllNotInStockByProduct"  resultClass ="double" parameterClass="string">
+      <![CDATA[
+      select ( select isnull(sum(ph.DetailsSum),0) from PronoteHeader ph left join InvoiceXO xo on xo.InvoiceId=ph.InvoiceXOId and xo.IsClose=0 
+where ph.ProductId=#value# and xo.IsClose=0 ) - (select isnull(sum(pid.CheckOutSum),0) from ProduceInDepotDetail pid  left join ProduceInDepot pi on pi.ProduceInDepotId=pid.ProduceInDepotId where pid.PronoteHeaderId in (select ph.PronoteHeaderID from PronoteHeader ph left join InvoiceXO xo on xo.InvoiceId=ph.InvoiceXOId and xo.IsClose=0 
+where ph.ProductId=#value# and xo.IsClose=0 ) and pi.WorkHouseId='b9ed2079-eb74-4d47-b50e-faa331d3bad9')
       ]]>
     </select>
   
