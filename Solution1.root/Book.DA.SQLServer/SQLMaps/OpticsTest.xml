@@ -2,6 +2,40 @@
 <sqlMap namespace="OpticsTest" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+   <resultMaps>
+    <resultMap id="OpticsTestResult1" class="OpticsTest">
+      <result property="OpticsTestId" column="OpticsTestId" />
+      <result property="PCPGOnlineCheckDetailId" column="PCPGOnlineCheckDetailId" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="MachineName" column="MachineName" />
+      <result property="LattrS" column="LattrS" />
+      <result property="LattrC" column="LattrC" />
+      <result property="LattrA" column="LattrA" />
+      <result property="LinPSM" column="LinPSM" />
+      <result property="LoutPSM" column="LoutPSM" />
+      <result property="LupPSM" column="LupPSM" />
+      <result property="LdownPSM" column="LdownPSM" />
+      <result property="RattrS" column="RattrS" />
+      <result property="RattrC" column="RattrC" />
+      <result property="RattrA" column="RattrA" />
+      <result property="RinPSM" column="RinPSM" />
+      <result property="RoutPSM" column="RoutPSM" />
+      <result property="RupPSM" column="RupPSM" />
+      <result property="RdowmPSM" column="RdowmPSM" />
+      <result property="Condition" column="Condition" />
+      <result property="OptiscTestDate" column="OptiscTestDate" />
+      <result property="EmployeeId" column="EmployeeId" />
+      <result property="ManualId" column="ManualId" />
+      <result property="PCFinishCheckId" column="PCFinishCheckId"/>
+      <result property="LeftLevelJudge" column="LeftLevelJudge"/>
+      <result property="RightLevelJudge" column="RightLevelJudge"/>
+      <result property="LeftVerticalJudge" column="LeftVerticalJudge"/>
+      <result property="RightVerticalJudge" column="RightVerticalJudge"/>
+      <result property="ProductName" column="ProductName"/>
+    </resultMap>
+  </resultMaps>
+    
   <statements>
     <select id="mGetFirst" resultMap="OpticsTestResult" parameterClass="string">
       <![CDATA[
@@ -166,9 +200,9 @@
       ]]>
     </select>
 
-    <select id="SelectByInvoiceCusXOId" resultMap="OpticsTestResult" parameterClass="string">
+    <select id="SelectByInvoiceCusXOId" resultMap="OpticsTestResult1" parameterClass="string">
       <![CDATA[
-      select * from OpticsTest where PCPGOnlineCheckDetailId in (select PCPGOnlineCheckDetailId from PCPGOnlineCheckDetail where InvoiceCusXOId=#value#)
+      select ot.*,p.ProductName from OpticsTest ot left join PCPGOnlineCheckDetail pcd on ot.PCPGOnlineCheckDetailId=pcd.PCPGOnlineCheckDetailId left join Product p on pcd.ProductId =p.ProductId where pcd.InvoiceCusXOId=#value#
       ]]>
     </select>
   </statements>

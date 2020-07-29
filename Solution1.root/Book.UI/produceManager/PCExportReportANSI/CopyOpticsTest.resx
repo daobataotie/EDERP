@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btn_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 384</value>
+    <value>547, 384</value>
   </data>
   <data name="btn_Cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>481, 22</value>
+    <value>531, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_Cancel.TabIndex" type="System.Int32, mscorlib">
@@ -147,7 +147,7 @@
     <value>12, 384</value>
   </data>
   <data name="btn_OK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>481, 22</value>
+    <value>531, 22</value>
   </data>
   <data name="btn_OK.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -186,7 +186,19 @@
     <value>0</value>
   </data>
   <data name="gridColumn1.Width" type="System.Int32, mscorlib">
-    <value>39</value>
+    <value>32</value>
+  </data>
+  <data name="gridColumn16.Caption" xml:space="preserve">
+    <value>商品</value>
+  </data>
+  <data name="gridColumn16.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn16.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumn16.Width" type="System.Int32, mscorlib">
+    <value>200</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>S(L)</value>
@@ -198,10 +210,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
-    <value>41</value>
+    <value>40</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>S(R)</value>
@@ -213,7 +225,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="gridColumn3.Width" type="System.Int32, mscorlib">
     <value>40</value>
@@ -228,10 +240,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="gridColumn4.Width" type="System.Int32, mscorlib">
-    <value>42</value>
+    <value>40</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>C(R)</value>
@@ -243,10 +255,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="gridColumn5.Width" type="System.Int32, mscorlib">
-    <value>45</value>
+    <value>40</value>
   </data>
   <data name="gridColumn6.Caption" xml:space="preserve">
     <value>A(L)</value>
@@ -258,10 +270,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn6.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="gridColumn6.Width" type="System.Int32, mscorlib">
-    <value>43</value>
+    <value>40</value>
   </data>
   <data name="gridColumn7.Caption" xml:space="preserve">
     <value>A(R)</value>
@@ -273,10 +285,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="gridColumn7.Width" type="System.Int32, mscorlib">
-    <value>42</value>
+    <value>40</value>
   </data>
   <data name="gridColumn8.Caption" xml:space="preserve">
     <value>水平坐标(L)</value>
@@ -288,10 +300,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gridColumn8.Width" type="System.Int32, mscorlib">
-    <value>72</value>
+    <value>60</value>
   </data>
   <data name="gridColumn9.Caption" xml:space="preserve">
     <value>水平判定(L)</value>
@@ -309,10 +321,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="gridColumn9.Width" type="System.Int32, mscorlib">
-    <value>72</value>
+    <value>60</value>
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>垂直坐标(L)</value>
@@ -324,10 +336,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="gridColumn10.Width" type="System.Int32, mscorlib">
-    <value>71</value>
+    <value>60</value>
   </data>
   <data name="gridColumn11.Caption" xml:space="preserve">
     <value>垂直判定(L)</value>
@@ -345,10 +357,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="gridColumn11.Width" type="System.Int32, mscorlib">
-    <value>74</value>
+    <value>60</value>
   </data>
   <data name="gridColumn12.Caption" xml:space="preserve">
     <value>水平坐标(R)</value>
@@ -360,10 +372,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="gridColumn12.Width" type="System.Int32, mscorlib">
-    <value>72</value>
+    <value>60</value>
   </data>
   <data name="gridColumn13.Caption" xml:space="preserve">
     <value>水平判定(R)</value>
@@ -381,10 +393,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="gridColumn13.Width" type="System.Int32, mscorlib">
-    <value>76</value>
+    <value>60</value>
   </data>
   <data name="gridColumn14.Caption" xml:space="preserve">
     <value>垂直坐标(R)</value>
@@ -396,10 +408,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="gridColumn14.Width" type="System.Int32, mscorlib">
-    <value>73</value>
+    <value>60</value>
   </data>
   <data name="gridColumn15.Caption" xml:space="preserve">
     <value>垂直判定(R)</value>
@@ -417,10 +429,10 @@
     <value>True</value>
   </data>
   <data name="gridColumn15.VisibleIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="gridColumn15.Width" type="System.Int32, mscorlib">
-    <value>73</value>
+    <value>60</value>
   </data>
   <data name="gridColumn58.Caption" xml:space="preserve">
     <value>選擇條件</value>
@@ -429,16 +441,16 @@
     <value>True</value>
   </data>
   <data name="gridColumn58.VisibleIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="gridColumn58.Width" type="System.Int32, mscorlib">
-    <value>73</value>
+    <value>54</value>
   </data>
   <data name="gridView1.GroupPanelText" xml:space="preserve">
     <value>光學機</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>966, 368</value>
+    <value>1066, 368</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -487,7 +499,7 @@
     <value>layoutControlGroup1</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>990, 418</value>
+    <value>1090, 418</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -514,7 +526,7 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>990, 418</value>
+    <value>1090, 418</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>複製光學測試</value>
@@ -542,6 +554,12 @@
   </data>
   <data name="&gt;&gt;repositoryItemCheckEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn16.Name" xml:space="preserve">
+    <value>gridColumn16</value>
+  </data>
+  <data name="&gt;&gt;gridColumn16.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn2.Name" xml:space="preserve">
     <value>gridColumn2</value>

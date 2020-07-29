@@ -146,7 +146,7 @@ namespace Book.DA.SQLServer
         /// <returns></returns>
         public DataTable GetByDate(DateTime startDate, DateTime endDate)
         {
-            string sql = "select at.SummonDate,s.Id,s.SubjectName,a.Summary, case at.SummonCategory when '現金支出傳票' then 0 else a.AMoney end as Income,case at.SummonCategory when '現金支出傳票' then a.AMoney else 0 end as Pay, (case at.SummonCategory when '現金支出傳票' then 0 else a.AMoney end -case at.SummonCategory when '現金支出傳票' then a.AMoney else 0 end ) as YE from AtSummonDetail a left join AtSummon at on a.SummonId=at.SummonId left join AtAccountSubject s on a.SubjectId=s.SubjectId where at.SummonDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.ToString("yyyy-MM-dd HH:mm:ss") + "' and (SummonCategory='現金支出傳票' or (SummonCategory='轉帳傳票' and s.SubjectName='現金'))order by at.SummonDate,at.SummonCategory  ";
+            string sql = "select at.SummonDate,s.Id,s.SubjectName,a.Summary, case at.SummonCategory when '現金支出傳票' then 0 else a.AMoney end as Income,case at.SummonCategory when '現金支出傳票' then a.AMoney else 0 end as Pay, (case at.SummonCategory when '現金支出傳票' then 0 else a.AMoney end -case at.SummonCategory when '現金支出傳票' then a.AMoney else 0 end ) as YE from AtSummonDetail a left join AtSummon at on a.SummonId=at.SummonId left join AtAccountSubject s on a.SubjectId=s.SubjectId where at.SummonDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.ToString("yyyy-MM-dd HH:mm:ss") + "' and (SummonCategory='現金支出傳票' or (SummonCategory='轉帳傳票' and s.SubjectName='現金'))order by at.SummonDate,at.SummonCategory,s.Id  ";
             DataTable dt = new DataTable();
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
             sda.Fill(dt);

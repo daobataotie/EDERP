@@ -492,7 +492,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private void btn_CopyGXJ_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(this.txt_InvoiceCusId.Text))
+            {
+                MessageBox.Show("客戶訂單號不能為空", "提示", MessageBoxButtons.OK);
                 return;
+            }
 
             CopyOpticsTest f = new CopyOpticsTest(this.txt_InvoiceCusId.Text);
             if (f.ShowDialog() == DialogResult.OK && f.List != null && f.List.Count > 0)

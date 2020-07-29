@@ -15,5 +15,7 @@ namespace Book.Model
     public partial class OpticsTest
     {
         public bool IsChecked { get; set; }
+
+        public string ProductName { get; set; }
     }
 }
