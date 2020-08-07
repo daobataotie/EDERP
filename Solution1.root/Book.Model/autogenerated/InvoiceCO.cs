@@ -493,7 +493,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 
+		/// 批號
 		/// </summary>
 		public string SupplierLotNumber
 		{

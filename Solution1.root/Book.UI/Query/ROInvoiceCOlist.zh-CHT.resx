@@ -132,9 +132,6 @@
   <data name="xrTableCell7.Text" xml:space="preserve">
     <value>預交日期</value>
   </data>
-  <data name="xrTableCell2.Text" xml:space="preserve">
-    <value>訂單交期</value>
-  </data>
   <data name="xrTableCell10.Text" xml:space="preserve">
     <value>商品名稱</value>
   </data>
@@ -155,5 +152,8 @@
   </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
     <value>金額</value>
+  </data>
+  <data name="xrTableCell15.Text" xml:space="preserve">
+    <value>批號</value>
   </data>
 </root>

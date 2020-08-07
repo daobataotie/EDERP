@@ -580,12 +580,12 @@ namespace Book.UI.Invoices.CO
             if (xo != null)
             {
                 this.textEditCustomerXOInvoiceId.Text = xo.CustomerInvoiceXOId;
-                this.txtSupplierLotNumber.Text = xo.CustomerLotNumber;
+                this.txtSupplierLotNumber.Text = string.IsNullOrEmpty(xo.CustomerLotNumber) ? this.invoice.SupplierLotNumber : xo.CustomerLotNumber;
             }
             else
             {
                 this.textEditCustomerXOInvoiceId.Text = string.Empty;
-                this.txtSupplierLotNumber.Text = string.Empty;
+                this.txtSupplierLotNumber.Text = this.invoice.SupplierLotNumber;
             }
             if (global::Helper.DateTimeParse.DateTimeEquls(this.invoice.InvoiceYjrq, global::Helper.DateTimeParse.NullDate))
             {

@@ -244,7 +244,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             int halfDays = 0;
             //请半天的日基数总和
             double halfDayFactors = 0;
-            //请半天的班别津贴
+            //请半天的班别津贴→餐费补贴
             double halfSpecialBonus = 0;
             //外劳请假天数
             double MigrantWorkerLeaveDays = 0;
@@ -260,7 +260,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             double hunSangChan = 0;
             //隔周休假
             double gezhouxiu = 0;
-            //公假 ，年假，出差 天数
+            //公假 ，年假，出差 ,国定假日天数
             double gnDays = 0;
             //周六天数
             int saturdays = 0;
@@ -545,12 +545,12 @@ namespace Book.UI.Hr.Salary.Salaryset
                 _ms.mMonthlyPay = mStrToDouble(dx_dr["MonthlyPay"]); //月工资
                 if (VPerson.vipPerson.Contains(emp.EmployeeId) || VPerson.specialEmp.Contains(emp.EmployeeId))
                 {
-                    _ms.mPostPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["PostPay"]), 0);  //職務津貼
+                    _ms.mPostPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["PostPay"]), 0);  //職務獎金
                 }
                 else if (emp.EmployeeJoinDate < Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) && (_ms.mLeaveDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + totalDay.ToString()) || _ms.mLeaveDate == global::Helper.DateTimeParse.NullDate))
                 {
                     //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) * _ms.mMonthFactor / totalDay, 0);  //责任津贴
-                    _ms.mPostPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["PostPay"]) * _ms.mMonthFactor / totalDay, 0);  //職務津貼
+                    _ms.mPostPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["PostPay"]) * _ms.mMonthFactor / totalDay, 0);  //職務獎金
                 }
                 if (VPerson.specialEmp.Contains(emp.EmployeeId))
                 {
@@ -587,6 +587,8 @@ namespace Book.UI.Hr.Salary.Salaryset
                      * J,O 的 gnDays 已经加上了国假天数
                      */
                     //2017-6-5 改O和普通员工一样，只有J才不扣国定假日
+                    //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
+                    //2018年10月6日00:25:02：外劳年终要扣国定假日
                     _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
 
                 } //责任津贴   新版改为出勤奖金 后改为 伙食津贴  现改为  津贴. 改 年终
