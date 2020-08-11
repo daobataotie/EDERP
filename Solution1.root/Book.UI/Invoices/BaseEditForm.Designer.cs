@@ -36,13 +36,13 @@ namespace Book.UI.Invoices
             this.barButtonItemSave = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemNew = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemUpdate = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItemDelete = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemQuery = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemFirst = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemPrev = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemNext = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemLast = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemPrint = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemDelete = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemAudit = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemAttachment = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -94,14 +94,14 @@ namespace Book.UI.Invoices
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemSave, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemNew, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemUpdate, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemDelete, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemQuery, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemFirst, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemPrev, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemNext, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemLast, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemPrint, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemDelete, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemAudit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemPrint, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItemAttachment, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DisableClose = true;
@@ -140,14 +140,6 @@ namespace Book.UI.Invoices
             this.barButtonItemUpdate.ImageIndex = 3;
             this.barButtonItemUpdate.Name = "barButtonItemUpdate";
             this.barButtonItemUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // barButtonItemDelete
-            // 
-            resources.ApplyResources(this.barButtonItemDelete, "barButtonItemDelete");
-            this.barButtonItemDelete.Id = 12;
-            this.barButtonItemDelete.ImageIndex = 1;
-            this.barButtonItemDelete.Name = "barButtonItemDelete";
-            this.barButtonItemDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemDelete_ItemClick);
             // 
             // barButtonItemQuery
             // 
@@ -196,6 +188,14 @@ namespace Book.UI.Invoices
             this.barButtonItemPrint.ImageIndex = 7;
             this.barButtonItemPrint.Name = "barButtonItemPrint";
             this.barButtonItemPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemPrint_ItemClick);
+            // 
+            // barButtonItemDelete
+            // 
+            resources.ApplyResources(this.barButtonItemDelete, "barButtonItemDelete");
+            this.barButtonItemDelete.Id = 12;
+            this.barButtonItemDelete.ImageIndex = 1;
+            this.barButtonItemDelete.Name = "barButtonItemDelete";
+            this.barButtonItemDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemDelete_ItemClick);
             // 
             // barButtonItemAudit
             // 
