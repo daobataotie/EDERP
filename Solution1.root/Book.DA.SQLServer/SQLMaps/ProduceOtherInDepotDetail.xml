@@ -80,5 +80,11 @@ WHERE po.ProduceOtherInDepotDate BETWEEN #startdate# AND #enddate# and $sql$
       ]]>
     </select>
 
+    <select  id="IsExistsByCompactId" resultClass="double" parameterClass="string">
+      <![CDATA[
+      select case when exists(select * from ProduceOtherInDepotDetail where ProduceOtherCompactId=#value#) then 1 else 0 end
+      ]]>
+    </select>
+
   </statements>
 </sqlMap>

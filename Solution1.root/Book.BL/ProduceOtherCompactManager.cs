@@ -28,6 +28,10 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
+
+            if (new BL.ProduceOtherInDepotDetailManager().IsExistsByCompactId(produceOtherCompactId))
+                throw new InvalidOperationException("單據已入庫，請先刪除對應的委外入庫單");
+
             accessor.Delete(produceOtherCompactId);
         }
         public void Delete(Model.ProduceOtherCompact produceOtherCompact)
@@ -35,7 +39,7 @@ namespace Book.BL
             //
             // todo:add other logic here
             //
-            accessor.Delete(produceOtherCompact.ProduceOtherCompactId);
+            Delete(produceOtherCompact.ProduceOtherCompactId);
         }
         public Model.ProduceOtherCompact GetDetails(string produceOtherCompactId)
         {

@@ -113,6 +113,11 @@ namespace Book.DA.SQLServer
 
             return sqlmapper.QueryForObject<double>("ProduceOtherInDepotDetail.SelectHasInQty", ht);
         }
+
+        public bool IsExistsByCompactId(string produceOtherCompactDetailId)
+        {
+            return sqlmapper.QueryForObject<bool>("ProduceOtherInDepotDetail.IsExistsByCompactId", produceOtherCompactDetailId);
+        }
     }
 
 }

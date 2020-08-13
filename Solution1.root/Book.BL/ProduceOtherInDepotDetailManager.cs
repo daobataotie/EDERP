@@ -78,6 +78,11 @@ namespace Book.BL
         {
             return accessor.SelectHasInQty(produceOtherCompactDetailId, produceOtherInDepotId);
         }
+
+        public bool IsExistsByCompactId(string produceOtherCompactDetailId)
+        {
+            return accessor.IsExistsByCompactId(produceOtherCompactDetailId);
+        }
     }
 }
 

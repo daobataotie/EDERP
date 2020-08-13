@@ -641,7 +641,7 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                     break;
                 case "gridColumn15":    //未到货数量，订单数量-截止到该入库单所有已进货数量
                     double hasInQty = produceOtherInDepotDetailManager.SelectHasInQty(detail.ProduceOtherCompactDetailId, detail.ProduceOtherInDepotId);
-                    double noInQty = detail.OrderQuantity.Value - hasInQty;
+                    double noInQty = detail.OrderQuantity.HasValue ? detail.OrderQuantity.Value - hasInQty : 0;
 
                     e.DisplayText = (noInQty < 0 ? 0 : noInQty).ToString();
                     break;
