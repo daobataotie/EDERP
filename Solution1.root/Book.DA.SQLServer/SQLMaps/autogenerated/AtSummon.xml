@@ -20,6 +20,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="AuditEmpId" column="AuditEmpId" />
       <result property="AuditState" column="AuditState" />
       <result property="AtSummonDesc" column="AtSummonDesc" />
+      <result property="InvoiceCGId" column="InvoiceCGId"/>
+      <result property="InvoiceXSId" column="InvoiceXSId"/>
       <result property="Department" column="DepartmentId" lazyLoad="false" select="Department.select_by_primary_key" />
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="EmployeeDS" column="EmployeeDSId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -116,7 +118,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[EmployeeDSId],
 				[AuditEmpId],
 				[AuditState],
-				[AtSummonDesc]
+				[AtSummonDesc],
+        [InvoiceCGId],
+        [InvoiceXSId]
 			FROM
 				[dbo].[AtSummon]
 			WHERE
@@ -180,7 +184,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[EmployeeDSId],
 				[AuditEmpId],
 				[AuditState],
-				[AtSummonDesc]
+				[AtSummonDesc],
+        [InvoiceCGId],
+        [InvoiceXSId]
 			) 
 			VALUES 
 			(
@@ -197,7 +203,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#EmployeeDSId#,
 				#AuditEmpId#,
 				#AuditState#,
-				#AtSummonDesc#
+				#AtSummonDesc#,
+        #InvoiceCGId#,
+        #InvoiceXSId#
 			)
              ]]>
     </insert>
@@ -217,7 +225,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[EmployeeDSId] = #EmployeeDSId#,
 				[AuditEmpId] = #AuditEmpId#,
 				[AuditState] = #AuditState#,
-				[AtSummonDesc] = #AtSummonDesc#
+				[AtSummonDesc] = #AtSummonDesc#,
+        [InvoiceCGId] = #InvoiceCGId#,
+        [InvoiceXSId] = #InvoiceXSId#
 			WHERE
 				[SummonId] = #SummonId#
                     ]]>

@@ -96,6 +96,11 @@ namespace Book.Model
 		/// 员工
 		/// </summary>
 		private Employee _employeeDS;
+
+        private string _invoiceCGId;
+
+        private string _invoiceXSId;
+
 		 
 		#endregion
 		
@@ -354,8 +359,21 @@ namespace Book.Model
 			{
 				this._employeeDS = value;
 			}
-			
-		}
+
+        }
+
+        public string InvoiceCGId
+        {
+            get { return _invoiceCGId; }
+            set { _invoiceCGId = value; }
+        }
+
+        public string InvoiceXSId
+        {
+            get { return _invoiceXSId; }
+            set { _invoiceXSId = value; }
+        }
+
 		/// <summary>
 		/// 传票编号
 		/// </summary>
@@ -425,7 +443,10 @@ namespace Book.Model
 		/// 
 		/// </summary>
 		public readonly static string PRO_AtSummonDesc = "AtSummonDesc";
-		
+
+        public readonly static string PRO_InvoiceCGId = "InvoiceCGId";
+
+        public readonly static string PRO_InvoiceXSId = "InvoiceXSId";
 
 		#endregion
 	}

@@ -160,7 +160,7 @@
             this.spinEditCreditTotal.Name = "spinEditCreditTotal";
             this.spinEditCreditTotal.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.spinEditCreditTotal.Properties.DisplayFormat.FormatString = "0";
+            this.spinEditCreditTotal.Properties.DisplayFormat.FormatString = "0.##";
             this.spinEditCreditTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.spinEditCreditTotal.StyleController = this.layoutControl1;
             // 
@@ -170,7 +170,7 @@
             this.spinEditTotalDebits.Name = "spinEditTotalDebits";
             this.spinEditTotalDebits.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.spinEditTotalDebits.Properties.DisplayFormat.FormatString = "0";
+            this.spinEditTotalDebits.Properties.DisplayFormat.FormatString = "0.##";
             this.spinEditTotalDebits.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.spinEditTotalDebits.StyleController = this.layoutControl1;
             // 
@@ -297,7 +297,7 @@
             // 
             resources.ApplyResources(this.colJinE, "colJinE");
             this.colJinE.ColumnEdit = this.repositoryItemSpinEdit1;
-            this.colJinE.DisplayFormat.FormatString = "0";
+            this.colJinE.DisplayFormat.FormatString = "0.##";
             this.colJinE.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colJinE.FieldName = "AMoney";
             this.colJinE.Name = "colJinE";

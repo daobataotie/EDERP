@@ -35,6 +35,7 @@ namespace Book.UI.Invoices.XS
         private Model.InvoiceXSDetail xsdetail;
         public static double sum = 0;
         public static Dictionary<string, Model.InvoiceXSDetail> dic = new Dictionary<string, InvoiceXSDetail>();
+        BL.AtAccountSubjectManager atAccountSubjectManager = new Book.BL.AtAccountSubjectManager();
 
         /// <summary>
         ///0 免税 1 外加 -1 内含
@@ -266,13 +267,34 @@ namespace Book.UI.Invoices.XS
             if (this.date_Shipment.EditValue != null)
                 invoice.ShipmentDate = this.date_Shipment.DateTime;
 
+            if (invoice.Customer == null)
+                throw new Helper.RequireValueException("Company");
+
+            Dictionary<string, string> dicSubject = new Dictionary<string, string>();
+            dicSubject.Add(string.Format("應收賬款-{0}", invoice.Customer.CustomerShortName),null);
+            dicSubject.Add("銷貨收入", null);
+            dicSubject.Add("銷項稅額", null);
+            for (int i = 0; i < dicSubject.Count; i++)
+            {
+                string key = dicSubject.Keys.ToArray()[i];
+                string value = atAccountSubjectManager.GetSubjectIdByName(key);
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
+                }
+
+                dicSubject[key] = value;
+            }
+
             switch (this.action)
             {
                 case "insert":
                     this.invoiceManager.Insert(invoice);
+                    this.invoiceManager.InsertAtSummon(invoice, dicSubject);
                     break;
                 case "update":
                     this.invoiceManager.Update(invoice);
+                    this.invoiceManager.UpdateAtSummon(invoice, dicSubject);
                     break;
             }
         }
@@ -310,6 +332,8 @@ namespace Book.UI.Invoices.XS
                 return;
 
             this.invoiceManager.TurnNull(invoice.InvoiceId);
+            this.invoiceManager.DeleteAtSummon(invoice);
+
             invoice = this.invoiceManager.GetNext(invoice);
             if (invoice == null)
             {

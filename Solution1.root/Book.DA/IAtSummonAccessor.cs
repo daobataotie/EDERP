@@ -23,6 +23,10 @@ namespace Book.DA
         bool IsExistsIdUpdate(Model.AtSummon model);
 
         IList<Model.AtSummon> SelectByCondition(DateTime startDate, DateTime endDate, string startId, string endId, string StartSubjectId, string EndSubjectId);
+
+        Model.AtSummon GetByInvoiceCGId(string invoiceCGId);
+
+        Model.AtSummon GetByInvoiceXSId(string invoiceXSId);
     }
 }
 

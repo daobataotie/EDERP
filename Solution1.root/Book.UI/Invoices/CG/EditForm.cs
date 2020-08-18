@@ -32,6 +32,7 @@ namespace Book.UI.Invoices.CG
         Model.InvoiceCGDetail cgdetail;
         IList<Model.DepotPosition> DepotPositionList = null;
         private BL.PCOtherCheckDetailManager pcOtherCheckDetailManager = new Book.BL.PCOtherCheckDetailManager();
+        BL.AtAccountSubjectManager atAccountSubjectManager = new Book.BL.AtAccountSubjectManager();
 
 
         //0 免税 1 外加 -1 内含
@@ -394,14 +395,39 @@ namespace Book.UI.Invoices.CG
             invoicecg.InvoiceDiscount = this.spinEditInvoiceZKE.Value;
             invoicecg.InvoicePayable = decimal.Parse(string.IsNullOrEmpty(this.spinEditInvoiceOwed.Text) ? "0" : this.spinEditInvoiceOwed.Text);
 
+
+            if (invoicecg.Supplier == null)
+                throw new Helper.RequireValueException("Company");
+
+            Dictionary<string, string> dicSubject = new Dictionary<string, string>();
+            dicSubject.Add("進貨", null);
+            dicSubject.Add("進項稅額", null);
+            dicSubject.Add(string.Format("應付賬款-{0}", invoicecg.Supplier.SupplierShortName), null);
+
+            for (int i = 0; i < dicSubject.Count; i++)
+            {
+                string key = dicSubject.Keys.ToArray()[i];
+                string value = atAccountSubjectManager.GetSubjectIdByName(key);
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
+                }
+
+                dicSubject[key] = value;
+            }
+
             switch (this.action)
             {
                 case "insert":
                     this.invoiceManager.Insert(invoicecg);
+
+                    this.invoiceManager.InsertAtSummon(invoicecg, dicSubject);
                     break;
 
                 case "update":
                     this.invoiceManager.Update(invoicecg);
+
+                    this.invoiceManager.UpdateAtSummon(invoicecg, dicSubject);
                     break;
             }
             this.gridControl1.RefreshDataSource();
@@ -448,6 +474,8 @@ namespace Book.UI.Invoices.CG
                 return;
 
             this.invoiceManager.TurnNull(invoicecg.InvoiceId);
+            this.invoiceManager.DeleteAtSummon(invoicecg);
+
             invoicecg = this.invoiceManager.GetNext(invoicecg);
             if (invoicecg == null)
             {

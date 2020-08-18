@@ -19,6 +19,8 @@ namespace Book.DA
         // void UpdateDataTable(Model.AtAccountSubject accountSubject);
 
         IList<Model.AtAccountSubject> selectById(string startid, string endid);
+
+        string GetSubjectIdByName(string name);
     }
 }
 

@@ -41,5 +41,10 @@ namespace Book.DA.SQLServer
             ht.Add("endid", endid);
             return sqlmapper.QueryForList<Model.AtAccountSubject>("AtAccountSubject.selectById", ht);
         }
+
+        public string GetSubjectIdByName(string name)
+        {
+            return sqlmapper.QueryForObject<string>("AtAccountSubject.GetSubjectIdByName", name);
+        }
     }
 }

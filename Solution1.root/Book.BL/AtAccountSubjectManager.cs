@@ -88,6 +88,11 @@ namespace Book.BL
             return accessor.selectById(startid, endid);
         }
 
+        public string GetSubjectIdByName(string name)
+        {
+            return accessor.GetSubjectIdByName(name);
+        }
+
         //public void UpdateDataTable(Model.AtAccountSubject accountSubject)
         //{
         //    accessor.UpdateDataTable(accountSubject);

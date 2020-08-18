@@ -26,5 +26,17 @@
       select * from AtSummon where 1=1 $sql$
       ]]>
     </select>
+
+    <select id="GetByInvoiceCGId" resultMap="AtSummonResult" parameterClass="string">
+      <![CDATA[
+      select * from AtSummon where InvoiceCGId=#value#
+      ]]>
+    </select>
+
+    <select id="GetByInvoiceXSId" resultMap="AtSummonResult" parameterClass="string">
+      <![CDATA[
+      select * from AtSummon where InvoiceXSId=#value#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

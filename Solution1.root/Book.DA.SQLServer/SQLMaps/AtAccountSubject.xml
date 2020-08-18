@@ -8,5 +8,11 @@
       ORDER BY id ASC
       ]]>
     </select>
+
+    <select id="GetSubjectIdByName" resultClass="string" parameterClass="string">
+      <![CDATA[
+      select SubjectId from AtAccountSubject where SubjectName=#value#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

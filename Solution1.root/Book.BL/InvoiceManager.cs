@@ -156,11 +156,9 @@ namespace Book.BL
             get { return _invoiceName; }
             set { _invoiceName = value; }
         }
+
         public void Insert(Model.Invoice invoice)
         {
-
-
-
             _ValidateForInsert(invoice);
             //MethodInfo methodinfo = this.GetType().GetMethod("HasRows", new Type[] { typeof(string) });
             //bool f = (bool)methodinfo.Invoke(this, new object[] { invoice.InvoiceId });
@@ -208,8 +206,8 @@ namespace Book.BL
                     invoice.AuditState = (int)global::Helper.InvoiceAudit.NoUsing;
 
 
-
                 _Insert(invoice);
+
                 string invoiceKind = this.GetInvoiceKind().ToLower();
                 string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, invoice.InsertTime.Value.Year);
                 string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, invoice.InsertTime.Value.Year, invoice.InsertTime.Value.Month);

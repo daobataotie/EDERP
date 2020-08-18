@@ -84,7 +84,7 @@ namespace Book.UI.Accounting.AtAccountSubject
                 this.AddNew();
                 this.action = "insert";
             }
-            else if (this.AtAccountSubject != null)
+            else if (this.AtAccountSubject != null && this.action == "view")
             {
                 this.AtAccountSubject = this.AtAccountSubjectManager.Get(this.AtAccountSubject.SubjectId);
             }

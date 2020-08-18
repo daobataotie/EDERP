@@ -146,6 +146,7 @@ namespace Book.UI.Invoices
             return null;
         }
 
+        //不用，真正删除是TurnNull()
         protected virtual void Delete()
         {
 

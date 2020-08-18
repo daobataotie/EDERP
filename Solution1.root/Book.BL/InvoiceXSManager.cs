@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Book.BL
 {
@@ -23,6 +24,9 @@ namespace Book.BL
         private BL.InvoiceXOManager invoiceXOManager = new InvoiceXOManager();
         private static readonly DA.IStockAccessor stockAccessor = (DA.IStockAccessor)Accessors.Get("StockAccessor");
         private ProductManager productManager = new ProductManager();
+        BL.AtSummonManager atSummonManager = new Book.BL.AtSummonManager();
+        private static readonly DA.IAtSummonAccessor atSummonAccessor = (DA.IAtSummonAccessor)Accessors.Get("AtSummonAccessor");
+        BL.AtSummonDetailManager atSummonDetailManager = new Book.BL.AtSummonDetailManager();
 
         #region Select
 
@@ -355,6 +359,152 @@ namespace Book.BL
         {
             return accessor.SelectByInvoiceCusID(ID);
         }
+
+
+        #region 生成对应的会计传票
+
+        public void InsertAtSummon(Model.InvoiceXS invoice, Dictionary<string, string> dic)
+        {
+            Model.AtSummon atSummon = new Book.Model.AtSummon();
+            atSummon.SummonId = Guid.NewGuid().ToString();
+            atSummon.SummonDate = DateTime.Now;
+            atSummon.SummonCategory = "轉帳傳票";
+            atSummon.InsertTime = DateTime.Now;
+            atSummon.UpdateTime = DateTime.Now;
+            atSummon.Id = this.atSummonManager.GetId();
+            atSummon.InvoiceXSId = invoice.InvoiceId;
+
+            atSummon.Details = new List<Model.AtSummonDetail>();
+
+            Model.AtSummonDetail detail1 = new Model.AtSummonDetail();
+            detail1.SummonDetailId = Guid.NewGuid().ToString();
+            detail1.SummonCatetory = atSummon.SummonCategory;
+            detail1.Lending = "借";
+            detail1.AMoney = invoice.InvoiceTotal;
+            detail1.SubjectId = dic[string.Format("應收賬款-{0}", invoice.Customer.CustomerShortName)];
+            detail1.InsertTime = DateTime.Now;
+            detail1.UpdateTime = DateTime.Now;
+            atSummon.Details.Add(detail1);
+            
+            Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
+            detail2.SummonDetailId = Guid.NewGuid().ToString();
+            detail2.SummonCatetory = atSummon.SummonCategory;
+            detail2.Lending = "貸";
+            detail2.AMoney = invoice.InvoiceHeji;
+            detail2.SubjectId = dic["銷貨收入"];
+            detail2.InsertTime = DateTime.Now;
+            detail2.UpdateTime = DateTime.Now;
+            atSummon.Details.Add(detail2);
+
+            Model.AtSummonDetail detail3 = new Model.AtSummonDetail();
+            detail3.SummonDetailId = Guid.NewGuid().ToString();
+            detail3.SummonCatetory = atSummon.SummonCategory;
+            detail3.Lending = "貸";
+            detail3.AMoney = invoice.InvoiceTax;
+            detail3.SubjectId = dic["銷項稅額"];
+            detail3.InsertTime = DateTime.Now;
+            detail3.UpdateTime = DateTime.Now;
+            atSummon.Details.Add(detail3);
+
+
+            foreach (var item in atSummon.Details)
+            {
+                if (item.Lending == "借")
+                    item.Id = "A" + atSummon.Details.IndexOf(item);
+                else
+                    item.Id = "B" + atSummon.Details.IndexOf(item);
+            }
+
+
+            //插入
+            string invoiceKind = "ats"; 
+            string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, atSummon.SummonDate.Value.Year);
+            string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, atSummon.SummonDate.Value.Year, atSummon.SummonDate.Value.Month);
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, atSummon.SummonDate.Value.ToString("yyyy-MM-dd"));
+            string sequencekey = string.Format(invoiceKind);
+
+            SequenceManager.Increment(sequencekey_y);
+            SequenceManager.Increment(sequencekey_m);
+            SequenceManager.Increment(sequencekey_d);
+            SequenceManager.Increment(sequencekey);
+
+            atSummon.TotalDebits = atSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
+            atSummon.CreditTotal = atSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
+
+            atSummonAccessor.Insert(atSummon);
+
+            foreach (Model.AtSummonDetail atSummonDetail in atSummon.Details)
+            {
+                atSummonDetail.SummonId = atSummon.SummonId;
+                atSummonDetailManager.Insert(atSummonDetail);
+            }
+        }
+
+        public void UpdateAtSummon(Model.InvoiceXS invoice, Dictionary<string, string> dic)
+        {
+            Model.AtSummon atSummon = atSummonManager.GetByInvoiceXSId(invoice.InvoiceId);
+            if (atSummon != null)
+            {
+                atSummon.UpdateTime = DateTime.Now;
+
+                atSummon.Details = atSummonDetailManager.Select(atSummon);
+
+                foreach (var item in atSummon.Details)
+                {
+                    if (dic.Values.Contains(item.SubjectId))
+                    {
+                        if (item.Lending == "貸")
+                        {
+                            if (item.Subject.SubjectName == "銷貨收入")
+                            {
+                                if (item.AMoney != invoice.InvoiceHeji)
+                                {
+                                    item.AMoney = invoice.InvoiceHeji;
+                                    item.UpdateTime = DateTime.Now;
+
+                                    atSummonDetailManager.Update(item);
+                                }
+                            }
+                            else       //銷項稅額
+                            {
+                                if (item.AMoney != invoice.InvoiceTax)
+                                {
+                                    item.AMoney = invoice.InvoiceTax;
+                                    item.UpdateTime = DateTime.Now;
+
+                                    atSummonDetailManager.Update(item);
+                                }
+                            }
+                        }
+                        else          //應收賬款-客戶
+                        {
+                            if (item.AMoney != invoice.InvoiceTotal)
+                            {
+                                item.AMoney = invoice.InvoiceTotal;
+                                item.UpdateTime = DateTime.Now;
+
+                                atSummonDetailManager.Update(item);
+                            }
+                        }
+                    }
+                }
+
+                atSummon.TotalDebits = atSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
+                atSummon.CreditTotal = atSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
+
+                atSummonAccessor.Update(atSummon);
+            }
+        }
+
+        public void DeleteAtSummon(Model.InvoiceXS invoice)
+        {
+            Model.AtSummon atSummon = atSummonManager.GetByInvoiceXSId(invoice.InvoiceId);
+            if (atSummon != null)
+            {
+                atSummonManager.Delete(atSummon);
+            }
+        }
+        #endregion
     }
 }
 

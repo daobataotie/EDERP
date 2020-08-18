@@ -1,4 +1,4 @@
-﻿ //------------------------------------------------------------------------------
+﻿//------------------------------------------------------------------------------
 //
 // file name：AtSummonManager.cs
 // author: mayanjun
@@ -206,6 +206,16 @@ namespace Book.BL
         public IList<Model.AtSummon> SelectByCondition(DateTime startDate, DateTime endDate, string startId, string endId, string StartSubjectId, string EndSubjectId)
         {
             return accessor.SelectByCondition(startDate, endDate, startId, endId, StartSubjectId, EndSubjectId);
+        }
+
+        public Model.AtSummon GetByInvoiceCGId(string invoiceCGId)
+        {
+            return accessor.GetByInvoiceCGId(invoiceCGId);
+        }
+
+        public Model.AtSummon GetByInvoiceXSId(string invoiceXSId)
+        {
+            return accessor.GetByInvoiceXSId(invoiceXSId);
         }
     }
 }

@@ -62,5 +62,15 @@ namespace Book.DA.SQLServer
 
             return sqlmapper.QueryForList<Model.AtSummon>("AtSummon.SelectByCondition", sql.ToString());
         }
+
+        public Model.AtSummon GetByInvoiceCGId(string invoiceCGId)
+        {
+            return sqlmapper.QueryForObject<Model.AtSummon>("AtSummon.GetByInvoiceCGId", invoiceCGId);
+        }
+
+        public Model.AtSummon GetByInvoiceXSId(string invoiceXSId)
+        {
+            return sqlmapper.QueryForObject<Model.AtSummon>("AtSummon.GetByInvoiceXSId", invoiceXSId);
+        }
     }
 }
