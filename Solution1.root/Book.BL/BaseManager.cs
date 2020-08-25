@@ -161,6 +161,11 @@ namespace Book.BL
             return entityAccessor.UpdateSql(sql);
         }
 
+        public object QueryObject(string sql)
+        {
+            return entityAccessor.QueryObject(sql, 30);
+        }
+
         public DateTime? JudgeHasNewVersion<T>(T objTarget, string PrimaryKeyId)
         {
             return entityAccessor.JudgeHasNewVersion<T>(objTarget, PrimaryKeyId);
@@ -171,7 +176,7 @@ namespace Book.BL
         }
         public SqlDataReader ExecuteReader(string SQLString, params SqlParameter[] cmdParms)
         {
-            return entityAccessor.ExecuteReader( SQLString,  cmdParms);
+            return entityAccessor.ExecuteReader(SQLString, cmdParms);
         }
         public DataSet QueryProc(string procName, SqlParameter[] pars, string tabelName)
         {

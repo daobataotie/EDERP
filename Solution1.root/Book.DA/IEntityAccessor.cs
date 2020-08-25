@@ -55,6 +55,8 @@ namespace Book.DA
 
         int UpdateSql(string sql);
 
+        object QueryObject(string sql, int Times);
+
         DateTime? JudgeHasNewVersion<T>(T entity,string PrimaryKeyId);
         DataSet Query(string SQLString, int Times, string tabelName);
         SqlDataReader ExecuteReader(string SQLString, params SqlParameter[] cmdParms);

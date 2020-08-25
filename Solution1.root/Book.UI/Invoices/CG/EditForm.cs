@@ -410,7 +410,34 @@ namespace Book.UI.Invoices.CG
                 string value = atAccountSubjectManager.GetSubjectIdByName(key);
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
+                    if (i != 2)
+                        throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
+
+                    try
+                    {
+                        BL.V.BeginTransaction();
+                        //Model.AtAccountSubject atAccountSubject = new Model.AtAccountSubject();
+                        //atAccountSubject.SubjectId = Guid.NewGuid().ToString();
+                        //atAccountSubject.SubjectName = key;
+                        //atAccountSubject.AccountingCategoryId = "31c7baf9-c21d-4075-8738-ebbaedd1c000";
+                        //atAccountSubject.TheLending = "貸";
+                        //atAccountSubject.TheBalance = 0;
+                        //atAccountSubject.InsertTime = DateTime.Now;
+                        //atAccountSubject.UpdateTime = DateTime.Now;
+                        //atAccountSubject.Id = "select cast((select top 1 cast(Id as int) from AtAccountSubject where left(Id,4)='2144' order by Id desc )+1 as varchar(20))";
+                        string subjectId = Guid.NewGuid().ToString();
+                        string insertSql = string.Format("insert into AtAccountSubject values('{0}','{1}','',null,'31c7baf9-c21d-4075-8738-ebbaedd1c000','貸','0',null,null,null,null,GETDATE(),GETDATE(),(select cast((select top 1 cast(Id as int) from AtAccountSubject where left(Id,4)='2144' order by Id desc )+1 as varchar(20))),null,null)", subjectId, key);
+
+                        this.invoiceManager.UpdateSql(insertSql);
+                        value = subjectId;
+
+                        BL.V.CommitTransaction();
+                    }
+                    catch
+                    {
+                        BL.V.RollbackTransaction();
+                        throw new Exception(string.Format("添加會計科目‘{0}’時出現錯誤，請聯繫管理員", key));
+                    }
                 }
 
                 dicSubject[key] = value;

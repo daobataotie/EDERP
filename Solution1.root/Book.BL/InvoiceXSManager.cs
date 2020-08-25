@@ -385,7 +385,7 @@ namespace Book.BL
             detail1.InsertTime = DateTime.Now;
             detail1.UpdateTime = DateTime.Now;
             atSummon.Details.Add(detail1);
-            
+
             Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
             detail2.SummonDetailId = Guid.NewGuid().ToString();
             detail2.SummonCatetory = atSummon.SummonCategory;
@@ -417,7 +417,7 @@ namespace Book.BL
 
 
             //插入
-            string invoiceKind = "ats"; 
+            string invoiceKind = "ats";
             string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, atSummon.SummonDate.Value.Year);
             string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, atSummon.SummonDate.Value.Year, atSummon.SummonDate.Value.Month);
             string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, atSummon.SummonDate.Value.ToString("yyyy-MM-dd"));

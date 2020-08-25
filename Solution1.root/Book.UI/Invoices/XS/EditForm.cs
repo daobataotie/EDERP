@@ -271,7 +271,7 @@ namespace Book.UI.Invoices.XS
                 throw new Helper.RequireValueException("Company");
 
             Dictionary<string, string> dicSubject = new Dictionary<string, string>();
-            dicSubject.Add(string.Format("應收賬款-{0}", invoice.Customer.CustomerShortName),null);
+            dicSubject.Add(string.Format("應收賬款-{0}", invoice.Customer.CustomerShortName), null);
             dicSubject.Add("銷貨收入", null);
             dicSubject.Add("銷項稅額", null);
             for (int i = 0; i < dicSubject.Count; i++)
@@ -280,7 +280,50 @@ namespace Book.UI.Invoices.XS
                 string value = atAccountSubjectManager.GetSubjectIdByName(key);
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
+                    if (i != 0)
+                        throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
+
+                    try
+                    {
+                        BL.V.BeginTransaction();
+
+                        string subjectId = Guid.NewGuid().ToString();
+
+                        string getIdSql = "select top 1 Id from AtAccountSubject where left(Id,4)='4101' order by Id desc";
+                        object oid = this.invoiceManager.QueryObject(getIdSql);
+                        string id = oid == null ? "0" : oid.ToString();
+                        string newId = "";
+                        int number = Convert.ToInt32(id.Substring(5, 2)) + 1;
+                        if (number == 99)
+                        {
+                            if (id.ToUpper().Contains("A"))
+                                newId = "4101B00";
+                            else if (id.ToUpper().Contains("B"))
+                                newId = "4101C00";
+                            else if (id.ToUpper().Contains("C"))
+                                newId = "4101D00";
+                            else if (id.ToUpper().Contains("D"))
+                                newId = "4101E00";
+                            else if (id.ToUpper().Contains("E"))
+                                newId = "4101F00";
+                        }
+                        else
+                        {
+                            newId = id.Substring(0, 5) + (number > 9 ? number.ToString() : "0" + number.ToString());
+                        }
+
+                        string insertSql = string.Format("insert into AtAccountSubject values('{0}','{1}','',null,'2fc7e68c-3153-4862-b7fe-5c8e517ed1c9','借','0',null,null,null,null,GETDATE(),GETDATE(),'{2}',null,null)", subjectId, key, newId);
+
+                        this.invoiceManager.UpdateSql(insertSql);
+                        value = subjectId;
+
+                        BL.V.CommitTransaction();
+                    }
+                    catch
+                    {
+                        BL.V.RollbackTransaction();
+                        throw new Exception(string.Format("添加會計科目‘{0}’時出現錯誤，請聯繫管理員", key));
+                    }
                 }
 
                 dicSubject[key] = value;
