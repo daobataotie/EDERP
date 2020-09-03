@@ -217,6 +217,16 @@ namespace Book.BL
         {
             return accessor.GetByInvoiceXSId(invoiceXSId);
         }
+
+        public Model.AtSummon GetByShouldPayAccountId(string shouldPayAccountId)
+        {
+            return accessor.GetByShouldPayAccountId(shouldPayAccountId);
+        }
+
+        public Model.AtSummon SelectById(string id)
+        {
+            return accessor.SelectById(id);
+        }
     }
 }
 

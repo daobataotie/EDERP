@@ -49,9 +49,15 @@ namespace Book.BL
             //
             accessor.Update(produceOtherCompactDetail);
         }
+
         public IList<Book.Model.ProduceOtherCompactDetail> Select(Model.ProduceOtherCompact produceOtherCompact)
         {
             return accessor.Select(produceOtherCompact);
+        }
+
+        public IList<Book.Model.ProduceOtherCompactDetail> Select(string produceOtherCompactId)
+        {
+            return accessor.Select(produceOtherCompactId);
         }
 
         public IList<Book.Model.ProduceOtherCompactDetail> SelectIsInDepot(Model.ProduceOtherCompact produceOtherCompact)

@@ -39,7 +39,7 @@ namespace Book.UI.produceManager.ProduceOtherCompact
             //}
 
 
-            this.DataSource = this.produceOtherCompact.Details;
+            //this.DataSource = this.produceOtherCompact.Details;
             //CompanyInfo
             this.xrLabelCompanyInfoName.Text = BL.Settings.CompanyChineseName;
             this.xrLabelDataName.Text = Properties.Resources.ProduceOtherCompactDetail;
@@ -103,17 +103,9 @@ namespace Book.UI.produceManager.ProduceOtherCompact
 
             this.lbl_MRPId.Text = this.produceOtherCompact.MRSHeaderId;
 
-            //明细
-            // this.xrTableCellProductId.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_Id);
-            this.xrTableCellProductName.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductName);
-            this.xrTableCellUnit.DataBindings.Add("Text", this.DataSource, Model.ProduceOtherCompactDetail.PRO_ProductUnit);
-            this.xrTableCellOtherCompactSum.DataBindings.Add("Text", this.DataSource, Model.ProduceOtherCompactDetail.PRO_OtherCompactCount);
-            // this.xrTableCellStock.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_StocksQuantity,"{0:0.####}");
-            //this.xrTableCell5.DataBindings.Add("Text", this.DataSource, "Product." + Model.Product.PRO_ProductSpecification);
-            this.xrTableJiaoQi.DataBindings.Add("Text", this.DataSource, Model.ProduceOtherCompactDetail.PRO_JiaoQi, "{0:yyyy-MM-dd}");
-            this.xrTableDesc.DataBindings.Add("Text", this.DataSource, Model.ProduceOtherCompactDetail.PRO_Description);
-            this.TCNextWorkHouse.DataBindings.Add("Text", this.DataSource, "WorkHouseNext." + Model.WorkHouse.PROPERTY_WORKHOUSENAME);
-            this.xrRichText1.DataBindings.Add("Rtf", this.DataSource, "ProductDesc");
+
+            this.xrSubreport1.ReportSource = new RoSub_Zhujian(produceOtherCompactId);
+            this.xrSubreport2.ReportSource = new RoSub_Zijian(produceOtherCompactId);
         }
 
         private void CreateTagLable(string tag)

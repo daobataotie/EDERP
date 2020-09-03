@@ -38,5 +38,17 @@
       select * from AtSummon where InvoiceXSId=#value#
       ]]>
     </select>
+  
+   <select id="GetByShouldPayAccountId" resultMap="AtSummonResult" parameterClass="string">
+      <![CDATA[
+      select * from AtSummon where ShouldPayAccountId=#value#
+      ]]>
+    </select>
+
+    <select id="SelectById"  resultMap="AtSummonResult" parameterClass="string">
+      <![CDATA[
+      select top 1 * from AtSummon where Id=#value#
+      ]]>
+    </select>
   </statements>
 </sqlMap>

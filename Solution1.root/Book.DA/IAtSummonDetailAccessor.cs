@@ -32,6 +32,7 @@ namespace Book.DA
         bool IsExistsDetailForUpdate(string SummonDetailId, string SummonCatetory, string Lending, string SubjectId, decimal AMoney);
         DataTable GetByDate(DateTime startDate, DateTime endDate);
         decimal SelectYEByDate(DateTime date);
+        IList<Model.AtSummonDetail> SelectByDateRangeAndSummary(DateTime startDate, DateTime endDate, string summary);
     }
 }
 

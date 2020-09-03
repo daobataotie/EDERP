@@ -18,6 +18,7 @@ namespace Book.DA
     public partial interface IProduceOtherCompactDetailAccessor : IAccessor
     {
         IList<Book.Model.ProduceOtherCompactDetail> Select(Model.ProduceOtherCompact produceOtherCompact);
+        IList<Book.Model.ProduceOtherCompactDetail> Select(string produceOtherCompactId);
         IList<Book.Model.ProduceOtherCompactDetail> SelectIsInDepot(Model.ProduceOtherCompact produceOtherCompact);
         double GetByMPSdetail(string mPSDetailId);
         IList<Book.Model.ProduceOtherCompactDetail> Select(string customerStart, string customerEnd, DateTime dateStart, DateTime dateEnd);

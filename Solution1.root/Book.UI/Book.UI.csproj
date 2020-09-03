@@ -3625,6 +3625,9 @@
       <DependentUpon>List.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\AtSummon\ListConditionForm.resx">
+      <DependentUpon>ListConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\AtSummon\ListForm.resx">
       <DependentUpon>ListForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4544,6 +4547,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm.resx">
       <DependentUpon>ThicknessTestCopyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProduceOtherCompact\RoSub_Zhujian.resx">
+      <DependentUpon>RoSub_Zhujian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProduceOtherCompact\RoSub_Zhujian.zh-CHT.resx">
+      <DependentUpon>RoSub_Zhujian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProduceOtherCompact\RoSub_Zijian.resx">
+      <DependentUpon>RoSub_Zijian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\ProduceOtherCompact\RoSub_Zijian.zh-CHT.resx">
+      <DependentUpon>RoSub_Zijian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Query\CustomerShipment.resx">
       <DependentUpon>CustomerShipment.cs</DependentUpon>
@@ -11720,6 +11735,12 @@
     <Compile Include="Accounting\AtSummon\List.Designer.cs">
       <DependentUpon>List.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\AtSummon\ListConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\AtSummon\ListConditionForm.Designer.cs">
+      <DependentUpon>ListConditionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\AtSummon\ListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12048,6 +12069,18 @@
     </Compile>
     <Compile Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm.Designer.cs">
       <DependentUpon>ThicknessTestCopyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\ProduceOtherCompact\RoSub_Zijian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\ProduceOtherCompact\RoSub_Zijian.Designer.cs">
+      <DependentUpon>RoSub_Zijian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\ProduceOtherCompact\RoSub_Zhujian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="produceManager\ProduceOtherCompact\RoSub_Zhujian.Designer.cs">
+      <DependentUpon>RoSub_Zhujian.cs</DependentUpon>
     </Compile>
     <Compile Include="Query\CustomerShipment.cs">
       <SubType>Form</SubType>

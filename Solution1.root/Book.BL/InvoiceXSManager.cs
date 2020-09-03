@@ -361,7 +361,7 @@ namespace Book.BL
         }
 
 
-        #region 生成对应的会计传票
+        #region 生成,修改,刪除对应的会计传票
 
         public void InsertAtSummon(Model.InvoiceXS invoice, Dictionary<string, string> dic)
         {

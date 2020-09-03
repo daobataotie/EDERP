@@ -53,11 +53,18 @@ namespace Book.BL
         {
             return accessor.SelectIsInDepotMaterialDetail(com);
         }
+        
         public IList<Model.ProduceOtherCompactMaterial> Select(Model.ProduceOtherCompact ProduceOtherCompact)
         {
             return accessor.Select(ProduceOtherCompact);
         
         }
+
+        public IList<Model.ProduceOtherCompactMaterial> Select(string ProduceOtherCompactId)
+        {
+            return accessor.Select(ProduceOtherCompactId);
+        }
+
         public IList<Model.ProduceOtherCompactMaterial> SelectCompactAndFlag(Model.ProduceOtherCompact ProduceOtherCompact)
         {
             return accessor.SelectCompactAndFlag(ProduceOtherCompact);

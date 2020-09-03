@@ -123,5 +123,12 @@
       SELECT CASE WHEN EXISTS (SELECT * FROM AtSummonDetail WHERE SummonCatetory=#SummonCatetory# AND Lending=#Lending# AND SubjectId=#SubjectId# AND AMoney=#AMoney# and SummonDetailId<>#SummonDetailId#) THEN 1 ELSE 0 end
       ]]>
     </select>
+
+    <select id="SelectByDateRangeAndSummary" resultMap="AtSummonDetailResult" parameterClass="Map">
+      <![CDATA[
+      select * from AtSummonDetail atd left join AtSummon at on atd.SummonId=at.SummonId where at.SummonDate between #startDate# and #endDate# and (atd.Summary like #summary#  or #summary#='%%')  order by at.SummonDate,at.SummonId
+      ]]>
+    </select>
+
   </statements>
 </sqlMap>

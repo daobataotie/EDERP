@@ -23,10 +23,17 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForList<Model.ProduceOtherCompactMaterial>("ProduceOtherCompactMaterial.selectIsInDepotMaterialDetail", com.ProduceOtherCompactId);
         }
+
         public IList<Model.ProduceOtherCompactMaterial> Select(Model.ProduceOtherCompact ProduceOtherCompact)
         {
             return sqlmapper.QueryForList<Model.ProduceOtherCompactMaterial>("ProduceOtherCompactMaterial.selectByOtherCompact", ProduceOtherCompact.ProduceOtherCompactId);
         }
+
+        public IList<Model.ProduceOtherCompactMaterial> Select(string ProduceOtherCompactId)
+        {
+            return sqlmapper.QueryForList<Model.ProduceOtherCompactMaterial>("ProduceOtherCompactMaterial.selectByOtherCompact", ProduceOtherCompactId);
+        }
+
         public IList<Model.ProduceOtherCompactMaterial> SelectCompactAndFlag(Model.ProduceOtherCompact ProduceOtherCompact)
         {
             return sqlmapper.QueryForList<Model.ProduceOtherCompactMaterial>("ProduceOtherCompactMaterial.selectByOtherCompactAndFlag", ProduceOtherCompact.ProduceOtherCompactId);

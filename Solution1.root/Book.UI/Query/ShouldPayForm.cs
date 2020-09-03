@@ -234,6 +234,7 @@ namespace Book.UI.Query
             this.nccSupplier.Enabled = false;
 
             this.btn_Search.Enabled = true;
+            this.spe_Total.Enabled = false;
         }
 
         protected override void Save()
@@ -379,6 +380,9 @@ namespace Book.UI.Query
             //this.AtBillsIncome.Mark = this.memoEditNote.Text;
             //this.AtBillsIncome.NotesAccount = this.txt_YFPMId.Text;
             //this.AtBillsIncome.ChuanPiaoId = this.txt_AtSummonId.Text;
+
+            string bankName = "";
+
             foreach (var item in this.atBillsIncomeList)
             {
                 item.IncomeCategory = "1";
@@ -393,7 +397,11 @@ namespace Book.UI.Query
                 if (string.IsNullOrEmpty(item.Id))
                     throw new Helper.MessageValueException("請輸入支票編號");
                 if ((this.bindingSourceBank.DataSource as List<Model.Bank>) != null)
+                {
                     item.Bank = (this.bindingSourceBank.DataSource as List<Model.Bank>).FirstOrDefault(d => d.BankId == item.BankId);
+
+                    bankName = item.Bank.BankName;
+                }
                 item.NotesAccount = item.Bank == null ? null : item.Bank.Id;
             }
 
@@ -416,6 +424,28 @@ namespace Book.UI.Query
             if (this.shouldPayAccount.ShouldPayAccountCondition == null && this.action == "insert")
                 throw new Helper.MessageValueException("請先查詢應付賬款明細表！");
 
+            string subjectName = string.Format("應付票據-{0}", (this.nccSupplier.EditValue as Model.Supplier) == null ? null : (this.nccSupplier.EditValue as Model.Supplier).SupplierShortName);
+            string subjectId = atAccountSubjectManager.GetSubjectIdByName(subjectName);
+
+            if (string.IsNullOrEmpty(subjectId))
+            {
+                try
+                {
+                    BL.V.BeginTransaction();
+                    subjectId = Guid.NewGuid().ToString();
+                    string insertSql = string.Format("insert into AtAccountSubject values('{0}','{1}','',null,'31c7baf9-c21d-4075-8738-ebbaedd1c000','借','0',null,null,null,null,GETDATE(),GETDATE(),(select cast((select top 1 cast(Id as int) from AtAccountSubject where left(Id,4)='2142' order by Id desc )+1 as varchar(20))),null,null)", subjectId, subjectName);
+
+                    this.atSummonManager.UpdateSql(insertSql);
+
+                    BL.V.CommitTransaction();
+                }
+                catch
+                {
+                    BL.V.RollbackTransaction();
+                    throw new Exception(string.Format("添加會計科目‘{0}’時出現錯誤，請聯繫管理員", subjectName));
+                }
+            }
+
             switch (this.action)
             {
                 case "insert":
@@ -423,12 +453,20 @@ namespace Book.UI.Query
                     new BL.ShouldPayAccountConditionManager().Insert(this.shouldPayAccount.ShouldPayAccountCondition);
                     this.manager.Insert(this.shouldPayAccount);
                     this.AtBillsIncomeManager.Insert(this.atBillsIncomeList);
+
+                    //2020年8月27日23:03:23  除了保存界面上显示的会计传票外，再额外保存另一笔会计传票
+
+                    string summary = string.Format("{0}{1}票款", bankName, (this.nccSupplier.EditValue as Model.Supplier) == null ? null : (this.nccSupplier.EditValue as Model.Supplier).SupplierShortName);
+                    this.manager.InsertAtSummon(this.shouldPayAccount, subjectId, summary);
                     break;
                 case "update":
                     this.atSummonManager.Update(this.atSummon);
                     new BL.ShouldPayAccountConditionManager().Update(this.shouldPayAccount.ShouldPayAccountCondition);
                     this.AtBillsIncomeManager.Update(this.atBillsIncomeList, this.shouldPayAccount.ShouldPayAccountId);
                     this.manager.Update(this.shouldPayAccount);
+
+                    //修改時同步修改
+                    this.manager.UpdateAtSummon(this.shouldPayAccount, subjectId);
                     break;
             }
         }
@@ -566,7 +604,7 @@ namespace Book.UI.Query
                 this.txt_AtSummonId.Text = this.atSummonManager.GetId(this.date_AtSummonDate.DateTime);
         }
 
-        //会计科目变化
+        //会计科目变化 以更新 应付票据作业 的 票面金额
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             if (e.Column == this.colJinE || e.Column == this.colJieorDai)
@@ -784,6 +822,7 @@ namespace Book.UI.Query
                     atSummondetail.Lending = "貸";
                     atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "2141700").SubjectId;
                     //atSummondetail.AMoney = Convert.ToDecimal(this.spe_JinE.EditValue) - Convert.ToDecimal(this.spe_ZheRang.EditValue);
+                    atSummondetail.AMoney = 0;
 
 
                     //这笔会计科目对应的 应付票据
@@ -809,6 +848,7 @@ namespace Book.UI.Query
                     atSummondetail.Lending = "貸";
                     atSummondetail.SubjectId = this.subjectList.First(d => d.Id == "7101000").SubjectId;
                     //atSummondetail.AMoney = Convert.ToDecimal(this.spe_ShuiE.EditValue);
+                    atSummondetail.AMoney = 0;
                     this.atSummon.Details.Add(atSummondetail);
 
 

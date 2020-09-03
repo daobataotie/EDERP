@@ -92,6 +92,11 @@ namespace Book.BL
         {
             return accessor.SelectYEByDate(date);
         }
+
+        public IList<Model.AtSummonDetail> SelectByDateRangeAndSummary(DateTime startDate, DateTime endDate, string summary)
+        {
+            return accessor.SelectByDateRangeAndSummary(startDate, endDate, summary);
+        }
     }
 }
 

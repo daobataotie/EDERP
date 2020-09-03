@@ -35,12 +35,14 @@ namespace Book.UI.Accounting.AtSummon
             this.action = "view";
         }
 
+        int flag = 0;
         public EditForm(Model.AtSummon atSummon)
             : this()
         {
             this.atSummon = atSummon;
             this.atSummon.Details = this.atSummonDetailManager.Select(atSummon);
-            this.action = "update";
+            this.action = "view";
+            flag = 1;
         }
 
         public EditForm(Model.AtSummon atSummon, string action)
@@ -49,6 +51,7 @@ namespace Book.UI.Accounting.AtSummon
             this.atSummon = atSummon;
             this.atSummon.Details = this.atSummonDetailManager.Select(atSummon);
             this.action = action;
+            flag = 1;
         }
 
         protected override void AddNew()
@@ -382,6 +385,12 @@ namespace Book.UI.Accounting.AtSummon
 
         protected override void MoveLast()
         {
+            if (flag == 1)
+            {
+                flag = 0;
+                return;
+            }
+
             this.atSummon = this.atSummonManager.Get(this.atSummonManager.GetLast() == null ? "" : this.atSummonManager.GetLast().SummonId);
         }
 
@@ -564,6 +573,7 @@ namespace Book.UI.Accounting.AtSummon
             this.bindingSource1.Position = this.bindingSource1.IndexOf(mdetail);
         }
 
+        //搜尋
         private void barBtnSearch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ListForm f = new ListForm();

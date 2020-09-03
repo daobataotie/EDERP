@@ -18,6 +18,7 @@ namespace Book.DA
     {
         IList<Model.ProduceOtherCompactMaterial> SelectIsInDepotMaterialDetail(Model.ProduceOtherCompact com);
         IList<Model.ProduceOtherCompactMaterial> Select(Model.ProduceOtherCompact ProduceOtherCompact);
+        IList<Model.ProduceOtherCompactMaterial> Select(string ProduceOtherCompactId);
         IList<Model.ProduceOtherCompactMaterial> SelectCompactAndFlag(Model.ProduceOtherCompact ProduceOtherCompact);
     }
 }

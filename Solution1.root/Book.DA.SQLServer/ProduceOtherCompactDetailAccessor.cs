@@ -24,6 +24,11 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.ProduceOtherCompactDetail>("ProduceOtherCompactDetail.select_byProduceOtherCompactId", produceOtherCompact.ProduceOtherCompactId);
         }
 
+        public IList<Book.Model.ProduceOtherCompactDetail> Select(string produceOtherCompactId)
+        {
+            return sqlmapper.QueryForList<Model.ProduceOtherCompactDetail>("ProduceOtherCompactDetail.select_byProduceOtherCompactId", produceOtherCompactId);
+        }
+
         public IList<Book.Model.ProduceOtherCompactDetail> SelectCompactDetailAndFlag(Model.ProduceOtherCompact produceOtherCompact)
         {
             return sqlmapper.QueryForList<Model.ProduceOtherCompactDetail>("ProduceOtherCompactDetail.select_byProduceOtherCompactIdAndFlag", produceOtherCompact.ProduceOtherCompactId);

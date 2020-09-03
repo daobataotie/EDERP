@@ -138,6 +138,7 @@ namespace Book.DA.SQLServer
             ht.Add("AMoney", AMoney);
             return sqlmapper.QueryForObject<bool>("AtSummonDetail.IsExistsDetailForUpdate", ht);
         }
+
         /// <summary>
         /// 现金支出传票明细
         /// </summary>
@@ -160,6 +161,16 @@ namespace Book.DA.SQLServer
                 return Convert.ToDecimal(SQLDB.SqlHelper.ExecuteScalar(sqlmapper.DataSource.ConnectionString, CommandType.Text, sql, null));
             else
                 return 0;
+        }
+
+        public IList<Model.AtSummonDetail> SelectByDateRangeAndSummary(DateTime startDate, DateTime endDate, string summary)
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("startDate", startDate.ToString("yyyy-MM-dd"));
+            ht.Add("endDate", endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss"));
+            ht.Add("summary", "%" + summary + "%");
+
+            return sqlmapper.QueryForList<Model.AtSummonDetail>("AtSummonDetail.SelectByDateRangeAndSummary", ht);
         }
     }
 }
