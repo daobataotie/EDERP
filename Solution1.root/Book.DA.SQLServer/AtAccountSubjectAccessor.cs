@@ -46,5 +46,10 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<string>("AtAccountSubject.GetSubjectIdByName", name);
         }
+
+        public IList<Model.AtAccountSubject> SelectIdAndName()
+        {
+            return sqlmapper.QueryForList<Model.AtAccountSubject>("AtAccountSubject.SelectIdAndName", null);
+        }
     }
 }

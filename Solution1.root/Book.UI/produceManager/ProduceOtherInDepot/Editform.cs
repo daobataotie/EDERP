@@ -30,6 +30,7 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
         private BL.MPSheaderManager mPSheaderManager = new BL.MPSheaderManager();
         private BL.ProduceOtherCompactManager produceOtherCompactManager = new BL.ProduceOtherCompactManager();
         private BL.PCOtherCheckDetailManager pcOtherCheckDetailManager = new Book.BL.PCOtherCheckDetailManager();
+        BL.AtAccountSubjectManager atAccountSubjectManager = new Book.BL.AtAccountSubjectManager();
 
         int flag = 0;
         public Editform()
@@ -191,16 +192,66 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
 
             this._produceOtherInDepot.PayDate = this.PayDate.EditValue == null ? DateTime.Now : this.PayDate.DateTime;
 
+            Dictionary<string, string> dicSubject = new Dictionary<string, string>();
+            //dicSubject.Add("進貨", null);
+            dicSubject.Add(this.produceOtherInDepotManager.GetSubjectNameBySupplier(_produceOtherInDepot.Supplier), null);
+            dicSubject.Add("進項稅額", null);
+            dicSubject.Add(string.Format("應付帳款-{0}", this._produceOtherInDepot.Supplier.SupplierShortName), null);
+
+            for (int i = 0; i < dicSubject.Count; i++)
+            {
+                string key = dicSubject.Keys.ToArray()[i];
+                string value = atAccountSubjectManager.GetSubjectIdByName(key);
+                if (string.IsNullOrEmpty(value))
+                {
+                    if (i != 2)
+                        throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
+
+                    try
+                    {
+                        BL.V.BeginTransaction();
+                        //Model.AtAccountSubject atAccountSubject = new Model.AtAccountSubject();
+                        //atAccountSubject.SubjectId = Guid.NewGuid().ToString();
+                        //atAccountSubject.SubjectName = key;
+                        //atAccountSubject.AccountingCategoryId = "31c7baf9-c21d-4075-8738-ebbaedd1c000";
+                        //atAccountSubject.TheLending = "貸";
+                        //atAccountSubject.TheBalance = 0;
+                        //atAccountSubject.InsertTime = DateTime.Now;
+                        //atAccountSubject.UpdateTime = DateTime.Now;
+                        //atAccountSubject.Id = "select cast((select top 1 cast(Id as int) from AtAccountSubject where left(Id,4)='2144' order by Id desc )+1 as varchar(20))";
+                        string subjectId = Guid.NewGuid().ToString();
+                        string insertSql = string.Format("insert into AtAccountSubject values('{0}','{1}','',null,'31c7baf9-c21d-4075-8738-ebbaedd1c000','貸','0',null,null,null,null,GETDATE(),GETDATE(),(select cast((select top 1 cast(Id as int) from AtAccountSubject where left(Id,4)='2144' order by Id desc )+1 as varchar(20))),null,null)", subjectId, key);
+
+                        this.produceOtherInDepotManager.UpdateSql(insertSql);
+                        value = subjectId;
+
+                        BL.V.CommitTransaction();
+                    }
+                    catch
+                    {
+                        BL.V.RollbackTransaction();
+                        throw new Exception(string.Format("添加會計科目‘{0}’時出現錯誤，請聯繫管理員", key));
+                    }
+                }
+
+                dicSubject[key] = value;
+            }
+
+
             switch (this.action)
             {
                 case "insert":
                     this.produceOtherInDepotManager.Insert(this._produceOtherInDepot);
+
+                    this.produceOtherInDepotManager.InsertAtSummon(_produceOtherInDepot, dicSubject);
                     break;
 
                 case "update":
                     this._produceOtherInDepot.EmployeeUpdate = BL.V.ActiveOperator.Employee;
                     this._produceOtherInDepot.EmployeeUpdateId = BL.V.ActiveOperator.EmployeeId;
                     this.produceOtherInDepotManager.Update(this._produceOtherInDepot);
+
+                    this.produceOtherInDepotManager.UpdateAtSummon(_produceOtherInDepot, dicSubject);
                     break;
             }
 
@@ -221,6 +272,9 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             try
             {
                 this.produceOtherInDepotManager.Delete(this._produceOtherInDepot);
+
+                this.produceOtherInDepotManager.DeleteAtSummon(this._produceOtherInDepot);
+
                 this._produceOtherInDepot = this.produceOtherInDepotManager.GetNext(this._produceOtherInDepot);
                 if (this._produceOtherInDepot == null)
                 {

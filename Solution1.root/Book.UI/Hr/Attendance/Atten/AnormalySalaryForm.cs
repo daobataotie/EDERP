@@ -23,7 +23,7 @@ namespace Book.UI.Hr.Attendance.Atten
     {
         private BL.HrDailyEmployeeAttendInfoManager _hrManager = new Book.BL.HrDailyEmployeeAttendInfoManager();
         Model.HrDailyEmployeeAttendInfo trans_HDEA = new Model.HrDailyEmployeeAttendInfo();
-        DataSet mPrintDs = new DataSet();
+        DataTable mPrintDs = new DataTable();
         public AnormalySalaryForm()
         {
             InitializeComponent();
@@ -43,11 +43,12 @@ namespace Book.UI.Hr.Attendance.Atten
         private void InitAnormalySalaryInfo(DateTime dutyDate)
         {
             mPrintDs = this._hrManager.SelectHrInfoByStateAndDate(this.dateEdit1.DateTime);
+
             //根据考勤日期来查询考勤信息
-            this.bindingSource1.DataSource = mPrintDs.Tables[0];
+            this.bindingSource1.DataSource = mPrintDs;
         }
 
-       //转向异常的数据进行编辑
+        //转向异常的数据进行编辑
         private void repositoryItemHyperLinkEdit1_Click(object sender, EventArgs e)
         {
             string id = ((this.bindingSource1.Current as DataRowView))[Model.HrDailyEmployeeAttendInfo.PRO_HrDailyEmployeeAttendInfoId].ToString();
@@ -63,7 +64,8 @@ namespace Book.UI.Hr.Attendance.Atten
             this.trans_HDEA.Note = drv.Row[Model.HrDailyEmployeeAttendInfo.PRO_Note].ToString();
             AnormalySalaryEditForm salaryFrm = new AnormalySalaryEditForm(trans_HDEA);
             salaryFrm.ShowDialog();
-            this.bindingSource1.DataSource = this._hrManager.SelectHrInfoByStateAndDate(this.dateEdit1.DateTime).Tables[0];
+
+            this.bindingSource1.DataSource = this._hrManager.SelectHrInfoByStateAndDate(this.dateEdit1.DateTime);
         }
 
         /// <summary>

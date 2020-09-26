@@ -16,11 +16,11 @@ namespace Book.UI.produceManager.ProduceOtherCompact
 
             this.DataSource = produceOtherCompactMaterialManager.Select(produceOtherCompactId);
 
-            this.TC_ProId.DataBindings.Add("Text", this.DataSource, "Product.Id");
+            //this.TC_ProId.DataBindings.Add("Text", this.DataSource, "Product.Id");
             this.TC_ProName.DataBindings.Add("Text", this.DataSource, "Product.ProductName");
-            this.TC_Qty.DataBindings.Add("Text", this.DataSource, Model.ProduceOtherCompactMaterial.PRO_ProduceQuantity);
-            this.TC_Unit.DataBindings.Add("Text", this.DataSource, Model.ProduceOtherCompactMaterial.PRO_ProductUnit);
-            this.TC_ParentPro.DataBindings.Add("Text", this.DataSource, "ParentProduct.ProductName");
+            //this.TC_Qty.DataBindings.Add("Text", this.DataSource, Model.ProduceOtherCompactMaterial.PRO_ProduceQuantity);
+            //this.TC_Unit.DataBindings.Add("Text", this.DataSource, Model.ProduceOtherCompactMaterial.PRO_ProductUnit);
+            //this.TC_ParentPro.DataBindings.Add("Text", this.DataSource, "ParentProduct.ProductName");
         }
 
     }

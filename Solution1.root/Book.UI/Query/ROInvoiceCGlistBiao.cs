@@ -125,7 +125,8 @@ namespace Book.UI.Query
             {
                 this.lblZhiPiaoId.Text += item.Id + ",";
             }
-            this.lblZhiPiaoId.Text = this.lblZhiPiaoId.Text.Substring(0, this.lblZhiPiaoId.Text.LastIndexOf(","));
+            //this.lblZhiPiaoId.Text = this.lblZhiPiaoId.Text.Substring(0, this.lblZhiPiaoId.Text.LastIndexOf(","));
+            this.lblZhiPiaoId.Text = this.lblZhiPiaoId.Text.TrimEnd(',');
             this.TCZJinE.Text = shouldPayAccount.JinE == null ? "0" : shouldPayAccount.JinE.ToString();
             this.TCTotalShuiE.Text = shouldPayAccount.ShuiE == null ? "0" : shouldPayAccount.ShuiE.ToString();
             this.TCTotalMoney.Text = shouldPayAccount.Total == null ? "0" : shouldPayAccount.Total.ToString();

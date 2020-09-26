@@ -674,6 +674,7 @@ namespace Book.UI.Settings.BasicData.Employees
 
         public static Model.Employee _employee;
 
+        //在職員工一覽表
         private void simpleButtonOn_Click(object sender, EventArgs e)
         {
             OnListForm f = new OnListForm();
@@ -686,6 +687,7 @@ namespace Book.UI.Settings.BasicData.Employees
             }
         }
 
+        //離職員工一覽表
         private void simpleButtonLeave_Click(object sender, EventArgs e)
         {
             LeaveListForm f = new LeaveListForm();

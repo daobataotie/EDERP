@@ -844,6 +844,14 @@ namespace Book.Model
             set { _relatedNumbers = value; }
         }
 
+        private string _invoiceXSId;
+
+        public string InvoiceXSId
+        {
+            get { return _invoiceXSId == null ? null : _invoiceXSId.TrimEnd(','); }
+            set { _invoiceXSId = value; }
+        }
+
 
         public readonly static string PRO_IsCancel = "IsCancel";
 

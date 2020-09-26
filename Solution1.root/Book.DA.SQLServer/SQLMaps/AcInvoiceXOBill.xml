@@ -1,11 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sqlMap namespace="AcInvoiceXOBill" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+     <resultMaps>
+    <resultMap id="AcInvoiceXOBillResult2" class="AcInvoiceXOBill">
+      <result property="AcInvoiceXOBillId" column="AcInvoiceXOBillId" />
+      <result property="EmployeeId" column="EmployeeId" />
+      <result property="Employee0Id" column="Employee0Id" />
+      <result property="Employee1Id" column="Employee1Id" />
+      <result property="CustomerId" column="CustomerId" />
+      <result property="AuditingState" column="AuditingState" />
+      <result property="InvoiceStatus" column="InvoiceStatus" />
+      <result property="AuditingStateDate" column="AuditingStateDate" />
+      <result property="AcInvoiceXOBillDate" column="AcInvoiceXOBillDate" />
+      <result property="AcInvoiceXOBillType" column="AcInvoiceXOBillType" />
+      <result property="Id" column="Id" />
+      <result property="AcInvoiceXOBillDesc" column="AcInvoiceXOBillDesc" />
+      <result property="TaxRate" column="TaxRate" />
+      <result property="TaxRateType" column="TaxRateType" />
+      <result property="TaxRateMoney" column="TaxRateMoney" />
+      <result property="HeJiMoney" column="HeJiMoney" />
+      <result property="ZongMoney" column="ZongMoney" />
+      <result property="InsertTime" column="InsertTime" />
+      <result property="UpdateTime" column="UpdateTime" />
+      <result property="mHeXiaoJingE" column="mHeXiaoJingE" />
+      <result property="YSDate" column="YSDate" />
+      <result property="InvoiceAllowanceTotal" column="InvoiceAllowanceTotal" />
+      <result property="NoHeXiaoTotal" column="NoHeXiaoTotal" />
+      <result property="CustomerShouPiaoId" column="CustomerShouPiaoId" />
+      <result property="AuditState" column="AuditState" />
+      <result property="AuditEmpId" column="AuditEmpId" />
+      <result property="IsCancel" column="IsCancel"/>
+      <result property="InvoiceType" column="InvoiceType"/>
+      <result property="ClearanceType" column="ClearanceType"/>
+      <result property="ExchangeRate" column="ExchangeRate"/>
+      <result property="Currency" column="Currency"/>
+      <result property="HuikaiNote" column="HuikaiNote"/>
+      <result property="SalesType" column="SalesType"/>
+      <result property="RelatedNumbers" column="RelatedNumbers"/>
+      <result property="InvoiceXSId" column="InvoiceXSId"/>
+      <result property="CustomerShouPiao" column="CustomerShouPiaoId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
+      <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+      <result property="Employee1" column="Employee1Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+      <result property="Employee0" column="Employee0Id" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+      <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
+      <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
+    </resultMap>
+  </resultMaps>
+
+    
   <statements>
-    <select id="selectForDateRange" resultMap="AcInvoiceXOBillResult">
+    <select id="selectForDateRange" resultMap="AcInvoiceXOBillResult2">
       <![CDATA[
       SELECT 
       * 
+      ,(select InvoiceId +',' from AcInvoiceXOBillDetail where AcInvoiceXOBillId=AcInvoiceXOBill.AcInvoiceXOBillId group by InvoiceId  for xml path('')) as InvoiceXSId
       FROM
       AcInvoiceXOBill 
       WHERE 

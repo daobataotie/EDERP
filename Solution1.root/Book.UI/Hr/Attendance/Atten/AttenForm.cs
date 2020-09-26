@@ -189,9 +189,10 @@ namespace Book.UI.Hr.Attendance.Atten
             {
                 date = DateTime.Parse(cmbDutyDate.Text.ToString());
             }
-            DataSet ds = _hrManager.SelectByEmpMonth(_empployee, date);
 
-            if (ds.Tables[0].Rows.Count == 0)
+            DataTable ds = _hrManager.SelectByEmpMonth(_empployee, date);
+
+            if (ds.Rows.Count == 0)
             {
                 return;
             }
@@ -209,8 +210,8 @@ namespace Book.UI.Hr.Attendance.Atten
             {
                 date = DateTime.Parse(cmbDutyDate.Text.ToString());
             }
-            DataSet ds = _hrManager.SelectByEmpMonth(_empployee, date);
-            DataTable dt = ds.Tables[0];
+            DataTable ds = _hrManager.SelectByEmpMonth(_empployee, date);
+            DataTable dt = ds;
             if (dt.Rows.Count == 0)
             {
                 return;

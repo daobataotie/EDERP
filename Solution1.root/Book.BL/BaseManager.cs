@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using System.Linq;
+
 namespace Book.BL
 {
     public abstract class BaseManager
     {
         private static readonly DA.IEntityAccessor entityAccessor = (DA.IEntityAccessor)Accessors.Get("EntityAccessor");
         private DateTime datetime = DateTime.Now;
+
         protected string GetEntityId(DateTime dt)
         {
             string settingId = this.GetSettingId();
@@ -46,11 +49,11 @@ namespace Book.BL
             string y2 = string.Format("{0:d2}", datetime.Year);
             string y4 = string.Format("{0:d4}", datetime.Year);
 
-            string n4 = string.Format("{0:d4}", (int)sequenceval);
 
             string n1 = string.Format("{0:d1}", sequenceval);
             string n2 = string.Format("{0:d2}", sequenceval);
             string n3 = string.Format("{0:d3}", sequenceval);
+            string n4 = string.Format("{0:d4}", sequenceval);
             string n5 = string.Format("{0:d5}", sequenceval);
             string n6 = string.Format("{0:d6}", sequenceval);
             string n7 = string.Format("{0:d7}", sequenceval);
@@ -85,6 +88,7 @@ namespace Book.BL
         {
             return this.GetEntityId(dateTime);
         }
+
 
         protected virtual string GetSettingId()
         {
@@ -181,6 +185,29 @@ namespace Book.BL
         public DataSet QueryProc(string procName, SqlParameter[] pars, string tabelName)
         {
             return entityAccessor.QueryProc(procName, pars, tabelName);
+        }
+
+        public string GetSubjectNameBySupplier(Model.Supplier supplier)
+        {
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic["原料"] = "原料";
+            dic["物料"] = "物料";
+            dic["代工 加工"] = "代工加工";
+            dic["代工加工"] = "代工加工";
+            dic["客供品"] = "客供品";
+            dic["修繕"] = "修繕";
+            dic["清潔用品"] = "清潔";
+            dic["其他"] = "其他";
+            dic["文具"] = "文具用品";
+            dic["運費"] = "運費";
+
+            if (supplier.SupplierCategory == null)
+                throw new Exception("該供應商沒有設置供應商分類，無法計算對應的會計科目！");
+
+            if (dic.Keys.Contains(supplier.SupplierCategory.SupplierCategoryName))
+                return dic[supplier.SupplierCategory.SupplierCategoryName];
+            else
+                return supplier.SupplierCategory.SupplierCategoryName;
         }
     }
 

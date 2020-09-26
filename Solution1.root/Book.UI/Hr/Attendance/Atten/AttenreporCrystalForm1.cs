@@ -14,7 +14,7 @@ namespace Book.UI.Hr.Attendance.Atten
         private HrDailyEmployeeAttendInfoManager hremp = new HrDailyEmployeeAttendInfoManager();
         private Model.Employee _employee;
         private DateTime _date;
-        private DataSet ds;
+        private DataTable ds;
         public AttenreporCrystalForm1()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace Book.UI.Hr.Attendance.Atten
 
         private void AttenreporCrystalForm1_Load(object sender, EventArgs e)
         {
-            DataTable dt = ds.Tables[0];
+            DataTable dt = ds;
             DataTable joindate = hremp.GetemployeeJoinDate(_employee).Tables[0];
             string str = joindate.Rows[0][0].ToString();
             dt.TableName = "attentreport";

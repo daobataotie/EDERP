@@ -1028,6 +1028,19 @@ namespace Book.Model
             set { _customerName = value; }
         }
 
+        private bool? _taxRateP5;
+
+        /// <summary>
+        /// 稅率5%
+        /// </summary>
+        public bool? TaxRateP5
+        {
+            get { return _taxRateP5; }
+            set { _taxRateP5 = value; }
+        }
+
         public static readonly string PRO_CustomerName = "CustomerName";
+
+        public static readonly string PRO_TaxRateP5 = "TaxRateP5";
     }
 }

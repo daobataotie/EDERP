@@ -41,7 +41,19 @@
   
    <select id="GetByShouldPayAccountId" resultMap="AtSummonResult" parameterClass="string">
       <![CDATA[
-      select * from AtSummon where ShouldPayAccountId=#value#
+      select * from AtSummon where ShouldPayAccountId=#value# order by Id
+      ]]>
+    </select>
+    
+   <select id="GetByInvoiceCTId" resultMap="AtSummonResult" parameterClass="string">
+      <![CDATA[
+      select * from AtSummon where InvoiceCTId=#value#
+      ]]>
+    </select>
+    
+   <select id="GetByProduceOtherInDepotId" resultMap="AtSummonResult" parameterClass="string">
+      <![CDATA[
+      select * from AtSummon where ProduceOtherInDepotId=#value#
       ]]>
     </select>
 

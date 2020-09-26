@@ -73,9 +73,19 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForObject<Model.AtSummon>("AtSummon.GetByInvoiceXSId", invoiceXSId);
         }
 
-        public Model.AtSummon GetByShouldPayAccountId(string shouldPayAccountId)
+        public IList<Model.AtSummon> GetByShouldPayAccountId(string shouldPayAccountId)
         {
-            return sqlmapper.QueryForObject<Model.AtSummon>("AtSummon.GetByShouldPayAccountId", shouldPayAccountId);
+            return sqlmapper.QueryForList<Model.AtSummon>("AtSummon.GetByShouldPayAccountId", shouldPayAccountId);
+        }
+
+        public Model.AtSummon GetByInvoiceCTId(string invoiceCTId)
+        {
+            return sqlmapper.QueryForObject<Model.AtSummon>("AtSummon.GetByInvoiceCTId", invoiceCTId);
+        }
+
+        public Model.AtSummon GetByProduceOtherInDepotId(string produceOtherInDepotId)
+        {
+            return sqlmapper.QueryForObject<Model.AtSummon>("AtSummon.GetByProduceOtherInDepotId", produceOtherInDepotId);
         }
 
         public Model.AtSummon SelectById(string id)

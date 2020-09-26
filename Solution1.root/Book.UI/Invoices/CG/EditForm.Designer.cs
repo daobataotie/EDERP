@@ -29,12 +29,13 @@ namespace Book.UI.Invoices.CG
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.che_CheckAll = new DevExpress.XtraEditors.CheckEdit();
             this.btn_GenerateInputCheck = new DevExpress.XtraEditors.SimpleButton();
             this.btn_GetProductNewPrice = new DevExpress.XtraEditors.SimpleButton();
             this.newChooseContorlAtCurrencyCate = new Book.UI.Invoices.NewChooseContorl();
@@ -168,6 +169,7 @@ namespace Book.UI.Invoices.CG
             this.layoutControlItem39 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSourceProductId = new System.Windows.Forms.BindingSource(this.components);
             this.emptySpaceItem18 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.repositoryItemLookUpEditPositionId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -185,11 +187,10 @@ namespace Book.UI.Invoices.CG
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem52 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.che_CheckAll = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem40 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.che_CheckAll.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePaymentDate.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePaymentDate.Properties)).BeginInit();
@@ -292,6 +293,7 @@ namespace Book.UI.Invoices.CG
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProductId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditPositionId)).BeginInit();
@@ -302,8 +304,6 @@ namespace Book.UI.Invoices.CG
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.che_CheckAll.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -344,6 +344,15 @@ namespace Book.UI.Invoices.CG
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(56, 189, 250, 350);
             this.layoutControl1.OptionsItemText.TextAlignMode = DevExpress.XtraLayout.TextAlignMode.CustomSize;
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // che_CheckAll
+            // 
+            resources.ApplyResources(this.che_CheckAll, "che_CheckAll");
+            this.che_CheckAll.MenuManager = this.barManager1;
+            this.che_CheckAll.Name = "che_CheckAll";
+            this.che_CheckAll.Properties.Caption = resources.GetString("che_CheckAll.Properties.Caption");
+            this.che_CheckAll.StyleController = this.layoutControl1;
+            this.che_CheckAll.CheckedChanged += new System.EventHandler(this.che_CheckAll_CheckedChanged);
             // 
             // btn_GenerateInputCheck
             // 
@@ -415,6 +424,7 @@ namespace Book.UI.Invoices.CG
             this.newChooseContorlSuplier.EditValue = null;
             resources.ApplyResources(this.newChooseContorlSuplier, "newChooseContorlSuplier");
             this.newChooseContorlSuplier.Name = "newChooseContorlSuplier";
+            this.newChooseContorlSuplier.EditValueChanged += new System.EventHandler(this.newChooseContorlSuplier_EditValueChanged);
             // 
             // dateHisDate
             // 
@@ -1651,6 +1661,17 @@ namespace Book.UI.Invoices.CG
             this.layoutControlItem6.TextToControlDistance = 0;
             this.layoutControlItem6.TextVisible = false;
             // 
+            // layoutControlItem40
+            // 
+            this.layoutControlItem40.Control = this.che_CheckAll;
+            resources.ApplyResources(this.layoutControlItem40, "layoutControlItem40");
+            this.layoutControlItem40.Location = new System.Drawing.Point(547, 315);
+            this.layoutControlItem40.Name = "layoutControlItem40";
+            this.layoutControlItem40.Size = new System.Drawing.Size(51, 26);
+            this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem40.TextToControlDistance = 0;
+            this.layoutControlItem40.TextVisible = false;
+            // 
             // emptySpaceItem18
             // 
             resources.ApplyResources(this.emptySpaceItem18, "emptySpaceItem18");
@@ -1790,26 +1811,6 @@ namespace Book.UI.Invoices.CG
             this.layoutControlItem52.TextSize = new System.Drawing.Size(76, 14);
             this.layoutControlItem52.TextToControlDistance = 5;
             // 
-            // che_CheckAll
-            // 
-            resources.ApplyResources(this.che_CheckAll, "che_CheckAll");
-            this.che_CheckAll.MenuManager = this.barManager1;
-            this.che_CheckAll.Name = "che_CheckAll";
-            this.che_CheckAll.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
-            this.che_CheckAll.StyleController = this.layoutControl1;
-            this.che_CheckAll.CheckedChanged += new System.EventHandler(this.che_CheckAll_CheckedChanged);
-            // 
-            // layoutControlItem40
-            // 
-            this.layoutControlItem40.Control = this.che_CheckAll;
-            resources.ApplyResources(this.layoutControlItem40, "layoutControlItem40");
-            this.layoutControlItem40.Location = new System.Drawing.Point(547, 315);
-            this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(51, 26);
-            this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem40.TextToControlDistance = 0;
-            this.layoutControlItem40.TextVisible = false;
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1822,6 +1823,7 @@ namespace Book.UI.Invoices.CG
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.che_CheckAll.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePaymentDate.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePaymentDate.Properties)).EndInit();
@@ -1924,6 +1926,7 @@ namespace Book.UI.Invoices.CG
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProductId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditPositionId)).EndInit();
@@ -1934,8 +1937,6 @@ namespace Book.UI.Invoices.CG
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem52)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.che_CheckAll.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem40)).EndInit();
             this.ResumeLayout(false);
 
         }

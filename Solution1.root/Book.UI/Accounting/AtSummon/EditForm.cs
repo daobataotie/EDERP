@@ -29,8 +29,11 @@ namespace Book.UI.Accounting.AtSummon
             //this.requireValueExceptions.Add(Model.AtSummon.PRO_BIllCode, new AA("請輸入傳票詳細資料！", this.gridControl1 as Control));
             //this.invalidValueExceptions.Add(Model.AtSummon.PRO_SummonId, new AA(Properties.Resources.EntityExists, this.textEditSummonId));
 
-            this.bindingSource2.DataSource = new BL.AtAccountSubjectManager().Select();
+            //this.bindingSource2.DataSource = new BL.AtAccountSubjectManager().Select();
+            this.bindingSource2.DataSource = new BL.AtAccountSubjectManager().SelectIdAndName();
             //this.comboBoxEditSummonCategory.SelectedIndex = 0;  //默认选择第一项
+
+            this.ncc_Employee.Choose = new Settings.BasicData.Employees.ChooseEmployee();
 
             this.action = "view";
         }
@@ -58,11 +61,14 @@ namespace Book.UI.Accounting.AtSummon
         {
             this.atSummon = new Model.AtSummon();
             this.atSummon.SummonDate = DateTime.Now;
-            this.atSummon.Id = this.atSummonManager.GetId();
+            //this.atSummon.Id = this.atSummonManager.GetId();
+            this.atSummon.Id = this.atSummonManager.GetConsecutiveId(DateTime.Now);
             this.atSummon.SummonId = Guid.NewGuid().ToString();
             this.atSummon.Details = new List<Model.AtSummonDetail>();
             this.atSummon.CreditTotal = 0;
             this.atSummon.TotalDebits = 0;
+            this.atSummon.EmployeeDS = BL.V.ActiveOperator.Employee;
+            this.atSummon.EmployeeDSId = BL.V.ActiveOperator.EmployeeId;
             //if (this.action == "insert")
             //{
             Model.AtSummonDetail detail = new Model.AtSummonDetail();
@@ -106,7 +112,7 @@ namespace Book.UI.Accounting.AtSummon
             }
             this.atSummon.TotalDebits = this.spinEditTotalDebits.EditValue == null ? 0 : decimal.Parse(this.spinEditTotalDebits.EditValue.ToString());
             this.atSummon.CreditTotal = this.spinEditCreditTotal.EditValue == null ? 0 : decimal.Parse(this.spinEditCreditTotal.EditValue.ToString());
-
+            this.atSummon.EmployeeDSId = this.ncc_Employee.EditValue == null ? BL.V.ActiveOperator.EmployeeId : (this.ncc_Employee.EditValue as Model.Employee).EmployeeId;
 
             TimeSpan ts = this.atSummon.SummonDate.Value - DateTime.Now;
             if (Math.Abs(ts.Days) > 365)
@@ -287,6 +293,8 @@ namespace Book.UI.Accounting.AtSummon
             this.spinEditCreditTotal.EditValue = this.atSummon.CreditTotal;
             this.spinEditTotalDebits.EditValue = this.atSummon.TotalDebits;
 
+            this.ncc_Employee.EditValue = this.atSummon.EmployeeDS;
+
             //详细处理
             this.bindingSource1.DataSource = this.atSummon.Details.Where(d => (!d.Lending.Contains(this.atSummon.Id))).ToList<Model.AtSummonDetail>();
 
@@ -335,6 +343,7 @@ namespace Book.UI.Accounting.AtSummon
 
             this.spinEditCreditTotal.Properties.ReadOnly = true;
             this.spinEditTotalDebits.Properties.ReadOnly = true;
+            this.ncc_Employee.Enabled = false;
 
             if (this.action != "view")
             {
@@ -368,6 +377,8 @@ namespace Book.UI.Accounting.AtSummon
             if (atSummon == null)
                 throw new InvalidOperationException(Properties.Resources.ErrorNoMoreRows);
             this.atSummon = this.atSummonManager.Get(atSummon.SummonId);
+
+            RefreshSubject();
         }
 
         protected override void MovePrev()
@@ -376,11 +387,14 @@ namespace Book.UI.Accounting.AtSummon
             if (atSummon == null)
                 throw new InvalidOperationException(Properties.Resources.ErrorNoMoreRows);
             this.atSummon = this.atSummonManager.Get(atSummon.SummonId);
+
+            RefreshSubject();
         }
 
         protected override void MoveFirst()
         {
             this.atSummon = this.atSummonManager.Get(this.atSummonManager.GetFirst() == null ? "" : this.atSummonManager.GetFirst().SummonId);
+            RefreshSubject();
         }
 
         protected override void MoveLast()
@@ -392,6 +406,7 @@ namespace Book.UI.Accounting.AtSummon
             }
 
             this.atSummon = this.atSummonManager.Get(this.atSummonManager.GetLast() == null ? "" : this.atSummonManager.GetLast().SummonId);
+            RefreshSubject();
         }
 
         protected override bool HasRows()
@@ -407,6 +422,11 @@ namespace Book.UI.Accounting.AtSummon
         protected override bool HasRowsPrev()
         {
             return this.atSummonManager.HasRowsBefore(this.atSummon);
+        }
+
+        private void RefreshSubject()
+        {
+            this.bindingSource2.DataSource = new BL.AtAccountSubjectManager().SelectIdAndName();
         }
 
         private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
@@ -593,9 +613,10 @@ namespace Book.UI.Accounting.AtSummon
 
         private void dateEditSummonDate_EditValueChanged(object sender, EventArgs e)
         {
-            if (this.action == "insert")
+            if (this.action == "insert" && dateEditSummonDate.EditValue != null)
             {
-                this.textEditSummonId.Text = this.atSummonManager.GetId(this.dateEditSummonDate.DateTime);
+                //this.textEditSummonId.Text = this.atSummonManager.GetId(this.dateEditSummonDate.DateTime);
+                this.textEditSummonId.Text = this.atSummonManager.GetConsecutiveId(this.dateEditSummonDate.DateTime);
             }
         }
 

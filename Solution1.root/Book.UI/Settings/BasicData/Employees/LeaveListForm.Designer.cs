@@ -155,7 +155,7 @@
             // gridColumn6
             // 
             resources.ApplyResources(this.gridColumn6, "gridColumn6");
-            this.gridColumn6.FieldName = "EmployeeContactPhone";
+            this.gridColumn6.FieldName = "ContactPhone";
             this.gridColumn6.Name = "gridColumn6";
             // 
             // gridColumn8
@@ -179,7 +179,7 @@
             // gridColumn11
             // 
             resources.ApplyResources(this.gridColumn11, "gridColumn11");
-            this.gridColumn11.FieldName = "EmployeeContacAddress";
+            this.gridColumn11.FieldName = "ContactAddress";
             this.gridColumn11.Name = "gridColumn11";
             // 
             // gridColumn12

@@ -271,73 +271,81 @@ namespace Book.UI.Invoices.XS
                 throw new Helper.RequireValueException("Company");
 
             Dictionary<string, string> dicSubject = new Dictionary<string, string>();
-            dicSubject.Add(string.Format("應收賬款-{0}", invoice.Customer.CustomerShortName), null);
-            dicSubject.Add("銷貨收入", null);
-            dicSubject.Add("銷項稅額", null);
-            for (int i = 0; i < dicSubject.Count; i++)
+            //客戶Alan-Safety不產生傳票
+            if (invoice.Customer.CustomerId != "a8b5ac5b-7360-4039-9444-e228a6920bbc")
             {
-                string key = dicSubject.Keys.ToArray()[i];
-                string value = atAccountSubjectManager.GetSubjectIdByName(key);
-                if (string.IsNullOrEmpty(value))
+                dicSubject.Add(string.Format("應收帳款-{0}", invoice.Customer.CustomerShortName), null);
+                dicSubject.Add("銷貨收入", null);
+                dicSubject.Add("銷項稅額", null);
+                for (int i = 0; i < dicSubject.Count; i++)
                 {
-                    if (i != 0)
-                        throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
-
-                    try
+                    string key = dicSubject.Keys.ToArray()[i];
+                    string value = atAccountSubjectManager.GetSubjectIdByName(key);
+                    if (string.IsNullOrEmpty(value))
                     {
-                        BL.V.BeginTransaction();
+                        if (i != 0)
+                            throw new Exception(string.Format("會計科目中無此科目：{0}，請先添加。", key));
 
-                        string subjectId = Guid.NewGuid().ToString();
-
-                        string getIdSql = "select top 1 Id from AtAccountSubject where left(Id,4)='4101' order by Id desc";
-                        object oid = this.invoiceManager.QueryObject(getIdSql);
-                        string id = oid == null ? "0" : oid.ToString();
-                        string newId = "";
-                        int number = Convert.ToInt32(id.Substring(5, 2)) + 1;
-                        if (number == 99)
+                        try
                         {
-                            if (id.ToUpper().Contains("A"))
-                                newId = "4101B00";
-                            else if (id.ToUpper().Contains("B"))
-                                newId = "4101C00";
-                            else if (id.ToUpper().Contains("C"))
-                                newId = "4101D00";
-                            else if (id.ToUpper().Contains("D"))
-                                newId = "4101E00";
-                            else if (id.ToUpper().Contains("E"))
-                                newId = "4101F00";
+                            BL.V.BeginTransaction();
+
+                            string subjectId = Guid.NewGuid().ToString();
+
+                            string getIdSql = "select top 1 Id from AtAccountSubject where left(Id,4)='4101' order by Id desc";
+                            object oid = this.invoiceManager.QueryObject(getIdSql);
+                            string id = oid == null ? "0" : oid.ToString();
+                            string newId = "";
+                            int number = Convert.ToInt32(id.Substring(5, 2)) + 1;
+                            if (number == 99)
+                            {
+                                if (id.ToUpper().Contains("A"))
+                                    newId = "4101B00";
+                                else if (id.ToUpper().Contains("B"))
+                                    newId = "4101C00";
+                                else if (id.ToUpper().Contains("C"))
+                                    newId = "4101D00";
+                                else if (id.ToUpper().Contains("D"))
+                                    newId = "4101E00";
+                                else if (id.ToUpper().Contains("E"))
+                                    newId = "4101F00";
+                            }
+                            else
+                            {
+                                newId = id.Substring(0, 5) + (number > 9 ? number.ToString() : "0" + number.ToString());
+                            }
+
+                            string insertSql = string.Format("insert into AtAccountSubject values('{0}','{1}','',null,'2fc7e68c-3153-4862-b7fe-5c8e517ed1c9','借','0',null,null,null,null,GETDATE(),GETDATE(),'{2}',null,null)", subjectId, key, newId);
+
+                            this.invoiceManager.UpdateSql(insertSql);
+                            value = subjectId;
+
+                            BL.V.CommitTransaction();
                         }
-                        else
+                        catch
                         {
-                            newId = id.Substring(0, 5) + (number > 9 ? number.ToString() : "0" + number.ToString());
+                            BL.V.RollbackTransaction();
+                            throw new Exception(string.Format("添加會計科目‘{0}’時出現錯誤，請聯繫管理員", key));
                         }
-
-                        string insertSql = string.Format("insert into AtAccountSubject values('{0}','{1}','',null,'2fc7e68c-3153-4862-b7fe-5c8e517ed1c9','借','0',null,null,null,null,GETDATE(),GETDATE(),'{2}',null,null)", subjectId, key, newId);
-
-                        this.invoiceManager.UpdateSql(insertSql);
-                        value = subjectId;
-
-                        BL.V.CommitTransaction();
                     }
-                    catch
-                    {
-                        BL.V.RollbackTransaction();
-                        throw new Exception(string.Format("添加會計科目‘{0}’時出現錯誤，請聯繫管理員", key));
-                    }
+
+                    dicSubject[key] = value;
                 }
-
-                dicSubject[key] = value;
             }
 
             switch (this.action)
             {
                 case "insert":
                     this.invoiceManager.Insert(invoice);
-                    this.invoiceManager.InsertAtSummon(invoice, dicSubject);
+
+                    if (invoice.Customer.CustomerId != "a8b5ac5b-7360-4039-9444-e228a6920bbc")
+                        this.invoiceManager.InsertAtSummon(invoice, dicSubject);
                     break;
                 case "update":
                     this.invoiceManager.Update(invoice);
-                    this.invoiceManager.UpdateAtSummon(invoice, dicSubject);
+
+                    if (invoice.Customer.CustomerId != "a8b5ac5b-7360-4039-9444-e228a6920bbc")
+                        this.invoiceManager.UpdateAtSummon(invoice, dicSubject);
                     break;
             }
         }
@@ -562,6 +570,7 @@ namespace Book.UI.Invoices.XS
             this.buttonEditEmployee.ButtonReadOnly = true;
             this.textEditInvoiceId.Properties.ReadOnly = true;
             this.textEditSongHuoAddress.Enabled = false;
+            this.spinEditInvoiceTaxRate.Properties.ReadOnly = true;
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
@@ -1353,6 +1362,20 @@ namespace Book.UI.Invoices.XS
                 this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = flag == 1 ? false : true;
                 this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = flag == 2 ? false : true;
                 this.UpdateMoneyFields();
+            }
+        }
+
+        private void buttonEditCompany_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.buttonEditCompany.EditValue != null && this.action != "view")
+            {
+                Model.Customer customer = buttonEditCompany.EditValue as Model.Customer;
+                if (customer.TaxRateP5.HasValue && customer.TaxRateP5.Value)
+                {
+                    this.spinEditInvoiceTaxRate.Value = 5;
+                }
+                else
+                    this.spinEditInvoiceTaxRate.Value = 0;
             }
         }
     }

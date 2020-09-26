@@ -22,7 +22,11 @@ namespace Book.DA
 
         DataSet GetEmployeeInfo(DateTime date);
         void UpdateLunchDetail(DataSet dataset, DateTime date);
-        IList<Model.LunchDetail> selectByempAndDate(string EmpID, int year, int month);      
+        IList<Model.LunchDetail> selectByempAndDate(string EmpID, int year, int month);
+
+        DataTable GetMonthLunch(DateTime month);
+
+        DataTable GetMonthPersonalLunch(DateTime month, string employeeId);
     }
 }
 

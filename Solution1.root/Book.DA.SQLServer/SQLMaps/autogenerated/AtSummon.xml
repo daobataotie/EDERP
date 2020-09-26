@@ -23,6 +23,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="InvoiceCGId" column="InvoiceCGId"/>
       <result property="InvoiceXSId" column="InvoiceXSId"/>
       <result property="ShouldPayAccountId" column="ShouldPayAccountId"/>
+      <result property="InvoiceCTId" column="InvoiceCTId"/>
+      <result property="ProduceOtherInDepotId" column="ProduceOtherInDepotId"/>
       <result property="Department" column="DepartmentId" lazyLoad="false" select="Department.select_by_primary_key" />
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="EmployeeDS" column="EmployeeDSId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -122,7 +124,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AtSummonDesc],
         [InvoiceCGId],
         [InvoiceXSId],
-        [ShouldPayAccountId]
+        [ShouldPayAccountId],
+        [InvoiceCTId],
+        [ProduceOtherInDepotId]
 			FROM
 				[dbo].[AtSummon]
 			WHERE
@@ -189,7 +193,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AtSummonDesc],
         [InvoiceCGId],
         [InvoiceXSId],
-        [ShouldPayAccountId]
+        [ShouldPayAccountId],
+        [InvoiceCTId],
+        [ProduceOtherInDepotId]
 			) 
 			VALUES 
 			(
@@ -209,7 +215,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#AtSummonDesc#,
         #InvoiceCGId#,
         #InvoiceXSId#,
-        #ShouldPayAccountId#
+        #ShouldPayAccountId#,        
+        #InvoiceCTId#,
+        #ProduceOtherInDepotId#
 			)
              ]]>
     </insert>
@@ -232,7 +240,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AtSummonDesc] = #AtSummonDesc#,
         [InvoiceCGId] = #InvoiceCGId#,
         [InvoiceXSId] = #InvoiceXSId#,
-        [ShouldPayAccountId]=#ShouldPayAccountId#
+        [ShouldPayAccountId]=#ShouldPayAccountId#,
+        [InvoiceCTId]=#InvoiceCTId#,
+        [ProduceOtherInDepotId]=#ProduceOtherInDepotId#
 			WHERE
 				[SummonId] = #SummonId#
                     ]]>

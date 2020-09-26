@@ -134,7 +134,7 @@
     <value>324, 38</value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="dateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+  <data name="date_Update.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="date_Update.Size" type="System.Drawing.Size, System.Drawing">
@@ -288,25 +288,25 @@
   <data name="&gt;&gt;btn_GetNewPrice.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="buttonEditCompany.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="buttonEditSupplier.Location" type="System.Drawing.Point, System.Drawing">
     <value>324, 63</value>
   </data>
-  <data name="buttonEditCompany.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonEditSupplier.Size" type="System.Drawing.Size, System.Drawing">
     <value>441, 21</value>
   </data>
-  <data name="buttonEditCompany.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonEditSupplier.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;buttonEditCompany.Name" xml:space="preserve">
-    <value>buttonEditCompany</value>
+  <data name="&gt;&gt;buttonEditSupplier.Name" xml:space="preserve">
+    <value>buttonEditSupplier</value>
   </data>
-  <data name="&gt;&gt;buttonEditCompany.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonEditSupplier.Type" xml:space="preserve">
     <value>Book.UI.Invoices.NewChooseContorl, Book.UI, Version=2.0.0.6, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;buttonEditCompany.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonEditSupplier.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="&gt;&gt;buttonEditCompany.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonEditSupplier.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="buttonEditEmployee.Location" type="System.Drawing.Point, System.Drawing">
@@ -2943,6 +2943,12 @@
   <data name="&gt;&gt;layoutControlItem53.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem54.Name" xml:space="preserve">
+    <value>layoutControlItem54</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem54.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;barButtonItem2.Name" xml:space="preserve">
     <value>barButtonItem2</value>
   </data>
@@ -3122,12 +3128,6 @@
   </data>
   <data name="&gt;&gt;barButtonItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem54.Name" xml:space="preserve">
-    <value>layoutControlItem54</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem54.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

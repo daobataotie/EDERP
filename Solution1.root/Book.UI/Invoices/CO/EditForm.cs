@@ -37,12 +37,12 @@ namespace Book.UI.Invoices.CO
             this.requireValueExceptions.Add("Date", new AA(Properties.Resources.RequireDataOfInvoiceDate, this.dateEditInvoiceDate));
             this.requireValueExceptions.Add("Employee0", new AA(Properties.Resources.RequiredDataOfEmployee0, this.buttonEditEmployee));
             this.requireValueExceptions.Add("Details", new AA(Properties.Resources.RequireDataForDetails, this.gridControl1));
-            this.requireValueExceptions.Add("Company", new AA(Properties.Resources.RequireDataForCompany, this.buttonEditCompany));
+            this.requireValueExceptions.Add("Company", new AA(Properties.Resources.RequireDataForCompany, this.buttonEditSupplier));
             //  this.requireValueExceptions.Add("Price", new AA(Properties.Resources.RequirePrice, this.gridControl1));
 
             this.invalidValueExceptions.Add(Model.InvoiceCO.PROPERTY_INVOICEID, new AA(Properties.Resources.EntityExists, this.textEditInvoiceId));
 
-            this.buttonEditCompany.Choose = new Book.UI.Settings.BasicData.Supplier.ChooseSupplier();
+            this.buttonEditSupplier.Choose = new Book.UI.Settings.BasicData.Supplier.ChooseSupplier();
             this.buttonEditEmployee.Choose = new ChooseEmployee();
             this.buttonEditEmployee1.Choose = new ChooseEmployee();
             this.buttonEditEmployee2.Choose = new ChooseEmployee();
@@ -183,12 +183,12 @@ namespace Book.UI.Invoices.CO
                         //{
                         //    detail.DetailsPriceRange = supplierproductmanager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
                         //}
-                        if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
+                        if ((this.buttonEditSupplier.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
                             MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
                         else
                         {
-                            if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                                detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
+                            if ((this.buttonEditSupplier.EditValue as Model.Supplier) != null)
+                                detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditSupplier.EditValue as Model.Supplier).SupplierId, detail.ProductId);
                             else
                                 detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
                         }
@@ -220,12 +220,12 @@ namespace Book.UI.Invoices.CO
                     //{
                     //    detail.DetailsPriceRange = supplierproductmanager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
                     //}
-                    if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
+                    if ((this.buttonEditSupplier.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
                         MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
                     else
                     {
-                        if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                            detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
+                        if ((this.buttonEditSupplier.EditValue as Model.Supplier) != null)
+                            detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditSupplier.EditValue as Model.Supplier).SupplierId, detail.ProductId);
                         else
                             detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
                     }
@@ -276,7 +276,7 @@ namespace Book.UI.Invoices.CO
                 return;
             this.invoice.InvoiceId = this.textEditInvoiceId.Text;
             this.invoice.InvoiceDate = this.dateEditInvoiceDate.DateTime;
-            this.invoice.Supplier = this.buttonEditCompany.EditValue as Model.Supplier;
+            this.invoice.Supplier = this.buttonEditSupplier.EditValue as Model.Supplier;
             if (this.invoice.Supplier != null)
                 this.invoice.SupplierId = this.invoice.Supplier.SupplierId;
             this.invoice.InvoiceNote = this.textEditNote.Text;
@@ -416,6 +416,8 @@ namespace Book.UI.Invoices.CO
             this.invoice.Details = new List<Model.InvoiceCODetail>();
             this.invoice.Employee0 = BL.V.ActiveOperator.Employee;
             this.invoice.Employee1 = BL.V.ActiveOperator.Employee;
+            this.invoice.TaxCaluType = 1;      //默认为外加税
+
             if (this.invoicecj != null)
             {
                 this.invoice.Employee0 = BL.V.ActiveOperator.Employee;
@@ -535,7 +537,7 @@ namespace Book.UI.Invoices.CO
             this.buttonEditEmployee.EditValue = this.invoice.Employee0;
             this.buttonEditEmployee1.EditValue = this.invoice.Employee1;
             this.buttonEditEmployee2.EditValue = this.invoice.Employee2;
-            this.buttonEditCompany.EditValue = this.invoice.Supplier;
+            this.buttonEditSupplier.EditValue = this.invoice.Supplier;
             this.textEditNote.EditValue = this.invoice.InvoiceNote;
             this.newChooseCustomer.EditValue = this.invoice.Customer;
             this.bindingSource1.DataSource = this.invoice.Details;
@@ -727,12 +729,12 @@ namespace Book.UI.Invoices.CO
                         //    MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
                         //else
                         //    invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, invoicecodetail.ProductId);
-                        if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(invoicecodetail.Product.SupplierId))
+                        if ((this.buttonEditSupplier.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(invoicecodetail.Product.SupplierId))
                             MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
                         else
                         {
-                            if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                                invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, invoicecodetail.ProductId);
+                            if ((this.buttonEditSupplier.EditValue as Model.Supplier) != null)
+                                invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditSupplier.EditValue as Model.Supplier).SupplierId, invoicecodetail.ProductId);
                             else
                                 invoicecodetail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(invoicecodetail.Product.SupplierId, invoicecodetail.ProductId);
                         }
@@ -1144,7 +1146,7 @@ namespace Book.UI.Invoices.CO
             this.textEditInvoiceXOId.Text = f.SelectList[0].InvoiceId;
             this.textEditCustomerXOInvoiceId.Text = f.SelectList[0].Invoice.CustomerInvoiceXOId;
             this.newChooseCustomer.EditValue = f.SelectList[0].Invoice.xocustomer;
-            this.buttonEditCompany.EditValue = f.SelectList[0].Product.Supplier;
+            this.buttonEditSupplier.EditValue = f.SelectList[0].Product.Supplier;
             this.txtSupplierLotNumber.Text = f.SelectList[0].Invoice.CustomerLotNumber;
             foreach (Model.InvoiceXODetail xodetail in f.SelectList)
             {
@@ -1168,12 +1170,12 @@ namespace Book.UI.Invoices.CO
                 //else
                 //{
                 //detail.DetailsPriceRange = new BL.SupplierProductManager().GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
-                if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
+                if ((this.buttonEditSupplier.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(detail.Product.SupplierId))
                     MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
                 else
                 {
-                    if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, detail.ProductId);
+                    if ((this.buttonEditSupplier.EditValue as Model.Supplier) != null)
+                        detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditSupplier.EditValue as Model.Supplier).SupplierId, detail.ProductId);
                     else
                         detail.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(detail.Product.SupplierId, detail.ProductId);
                 }
@@ -1287,12 +1289,12 @@ namespace Book.UI.Invoices.CO
                 //}
                 //else
                 //{
-                if ((this.buttonEditCompany.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(item.Product.SupplierId))
+                if ((this.buttonEditSupplier.EditValue as Model.Supplier) == null && string.IsNullOrEmpty(item.Product.SupplierId))
                     MessageBox.Show("廠商為空，不能計算商品單價！", this.Text);
                 else
                 {
-                    if ((this.buttonEditCompany.EditValue as Model.Supplier) != null)
-                        item.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditCompany.EditValue as Model.Supplier).SupplierId, item.ProductId);
+                    if ((this.buttonEditSupplier.EditValue as Model.Supplier) != null)
+                        item.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct((this.buttonEditSupplier.EditValue as Model.Supplier).SupplierId, item.ProductId);
                     else
                         item.DetailsPriceRange = this.supplierProductManager.GetPriceRangeForSupAndProduct(item.Product.SupplierId, item.ProductId);
                 }
@@ -1351,5 +1353,20 @@ namespace Book.UI.Invoices.CO
             //    BL.V.RollbackTransaction();
             //}
         }
+
+        private void buttonEditSupplier_EditValueChanged(object sender, EventArgs e)
+        {
+            //if (buttonEditSupplier.EditValue != null && this.action != "view")
+            //{
+            //    Model.Supplier supplier = buttonEditSupplier.EditValue as Model.Supplier;
+            //    if (supplier.TaxRateP5.HasValue && supplier.TaxRateP5.Value)
+            //    {
+            //        this.spinEditInvoiceTaxRate.Value = 5;
+            //    }
+            //    else
+            //        this.spinEditInvoiceTaxRate.Value = 0;
+            //}
+        }
+
     }
 }

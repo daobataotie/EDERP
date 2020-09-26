@@ -760,6 +760,39 @@ namespace Book.Model
             get { return _shouldPayAccountId; }
             set { _shouldPayAccountId = value; }
         }
+
+        private string _atSummonDetailId;
+
+        /// <summary>
+        /// 對應第一張會計傳票中的 “應付票據-銀行”
+        /// </summary>
+        public string AtSummonDetailId
+        {
+            get { return _atSummonDetailId; }
+            set { _atSummonDetailId = value; }
+        }
+
+        private string _atSummonDetailId2;
+
+        /// <summary>
+        /// 對應第二張會計傳票中的 “應付票據-銀行”
+        /// </summary>
+        public string AtSummonDetailId2
+        {
+            get { return _atSummonDetailId2; }
+            set { _atSummonDetailId2 = value; }
+        }
+
+        private string _atSummonDetailId3;
+
+        /// <summary>
+        /// 對應第二張會計傳票中與 “應付票據-銀行”關聯的“台幣銀行存款”
+        /// </summary>
+        public string AtSummonDetailId3
+        {
+            get { return _atSummonDetailId3; }
+            set { _atSummonDetailId3 = value; }
+        }
 	
 		/// <summary>
 		/// 传票主档

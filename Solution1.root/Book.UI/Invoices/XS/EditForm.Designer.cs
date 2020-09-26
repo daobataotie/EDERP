@@ -528,6 +528,7 @@
             this.buttonEditCompany.EditValue = null;
             resources.ApplyResources(this.buttonEditCompany, "buttonEditCompany");
             this.buttonEditCompany.Name = "buttonEditCompany";
+            this.buttonEditCompany.EditValueChanged += new System.EventHandler(this.buttonEditCompany_EditValueChanged);
             // 
             // buttonEditEmployee
             // 

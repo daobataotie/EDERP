@@ -28,7 +28,11 @@ namespace Book.DA
 
         Model.AtSummon GetByInvoiceXSId(string invoiceXSId);
 
-        Model.AtSummon GetByShouldPayAccountId(string shouldPayAccountId);
+        IList<Model.AtSummon> GetByShouldPayAccountId(string shouldPayAccountId);
+
+        Model.AtSummon GetByInvoiceCTId(string invoiceCTId);
+
+        Model.AtSummon GetByProduceOtherInDepotId(string produceOtherInDepotId);
 
         Model.AtSummon SelectById(string id);
     }

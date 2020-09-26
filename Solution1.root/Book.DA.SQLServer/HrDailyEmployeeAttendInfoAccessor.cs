@@ -53,7 +53,7 @@ namespace Book.DA.SQLServer
         }
 
 
-        public DataSet SelectByEmpMonth(Model.Employee employee, DateTime date)
+        public DataTable SelectByEmpMonth(Model.Employee employee, DateTime date)
         {
             int year = date.Year;
             int month = date.Month;
@@ -66,7 +66,7 @@ namespace Book.DA.SQLServer
                 sqlBuilder.Append(" and   year(o.DutyDate)=" + year + " and month(o.DutyDate)=" + month + "");
             sqlBuilder.Append("order by DutyDate");
             SqlDataAdapter adapter = new SqlDataAdapter(sqlBuilder.ToString(), con);
-            DataSet data = new DataSet();
+            DataTable data = new DataTable();
             adapter.Fill(data);
             return data;
         }
@@ -187,15 +187,24 @@ namespace Book.DA.SQLServer
             }
         }
 
-        public System.Data.DataSet SelectHrInfoByStateAndDate(DateTime DutyDate)
+        public System.Data.DataTable SelectHrInfoByStateAndDate(DateTime DutyDate)
         {
             SqlConnection con = new SqlConnection(sqlmapper.DataSource.ConnectionString);
             //string sqlStr = "select a.HrDailyEmployeeAttendInfoId, a.DutyDate,b.EmployeeId,b.EmployeeName,b.IDNo,a.ShouldCheckIn,a.ShouldCheckOut,a.ActualCheckIn,a.ActualCheckOut,a.Note,a.DayFactor,a.MonthFactor,a.LateInMinute,d.DepartmentName from  HrDailyEmployeeAttendInfo as a inner join Employee as b on a.EmployeeId=b.EmployeeId left join Department d on b.DepartmentId=d.DepartmentId where IsNormal=0  and DutyDate='" + DutyDate.ToString("yyyy-MM-dd") + "'  and left(b.IDNo,1)<>'k' ORDER BY (case when left(idno,1) like '[A-Za-z]' then (case when convert(int,substring(idno,2,2)) between 30 and 99 then left(idno,1)+cast(1911+convert(int,substring(idno,2,2)) as varchar(10))+substring(idno,4,len(idno)) else left(idno,1)+convert(varchar(10),1911+convert(int,'1'+substring(idno,2,2)))+substring(idno,4,len(idno)) end ) else idno end) ";
             string sqlStr = "select a.HrDailyEmployeeAttendInfoId, a.DutyDate,b.EmployeeId,b.EmployeeName,b.IDNo,a.ShouldCheckIn,a.ShouldCheckOut,a.ActualCheckIn,a.ActualCheckOut,a.Note, (case when  a.Note<>'' then a.Note else lt.LeaveTypeName end) as Note,a.DayFactor,a.MonthFactor,a.LateInMinute,d.DepartmentName  from  HrDailyEmployeeAttendInfo as a inner join Employee as b on a.EmployeeId=b.EmployeeId left join Department d on b.DepartmentId=d.DepartmentId left join Leave l on l.EmployeeId=b.EmployeeId and l.LeaveDate=a.DutyDate left join LeaveType lt on l.LeaveTypeId=lt.LeaveTypeId where (a.IsNormal=0 or a.Note like '%曠職%' or (a.Note not like '%'+lt.LeaveTypeName+'%')) and DutyDate='" + DutyDate.ToString("yyyy-MM-dd") + "'  and left(b.IDNo,1)<>'k' ORDER BY (case when left(idno,1) like '[A-Za-z]' then (case when convert(int,substring(idno,2,2)) between 30 and 99 then left(idno,1)+cast(1911+convert(int,substring(idno,2,2)) as varchar(10))+substring(idno,4,len(idno)) else left(idno,1)+convert(varchar(10),1911+convert(int,'1'+substring(idno,2,2)))+substring(idno,4,len(idno)) end ) else idno end) ";
             SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, con);
-            DataSet data = new DataSet();
+            DataTable data = new DataTable();
             adapter.Fill(data);
-            return data;
+
+            //2020-9-26 20:44:20：蔡銘祥，蔡宗庭，蔡炳南，黃承芳，莊秋琴，辛旻瓊 不出现在异常出勤列表
+            DataTable dt = data.Clone();
+            DataRow[] rows = data.Select("EmployeeName not in  ('蔡銘祥','蔡宗庭','蔡炳南','黃承芳','莊秋琴','辛旻瓊')");
+            foreach (var item in rows)
+            {
+                dt.Rows.Add(item.ItemArray);
+            }
+
+            return dt;
         }
 
         public System.Data.DataSet SelectHrInfoById(string HrDailyEmployeeAttendInfoId)

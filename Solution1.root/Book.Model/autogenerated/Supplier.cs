@@ -755,7 +755,7 @@ namespace Book.Model
             get { return _noId; }
             set { _noId = value; }
         }
-        
+
         public string ProductId
         {
             get { return _productId; }
@@ -1012,5 +1012,15 @@ namespace Book.Model
 
         public readonly static string PROPERTY_ProductId = "ProductId";
         #endregion
+
+        private bool? _taxRateP5;
+
+        public bool? TaxRateP5
+        {
+            get { return _taxRateP5; }
+            set { _taxRateP5 = value; }
+        }
+
+        public readonly static string PRO_TaxRateP5 = "TaxRateP5";
     }
 }

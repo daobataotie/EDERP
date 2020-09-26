@@ -77,7 +77,6 @@ namespace Book.BL
         }
 
 
-
         public void UpdateLunchDetail(DataSet dataset, DateTime date)
         {
             try
@@ -98,6 +97,16 @@ namespace Book.BL
         public IList<Model.LunchDetail> selectByempAndDate(string EmpID, int year, int month)
         {
             return accessor.selectByempAndDate(EmpID, year, month);
+        }
+
+        public DataTable GetMonthLunch(DateTime month)
+        {
+            return accessor.GetMonthLunch(month);
+        }
+
+        public DataTable GetMonthPersonalLunch(DateTime month, string employeeId)
+        {
+            return accessor.GetMonthPersonalLunch(month, employeeId);
         }
     }
 }

@@ -30,6 +30,7 @@ namespace Book.DA
         string SelectInvoiceYjrq(string invoiceid);
         string SelectCusXOIdByPrimaryId(string id);
         string SelectCusXOIdByPronoteHeaderId(string id);
+        bool IsHasMPSheader(string invoiceid);
     }
 }
 

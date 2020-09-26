@@ -32,12 +32,12 @@ namespace Book.UI.Hr.Attendance.Atten
         private HrDailyEmployeeAttendInfoManager hremp = new HrDailyEmployeeAttendInfoManager();
         private Model.Employee _employee;
         private DateTime _date;
-        private DataSet _ds = null;
+        private DataTable _ds = null;
         //------------------------异常列表参数------------------//
-        private DataSet _anormalyDS = null;
+        private DataTable _anormalyDS = null;
         private DateTime _anormalyDateTime;
         //------------------------异常列表参数------------------//
-        public AttenreporCrystalForm(Model.Employee Employee, DateTime datetime, DataSet ds)
+        public AttenreporCrystalForm(Model.Employee Employee, DateTime datetime, DataTable ds)
             : this()
         {
             this._employee = Employee;
@@ -46,7 +46,7 @@ namespace Book.UI.Hr.Attendance.Atten
             this.printclass = 1;
         }
         //异常列印
-        public AttenreporCrystalForm(DataSet pritntView, DateTime _dutyTime)
+        public AttenreporCrystalForm(DataTable pritntView, DateTime _dutyTime)
             : this()
         {
             this._anormalyDS = pritntView;
@@ -58,7 +58,7 @@ namespace Book.UI.Hr.Attendance.Atten
             switch (this.printclass)
             {
                 case 1:
-                    DataTable dt = _ds.Tables[0];
+                    DataTable dt = _ds;
                     dt.TableName = "attentreport";
                     AttenreporCrystal attenreport = new AttenreporCrystal();
                     attenreport.SetDataSource(_ds);
@@ -68,7 +68,7 @@ namespace Book.UI.Hr.Attendance.Atten
                     break;
                 case 2:
                     AnormalySalaryCrystal anormalyCry = new AnormalySalaryCrystal();
-                    anormalyCry.SetDataSource(this._anormalyDS.Tables[0]);
+                    anormalyCry.SetDataSource(this._anormalyDS);
                     anormalyCry.SetParameterValue("AnormalyReportDate", this._anormalyDateTime.ToShortDateString());
                     anormalyCry.SetParameterValue("PrintDate", DateTime.Now.ToString("yyyy-MM-dd"));
                     crv_attenreport.ReportSource = anormalyCry;

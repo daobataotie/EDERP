@@ -14,7 +14,7 @@ namespace Book.BL
     /// <summary>
     /// Business logic for dbo.ShouldPayAccount.
     /// </summary>
-    public partial class ShouldPayAccountManager
+    public partial class ShouldPayAccountManager : BaseManager
     {
         BL.ShouldPayAccountDetailManager detailmanager = new ShouldPayAccountDetailManager();
         BL.AtSummonManager atSummonManager = new Book.BL.AtSummonManager();
@@ -65,9 +65,8 @@ namespace Book.BL
                 new BL.ShouldPayAccountConditionManager().Delete(shouldPayAccount.ShouldPayAccountConditionId);
 
                 //删除会计传票
-                new BL.AtSummonManager().Delete(shouldPayAccount.AtSummon);
-
-                DeleteAtSummon(shouldPayAccount);
+                if (shouldPayAccount.AtSummon != null)
+                    new BL.AtSummonManager().Delete(shouldPayAccount.AtSummon);
             }
             catch
             {
@@ -150,94 +149,95 @@ namespace Book.BL
 
         #region 生成修改删除對應的會計傳票
 
-        public void InsertAtSummon(Model.ShouldPayAccount shouldPayAccount, string subjectId, string summary)
-        {
-            //2020年8月27日22:02:24，保存时，多保存一份会计传票的信息
+        //public void InsertAtSummon(Model.ShouldPayAccount shouldPayAccount, string subjectId, string summary)
+        //{
+        //    //2020年8月27日22:02:24，保存时，多保存一份会计传票的信息
 
-            Model.AtSummon newAtSummon = new Book.Model.AtSummon();
-            newAtSummon.SummonId = Guid.NewGuid().ToString();
-            newAtSummon.SummonDate = DateTime.Now;
-            newAtSummon.SummonCategory = "轉帳傳票";
-            newAtSummon.InsertTime = DateTime.Now;
-            newAtSummon.UpdateTime = DateTime.Now;
-            newAtSummon.Id = this.atSummonManager.GetId();
-            newAtSummon.ShouldPayAccountId = shouldPayAccount.ShouldPayAccountId;
-            newAtSummon.Details = new List<Model.AtSummonDetail>();
+        //    Model.AtSummon newAtSummon = new Book.Model.AtSummon();
+        //    newAtSummon.SummonId = Guid.NewGuid().ToString();
+        //    newAtSummon.SummonDate = DateTime.Now;
+        //    newAtSummon.SummonCategory = "轉帳傳票";
+        //    newAtSummon.InsertTime = DateTime.Now;
+        //    newAtSummon.UpdateTime = DateTime.Now;
+        //    //newAtSummon.Id = this.atSummonManager.GetId();
+        //    newAtSummon.Id = this.atSummonManager.GetConsecutiveId(DateTime.Now);
+        //    newAtSummon.ShouldPayAccountId = shouldPayAccount.ShouldPayAccountId;
+        //    newAtSummon.Details = new List<Model.AtSummonDetail>();
 
-            Model.AtSummonDetail detail1 = new Model.AtSummonDetail();
-            detail1.SummonDetailId = Guid.NewGuid().ToString();
-            detail1.SummonCatetory = newAtSummon.SummonCategory;
-            detail1.Lending = "借";
-            detail1.AMoney = shouldPayAccount.Total;
-            detail1.InsertTime = DateTime.Now;
-            detail1.UpdateTime = DateTime.Now;
-            detail1.SubjectId = subjectId;
-            newAtSummon.Details.Add(detail1);
+        //    Model.AtSummonDetail detail1 = new Model.AtSummonDetail();
+        //    detail1.SummonDetailId = Guid.NewGuid().ToString();
+        //    detail1.SummonCatetory = newAtSummon.SummonCategory;
+        //    detail1.Lending = "借";
+        //    detail1.AMoney = shouldPayAccount.Total;
+        //    detail1.InsertTime = DateTime.Now;
+        //    detail1.UpdateTime = DateTime.Now;
+        //    detail1.SubjectId = subjectId;
+        //    newAtSummon.Details.Add(detail1);
 
-            Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
-            detail2.SummonDetailId = Guid.NewGuid().ToString();
-            detail2.SummonCatetory = newAtSummon.SummonCategory;
-            detail2.Lending = "貸";
-            detail2.AMoney = shouldPayAccount.Total;
-            detail2.InsertTime = DateTime.Now;
-            detail2.UpdateTime = DateTime.Now;
-            detail2.SubjectId = "6389198a-ab4d-401c-8ec9-2865a727d0e6";    //台幣銀行存款
-            if (!string.IsNullOrEmpty(summary))
-                detail2.Summary = summary;
-            newAtSummon.Details.Add(detail2);
+        //    Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
+        //    detail2.SummonDetailId = Guid.NewGuid().ToString();
+        //    detail2.SummonCatetory = newAtSummon.SummonCategory;
+        //    detail2.Lending = "貸";
+        //    detail2.AMoney = shouldPayAccount.Total;
+        //    detail2.InsertTime = DateTime.Now;
+        //    detail2.UpdateTime = DateTime.Now;
+        //    detail2.SubjectId = "6389198a-ab4d-401c-8ec9-2865a727d0e6";    //台幣銀行存款
+        //    if (!string.IsNullOrEmpty(summary))
+        //        detail2.Summary = summary;
+        //    newAtSummon.Details.Add(detail2);
 
-            newAtSummon.TotalDebits = newAtSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
-            newAtSummon.CreditTotal = newAtSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
+        //    newAtSummon.TotalDebits = newAtSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
+        //    newAtSummon.CreditTotal = newAtSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
 
-            foreach (var item in newAtSummon.Details)
-            {
-                if (item.Lending == "借")
-                    item.Id = "A" + newAtSummon.Details.IndexOf(item);
-                else
-                    item.Id = "B" + newAtSummon.Details.IndexOf(item);
-            }
+        //    foreach (var item in newAtSummon.Details)
+        //    {
+        //        if (item.Lending == "借")
+        //            item.Id = "A" + newAtSummon.Details.IndexOf(item);
+        //        else
+        //            item.Id = "B" + newAtSummon.Details.IndexOf(item);
+        //    }
 
-            this.atSummonManager.Insert(newAtSummon);
-        }
+        //    this.atSummonManager.Insert(newAtSummon);
+        //}
 
-        public void UpdateAtSummon(Model.ShouldPayAccount shouldPayAccount, string subjectId)
-        {
-            Model.AtSummon atSummon = atSummonManager.GetByShouldPayAccountId(shouldPayAccount.ShouldPayAccountId);
-            if (atSummon != null)
-            {
-                atSummon.UpdateTime = DateTime.Now;
+        //public void UpdateAtSummon(Model.ShouldPayAccount shouldPayAccount, string subjectId)
+        //{
+        //    Model.AtSummon atSummon = atSummonManager.GetByShouldPayAccountId(shouldPayAccount.ShouldPayAccountId);
+        //    if (atSummon != null)
+        //    {
+        //        atSummon.UpdateTime = DateTime.Now;
 
-                atSummon.Details = atSummonDetailManager.Select(atSummon);
+        //        atSummon.Details = atSummonDetailManager.Select(atSummon);
 
-                foreach (var item in atSummon.Details)
-                {
-                    if (item.SubjectId == subjectId)   //應付票據-厂商
-                    {
-                        item.AMoney = shouldPayAccount.Total;
-                        item.UpdateTime = DateTime.Now;
-                    }
-                    else if (item.SubjectId == "6389198a-ab4d-401c-8ec9-2865a727d0e6")    //台幣銀行存款
-                    {
-                        item.AMoney = shouldPayAccount.Total;
-                        item.UpdateTime = DateTime.Now;
-                    }                    
-                }
+        //        foreach (var item in atSummon.Details)
+        //        {
+        //            if (item.SubjectId == subjectId)   //應付票據-厂商
+        //            {
+        //                item.AMoney = shouldPayAccount.Total;
+        //                item.UpdateTime = DateTime.Now;
+        //            }
+        //            else if (item.SubjectId == "6389198a-ab4d-401c-8ec9-2865a727d0e6")    //台幣銀行存款
+        //            {
+        //                item.AMoney = shouldPayAccount.Total;
+        //                item.UpdateTime = DateTime.Now;
+        //            }
+        //        }
 
-                atSummon.TotalDebits = atSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
-                atSummon.CreditTotal = atSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
+        //        atSummon.TotalDebits = atSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
+        //        atSummon.CreditTotal = atSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
 
-                atSummonManager.Update(atSummon);
-            }
-        }
+        //        atSummonManager.Update(atSummon);
+        //    }
+        //}
 
-        public void DeleteAtSummon(Model.ShouldPayAccount shouldPayAccount)
-        {
-            Model.AtSummon atSummon = atSummonManager.GetByShouldPayAccountId(shouldPayAccount.ShouldPayAccountId);
-            if (atSummon != null)
-            {
-                atSummonManager.Delete(atSummon);
-            }
-        }
+        //public void DeleteAtSummon(Model.ShouldPayAccount shouldPayAccount)
+        //{
+        //    IList<Model.AtSummon> atSummons = atSummonManager.GetByShouldPayAccountId(shouldPayAccount.ShouldPayAccountId);
+        //    foreach (var item in atSummons)
+        //    {
+        //        atSummonManager.Delete(item);
+        //    }
+        //}
 
         #endregion
     }

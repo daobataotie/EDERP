@@ -235,6 +235,8 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.txt_NoId.Text = this._supplier.NoId;
             this.txt_Product.EditValue = this._supplier.ProductId;
 
+            this.chk_TaxRateP5.Checked = this._supplier.TaxRateP5.HasValue ? this._supplier.TaxRateP5.Value : false;
+
             SetTextEditReadOnly(true);
 
             switch (this.action)
@@ -472,6 +474,8 @@ namespace Book.UI.Settings.BasicData.Supplier
             {
                 this._supplier.LastTransactionDate = this.dateEditLastTransactionDate.DateTime;
             }
+
+            this._supplier.TaxRateP5 = this.chk_TaxRateP5.Checked;
 
             switch (this.action)
             {

@@ -32,13 +32,14 @@
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.ncc_Employee = new Book.UI.Invoices.NewChooseContorl();
             this.comboBoxEditSummonCategory = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.spinEditCreditTotal = new DevExpress.XtraEditors.SpinEdit();
             this.spinEditTotalDebits = new DevExpress.XtraEditors.SpinEdit();
             this.textEditSummonId = new DevExpress.XtraEditors.TextEdit();
             this.dateEditSummonDate = new DevExpress.XtraEditors.DateEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -61,6 +62,7 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barBtnSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -91,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -115,17 +118,24 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.ncc_Employee);
             this.layoutControl1.Controls.Add(this.comboBoxEditSummonCategory);
             this.layoutControl1.Controls.Add(this.simpleButton2);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.spinEditCreditTotal);
             this.layoutControl1.Controls.Add(this.spinEditTotalDebits);
             this.layoutControl1.Controls.Add(this.textEditSummonId);
             this.layoutControl1.Controls.Add(this.dateEditSummonDate);
+            this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.gridControl1);
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // ncc_Employee
+            // 
+            this.ncc_Employee.EditValue = null;
+            resources.ApplyResources(this.ncc_Employee, "ncc_Employee");
+            this.ncc_Employee.Name = "ncc_Employee";
             // 
             // comboBoxEditSummonCategory
             // 
@@ -146,13 +156,6 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.StyleController = this.layoutControl1;
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // simpleButton1
-            // 
-            resources.ApplyResources(this.simpleButton1, "simpleButton1");
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // spinEditCreditTotal
             // 
@@ -191,6 +194,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateEditSummonDate.StyleController = this.layoutControl1;
             this.dateEditSummonDate.EditValueChanged += new System.EventHandler(this.dateEditSummonDate_EditValueChanged);
+            // 
+            // simpleButton1
+            // 
+            resources.ApplyResources(this.simpleButton1, "simpleButton1");
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.StyleController = this.layoutControl1;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // gridControl1
             // 
@@ -320,7 +330,8 @@
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem8,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem9});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(933, 360);
@@ -368,9 +379,9 @@
             // 
             this.layoutControlItem6.Control = this.spinEditCreditTotal;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(688, 314);
+            this.layoutControlItem6.Location = new System.Drawing.Point(733, 314);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(225, 26);
+            this.layoutControlItem6.Size = new System.Drawing.Size(180, 26);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem7
@@ -379,7 +390,7 @@
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 314);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(227, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(154, 26);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
             this.layoutControlItem7.TextVisible = false;
@@ -388,9 +399,9 @@
             // 
             this.layoutControlItem8.Control = this.simpleButton2;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(227, 314);
+            this.layoutControlItem8.Location = new System.Drawing.Point(154, 314);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(229, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(154, 26);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
             this.layoutControlItem8.TextVisible = false;
@@ -399,10 +410,19 @@
             // 
             this.layoutControlItem5.Control = this.spinEditTotalDebits;
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
-            this.layoutControlItem5.Location = new System.Drawing.Point(456, 314);
+            this.layoutControlItem5.Location = new System.Drawing.Point(560, 314);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(232, 26);
+            this.layoutControlItem5.Size = new System.Drawing.Size(173, 26);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 14);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.ncc_Employee;
+            resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
+            this.layoutControlItem9.Location = new System.Drawing.Point(308, 314);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(252, 26);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(60, 14);
             // 
             // barBtnSearch
             // 
@@ -459,6 +479,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +519,7 @@
         private DevExpress.XtraBars.BarButtonItem barBtnSearch;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private Book.UI.Invoices.NewChooseContorl ncc_Employee;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
     }
 }

@@ -358,9 +358,6 @@
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>員工姓名</value>
   </data>
-  <data name="gridColumn11.Caption" xml:space="preserve">
-    <value>部門</value>
-  </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>性別</value>
   </data>
@@ -378,6 +375,9 @@
   </data>
   <data name="gridColumn10.Caption" xml:space="preserve">
     <value>聯絡地址</value>
+  </data>
+  <data name="gridColumn11.Caption" xml:space="preserve">
+    <value>部門</value>
   </data>
   <data name="gridColumn12.Caption" xml:space="preserve">
     <value>卡號</value>

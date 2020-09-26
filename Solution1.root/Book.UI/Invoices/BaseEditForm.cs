@@ -580,6 +580,11 @@ namespace Book.UI.Invoices
                 }
                 throw;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
 
             if (this.HasRows())
@@ -689,7 +694,7 @@ namespace Book.UI.Invoices
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message , this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

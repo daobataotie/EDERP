@@ -34,7 +34,7 @@
 
     <select id="SelectByShouldPayAccountId" parameterClass="String" resultMap="AtBillsIncomeResult">
       <![CDATA[
-      select * from AtBillsIncome where ShouldPayAccountId=#value#
+      select * from AtBillsIncome where ShouldPayAccountId=#value#  order by Id
       ]]>
     </select>
 

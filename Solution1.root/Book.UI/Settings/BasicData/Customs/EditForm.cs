@@ -170,6 +170,8 @@ namespace Book.UI.Settings.BasicData.Customs
                 this._customer.Marks3 = this.richTextBoxMarks3.Rtf;
             this._customer.CustomerFP = this.comboBoxEditFP.Text;
 
+            this._customer.TaxRateP5 = this.chk_TaxRateP5.Checked;
+
             switch (this.action)
             {
                 case "insert":
@@ -288,6 +290,8 @@ namespace Book.UI.Settings.BasicData.Customs
 
             this.txt_Create.Text = this._customer.EmployeeCreatorId;
             this.txt_Update.Text = this._customer.EmployeeChangeId;
+
+            this.chk_TaxRateP5.Checked = this._customer.TaxRateP5.HasValue ? this._customer.TaxRateP5.Value : false;
 
             //switch (this.action)
             //{

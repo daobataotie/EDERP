@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Book.BL
 {
@@ -19,6 +20,9 @@ namespace Book.BL
         private static readonly DA.IStockAccessor stockAccessor = (DA.IStockAccessor)Accessors.Get("StockAccessor");
         private static readonly DA.IProduceOtherCompactDetailAccessor produceOtherCompactDetailAccessor = (DA.IProduceOtherCompactDetailAccessor)Accessors.Get("ProduceOtherCompactDetailAccessor");
         private ProductManager productManager = new ProductManager();
+        BL.AtSummonManager atSummonManager = new Book.BL.AtSummonManager();
+        private static readonly DA.IAtSummonAccessor atSummonAccessor = (DA.IAtSummonAccessor)Accessors.Get("AtSummonAccessor");
+        BL.AtSummonDetailManager atSummonDetailManager = new Book.BL.AtSummonDetailManager();
 
         private void CancelAffect(Model.ProduceOtherInDepot produceOtherInDepot, int tag)
         {
@@ -323,6 +327,180 @@ namespace Book.BL
             }
 
         }
+
+
+        #region 生成对应的会计传票
+
+        public void InsertAtSummon(Model.ProduceOtherInDepot produceOtherInDepot, Dictionary<string, string> dic)
+        {
+            Model.AtSummon atSummon = new Book.Model.AtSummon();
+            atSummon.SummonId = Guid.NewGuid().ToString();
+            atSummon.SummonDate = DateTime.Now;
+            atSummon.SummonCategory = "轉帳傳票";
+            atSummon.InsertTime = DateTime.Now;
+            atSummon.UpdateTime = DateTime.Now;
+            //atSummon.Id = this.atSummonManager.GetId();
+            atSummon.Id = this.atSummonManager.GetConsecutiveId(DateTime.Now);
+            atSummon.ProduceOtherInDepotId = produceOtherInDepot.ProduceOtherInDepotId;
+
+            atSummon.Details = new List<Model.AtSummonDetail>();
+
+            Model.AtSummonDetail detail1 = new Model.AtSummonDetail();
+            detail1.SummonDetailId = Guid.NewGuid().ToString();
+            detail1.SummonCatetory = atSummon.SummonCategory;
+            detail1.Lending = "借";
+            detail1.AMoney = Convert.ToDecimal(produceOtherInDepot.ProduceAmount);
+            //detail1.SubjectId = dic["進貨"];
+            detail1.SubjectId = dic[this.GetSubjectNameBySupplier(produceOtherInDepot.Supplier)];
+            detail1.InsertTime = DateTime.Now;
+            detail1.UpdateTime = DateTime.Now;
+            atSummon.Details.Add(detail1);
+
+            if (produceOtherInDepot.ProduceTax > 0)
+            {
+                Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
+                detail2.SummonDetailId = Guid.NewGuid().ToString();
+                detail2.SummonCatetory = atSummon.SummonCategory;
+                detail2.Lending = "借";
+                detail2.AMoney = Convert.ToDecimal(produceOtherInDepot.ProduceTax);
+                detail2.SubjectId = dic["進項稅額"];
+                detail2.InsertTime = DateTime.Now;
+                detail2.UpdateTime = DateTime.Now;
+                atSummon.Details.Add(detail2);
+            }
+
+            Model.AtSummonDetail detail3 = new Model.AtSummonDetail();
+            detail3.SummonDetailId = Guid.NewGuid().ToString();
+            detail3.SummonCatetory = atSummon.SummonCategory;
+            detail3.Lending = "貸";
+            detail3.AMoney = Convert.ToDecimal(produceOtherInDepot.ProduceTotal);
+            detail3.SubjectId = dic[string.Format("應付帳款-{0}", produceOtherInDepot.Supplier.SupplierShortName)];
+            detail3.InsertTime = DateTime.Now;
+            detail3.UpdateTime = DateTime.Now;
+            atSummon.Details.Add(detail3);
+
+
+            foreach (var item in atSummon.Details)
+            {
+                if (item.Lending == "借")
+                    item.Id = "A" + atSummon.Details.IndexOf(item);
+                else
+                    item.Id = "B" + atSummon.Details.IndexOf(item);
+            }
+
+            atSummonManager.TiGuiExists(atSummon);
+
+            //插入
+            string invoiceKind = "ats";
+            string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, atSummon.SummonDate.Value.Year);
+            string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, atSummon.SummonDate.Value.Year, atSummon.SummonDate.Value.Month);
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, atSummon.SummonDate.Value.ToString("yyyy-MM-dd"));
+            string sequencekey = string.Format(invoiceKind);
+
+            SequenceManager.Increment(sequencekey_y);
+            SequenceManager.Increment(sequencekey_m);
+            SequenceManager.Increment(sequencekey_d);
+            SequenceManager.Increment(sequencekey);
+
+            atSummon.TotalDebits = atSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
+            atSummon.CreditTotal = atSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
+
+            atSummonAccessor.Insert(atSummon);
+
+            foreach (Model.AtSummonDetail atSummonDetail in atSummon.Details)
+            {
+                atSummonDetail.SummonId = atSummon.SummonId;
+                atSummonDetailManager.Insert(atSummonDetail);
+            }
+        }
+
+        public void UpdateAtSummon(Model.ProduceOtherInDepot produceOtherInDepot, Dictionary<string, string> dic)
+        {
+            Model.AtSummon atSummon = atSummonManager.GetByProduceOtherInDepotId(produceOtherInDepot.ProduceOtherInDepotId);
+            if (atSummon != null)
+            {
+                atSummon.UpdateTime = DateTime.Now;
+
+                atSummon.Details = atSummonDetailManager.Select(atSummon);
+
+                foreach (var item in atSummon.Details)
+                {
+                    if (dic.Values.Contains(item.SubjectId))
+                    {
+                        if (item.Lending == "借")
+                        {
+                            if (item.Subject.SubjectName == "進項稅額")
+                            {
+                                if (produceOtherInDepot.ProduceTax > 0)
+                                {
+                                    if (item.AMoney != Convert.ToDecimal(produceOtherInDepot.ProduceTax))
+                                    {
+                                        item.AMoney = Convert.ToDecimal(produceOtherInDepot.ProduceTax);
+                                        item.UpdateTime = DateTime.Now;
+
+                                        atSummonDetailManager.Update(item);
+                                    }
+                                }
+                                else
+                                    atSummonDetailManager.Delete(item.SummonDetailId);
+                            }
+                            else       //供應商分類對應的科目
+                            {
+                                if (item.AMoney != Convert.ToDecimal(produceOtherInDepot.ProduceAmount))
+                                {
+                                    item.AMoney = Convert.ToDecimal(produceOtherInDepot.ProduceAmount);
+                                    item.UpdateTime = DateTime.Now;
+
+                                    atSummonDetailManager.Update(item);
+                                }
+                            }
+                        }
+                        else          //應付賬款-廠商
+                        {
+                            if (item.AMoney != Convert.ToDecimal(produceOtherInDepot.ProduceTotal))
+                            {
+                                item.AMoney = Convert.ToDecimal(produceOtherInDepot.ProduceTotal);
+                                item.UpdateTime = DateTime.Now;
+
+                                atSummonDetailManager.Update(item);
+                            }
+                        }
+                    }
+                }
+
+                if (produceOtherInDepot.ProduceTax > 0 && atSummon.Details.Count == 2 && !atSummon.Details.Any(d => d.Subject.SubjectName == "進項稅額"))
+                {
+                    Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
+                    detail2.SummonId = atSummon.SummonId;
+                    detail2.SummonDetailId = Guid.NewGuid().ToString();
+                    detail2.SummonCatetory = atSummon.SummonCategory;
+                    detail2.Lending = "借";
+                    detail2.Id = "A2";
+                    detail2.AMoney = Convert.ToDecimal(produceOtherInDepot.ProduceTax);
+                    detail2.SubjectId = dic["進項稅額"];
+                    detail2.InsertTime = DateTime.Now;
+                    detail2.UpdateTime = DateTime.Now;
+                    atSummon.Details.Add(detail2);
+
+                    atSummonDetailManager.Insert(detail2);
+                }
+
+                atSummon.TotalDebits = atSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
+                atSummon.CreditTotal = atSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
+
+                atSummonAccessor.Update(atSummon);
+            }
+        }
+
+        public void DeleteAtSummon(Model.ProduceOtherInDepot produceOtherInDepot)
+        {
+            Model.AtSummon atSummon = atSummonManager.GetByProduceOtherInDepotId(produceOtherInDepot.ProduceOtherInDepotId);
+            if (atSummon != null)
+            {
+                atSummonManager.Delete(atSummon);
+            }
+        }
+        #endregion
     }
 }
 

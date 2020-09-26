@@ -24,7 +24,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="FPMoney" column="FPMoney"/>
       <result property="FPTax" column="FPTax"/>
       <result property="FPTotal" column="FPTotal"/>
-      <result property ="PMTotal" column="PMTotal"/>
+      <result property="PMTotal" column="PMTotal"/>
+      <result property="CashDate" column="CashDate"/>
       <result property="Supplier" column="SupplierId" lazyLoad="false" select="Supplier.select_by_primary_key" />
       <result property="AtBillsIncome" column="AtBillsIncomeId" lazyLoad="false" select="AtBillsIncome.select_by_primary_key" />
       <result property="AtSummon" column="AtSummonId" lazyLoad="false" select="AtSummon.select_by_primary_key" />
@@ -135,7 +136,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [FPMoney],
         [FPTax],
         [FPTotal],
-        [PMTotal]
+        [PMTotal],
+        [CashDate]
         
 			FROM
 				[dbo].[ShouldPayAccount]
@@ -208,7 +210,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [FPMoney],
         [FPTax],
         [FPTotal],
-        [PMTotal]
+        [PMTotal],
+        [CashDate]
 			) 
 			VALUES 
 			(
@@ -230,7 +233,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #FPMoney#,
         #FPTax#,
         #FPTotal#,
-        #PMTotal#
+        #PMTotal#,
+        #CashDate#
 			)
              ]]>
     </insert>
@@ -255,7 +259,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [FPMoney]=#FPMoney#,
         [FPTax]=#FPTax#,
         [FPTotal]=#FPTotal#,
-        [PMTotal]=#PMTotal#
+        [PMTotal]=#PMTotal#,
+        [CashDate]=#CashDate#
 			WHERE
 				[ShouldPayAccountId] = #ShouldPayAccountId#
                     ]]>

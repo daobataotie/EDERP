@@ -93,6 +93,12 @@ namespace Book.BL
             return accessor.GetSubjectIdByName(name);
         }
 
+
+        public IList<Model.AtAccountSubject> SelectIdAndName()
+        {
+            return accessor.SelectIdAndName();
+        }
+
         //public void UpdateDataTable(Model.AtAccountSubject accountSubject)
         //{
         //    accessor.UpdateDataTable(accountSubject);

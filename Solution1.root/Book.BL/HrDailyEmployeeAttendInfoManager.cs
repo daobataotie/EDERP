@@ -87,7 +87,7 @@ namespace Book.BL
             accessor.InsertLateInfo(id, EmployeeId, ClockDate, LateInMinute);
         }
 
-        public System.Data.DataSet SelectHrInfoByStateAndDate(DateTime DutyDate)
+        public System.Data.DataTable SelectHrInfoByStateAndDate(DateTime DutyDate)
         {
             return accessor.SelectHrInfoByStateAndDate(DutyDate);
         }
@@ -185,7 +185,7 @@ namespace Book.BL
             return accessor.SelectByEmpMonth(employee, year, month);
         }
 
-        public DataSet SelectByEmpMonth(Model.Employee employee, DateTime date)
+        public DataTable SelectByEmpMonth(Model.Employee employee, DateTime date)
         {
             return accessor.SelectByEmpMonth(employee, date);
         }

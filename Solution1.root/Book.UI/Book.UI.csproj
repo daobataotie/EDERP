@@ -4351,6 +4351,12 @@
       <DependentUpon>YearLeaveList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Attendance\Meals\ConditionForm.resx">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Attendance\Meals\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hr\Salary\Salaryset\AnnualSalaryRO.resx">
       <DependentUpon>AnnualSalaryRO.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4562,6 +4568,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Query\CustomerShipment.resx">
       <DependentUpon>CustomerShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ShouldPayForm_BackUp.resx">
+      <DependentUpon>ShouldPayForm_BackUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ShouldPayForm_BackUp.zh-CHT.resx">
+      <DependentUpon>ShouldPayForm_BackUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ShouldPayForm_BackUp2.resx">
+      <DependentUpon>ShouldPayForm_BackUp2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\ShouldPayForm_BackUp2.zh-CHT.resx">
+      <DependentUpon>ShouldPayForm_BackUp2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\BasicData\Customs\ChooseCustomsForm2.resx">
       <DependentUpon>ChooseCustomsForm2.cs</DependentUpon>
@@ -11884,6 +11906,18 @@
     <Compile Include="Hr\Attendance\ClockData\NewClockForm.Designer.cs">
       <DependentUpon>NewClockForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hr\Attendance\Meals\ConditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Attendance\Meals\ConditionForm.Designer.cs">
+      <DependentUpon>ConditionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Attendance\Meals\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Attendance\Meals\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hr\Salary\Salaryset\CalCrystalReportForm1Randomcode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12087,6 +12121,18 @@
     </Compile>
     <Compile Include="Query\CustomerShipment.Designer.cs">
       <DependentUpon>CustomerShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ShouldPayForm_BackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\ShouldPayForm_BackUp.Designer.cs">
+      <DependentUpon>ShouldPayForm_BackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ShouldPayForm_BackUp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query\ShouldPayForm_BackUp2.Designer.cs">
+      <DependentUpon>ShouldPayForm_BackUp2.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings\BasicData\Customs\ChooseCustomsForm2.cs">
       <SubType>Form</SubType>

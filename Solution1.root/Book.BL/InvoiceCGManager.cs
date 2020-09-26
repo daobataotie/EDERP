@@ -463,7 +463,8 @@ namespace Book.BL
             atSummon.SummonCategory = "轉帳傳票";
             atSummon.InsertTime = DateTime.Now;
             atSummon.UpdateTime = DateTime.Now;
-            atSummon.Id = this.atSummonManager.GetId();
+            //atSummon.Id = this.atSummonManager.GetId();
+            atSummon.Id = this.atSummonManager.GetConsecutiveId(DateTime.Now);
             atSummon.InvoiceCGId = invoice.InvoiceId;
 
             atSummon.Details = new List<Model.AtSummonDetail>();
@@ -473,27 +474,31 @@ namespace Book.BL
             detail1.SummonCatetory = atSummon.SummonCategory;
             detail1.Lending = "借";
             detail1.AMoney = invoice.InvoiceHeji;
-            detail1.SubjectId = dic["進貨"];
+            //detail1.SubjectId = dic["進貨"];
+            detail1.SubjectId = dic[this.GetSubjectNameBySupplier(invoice.Supplier)];
             detail1.InsertTime = DateTime.Now;
             detail1.UpdateTime = DateTime.Now;
             atSummon.Details.Add(detail1);
 
-            Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
-            detail2.SummonDetailId = Guid.NewGuid().ToString();
-            detail2.SummonCatetory = atSummon.SummonCategory;
-            detail2.Lending = "借";
-            detail2.AMoney = invoice.InvoiceTax;
-            detail2.SubjectId = dic["進項稅額"];
-            detail2.InsertTime = DateTime.Now;
-            detail2.UpdateTime = DateTime.Now;
-            atSummon.Details.Add(detail2);
+            if (invoice.InvoiceTax > 0)
+            {
+                Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
+                detail2.SummonDetailId = Guid.NewGuid().ToString();
+                detail2.SummonCatetory = atSummon.SummonCategory;
+                detail2.Lending = "借";
+                detail2.AMoney = invoice.InvoiceTax;
+                detail2.SubjectId = dic["進項稅額"];
+                detail2.InsertTime = DateTime.Now;
+                detail2.UpdateTime = DateTime.Now;
+                atSummon.Details.Add(detail2);
+            }
 
             Model.AtSummonDetail detail3 = new Model.AtSummonDetail();
             detail3.SummonDetailId = Guid.NewGuid().ToString();
             detail3.SummonCatetory = atSummon.SummonCategory;
             detail3.Lending = "貸";
             detail3.AMoney = invoice.InvoiceTotal;
-            detail3.SubjectId = dic[string.Format("應付賬款-{0}", invoice.Supplier.SupplierShortName)];
+            detail3.SubjectId = dic[string.Format("應付帳款-{0}", invoice.Supplier.SupplierShortName)];
             detail3.InsertTime = DateTime.Now;
             detail3.UpdateTime = DateTime.Now;
             atSummon.Details.Add(detail3);
@@ -507,6 +512,7 @@ namespace Book.BL
                     item.Id = "B" + atSummon.Details.IndexOf(item);
             }
 
+            atSummonManager.TiGuiExists(atSummon);
 
             //插入
             string invoiceKind = "ats";
@@ -547,21 +553,26 @@ namespace Book.BL
                     {
                         if (item.Lending == "借")
                         {
-                            if (item.Subject.SubjectName == "進貨")
+                            if (item.Subject.SubjectName == "進項稅額")
+                            {
+                                if (invoice.InvoiceTax > 0)
+                                {
+                                    if (item.AMoney != invoice.InvoiceTax)
+                                    {
+                                        item.AMoney = invoice.InvoiceTax;
+                                        item.UpdateTime = DateTime.Now;
+
+                                        atSummonDetailManager.Update(item);
+                                    }
+                                }
+                                else
+                                    atSummonDetailManager.Delete(item.SummonDetailId);
+                            }
+                            else       //供應商分類對應的科目
                             {
                                 if (item.AMoney != invoice.InvoiceHeji)
                                 {
                                     item.AMoney = invoice.InvoiceHeji;
-                                    item.UpdateTime = DateTime.Now;
-
-                                    atSummonDetailManager.Update(item);
-                                }
-                            }
-                            else       //進項稅額
-                            {
-                                if (item.AMoney != invoice.InvoiceTax)
-                                {
-                                    item.AMoney = invoice.InvoiceTax;
                                     item.UpdateTime = DateTime.Now;
 
                                     atSummonDetailManager.Update(item);
@@ -581,6 +592,23 @@ namespace Book.BL
                     }
                 }
 
+                if (invoice.InvoiceTax > 0 && atSummon.Details.Count == 2 && !atSummon.Details.Any(d => d.Subject.SubjectName == "進項稅額"))
+                {
+                    Model.AtSummonDetail detail2 = new Model.AtSummonDetail();
+                    detail2.SummonId = atSummon.SummonId;
+                    detail2.SummonDetailId = Guid.NewGuid().ToString();
+                    detail2.SummonCatetory = atSummon.SummonCategory;
+                    detail2.Lending = "借";
+                    detail2.Id = "A2";
+                    detail2.AMoney = invoice.InvoiceTax;
+                    detail2.SubjectId = dic["進項稅額"];
+                    detail2.InsertTime = DateTime.Now;
+                    detail2.UpdateTime = DateTime.Now;
+                    atSummon.Details.Add(detail2);
+
+                    atSummonDetailManager.Insert(detail2);
+                }
+
                 atSummon.TotalDebits = atSummon.Details.Where(d => d.Lending == "借").Sum(d => d.AMoney);
                 atSummon.CreditTotal = atSummon.Details.Where(d => d.Lending == "貸").Sum(d => d.AMoney);
 
@@ -595,7 +623,7 @@ namespace Book.BL
             {
                 atSummonManager.Delete(atSummon);
             }
-        } 
+        }
         #endregion
     }
 }

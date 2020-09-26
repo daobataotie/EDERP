@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <sqlMap namespace="AtAccountSubject" xmlns="http://ibatis.apache.org/mapping"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <resultMaps>
+    <resultMap id="AtAccountSubjectResult1" class="AtAccountSubject">
+      <result property="SubjectId" column="SubjectId" />
+      <result property="SubjectName" column="SubjectName" />
+      <result property="Id" column="Id" />
+    </resultMap>
+  </resultMaps>
+
   <statements>
     <select id="selectById" resultMap="AtAccountSubjectResult">
       <![CDATA[
@@ -12,6 +21,12 @@
     <select id="GetSubjectIdByName" resultClass="string" parameterClass="string">
       <![CDATA[
       select SubjectId from AtAccountSubject where SubjectName=#value#
+      ]]>
+    </select>
+
+    <select id="SelectIdAndName" resultMap="AtAccountSubjectResult1">
+      <![CDATA[
+      select SubjectId,SubjectName,Id from AtAccountSubject order by Id
       ]]>
     </select>
   </statements>

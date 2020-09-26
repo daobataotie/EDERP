@@ -103,6 +103,10 @@ namespace Book.Model
 
         private string _shouldPayAccountId;
 
+        private string _invoiceCTId;
+
+        private string _produceOtherInDepotId;
+
         #endregion
 
         #region Properties
@@ -348,7 +352,7 @@ namespace Book.Model
 
         }
         /// <summary>
-        /// 员工
+        /// 會計
         /// </summary>
         public virtual Employee EmployeeDS
         {
@@ -379,6 +383,18 @@ namespace Book.Model
         {
             get { return _shouldPayAccountId; }
             set { _shouldPayAccountId = value; }
+        }
+
+        public string InvoiceCTId
+        {
+            get { return _invoiceCTId; }
+            set { _invoiceCTId = value; }
+        }
+
+        public string ProduceOtherInDepotId
+        {
+            get { return _produceOtherInDepotId; }
+            set { _produceOtherInDepotId = value; }
         }
 
         /// <summary>
@@ -456,6 +472,10 @@ namespace Book.Model
         public readonly static string PRO_InvoiceXSId = "InvoiceXSId";
 
         public readonly static string PRO_ShouldPayAccountId = "ShouldPayAccountId";
+
+        public readonly static string PRO_InvoiceCTId = "InvoiceCTId";
+
+        public readonly static string PRO_ProduceOtherInDepotId = "ProduceOtherInDepotId";
 
         #endregion
     }

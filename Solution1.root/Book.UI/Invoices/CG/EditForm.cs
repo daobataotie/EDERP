@@ -395,14 +395,14 @@ namespace Book.UI.Invoices.CG
             invoicecg.InvoiceDiscount = this.spinEditInvoiceZKE.Value;
             invoicecg.InvoicePayable = decimal.Parse(string.IsNullOrEmpty(this.spinEditInvoiceOwed.Text) ? "0" : this.spinEditInvoiceOwed.Text);
 
-
             if (invoicecg.Supplier == null)
                 throw new Helper.RequireValueException("Company");
 
             Dictionary<string, string> dicSubject = new Dictionary<string, string>();
-            dicSubject.Add("進貨", null);
+            //dicSubject.Add("進貨", null);
+            dicSubject.Add(this.invoiceManager.GetSubjectNameBySupplier(invoicecg.Supplier), null);
             dicSubject.Add("進項稅額", null);
-            dicSubject.Add(string.Format("應付賬款-{0}", invoicecg.Supplier.SupplierShortName), null);
+            dicSubject.Add(string.Format("應付帳款-{0}", invoicecg.Supplier.SupplierShortName), null);
 
             for (int i = 0; i < dicSubject.Count; i++)
             {
@@ -501,6 +501,7 @@ namespace Book.UI.Invoices.CG
                 return;
 
             this.invoiceManager.TurnNull(invoicecg.InvoiceId);
+
             this.invoiceManager.DeleteAtSummon(invoicecg);
 
             invoicecg = this.invoiceManager.GetNext(invoicecg);
@@ -782,6 +783,7 @@ namespace Book.UI.Invoices.CG
             this.btn_GenerateInputCheck.Enabled = true;
             this.che_CheckAll.Properties.ReadOnly = false;
             this.che_CheckAll.Checked = false;
+            this.spinEditInvoiceTaxRate.Properties.ReadOnly = true;
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
@@ -1556,6 +1558,20 @@ namespace Book.UI.Invoices.CG
         {
             invoicecg.Details.ToList().ForEach(D => D.IsChecked = this.che_CheckAll.Checked);
             this.gridControl1.RefreshDataSource();
+        }
+
+        private void newChooseContorlSuplier_EditValueChanged(object sender, EventArgs e)
+        {
+            if (newChooseContorlSuplier.EditValue != null && this.action != "view")
+            {
+                Model.Supplier supplier = newChooseContorlSuplier.EditValue as Model.Supplier;
+                if (supplier.TaxRateP5.HasValue && supplier.TaxRateP5.Value)
+                {
+                    this.spinEditInvoiceTaxRate.Value = 5;
+                }
+                else
+                    this.spinEditInvoiceTaxRate.Value = 0;
+            }
         }
     }
 }

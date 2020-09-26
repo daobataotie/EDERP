@@ -112,5 +112,29 @@ namespace Book.DA.SQLServer
             pars.Add("month", month);
             return sqlmapper.QueryForList<Model.LunchDetail>("LunchDetail.select_byempAnddate", pars);
         }
+
+
+        public DataTable GetMonthLunch(DateTime month)
+        {
+            string sql = "select ld.MarkDate,e.IDNo,e.EmployeeName,d.DepartmentName,ld.LunchFee,ld.ShouldPay from LunchDetail ld left join Employee e on ld.EmployeeId=e.EmployeeId left join Department d on e.DepartmentId=d.DepartmentId where YEAR(ld.MarkDate)=" + month.Year + " and MONTH(ld.MarkDate)=" + month.Month + " order by ld.MarkDate,e.IDNo";
+
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            return dt;
+        }
+
+
+        public DataTable GetMonthPersonalLunch(DateTime month, string employeeId)
+        {
+            string sql = "select ld.MarkDate,e.IDNo,e.EmployeeName,d.DepartmentName,ld.LunchFee,ld.ShouldPay from LunchDetail ld left join Employee e on ld.EmployeeId=e.EmployeeId left join Department d on e.DepartmentId=d.DepartmentId where YEAR(ld.MarkDate)=" + month.Year + " and MONTH(ld.MarkDate)=" + month.Month + " and ld.EmployeeId='" + employeeId + "' order ld.MarkDate";
+
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            return dt;
+        }
     }
 }

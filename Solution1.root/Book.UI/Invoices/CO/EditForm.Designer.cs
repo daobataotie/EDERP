@@ -34,12 +34,13 @@
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.date_Update = new DevExpress.XtraEditors.DateEdit();
             this.newChooseContorlAtCurrencyCate = new Book.UI.Invoices.NewChooseContorl();
             this.txtSupplierLotNumber = new DevExpress.XtraEditors.TextEdit();
             this.newChooseCustomer = new Book.UI.Invoices.NewChooseContorl();
             this.textEditInvoiceXOId = new DevExpress.XtraEditors.TextEdit();
             this.btn_GetNewPrice = new DevExpress.XtraEditors.SimpleButton();
-            this.buttonEditCompany = new Book.UI.Invoices.NewChooseContorl();
+            this.buttonEditSupplier = new Book.UI.Invoices.NewChooseContorl();
             this.buttonEditEmployee = new Book.UI.Invoices.NewChooseContorl();
             this.dateEditInvoiceYjrq = new DevExpress.XtraEditors.DateEdit();
             this.textEditCustomerXOInvoiceId = new DevExpress.XtraEditors.TextEdit();
@@ -158,6 +159,7 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem53 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem54 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -189,11 +191,11 @@
             this.barBtnUpdatePrice = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.date_Update = new DevExpress.XtraEditors.DateEdit();
-            this.layoutControlItem54 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Update.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Update.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSupplierLotNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditInvoiceXOId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditInvoiceYjrq.Properties.VistaTimeProperties)).BeginInit();
@@ -294,6 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
@@ -319,9 +322,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_Update.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_Update.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).BeginInit();
             this.SuspendLayout();
             // 
             // bar1
@@ -349,7 +349,7 @@
             this.layoutControl1.Controls.Add(this.newChooseCustomer);
             this.layoutControl1.Controls.Add(this.textEditInvoiceXOId);
             this.layoutControl1.Controls.Add(this.btn_GetNewPrice);
-            this.layoutControl1.Controls.Add(this.buttonEditCompany);
+            this.layoutControl1.Controls.Add(this.buttonEditSupplier);
             this.layoutControl1.Controls.Add(this.buttonEditEmployee);
             this.layoutControl1.Controls.Add(this.dateEditInvoiceYjrq);
             this.layoutControl1.Controls.Add(this.textEditCustomerXOInvoiceId);
@@ -363,6 +363,19 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(509, 396, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // date_Update
+            // 
+            this.date_Update.EditValue = null;
+            resources.ApplyResources(this.date_Update, "date_Update");
+            this.date_Update.MenuManager = this.barManager1;
+            this.date_Update.Name = "date_Update";
+            this.date_Update.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("date_Update.Properties.Buttons"))))});
+            this.date_Update.Properties.ReadOnly = true;
+            this.date_Update.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.date_Update.StyleController = this.layoutControl1;
             // 
             // newChooseContorlAtCurrencyCate
             // 
@@ -410,13 +423,14 @@
             this.btn_GetNewPrice.StyleController = this.layoutControl1;
             this.btn_GetNewPrice.Click += new System.EventHandler(this.btn_GetNewPrice_Click);
             // 
-            // buttonEditCompany
+            // buttonEditSupplier
             // 
-            this.buttonEditCompany.ButtonReadOnly = false;
-            this.buttonEditCompany.EditValue = null;
-            resources.ApplyResources(this.buttonEditCompany, "buttonEditCompany");
-            this.buttonEditCompany.Name = "buttonEditCompany";
-            this.buttonEditCompany.ShowButton = true;
+            this.buttonEditSupplier.ButtonReadOnly = false;
+            this.buttonEditSupplier.EditValue = null;
+            resources.ApplyResources(this.buttonEditSupplier, "buttonEditSupplier");
+            this.buttonEditSupplier.Name = "buttonEditSupplier";
+            this.buttonEditSupplier.ShowButton = true;
+            this.buttonEditSupplier.EditValueChanged += new System.EventHandler(this.buttonEditSupplier_EditValueChanged);
             // 
             // buttonEditEmployee
             // 
@@ -1638,7 +1652,7 @@
             // 
             this.layoutControlItem4.AppearanceItemCaption.Font = ((System.Drawing.Font)(resources.GetObject("layoutControlItem4.AppearanceItemCaption.Font")));
             this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Control = this.buttonEditCompany;
+            this.layoutControlItem4.Control = this.buttonEditSupplier;
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
             this.layoutControlItem4.Location = new System.Drawing.Point(232, 51);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -1682,6 +1696,15 @@
             this.layoutControlItem53.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem53.TextToControlDistance = 0;
             this.layoutControlItem53.TextVisible = false;
+            // 
+            // layoutControlItem54
+            // 
+            this.layoutControlItem54.Control = this.date_Update;
+            resources.ApplyResources(this.layoutControlItem54, "layoutControlItem54");
+            this.layoutControlItem54.Location = new System.Drawing.Point(232, 26);
+            this.layoutControlItem54.Name = "layoutControlItem54";
+            this.layoutControlItem54.Size = new System.Drawing.Size(220, 25);
+            this.layoutControlItem54.TextSize = new System.Drawing.Size(76, 14);
             // 
             // barButtonItem2
             // 
@@ -1950,28 +1973,6 @@
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemJieAn_ItemClick);
             // 
-            // date_Update
-            // 
-            this.date_Update.EditValue = null;
-            resources.ApplyResources(this.date_Update, "date_Update");
-            this.date_Update.MenuManager = this.barManager1;
-            this.date_Update.Name = "date_Update";
-            this.date_Update.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEdit1.Properties.Buttons"))))});
-            this.date_Update.Properties.ReadOnly = true;
-            this.date_Update.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.date_Update.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem54
-            // 
-            this.layoutControlItem54.Control = this.date_Update;
-            resources.ApplyResources(this.layoutControlItem54, "layoutControlItem54");
-            this.layoutControlItem54.Location = new System.Drawing.Point(232, 26);
-            this.layoutControlItem54.Name = "layoutControlItem54";
-            this.layoutControlItem54.Size = new System.Drawing.Size(220, 25);
-            this.layoutControlItem54.TextSize = new System.Drawing.Size(76, 14);
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1984,6 +1985,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.date_Update.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date_Update.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSupplierLotNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditInvoiceXOId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditInvoiceYjrq.Properties.VistaTimeProperties)).EndInit();
@@ -2084,6 +2087,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
@@ -2109,9 +2113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_Update.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date_Update.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem54)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2145,7 +2146,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private NewChooseContorl buttonEditEmployee;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private NewChooseContorl buttonEditCompany;
+        private NewChooseContorl buttonEditSupplier;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private System.Windows.Forms.BindingSource bindingSource2;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;

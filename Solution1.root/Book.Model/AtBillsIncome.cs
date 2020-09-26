@@ -9,7 +9,7 @@ using System;
 namespace Book.Model
 {
     /// <summary>
-    /// 票据收付
+    /// 应付/应收票据
     /// </summary>
     [Serializable]
     public partial class AtBillsIncome

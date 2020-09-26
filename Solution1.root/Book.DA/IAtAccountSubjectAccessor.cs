@@ -21,6 +21,8 @@ namespace Book.DA
         IList<Model.AtAccountSubject> selectById(string startid, string endid);
 
         string GetSubjectIdByName(string name);
+
+        IList<Model.AtAccountSubject> SelectIdAndName();
     }
 }
 

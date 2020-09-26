@@ -53,6 +53,7 @@ namespace Book.UI.Hr.Attendance.Meals
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -77,7 +78,7 @@ namespace Book.UI.Hr.Attendance.Meals
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.bar_Search = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLunch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -96,10 +97,10 @@ namespace Book.UI.Hr.Attendance.Meals
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -264,10 +265,6 @@ namespace Book.UI.Hr.Attendance.Meals
             this.datelunch.Name = "datelunch";
             this.datelunch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("datelunch.Properties.Buttons"))))});
-            this.datelunch.Properties.DisplayFormat.FormatString = "yyyy年MM月dd日";
-            this.datelunch.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.datelunch.Properties.EditFormat.FormatString = "yyyy年MM月dd日";
-            this.datelunch.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.datelunch.Properties.NullDate = "";
             this.datelunch.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -284,7 +281,7 @@ namespace Book.UI.Hr.Attendance.Meals
             this.emptySpaceItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(699, 471);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(699, 466);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -293,7 +290,7 @@ namespace Book.UI.Hr.Attendance.Meals
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(679, 425);
+            this.layoutControlItem1.Size = new System.Drawing.Size(679, 420);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
@@ -304,16 +301,16 @@ namespace Book.UI.Hr.Attendance.Meals
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(175, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(184, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(36, 14);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.sbtn_search;
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
-            this.layoutControlItem4.Location = new System.Drawing.Point(175, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(184, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(109, 26);
+            this.layoutControlItem4.Size = new System.Drawing.Size(107, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextToControlDistance = 0;
             this.layoutControlItem4.TextVisible = false;
@@ -322,10 +319,18 @@ namespace Book.UI.Hr.Attendance.Meals
             // 
             this.layoutControlItem2.Control = this.calcEdit1;
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
-            this.layoutControlItem2.Location = new System.Drawing.Point(284, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(291, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(150, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(143, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(36, 14);
+            // 
+            // emptySpaceItem1
+            // 
+            resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
+            this.emptySpaceItem1.Location = new System.Drawing.Point(434, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(245, 26);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // barButtonItem2
             // 
@@ -353,8 +358,9 @@ namespace Book.UI.Hr.Attendance.Meals
             this.barButtonItem1,
             this.barButtonItem3,
             this.barButtonItem4,
-            this.barButtonItem5});
-            this.barManager1.MaxItemId = 8;
+            this.barButtonItem5,
+            this.bar_Search});
+            this.barManager1.MaxItemId = 9;
             this.barManager1.StatusBar = this.bar3;
             this.barManager1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
@@ -369,7 +375,8 @@ namespace Book.UI.Hr.Attendance.Meals
             this.bar2.FloatLocation = new System.Drawing.Point(462, 200);
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btn_save, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bar_Search)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             resources.ApplyResources(this.bar2, "bar2");
@@ -516,13 +523,12 @@ namespace Book.UI.Hr.Attendance.Meals
             this.gridColumn4.FieldName = "ShouldPay";
             this.gridColumn4.Name = "gridColumn4";
             // 
-            // emptySpaceItem1
+            // bar_Search
             // 
-            resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
-            this.emptySpaceItem1.Location = new System.Drawing.Point(434, 0);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(245, 26);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            resources.ApplyResources(this.bar_Search, "bar_Search");
+            this.bar_Search.Id = 8;
+            this.bar_Search.Name = "bar_Search";
+            this.bar_Search.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_Search_ItemClick);
             // 
             // MealslistForm
             // 
@@ -554,10 +560,10 @@ namespace Book.UI.Hr.Attendance.Meals
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -612,5 +618,6 @@ namespace Book.UI.Hr.Attendance.Meals
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraBars.BarButtonItem bar_Search;
     }
 }

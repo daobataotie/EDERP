@@ -207,9 +207,10 @@ namespace Book.UI.Hr.Salary.Salaryset
         private int flag = 0;
 
         /*
-         * 薪资计算于2013.10修改  此处修改对应的两处也要修改:
+         * 薪资计算于2013.10修改  此处修改对应的另外3处也要修改:
          * 1，本页面的 “CalulationNoText”方法
-         * 2，CalCrystalReportForm1 修改
+         * 2，CalCrystalReportForm1-Calulation 修改
+         * 3, CalCrystalReportForm1Randomcode-Calulation 修改
          */
         private void Calulation(Model.Employee emp)
         {
@@ -242,7 +243,7 @@ namespace Book.UI.Hr.Salary.Salaryset
             int hasPayDays = 0;
             //请假的天数
             int halfDays = 0;
-            //请半天的日基数总和
+            //请假的日基数总和(假别给薪基数)
             double halfDayFactors = 0;
             //请半天的班别津贴→餐费补贴
             double halfSpecialBonus = 0;
@@ -487,6 +488,9 @@ namespace Book.UI.Hr.Salary.Salaryset
                 //    _ms.mLunchFee = 0;
                 //else
                 _ms.mLunchFee = mStrToDouble(dr["LunchFee"]);                                 //午餐費m
+                if (emp.IsMigrantWorker)         //外勞餐費多扣1500
+                    _ms.mLunchFee += 1500;
+
                 _ms.mOverTimeFee = mStrToDouble(dr["OverTimeFee"]);                           //加班費
                 _ms.mGeneralOverTime = mStrToDouble(dr["GeneralOverTime"]);                   //平日加班(時數)
                 _ms.mHolidayOverTime = mStrToDouble(dr["HolidayOverTime"]);                   //假日加班(時數)
@@ -589,7 +593,17 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //2017-6-5 改O和普通员工一样，只有J才不扣国定假日
                     //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
                     //2018年10月6日00:25:02：外劳年终要扣国定假日
-                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
+                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
+
+                    //2020年9月26日19:26:41:
+                    //普通員工以及外勞：未做滿一個月：年终/30*（實際出勤天數-曠職扣減天數）  
+                    //滿一個月：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數）
+
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
+                }
+                else
+                {
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / 30 * (attendDays + halfattend - Kuangzhi), 0);
 
                 } //责任津贴   新版改为出勤奖金 后改为 伙食津贴  现改为  津贴. 改 年终
 
@@ -654,9 +668,9 @@ namespace Book.UI.Hr.Salary.Salaryset
 
                     //}
                     if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
-                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors + WeekendDays), 0);
+                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor + WeekendDays), 0);
                     else
-                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors), 0);
+                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
                 }
                 if (VPerson.specialEmp.Contains(emp.EmployeeId))
                 {
@@ -1390,6 +1404,9 @@ namespace Book.UI.Hr.Salary.Salaryset
                 //    _ms.mLunchFee = 0;
                 //else
                 _ms.mLunchFee = mStrToDouble(dr["LunchFee"]);                                 //餐費
+                if (emp.IsMigrantWorker)         //外勞餐費多扣1500
+                    _ms.mLunchFee += 1500;
+
                 _ms.mOverTimeFee = mStrToDouble(dr["OverTimeFee"]);                           //加班費
                 _ms.mGeneralOverTime = mStrToDouble(dr["GeneralOverTime"]);                   //平日加班(時數)
                 _ms.mHolidayOverTime = mStrToDouble(dr["HolidayOverTime"]);                   //假日加班(時數)
@@ -1490,8 +1507,25 @@ namespace Book.UI.Hr.Salary.Salaryset
                      * 总算法：年终值/(30-六日天数)*（30-月总天数+全勤天数+公假，年假，出差天数+【国假天数】）
                      * J,O 的 gnDays 已经加上了国假天数
                      */
-                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
+
+                    //2017-6-5 改O和普通员工一样，只有J才不扣国定假日
+                    //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
+                    //2018年10月6日00:25:02：外劳年终要扣国定假日
+                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
+
+                    //2020年9月26日19:26:41:
+                    //普通員工以及外勞：未做滿一個月：年终/30*（實際出勤天數-曠職扣減天數）  
+                    //滿一個月：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數）
+
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
+
+                }
+                else
+                {
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / 30 * (attendDays + halfattend - Kuangzhi), 0);
+
                 } //责任津贴   新版改为出勤奖金   又改为 伙食津贴 改为 年終
+
                 _ms.mGivenDays = mStrToDouble(dx_dr["HolidayBonusGivenDays"]);  //年假(补休)天数
                 _ms.mAnnualHolidayFee = this.GetSiSheWuRu(_ms.mMonthlyPay / 30 * _ms.mGivenDays, 0);         //年假(补休)金额
                 _ms.mInsurance = mStrToDouble(dx_dr["insurance"]); //保险费
@@ -1579,12 +1613,12 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //}
                     if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
                     {
-                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors + WeekendDays), 0);
+                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor + WeekendDays), 0);
                         this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - WeekendDays - Kuangzhi;
                     }
                     else
                     {
-                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (Kuangzhi + totalDay - _ms.mMonthFactor + noPayleaveDays + halfDays - halfDayFactors), 0);
+                        _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
                         this.AttendDays = _ms.mMonthFactor - noPayleaveDays - halfDays + halfDayFactors - Kuangzhi;
                     }
                 }

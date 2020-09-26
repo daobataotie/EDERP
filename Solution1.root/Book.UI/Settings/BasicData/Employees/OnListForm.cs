@@ -28,7 +28,7 @@ namespace Book.UI.Settings.BasicData.Employees
         {
             InitializeComponent();
             this.barManager1.Bars[0].Visible = false;
-           
+
         }
         protected override BaseEditForm GetEditForm()
         {
@@ -46,28 +46,6 @@ namespace Book.UI.Settings.BasicData.Employees
             this.bindingSource1.DataSource = this.employeeManager.SelectOnActive();
         }
 
-        private void gridView1_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
-        {
-            
-                if (e.ListSourceRowIndex < 0)
-                    return;
-
-                IList<Model.Employee> employees = this.bindingSource1.DataSource as IList<Model.Employee>;
-
-                if (employees == null || employees.Count <= 0)
-                    return;
-
-                switch (e.Column.Name)
-                {
-                    case "gridColumn3":
-                        e.DisplayText = employees[e.ListSourceRowIndex].GenderDesc;
-                        break;
-                    case "gridColumn5":
-                        e.DisplayText = employees[e.ListSourceRowIndex].BloodTypeDesc;
-                        break;
-                }
-            
-        }
         public override void gridView1_DoubleClick(object sender, EventArgs e)
         {
             EditForm._employee = this.bindingSource1.Current as Model.Employee;
@@ -77,6 +55,25 @@ namespace Book.UI.Settings.BasicData.Employees
         private void OnListForm_Load(object sender, EventArgs e)
         {
             repositoryItemLookUpEdit1.DataSource = deptnamanager.Select();
+        }
+
+        private void bar_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "請選擇保存路徑";
+            sfd.AddExtension = true;
+            sfd.DefaultExt = ".xlsx";
+            sfd.Filter = "Excel文件(*.xlsx)|*.xlsx";
+            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.gridView1.OptionsPrint.AutoWidth = false;
+                this.gridView1.OptionsPrint.PrintFilterInfo = true;        //只導處篩選後的數據
+
+                this.gridView1.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions { SheetName = "在職人員一覽表", ShowGridLines = true });
+
+                MessageBox.Show("導出成功！", "導出結果", MessageBoxButtons.OK);
+            }
+
         }
     }
 }

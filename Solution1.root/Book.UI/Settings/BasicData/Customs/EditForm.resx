@@ -402,7 +402,7 @@
     <value>71</value>
   </data>
   <data name="gridControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 397</value>
+    <value>260, 417</value>
   </data>
   <data name="gridControl2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -428,11 +428,35 @@
   <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="chk_TaxRateP5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 313</value>
+  </data>
+  <data name="checkEdit1.Properties.Caption" xml:space="preserve">
+    <value>稅率5%</value>
+  </data>
+  <data name="chk_TaxRateP5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 19</value>
+  </data>
+  <data name="chk_TaxRateP5.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;chk_TaxRateP5.Name" xml:space="preserve">
+    <value>chk_TaxRateP5</value>
+  </data>
+  <data name="&gt;&gt;chk_TaxRateP5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;chk_TaxRateP5.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;chk_TaxRateP5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="txt_Update.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 303</value>
+    <value>308, 288</value>
   </data>
   <data name="txt_Update.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 21</value>
+    <value>155, 21</value>
   </data>
   <data name="txt_Update.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -447,13 +471,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Update.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txt_Create.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 303</value>
+    <value>80, 288</value>
   </data>
   <data name="txt_Create.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 21</value>
+    <value>156, 21</value>
   </data>
   <data name="txt_Create.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -468,13 +492,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Create.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txt_CustomerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 12</value>
+    <value>290, 12</value>
   </data>
   <data name="txt_CustomerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 21</value>
+    <value>173, 21</value>
   </data>
   <data name="txt_CustomerName.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -489,13 +513,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_CustomerName.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="simpleButtonAddFP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>373, 277</value>
+    <value>390, 262</value>
   </data>
   <data name="simpleButtonAddFP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
+    <value>73, 22</value>
   </data>
   <data name="simpleButtonAddFP.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -513,16 +537,16 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButtonAddFP.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="comboBoxEditFP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 277</value>
+    <value>267, 262</value>
   </data>
   <data name="comboBoxEditFP.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="comboBoxEditFP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 21</value>
+    <value>119, 21</value>
   </data>
   <data name="comboBoxEditFP.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -537,13 +561,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;comboBoxEditFP.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="textEditContact.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="textEditContact.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 141</value>
+    <value>232, 137</value>
   </data>
   <data name="textEditContact.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -558,7 +582,7 @@
     <value>False</value>
   </data>
   <data name="textEditContact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 23</value>
+    <value>80, 21</value>
   </data>
   <data name="textEditContact.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -573,13 +597,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditContact.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="CompanyDescriptionMemoEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 328</value>
+    <value>80, 336</value>
   </data>
   <data name="CompanyDescriptionMemoEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>363, 29</value>
+    <value>383, 41</value>
   </data>
   <data name="CompanyDescriptionMemoEdit.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -597,13 +621,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CompanyDescriptionMemoEdit.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="textBoxCheckedStandard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 277</value>
+    <value>80, 262</value>
   </data>
   <data name="textBoxCheckedStandard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 20</value>
+    <value>115, 20</value>
   </data>
   <data name="textBoxCheckedStandard.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -618,13 +642,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textBoxCheckedStandard.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="comboBoxEditCompanyLevel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="comboBoxEditCompanyLevel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 63</value>
+    <value>290, 62</value>
   </data>
   <data name="comboBoxEditCompanyLevel.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -633,7 +657,7 @@
     <value>Combo</value>
   </data>
   <data name="comboBoxEditCompanyLevel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
+    <value>173, 21</value>
   </data>
   <data name="comboBoxEditCompanyLevel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -648,7 +672,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;comboBoxEditCompanyLevel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="spinEditCompanyPayDate.EditValue" type="System.Decimal, mscorlib">
     <value>1</value>
@@ -657,7 +681,7 @@
     <value>Off</value>
   </data>
   <data name="spinEditCompanyPayDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 141</value>
+    <value>80, 137</value>
   </data>
   <data name="spinEditCompanyPayDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -679,7 +703,7 @@
     <value>False</value>
   </data>
   <data name="spinEditCompanyPayDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 23</value>
+    <value>80, 21</value>
   </data>
   <data name="spinEditCompanyPayDate.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -694,10 +718,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spinEditCompanyPayDate.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="textEditCompanyEMail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 168</value>
+    <value>80, 162</value>
   </data>
   <data name="textEditCompanyEMail.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -712,7 +736,7 @@
     <value>False</value>
   </data>
   <data name="textEditCompanyEMail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>136, 21</value>
   </data>
   <data name="textEditCompanyEMail.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -727,10 +751,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyEMail.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="textEditCompanyPhone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 89</value>
+    <value>80, 87</value>
   </data>
   <data name="textEditCompanyPhone.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -745,7 +769,7 @@
     <value>False</value>
   </data>
   <data name="textEditCompanyPhone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
+    <value>138, 21</value>
   </data>
   <data name="textEditCompanyPhone.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -760,13 +784,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyPhone.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="CompanyAddressTextEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="CompanyAddressTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 194</value>
+    <value>80, 187</value>
   </data>
   <data name="CompanyAddressTextEdit.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -781,7 +805,7 @@
     <value>False</value>
   </data>
   <data name="CompanyAddressTextEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>363, 23</value>
+    <value>383, 21</value>
   </data>
   <data name="CompanyAddressTextEdit.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -796,10 +820,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CompanyAddressTextEdit.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="CustomerFullNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 37</value>
+    <value>290, 37</value>
   </data>
   <data name="CustomerFullNameTextEdit.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -814,7 +838,7 @@
     <value>False</value>
   </data>
   <data name="CustomerFullNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
+    <value>173, 21</value>
   </data>
   <data name="CustomerFullNameTextEdit.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -829,46 +853,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CustomerFullNameTextEdit.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="textEditCompanyJinChuAddress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="textEditCompanyJinChuAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 221</value>
-  </data>
-  <data name="textEditCompanyJinChuAddress.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditCompanyJinChuAddress.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditCompanyJinChuAddress.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditCompanyJinChuAddress.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textEditCompanyJinChuAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 22</value>
-  </data>
-  <data name="textEditCompanyJinChuAddress.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;textEditCompanyJinChuAddress.Name" xml:space="preserve">
-    <value>textEditCompanyJinChuAddress</value>
-  </data>
-  <data name="&gt;&gt;textEditCompanyJinChuAddress.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;textEditCompanyJinChuAddress.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;textEditCompanyJinChuAddress.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
   <data name="checkEditSongHuoTongDengji.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 221</value>
+    <value>357, 212</value>
   </data>
   <data name="checkEditSongHuoTongDengji.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -877,7 +865,7 @@
     <value>同登记地址</value>
   </data>
   <data name="checkEditSongHuoTongDengji.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 22</value>
+    <value>106, 21</value>
   </data>
   <data name="checkEditSongHuoTongDengji.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -901,7 +889,7 @@
     <value>Off</value>
   </data>
   <data name="dateEditCompanyExchangeDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 168</value>
+    <value>288, 162</value>
   </data>
   <data name="dateEditCompanyExchangeDay.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -937,7 +925,7 @@
     <value>False</value>
   </data>
   <data name="dateEditCompanyExchangeDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
+    <value>175, 21</value>
   </data>
   <data name="dateEditCompanyExchangeDay.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -958,7 +946,7 @@
     <value>Off</value>
   </data>
   <data name="CompanyFaxTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 115</value>
+    <value>80, 112</value>
   </data>
   <data name="CompanyFaxTextEdit.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -973,7 +961,7 @@
     <value>False</value>
   </data>
   <data name="CompanyFaxTextEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
+    <value>138, 21</value>
   </data>
   <data name="CompanyFaxTextEdit.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -997,7 +985,7 @@
     <value>NoControl</value>
   </data>
   <data name="textEditCompanyWebSiteAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 247</value>
+    <value>80, 237</value>
   </data>
   <data name="textEditCompanyWebSiteAddress.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1012,7 +1000,7 @@
     <value>False</value>
   </data>
   <data name="textEditCompanyWebSiteAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>363, 26</value>
+    <value>383, 21</value>
   </data>
   <data name="textEditCompanyWebSiteAddress.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1029,11 +1017,47 @@
   <data name="&gt;&gt;textEditCompanyWebSiteAddress.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <data name="textEditCompanyJinChuAddress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="textEditCompanyJinChuAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 212</value>
+  </data>
+  <data name="textEditCompanyJinChuAddress.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditCompanyJinChuAddress.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditCompanyJinChuAddress.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditCompanyJinChuAddress.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textEditCompanyJinChuAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 21</value>
+  </data>
+  <data name="textEditCompanyJinChuAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;textEditCompanyJinChuAddress.Name" xml:space="preserve">
+    <value>textEditCompanyJinChuAddress</value>
+  </data>
+  <data name="&gt;&gt;textEditCompanyJinChuAddress.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEditCompanyJinChuAddress.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;textEditCompanyJinChuAddress.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
   <data name="textEditCompanyManager.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="textEditCompanyManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 141</value>
+    <value>384, 137</value>
   </data>
   <data name="textEditCompanyManager.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1048,7 +1072,7 @@
     <value>False</value>
   </data>
   <data name="textEditCompanyManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 23</value>
+    <value>79, 21</value>
   </data>
   <data name="textEditCompanyManager.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1063,7 +1087,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyManager.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="textEditCompanyNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
@@ -1084,7 +1108,7 @@
     <value>False</value>
   </data>
   <data name="textEditCompanyNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 21</value>
+    <value>138, 21</value>
   </data>
   <data name="textEditCompanyNumber.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1099,10 +1123,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyNumber.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="CustomerShortNameTextEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 63</value>
+    <value>80, 62</value>
   </data>
   <data name="CustomerShortNameTextEdit.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1117,7 +1141,7 @@
     <value>False</value>
   </data>
   <data name="CustomerShortNameTextEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
+    <value>138, 21</value>
   </data>
   <data name="CustomerShortNameTextEdit.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1132,7 +1156,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CustomerShortNameTextEdit.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="CompanyIdTextEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1153,7 +1177,7 @@
     <value>False</value>
   </data>
   <data name="CompanyIdTextEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 22</value>
+    <value>138, 21</value>
   </data>
   <data name="CompanyIdTextEdit.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1168,13 +1192,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;CompanyIdTextEdit.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="textEditCompanyMobile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
   </data>
   <data name="textEditCompanyMobile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 115</value>
+    <value>290, 112</value>
   </data>
   <data name="textEditCompanyMobile.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1189,7 +1213,7 @@
     <value>False</value>
   </data>
   <data name="textEditCompanyMobile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
+    <value>173, 21</value>
   </data>
   <data name="textEditCompanyMobile.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1204,13 +1228,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyMobile.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="textEditCompanyPhone1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Off</value>
   </data>
   <data name="textEditCompanyPhone1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 89</value>
+    <value>290, 87</value>
   </data>
   <data name="textEditCompanyPhone1.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1225,7 +1249,7 @@
     <value>False</value>
   </data>
   <data name="textEditCompanyPhone1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 22</value>
+    <value>173, 21</value>
   </data>
   <data name="textEditCompanyPhone1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1240,7 +1264,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditCompanyPhone1.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>29</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1410,11 +1434,17 @@
   <data name="layoutControlItem41.Text" xml:space="preserve">
     <value>變更人：</value>
   </data>
+  <data name="layoutControlItem42.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem42</value>
+  </data>
+  <data name="layoutControlItem42.Text" xml:space="preserve">
+    <value>layoutControlItem42</value>
+  </data>
   <data name="layoutControlGroup2.Text" xml:space="preserve">
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>455, 369</value>
+    <value>475, 389</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1435,7 +1465,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>455, 369</value>
+    <value>475, 389</value>
   </data>
   <data name="xtraTabPage1.Text" xml:space="preserve">
     <value>客户基本资料</value>
@@ -1453,7 +1483,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>461, 397</value>
+    <value>481, 417</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1489,7 +1519,7 @@
     <value />
   </data>
   <data name="lookUpEditBusiness.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 21</value>
+    <value>103, 21</value>
   </data>
   <data name="lookUpEditBusiness.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1588,7 +1618,7 @@
     <value>100</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 186</value>
+    <value>451, 186</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1606,10 +1636,10 @@
     <value>5</value>
   </data>
   <data name="simpleButtonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 145</value>
+    <value>278, 145</value>
   </data>
   <data name="simpleButtonSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 22</value>
+    <value>85, 22</value>
   </data>
   <data name="simpleButtonSave.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1630,10 +1660,10 @@
     <value>6</value>
   </data>
   <data name="simpleButtonUndo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 145</value>
+    <value>367, 145</value>
   </data>
   <data name="simpleButtonUndo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 22</value>
+    <value>96, 22</value>
   </data>
   <data name="simpleButtonUndo.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1654,10 +1684,10 @@
     <value>7</value>
   </data>
   <data name="simpleButtonModify.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 145</value>
+    <value>185, 145</value>
   </data>
   <data name="simpleButtonModify.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 22</value>
+    <value>89, 22</value>
   </data>
   <data name="simpleButtonModify.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1681,7 +1711,7 @@
     <value>12, 145</value>
   </data>
   <data name="simpleButtonAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 22</value>
+    <value>84, 22</value>
   </data>
   <data name="simpleButtonAdd.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1705,7 +1735,7 @@
     <value>68, 87</value>
   </data>
   <data name="memoEditRemarks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 54</value>
+    <value>395, 54</value>
   </data>
   <data name="memoEditRemarks.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1723,7 +1753,7 @@
     <value>10</value>
   </data>
   <data name="textEditEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 62</value>
+    <value>231, 62</value>
   </data>
   <data name="textEditEmail.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1738,7 +1768,7 @@
     <value>False</value>
   </data>
   <data name="textEditEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 21</value>
+    <value>232, 21</value>
   </data>
   <data name="textEditEmail.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1771,7 +1801,7 @@
     <value>False</value>
   </data>
   <data name="textEditMobile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 21</value>
+    <value>103, 21</value>
   </data>
   <data name="textEditMobile.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1789,10 +1819,10 @@
     <value>12</value>
   </data>
   <data name="simpleButtonDel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 145</value>
+    <value>100, 145</value>
   </data>
   <data name="simpleButtonDel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 22</value>
+    <value>81, 22</value>
   </data>
   <data name="simpleButtonDel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1813,7 +1843,7 @@
     <value>13</value>
   </data>
   <data name="textEditPhone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 37</value>
+    <value>231, 37</value>
   </data>
   <data name="textEditPhone.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1828,7 +1858,7 @@
     <value>False</value>
   </data>
   <data name="textEditPhone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 21</value>
+    <value>232, 21</value>
   </data>
   <data name="textEditPhone.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1861,7 +1891,7 @@
     <value>False</value>
   </data>
   <data name="textEditName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 21</value>
+    <value>103, 21</value>
   </data>
   <data name="textEditName.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1969,7 +1999,7 @@
     <value>Root</value>
   </data>
   <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>455, 369</value>
+    <value>475, 369</value>
   </data>
   <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1990,7 +2020,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>455, 369</value>
+    <value>475, 369</value>
   </data>
   <data name="xtraTabPage2.Text" xml:space="preserve">
     <value>联络人</value>
@@ -2011,7 +2041,7 @@
     <value>59, 232</value>
   </data>
   <data name="richTextBoxMarks3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 102</value>
+    <value>404, 102</value>
   </data>
   <data name="richTextBoxMarks3.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2035,7 +2065,7 @@
     <value>59, 120</value>
   </data>
   <data name="richTextBoxMarks2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 108</value>
+    <value>404, 108</value>
   </data>
   <data name="richTextBoxMarks2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2059,7 +2089,7 @@
     <value>59, 12</value>
   </data>
   <data name="richTextBoxMarks1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 104</value>
+    <value>404, 104</value>
   </data>
   <data name="richTextBoxMarks1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2116,7 +2146,7 @@
     <value>layoutControlGroup1</value>
   </data>
   <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>455, 369</value>
+    <value>475, 369</value>
   </data>
   <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2137,7 +2167,7 @@
     <value>0</value>
   </data>
   <data name="xtraTabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>455, 369</value>
+    <value>475, 369</value>
   </data>
   <data name="xtraTabPage3.Text" xml:space="preserve">
     <value>唛头</value>
@@ -2170,7 +2200,7 @@
     <value>Panel2</value>
   </data>
   <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>726, 397</value>
+    <value>746, 417</value>
   </data>
   <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2212,7 +2242,10 @@
     <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>750, 468</value>
+    <value>770, 488</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 12, 12, 12</value>
@@ -2433,6 +2466,18 @@
   <data name="&gt;&gt;layoutControlItem39.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;layoutControlItem40.Name" xml:space="preserve">
+    <value>layoutControlItem40</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem40.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem41.Name" xml:space="preserve">
+    <value>layoutControlItem41</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem41.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;bindingSourceBusiness.Name" xml:space="preserve">
     <value>bindingSourceBusiness</value>
   </data>
@@ -2613,16 +2658,10 @@
   <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem40.Name" xml:space="preserve">
-    <value>layoutControlItem40</value>
+  <data name="&gt;&gt;layoutControlItem42.Name" xml:space="preserve">
+    <value>layoutControlItem42</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem40.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem41.Name" xml:space="preserve">
-    <value>layoutControlItem41</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem41.Type" xml:space="preserve">
+  <data name="&gt;&gt;layoutControlItem42.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

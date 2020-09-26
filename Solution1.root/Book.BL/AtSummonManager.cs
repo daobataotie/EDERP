@@ -32,16 +32,17 @@ namespace Book.BL
 
                 this.Delete(atSummon.SummonId);
 
-                string invoiceKind = this.GetInvoiceKind().ToLower();
-                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, atSummon.SummonDate.Value.Year);
-                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, atSummon.SummonDate.Value.Year, atSummon.SummonDate.Value.Month);
-                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, atSummon.SummonDate.Value.ToString("yyyy-MM-dd"));
-                string sequencekey = string.Format(invoiceKind);
+                //2020年9月9日23:52:04：删除不扣减编号，在新增的时候自动补足删除编号
+                //string invoiceKind = this.GetInvoiceKind().ToLower();
+                //string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, atSummon.SummonDate.Value.Year);
+                //string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, atSummon.SummonDate.Value.Year, atSummon.SummonDate.Value.Month);
+                //string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, atSummon.SummonDate.Value.ToString("yyyy-MM-dd"));
+                //string sequencekey = string.Format(invoiceKind);
 
-                SequenceManager.Decrement(sequencekey_y);
-                SequenceManager.Decrement(sequencekey_m);
-                SequenceManager.Decrement(sequencekey_d);
-                SequenceManager.Decrement(sequencekey);
+                //SequenceManager.Decrement(sequencekey_y);
+                //SequenceManager.Decrement(sequencekey_m);
+                //SequenceManager.Decrement(sequencekey_d);
+                //SequenceManager.Decrement(sequencekey);
 
                 BL.V.CommitTransaction();
             }
@@ -93,7 +94,8 @@ namespace Book.BL
                     {
                         throw new global::Helper.MessageValueException("請輸入傳票詳細資料！！");
                     }
-                    atSummonDetail.SummonDetailId = Guid.NewGuid().ToString();
+                    if (string.IsNullOrEmpty(atSummonDetail.SummonDetailId))
+                        atSummonDetail.SummonDetailId = Guid.NewGuid().ToString();
                     atSummonDetail.InsertTime = DateTime.Now;
                     atSummonDetail.SummonCatetory = atSummon.SummonCategory;
                     atSummonDetail.BillCode = atSummon.BIllCode;
@@ -166,9 +168,10 @@ namespace Book.BL
         {
             return accessor.SelectByDateRage(startdate, enddate);
         }
-        private void TiGuiExists(Model.AtSummon model)
+
+        public void TiGuiExists(Model.AtSummon model)
         {
-            if (this.ExistsPrimary(model.SummonId))
+            if (this.Exists(model.Id))
             {
                 //设置KEY值
                 string invoiceKind = this.GetInvoiceKind().ToLower();
@@ -180,9 +183,29 @@ namespace Book.BL
                 SequenceManager.Increment(sequencekey_m);
                 SequenceManager.Increment(sequencekey_d);
                 SequenceManager.Increment(sequencekey);
-                model.SummonId = this.GetId(model.SummonDate.Value);
+                model.Id = this.GetConsecutiveId(model.SummonDate.Value);
                 TiGuiExists(model);
                 //throw new Helper.InvalidValueException(Model.Product.PRO_Id);               
+            }
+
+        }
+
+        public void TiGuiExistsForUpdate(Model.AtSummon model)
+        {
+            if (IsExistsIdUpdate(model))
+            {
+                //设置KEY值
+                string invoiceKind = this.GetInvoiceKind().ToLower();
+                string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, model.SummonDate.Value.Year);
+                string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, model.SummonDate.Value.Year, model.SummonDate.Value.Month);
+                string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, model.SummonDate.Value.ToString("yyyy-MM-dd"));
+                string sequencekey = string.Format(invoiceKind);
+                SequenceManager.Increment(sequencekey_y);
+                SequenceManager.Increment(sequencekey_m);
+                SequenceManager.Increment(sequencekey_d);
+                SequenceManager.Increment(sequencekey);
+                model.Id = this.GetConsecutiveId(model.SummonDate.Value);
+                TiGuiExistsForUpdate(model);
             }
 
         }
@@ -218,14 +241,95 @@ namespace Book.BL
             return accessor.GetByInvoiceXSId(invoiceXSId);
         }
 
-        public Model.AtSummon GetByShouldPayAccountId(string shouldPayAccountId)
+        public IList<Model.AtSummon> GetByShouldPayAccountId(string shouldPayAccountId)
         {
             return accessor.GetByShouldPayAccountId(shouldPayAccountId);
+        }
+
+        public Model.AtSummon GetByInvoiceCTId(string invoiceCTId)
+        {
+            return accessor.GetByInvoiceCTId(invoiceCTId);
+        }
+
+        public Model.AtSummon GetByProduceOtherInDepotId(string produceOtherInDepotId)
+        {
+            return accessor.GetByProduceOtherInDepotId(produceOtherInDepotId);
         }
 
         public Model.AtSummon SelectById(string id)
         {
             return accessor.SelectById(id);
+        }
+
+        /// <summary>
+        /// 获取连续Id，比如说20200909001，20200909002，删除001后，再新增还是001
+        /// </summary>
+        /// <returns></returns>
+        public string GetConsecutiveId(DateTime dt)
+        {
+            string settingId = this.GetSettingId();
+            string invoiceKind = this.GetInvoiceKind().ToLower();
+            DateTime datetime = dt;
+            if (string.IsNullOrEmpty(invoiceKind) || string.IsNullOrEmpty(settingId))
+                return string.Empty;
+
+            string rule = Settings.Get(settingId);
+
+            if (string.IsNullOrEmpty(rule))
+                return string.Empty;
+
+            string sequencekey_y = string.Format("{0}-y-{1}", invoiceKind, datetime.Year);
+            string sequencekey_m = string.Format("{0}-m-{1}-{2}", invoiceKind, datetime.Year, datetime.Month);
+            string sequencekey_d = string.Format("{0}-d-{1}", invoiceKind, datetime.ToString("yyyy-MM-dd"));
+            string sequencekey = invoiceKind;
+            if (rule.IndexOf("{D2}") >= 0)
+                sequencekey = sequencekey_d;
+            else if (rule.IndexOf("{M2}") >= 0)
+                sequencekey = sequencekey_m;
+            else if (rule.IndexOf("{Y2}") >= 0 || rule.IndexOf("{Y4}") >= 0)
+                sequencekey = sequencekey_y;
+            else
+                sequencekey = invoiceKind;
+
+
+            string d2 = string.Format("{0:d2}", datetime.Day);
+            string m2 = string.Format("{0:d2}", datetime.Month);
+            string y2 = string.Format("{0:d2}", datetime.Year);
+            string y4 = string.Format("{0:d4}", datetime.Year);
+
+
+            Func<int, string> getId = (sequenceval) =>
+            {
+                string n1 = string.Format("{0:d1}", sequenceval);
+                string n2 = string.Format("{0:d2}", sequenceval);
+                string n3 = string.Format("{0:d3}", sequenceval);
+                string n4 = string.Format("{0:d4}", sequenceval);
+                string n5 = string.Format("{0:d5}", sequenceval);
+                string n6 = string.Format("{0:d6}", sequenceval);
+                string n7 = string.Format("{0:d7}", sequenceval);
+                string n8 = string.Format("{0:d8}", sequenceval);
+                string n9 = string.Format("{0:d9}", sequenceval);
+                string n10 = string.Format("{0:d10}", sequenceval);
+
+                return rule.Replace("{D2}", d2).Replace("{M2}", m2).Replace("{Y2}", y2).Replace("{Y4}", y4).Replace("{N}", n4).Replace("{N1}", n1).Replace("{N2}", n2).Replace("{N3}", n3).Replace("{N4}", n4).Replace("{N5}", n5).Replace("{N6}", n6).Replace("{N7}", n7).Replace("{N8}", n8).Replace("{N9}", n9).Replace("{N10}", n10);
+            };
+
+            //int sequenceval = 1;
+            int currentVal = SequenceManager.GetCurrentVal(sequencekey);
+            //sequenceval++;
+
+            string id = "";
+            for (int i = 1; i <= currentVal; i++)
+            {
+                id = getId(i);
+
+                if (!IsExistsId(id))
+                    return id;
+            }
+
+            id = getId(++currentVal);
+
+            return id;
         }
     }
 }

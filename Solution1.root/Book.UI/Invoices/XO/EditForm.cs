@@ -582,6 +582,10 @@ namespace Book.UI.Invoices.XO
         {
             if (this.invoice == null)
                 return;
+
+            if (this.invoiceManager.IsHasMPSheader(this.invoice.InvoiceId))
+                throw new Exception("該訂單已經生成對應的生產計劃，請勿刪除");
+
             if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
                 return;
 
@@ -1394,10 +1398,18 @@ namespace Book.UI.Invoices.XO
 
         private void newChooseCustomer1_EditValueChanged(object sender, EventArgs e)
         {
-            if (this.newChooseCustomer1.EditValue != null && this.newChooseCustomer2.EditValue == null)
+            if (this.newChooseCustomer1.EditValue != null && this.action != "view")
             {
-                this.newChooseCustomer2.EditValue = newChooseCustomer1.EditValue;
+                if (this.newChooseCustomer2.EditValue == null)
+                    this.newChooseCustomer2.EditValue = newChooseCustomer1.EditValue;
 
+                //Model.Customer customer = newChooseCustomer1.EditValue as Model.Customer;
+                //if (customer.TaxRateP5.HasValue && customer.TaxRateP5.Value)
+                //{
+                //    this.spinEditInvoiceTaxRate1.Value = 5;
+                //}
+                //else
+                //    this.spinEditInvoiceTaxRate1.Value = 0;
             }
         }
 
@@ -1557,8 +1569,8 @@ namespace Book.UI.Invoices.XO
             if (list != null)
             {
                 var detailIds = from n in list
-                              where n.IsConfirmed == true
-                              select n.InvoiceXODetailId;
+                                where n.IsConfirmed == true
+                                select n.InvoiceXODetailId;
                 if (detailIds != null && detailIds.Count() > 0)
                 {
                     //多这些步骤是为了每次排单时刷新一次数据

@@ -43,6 +43,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="BankId" column="BankId" />
       <result property="ChuanPiaoId" column="ChuanPiaoId"/>
       <result property="ShouldPayAccountId" column="ShouldPayAccountId"/>
+      <result property="AtSummonDetailId" column="AtSummonDetailId"/>
+      <result property="AtSummonDetailId2" column="AtSummonDetailId2"/>
+      <result property="AtSummonDetailId3" column="AtSummonDetailId3"/>
       <result property="Summon" column="SummonId" lazyLoad="false" select="AtSummon.select_by_primary_key" />
       <result property="Bank" column="BankId" lazyLoad="false" select="Bank.select_by_primary_key" />
       <result property="Department" column="DepartmentId" lazyLoad="false" select="Department.select_by_primary_key" />
@@ -171,7 +174,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AuditEmpId],
 				[BankId],
         [ChuanPiaoId],
-        [ShouldPayAccountId]
+        [ShouldPayAccountId],
+        [AtSummonDetailId],
+        [AtSummonDetailId2],
+        [AtSummonDetailId3]
 			FROM
 				[dbo].[AtBillsIncome]
 			WHERE
@@ -262,7 +268,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AuditEmpId],
 				[BankId],
         [ChuanPiaoId],
-        [ShouldPayAccountId]
+        [ShouldPayAccountId],
+        [AtSummonDetailId],
+        [AtSummonDetailId2],
+        [AtSummonDetailId3]
 			) 
 			VALUES 
 			(
@@ -302,7 +311,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#AuditEmpId#,
 				#BankId#,
         #ChuanPiaoId#,
-        #ShouldPayAccountId#
+        #ShouldPayAccountId#,
+        #AtSummonDetailId#,
+        #AtSummonDetailId2#,
+        #AtSummonDetailId3#
 			)
              ]]>
     </insert>
@@ -345,7 +357,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[AuditEmpId] = #AuditEmpId#,
 				[BankId] = #BankId#,
         [ChuanPiaoId]=#ChuanPiaoId#,
-        [ShouldPayAccountId]=#ShouldPayAccountId#
+        [ShouldPayAccountId]=#ShouldPayAccountId#,
+        [AtSummonDetailId]=#AtSummonDetailId#,
+        [AtSummonDetailId2]=#AtSummonDetailId2#,
+        [AtSummonDetailId3]=#AtSummonDetailId3#
 			WHERE
 				[BillsId] = #BillsId#
                     ]]>

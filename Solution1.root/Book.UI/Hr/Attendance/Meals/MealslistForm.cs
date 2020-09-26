@@ -106,14 +106,16 @@ namespace Book.UI.Hr.Attendance.Meals
             {
                 decimal pay = decimal.Zero;
                 decimal.TryParse(this.gridView1.GetRowCellValue(e.RowHandle, this.gridColumn8).ToString(), out pay);
-                if (pay - 20 > 0)
-                {
-                    pay = pay - 20;
-                }
-                else
-                {
-                    pay = 0;
-                }
+
+                //È¥µô²ÍÑa 20
+                //if (pay - 20 > 0)
+                //{
+                //    pay = pay - 20;
+                //}
+                //else
+                //{
+                //    pay = 0;
+                //}
                 this.gridView1.SetRowCellValue(e.RowHandle, this.gridColumn9, pay);
                 addAllMoney();
             }
@@ -260,6 +262,12 @@ namespace Book.UI.Hr.Attendance.Meals
         //    if (ds.Tables["employee"].Rows.Count > 0)
         //        barStaticItem2.Caption = "¹²" + ds.Tables["employee"].Rows.Count + "í—";
         //    addAllMoney();
+        }
+
+        private void bar_Search_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ListForm f = new ListForm();
+            f.ShowDialog();
         }
     }
 }

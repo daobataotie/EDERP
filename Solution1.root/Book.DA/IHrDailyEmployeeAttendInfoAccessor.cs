@@ -23,7 +23,7 @@ namespace Book.DA
         //void UpdateActualCheckIn(string hrId);
         System.Data.DataSet SelectLateInfo(string EmployeeId, DateTime ClockDate);
         void InsertLateInfo(string id, string EmployeeId, DateTime ClockDate, int LateInMinute);
-        System.Data.DataSet SelectHrInfoByStateAndDate(DateTime DutyDate);
+        System.Data.DataTable SelectHrInfoByStateAndDate(DateTime DutyDate);
         System.Data.DataSet SelectHrInfoById(string HrDailyEmployeeAttendInfoId);
         System.Data.DataSet SelectHrInfoByEmployeeIdAndDueDate(string employeeId, DateTime dueDate);
         void DeleteLateInfoByEmployeeIdAndDate(string EmployeeId, DateTime ClockDate);
@@ -32,7 +32,7 @@ namespace Book.DA
         decimal SelectDayMonthSum(int years, int months, Model.Employee employee);
         int SelectDutyDateCount(int years, int months, Model.Employee employee);
         int SelectAbsentCount(int years, int months, Model.Employee employee);
-        DataSet SelectByEmpMonth(Model.Employee employee, DateTime date);
+        DataTable SelectByEmpMonth(Model.Employee employee, DateTime date);
         DataSet SelectByEmpMonth(DateTime date);
         DataSet SelectBeginAndEndTime(Model.Employee employee, DateTime date);
         DataSet GetemployeeJoinDate(Model.Employee empoyee);

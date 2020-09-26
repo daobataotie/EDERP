@@ -88,9 +88,11 @@ namespace Book.Model
 
         private decimal? _pMTotal;
 
+        private DateTime? _cashDate;
+
         private Employee _employee;
 
-        private ShouldPayAccountCondition _shouldPayAccountCondition; 
+        private ShouldPayAccountCondition _shouldPayAccountCondition;
 
 
         /// <summary>
@@ -334,7 +336,16 @@ namespace Book.Model
             get { return _pMTotal; }
             set { _pMTotal = value; }
         }
-		
+
+        /// <summary>
+        /// 現金日期
+        /// </summary>
+        public DateTime? CashDate
+        {
+            get { return _cashDate; }
+            set { _cashDate = value; }
+        }
+
         /// <summary>
         /// 供应商
         /// </summary>
@@ -465,6 +476,8 @@ namespace Book.Model
         public readonly static string PRO_FPTotal = "FPTotal";
 
         public readonly static string PRO_PMTotal = "PMTotal";
+
+        public readonly static string PRO_CashDate = "CashDate";
         #endregion
     }
 }
