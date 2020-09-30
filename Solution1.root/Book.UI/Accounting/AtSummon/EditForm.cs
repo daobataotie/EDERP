@@ -613,7 +613,7 @@ namespace Book.UI.Accounting.AtSummon
 
         private void dateEditSummonDate_EditValueChanged(object sender, EventArgs e)
         {
-            if (this.action == "insert" && dateEditSummonDate.EditValue != null)
+            if (this.action != "view" && dateEditSummonDate.EditValue != null)
             {
                 //this.textEditSummonId.Text = this.atSummonManager.GetId(this.dateEditSummonDate.DateTime);
                 this.textEditSummonId.Text = this.atSummonManager.GetConsecutiveId(this.dateEditSummonDate.DateTime);

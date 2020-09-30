@@ -1416,6 +1416,15 @@ namespace Book.UI.Query
             }
         }
 
+        private void date_AtSummonDate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view" && date_AtSummonDate.EditValue != null)
+            {
+                //this.textEditSummonId.Text = this.atSummonManager.GetId(this.dateEditSummonDate.DateTime);
+                this.txt_AtSummonId.Text = this.atSummonManager.GetConsecutiveId(this.date_AtSummonDate.DateTime);
+            }
+        }
+
     }
 
 }

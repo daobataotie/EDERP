@@ -137,6 +137,7 @@
             this.panel1 = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
+            this.bindingSourceAtSummonDetail1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox5 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
@@ -190,7 +191,6 @@
             this.layoutControlItem41 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.bindingSourceAtSummonDetail1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -274,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAtSummonDetail1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit9)).BeginInit();
@@ -322,7 +323,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAtSummonDetail1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -979,6 +979,7 @@
             this.date_AtSummonDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.date_AtSummonDate.StyleController = this.layoutControl3;
+            this.date_AtSummonDate.EditValueChanged += new System.EventHandler(this.date_AtSummonDate_EditValueChanged);
             // 
             // txt_AtSummonId
             // 
@@ -1310,7 +1311,7 @@
             this.gridColumn23});
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.Name = "gridView4";
-            this.gridView4.OptionsBehavior.Editable = false;
+            this.gridView4.OptionsCustomization.AllowSort = false;
             this.gridView4.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridView4.OptionsView.ShowGroupPanel = false;
             // 
@@ -1320,7 +1321,8 @@
             this.gridColumn8.ColumnEdit = this.repositoryItemComboBox5;
             this.gridColumn8.FieldName = "Lending";
             this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
+            this.gridColumn8.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             this.gridColumn8.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             // 
             // repositoryItemComboBox5
@@ -1341,7 +1343,8 @@
             this.gridColumn20.ColumnEdit = this.repositoryItemLookUpEdit9;
             this.gridColumn20.FieldName = "SubjectId";
             this.gridColumn20.Name = "gridColumn20";
-            this.gridColumn20.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn20.OptionsColumn.AllowEdit = false;
+            this.gridColumn20.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             // 
             // repositoryItemLookUpEdit9
             // 
@@ -1364,7 +1367,8 @@
             this.gridColumn21.ColumnEdit = this.repositoryItemLookUpEdit10;
             this.gridColumn21.FieldName = "SubjectId";
             this.gridColumn21.Name = "gridColumn21";
-            this.gridColumn21.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn21.OptionsColumn.AllowEdit = false;
+            this.gridColumn21.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             // 
             // repositoryItemLookUpEdit10
             // 
@@ -1385,7 +1389,7 @@
             resources.ApplyResources(this.gridColumn22, "gridColumn22");
             this.gridColumn22.FieldName = "Summary";
             this.gridColumn22.Name = "gridColumn22";
-            this.gridColumn22.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.gridColumn22.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
             // 
             // gridColumn23
             // 
@@ -1395,6 +1399,7 @@
             this.gridColumn23.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn23.FieldName = "AMoney";
             this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             // 
             // repositoryItemSpinEdit2
@@ -1933,6 +1938,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAtSummonDetail1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit9)).EndInit();
@@ -1981,7 +1987,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAtSummonDetail1)).EndInit();
             this.ResumeLayout(false);
 
         }
