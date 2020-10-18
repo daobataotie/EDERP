@@ -2248,4 +2248,7 @@
   <data name="barButtonItem306.Caption" xml:space="preserve">
     <value>貨品一覽</value>
   </data>
+  <data name="barButtonItem350.Caption" xml:space="preserve">
+    <value>銷售發票明細</value>
+  </data>
 </root>

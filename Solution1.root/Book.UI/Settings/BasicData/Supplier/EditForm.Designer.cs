@@ -43,6 +43,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.chk_TaxRateP5 = new DevExpress.XtraEditors.CheckEdit();
             this.txt_Product = new DevExpress.XtraEditors.TextEdit();
             this.txt_NoId = new DevExpress.XtraEditors.TextEdit();
             this.textEditContact = new DevExpress.XtraEditors.TextEdit();
@@ -96,6 +97,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem50 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.lookUpEditBusinessId = new DevExpress.XtraEditors.LookUpEdit();
@@ -161,8 +163,8 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barPayMethod = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.chk_TaxRateP5 = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem50 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.rdo_TaxCaluType = new DevExpress.XtraEditors.RadioGroup();
+            this.layoutControlItem51 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -176,6 +178,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_TaxRateP5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Product.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NoId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditContact.Properties)).BeginInit();
@@ -226,6 +229,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
@@ -283,8 +287,8 @@ namespace Book.UI.Settings.BasicData.Supplier
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePayMethod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_TaxRateP5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdo_TaxCaluType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -388,6 +392,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.rdo_TaxCaluType);
             this.layoutControl1.Controls.Add(this.chk_TaxRateP5);
             this.layoutControl1.Controls.Add(this.txt_Product);
             this.layoutControl1.Controls.Add(this.txt_NoId);
@@ -418,6 +423,14 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup2;
+            // 
+            // chk_TaxRateP5
+            // 
+            resources.ApplyResources(this.chk_TaxRateP5, "chk_TaxRateP5");
+            this.chk_TaxRateP5.MenuManager = this.barManager1;
+            this.chk_TaxRateP5.Name = "chk_TaxRateP5";
+            this.chk_TaxRateP5.Properties.Caption = resources.GetString("chk_TaxRateP5.Properties.Caption");
+            this.chk_TaxRateP5.StyleController = this.layoutControl1;
             // 
             // txt_Product
             // 
@@ -636,7 +649,8 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.layoutControlItem17,
             this.layoutControlItem46,
             this.layoutControlItem49,
-            this.layoutControlItem50});
+            this.layoutControlItem50,
+            this.layoutControlItem51});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Size = new System.Drawing.Size(605, 473);
@@ -798,9 +812,9 @@ namespace Book.UI.Settings.BasicData.Supplier
             // 
             this.layoutControlItem3.Control = this.MemoEditSupplierRemarks;
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 327);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 331);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(585, 126);
+            this.layoutControlItem3.Size = new System.Drawing.Size(585, 122);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(72, 14);
             // 
             // layoutControlItem1
@@ -881,8 +895,19 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem49, "layoutControlItem49");
             this.layoutControlItem49.Location = new System.Drawing.Point(0, 302);
             this.layoutControlItem49.Name = "layoutControlItem49";
-            this.layoutControlItem49.Size = new System.Drawing.Size(292, 25);
+            this.layoutControlItem49.Size = new System.Drawing.Size(292, 29);
             this.layoutControlItem49.TextSize = new System.Drawing.Size(72, 14);
+            // 
+            // layoutControlItem50
+            // 
+            this.layoutControlItem50.Control = this.chk_TaxRateP5;
+            resources.ApplyResources(this.layoutControlItem50, "layoutControlItem50");
+            this.layoutControlItem50.Location = new System.Drawing.Point(292, 302);
+            this.layoutControlItem50.Name = "layoutControlItem50";
+            this.layoutControlItem50.Size = new System.Drawing.Size(79, 29);
+            this.layoutControlItem50.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem50.TextToControlDistance = 0;
+            this.layoutControlItem50.TextVisible = false;
             // 
             // xtraTabPage2
             // 
@@ -1068,7 +1093,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.emptySpaceItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(612, 510);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(605, 473);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem7
@@ -1077,7 +1102,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(295, 25);
+            this.layoutControlItem7.Size = new System.Drawing.Size(292, 25);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(52, 14);
             // 
             // layoutControlItem9
@@ -1086,16 +1111,16 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(295, 25);
+            this.layoutControlItem9.Size = new System.Drawing.Size(292, 25);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(52, 14);
             // 
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.gridControl1;
             resources.ApplyResources(this.layoutControlItem19, "layoutControlItem19");
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 258);
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 239);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(592, 232);
+            this.layoutControlItem19.Size = new System.Drawing.Size(585, 214);
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem19.TextToControlDistance = 0;
             this.layoutControlItem19.TextVisible = false;
@@ -1106,34 +1131,34 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem23, "layoutControlItem23");
             this.layoutControlItem23.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(592, 157);
+            this.layoutControlItem23.Size = new System.Drawing.Size(585, 138);
             this.layoutControlItem23.TextSize = new System.Drawing.Size(52, 14);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.textEditPhone;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(295, 25);
+            this.layoutControlItem8.Location = new System.Drawing.Point(292, 25);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(297, 25);
+            this.layoutControlItem8.Size = new System.Drawing.Size(293, 25);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(52, 14);
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.textEditEmail;
             resources.ApplyResources(this.layoutControlItem15, "layoutControlItem15");
-            this.layoutControlItem15.Location = new System.Drawing.Point(295, 50);
+            this.layoutControlItem15.Location = new System.Drawing.Point(292, 50);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(297, 25);
+            this.layoutControlItem15.Size = new System.Drawing.Size(293, 25);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(52, 14);
             // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.simpleButtonAdd;
             resources.ApplyResources(this.layoutControlItem18, "layoutControlItem18");
-            this.layoutControlItem18.Location = new System.Drawing.Point(0, 232);
+            this.layoutControlItem18.Location = new System.Drawing.Point(0, 213);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(107, 26);
+            this.layoutControlItem18.Size = new System.Drawing.Size(106, 26);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextToControlDistance = 0;
             this.layoutControlItem18.TextVisible = false;
@@ -1142,9 +1167,9 @@ namespace Book.UI.Settings.BasicData.Supplier
             // 
             this.layoutControlItem24.Control = this.simpleButtonDel;
             resources.ApplyResources(this.layoutControlItem24, "layoutControlItem24");
-            this.layoutControlItem24.Location = new System.Drawing.Point(107, 232);
+            this.layoutControlItem24.Location = new System.Drawing.Point(106, 213);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(109, 26);
+            this.layoutControlItem24.Size = new System.Drawing.Size(108, 26);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextToControlDistance = 0;
             this.layoutControlItem24.TextVisible = false;
@@ -1153,9 +1178,9 @@ namespace Book.UI.Settings.BasicData.Supplier
             // 
             this.layoutControlItem25.Control = this.simpleButtonModify;
             resources.ApplyResources(this.layoutControlItem25, "layoutControlItem25");
-            this.layoutControlItem25.Location = new System.Drawing.Point(216, 232);
+            this.layoutControlItem25.Location = new System.Drawing.Point(214, 213);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(107, 26);
+            this.layoutControlItem25.Size = new System.Drawing.Size(106, 26);
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextToControlDistance = 0;
             this.layoutControlItem25.TextVisible = false;
@@ -1163,18 +1188,18 @@ namespace Book.UI.Settings.BasicData.Supplier
             // emptySpaceItem2
             // 
             resources.ApplyResources(this.emptySpaceItem2, "emptySpaceItem2");
-            this.emptySpaceItem2.Location = new System.Drawing.Point(540, 232);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(534, 213);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(52, 26);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(51, 26);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem39
             // 
             this.layoutControlItem39.Control = this.simpleButtonSave;
             resources.ApplyResources(this.layoutControlItem39, "layoutControlItem39");
-            this.layoutControlItem39.Location = new System.Drawing.Point(323, 232);
+            this.layoutControlItem39.Location = new System.Drawing.Point(320, 213);
             this.layoutControlItem39.Name = "layoutControlItem39";
-            this.layoutControlItem39.Size = new System.Drawing.Size(109, 26);
+            this.layoutControlItem39.Size = new System.Drawing.Size(107, 26);
             this.layoutControlItem39.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem39.TextToControlDistance = 0;
             this.layoutControlItem39.TextVisible = false;
@@ -1183,9 +1208,9 @@ namespace Book.UI.Settings.BasicData.Supplier
             // 
             this.layoutControlItem40.Control = this.simpleButtonUndo;
             resources.ApplyResources(this.layoutControlItem40, "layoutControlItem40");
-            this.layoutControlItem40.Location = new System.Drawing.Point(432, 232);
+            this.layoutControlItem40.Location = new System.Drawing.Point(427, 213);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(108, 26);
+            this.layoutControlItem40.Size = new System.Drawing.Size(107, 26);
             this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem40.TextToControlDistance = 0;
             this.layoutControlItem40.TextVisible = false;
@@ -1196,15 +1221,15 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem33, "layoutControlItem33");
             this.layoutControlItem33.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(295, 25);
+            this.layoutControlItem33.Size = new System.Drawing.Size(292, 25);
             this.layoutControlItem33.TextSize = new System.Drawing.Size(52, 14);
             // 
             // emptySpaceItem4
             // 
             resources.ApplyResources(this.emptySpaceItem4, "emptySpaceItem4");
-            this.emptySpaceItem4.Location = new System.Drawing.Point(295, 0);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(292, 0);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(297, 25);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(293, 25);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // xtraTabPage3
@@ -1341,7 +1366,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.layoutControlItem36});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "Root";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(612, 510);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(605, 473);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem26
@@ -1350,7 +1375,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem26, "layoutControlItem26");
             this.layoutControlItem26.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(295, 25);
+            this.layoutControlItem26.Size = new System.Drawing.Size(292, 25);
             this.layoutControlItem26.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem27
@@ -1359,7 +1384,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem27, "layoutControlItem27");
             this.layoutControlItem27.Location = new System.Drawing.Point(0, 25);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(295, 25);
+            this.layoutControlItem27.Size = new System.Drawing.Size(292, 25);
             this.layoutControlItem27.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem37
@@ -1368,7 +1393,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem37, "layoutControlItem37");
             this.layoutControlItem37.Location = new System.Drawing.Point(0, 75);
             this.layoutControlItem37.Name = "layoutControlItem37";
-            this.layoutControlItem37.Size = new System.Drawing.Size(295, 25);
+            this.layoutControlItem37.Size = new System.Drawing.Size(292, 25);
             this.layoutControlItem37.TextSize = new System.Drawing.Size(76, 14);
             // 
             // emptySpaceItem1
@@ -1376,7 +1401,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.emptySpaceItem1, "emptySpaceItem1");
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 125);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(592, 365);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(585, 328);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem38
@@ -1385,7 +1410,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem38, "layoutControlItem38");
             this.layoutControlItem38.Location = new System.Drawing.Point(0, 100);
             this.layoutControlItem38.Name = "layoutControlItem38";
-            this.layoutControlItem38.Size = new System.Drawing.Size(295, 25);
+            this.layoutControlItem38.Size = new System.Drawing.Size(292, 25);
             this.layoutControlItem38.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem32
@@ -1394,52 +1419,52 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControlItem32, "layoutControlItem32");
             this.layoutControlItem32.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(295, 25);
+            this.layoutControlItem32.Size = new System.Drawing.Size(292, 25);
             this.layoutControlItem32.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem28
             // 
             this.layoutControlItem28.Control = this.spinEditLastTransactionMoney;
             resources.ApplyResources(this.layoutControlItem28, "layoutControlItem28");
-            this.layoutControlItem28.Location = new System.Drawing.Point(295, 0);
+            this.layoutControlItem28.Location = new System.Drawing.Point(292, 0);
             this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(297, 25);
+            this.layoutControlItem28.Size = new System.Drawing.Size(293, 25);
             this.layoutControlItem28.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem29
             // 
             this.layoutControlItem29.Control = this.spinEditLastPayMoney;
             resources.ApplyResources(this.layoutControlItem29, "layoutControlItem29");
-            this.layoutControlItem29.Location = new System.Drawing.Point(295, 25);
+            this.layoutControlItem29.Location = new System.Drawing.Point(292, 25);
             this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(297, 25);
+            this.layoutControlItem29.Size = new System.Drawing.Size(293, 25);
             this.layoutControlItem29.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.spinEditPayableOwe;
             resources.ApplyResources(this.layoutControlItem31, "layoutControlItem31");
-            this.layoutControlItem31.Location = new System.Drawing.Point(295, 50);
+            this.layoutControlItem31.Location = new System.Drawing.Point(292, 50);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(297, 25);
+            this.layoutControlItem31.Size = new System.Drawing.Size(293, 25);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem35
             // 
             this.layoutControlItem35.Control = this.newChooseContorlEmployeeCreatorId;
             resources.ApplyResources(this.layoutControlItem35, "layoutControlItem35");
-            this.layoutControlItem35.Location = new System.Drawing.Point(295, 75);
+            this.layoutControlItem35.Location = new System.Drawing.Point(292, 75);
             this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(297, 25);
+            this.layoutControlItem35.Size = new System.Drawing.Size(293, 25);
             this.layoutControlItem35.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem36
             // 
             this.layoutControlItem36.Control = this.newChooseContorlEmployeeChangeId;
             resources.ApplyResources(this.layoutControlItem36, "layoutControlItem36");
-            this.layoutControlItem36.Location = new System.Drawing.Point(295, 100);
+            this.layoutControlItem36.Location = new System.Drawing.Point(292, 100);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(297, 25);
+            this.layoutControlItem36.Size = new System.Drawing.Size(293, 25);
             this.layoutControlItem36.TextSize = new System.Drawing.Size(76, 14);
             // 
             // layoutControlItem6
@@ -1466,24 +1491,27 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
-            // chk_TaxRateP5
+            // rdo_TaxCaluType
             // 
-            resources.ApplyResources(this.chk_TaxRateP5, "chk_TaxRateP5");
-            this.chk_TaxRateP5.MenuManager = this.barManager1;
-            this.chk_TaxRateP5.Name = "chk_TaxRateP5";
-            this.chk_TaxRateP5.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
-            this.chk_TaxRateP5.StyleController = this.layoutControl1;
+            resources.ApplyResources(this.rdo_TaxCaluType, "rdo_TaxCaluType");
+            this.rdo_TaxCaluType.MenuManager = this.barManager1;
+            this.rdo_TaxCaluType.Name = "rdo_TaxCaluType";
+            this.rdo_TaxCaluType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items"))), resources.GetString("radioGroup1.Properties.Items1")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items2"))), resources.GetString("radioGroup1.Properties.Items3")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items4"))), resources.GetString("radioGroup1.Properties.Items5"))});
+            this.rdo_TaxCaluType.StyleController = this.layoutControl1;
             // 
-            // layoutControlItem50
+            // layoutControlItem51
             // 
-            this.layoutControlItem50.Control = this.chk_TaxRateP5;
-            resources.ApplyResources(this.layoutControlItem50, "layoutControlItem50");
-            this.layoutControlItem50.Location = new System.Drawing.Point(292, 302);
-            this.layoutControlItem50.Name = "layoutControlItem50";
-            this.layoutControlItem50.Size = new System.Drawing.Size(293, 25);
-            this.layoutControlItem50.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem50.TextToControlDistance = 0;
-            this.layoutControlItem50.TextVisible = false;
+            this.layoutControlItem51.Control = this.rdo_TaxCaluType;
+            resources.ApplyResources(this.layoutControlItem51, "layoutControlItem51");
+            this.layoutControlItem51.Location = new System.Drawing.Point(371, 302);
+            this.layoutControlItem51.Name = "layoutControlItem51";
+            this.layoutControlItem51.Size = new System.Drawing.Size(214, 29);
+            this.layoutControlItem51.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem51.TextToControlDistance = 0;
+            this.layoutControlItem51.TextVisible = false;
             // 
             // EditForm
             // 
@@ -1507,6 +1535,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chk_TaxRateP5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Product.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NoId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditContact.Properties)).EndInit();
@@ -1557,6 +1586,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
@@ -1614,8 +1644,8 @@ namespace Book.UI.Settings.BasicData.Supplier
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePayMethod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_TaxRateP5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdo_TaxCaluType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1753,6 +1783,8 @@ namespace Book.UI.Settings.BasicData.Supplier
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem49;
         private DevExpress.XtraEditors.CheckEdit chk_TaxRateP5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem50;
+        private DevExpress.XtraEditors.RadioGroup rdo_TaxCaluType;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem51;
 
     }
 }

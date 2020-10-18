@@ -20,7 +20,7 @@ namespace Book.UI.Hr.Attendance.Meals
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            newChooseContorl1.Choose = new Settings.BasicData.Employees.ChooseEmployee();
+            newChooseContorl1.Choose = new Settings.BasicData.Employees.ChooseEmployee(Book.UI.Settings.BasicData.Employees.EmployeeParameters.ALL);
 
             this.IsPersonal = isPersonal;
 

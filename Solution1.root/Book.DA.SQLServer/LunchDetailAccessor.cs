@@ -128,7 +128,7 @@ namespace Book.DA.SQLServer
 
         public DataTable GetMonthPersonalLunch(DateTime month, string employeeId)
         {
-            string sql = "select ld.MarkDate,e.IDNo,e.EmployeeName,d.DepartmentName,ld.LunchFee,ld.ShouldPay from LunchDetail ld left join Employee e on ld.EmployeeId=e.EmployeeId left join Department d on e.DepartmentId=d.DepartmentId where YEAR(ld.MarkDate)=" + month.Year + " and MONTH(ld.MarkDate)=" + month.Month + " and ld.EmployeeId='" + employeeId + "' order ld.MarkDate";
+            string sql = "select ld.MarkDate,e.IDNo,e.EmployeeName,d.DepartmentName,ld.LunchFee,ld.ShouldPay from LunchDetail ld left join Employee e on ld.EmployeeId=e.EmployeeId left join Department d on e.DepartmentId=d.DepartmentId where YEAR(ld.MarkDate)=" + month.Year + " and MONTH(ld.MarkDate)=" + month.Month + " and ld.EmployeeId='" + employeeId + "' order by ld.MarkDate";
 
             SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
             DataTable dt = new DataTable();

@@ -132,6 +132,7 @@ namespace Book.UI.Settings.BasicData.Supplier
         protected override void AddNew()
         {
             this._supplier = new Model.Supplier();
+            this._supplier.TaxCaluType = 1;
         }
 
         protected override void MoveNext()
@@ -236,6 +237,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.txt_Product.EditValue = this._supplier.ProductId;
 
             this.chk_TaxRateP5.Checked = this._supplier.TaxRateP5.HasValue ? this._supplier.TaxRateP5.Value : false;
+            this.rdo_TaxCaluType.SelectedIndex = this._supplier.TaxCaluType;
 
             SetTextEditReadOnly(true);
 
@@ -422,6 +424,7 @@ namespace Book.UI.Settings.BasicData.Supplier
         {
             Book.UI.Tools.IMEControl.IMECtrl(new Control[] { this, this.textEditEmail, this.textEditMobile, this.textEditName, this.textEditPhone, this.TextEditPostCode, this.TextEditSupplierAddress, this.TextEditSupplierEmail, this.TextEditSupplierFax, this.TextEditSupplierFullName, this.TextEditId, this.TextEditSupplierManager, this.TextEditSupplierMobile, this.TextEditSupplierNetAddress, this.TextEditSupplierNetAddress, this.TextEditSupplierNumber, this.TextEditSupplierPhone1, this.TextEditSupplierPhone2, this.TextEditSupplierShortName, this.memoEditRemarks, this.MemoEditSupplierRemarks });
         }
+
         protected override void Save()
         {
             this._supplier.Id = this.TextEditId.Text;
@@ -476,6 +479,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             }
 
             this._supplier.TaxRateP5 = this.chk_TaxRateP5.Checked;
+            this._supplier.TaxCaluType = this.rdo_TaxCaluType.SelectedIndex;
 
             switch (this.action)
             {

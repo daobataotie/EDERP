@@ -960,6 +960,8 @@ namespace Book.UI.Query
                     this.bindingSourceAtDetail.DataSource = this.atSummon.Details;
                     this.gridControl1.RefreshDataSource();
 
+                    CountJieDaiTotal(this.atSummon.Details);
+
 
                     //第二筆會計傳票
                     if (this.atSummon2 != null)

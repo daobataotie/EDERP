@@ -108,7 +108,7 @@
     </select>
     <select id="select_by_roleId"  resultMap="EmployeeResult">
       <![CDATA[
-      select * from employee where employeeid in (select employeeid from operators where operatorsid in (select operatorsid from                  OperationRole where roleid in (select roleid from role where id = #value#))) 
+      select * from employee where employeeid in (select employeeid from operators where operatorsid in (select operatorsid from  OperationRole where roleid in (select roleid from role where id = #value#))) 
       and EmployeeLeaveDate is null or EmployeeLeaveDate='1900-1-1 0:00:00'
       ORDER BY (case when left(idno,1) like '[A-Za-z]'
       then (case when convert(int,substring(idno,2,2)) between 30 and 99

@@ -45,6 +45,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="NoId" column="NoId"/>
       <result property="ProductId" column="ProductId"/>
       <result property="TaxRateP5" column="TaxRateP5"/>
+      <result property="TaxCaluType" column="TaxCaluType"/>
       <result property="SupplierCategory" column="SupplierCategoryId" lazyLoad="false" select="SupplierCategory.select_by_primary_key" />
       <result property="AreaCategory" column="AreaCategoryId" lazyLoad="false" select="AreaCategory.select_by_primary_key" />
       <result property="TradeCategory" column="TradeCategoryId" lazyLoad="false" select="TradeCategory.select_by_primary_key" />
@@ -164,7 +165,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [SupplierContact],
       [NoId],
       [ProductId],
-      [TaxRateP5]
+      [TaxRateP5],
+      [TaxCaluType]
       FROM
       [dbo].[Supplier]
       WHERE
@@ -245,7 +247,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [SupplierContact],
       [NoId],
       [ProductId],
-      [TaxRateP5]
+      [TaxRateP5],
+      [TaxCaluType]
       )
       VALUES
       (
@@ -287,7 +290,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #SupplierContact#,
       #NoId#,
       #ProductId#,
-      #TaxRateP5#
+      #TaxRateP5#,
+      #TaxCaluType#
       )
     </insert>
 
@@ -331,7 +335,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [SupplierContact]=#SupplierContact#,
       [NoId]=#NoId#,
       [ProductId]=#ProductId#,
-      [TaxRateP5]=#TaxRateP5#
+      [TaxRateP5]=#TaxRateP5#,
+      [TaxCaluType]=#TaxCaluType#
       WHERE
       [SupplierId] = #SupplierId#
     </update>

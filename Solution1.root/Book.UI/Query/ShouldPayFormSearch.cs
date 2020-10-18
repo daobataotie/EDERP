@@ -17,7 +17,7 @@ namespace Book.UI.Query
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.nccSupplier.Choose = new Settings.BasicData.Supplier.ChooseSupplier();
-            this.date_Start.EditValue = DateTime.Now.AddMonths(-1);
+            this.date_Start.EditValue = DateTime.Now.AddMonths(-3);
             this.date_End.EditValue = DateTime.Now;
         }
 
