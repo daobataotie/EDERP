@@ -168,9 +168,6 @@
   <data name="colInvoiceXODetailNote.Caption" xml:space="preserve">
     <value>說明</value>
   </data>
-  <data name="spinEditInvoiceTaxRate1.Properties.Buttons1" xml:space="preserve">
-    <value>T-</value>
-  </data>
   <data name="layoutControlItem12.Text" xml:space="preserve">
     <value>總計：</value>
   </data>

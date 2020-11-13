@@ -919,6 +919,7 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             this.Refresh();
         }
 
+        //导出Excel
         private void bar_ExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ListForm f = new ListForm(true);

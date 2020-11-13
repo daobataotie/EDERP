@@ -321,6 +321,11 @@ namespace Book.UI.Invoices.CG
 
         protected override void Save(Helper.InvoiceStatus status)
         {
+            //保存前吧鼠标焦点置于 GridControl中，目的是触发一些控件的更改事件，比如说  供应商更改事件
+            //如果控件修改完直接点击保存，对应的修改事件不触发
+
+            this.gridControl1.Focus();
+
             this.gridView1.PostEditor();
             this.gridView1.UpdateCurrentRow();
 
@@ -783,7 +788,7 @@ namespace Book.UI.Invoices.CG
             this.btn_GenerateInputCheck.Enabled = true;
             this.che_CheckAll.Properties.ReadOnly = false;
             this.che_CheckAll.Checked = false;
-            this.spinEditInvoiceTaxRate.Properties.ReadOnly = true;
+            //this.spinEditInvoiceTaxRate.Properties.ReadOnly = true;
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
@@ -1287,15 +1292,15 @@ namespace Book.UI.Invoices.CG
             {
                 case 1:
                     flag = 1;
-                    TaxMethod();
+                    TaxMethod(true);
                     break;
                 case 2:
                     flag = 2;
-                    TaxMethod();
+                    TaxMethod(true);
                     break;
                 default:
                     flag = 0;
-                    TaxMethod();
+                    TaxMethod(true);
                     //this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = false;
                     //this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = true;
                     //this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = true;
@@ -1305,18 +1310,22 @@ namespace Book.UI.Invoices.CG
             this.gridControl1.RefreshDataSource();
         }
 
-        private void TaxMethod()
+        private void TaxMethod(bool showMsg)
         {
-            string message = "";
-            if (flag == 0)
-                message = "免稅";// Properties.Resources.WaiJiaShui;
-            else if (flag == 1)
-                message = Properties.Resources.WaiJiaShui;
-            else
-                message = Properties.Resources.NeiHanShui;
-            if (MessageBox.Show(message, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != DialogResult.OK)
-                return;
-            double taxrate = double.Parse(this.spinEditInvoiceTaxRate.Text); //阭薹
+            if (showMsg)
+            {
+                string message = "";
+                if (flag == 0)
+                    message = "免稅";// Properties.Resources.WaiJiaShui;
+                else if (flag == 1)
+                    message = Properties.Resources.WaiJiaShui;
+                else
+                    message = Properties.Resources.NeiHanShui;
+                if (MessageBox.Show(message, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != DialogResult.OK)
+                    return;
+            }
+
+            double taxrate = double.Parse(this.spinEditInvoiceTaxRate.Text);  //阭薹
             double ta = (taxrate + 100) / 100;
 
             foreach (Model.InvoiceCGDetail detail in invoicecg.Details)
@@ -1326,7 +1335,7 @@ namespace Book.UI.Invoices.CG
                 if (detail.InvoiceCGDetailPrice == 0 || detail.InvoiceCGDetailQuantity == 0) continue;
                 if (flag == 0)
                 {
-                    detail.InvoiceCGDetailTaxPrice = 0;
+                    detail.InvoiceCGDetailTaxPrice = detail.InvoiceCGDetailPrice;
                     detail.InvoiceCGDetailTax = 0;
                     detail.InvoiceCGDetailTaxMoney = detail.InvoiceCGDetailMoney;
                     this.spinEditInvoiceTaxRate.EditValue = 0;
@@ -1334,15 +1343,20 @@ namespace Book.UI.Invoices.CG
                 }
                 else if (flag == 1)
                 {
-                    detail.InvoiceCGDetailTaxPrice = 0;
                     detail.InvoiceCGDetailTax = detail.InvoiceCGDetailPrice.Value * decimal.Parse(detail.InvoiceCGDetailQuantity.ToString()) * decimal.Parse(this.spinEditInvoiceTaxRate.Text) / 100;
                     detail.InvoiceCGDetailTax = this.GetDecimal(detail.InvoiceCGDetailTax.Value, BL.V.SetDataFormat.CGJEXiao.Value);
+                    detail.InvoiceCGDetailTaxPrice = detail.InvoiceCGDetailPrice + detail.InvoiceCGDetailTax;
                     detail.InvoiceCGDetailTaxMoney = detail.InvoiceCGDetailTax + detail.InvoiceCGDetailMoney;
                 }
                 else
                 {
                     //暂未考虑内含税
                     //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
+
+                    detail.InvoiceCGDetailTaxPrice = detail.InvoiceCGDetailPrice;
+                    detail.InvoiceCGDetailTax = detail.InvoiceCGDetailMoney * 100 / (100 + decimal.Parse(this.spinEditInvoiceTaxRate.Text));
+                    detail.InvoiceCGDetailTax = this.GetDecimal(detail.InvoiceCGDetailTax.Value, BL.V.SetDataFormat.CGJEXiao.Value);
+                    detail.InvoiceCGDetailTaxMoney = detail.InvoiceCGDetailMoney;
                 }
 
                 // detail.InvoiceCODetailMoney = decimal.Parse(detail.OrderQuantity.ToString()) * detail.InvoiceCODetailPrice;
@@ -1387,6 +1401,9 @@ namespace Book.UI.Invoices.CG
                 }
                 else
                 {
+                    this.calcEditInvoiceHeji.EditValue = this.GetDecimal(yse * 100 / (100 + this.spinEditInvoiceTaxRate.Value), BL.V.SetDataFormat.CGZJXiao.Value);
+                    this.calcEditInvoiceTax.EditValue = yse - this.GetDecimal(yse * 100 / (100 + this.spinEditInvoiceTaxRate.Value), BL.V.SetDataFormat.CGZJXiao.Value);
+                    this.calcEditInvoiceTotal.EditValue = this.GetDecimal(yse, BL.V.SetDataFormat.CGZJXiao.Value);
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 2;
                 }
 
@@ -1560,17 +1577,21 @@ namespace Book.UI.Invoices.CG
             this.gridControl1.RefreshDataSource();
         }
 
+        //供应商变更事件
         private void newChooseContorlSuplier_EditValueChanged(object sender, EventArgs e)
         {
             if (newChooseContorlSuplier.EditValue != null && this.action != "view")
             {
                 Model.Supplier supplier = newChooseContorlSuplier.EditValue as Model.Supplier;
+                flag = supplier.TaxCaluType;
                 if (supplier.TaxRateP5.HasValue && supplier.TaxRateP5.Value)
                 {
                     this.spinEditInvoiceTaxRate.Value = 5;
                 }
                 else
                     this.spinEditInvoiceTaxRate.Value = 0;
+
+                TaxMethod(false);
             }
         }
     }

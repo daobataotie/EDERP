@@ -1116,12 +1116,14 @@ namespace Book.UI.Query
             {
                 Model.AtSummonDetail atd2_1 = new Book.Model.AtSummonDetail();
                 atd2_1.SummonDetailId = Guid.NewGuid().ToString();
+                atd2_1.SummonId = this.atSummon2.SummonId;
                 atd2_1.Lending = "借";
                 atd2_1.AMoney = 0;
                 this.atSummon2.Details.Add(atd2_1);
 
                 Model.AtSummonDetail atd2_2 = new Book.Model.AtSummonDetail();
                 atd2_2.SummonDetailId = Guid.NewGuid().ToString();
+                atd2_2.SummonId = this.atSummon2.SummonId;
                 atd2_2.Lending = "貸";
                 atd2_2.AMoney = 0;
                 atd2_2.SubjectId = "6389198a-ab4d-401c-8ec9-2865a727d0e6";    //台幣銀行存款

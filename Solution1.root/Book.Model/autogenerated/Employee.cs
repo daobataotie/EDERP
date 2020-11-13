@@ -913,7 +913,7 @@ namespace Book.Model
         }
 
         /// <summary>
-        /// 出勤奖金天数
+        /// 出勤奖金天数   改    年终天数
         /// </summary>
         public double? AttendanceJJDays
         {

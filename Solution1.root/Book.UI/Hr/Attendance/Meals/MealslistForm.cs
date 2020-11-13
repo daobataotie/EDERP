@@ -107,15 +107,14 @@ namespace Book.UI.Hr.Attendance.Meals
                 decimal pay = decimal.Zero;
                 decimal.TryParse(this.gridView1.GetRowCellValue(e.RowHandle, this.gridColumn8).ToString(), out pay);
 
-                //È¥µô²ÍÑa 20
-                //if (pay - 20 > 0)
-                //{
-                //    pay = pay - 20;
-                //}
-                //else
-                //{
-                //    pay = 0;
-                //}
+                if (pay - 20 > 0)
+                {
+                    pay = pay - 20;
+                }
+                else
+                {
+                    pay = 0;
+                }
                 this.gridView1.SetRowCellValue(e.RowHandle, this.gridColumn9, pay);
                 addAllMoney();
             }

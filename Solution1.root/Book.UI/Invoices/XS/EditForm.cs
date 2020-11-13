@@ -211,6 +211,8 @@ namespace Book.UI.Invoices.XS
             if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
                 return;
 
+            this.gridControl1.Focus();
+
             Model.Depot depot = this.buttonEditDepot.EditValue as Model.Depot;
             IList<Model.DepotPosition> DepotPositionList = null;
             if (depot != null)
@@ -570,7 +572,8 @@ namespace Book.UI.Invoices.XS
             this.buttonEditEmployee.ButtonReadOnly = true;
             this.textEditInvoiceId.Properties.ReadOnly = true;
             this.textEditSongHuoAddress.Enabled = false;
-            this.spinEditInvoiceTaxRate.Properties.ReadOnly = true;
+            this.comboBoxEditInvoiceKslb.Enabled = false;
+            //this.spinEditInvoiceTaxRate.Properties.ReadOnly = true;
         }
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
@@ -1046,15 +1049,15 @@ namespace Book.UI.Invoices.XS
             {
                 case 1:
                     flag = 1;
-                    TaxMethod();
+                    TaxMethod(true);
                     break;
                 case 2:
                     flag = 2;
-                    TaxMethod();
+                    TaxMethod(true);
                     break;
                 default:
                     flag = 0;
-                    TaxMethod();
+                    TaxMethod(true);
                     //this.spinEditInvoiceTaxRate.Properties.Buttons[1].Enabled = false;
                     //this.spinEditInvoiceTaxRate.Properties.Buttons[2].Enabled = true;
                     //this.spinEditInvoiceTaxRate.Properties.Buttons[3].Enabled = true;
@@ -1064,17 +1067,21 @@ namespace Book.UI.Invoices.XS
             this.gridControl1.RefreshDataSource();
         }
 
-        private void TaxMethod()
+        private void TaxMethod(bool showMsg)
         {
-            string message = "";
-            if (flag == 0)
-                message = "免稅";// Properties.Resources.WaiJiaShui;
-            else if (flag == 1)
-                message = Properties.Resources.WaiJiaShui;
-            else
-                message = Properties.Resources.NeiHanShui;
-            if (MessageBox.Show(message, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != DialogResult.OK)
-                return;
+            if (showMsg)
+            {
+                string message = "";
+                if (flag == 0)
+                    message = "免稅";// Properties.Resources.WaiJiaShui;
+                else if (flag == 1)
+                    message = Properties.Resources.WaiJiaShui;
+                else
+                    message = Properties.Resources.NeiHanShui;
+                if (MessageBox.Show(message, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != DialogResult.OK)
+                    return;
+            }
+
             double taxrate = double.Parse(this.spinEditInvoiceTaxRate.Text); //阭薹
             double ta = (taxrate + 100) / 100;
 
@@ -1108,6 +1115,11 @@ namespace Book.UI.Invoices.XS
                 {
                     //暂未考虑内含税
                     //detail.InvoiceCODetailPrice = detail.TotalMoney / decimal.Parse(detail.OrderQuantity.ToString()) / decimal.Parse(ta.ToString());
+
+                    detail.InvoiceXSDetailTaxPrice = detail.InvoiceXSDetailPrice;
+                    detail.InvoiceXSDetailTax = detail.InvoiceXSDetailMoney * 100 / (100 + decimal.Parse(this.spinEditInvoiceTaxRate.Text));
+                    detail.InvoiceXSDetailTax = this.GetDecimal(detail.InvoiceXSDetailTax.Value, BL.V.SetDataFormat.CGJEXiao.Value);
+                    detail.InvoiceXSDetailTaxMoney = detail.InvoiceXSDetailMoney;
                 }
 
                 // detail.InvoiceCODetailMoney = decimal.Parse(detail.OrderQuantity.ToString()) * detail.InvoiceCODetailPrice;
@@ -1138,18 +1150,32 @@ namespace Book.UI.Invoices.XS
                 if (flag == 0)
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 0;
+                    this.spinEditInvoiceTaxRate.EditValue = 0;
+
+                    this.calcEditInvoiceHejiset.EditValue = yse;
+                    this.calcEditInvoiceTaxset.EditValue = 0;
+                    this.calcEditInvoiceTotalset.EditValue = yse;
                 }
                 else if (flag == 1)
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 1;
+
+                    this.calcEditInvoiceHejiset.EditValue = yse;
+                    this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
+                    this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
                 }
                 else
                 {
                     this.comboBoxEditInvoiceKslb.SelectedIndex = 2;
+
+                    this.calcEditInvoiceHejiset.EditValue = this.GetDecimal(yse * 100 / (100 + this.spinEditInvoiceTaxRate.Value), BL.V.SetDataFormat.XSZJXiao.Value);
+                    this.calcEditInvoiceTaxset.EditValue = yse - this.GetDecimal(yse * 100 / (100 + this.spinEditInvoiceTaxRate.Value), BL.V.SetDataFormat.XSZJXiao.Value);
+                    this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse, BL.V.SetDataFormat.XSZJXiao.Value);
                 }
-                this.calcEditInvoiceHejiset.EditValue = yse;
-                this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
-                this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
+
+                //this.calcEditInvoiceHejiset.EditValue = yse;
+                //this.calcEditInvoiceTaxset.EditValue = this.GetDecimal(yse * this.spinEditInvoiceTaxRate.Value / 100, BL.V.SetDataFormat.XSZJXiao.Value);
+                //this.calcEditInvoiceTotalset.EditValue = this.GetDecimal(yse + decimal.Parse(this.calcEditInvoiceTaxset.EditValue.ToString()) - this.calcInvoiceAllowance.Value + decimal.Parse(this.textEditOtherChargeMoneyset.Text), BL.V.SetDataFormat.XSZJXiao.Value);
             }
         }
 
@@ -1365,17 +1391,21 @@ namespace Book.UI.Invoices.XS
             }
         }
 
+        //客户变更事件
         private void buttonEditCompany_EditValueChanged(object sender, EventArgs e)
         {
             if (this.buttonEditCompany.EditValue != null && this.action != "view")
             {
                 Model.Customer customer = buttonEditCompany.EditValue as Model.Customer;
+                flag = customer.TaxCaluType;
                 if (customer.TaxRateP5.HasValue && customer.TaxRateP5.Value)
                 {
                     this.spinEditInvoiceTaxRate.Value = 5;
                 }
                 else
                     this.spinEditInvoiceTaxRate.Value = 0;
+
+                TaxMethod(false);
             }
         }
     }

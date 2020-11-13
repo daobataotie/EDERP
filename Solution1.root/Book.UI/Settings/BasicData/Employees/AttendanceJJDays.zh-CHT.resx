@@ -228,10 +228,10 @@
     <value>False</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>說明：如果出勤天數小於此設定值，則底薪不計週末天數</value>
+    <value>說明：如果出勤天數小於此設定值，則底薪不計週日天數</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>說明：如果出勤天數小於此設定值，則出勤獎金不計週末天數</value>
+    <value>說明：如果出勤天數小於此設定值，則年終不計週日天數</value>
   </data>
   <data name="spinEdit1.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -270,7 +270,7 @@
     <value>False</value>
   </data>
   <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>出勤獎金天數：</value>
+    <value>年終天數：</value>
   </data>
   <data name="layoutControlItem4.Text" xml:space="preserve">
     <value>底薪天數：</value>

@@ -29,9 +29,9 @@ namespace Book.UI.Settings.BasicData.Supplier
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.bindingSourceSupplier = new System.Windows.Forms.BindingSource(this.components);
@@ -43,6 +43,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.rdo_TaxCaluType = new DevExpress.XtraEditors.RadioGroup();
             this.chk_TaxRateP5 = new DevExpress.XtraEditors.CheckEdit();
             this.txt_Product = new DevExpress.XtraEditors.TextEdit();
             this.txt_NoId = new DevExpress.XtraEditors.TextEdit();
@@ -98,6 +99,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem49 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem50 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem51 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.lookUpEditBusinessId = new DevExpress.XtraEditors.LookUpEdit();
@@ -163,8 +165,6 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barPayMethod = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.rdo_TaxCaluType = new DevExpress.XtraEditors.RadioGroup();
-            this.layoutControlItem51 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -178,6 +178,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rdo_TaxCaluType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_TaxRateP5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Product.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NoId.Properties)).BeginInit();
@@ -230,6 +231,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
@@ -287,8 +289,6 @@ namespace Book.UI.Settings.BasicData.Supplier
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePayMethod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdo_TaxCaluType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -423,6 +423,17 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup2;
+            // 
+            // rdo_TaxCaluType
+            // 
+            resources.ApplyResources(this.rdo_TaxCaluType, "rdo_TaxCaluType");
+            this.rdo_TaxCaluType.MenuManager = this.barManager1;
+            this.rdo_TaxCaluType.Name = "rdo_TaxCaluType";
+            this.rdo_TaxCaluType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("rdo_TaxCaluType.Properties.Items"))), resources.GetString("rdo_TaxCaluType.Properties.Items1")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("rdo_TaxCaluType.Properties.Items2"))), resources.GetString("rdo_TaxCaluType.Properties.Items3")),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("rdo_TaxCaluType.Properties.Items4"))), resources.GetString("rdo_TaxCaluType.Properties.Items5"))});
+            this.rdo_TaxCaluType.StyleController = this.layoutControl1;
             // 
             // chk_TaxRateP5
             // 
@@ -909,6 +920,17 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.layoutControlItem50.TextToControlDistance = 0;
             this.layoutControlItem50.TextVisible = false;
             // 
+            // layoutControlItem51
+            // 
+            this.layoutControlItem51.Control = this.rdo_TaxCaluType;
+            resources.ApplyResources(this.layoutControlItem51, "layoutControlItem51");
+            this.layoutControlItem51.Location = new System.Drawing.Point(371, 302);
+            this.layoutControlItem51.Name = "layoutControlItem51";
+            this.layoutControlItem51.Size = new System.Drawing.Size(214, 29);
+            this.layoutControlItem51.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem51.TextToControlDistance = 0;
+            this.layoutControlItem51.TextVisible = false;
+            // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.layoutControl2);
@@ -1272,7 +1294,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.dateEditUpdateTime, "dateEditUpdateTime");
             this.dateEditUpdateTime.Name = "dateEditUpdateTime";
             this.dateEditUpdateTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEditUpdateTime.Properties.Buttons"))), resources.GetString("dateEditUpdateTime.Properties.Buttons1"), ((int)(resources.GetObject("dateEditUpdateTime.Properties.Buttons2"))), ((bool)(resources.GetObject("dateEditUpdateTime.Properties.Buttons3"))), ((bool)(resources.GetObject("dateEditUpdateTime.Properties.Buttons4"))), ((bool)(resources.GetObject("dateEditUpdateTime.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("dateEditUpdateTime.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, resources.GetString("dateEditUpdateTime.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("dateEditUpdateTime.Properties.Buttons8"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEditUpdateTime.Properties.Buttons"))), resources.GetString("dateEditUpdateTime.Properties.Buttons1"), ((int)(resources.GetObject("dateEditUpdateTime.Properties.Buttons2"))), ((bool)(resources.GetObject("dateEditUpdateTime.Properties.Buttons3"))), ((bool)(resources.GetObject("dateEditUpdateTime.Properties.Buttons4"))), ((bool)(resources.GetObject("dateEditUpdateTime.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("dateEditUpdateTime.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("dateEditUpdateTime.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("dateEditUpdateTime.Properties.Buttons8"))))});
             this.dateEditUpdateTime.Properties.ReadOnly = true;
             this.dateEditUpdateTime.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -1284,7 +1306,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             resources.ApplyResources(this.dateEditInsertTime, "dateEditInsertTime");
             this.dateEditInsertTime.Name = "dateEditInsertTime";
             this.dateEditInsertTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEditInsertTime.Properties.Buttons"))), resources.GetString("dateEditInsertTime.Properties.Buttons1"), ((int)(resources.GetObject("dateEditInsertTime.Properties.Buttons2"))), ((bool)(resources.GetObject("dateEditInsertTime.Properties.Buttons3"))), ((bool)(resources.GetObject("dateEditInsertTime.Properties.Buttons4"))), ((bool)(resources.GetObject("dateEditInsertTime.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("dateEditInsertTime.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("dateEditInsertTime.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("dateEditInsertTime.Properties.Buttons8"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEditInsertTime.Properties.Buttons"))), resources.GetString("dateEditInsertTime.Properties.Buttons1"), ((int)(resources.GetObject("dateEditInsertTime.Properties.Buttons2"))), ((bool)(resources.GetObject("dateEditInsertTime.Properties.Buttons3"))), ((bool)(resources.GetObject("dateEditInsertTime.Properties.Buttons4"))), ((bool)(resources.GetObject("dateEditInsertTime.Properties.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("dateEditInsertTime.Properties.Buttons6"))), null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, resources.GetString("dateEditInsertTime.Properties.Buttons7"), null, null, ((bool)(resources.GetObject("dateEditInsertTime.Properties.Buttons8"))))});
             this.dateEditInsertTime.Properties.ReadOnly = true;
             this.dateEditInsertTime.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -1491,28 +1513,6 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
-            // rdo_TaxCaluType
-            // 
-            resources.ApplyResources(this.rdo_TaxCaluType, "rdo_TaxCaluType");
-            this.rdo_TaxCaluType.MenuManager = this.barManager1;
-            this.rdo_TaxCaluType.Name = "rdo_TaxCaluType";
-            this.rdo_TaxCaluType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items"))), resources.GetString("radioGroup1.Properties.Items1")),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items2"))), resources.GetString("radioGroup1.Properties.Items3")),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((object)(resources.GetObject("radioGroup1.Properties.Items4"))), resources.GetString("radioGroup1.Properties.Items5"))});
-            this.rdo_TaxCaluType.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem51
-            // 
-            this.layoutControlItem51.Control = this.rdo_TaxCaluType;
-            resources.ApplyResources(this.layoutControlItem51, "layoutControlItem51");
-            this.layoutControlItem51.Location = new System.Drawing.Point(371, 302);
-            this.layoutControlItem51.Name = "layoutControlItem51";
-            this.layoutControlItem51.Size = new System.Drawing.Size(214, 29);
-            this.layoutControlItem51.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem51.TextToControlDistance = 0;
-            this.layoutControlItem51.TextVisible = false;
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1535,6 +1535,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rdo_TaxCaluType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_TaxRateP5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Product.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_NoId.Properties)).EndInit();
@@ -1587,6 +1588,7 @@ namespace Book.UI.Settings.BasicData.Supplier
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
@@ -1644,8 +1646,6 @@ namespace Book.UI.Settings.BasicData.Supplier
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePayMethod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdo_TaxCaluType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem51)).EndInit();
             this.ResumeLayout(false);
 
         }

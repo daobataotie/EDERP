@@ -1039,8 +1039,22 @@ namespace Book.Model
             set { _taxRateP5 = value; }
         }
 
+        private int _taxCaluType;
+
+        /// <summary>
+        /// 税价类别,0 免税；1 外加税；2 内含税
+        /// </summary>
+        public int TaxCaluType
+        {
+            get { return _taxCaluType; }
+            set { _taxCaluType = value; }
+        }
+
+
         public static readonly string PRO_CustomerName = "CustomerName";
 
         public static readonly string PRO_TaxRateP5 = "TaxRateP5";
+
+        public static readonly string PRO_TaxCaluType = "TaxCaluType";
     }
 }

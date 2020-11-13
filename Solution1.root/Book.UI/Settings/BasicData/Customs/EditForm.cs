@@ -171,6 +171,7 @@ namespace Book.UI.Settings.BasicData.Customs
             this._customer.CustomerFP = this.comboBoxEditFP.Text;
 
             this._customer.TaxRateP5 = this.chk_TaxRateP5.Checked;
+            this._customer.TaxCaluType = this.rdo_TaxCaluType.SelectedIndex;
 
             switch (this.action)
             {
@@ -193,6 +194,7 @@ namespace Book.UI.Settings.BasicData.Customs
             this._customer = new Model.Customer();
             this._customer.LastTransactionDate = DateTime.Now;
             this._customer.Id = this.customerManager.GetNewId();
+            this._customer.TaxCaluType = 1;
         }
 
         protected override void MoveNext()
@@ -292,6 +294,7 @@ namespace Book.UI.Settings.BasicData.Customs
             this.txt_Update.Text = this._customer.EmployeeChangeId;
 
             this.chk_TaxRateP5.Checked = this._customer.TaxRateP5.HasValue ? this._customer.TaxRateP5.Value : false;
+            this.rdo_TaxCaluType.SelectedIndex = this._customer.TaxCaluType;
 
             //switch (this.action)
             //{

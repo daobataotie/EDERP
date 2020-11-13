@@ -1024,7 +1024,7 @@ namespace Book.Model
         private int _taxCaluType;
 
         /// <summary>
-        /// 税价类别
+        /// 税价类别,0 免税；1 外加税；2 内含税
         /// </summary>
         public int TaxCaluType
         {

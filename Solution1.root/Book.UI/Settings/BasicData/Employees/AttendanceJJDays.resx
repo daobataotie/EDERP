@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="spinEdit4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 167</value>
+    <value>100, 157</value>
   </data>
   <data name="spinEdit4.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 21</value>
@@ -147,7 +147,7 @@
     <value>0</value>
   </data>
   <data name="spinEdit3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 142</value>
+    <value>100, 132</value>
   </data>
   <data name="spinEdit3.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 21</value>
@@ -171,7 +171,7 @@
     <value>0</value>
   </data>
   <data name="spinEdit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 82</value>
+    <value>97, 72</value>
   </data>
   <data name="spinEdit2.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 21</value>
@@ -192,7 +192,7 @@
     <value>6</value>
   </data>
   <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 82</value>
+    <value>232, 72</value>
   </data>
   <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 22</value>
@@ -216,7 +216,7 @@
     <value>7</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 108</value>
+    <value>12, 98</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>319, 20</value>
@@ -225,7 +225,7 @@
     <value>9</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>说明：如果出勤天数小于此设定值，则底薪不计周末天数</value>
+    <value>说明：如果出勤天数小于此设定值，则底薪不计周日天数</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -240,7 +240,7 @@
     <value>8</value>
   </data>
   <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 22</value>
+    <value>231, 12</value>
   </data>
   <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
@@ -264,7 +264,7 @@
     <value>9</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 48</value>
+    <value>12, 38</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>319, 20</value>
@@ -273,7 +273,7 @@
     <value>5</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>说明：如果出勤天数小于此设定值，则出勤奖金不计周末天数</value>
+    <value>说明：如果出勤天数小于此设定值，则年終不计周日天数</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -291,7 +291,7 @@
     <value>0</value>
   </data>
   <data name="spinEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 22</value>
+    <value>97, 12</value>
   </data>
   <data name="spinEdit1.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 21</value>
@@ -325,19 +325,13 @@
     <value>天数：</value>
   </data>
   <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>出勤奖金天数：</value>
+    <value>年終天数：</value>
   </data>
   <data name="emptySpaceItem1.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem1</value>
   </data>
   <data name="emptySpaceItem1.Text" xml:space="preserve">
     <value>emptySpaceItem1</value>
-  </data>
-  <data name="emptySpaceItem2.CustomizationFormText" xml:space="preserve">
-    <value>emptySpaceItem2</value>
-  </data>
-  <data name="emptySpaceItem2.Text" xml:space="preserve">
-    <value>emptySpaceItem2</value>
   </data>
   <data name="layoutControlItem2.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem2</value>
@@ -411,6 +405,9 @@
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Chinese (Traditional)</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -439,12 +436,6 @@
     <value>emptySpaceItem1</value>
   </data>
   <data name="&gt;&gt;emptySpaceItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem2.Name" xml:space="preserve">
-    <value>emptySpaceItem2</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem2.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">

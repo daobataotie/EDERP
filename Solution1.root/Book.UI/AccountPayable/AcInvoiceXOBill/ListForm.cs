@@ -32,6 +32,7 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
                 this.gridColumn8.VisibleIndex = 0;
 
                 this.bar_ExportExcel.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+                this.bar_CheckAll.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
             }
 
             this.gridView1.OptionsBehavior.Editable = true;
@@ -100,6 +101,25 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
 
                 ExportExcel(headers, details);
             }
+        }
+
+        private void bar_CheckAll_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            IList<Model.AcInvoiceXOBill> list = this.bindingSource1.DataSource as IList<Model.AcInvoiceXOBill>;
+            if (list != null)
+            {
+                foreach (var item in list)
+                {
+                    item.Checked = bar_CheckAll.Caption == "全選" ? true : false;
+                }
+            }
+
+            this.gridControl1.RefreshDataSource();
+
+            if (bar_CheckAll.Caption == "全選")
+                bar_CheckAll.Caption = "取消全選";
+            else
+                bar_CheckAll.Caption = "全選";
         }
 
         private void ExportExcel(List<Book.Model.AcInvoiceXOBill> headers, List<Book.Model.AcInvoiceXOBillDetail> details)

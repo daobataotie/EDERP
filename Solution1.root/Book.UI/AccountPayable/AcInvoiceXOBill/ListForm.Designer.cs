@@ -42,6 +42,7 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.bar_ExportExcel = new DevExpress.XtraBars.BarButtonItem();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bar_CheckAll = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
@@ -56,14 +57,16 @@
             // 
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1,
-            this.bar_ExportExcel});
-            this.barManager1.MaxItemId = 15;
+            this.bar_ExportExcel,
+            this.bar_CheckAll});
+            this.barManager1.MaxItemId = 16;
             // 
             // bar1
             // 
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bar_ExportExcel)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bar_ExportExcel),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bar_CheckAll)});
             this.bar1.OptionsBar.UseWholeRow = true;
             // 
             // imageCollection1
@@ -201,6 +204,13 @@
             this.gridColumn9.VisibleIndex = 7;
             this.gridColumn9.Width = 110;
             // 
+            // bar_CheckAll
+            // 
+            this.bar_CheckAll.Caption = "全選";
+            this.bar_CheckAll.Id = 15;
+            this.bar_CheckAll.Name = "bar_CheckAll";
+            this.bar_CheckAll.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_CheckAll_ItemClick);
+            // 
             // ListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -233,5 +243,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraBars.BarButtonItem bar_ExportExcel;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraBars.BarButtonItem bar_CheckAll;
     }
 }

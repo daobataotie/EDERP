@@ -560,50 +560,61 @@ namespace Book.UI.Hr.Salary.Salaryset
                 {
                     _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]), 0);
                 }
-                else if (emp.EmployeeJoinDate <= Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) && (_ms.mLeaveDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + totalDay.ToString()) || _ms.mLeaveDate == global::Helper.DateTimeParse.NullDate))
+                //else if (emp.EmployeeJoinDate <= Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) && (_ms.mLeaveDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + totalDay.ToString()) || _ms.mLeaveDate == global::Helper.DateTimeParse.NullDate))
+                //{
+                //    //if (emp.IDNo.Contains("J"))
+                //    //{
+                //    //    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                //    //}
+                //    ////员工编号以J开头的不管满不满足设定的出勤奖金天数 只扣除了年假，公假，国定假日之外的请假
+
+                //    //else
+                //    //{
+                //    //    if (emp.AttendanceJJDays.HasValue && attendDays + halfattend < emp.AttendanceJJDays)
+                //    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
+                //    //    else
+                //    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                //    //}
+
+                //    //2017-1-24 設定的年終值/（30-當月星期6，日天數）* 該員實際出勤天數(公假 年假 出差應算出勤)=年終
+                //    //2017-2-16 J开头的员工 設定的年終值/（30-當月星期6，日天數）* 該員實際出勤天數(公假 年假 出差 国定假日應算出勤)=年終
+                //    //if (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))
+                //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (attendDays + gnDays), 0);
+                //    // else
+                //    // _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + gnDays), 0);
+                //    /*2017-3-4  
+                //     * 普：設定的年終值/（30-六日天数）*（30-六日天数-国定假日天数-请假天数）
+                //     * J,O：設定的年終值/（30-六日天数）*（30-六日天数-请假天数）
+                //     * 公假 年假 出差 不算請假
+                //     * 请假天数算法：月总天数-六日天数-全勤天数-公假，年假，出差天数-国定假日天数
+                //     * 总算法：年终值/(30-六日天数)*（30-月总天数+全勤天数+公假，年假，出差天数+【国假天数】）
+                //     * J,O 的 gnDays 已经加上了国假天数
+                //     */
+                //    //2017-6-5 改O和普通员工一样，只有J才不扣国定假日
+                //    //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
+                //    //2018年10月6日00:25:02：外劳年终要扣国定假日
+                //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
+
+                //    //2020年9月26日19:26:41:
+                //    //普通員工以及外勞：未做滿一個月：年终/30*（實際出勤天數-曠職扣減天數）  
+                //    //滿一個月：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數）
+
+                //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
+
+                //    //2020年11月4日21:32:59：
+                //    //之前根据是否做满月来判定现在不用
+                //}
+                else if (emp.AttendanceJJDays.HasValue && emp.AttendanceJJDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
                 {
-                    //if (emp.IDNo.Contains("J"))
-                    //{
-                    //    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
-                    //}
-                    ////员工编号以J开头的不管满不满足设定的出勤奖金天数 只扣除了年假，公假，国定假日之外的请假
-
-                    //else
-                    //{
-                    //    if (emp.AttendanceJJDays.HasValue && attendDays + halfattend < emp.AttendanceJJDays)
-                    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
-                    //    else
-                    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
-                    //}
-
-                    //2017-1-24 設定的年終值/（30-當月星期6，日天數）* 該員實際出勤天數(公假 年假 出差應算出勤)=年終
-                    //2017-2-16 J开头的员工 設定的年終值/（30-當月星期6，日天數）* 該員實際出勤天數(公假 年假 出差 国定假日應算出勤)=年終
-                    //if (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))
-                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (attendDays + gnDays), 0);
-                    // else
-                    // _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + gnDays), 0);
-                    /*2017-3-4  
-                     * 普：設定的年終值/（30-六日天数）*（30-六日天数-国定假日天数-请假天数）
-                     * J,O：設定的年終值/（30-六日天数）*（30-六日天数-请假天数）
-                     * 公假 年假 出差 不算請假
-                     * 请假天数算法：月总天数-六日天数-全勤天数-公假，年假，出差天数-国定假日天数
-                     * 总算法：年终值/(30-六日天数)*（30-月总天数+全勤天数+公假，年假，出差天数+【国假天数】）
-                     * J,O 的 gnDays 已经加上了国假天数
-                     */
-                    //2017-6-5 改O和普通员工一样，只有J才不扣国定假日
-                    //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
-                    //2018年10月6日00:25:02：外劳年终要扣国定假日
-                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
-
-                    //2020年9月26日19:26:41:
-                    //普通員工以及外勞：未做滿一個月：年终/30*（實際出勤天數-曠職扣減天數）  
-                    //滿一個月：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數）
-
-                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
+                    //2020年11月4日21:39:46：
+                    //出勤天数满足年终天数：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數）
+                    //不满足：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數+周日天数）
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor + WeekendDays), 0);
                 }
                 else
                 {
-                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / 30 * (attendDays + halfattend - Kuangzhi), 0);
+                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / 30 * (attendDays + halfattend - Kuangzhi), 0);
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
 
                 } //责任津贴   新版改为出勤奖金 后改为 伙食津贴  现改为  津贴. 改 年终
 
@@ -667,6 +678,8 @@ namespace Book.UI.Hr.Salary.Salaryset
                     //    //}//底薪 新版只有月薪，无日薪
 
                     //}
+                    //出勤天数满足底薪天数： 月薪-月薪/30*（请假扣减天数+无薪假天数+旷职扣减天数+月总天数-月基数）
+                    //不满足：月薪-月薪/30*（请假扣减天数+无薪假天数+旷职扣减天数+月总天数-月基数+周日天数）
                     if (emp.AttendanceDays.HasValue && emp.AttendanceDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
                         _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay - _ms.mMonthlyPay / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor + WeekendDays), 0);
                     else
@@ -1478,53 +1491,62 @@ namespace Book.UI.Hr.Salary.Salaryset
                 {
                     _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]), 0);
                 }
-                else if (emp.EmployeeJoinDate < Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) && (_ms.mLeaveDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + totalDay.ToString()) || _ms.mLeaveDate == global::Helper.DateTimeParse.NullDate))
+                //else if (emp.EmployeeJoinDate < Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) && (_ms.mLeaveDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + totalDay.ToString()) || _ms.mLeaveDate == global::Helper.DateTimeParse.NullDate))
+                //{
+                //    //if (emp.IDNo.Contains("J"))
+                //    //{
+                //    //    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                //    //}
+                //    ////员工编号以J开头的不管满不满足设定的出勤奖金天数 只扣除了年假，公假之外的请假，其他都给
+                //    //else
+                //    //{
+                //    //    if (emp.AttendanceJJDays.HasValue && attendDays + halfattend < emp.AttendanceJJDays)
+                //    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
+                //    //    else
+                //    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
+                //    //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + halfattend + gnDays), 0);
+                //    //}
+                //    //2017年1月24日 設定的年終值/（當月天數-當月星期天數）* 該員實際出勤天數(公假 年假應算出勤)=年終，半天不算
+                //    //以O, J 开头的员工 設定的年終值/（當月天數-當月星期6，日天數）* 該員實際出勤天數(公假 年假應算出勤)=年終
+                //    //if (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))
+                //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (attendDays + gnDays), 0);
+                //    //else
+                //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + gnDays), 0);
+                //    /*2017-3-4  
+                //     * 普：設定的年終值/（30-六日天数）*（30-六日天数-国定假日天数-请假天数）
+                //     * J,O：設定的年終值/（30-六日天数）*（30-六日天数-请假天数）
+                //     * 公假 年假 出差 不算請假
+                //     * 请假天数算法：月总天数-六日天数-全勤天数-公假，年假，出差天数-国定假日天数
+                //     * 总算法：年终值/(30-六日天数)*（30-月总天数+全勤天数+公假，年假，出差天数+【国假天数】）
+                //     * J,O 的 gnDays 已经加上了国假天数
+                //     */
+
+                //    //2017-6-5 改O和普通员工一样，只有J才不扣国定假日
+                //    //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
+                //    //2018年10月6日00:25:02：外劳年终要扣国定假日
+                //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
+
+                //    //2020年9月26日19:26:41:
+                //    //普通員工以及外勞：未做滿一個月：年终/30*（實際出勤天數-曠職扣減天數）  
+                //    //滿一個月：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數）
+
+                //    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
+
+                //}
+                else if (emp.AttendanceJJDays.HasValue && emp.AttendanceJJDays.Value > Convert.ToDouble(attendDays) + halfattend + hunSangChan)
                 {
-                    //if (emp.IDNo.Contains("J"))
-                    //{
-                    //    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
-                    //}
-                    ////员工编号以J开头的不管满不满足设定的出勤奖金天数 只扣除了年假，公假之外的请假，其他都给
-                    //else
-                    //{
-                    //    if (emp.AttendanceJJDays.HasValue && attendDays + halfattend < emp.AttendanceJJDays)
-                    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays + WeekendDays), 0);
-                    //    else
-                    //        _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (totalDay - hasPayDays), 0);
-                    //    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + halfattend + gnDays), 0);
-                    //}
-                    //2017年1月24日 設定的年終值/（當月天數-當月星期天數）* 該員實際出勤天數(公假 年假應算出勤)=年終，半天不算
-                    //以O, J 开头的员工 設定的年終值/（當月天數-當月星期6，日天數）* 該員實際出勤天數(公假 年假應算出勤)=年終
-                    //if (emp.IDNo.ToUpper().StartsWith("J") || emp.IDNo.ToUpper().StartsWith("O"))
-                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (attendDays + gnDays), 0);
-                    //else
-                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (totalDay - WeekendDays) * (attendDays + gnDays), 0);
-                    /*2017-3-4  
-                     * 普：設定的年終值/（30-六日天数）*（30-六日天数-国定假日天数-请假天数）
-                     * J,O：設定的年終值/（30-六日天数）*（30-六日天数-请假天数）
-                     * 公假 年假 出差 不算請假
-                     * 请假天数算法：月总天数-六日天数-全勤天数-公假，年假，出差天数-国定假日天数
-                     * 总算法：年终值/(30-六日天数)*（30-月总天数+全勤天数+公假，年假，出差天数+【国假天数】）
-                     * J,O 的 gnDays 已经加上了国假天数
-                     */
-
-                    //2017-6-5 改O和普通员工一样，只有J才不扣国定假日
-                    //2018年8月20日16:40:57：所有员工 年终算法一样，都计算国定假日
-                    //2018年10月6日00:25:02：外劳年终要扣国定假日
-                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / (30 - WeekendDays - saturdays) * (30 - totalDay + attendDays + gnDays), 0);
-
-                    //2020年9月26日19:26:41:
-                    //普通員工以及外勞：未做滿一個月：年终/30*（實際出勤天數-曠職扣減天數）  
-                    //滿一個月：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數）
-
-                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
-
+                    //2020年11月4日21:39:46：
+                    //出勤天数满足年终天数：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數）
+                    //不满足：年终-年终/30*（請假扣減天數+無薪假天數+曠職扣減天數+月總天數-月基數+周日天数）
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor + WeekendDays), 0);
                 }
                 else
                 {
-                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / 30 * (attendDays + halfattend - Kuangzhi), 0);
+                    //_ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) / 30 * (attendDays + halfattend - Kuangzhi), 0);
+                    _ms.mDutyPay = this.GetSiSheWuRu(mStrToDouble(dx_dr["DutyPay"]) - mStrToDouble(dx_dr["DutyPay"]) / 30 * (halfDays - halfDayFactors + noPayleaveDays + Kuangzhi + totalDay - _ms.mMonthFactor), 0);
 
-                } //责任津贴   新版改为出勤奖金   又改为 伙食津贴 改为 年終
+                } //责任津贴   新版改为出勤奖金 后改为 伙食津贴  现改为  津贴. 改 年终
+
 
                 _ms.mGivenDays = mStrToDouble(dx_dr["HolidayBonusGivenDays"]);  //年假(补休)天数
                 _ms.mAnnualHolidayFee = this.GetSiSheWuRu(_ms.mMonthlyPay / 30 * _ms.mGivenDays, 0);         //年假(补休)金额

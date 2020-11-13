@@ -88,18 +88,20 @@ namespace Book.BL
 
                 foreach (Model.AtSummonDetail atSummonDetail in atSummon.Details)
                 {
-                    if (atSummonDetail.SummonDetailId == null)
-                        continue;
+                    //if (atSummonDetail.SummonDetailId == null)
+                    //    continue;
                     if (atSummonDetail.Lending == null || atSummonDetail.SubjectId == null)
                     {
                         throw new global::Helper.MessageValueException("請輸入傳票詳細資料！！");
                     }
                     if (string.IsNullOrEmpty(atSummonDetail.SummonDetailId))
                         atSummonDetail.SummonDetailId = Guid.NewGuid().ToString();
+
                     atSummonDetail.InsertTime = DateTime.Now;
                     atSummonDetail.SummonCatetory = atSummon.SummonCategory;
                     atSummonDetail.BillCode = atSummon.BIllCode;
                     atSummonDetail.SummonId = atSummon.SummonId;
+
                     _atSummonDetailManager.Insert(atSummonDetail);
                 }
 
@@ -126,6 +128,7 @@ namespace Book.BL
                         if (d.Lending == null || d.SubjectId == null)
                             throw new global::Helper.MessageValueException("請輸入傳票詳細資料！！");
                         d.SummonId = atSummon.SummonId;
+                        d.UpdateTime = DateTime.Now;
                         _atSummonDetailManager.Insert(d);
                     }
 
