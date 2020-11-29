@@ -123,17 +123,17 @@
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>25.0000076, 418.2067</value>
+    <value>14.4166746, 344.123383</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrLine1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1941.95837, 13.2291565</value>
+    <value>1959.58337, 13.2291565</value>
   </data>
   <data name="xrTable5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrTable5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 103.1875</value>
+    <value>0, 63.5</value>
   </data>
   <data name="xrTableCell37.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -203,7 +203,7 @@
     <value>254</value>
   </data>
   <data name="xrTable4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 39.6875</value>
+    <value>0, 0</value>
   </data>
   <data name="xrTableCell34.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -272,7 +272,7 @@
     <value>254</value>
   </data>
   <data name="xrTable3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 310.915039</value>
+    <value>0, 268.581726</value>
   </data>
   <data name="TCls.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -371,7 +371,7 @@
     <value>254</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 183.914963</value>
+    <value>0, 141.581635</value>
   </data>
   <data name="xrTableCell15.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -410,7 +410,7 @@
     <value>254</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 247.414963</value>
+    <value>0, 205.081635</value>
   </data>
   <data name="xrTableCell14.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -509,7 +509,7 @@
     <value>254</value>
   </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
-    <value>431.435852</value>
+    <value>357.352539</value>
   </data>
   <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>

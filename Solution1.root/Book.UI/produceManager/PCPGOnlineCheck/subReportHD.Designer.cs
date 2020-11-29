@@ -337,7 +337,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.TopMargin,
             this.BottomMargin});
             resources.ApplyResources(this, "$this");
-            this.Margins = new System.Drawing.Printing.Margins(80, 80, 80, 80);
+            this.Margins = new System.Drawing.Printing.Margins(79, 79, 79, 79);
             this.PageHeight = 2794;
             this.PageWidth = 2159;
             this.Version = "10.2";

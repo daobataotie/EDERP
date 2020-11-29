@@ -212,6 +212,53 @@ namespace Book.BL
         {
             return accessor.SelectByInvoiceCusXOId(invoiceCusXOId);
         }
+
+        #region 适用于首件上线检查表
+        public Model.OpticsTest PFCGetFirst(string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCGetFirst(PCFirstOnlineCheckDetailId);
+        }
+
+        public Model.OpticsTest PFCGetLast(string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCGetLast(PCFirstOnlineCheckDetailId);
+        }
+
+        public Model.OpticsTest PFCGetPrev(DateTime InsertDate, string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCGetPrev(InsertDate, PCFirstOnlineCheckDetailId);
+        }
+
+        public Model.OpticsTest PFCGetNext(DateTime InsertDate, string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCGetNext(InsertDate, PCFirstOnlineCheckDetailId);
+        }
+
+        public bool PFCHasRows(string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCHasRows(PCFirstOnlineCheckDetailId);
+        }
+
+        public bool PFCHasRowsBefore(Model.OpticsTest e, string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCHasRowsBefore(e, PCFirstOnlineCheckDetailId);
+        }
+
+        public bool PFCHasRowsAfter(Model.OpticsTest e, string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCHasRowsAfter(e, PCFirstOnlineCheckDetailId);
+        }
+
+        public IList<Model.OpticsTest> PFCSelect(string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCSelect(PCFirstOnlineCheckDetailId);
+        }
+
+        public IList<Book.Model.OpticsTest> PFCSelectByDateRage(DateTime startdate, DateTime enddate, string PCFirstOnlineCheckDetailId)
+        {
+            return accessor.PFCSelectByDateRage(startdate, enddate, PCFirstOnlineCheckDetailId);
+        }
+        #endregion
     }
 }
 

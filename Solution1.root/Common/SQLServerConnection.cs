@@ -134,7 +134,7 @@ namespace Common
                     if (this.authentication == SQLServerAuthentication.Windows)
                         result = string.Format("data source={0};initial catalog={1};integrated security=sspi", this.datasource, InitialCatalog);
                     else
-                        result = string.Format("data source={0};initial catalog={1};user id={2};password={3}", this.datasource, InitialCatalog, this.username, this.password);
+                        result = string.Format("data source={0};initial catalog={1};user id={2};password={3};Connect Timeout=5", this.datasource, InitialCatalog, this.username, this.password);
                     break;
             }
             return result;
@@ -179,7 +179,7 @@ namespace Common
 
         public override string Type
         {
-            get 
+            get
             {
                 return "SQLServer";
             }
@@ -187,7 +187,7 @@ namespace Common
 
         public override bool Awailable
         {
-            get 
+            get
             {
                 bool result = true;
 

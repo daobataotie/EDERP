@@ -51,6 +51,7 @@ namespace Book.UI.Invoices.CO
             this.xrTableCellNextWorkHouse = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
             this.lblFP = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblMRPId = new DevExpress.XtraReports.UI.XRLabel();
@@ -93,8 +94,8 @@ namespace Book.UI.Invoices.CO
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelPrintDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelData = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabelYeWuName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelCompanyInfoName = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabelYeWuName = new DevExpress.XtraReports.UI.XRLabel();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrLabelTotal1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -111,7 +112,6 @@ namespace Book.UI.Invoices.CO
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.lbl_JIS = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichTextProductDescribe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -311,6 +311,16 @@ namespace Book.UI.Invoices.CO
             resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.StylePriority.UseFont = false;
+            // 
+            // lbl_JIS
+            // 
+            this.lbl_JIS.CanGrow = false;
+            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
+            this.lbl_JIS.Name = "lbl_JIS";
+            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_JIS.StylePriority.UseFont = false;
+            this.lbl_JIS.StylePriority.UseForeColor = false;
+            this.lbl_JIS.StylePriority.UseTextAlignment = false;
             // 
             // lblFP
             // 
@@ -662,14 +672,6 @@ namespace Book.UI.Invoices.CO
             this.xrLabelData.StylePriority.UseForeColor = false;
             this.xrLabelData.StylePriority.UseTextAlignment = false;
             // 
-            // xrLabelYeWuName
-            // 
-            resources.ApplyResources(this.xrLabelYeWuName, "xrLabelYeWuName");
-            this.xrLabelYeWuName.Name = "xrLabelYeWuName";
-            this.xrLabelYeWuName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabelYeWuName.StylePriority.UseFont = false;
-            this.xrLabelYeWuName.StylePriority.UseTextAlignment = false;
-            // 
             // xrLabelCompanyInfoName
             // 
             resources.ApplyResources(this.xrLabelCompanyInfoName, "xrLabelCompanyInfoName");
@@ -677,6 +679,14 @@ namespace Book.UI.Invoices.CO
             this.xrLabelCompanyInfoName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabelCompanyInfoName.StylePriority.UseFont = false;
             this.xrLabelCompanyInfoName.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabelYeWuName
+            // 
+            resources.ApplyResources(this.xrLabelYeWuName, "xrLabelYeWuName");
+            this.xrLabelYeWuName.Name = "xrLabelYeWuName";
+            this.xrLabelYeWuName.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabelYeWuName.StylePriority.UseFont = false;
+            this.xrLabelYeWuName.StylePriority.UseTextAlignment = false;
             // 
             // PageFooter
             // 
@@ -817,16 +827,6 @@ namespace Book.UI.Invoices.CO
             this.xrControlStyle1.Name = "xrControlStyle1";
             this.xrControlStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.xrControlStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lbl_JIS
-            // 
-            this.lbl_JIS.CanGrow = false;
-            resources.ApplyResources(this.lbl_JIS, "lbl_JIS");
-            this.lbl_JIS.Name = "lbl_JIS";
-            this.lbl_JIS.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.lbl_JIS.StylePriority.UseFont = false;
-            this.lbl_JIS.StylePriority.UseForeColor = false;
-            this.lbl_JIS.StylePriority.UseTextAlignment = false;
             // 
             // R01
             // 

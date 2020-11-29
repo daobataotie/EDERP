@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="PCFirstOnlineCheckDetail" xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <statements>
+    <select id="SelectByHeaderId" parameterClass="string" resultMap="PCFirstOnlineCheckDetailResult">
+      <![CDATA[
+       select pfd.* from PCFirstOnlineCheckDetail pfd  where pfd.PCFirstOnlineCheckId=#value# order by pfd.CheckDate
+      ]]>
+    </select>
+
+    <delete id="DelectByHeaderId" parameterClass="string">
+      <![CDATA[
+      delete from PCFirstOnlineCheckDetail where PCFirstOnlineCheckId=#value#
+      ]]>
+    </delete>
+
+    <select id="SelectByCondition" parameterClass="Map" resultMap="PCFirstOnlineCheckDetailResult">
+      <![CDATA[
+      select pfd.* from PCFirstOnlineCheckDetail pfd  left join PCFirstOnlineCheck pf on pf.PCFirstOnlineCheckId=pfd.PCFirstOnlineCheckId left join PronoteHeader  ph on ph.PronoteHeaderID=pf.PronoteHeaderId  where pf.OnlineDate  between #startDate# and #endDate# $sql$ order by pf.PCFirstOnlineCheckId,pfd.CheckDate
+      ]]>
+    </select>
+  </statements>
+</sqlMap>

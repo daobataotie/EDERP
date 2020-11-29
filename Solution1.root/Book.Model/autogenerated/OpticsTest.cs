@@ -142,6 +142,10 @@ namespace Book.Model
 
         private string _rightVerticalJudge;
 
+
+        private string _pCFirstOnlineCheckDetailId;
+
+
         /// <summary>
         /// 品管线上检查详细
         /// </summary>
@@ -547,6 +551,15 @@ namespace Book.Model
         }
 
         /// <summary>
+        /// 首件上线检查表明细Id
+        /// </summary>
+        public string PCFirstOnlineCheckDetailId
+        {
+            get { return _pCFirstOnlineCheckDetailId; }
+            set { _pCFirstOnlineCheckDetailId = value; }
+        }
+
+        /// <summary>
         /// 品管线上检查详细
         /// </summary>
         public virtual PCPGOnlineCheckDetail PCPGOnlineCheckDetail
@@ -703,6 +716,8 @@ namespace Book.Model
         public readonly static string PRO_LeftVerticalJudge = "LeftVerticalJudge";
 
         public readonly static string PRO_RightVerticalJudge = "RightVerticalJudge";
+
+        public readonly static string PRO_PCFirstOnlineCheckDetailId = "PCFirstOnlineCheckDetailId";
         #endregion
     }
 }

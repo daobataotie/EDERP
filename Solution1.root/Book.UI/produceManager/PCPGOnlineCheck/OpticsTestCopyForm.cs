@@ -14,18 +14,33 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         BL.PCPGOnlineCheckDetailManager pCPGOnlineCheckDetailManager = new Book.BL.PCPGOnlineCheckDetailManager();
         BL.OpticsTestManager opticsTestManager = new Book.BL.OpticsTestManager();
         string _pCPGOnlineCheckDetailId;
+        string _pCFirstOnlineCheckDetailId;
 
-        public OpticsTestCopyForm(Model.PCPGOnlineCheckDetail pCPGOnlineCheckDetail)
+        /// <summary>
+        /// 来源单据的类型(0,光学厚度表；1，首件上线检查表)
+        /// </summary>
+        int _invoiceType;
+
+        /// <summary>
+        /// 光学表复制
+        /// </summary>
+        /// <param name="fromId">来源Id</param>
+        /// <param name="pronoteHeaderId">加工单Id</param>
+        /// <param name="invoiceType">来源单据的类型(0,光学厚度表；1，首件上线检查表)</param>
+        public OpticsTestCopyForm(string fromId, string pronoteHeaderId, int invoiceType)
         {
             InitializeComponent();
 
             this.StartPosition = FormStartPosition.CenterParent;
-            this._pCPGOnlineCheckDetailId = pCPGOnlineCheckDetail.PCPGOnlineCheckDetailId;
+
+            this._invoiceType = invoiceType;
+            if (invoiceType == 0)
+                this._pCPGOnlineCheckDetailId = fromId;
+            else
+                this._pCFirstOnlineCheckDetailId = fromId;
+
             DataTable dt = new DataTable();
-            if (pCPGOnlineCheckDetail != null && pCPGOnlineCheckDetail.FromInvoiceId.StartsWith("PNT"))
-            {
-                dt = pCPGOnlineCheckDetailManager.SelectOpticsTestByFromInvoiceId(pCPGOnlineCheckDetail.FromInvoiceId);
-            }
+            dt = pCPGOnlineCheckDetailManager.SelectOpticsTestByFromInvoiceId(pronoteHeaderId);
 
 
             if (dt.Rows.Count > 0)
@@ -45,11 +60,18 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
                 DataRowView dr = bindingSource1.Current as DataRowView;
                 if (dr != null)
                 {
-                    IList<Model.OpticsTest> otList = opticsTestManager.mSelect(dr["PCPGOnlineCheckDetailId"].ToString());
+                    IList<Model.OpticsTest> otList = null;
+
+                    if (this._invoiceType == 0)
+                        otList = opticsTestManager.mSelect(dr["DetailId"].ToString());
+                    else
+                        otList = opticsTestManager.PFCSelect(dr["DetailId"].ToString());
+
                     foreach (var item in otList)
                     {
                         item.OpticsTestId = opticsTestManager.GetId();
                         item.PCPGOnlineCheckDetailId = this._pCPGOnlineCheckDetailId;
+                        item.PCFirstOnlineCheckDetailId = this._pCFirstOnlineCheckDetailId;
                         item.OptiscTestDate = DateTime.Now;
                         item.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 

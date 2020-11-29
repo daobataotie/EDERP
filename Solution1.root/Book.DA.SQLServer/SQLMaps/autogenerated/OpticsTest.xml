@@ -34,6 +34,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="RightLevelJudge" column="RightLevelJudge"/>
       <result property="LeftVerticalJudge" column="LeftVerticalJudge"/>
       <result property="RightVerticalJudge" column="RightVerticalJudge"/>
+      <result property="PCFirstOnlineCheckDetailId" column="PCFirstOnlineCheckDetailId"/>
       <result property="PCPGOnlineCheckDetail" column="PCPGOnlineCheckDetailId" lazyLoad="false" select="PCPGOnlineCheckDetail.select_by_primary_key" />
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
     </resultMap>
@@ -150,7 +151,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [LeftLevelJudge],
         [RightLevelJudge],
         [LeftVerticalJudge],
-        [RightVerticalJudge]     
+        [RightVerticalJudge],
+        [PCFirstOnlineCheckDetailId]
         
 			FROM
 				[dbo].[OpticsTest]
@@ -232,7 +234,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [LeftLevelJudge],
         [RightLevelJudge],
         [LeftVerticalJudge],
-        [RightVerticalJudge] 
+        [RightVerticalJudge],
+        [PCFirstOnlineCheckDetailId]
 			) 
 			VALUES 
 			(
@@ -263,7 +266,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #LeftLevelJudge#,
         #RightLevelJudge#,
         #LeftVerticalJudge#,
-        #RightVerticalJudge# 
+        #RightVerticalJudge#,
+        #PCFirstOnlineCheckDetailId#
 			)
              ]]>
     </insert>
@@ -297,7 +301,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [LeftLevelJudge]=#LeftLevelJudge#,
         [RightLevelJudge]=#RightLevelJudge#,
         [LeftVerticalJudge]=#LeftVerticalJudge#,
-        [RightVerticalJudge]=#RightVerticalJudge# 
+        [RightVerticalJudge]=#RightVerticalJudge#,
+        [PCFirstOnlineCheckDetailId]=#PCFirstOnlineCheckDetailId#
 			WHERE
 				[OpticsTestId] = #OpticsTestId#
                     ]]>

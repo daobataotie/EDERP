@@ -90,6 +90,8 @@ namespace Book.Model
 
         private string _ProductUnitId;
 
+        private string _pCFirstOnlineCheckDetailId;
+
         private Employee _auditEmp;
 
         /// <summary>
@@ -350,6 +352,15 @@ namespace Book.Model
             set { _ProductUnitId = value; }
         }
 
+        /// <summary>
+        /// 首件上线检查表ID
+        /// </summary>
+        public string PCFirstOnlineCheckDetailId
+        {
+            get { return _pCFirstOnlineCheckDetailId; }
+            set { _pCFirstOnlineCheckDetailId = value; }
+        }
+
         public virtual Employee AuditEmp
         {
             get
@@ -489,6 +500,10 @@ namespace Book.Model
         public readonly static string PRO_AuditEmpId = "AuditEmpId";
 
         public readonly static string PRO_ProductUnitId = "ProductUnitId";
+
+
+        public readonly static string PRO_PCFirstOnlineCheckDetailId = "PCFirstOnlineCheckDetailId";
+
         #endregion
     }
 }

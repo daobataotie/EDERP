@@ -17,7 +17,13 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         private string _PCPGOnlineCheckDetailId = string.Empty;
         private Model.PCPGOnlineCheckDetail _pCPGOnlineCheckDetail;
         private string _PCFinishCheckId = string.Empty;
-        int _FromPcFinishCheck = 0;
+        private string _PCFirstOnlineCheckDetailId = string.Empty;
+        public string PronoteHeaderId { get; set; }
+
+        /// <summary>
+        /// 0，光学厚度表；1，成品检验单；2，首件上线检查表
+        /// </summary>
+        int sourceInvoice = 0;
 
         public OpticsTest()
         {
@@ -53,11 +59,21 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this._pCPGOnlineCheckDetail = pCPGOnlineCheckDetail;
             this._PCPGOnlineCheckDetailId = pCPGOnlineCheckDetail.PCPGOnlineCheckDetailId;
         }
-        public OpticsTest(string PCFinishCheckId, int i)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sourceId">成品检验单Id/首件上线检查表明细Id</param>
+        /// <param name="i">0，光学厚度表；1，成品检验单；2，首件上线检查表</param>
+        public OpticsTest(string sourceId, int i)
             : this()
         {
-            this._PCFinishCheckId = PCFinishCheckId;
-            this._FromPcFinishCheck = i;
+            this.sourceInvoice = i;
+
+            if (this.sourceInvoice == 1)
+                this._PCFinishCheckId = sourceId;
+            else if (this.sourceInvoice == 2)
+                this._PCFirstOnlineCheckDetailId = sourceId;
         }
 
         protected override void AddNew()
@@ -84,22 +100,30 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
                 return;
             if (MessageBox.Show(Properties.Resources.ConfirmToDelete, this.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
                 return;
-            if (this._FromPcFinishCheck == 0)
+
+            this._OpticsTestManager.Delete(this._OpticsTest.OpticsTestId);
+            if (this.sourceInvoice == 0)
             {
-                this._OpticsTestManager.Delete(this._OpticsTest.OpticsTestId);
                 this._OpticsTest = this._OpticsTestManager.mGetNext(this._OpticsTest.InsertTime.Value, this._PCPGOnlineCheckDetailId);
                 if (this._OpticsTest == null)
                 {
                     this._OpticsTest = this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId);
                 }
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
-                this._OpticsTestManager.Delete(this._OpticsTest.OpticsTestId);
                 this._OpticsTest = this._OpticsTestManager.FGetNext(this._OpticsTest.InsertTime.Value, this._PCFinishCheckId);
                 if (this._OpticsTest == null)
                 {
                     this._OpticsTest = this._OpticsTestManager.FGetLast(this._PCFinishCheckId);
+                }
+            }
+            else if (this.sourceInvoice == 2)
+            {
+                this._OpticsTest = this._OpticsTestManager.PFCGetNext(this._OpticsTest.InsertTime.Value, this._PCFirstOnlineCheckDetailId);
+                if (this._OpticsTest == null)
+                {
+                    this._OpticsTest = this._OpticsTestManager.PFCGetLast(this._PCFirstOnlineCheckDetailId);
                 }
             }
 
@@ -107,38 +131,50 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
         protected override void MoveLast()
         {
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId).OpticsTestId);
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
                 this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.FGetLast(this._PCFinishCheckId) == null ? "" : this._OpticsTestManager.FGetLast(this._PCFinishCheckId).OpticsTestId);
+            }
+            else if (this.sourceInvoice == 2)
+            {
+                this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.PFCGetLast(this._PCFirstOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.PFCGetLast(this._PCFirstOnlineCheckDetailId).OpticsTestId);
             }
         }
 
         protected override void MoveFirst()
         {
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.mGetFirst(this._PCPGOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.mGetFirst(this._PCPGOnlineCheckDetailId).OpticsTestId);
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
                 this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.FGetFirst(this._PCFinishCheckId) == null ? "" : this._OpticsTestManager.FGetFirst(this._PCFinishCheckId).OpticsTestId);
+            }
+            else if (this.sourceInvoice == 2)
+            {
+                this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.PFCGetFirst(this._PCFirstOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.PFCGetFirst(this._PCFirstOnlineCheckDetailId).OpticsTestId);
             }
         }
 
         protected override void MovePrev()
         {
             Model.OpticsTest mOpticsTest = null;
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 mOpticsTest = this._OpticsTestManager.mGetPrev(this._OpticsTest.InsertTime.Value, this._PCPGOnlineCheckDetailId);
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
                 mOpticsTest = this._OpticsTestManager.FGetPrev(this._OpticsTest.InsertTime.Value, this._PCFinishCheckId);
+            }
+            else if (this.sourceInvoice == 2)
+            {
+                mOpticsTest = this._OpticsTestManager.PFCGetPrev(this._OpticsTest.InsertTime.Value, this._PCFirstOnlineCheckDetailId);
             }
 
             if (mOpticsTest == null)
@@ -149,14 +185,19 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         protected override void MoveNext()
         {
             Model.OpticsTest mOpticsTest = null;
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 mOpticsTest = this._OpticsTestManager.mGetNext(this._OpticsTest.InsertTime.Value, this._PCPGOnlineCheckDetailId);
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
                 mOpticsTest = this._OpticsTestManager.FGetNext(this._OpticsTest.InsertTime.Value, this._PCFinishCheckId);
             }
+            else if (this.sourceInvoice == 2)
+            {
+                mOpticsTest = this._OpticsTestManager.PFCGetNext(this._OpticsTest.InsertTime.Value, this._PCFirstOnlineCheckDetailId);
+            }
+
             if (mOpticsTest == null)
                 throw new InvalidOperationException(Properties.Resources.ErrorNoMoreRows);
             this._OpticsTest = this._OpticsTestManager.Get(mOpticsTest.OpticsTestId);
@@ -164,37 +205,49 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
         protected override bool HasRows()
         {
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 return this._OpticsTestManager.mHasRows(this._PCPGOnlineCheckDetailId);
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
                 return this._OpticsTestManager.FHasRows(this._PCFinishCheckId);
+            }
+            else
+            {
+                return this._OpticsTestManager.PFCHasRows(this._PCFirstOnlineCheckDetailId);
             }
         }
 
         protected override bool HasRowsNext()
         {
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 return this._OpticsTestManager.mHasRowsAfter(this._OpticsTest, this._PCPGOnlineCheckDetailId);
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
                 return this._OpticsTestManager.FHasRowsAfter(this._OpticsTest, this._PCFinishCheckId);
+            }
+            else
+            {
+                return this._OpticsTestManager.PFCHasRowsAfter(this._OpticsTest, this._PCFirstOnlineCheckDetailId);
             }
         }
 
         protected override bool HasRowsPrev()
         {
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 return this._OpticsTestManager.mHasRowsBefore(this._OpticsTest, this._PCPGOnlineCheckDetailId);
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
                 return this._OpticsTestManager.FHasRowsBefore(this._OpticsTest, this._PCFinishCheckId);
+            }
+            else
+            {
+                return this._OpticsTestManager.PFCHasRowsBefore(this._OpticsTest, this._PCFirstOnlineCheckDetailId);
             }
         }
 
@@ -211,13 +264,17 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
                 this._OpticsTest.EmployeeId = this._OpticsTest.Employee.EmployeeId;
             }
 
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 this._OpticsTest.PCPGOnlineCheckDetailId = this._PCPGOnlineCheckDetailId;
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
                 this._OpticsTest.PCFinishCheckId = this._PCFinishCheckId;
+            }
+            else if (this.sourceInvoice == 2)
+            {
+                this._OpticsTest.PCFirstOnlineCheckDetailId = this._PCFirstOnlineCheckDetailId;
             }
 
             try
@@ -325,14 +382,19 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         private void barBtn_Search_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             OpticsTestList f = null;
-            if (this._FromPcFinishCheck == 0)
+            if (this.sourceInvoice == 0)
             {
                 f = new OpticsTestList(this._PCPGOnlineCheckDetailId);
             }
-            else
+            else if (this.sourceInvoice == 1)
             {
-                f = new OpticsTestList(this._PCFinishCheckId, this._FromPcFinishCheck);
+                f = new OpticsTestList(this._PCFinishCheckId, this.sourceInvoice);
             }
+            else if (this.sourceInvoice == 2)
+            {
+                f = new OpticsTestList(this._PCFirstOnlineCheckDetailId, this.sourceInvoice);
+            }
+
             if (f.ShowDialog(this) == DialogResult.OK)
             {
                 Model.OpticsTest currentModel = f.SelectItem as Model.OpticsTest;
@@ -363,18 +425,39 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
         private void bar_Copy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (string.IsNullOrEmpty(this._PCPGOnlineCheckDetailId))
-            {
-                MessageBox.Show("複製功能只適用於\"光學/厚度表\"！", "提示", MessageBoxButtons.OK);
-                return;
-            }
+            //if (string.IsNullOrEmpty(this._PCPGOnlineCheckDetailId))
+            //{
+            //    MessageBox.Show("複製功能只適用於\"光學/厚度表\"！", "提示", MessageBoxButtons.OK);
+            //    return;
+            //}
 
             try
             {
-                OpticsTestCopyForm f = new OpticsTestCopyForm(this._pCPGOnlineCheckDetail);
+                //OpticsTestCopyForm f = new OpticsTestCopyForm(this._pCPGOnlineCheckDetail);
+                string fromId = string.Empty;
+                string pronoteHeaderId = string.Empty;
+                int invoiceType = 0;
+                if (sourceInvoice == 0)
+                {
+                    fromId = _PCPGOnlineCheckDetailId;
+                    pronoteHeaderId = this._pCPGOnlineCheckDetail.FromInvoiceId;
+                }
+                else if (sourceInvoice == 2)
+                {
+                    fromId = _PCFirstOnlineCheckDetailId;
+                    pronoteHeaderId = this.PronoteHeaderId;
+                    invoiceType = 1;
+                }
+
+                OpticsTestCopyForm f = new OpticsTestCopyForm(fromId, pronoteHeaderId, invoiceType);
                 if (f.ShowDialog(this) == DialogResult.OK)
                 {
-                    this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId).OpticsTestId);
+                    this._OpticsTest = null;
+                    if (sourceInvoice == 0)
+                        this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.mGetLast(this._PCPGOnlineCheckDetailId).OpticsTestId);
+                    else if (sourceInvoice == 2)
+                        this._OpticsTest = this._OpticsTestManager.Get(this._OpticsTestManager.PFCGetLast(this._PCFirstOnlineCheckDetailId) == null ? "" : this._OpticsTestManager.PFCGetLast(this._PCFirstOnlineCheckDetailId).OpticsTestId);
+
                     if (this._OpticsTest != null)
                     {
                         this.action = "view";

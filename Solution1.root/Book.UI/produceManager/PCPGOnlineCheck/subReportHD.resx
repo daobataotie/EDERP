@@ -123,26 +123,26 @@
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrLine1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>127, 394.123322</value>
+    <value>25.0000076, 266.041748</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrLine1.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1776.74988, 13.2291565</value>
+    <value>1959.31238, 13.2291565</value>
   </data>
   <data name="subThicknessTestDetails.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="subThicknessTestDetails.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 267.229156</value>
+    <value>0, 187.854172</value>
   </data>
   <data name="subThicknessTestDetails.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1998.99988, 116.628387</value>
+    <value>1998.99988, 78.18758</value>
   </data>
   <data name="xrTable2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 203.729172</value>
+    <value>0, 124.354164</value>
   </data>
   <data name="xrTableCell15.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -236,16 +236,16 @@
     <value>254</value>
   </data>
   <data name="TCbeizhu.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>200.874969, 76.7291641</value>
+    <value>200.874969, 63.5</value>
   </data>
   <data name="TCbeizhu.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>1798.12488, 103.399178</value>
+    <value>1798.12488, 58.4200058</value>
   </data>
   <data name="xrLabel1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 76.7291641</value>
+    <value>0, 63.5</value>
   </data>
   <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>200.874939, 58.4200058</value>
@@ -260,7 +260,7 @@
     <value>254</value>
   </data>
   <data name="xrTable1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>0, 13.229167</value>
+    <value>0, 0</value>
   </data>
   <data name="xrTableCell5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -359,7 +359,7 @@
     <value>254</value>
   </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
-    <value>415.3959</value>
+    <value>279.2709</value>
   </data>
   <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
@@ -368,7 +368,7 @@
     <value>254</value>
   </data>
   <data name="TopMargin.HeightF" type="System.Single, mscorlib">
-    <value>80</value>
+    <value>79</value>
   </data>
   <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
@@ -377,7 +377,7 @@
     <value>254</value>
   </data>
   <data name="BottomMargin.HeightF" type="System.Single, mscorlib">
-    <value>80</value>
+    <value>79</value>
   </data>
   <data name="BottomMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>

@@ -35,6 +35,29 @@ namespace Book.DA
         IList<Model.ThicknessTest> SelectByDateRage(DateTime startdate, DateTime enddate, string PCPGOnlineCheckDetailId);
 
         bool ExistsManualId(string ThicknessTestId, string ManualId);
+
+
+        #region 适用于首件上线检查表
+
+        Model.ThicknessTest PFCGetFirst(string PCFirstOnlineCheckDetailId);
+
+        Model.ThicknessTest PFCGetLast(string PCFirstOnlineCheckDetailId);
+
+        Model.ThicknessTest PFCGetPrev(DateTime InsertDate, string PCFirstOnlineCheckDetailId);
+
+        Model.ThicknessTest PFCGetNext(DateTime InsertDate, string PCFirstOnlineCheckDetailId);
+
+        bool PFCHasRows(string PCFirstOnlineCheckDetailId);
+
+        bool PFCHasRowsBefore(Model.ThicknessTest e, string PCFirstOnlineCheckDetailId);
+
+        bool PFCHasRowsAfter(Model.ThicknessTest e, string PCFirstOnlineCheckDetailId);
+
+        IList<Model.ThicknessTest> PFCSelect(string PCFirstOnlineCheckDetailId);
+
+        IList<Model.ThicknessTest> PFCSelectByDateRage(DateTime startdate, DateTime enddate, string PCFirstOnlineCheckDetailId);
+
+        #endregion
     }
 }
 

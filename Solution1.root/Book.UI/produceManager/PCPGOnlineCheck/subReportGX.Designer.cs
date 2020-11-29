@@ -526,6 +526,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             // GroupHeader1
             // 
             resources.ApplyResources(this.GroupHeader1, "GroupHeader1");
+            this.GroupHeader1.Expanded = false;
             this.GroupHeader1.Name = "GroupHeader1";
             // 
             // subReportGX

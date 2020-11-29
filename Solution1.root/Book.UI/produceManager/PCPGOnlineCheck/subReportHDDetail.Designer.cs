@@ -28,6 +28,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(subReportHDDetail));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -53,25 +54,20 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
-            this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 63.49998F;
+            resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrTable2
             // 
             this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable2.Dpi = 254F;
-            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            resources.ApplyResources(this.xrTable2, "xrTable2");
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(1999F, 63.49998F);
             this.xrTable2.StylePriority.UseBorders = false;
             this.xrTable2.StylePriority.UseTextAlignment = false;
-            this.xrTable2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrTableRow2
             // 
@@ -89,116 +85,99 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.TCRight3,
             this.TCRight4,
             this.TCRight5});
-            this.xrTableRow2.Dpi = 254F;
+            resources.ApplyResources(this.xrTableRow2, "xrTableRow2");
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.Weight = 1;
             // 
             // TChdb
             // 
-            this.TChdb.Dpi = 254F;
+            resources.ApplyResources(this.TChdb, "TChdb");
             this.TChdb.Name = "TChdb";
-            this.TChdb.Text = " ";
             this.TChdb.Weight = 0.2311155642589095;
             // 
             // TCguankou
             // 
-            this.TCguankou.Dpi = 254F;
+            resources.ApplyResources(this.TCguankou, "TCguankou");
             this.TCguankou.Name = "TCguankou";
-            this.TCguankou.Text = " ";
             this.TCguankou.Weight = 0.2311155642589095;
             // 
             // TCgkfm
             // 
-            this.TCgkfm.Dpi = 254F;
+            resources.ApplyResources(this.TCgkfm, "TCgkfm");
             this.TCgkfm.Name = "TCgkfm";
-            this.TCgkfm.Text = " ";
             this.TCgkfm.Weight = 0.2311155642589095;
             // 
             // TCleft1
             // 
-            this.TCleft1.Dpi = 254F;
+            resources.ApplyResources(this.TCleft1, "TCleft1");
             this.TCleft1.Name = "TCleft1";
-            this.TCleft1.Text = " ";
             this.TCleft1.Weight = 0.2311155642589095;
             // 
             // TCleft2
             // 
-            this.TCleft2.Dpi = 254F;
+            resources.ApplyResources(this.TCleft2, "TCleft2");
             this.TCleft2.Name = "TCleft2";
-            this.TCleft2.Text = " ";
             this.TCleft2.Weight = 0.2311155642589095;
             // 
             // TCleft3
             // 
-            this.TCleft3.Dpi = 254F;
+            resources.ApplyResources(this.TCleft3, "TCleft3");
             this.TCleft3.Name = "TCleft3";
-            this.TCleft3.Text = " ";
             this.TCleft3.Weight = 0.2311155642589095;
             // 
             // TCleft4
             // 
-            this.TCleft4.Dpi = 254F;
+            resources.ApplyResources(this.TCleft4, "TCleft4");
             this.TCleft4.Name = "TCleft4";
-            this.TCleft4.Text = " ";
             this.TCleft4.Weight = 0.2311155642589095;
             // 
             // TCleft5
             // 
-            this.TCleft5.Dpi = 254F;
+            resources.ApplyResources(this.TCleft5, "TCleft5");
             this.TCleft5.Name = "TCleft5";
-            this.TCleft5.Text = " ";
             this.TCleft5.Weight = 0.2311155642589095;
             // 
             // TCRight1
             // 
-            this.TCRight1.Dpi = 254F;
+            resources.ApplyResources(this.TCRight1, "TCRight1");
             this.TCRight1.Name = "TCRight1";
-            this.TCRight1.Text = " ";
             this.TCRight1.Weight = 0.2311155871585443;
             // 
             // TCRight2
             // 
-            this.TCRight2.Dpi = 254F;
+            resources.ApplyResources(this.TCRight2, "TCRight2");
             this.TCRight2.Name = "TCRight2";
-            this.TCRight2.Text = " ";
             this.TCRight2.Weight = 0.2311155871585443;
             // 
             // TCRight3
             // 
-            this.TCRight3.Dpi = 254F;
+            resources.ApplyResources(this.TCRight3, "TCRight3");
             this.TCRight3.Name = "TCRight3";
-            this.TCRight3.Text = " ";
             this.TCRight3.Weight = 0.22961483669171234;
             // 
             // TCRight4
             // 
-            this.TCRight4.Dpi = 254F;
+            resources.ApplyResources(this.TCRight4, "TCRight4");
             this.TCRight4.Name = "TCRight4";
-            this.TCRight4.Text = " ";
             this.TCRight4.Weight = 0.22961482905850075;
             // 
             // TCRight5
             // 
-            this.TCRight5.Dpi = 254F;
+            resources.ApplyResources(this.TCRight5, "TCRight5");
             this.TCRight5.Name = "TCRight5";
-            this.TCRight5.Text = " ";
             this.TCRight5.Weight = 0.2296146458614223;
             // 
             // TopMargin
             // 
-            this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 80F;
+            resources.ApplyResources(this.TopMargin, "TopMargin");
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // BottomMargin
             // 
-            this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 80F;
+            resources.ApplyResources(this.BottomMargin, "BottomMargin");
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
-            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // subReportHDDetail
             // 
@@ -206,12 +185,10 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
             this.Detail,
             this.TopMargin,
             this.BottomMargin});
-            this.Dpi = 254F;
-            this.Margins = new System.Drawing.Printing.Margins(80, 80, 80, 80);
+            resources.ApplyResources(this, "$this");
+            this.Margins = new System.Drawing.Printing.Margins(80, 80, 0, 0);
             this.PageHeight = 2794;
             this.PageWidth = 2159;
-            this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
-            this.SnapGridSize = 31.75F;
             this.Version = "10.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

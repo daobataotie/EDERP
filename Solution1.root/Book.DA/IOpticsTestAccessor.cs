@@ -59,6 +59,26 @@ namespace Book.DA
         IList<Book.Model.OpticsTest> FSelectByDateRage(DateTime startdate, DateTime enddate, string PCFinishCheckId);
 
         IList<Model.OpticsTest> SelectByInvoiceCusXOId(string invoiceCusXOId);
+
+
+        //适用于首件上线检查表
+        Book.Model.OpticsTest PFCGetFirst(string PCPGOnlineCheckDetailId);
+
+        Book.Model.OpticsTest PFCGetLast(string PCPGOnlineCheckDetailId);
+
+        Book.Model.OpticsTest PFCGetPrev(DateTime InsertDate, string PCPGOnlineCheckDetailId);
+
+        Book.Model.OpticsTest PFCGetNext(DateTime InsertDate, string PCPGOnlineCheckDetailId);
+
+        bool PFCHasRows(string PCPGOnlineCheckDetailId);
+
+        bool PFCHasRowsBefore(Book.Model.OpticsTest e, string PCPGOnlineCheckDetailId);
+
+        bool PFCHasRowsAfter(Book.Model.OpticsTest e, string PCPGOnlineCheckDetailId);
+
+        IList<Book.Model.OpticsTest> PFCSelect(string PCPGOnlineCheckDetailId);
+
+        IList<Book.Model.OpticsTest> PFCSelectByDateRage(DateTime startdate, DateTime enddate, string PCPGOnlineCheckDetailId);
     }
 }
 

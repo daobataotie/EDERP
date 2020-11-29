@@ -46,6 +46,7 @@ namespace Book.UI.General
                     BL.SettingManager settingManager = new Book.BL.SettingManager();
                     IList<string> dbNames = settingManager.SelectDBName();
 
+                    //查找數據庫所有庫名，根據連接字符串篩選，顯示到下拉框中
                     foreach (var item in connections)
                     {
                         if (dbNames.Contains(item.InitialCatalog))

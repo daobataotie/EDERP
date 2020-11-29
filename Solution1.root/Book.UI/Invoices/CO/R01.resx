@@ -221,7 +221,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCellProductUnit.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleLeft</value>
+    <value>MiddleCenter</value>
   </data>
   <data name="xrTableCellQuantity.Dpi" type="System.Single, mscorlib">
     <value>254</value>
@@ -230,7 +230,7 @@
     <value>{0:c0}</value>
   </data>
   <data name="xrTableCellQuantity.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleRight</value>
+    <value>MiddleCenter</value>
   </data>
   <data name="xrTableCellUintPrice.Dpi" type="System.Single, mscorlib">
     <value>254</value>
