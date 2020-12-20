@@ -191,6 +191,7 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             this._produceOtherInDepot.ProduceTotal = Convert.ToDouble(this.txt_Total.Text == "" ? null : this.txt_Total.Text);
 
             this._produceOtherInDepot.PayDate = this.PayDate.EditValue == null ? DateTime.Now : this.PayDate.DateTime;
+            this._produceOtherInDepot.InvoiceTaxrate = (int)this.spe_InvoiceTaxrate.Value;
 
             Dictionary<string, string> dicSubject = new Dictionary<string, string>();
             //dicSubject.Add("進貨", null);
@@ -355,6 +356,7 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             this.textEditAuditState.Text = this.GetAuditName(this._produceOtherInDepot.AuditState);
 
             this.PayDate.EditValue = this._produceOtherInDepot.PayDate;
+            this.spe_InvoiceTaxrate.Value = this._produceOtherInDepot.InvoiceTaxrate;
 
             this.bindingSourceDetails.DataSource = this._produceOtherInDepot.Details;
 
@@ -635,17 +637,27 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                         this.gridView1.SetRowCellValue(e.RowHandle, this.gridColProcessPrice, price);
                     }
                 }
-
                 this.gridView1.SetRowCellValue(e.RowHandle, this.ColProduceMoney, price * quantity);
-                decimal d = 0;
-                foreach (Model.ProduceOtherInDepotDetail model in this._produceOtherInDepot.Details)
-                {
-                    d += Convert.ToDecimal(model.ProduceMoney);
-                }
-                this.txt_Sum.Text = d.ToString();
-                this.txt_Tax.Text = (Convert.ToDouble(d) * 0.05).ToString();
-                this.txt_Total.Text = (Convert.ToDouble(d) * (1.05)).ToString();
+
+                UpdateMoneyFields();
             }
+
+        }
+
+        private void UpdateMoneyFields()
+        {
+            double taxRate = (double)this.spe_InvoiceTaxrate.Value / 100;
+
+            decimal d = 0;
+            foreach (Model.ProduceOtherInDepotDetail model in this._produceOtherInDepot.Details)
+            {
+                d += Convert.ToDecimal(model.ProduceMoney);
+                model.ProduceTaxMoney = model.ProduceMoney * (decimal)taxRate;
+            }
+
+            this.txt_Sum.Text = d.ToString();
+            this.txt_Tax.Text = (Convert.ToDouble(d) * taxRate).ToString();
+            this.txt_Total.Text = (Convert.ToDouble(d) * (1 + taxRate)).ToString();
 
             this.gridControl1.RefreshDataSource();
         }
@@ -922,6 +934,12 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             this._produceOtherInDepot.Details = this.produceOtherInDepotDetailManager.Select(_produceOtherInDepot);
             this.bindingSourceDetails.DataSource = _produceOtherInDepot.Details;
             this.gridControl1.RefreshDataSource();
+        }
+
+        private void spe_InvoiceTaxrate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+                UpdateMoneyFields();
         }
     }
 }

@@ -157,6 +157,7 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.produceInDepot.TotalMoney = Convert.ToDecimal(this.txt_TotalMoney.Text == "" ? null : this.txt_TotalMoney.Text);
 
             this.produceInDepot.PayDate = this.PayDate.EditValue == null ? DateTime.Now : this.PayDate.DateTime;
+            this.produceInDepot.InvoiceTaxrate = (int)this.spe_InvoiceTaxrate.Value;
 
             switch (this.action)
             {
@@ -222,6 +223,7 @@ namespace Book.UI.produceManager.ProduceInDepot
             this.txt_TotalMoney.Text = this.produceInDepot.TotalMoney.ToString();
 
             this.PayDate.EditValue = this.produceInDepot.PayDate;
+            this.spe_InvoiceTaxrate.Value = this.produceInDepot.InvoiceTaxrate;
 
             this.bindingSourceDetails.DataSource = this.produceInDepot.Details;
             //this.SettingForINumber();
@@ -636,15 +638,17 @@ namespace Book.UI.produceManager.ProduceInDepot
                 detail.ProduceMoney = Convert.ToDecimal(detail.ProduceQuantity) * decimal.Parse(e.Value.ToString());
 
             }
-            decimal? d = 0;
-            foreach (Model.ProduceInDepotDetail model in produceInDepot.Details)
-            {
-                d += model.ProduceMoney == null ? 0 : model.ProduceMoney;
-            }
-            this.txt_AmountMoney.Text = d.Value.ToString("f2");
-            this.txt_Tax.Text = (d * Convert.ToDecimal(0.05)).Value.ToString("f2");
-            this.txt_TotalMoney.Text = (d + d * Convert.ToDecimal(0.05)).Value.ToString("f2");
-            this.gridControl1.RefreshDataSource();
+            //decimal? d = 0;
+            //foreach (Model.ProduceInDepotDetail model in produceInDepot.Details)
+            //{
+            //    d += model.ProduceMoney == null ? 0 : model.ProduceMoney;
+            //}
+            //this.txt_AmountMoney.Text = d.Value.ToString("f2");
+            //this.txt_Tax.Text = (d * Convert.ToDecimal(0.05)).Value.ToString("f2");
+            //this.txt_TotalMoney.Text = (d + d * Convert.ToDecimal(0.05)).Value.ToString("f2");
+            //this.gridControl1.RefreshDataSource();
+
+            UpdateMoneyFields();
         }
 
         private void gridView1_ShowingEditor(object sender, CancelEventArgs e)
@@ -1311,14 +1315,6 @@ namespace Book.UI.produceManager.ProduceInDepot
 
         private void gridView1_RowCountChanged(object sender, EventArgs e)
         {
-            decimal? d = 0;
-            foreach (Model.ProduceInDepotDetail model in produceInDepot.Details)
-            {
-                d += model.ProduceMoney == null ? 0 : model.ProduceMoney;
-            }
-            this.txt_AmountMoney.Text = d.Value.ToString("f2");
-            this.txt_Tax.Text = (d * Convert.ToDecimal(0.05)).Value.ToString("f2");
-            this.txt_TotalMoney.Text = (d + d * Convert.ToDecimal(0.05)).Value.ToString("f2");
         }
 
         private void repositoryItemLookUpEdit7_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -1349,6 +1345,31 @@ namespace Book.UI.produceManager.ProduceInDepot
                 this.gridControl1.RefreshDataSource();
             }
         }
+
+        private void spe_InvoiceTaxrate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+                UpdateMoneyFields();
+        }
+
+        private void UpdateMoneyFields()
+        {
+            double taxRate = (double)this.spe_InvoiceTaxrate.Value / 100;
+
+            decimal? d = 0;
+            foreach (Model.ProduceInDepotDetail model in this.produceInDepot.Details)
+            {
+                d += model.ProduceMoney == null ? 0 : model.ProduceMoney;
+                model.ProduceTaxMoney = model.ProduceMoney * (decimal)taxRate;
+            }
+
+            this.txt_AmountMoney.Text = d.Value.ToString("f2");
+            this.txt_Tax.Text = (d * Convert.ToDecimal(taxRate)).Value.ToString("f2");
+            this.txt_TotalMoney.Text = (d + d * Convert.ToDecimal(taxRate)).Value.ToString("f2");
+
+            this.gridControl1.RefreshDataSource();
+        }
+
     }
 }
 

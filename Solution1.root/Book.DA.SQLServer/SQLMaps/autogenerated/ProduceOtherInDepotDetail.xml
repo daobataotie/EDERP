@@ -28,6 +28,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="InvoiceCusId" column="InvoiceCusId" />
       <result property="ProduceOtherCompactId" column="ProduceOtherCompactId" />
       <result property="GenerateInputCheck" column="GenerateInputCheck"/>
+      <result property="ProduceTaxMoney" column="ProduceTaxMoney"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="PrimaryKey" column="PrimaryKeyId" lazyLoad="false" select="CustomerProducts.select_by_primary_key" />
       <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />
@@ -83,7 +84,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[CustomerId],
 				[InvoiceCusId],
 				[ProduceOtherCompactId],
-        [GenerateInputCheck]
+        [GenerateInputCheck],
+        [ProduceTaxMoney]
 			FROM
 				[dbo].[ProduceOtherInDepotDetail]
 			WHERE
@@ -158,7 +160,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[CustomerId],
 				[InvoiceCusId],
 				[ProduceOtherCompactId],
-        [GenerateInputCheck]
+        [GenerateInputCheck],
+        [ProduceTaxMoney]
 			) 
 			VALUES 
 			(
@@ -183,7 +186,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				#CustomerId#,
 				#InvoiceCusId#,
 				#ProduceOtherCompactId#,
-        #GenerateInputCheck#
+        #GenerateInputCheck#,
+        #ProduceTaxMoney#
 			)
              ]]>
     </insert>
@@ -211,7 +215,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 				[CustomerId] = #CustomerId#,
 				[InvoiceCusId] = #InvoiceCusId#,
 				[ProduceOtherCompactId] = #ProduceOtherCompactId#,
-        [GenerateInputCheck]=#GenerateInputCheck#
+        [GenerateInputCheck]=#GenerateInputCheck#,
+        [ProduceTaxMoney]=#ProduceTaxMoney#
 			WHERE
 				[ProduceOtherInDepotDetailId] = #ProduceOtherInDepotDetailId#
                     ]]>

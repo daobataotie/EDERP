@@ -11,7 +11,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 {
     public partial class OpticsTestCopyForm : DevExpress.XtraEditors.XtraForm
     {
-        BL.PCPGOnlineCheckDetailManager pCPGOnlineCheckDetailManager = new Book.BL.PCPGOnlineCheckDetailManager();
+        //BL.PCPGOnlineCheckDetailManager pCPGOnlineCheckDetailManager = new Book.BL.PCPGOnlineCheckDetailManager();
         BL.OpticsTestManager opticsTestManager = new Book.BL.OpticsTestManager();
         string _pCPGOnlineCheckDetailId;
         string _pCFirstOnlineCheckDetailId;
@@ -40,8 +40,9 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
                 this._pCFirstOnlineCheckDetailId = fromId;
 
             DataTable dt = new DataTable();
-            dt = pCPGOnlineCheckDetailManager.SelectOpticsTestByFromInvoiceId(pronoteHeaderId);
+            //dt = pCPGOnlineCheckDetailManager.SelectOpticsTestByFromInvoiceId(pronoteHeaderId);  //老版，只支持光学/厚度表
 
+            dt = opticsTestManager.SelectByPronoteHeaderId(pronoteHeaderId);
 
             if (dt.Rows.Count > 0)
             {
@@ -62,7 +63,7 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
                 {
                     IList<Model.OpticsTest> otList = null;
 
-                    if (this._invoiceType == 0)
+                    if (dr["InvoiceType"].ToString() == "0")
                         otList = opticsTestManager.mSelect(dr["DetailId"].ToString());
                     else
                         otList = opticsTestManager.PFCSelect(dr["DetailId"].ToString());

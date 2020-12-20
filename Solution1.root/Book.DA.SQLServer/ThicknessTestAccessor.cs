@@ -19,6 +19,17 @@ namespace Book.DA.SQLServer
     /// </summary>
     public partial class ThicknessTestAccessor : EntityAccessor, IThicknessTestAccessor
     {
+        public DataTable SelectByPronoteHeaderId(string pronoteHeaderId)
+        {
+            string sql = "select * from (select '0' as InvoiceType,pcd.FromInvoiceId as PronoteHeaderId,pcd.PCPGOnlineCheckId  as HeaderId,pcd.PCPGOnlineCheckDetailId  as DetailId,PCPGOnlineCheckDetailDate  as CheckDate,b.BusinessHoursName,(select Count(*) from ThicknessTest where PCPGOnlineCheckDetailId=pcd.PCPGOnlineCheckDetailId) as TTCount from PCPGOnlineCheckDetail pcd left join PCPGOnlineCheck pc on pcd.PCPGOnlineCheckId=pc.PCPGOnlineCheckId left join BusinessHours b on b.BusinessHoursId=pc.BusinessHoursId where pcd.FromInvoiceId='" + pronoteHeaderId + "' union select '1' as InvoiceType,pf.PronoteHeaderId,pf.PCFirstOnlineCheckId as HeaderId,pfd.PCFirstOnlineCheckDetailId as DetailId,pfd.CheckDate,b.BusinessHoursName,(select COUNT(*) from ThicknessTest where PCFirstOnlineCheckDetailId=pfd.PCFirstOnlineCheckDetailId) as TTCount from PCFirstOnlineCheckDetail pfd left join PCFirstOnlineCheck pf on pfd.PCFirstOnlineCheckId=pf.PCFirstOnlineCheckId left join BusinessHours b on b.BusinessHoursId=pfd.BusinessHoursId where pf.PronoteHeaderId='" + pronoteHeaderId + "') a where a.TTCount>0";
+
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            return dt;
+        }
+
         public Book.Model.ThicknessTest mGetFirst(string PCPGOnlineCheckDetailId)
         {
             return sqlmapper.QueryForObject<Model.ThicknessTest>("ThicknessTest.mGetFirst", PCPGOnlineCheckDetailId);

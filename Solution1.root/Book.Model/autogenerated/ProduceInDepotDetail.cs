@@ -344,6 +344,8 @@ namespace Book.Model
         /// </summary>
         private double? _mBowen;
 
+        private decimal? _produceTaxMoney;
+
         /// <summary>
         /// 库库货位
         /// </summary>
@@ -1332,6 +1334,15 @@ namespace Book.Model
         }
 
         /// <summary>
+        /// 稅額
+        /// </summary>
+        public decimal? ProduceTaxMoney
+        {
+            get { return _produceTaxMoney; }
+            set { _produceTaxMoney = value; }
+        }
+
+        /// <summary>
         /// 库库货位
         /// </summary>
         public virtual DepotPosition DepotPosition
@@ -1720,6 +1731,8 @@ namespace Book.Model
         /// 波纹
         /// </summary>
         public readonly static string PRO_mBowen = "mBowen";
+
+        public readonly static string PRO_ProduceTaxMoney = "ProduceTaxMoney";
 
         #endregion
     }

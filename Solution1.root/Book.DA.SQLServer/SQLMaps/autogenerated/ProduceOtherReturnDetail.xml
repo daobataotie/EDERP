@@ -17,6 +17,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="ProduceOtherCompactDetailId" column="ProduceOtherCompactDetailId" />
       <result property="Price" column="Price"/>
       <result property="Amount" column="Amount"/>
+      <result property="ProduceTaxMoney" column="ProduceTaxMoney"/>
       <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />
       <result property="ProduceOtherReturnMaterial" column="ProduceOtherReturnMaterialId" lazyLoad="false" select="ProduceOtherReturnMaterial.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
@@ -56,7 +57,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [ProduceOtherCompactId],
       [ProduceOtherCompactDetailId],
       [Price],
-      [Amount]
+      [Amount],
+      [ProduceTaxMoney]
       FROM
       [dbo].[ProduceOtherReturnDetail]
       WHERE
@@ -111,7 +113,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [ProduceOtherCompactId],
       [ProduceOtherCompactDetailId],
       [Price],
-      [Amount]
+      [Amount],
+      [ProduceTaxMoney]
       )
       VALUES
       (
@@ -125,7 +128,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #ProduceOtherCompactId#,
       #ProduceOtherCompactDetailId#,
       #Price#,
-      #Amount#
+      #Amount#,
+      #ProduceTaxMoney#
       )
     </insert>
 
@@ -141,7 +145,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [ProduceOtherCompactId] = #ProduceOtherCompactId#,
       [ProduceOtherCompactDetailId] = #ProduceOtherCompactDetailId#,
       [Price]=#Price#,
-      [Amount]=#Amount#
+      [Amount]=#Amount#,
+      [ProduceTaxMoney]=#ProduceTaxMoney#
       WHERE
       [ProduceOtherReturnDetailId] = #ProduceOtherReturnDetailId#
     </update>

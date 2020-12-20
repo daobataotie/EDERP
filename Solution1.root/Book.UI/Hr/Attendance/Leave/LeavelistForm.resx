@@ -120,6 +120,21 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
   </metadata>
+  <data name="barBtnDelbyCondition.Caption" xml:space="preserve">
+    <value>条件删除</value>
+  </data>
+  <data name="barBtnSearchBetweenDate.Caption" xml:space="preserve">
+    <value>该员工日期区间查询</value>
+  </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>所有员工查询</value>
+  </data>
+  <data name="barButtonItem2.Caption" xml:space="preserve">
+    <value>年度請假彙總</value>
+  </data>
+  <data name="bar_ExportExcel.Caption" xml:space="preserve">
+    <value>導出Excel</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -954,24 +969,9 @@
   <data name="barBtnListPrint.Caption" xml:space="preserve">
     <value>列印休假记录</value>
   </data>
-  <data name="barBtnDelbyCondition.Caption" xml:space="preserve">
-    <value>条件删除</value>
-  </data>
   <metadata name="bs_Department.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>746, 17</value>
   </metadata>
-  <data name="barBtnSearchBetweenDate.Caption" xml:space="preserve">
-    <value>该员工日期区间查询</value>
-  </data>
-  <data name="barButtonItem1.Caption" xml:space="preserve">
-    <value>所有员工查询</value>
-  </data>
-  <data name="barButtonItem2.Caption" xml:space="preserve">
-    <value>年度請假彙總</value>
-  </data>
-  <data name="bar_ExportExcel.Caption" xml:space="preserve">
-    <value>導出Excel</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

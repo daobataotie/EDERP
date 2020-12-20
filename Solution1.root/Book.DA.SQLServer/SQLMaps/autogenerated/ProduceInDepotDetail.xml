@@ -72,6 +72,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="mPinguanqita" column="mPinguanqita"/>
       <result property="mPodong" column="mPodong"/>
       <result property="mBowen" column="mBowen"/>
+      <result property="ProduceTaxMoney" column="ProduceTaxMoney"/>
       <result property="DepotPosition" column="DepotPositionId" lazyLoad="false" select="DepotPosition.select_by_primary_key" />
       <result property="Procedures" column="ProceduresId" lazyLoad="false" select="Procedures.select_by_primary_key" />
       <result property="ProduceInDepot" column="ProduceInDepotId" lazyLoad="false" select="ProduceInDepot.select_by_primary_key" />
@@ -170,7 +171,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [mPinjianqita],
         [mPinguanqita],
         [mPodong],
-        [mBowen]
+        [mBowen],
+        [ProduceTaxMoney]
 			FROM
 				[dbo].[ProduceInDepotDetail]
 			WHERE
@@ -289,7 +291,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [mPinjianqita],
         [mPinguanqita],
         [mPodong],
-        [mBowen]
+        [mBowen],
+        [ProduceTaxMoney]
 			) 
 			VALUES 
 			(
@@ -358,7 +361,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #mPinjianqita#,
         #mPinguanqita#,
         #mPodong#,
-        #mBowen#
+        #mBowen#,
+        #ProduceTaxMoney#
 			)
              ]]>
     </insert>
@@ -430,7 +434,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [mPinjianqita]=#mPinjianqita#,
         [mPinguanqita]=#mPinguanqita#,
         [mPodong]=#mPodong#,
-        [mBowen]=#mBowen#
+        [mBowen]=#mBowen#,
+        [ProduceTaxMoney]=#ProduceTaxMoney#
 			WHERE
 				[ProduceInDepotDetailId] = #ProduceInDepotDetailId#
                     ]]>

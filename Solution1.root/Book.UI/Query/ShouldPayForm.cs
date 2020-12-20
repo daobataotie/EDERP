@@ -339,10 +339,11 @@ namespace Book.UI.Query
                 throw new Helper.MessageValueException("會計傳票借貸金額須相等,借貸數據不完整");
             }
 
-            if (atSummon.Details.Any(a => this.subjectList.First(s => s.SubjectId == a.SubjectId).SubjectName.Contains("銀行存款")) && atSummon.Details.Any(a => this.subjectList.First(s => s.SubjectId == a.SubjectId).SubjectName.Contains("應付票據")))
-            {
-                throw new Helper.MessageValueException("會計傳票中應付票據和銀行存款不可同時存在");
-            }
+            //亦达会计换人，这块来回变，现在取消校验
+            //if (atSummon.Details.Any(a => this.subjectList.First(s => s.SubjectId == a.SubjectId).SubjectName.Contains("銀行存款")) && atSummon.Details.Any(a => this.subjectList.First(s => s.SubjectId == a.SubjectId).SubjectName.Contains("應付票據")))
+            //{
+            //    throw new Helper.MessageValueException("會計傳票中應付票據和銀行存款不可同時存在");
+            //}
 
             foreach (var item in atSummon.Details)
             {
@@ -792,27 +793,29 @@ namespace Book.UI.Query
                     mdetail.Subject = this.subjectList.First(s => s.SubjectId == mdetail.SubjectId); //atAccountSubjectManager.Get(mdetail.SubjectId);
             }
 
-
+            //亦达会计换人，这块来回变，现在取消校验，银行存款和支票可以同时存在
             //傳票選取”xxxxx銀行存款”  則必定沒有支票資料  可是現金日期(必填)  此現金日期 為傳票日期
             if (atDetails.Any(a => !string.IsNullOrEmpty(a.SubjectId) && this.subjectList.First(s => s.SubjectId == a.SubjectId).SubjectName.Contains("銀行存款")))
             {
-                this.btn_YFAdd.Enabled = false;
-                this.atBillsIncomeList.Clear();
-                this.spe_PMTotal.Value = 0;
-                this.gridControl3.RefreshDataSource();
+                //this.btn_YFAdd.Enabled = false;
 
-                if (this.atSummon2 != null)
-                {
-                    this.atSummon2.Details.Clear();
-                    this.bindingSourceAtSummonDetail1.DataSource = this.atSummon2.Details;
-                    this.gridControl4.RefreshDataSource();
-                }
+                //this.atBillsIncomeList.Clear();
+                //this.spe_PMTotal.Value = 0;
+                //this.gridControl3.RefreshDataSource();
+
+                //if (this.atSummon2 != null)
+                //{
+                //    this.atSummon2.Details.Clear();
+                //    this.bindingSourceAtSummonDetail1.DataSource = this.atSummon2.Details;
+                //    this.gridControl4.RefreshDataSource();
+                //}
 
                 isNeedBills = false;
             }
             else
             {
-                this.btn_YFAdd.Enabled = true;
+                //this.btn_YFAdd.Enabled = true;
+
                 isNeedBills = true;
             }
         }

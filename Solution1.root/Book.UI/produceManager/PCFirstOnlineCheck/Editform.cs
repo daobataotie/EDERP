@@ -431,6 +431,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             if (d != null)
             {
                 ThicknessTest f = new ThicknessTest(d.PCFirstOnlineCheckDetailId, 1);
+                f.PronoteHeaderId = this.txt_PronoteHeaderId.Text;
                 f.ShowDialog();
             }
         }

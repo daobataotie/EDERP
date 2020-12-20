@@ -99,6 +99,8 @@ namespace Book.Model
         /// </summary>
         private double? _ProduceTotal;
 
+        private int _invoiceTaxrate;
+
         /// <summary>
         /// 付款日期
         /// </summary>
@@ -371,6 +373,15 @@ namespace Book.Model
         }
 
         /// <summary>
+        /// 稅率
+        /// </summary>
+        public int InvoiceTaxrate
+        {
+            get { return _invoiceTaxrate; }
+            set { _invoiceTaxrate = value; }
+        }
+
+        /// <summary>
         /// 付款日期
         /// </summary>
         public DateTime? PayDate
@@ -581,6 +592,8 @@ namespace Book.Model
         /// 付款日期
         /// </summary>
         public readonly static string PRO_PayDate = "PayDate";
+
+        public readonly static string PRO_InvoiceTaxrate = "InvoiceTaxrate";
         #endregion
     }
 }

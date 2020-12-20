@@ -22,6 +22,8 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
         /// </summary>
         int sourceInvoice = 0;
 
+        public string PronoteHeaderId { get; set; }
+
         public ThicknessTest()
         {
             InitializeComponent();
@@ -312,18 +314,38 @@ namespace Book.UI.produceManager.PCPGOnlineCheck
 
         private void bar_Copy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (string.IsNullOrEmpty(this._PCPGOnlineCheckDetailId))
-            {
-                MessageBox.Show("複製功能只適用於\"光學/厚度表\"！", "提示", MessageBoxButtons.OK);
-                return;
-            }
+            //if (string.IsNullOrEmpty(this._PCPGOnlineCheckDetailId))
+            //{
+            //    MessageBox.Show("複製功能只適用於\"光學/厚度表\"！", "提示", MessageBoxButtons.OK);
+            //    return;
+            //}
 
             try
             {
-                ThicknessTestCopyForm f = new ThicknessTestCopyForm(this._pCPGOnlineCheckDetail);
+                //ThicknessTestCopyForm f = new ThicknessTestCopyForm(this._pCPGOnlineCheckDetail);
+
+                string fromId = string.Empty;
+                string pronoteHeaderId = string.Empty;
+                if (sourceInvoice == 0)
+                {
+                    fromId = _PCPGOnlineCheckDetailId;
+                    pronoteHeaderId = this._pCPGOnlineCheckDetail.FromInvoiceId;
+                }
+                else if (sourceInvoice == 1)
+                {
+                    fromId = _PCFirstOnlineCheckDetailId;
+                    pronoteHeaderId = this.PronoteHeaderId;
+                }
+
+                ThicknessTestCopyForm f = new ThicknessTestCopyForm(fromId, pronoteHeaderId, sourceInvoice);
                 if (f.ShowDialog(this) == DialogResult.OK)
                 {
-                    this._ThicknessTest = this._ThicknessTestManager.Get(this._ThicknessTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._ThicknessTestManager.mGetLast(this._PCPGOnlineCheckDetailId).ThicknessTestId);
+                    this._ThicknessTest = null;
+                    if (sourceInvoice == 0)
+                        this._ThicknessTest = this._ThicknessTestManager.Get(this._ThicknessTestManager.mGetLast(this._PCPGOnlineCheckDetailId) == null ? "" : this._ThicknessTestManager.mGetLast(this._PCPGOnlineCheckDetailId).ThicknessTestId);
+                    else if (sourceInvoice == 1)
+                        this._ThicknessTest = this._ThicknessTestManager.Get(this._ThicknessTestManager.PFCGetLast(this._PCFirstOnlineCheckDetailId) == null ? "" : this._ThicknessTestManager.PFCGetLast(this._PCFirstOnlineCheckDetailId).ThicknessTestId);
+
                     if (this._ThicknessTest != null)
                     {
                         this.action = "view";

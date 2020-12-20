@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -115,6 +116,13 @@ namespace Book.BL
         {
             return accessor.SelectByDateRage(startdate, enddate, PCPGOnlineCheckDetailId);
         }
+
+
+        public DataTable SelectByPronoteHeaderId(string pronoteHeaderId)
+        {
+            return accessor.SelectByPronoteHeaderId(pronoteHeaderId);
+        }
+
 
         #region 分类构建
 

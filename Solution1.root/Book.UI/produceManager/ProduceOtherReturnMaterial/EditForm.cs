@@ -120,7 +120,8 @@ namespace Book.UI.produceManager.ProduceOtherReturnMaterial
             this._produceOtherReturnMaterial.Tax = Convert.ToDecimal(this.txt_Tax.Text == "" ? null : this.txt_Tax.Text);
             this._produceOtherReturnMaterial.TotalMoney = Convert.ToDecimal(this.txt_TotalMoney.Text == "" ? null : this.txt_TotalMoney.Text);
             this._produceOtherReturnMaterial.PayDate = this.PayDate.EditValue == null ? DateTime.Now : this.PayDate.DateTime;
-            this._produceOtherReturnMaterial.PayDate = null;
+            this._produceOtherReturnMaterial.InvoiceTaxrate = (int)spe_InvoiceTaxrate.Value;
+
             if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
                 return;
 
@@ -163,6 +164,8 @@ namespace Book.UI.produceManager.ProduceOtherReturnMaterial
             this.txt_Tax.Text = this._produceOtherReturnMaterial.Tax.ToString();
             this.txt_TotalMoney.Text = this._produceOtherReturnMaterial.TotalMoney.ToString();
             this.PayDate.EditValue = this._produceOtherReturnMaterial.PayDate;
+            this.spe_InvoiceTaxrate.Value = this._produceOtherReturnMaterial.InvoiceTaxrate;
+
             this.bindingSourceProduceOtherReturnDetail.DataSource = this._produceOtherReturnMaterial.Details;
             base.Refresh();
             switch (this.action)
@@ -414,15 +417,41 @@ namespace Book.UI.produceManager.ProduceOtherReturnMaterial
             if (e.Column == this.gridColumn1)
                 this.gridView1.SetRowCellValue(e.RowHandle, this.gridColumn6, Convert.ToDouble(this.gridView1.GetRowCellValue(e.RowHandle, this.gridColumn1)) * Convert.ToDouble(this.gridView1.GetRowCellValue(e.RowHandle, this.gridColumn4)));
 
+            //decimal? d = 0;
+            //foreach (Model.ProduceOtherReturnDetail detail in this._produceOtherReturnMaterial.Details)
+            //{
+            //    d += detail.Amount;
+            //}
+
+            //this.txt_AmountMoney.Text = d.ToString();
+            //this.txt_Tax.Text = (Convert.ToDouble(d) * 0.05).ToString();
+            //this.txt_TotalMoney.Text = (Convert.ToDouble(d) * 0.05 + Convert.ToDouble(d)).ToString();
+
+            UpdateMoneyFields();
+        }
+
+        private void spe_InvoiceTaxrate_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.action != "view")
+                UpdateMoneyFields();
+        }
+
+        private void UpdateMoneyFields()
+        {
+            double taxRate = (double)this.spe_InvoiceTaxrate.Value / 100;
+
             decimal? d = 0;
             foreach (Model.ProduceOtherReturnDetail detail in this._produceOtherReturnMaterial.Details)
             {
-                d += detail.Amount;
+                d += detail.Amount == null ? 0 : detail.Amount;
+                detail.ProduceTaxMoney = detail.Amount * (decimal)taxRate;
             }
 
-            this.txt_AmountMoney.Text = d.ToString();
-            this.txt_Tax.Text = (Convert.ToDouble(d) * 0.05).ToString();
-            this.txt_TotalMoney.Text = (Convert.ToDouble(d) * 0.05 + Convert.ToDouble(d)).ToString();
+            this.txt_AmountMoney.Text = d.Value.ToString("f2");
+            this.txt_Tax.Text = (d * Convert.ToDecimal(taxRate)).Value.ToString("f2");
+            this.txt_TotalMoney.Text = (d + d * Convert.ToDecimal(taxRate)).Value.ToString("f2");
+
+            this.gridControl1.RefreshDataSource();
         }
     }
 }

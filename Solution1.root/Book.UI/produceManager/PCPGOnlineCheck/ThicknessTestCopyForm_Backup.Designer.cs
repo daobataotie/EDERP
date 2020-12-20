@@ -1,6 +1,6 @@
 ﻿namespace Book.UI.produceManager.PCPGOnlineCheck
 {
-    partial class ThicknessTestCopyForm
+    partial class ThicknessTestCopyForm_Backup
     {
         /// <summary>
         /// Required designer variable.
@@ -90,8 +90,8 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "加工單號";
-            this.gridColumn1.FieldName = "PronoteHeaderId";
+            this.gridColumn1.Caption = "訂單編號";
+            this.gridColumn1.FieldName = "FromInvoiceId";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
@@ -100,8 +100,8 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "來源單據號";
-            this.gridColumn2.FieldName = "HeaderId";
+            this.gridColumn2.Caption = "光學/厚度表";
+            this.gridColumn2.FieldName = "PCPGOnlineCheckId";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
@@ -110,10 +110,10 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "測試日期";
+            this.gridColumn3.Caption = "日期";
             this.gridColumn3.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn3.FieldName = "CheckDate";
+            this.gridColumn3.FieldName = "PCPGOnlineCheckDetailDate";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;

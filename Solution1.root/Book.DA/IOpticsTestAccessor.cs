@@ -8,6 +8,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.DA
 {
@@ -16,6 +17,8 @@ namespace Book.DA
     /// </summary>
     public partial interface IOpticsTestAccessor : IAccessor
     {
+        DataTable SelectByPronoteHeaderId(string pronoteHeaderId);
+
         Model.OpticsTest mGetFirst(string PCPGOnlineCheckDetailId);
 
         Model.OpticsTest mGetLast(string PCPGOnlineCheckDetailId);

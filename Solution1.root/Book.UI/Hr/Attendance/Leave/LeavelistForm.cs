@@ -53,10 +53,18 @@ namespace Book.UI.Hr.Attendance.Leave
             this.bindingSourcetype.DataSource = this.leaveTypeM.SelectByPriority();
             this.repositoryItemLookUpEdit1.DataSource = this.deprtmentManger.Select();
 
-            //默认加上本年与前一年
-            this.dateedit.Properties.Items.Add(System.DateTime.Now.ToString("yyyy年"));
-            this.dateedit.Properties.Items.Add(System.DateTime.Now.AddYears(-1).ToString("yyyy年"));
-            this.dateedit.SelectedIndex = 0;
+            //默认加上本年与前一年，现改为前十年加后一年
+            //this.dateedit.Properties.Items.Add(System.DateTime.Now.ToString("yyyy年"));
+            //this.dateedit.Properties.Items.Add(System.DateTime.Now.AddYears(-1).ToString("yyyy年"));
+            //this.dateedit.SelectedIndex = 0;
+
+            this.dateedit.Properties.Items.Add(System.DateTime.Now.AddYears(1).ToString("yyyy年"));
+            for (int i = 0; i < 10; i++)
+            {
+                this.dateedit.Properties.Items.Add(System.DateTime.Now.AddYears(-i).ToString("yyyy年"));
+            }
+            this.dateedit.SelectedIndex = 1;
+
 
             //  this._employee = this.bindingSource1.Current as Model.Employee;
             // this.gridView1.GroupPanelText = dateedit.Text + _employee.EmployeeName + Properties.Resources.YearLeaveManager;

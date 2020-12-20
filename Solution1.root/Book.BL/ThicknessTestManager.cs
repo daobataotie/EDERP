@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -170,6 +171,12 @@ namespace Book.BL
                 this.Delete(d.ThicknessTestId);
             }
         }
+
+        public DataTable SelectByPronoteHeaderId(string pronoteHeaderId)
+        {
+            return accessor.SelectByPronoteHeaderId(pronoteHeaderId);
+        }
+
 
         #region 分类构建
         public Model.ThicknessTest mGetFirst(string PCPGOnlineCheckDetailId)

@@ -69,6 +69,8 @@ namespace Book.Model
         /// </summary>
         private decimal? _Amount;
 
+        private decimal? _produceTaxMoney;
+
         /// <summary>
         /// 库库货位
         /// </summary>
@@ -240,6 +242,15 @@ namespace Book.Model
         }
 
         /// <summary>
+        /// 稅額
+        /// </summary>
+        public decimal? ProduceTaxMoney
+        {
+            get { return _produceTaxMoney; }
+            set { _produceTaxMoney = value; }
+        }
+
+        /// <summary>
         /// 库库货位
         /// </summary>
         public virtual DepotPosition DepotPosition
@@ -331,7 +342,9 @@ namespace Book.Model
 
         public readonly static string PRO_Price = "Price";
 
-        private readonly static string PRO_Amount = "Amount";
+        public readonly static string PRO_Amount = "Amount";
+
+        public readonly static string PRO_ProduceTaxMoney = "ProduceTaxMoney";
 
         #endregion
     }

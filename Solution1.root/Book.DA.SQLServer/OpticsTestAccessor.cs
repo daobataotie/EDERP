@@ -19,6 +19,23 @@ namespace Book.DA.SQLServer
     /// </summary>
     public partial class OpticsTestAccessor : EntityAccessor, IOpticsTestAccessor
     {
+
+        public IList<Model.OpticsTest> SelectByInvoiceCusXOId(string invoiceCusXOId)
+        {
+            return sqlmapper.QueryForList<Model.OpticsTest>("OpticsTest.SelectByInvoiceCusXOId", invoiceCusXOId);
+        }
+
+        public DataTable SelectByPronoteHeaderId(string pronoteHeaderId)
+        {
+            string sql = "select * from (select '0' as InvoiceType,pcd.FromInvoiceId as PronoteHeaderId,pcd.PCPGOnlineCheckId as HeaderId,pcd.PCPGOnlineCheckDetailId as DetailId,PCPGOnlineCheckDetailDate as CheckDate,b.BusinessHoursName,(select Count(*) from OpticsTest where PCPGOnlineCheckDetailId=pcd.PCPGOnlineCheckDetailId) as OTCount from PCPGOnlineCheckDetail pcd left join PCPGOnlineCheck pc on pcd.PCPGOnlineCheckId=pc.PCPGOnlineCheckId left join BusinessHours b on b.BusinessHoursId=pc.BusinessHoursId where pcd.FromInvoiceId='" + pronoteHeaderId + "' union select '1' as InvoiceType,pf.PronoteHeaderId,pf.PCFirstOnlineCheckId as HeaderId,pfd.PCFirstOnlineCheckDetailId as DetailId,pfd.CheckDate,b.BusinessHoursName,(select COUNT(*) from OpticsTest where PCFirstOnlineCheckDetailId=pfd.PCFirstOnlineCheckDetailId) as OTCount from PCFirstOnlineCheckDetail pfd left join PCFirstOnlineCheck pf on pfd.PCFirstOnlineCheckId=pf.PCFirstOnlineCheckId left join BusinessHours b on b.BusinessHoursId=pfd.BusinessHoursId where pf.PronoteHeaderId='" + pronoteHeaderId + "') a where a.OTCount>0";
+
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlmapper.DataSource.ConnectionString);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            return dt;
+        }
+
         public Book.Model.OpticsTest mGetFirst(string PCPGOnlineCheckDetailId)
         {
             return sqlmapper.QueryForObject<Model.OpticsTest>("OpticsTest.mGetFirst", PCPGOnlineCheckDetailId);
@@ -158,14 +175,9 @@ namespace Book.DA.SQLServer
             ht.Add("PCFinishCheckId", PCFinishCheckId);
 
             return sqlmapper.QueryForList<Model.OpticsTest>("OpticsTest.FSelectByDateRage", ht);
-        } 
-	#endregion
-
-
-        public IList<Model.OpticsTest> SelectByInvoiceCusXOId(string invoiceCusXOId)
-        {
-            return sqlmapper.QueryForList<Model.OpticsTest>("OpticsTest.SelectByInvoiceCusXOId", invoiceCusXOId);
         }
+        #endregion
+
 
         #region 适用于首件上线检查表
 
@@ -231,5 +243,7 @@ namespace Book.DA.SQLServer
             return sqlmapper.QueryForList<Model.OpticsTest>("OpticsTest.PFCSelectByDateRage", ht);
         }
         #endregion
+
+
     }
 }

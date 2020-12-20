@@ -435,7 +435,32 @@
         PiydRVvthbEShq0tdS1YP1XNB1WKv8rxjMwZjD8BORXH707ETOoAAAAASUVORK5CYIIL
 </value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="spe_InvoiceTaxrate.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="spe_InvoiceTaxrate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>739, 322</value>
+  </data>
+  <data name="spe_InvoiceTaxrate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 21</value>
+  </data>
+  <data name="spe_InvoiceTaxrate.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;spe_InvoiceTaxrate.Name" xml:space="preserve">
+    <value>spe_InvoiceTaxrate</value>
+  </data>
+  <data name="&gt;&gt;spe_InvoiceTaxrate.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spe_InvoiceTaxrate.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;spe_InvoiceTaxrate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="PayDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>766, 12</value>
   </data>
@@ -445,7 +470,6 @@
   <data name="PayDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PayDate.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
@@ -459,13 +483,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;PayDate.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="txt_Tax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>638, 347</value>
+    <value>739, 347</value>
   </data>
   <data name="txt_Tax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 21</value>
+    <value>148, 21</value>
   </data>
   <data name="txt_Tax.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -480,13 +504,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_Tax.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txt_AmountMoney.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 347</value>
+    <value>523, 322</value>
   </data>
   <data name="txt_AmountMoney.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 21</value>
+    <value>148, 21</value>
   </data>
   <data name="txt_AmountMoney.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -501,13 +525,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_AmountMoney.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="txt_TotalMoney.Location" type="System.Drawing.Point, System.Drawing">
-    <value>772, 347</value>
+    <value>523, 347</value>
   </data>
   <data name="txt_TotalMoney.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 21</value>
+    <value>148, 21</value>
   </data>
   <data name="txt_TotalMoney.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -522,13 +546,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_TotalMoney.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="textProduceOtherReturnMaterialDesc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 322</value>
+    <value>76, 297</value>
   </data>
   <data name="textProduceOtherReturnMaterialDesc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 46</value>
+    <value>379, 71</value>
   </data>
   <data name="textProduceOtherReturnMaterialDesc.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -543,10 +567,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textProduceOtherReturnMaterialDesc.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="textEditAuditState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 322</value>
+    <value>523, 297</value>
   </data>
   <data name="textEditAuditState.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -561,7 +585,7 @@
     <value>False</value>
   </data>
   <data name="textEditAuditState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 21</value>
+    <value>148, 21</value>
   </data>
   <data name="textEditAuditState.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -576,13 +600,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textEditAuditState.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="EmpAudit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>705, 322</value>
+    <value>739, 297</value>
   </data>
   <data name="EmpAudit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 21</value>
+    <value>148, 21</value>
   </data>
   <data name="EmpAudit.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -597,7 +621,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;EmpAudit.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="newChooseSupplier.Location" type="System.Drawing.Point, System.Drawing">
     <value>533, 12</value>
@@ -618,10 +642,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseSupplier.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="simple_Remove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 296</value>
+    <value>209, 271</value>
   </data>
   <data name="simple_Remove.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
@@ -642,10 +666,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simple_Remove.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="simple_Append.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 296</value>
+    <value>12, 271</value>
   </data>
   <data name="simple_Append.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
@@ -666,7 +690,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simple_Append.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <metadata name="bindingSourceProduceOtherReturnDetail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>303, 17</value>
@@ -780,7 +804,7 @@
     <value>82</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>875, 231</value>
+    <value>875, 206</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -795,7 +819,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="dateProduceOtherReturnMaterialDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>308, 12</value>
@@ -819,7 +843,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;dateProduceOtherReturnMaterialDate.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="newChooseEmployee2Id.Location" type="System.Drawing.Point, System.Drawing">
     <value>532, 37</value>
@@ -840,7 +864,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseEmployee2Id.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="newChooseEmployee1Id.Location" type="System.Drawing.Point, System.Drawing">
     <value>307, 37</value>
@@ -861,7 +885,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseEmployee1Id.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="textProduceOtherReturnMaterialId.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 12</value>
@@ -882,7 +906,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;textProduceOtherReturnMaterialId.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="newChooseEmployee0Id.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 37</value>
@@ -903,7 +927,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseEmployee0Id.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -987,23 +1011,11 @@
   <data name="layoutControlItem8.Text" xml:space="preserve">
     <value>描述：</value>
   </data>
-  <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
-    <value>总额：</value>
-  </data>
-  <data name="layoutControlItem16.Text" xml:space="preserve">
-    <value>总额：</value>
-  </data>
   <data name="layoutControlItem17.CustomizationFormText" xml:space="preserve">
     <value>金额：</value>
   </data>
   <data name="layoutControlItem17.Text" xml:space="preserve">
     <value>金额：</value>
-  </data>
-  <data name="layoutControlItem18.CustomizationFormText" xml:space="preserve">
-    <value>税额：</value>
-  </data>
-  <data name="layoutControlItem18.Text" xml:space="preserve">
-    <value>税额：</value>
   </data>
   <data name="layoutControlItem6.CustomizationFormText" xml:space="preserve">
     <value>審核人：</value>
@@ -1016,6 +1028,24 @@
   </data>
   <data name="layoutControlItem19.Text" xml:space="preserve">
     <value>付款日期：</value>
+  </data>
+  <data name="layoutControlItem16.CustomizationFormText" xml:space="preserve">
+    <value>总额：</value>
+  </data>
+  <data name="layoutControlItem16.Text" xml:space="preserve">
+    <value>总额：</value>
+  </data>
+  <data name="layoutControlItem18.CustomizationFormText" xml:space="preserve">
+    <value>税额：</value>
+  </data>
+  <data name="layoutControlItem18.Text" xml:space="preserve">
+    <value>税额：</value>
+  </data>
+  <data name="layoutControlItem20.CustomizationFormText" xml:space="preserve">
+    <value>稅率：</value>
+  </data>
+  <data name="layoutControlItem20.Text" xml:space="preserve">
+    <value>稅率：</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
@@ -1321,6 +1351,12 @@
     <value>layoutControlItem15</value>
   </data>
   <data name="&gt;&gt;layoutControlItem15.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem20.Name" xml:space="preserve">
+    <value>layoutControlItem20</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem20.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

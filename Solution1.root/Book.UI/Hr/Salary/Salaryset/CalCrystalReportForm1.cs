@@ -651,11 +651,11 @@ namespace Book.UI.Hr.Salary.Salaryset
                 {
                     _ms.mBasePay = _ms.mMonthlyPay;
                 }
-                else if (emp.EmployeeJoinDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) || (_ms.mLeaveDate != global::Helper.DateTimeParse.NullDate && _ms.mLeaveDate < Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()).AddMonths(1)))
-                {
-                    _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay / 30 * (attendDays + halfattend - Kuangzhi), 0);
-                    this.AttendDays = attendDays + halfattend - Kuangzhi;
-                }
+                //else if (emp.EmployeeJoinDate > Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()) || (_ms.mLeaveDate != global::Helper.DateTimeParse.NullDate && _ms.mLeaveDate < Convert.ToDateTime(hryear.ToString() + "-" + hrmonth.ToString() + '-' + 01.ToString()).AddMonths(1)))
+                //{
+                //    _ms.mBasePay = this.GetSiSheWuRu(_ms.mMonthlyPay / 30 * (attendDays + halfattend - Kuangzhi), 0);
+                //    this.AttendDays = attendDays + halfattend - Kuangzhi;
+                //}
                 else       //底薪 新版只有月薪，无日薪
                 {
                     //if (emp.IsMonthSalary)     //底薪，月薪员工用月薪-未出勤扣减

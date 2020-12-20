@@ -4599,11 +4599,20 @@
     <EmbeddedResource Include="produceManager\PCPGOnlineCheck\OpticsTestCopyForm.resx">
       <DependentUpon>OpticsTestCopyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCPGOnlineCheck\OpticsTestCopyForm.zh-CHS.resx">
+      <DependentUpon>OpticsTestCopyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCPGOnlineCheck\OpticsTestCopyForm.zh-CHT.resx">
+      <DependentUpon>OpticsTestCopyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm.resx">
       <DependentUpon>ThicknessTestCopyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCPGOnlineCheck\OpticsTestCopyForm_Backup.resx">
       <DependentUpon>OpticsTestCopyForm_Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm_Backup.resx">
+      <DependentUpon>ThicknessTestCopyForm_Backup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\ProduceOtherCompact\RoSub_Zhujian.resx">
       <DependentUpon>RoSub_Zhujian.cs</DependentUpon>
@@ -12215,6 +12224,12 @@
     </Compile>
     <Compile Include="produceManager\PCPGOnlineCheck\OpticsTestCopyForm_Backup.Designer.cs">
       <DependentUpon>OpticsTestCopyForm_Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCPGOnlineCheck\ThicknessTestCopyForm_Backup.Designer.cs">
+      <DependentUpon>ThicknessTestCopyForm_Backup.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\ProduceOtherCompact\RoSub_Zijian.cs">
       <SubType>Component</SubType>

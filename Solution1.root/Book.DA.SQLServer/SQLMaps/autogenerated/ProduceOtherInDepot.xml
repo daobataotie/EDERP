@@ -25,6 +25,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="ProduceTax" column="ProduceTax"/>
       <result property="ProduceTotal" column="ProduceTotal"/>
       <result property="PayDate" column="PayDate"/>
+      <result property="InvoiceTaxrate" column="InvoiceTaxrate"/>
       <result property="Depot" column="DepotId" lazyLoad="false" select="Depot.select_by_primary_key" />
       <result property="AuditEmp" column="AuditEmpId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="EmployeeUpdate" column="EmployeeUpdateId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -137,7 +138,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [ProduceAmount],
         [ProduceTax],
         [ProduceTotal],
-        [PayDate]
+        [PayDate],
+        [InvoiceTaxrate]
 			FROM
 				[dbo].[ProduceOtherInDepot]
 			WHERE
@@ -209,7 +211,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [ProduceAmount],
         [ProduceTax],
         [ProduceTotal],
-        [PayDate]
+        [PayDate],
+        [InvoiceTaxrate]
 			) 
 			VALUES 
 			(
@@ -231,7 +234,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #ProduceAmount#,
         #ProduceTax#,
         #ProduceTotal#,
-        #PayDate#
+        #PayDate#,
+        #InvoiceTaxrate#
 			)
              ]]>
     </insert>
@@ -256,7 +260,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [ProduceAmount]=#ProduceAmount#,
         [ProduceTax]=#ProduceTax#,
         [ProduceTotal]=#ProduceTotal#,
-        [PayDate] = #PayDate#
+        [PayDate] = #PayDate#,
+        [InvoiceTaxrate]=#InvoiceTaxrate#
 			WHERE
 				[ProduceOtherInDepotId] = #ProduceOtherInDepotId#
                     ]]>
