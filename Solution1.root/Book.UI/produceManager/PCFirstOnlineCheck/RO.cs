@@ -24,7 +24,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             this.lbl_Id.Text = model.PCFirstOnlineCheckId;
             this.lbl_OnlineDate.Text = model.OnlineDate.Value.ToString("yyyy-MM-dd");
 
-            this.lbl_PronoteHeaderId.Text = model.PronoteHeaderId;
+            //this.lbl_PronoteHeaderId.Text = model.PronoteHeaderId;
 
             this.lblCheckNum.Text = model.CheckNum == null ? "" : model.CheckNum.Value.ToString("0.##");
             this.lblPassNum.Text = model.PassNum == null ? "" : model.PassNum.Value.ToString("0.##");
@@ -33,7 +33,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
 
             if (model.PronoteHeader != null)
             {
-                this.lbl_ProductName.Text = model.PronoteHeader.Product.ProductName;
+                //this.lbl_ProductName.Text = model.PronoteHeader.Product.ProductName;
                 this.lbl_CustomerProduct.Text = model.PronoteHeader.Product.CustomerProductName;
                 this.lbl_CusXOId.Text = model.PronoteHeader.InvoiceCusId;
             }
@@ -55,6 +55,9 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
 
             this.TC_Jiagongbie.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_Jiagongbie);
             this.TC_Sehao.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_Sehao);
+
+            this.TCProductName.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_ProductName);
+            this.TCPronoteHeaderId.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_PronoteHeaderId);
 
             this.subReportGX.ReportSource = new subReportGX("2");
             this.subReportHD.ReportSource = new subReportHD("2");

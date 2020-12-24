@@ -78,6 +78,8 @@ namespace Book.Model
         private string _jiagongbie;
 
         private string _sehao;
+
+        private string _pronoteHeaderId;
 		
 		/// <summary>
 		/// 班别
@@ -95,6 +97,8 @@ namespace Book.Model
 		/// 产品
 		/// </summary>
 		private Product _product;
+
+        private PronoteHeader _pronoteHeader;
 		 
 		#endregion
 		
@@ -293,6 +297,18 @@ namespace Book.Model
             get { return _sehao; }
             set { _sehao = value; }
         }
+
+        public string PronoteHeaderId
+        {
+            get { return _pronoteHeaderId; }
+            set { _pronoteHeaderId = value; }
+        }
+
+        public PronoteHeader PronoteHeader
+        {
+            get { return _pronoteHeader; }
+            set { _pronoteHeader = value; }
+        }
 	
 		/// <summary>
 		/// 班别
@@ -418,6 +434,8 @@ namespace Book.Model
         public readonly static string PRO_Jiagongbie = "Jiagongbie";
 
         public readonly static string PRO_Sehao = "Sehao";
+
+        public readonly static string PRO_PronoteHeaderId = "PronoteHeaderId";
 
 		#endregion
 	}

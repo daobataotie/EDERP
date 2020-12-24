@@ -11,14 +11,14 @@ using System.Linq;
 
 namespace Book.UI.produceManager.PCFirstOnlineCheck
 {
-    public partial class Editform_BackUp : Settings.BasicData.BaseEditForm
+    public partial class Editform_Backup : Settings.BasicData.BaseEditForm
     {
         BL.PCFirstOnlineCheckManager _PCFirstOnlineCheckManager = new Book.BL.PCFirstOnlineCheckManager();
         BL.PCFirstOnlineCheckDetailManager _detailManager = new Book.BL.PCFirstOnlineCheckDetailManager();
         Model.PCFirstOnlineCheck _PCFirstOnlineCheck;
         int LastFlag = 0;
 
-        public Editform_BackUp()
+        public Editform_Backup()
         {
             InitializeComponent();
 
@@ -56,7 +56,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             this.repositoryItemLookUpEdit7.DataSource = dt;
             this.repositoryItemLookUpEdit8.DataSource = dt;
             this.repositoryItemLookUpEdit9.DataSource = dt;
-
+            this.repositoryItemLookUpEdit10.DataSource = dt;
 
             #endregion
 
@@ -70,7 +70,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             }
         }
 
-        public Editform_BackUp(string invoiceId)
+        public Editform_Backup(string invoiceId)
             : this()
         {
             this._PCFirstOnlineCheck = this._PCFirstOnlineCheckManager.Get(invoiceId);
@@ -81,7 +81,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
                 LastFlag = 1;
         }
 
-        public Editform_BackUp(Model.PCFirstOnlineCheck PCFirstOnlineCheck)
+        public Editform_Backup(Model.PCFirstOnlineCheck PCFirstOnlineCheck)
             : this()
         {
             if (PCFirstOnlineCheck == null)
@@ -92,7 +92,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
                 LastFlag = 1;
         }
 
-        public Editform_BackUp(Model.PCFirstOnlineCheck PCFirstOnlineCheck, string action)
+        public Editform_Backup(Model.PCFirstOnlineCheck PCFirstOnlineCheck, string action)
             : this()
         {
             this._PCFirstOnlineCheck = PCFirstOnlineCheck;
@@ -193,8 +193,20 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             this.spinEditPassNum.EditValue = this._PCFirstOnlineCheck.PassNum;
             this.cobProductUnit.EditValue = this._PCFirstOnlineCheck.ProductUnit;
 
-            this.txt_CustomerProduct.EditValue = this._PCFirstOnlineCheck.PronoteHeader == null ? "" : this._PCFirstOnlineCheck.PronoteHeader.Product.CustomerProductName;
             this.txt_CheckedStandard.EditValue = this._PCFirstOnlineCheck.CheckedStandard;
+
+            if (this._PCFirstOnlineCheck.PronoteHeader != null)
+            {
+                this.txt_Product.EditValue = this._PCFirstOnlineCheck.PronoteHeader.Product.ProductName;
+                this.txt_CustomerProduct.EditValue = this._PCFirstOnlineCheck.PronoteHeader.Product.CustomerProductName;
+                this.txt_CusXOId.EditValue = this._PCFirstOnlineCheck.PronoteHeader.InvoiceCusId;
+            }
+            else
+            {
+                this.txt_Product.EditValue = "";
+                this.txt_CustomerProduct.EditValue = "";
+                this.txt_CusXOId.EditValue = "";
+            }
 
             this.bindingSourceDetail.DataSource = this._PCFirstOnlineCheck.Detail;
 
@@ -206,7 +218,6 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
                 case "view":
                     //this.gridView1.OptionsBehavior.Editable = false;
                     this.gridColumn1.OptionsColumn.AllowEdit = false;
-                    this.gridColumn2.OptionsColumn.AllowEdit = false;
                     this.gridColumn3.OptionsColumn.AllowEdit = false;
                     this.gridColumn4.OptionsColumn.AllowEdit = false;
                     this.gridColumn5.OptionsColumn.AllowEdit = false;
@@ -220,7 +231,6 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
                 default:
                     //this.gridView1.OptionsBehavior.Editable = true;
                     this.gridColumn1.OptionsColumn.AllowEdit = true;
-                    this.gridColumn2.OptionsColumn.AllowEdit = false;
                     this.gridColumn3.OptionsColumn.AllowEdit = true;
                     this.gridColumn4.OptionsColumn.AllowEdit = false;
                     this.gridColumn5.OptionsColumn.AllowEdit = true;
@@ -236,6 +246,9 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             this.txt_Id.Enabled = true;
             this.txt_Id.Properties.ReadOnly = true;
             this.txt_CustomerProduct.Properties.ReadOnly = true;
+            this.txt_Product.Properties.ReadOnly = true;
+            this.txt_CusXOId.Properties.ReadOnly = true;
+            this.txt_CheckedStandard.Properties.ReadOnly = true;
         }
 
         protected override void Save()
@@ -284,7 +297,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             return new RO(this._PCFirstOnlineCheck);
         }
 
-
+        //加工单
         private void barPronoteHeader_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             PronoteHeader.ChoosePronoteHeaderDetailsForm f = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm();
@@ -318,14 +331,17 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
                         this.txt_PronoteHeaderId.EditValue = item.PronoteHeaderID;
                         this.txt_CustomerProduct.EditValue = item.Product == null ? "" : item.Product.CustomerProductName;
                         this.txt_CheckedStandard.EditValue = item.CustomerCheckStandard;
+                        this.txt_Product.EditValue = item.ProductName;
+                        this.txt_CusXOId.EditValue = item.InvoiceCusId;
+                        this.cobProductUnit.Text = item.ProductUnit;
 
                         Model.PCFirstOnlineCheckDetail model = new Book.Model.PCFirstOnlineCheckDetail();
                         model.PCFirstOnlineCheckDetailId = Guid.NewGuid().ToString();
                         model.PCFirstOnlineCheckId = this._PCFirstOnlineCheck.PCFirstOnlineCheckId;
-                        model.InvoiceXOId = item.InvoiceXOId;
-                        model.InvoiceXOCusId = item.InvoiceCusId;
-                        model.ProductName = item.ProductName;
-                        model.ProductId = item.ProductId;
+                        //model.InvoiceXOId = item.InvoiceXOId;
+                        //model.InvoiceXOCusId = item.InvoiceCusId;
+                        //model.ProductName = item.ProductName;
+                        //model.ProductId = item.ProductId;
                         model.Employee = BL.V.ActiveOperator.Employee;
                         model.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 
@@ -345,6 +361,8 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             model.PCFirstOnlineCheckDetailId = Guid.NewGuid().ToString();
             model.PCFirstOnlineCheckId = this._PCFirstOnlineCheck.PCFirstOnlineCheckId;
             model.CheckDate = DateTime.Now;
+            model.Employee = BL.V.ActiveOperator.Employee;
+            model.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 
             this.bindingSourceDetail.Add(model);
             this.gridControl1.RefreshDataSource();
@@ -398,6 +416,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             if (d != null)
             {
                 OpticsTest f = new OpticsTest(d.PCFirstOnlineCheckDetailId, 2);
+                f.PronoteHeaderId = this.txt_PronoteHeaderId.Text;
                 f.ShowDialog();
             }
         }
@@ -410,6 +429,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             if (d != null)
             {
                 ThicknessTest f = new ThicknessTest(d.PCFirstOnlineCheckDetailId, 1);
+                f.PronoteHeaderId = this.txt_PronoteHeaderId.Text;
                 f.ShowDialog();
             }
         }

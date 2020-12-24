@@ -184,8 +184,6 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             //this.date_PCFirstOnlineCheck.EditValue = this._PCFirstOnlineCheck.PCFirstOnlineCheckDate;
             this.date_Online.EditValue = this._PCFirstOnlineCheck.OnlineDate;
 
-            this.txt_PronoteHeaderId.EditValue = this._PCFirstOnlineCheck.PronoteHeaderId;
-
             this.newChooseContorlAuditEmp.EditValue = this._PCFirstOnlineCheck.AuditEmp;
             this.txt_AuditState.EditValue = this.GetAuditName(this._PCFirstOnlineCheck.AuditState);
 
@@ -195,15 +193,13 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
 
             this.txt_CheckedStandard.EditValue = this._PCFirstOnlineCheck.CheckedStandard;
 
-            if (this._PCFirstOnlineCheck.PronoteHeader != null)
+            if (this._PCFirstOnlineCheck.Detail != null && this._PCFirstOnlineCheck.Detail.Count > 0 && this._PCFirstOnlineCheck.Detail[0].PronoteHeader != null)
             {
-                this.txt_Product.EditValue = this._PCFirstOnlineCheck.PronoteHeader.Product.ProductName;
-                this.txt_CustomerProduct.EditValue = this._PCFirstOnlineCheck.PronoteHeader.Product.CustomerProductName;
-                this.txt_CusXOId.EditValue = this._PCFirstOnlineCheck.PronoteHeader.InvoiceCusId;
+                this.txt_CustomerProduct.EditValue = this._PCFirstOnlineCheck.Detail[0].PronoteHeader.Product.CustomerProductName;
+                this.txt_CusXOId.EditValue = this._PCFirstOnlineCheck.Detail[0].PronoteHeader.InvoiceCusId;
             }
             else
             {
-                this.txt_Product.EditValue = "";
                 this.txt_CustomerProduct.EditValue = "";
                 this.txt_CusXOId.EditValue = "";
             }
@@ -248,7 +244,6 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             this.txt_Id.Enabled = true;
             this.txt_Id.Properties.ReadOnly = true;
             this.txt_CustomerProduct.Properties.ReadOnly = true;
-            this.txt_Product.Properties.ReadOnly = true;
             this.txt_CusXOId.Properties.ReadOnly = true;
             this.txt_CheckedStandard.Properties.ReadOnly = true;
         }
@@ -260,7 +255,6 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             if (this.date_Online.EditValue != null)
                 this._PCFirstOnlineCheck.OnlineDate = this.date_Online.DateTime;
 
-            this._PCFirstOnlineCheck.PronoteHeaderId = this.txt_PronoteHeaderId.EditValue == null ? null : this.txt_PronoteHeaderId.EditValue.ToString();
             this._PCFirstOnlineCheck.CheckNum = this.spinEditCheckNum.Value;
             this._PCFirstOnlineCheck.PassNum = this.spinEditPassNum.Value;
             this._PCFirstOnlineCheck.ProductUnit = this.cobProductUnit.EditValue == null ? null : this.cobProductUnit.Text;
@@ -330,10 +324,10 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
                 {
                     foreach (var item in f.SelectItems)
                     {
-                        this.txt_PronoteHeaderId.EditValue = item.PronoteHeaderID;
+                        //this.txt_PronoteHeaderId.EditValue = item.PronoteHeaderID;
                         this.txt_CustomerProduct.EditValue = item.Product == null ? "" : item.Product.CustomerProductName;
                         this.txt_CheckedStandard.EditValue = item.CustomerCheckStandard;
-                        this.txt_Product.EditValue = item.ProductName;
+                        //this.txt_Product.EditValue = item.ProductName;
                         this.txt_CusXOId.EditValue = item.InvoiceCusId;
                         this.cobProductUnit.Text = item.ProductUnit;
 
@@ -359,15 +353,48 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            Model.PCFirstOnlineCheckDetail model = new Book.Model.PCFirstOnlineCheckDetail();
-            model.PCFirstOnlineCheckDetailId = Guid.NewGuid().ToString();
-            model.PCFirstOnlineCheckId = this._PCFirstOnlineCheck.PCFirstOnlineCheckId;
-            model.CheckDate = DateTime.Now;
-            model.Employee = BL.V.ActiveOperator.Employee;
-            model.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+            //Model.PCFirstOnlineCheckDetail model = new Book.Model.PCFirstOnlineCheckDetail();
+            //model.PCFirstOnlineCheckDetailId = Guid.NewGuid().ToString();
+            //model.PCFirstOnlineCheckId = this._PCFirstOnlineCheck.PCFirstOnlineCheckId;
+            //model.CheckDate = DateTime.Now;
+            //model.Employee = BL.V.ActiveOperator.Employee;
+            //model.EmployeeId = BL.V.ActiveOperator.EmployeeId;
 
-            this.bindingSourceDetail.Add(model);
-            this.gridControl1.RefreshDataSource();
+            //this.bindingSourceDetail.Add(model);
+            //this.gridControl1.RefreshDataSource();
+
+            PronoteHeader.ChoosePronoteHeaderDetailsForm f = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm();
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                if (f.SelectItems != null && f.SelectItems.Count > 0)
+                {
+                    foreach (var item in f.SelectItems)
+                    {
+                        this.txt_CustomerProduct.EditValue = item.Product == null ? "" : item.Product.CustomerProductName;
+                        this.txt_CheckedStandard.EditValue = item.CustomerCheckStandard;
+                        this.txt_CusXOId.EditValue = item.InvoiceCusId;
+                        this.cobProductUnit.Text = item.ProductUnit;
+
+                        Model.PCFirstOnlineCheckDetail model = new Book.Model.PCFirstOnlineCheckDetail();
+                        model.PCFirstOnlineCheckDetailId = Guid.NewGuid().ToString();
+                        model.PCFirstOnlineCheckId = this._PCFirstOnlineCheck.PCFirstOnlineCheckId;
+                        model.PronoteHeaderId = item.PronoteHeaderID;
+                        model.InvoiceXOId = item.InvoiceXOId;
+                        model.InvoiceXOCusId = item.InvoiceCusId;
+                        model.Product = item.Product;
+                        model.ProductName = item.ProductName;
+                        model.ProductId = item.ProductId;
+                        model.Employee = BL.V.ActiveOperator.Employee;
+                        model.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+
+                        model.CheckDate = DateTime.Now;
+
+                        this.bindingSourceDetail.Add(model);
+                        this.gridControl1.RefreshDataSource();
+                    }
+                }
+
+            }
         }
 
         private void btn_Remove_Click(object sender, EventArgs e)
@@ -418,7 +445,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             if (d != null)
             {
                 OpticsTest f = new OpticsTest(d.PCFirstOnlineCheckDetailId, 2);
-                f.PronoteHeaderId = this.txt_PronoteHeaderId.Text;
+                f.PronoteHeaderId = d.PronoteHeaderId;
                 f.ShowDialog();
             }
         }
@@ -431,7 +458,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
             if (d != null)
             {
                 ThicknessTest f = new ThicknessTest(d.PCFirstOnlineCheckDetailId, 1);
-                f.PronoteHeaderId = this.txt_PronoteHeaderId.Text;
+                f.PronoteHeaderId = d.PronoteHeaderId;
                 f.ShowDialog();
             }
         }

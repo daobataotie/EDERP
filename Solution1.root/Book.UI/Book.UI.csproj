@@ -4536,12 +4536,6 @@
     <EmbeddedResource Include="produceManager\PCFirstOnlineCheck\Editform.zh-CHT.resx">
       <DependentUpon>Editform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="produceManager\PCFirstOnlineCheck\Editform_BackUp.resx">
-      <DependentUpon>Editform_BackUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="produceManager\PCFirstOnlineCheck\Editform_BackUp.zh-CHT.resx">
-      <DependentUpon>Editform_BackUp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFirstOnlineCheck\List.resx">
       <DependentUpon>List.cs</DependentUpon>
     </EmbeddedResource>
@@ -4571,6 +4565,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFirstOnlineCheck\RO_BackUp.resx">
       <DependentUpon>RO_BackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCFirstOnlineCheck\Editform_Backup.resx">
+      <DependentUpon>Editform_Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="produceManager\PCFirstOnlineCheck\Editform_Backup.zh-CHT.resx">
+      <DependentUpon>Editform_Backup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="produceManager\PCFlameRetardant\ConditionForm.resx">
       <DependentUpon>ConditionForm.cs</DependentUpon>
@@ -12141,12 +12141,6 @@
     <Compile Include="produceManager\PCFirstOnlineCheck\Editform.Designer.cs">
       <DependentUpon>Editform.cs</DependentUpon>
     </Compile>
-    <Compile Include="produceManager\PCFirstOnlineCheck\Editform_BackUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="produceManager\PCFirstOnlineCheck\Editform_BackUp.Designer.cs">
-      <DependentUpon>Editform_BackUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="produceManager\PCFirstOnlineCheck\List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12182,6 +12176,12 @@
     </Compile>
     <Compile Include="produceManager\PCFirstOnlineCheck\RO_BackUp.Designer.cs">
       <DependentUpon>RO_BackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="produceManager\PCFirstOnlineCheck\Editform_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="produceManager\PCFirstOnlineCheck\Editform_Backup.Designer.cs">
+      <DependentUpon>Editform_Backup.cs</DependentUpon>
     </Compile>
     <Compile Include="produceManager\PCFlameRetardant\ConditionForm.cs">
       <SubType>Form</SubType>

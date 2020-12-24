@@ -22,10 +22,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="Chongji" column="Chongji"/>
       <result property="Jiagongbie" column="Jiagongbie"/>
       <result property="Sehao" column="Sehao"/>
+      <result property="PronoteHeaderId" column="PronoteHeaderId" />
       <result property="BusinessHours" column="BusinessHoursId" lazyLoad="false" select="BusinessHours.select_by_primary_key" />
       <result property="Employee" column="EmployeeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="PCFirstOnlineCheck" column="PCFirstOnlineCheckId" lazyLoad="false" select="PCFirstOnlineCheck.select_by_primary_key" />
       <result property="Product" column="ProductId" lazyLoad="false" select="Product.select_SimpleProduct" />
+      <result property="PronoteHeader" column="PronoteHeaderId" lazyLoad="false" select="PronoteHeader.select_by_primary_key" />
     </resultMap>
   </resultMaps>
 
@@ -70,7 +72,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Houdu],
         [Chongji],
         [Jiagongbie],
-        [Sehao]
+        [Sehao],
+        [PronoteHeaderId]
 			FROM
 				[dbo].[PCFirstOnlineCheckDetail]
 			WHERE
@@ -139,7 +142,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Houdu],
         [Chongji],
         [Jiagongbie],
-        [Sehao]
+        [Sehao],
+        [PronoteHeaderId]
 			) 
 			VALUES 
 			(
@@ -158,7 +162,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         #Houdu#,
         #Chongji#,
         #Jiagongbie#,
-        #Sehao#
+        #Sehao#,
+        #PronoteHeaderId#
 			)
              ]]>
     </insert>
@@ -180,7 +185,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [Houdu]=#Houdu#,
         [Chongji]=#Chongji#,
         [Jiagongbie]=#Jiagongbie#,
-        [Sehao]=#Sehao#
+        [Sehao]=#Sehao#,
+        [PronoteHeaderId]=#PronoteHeaderId#
 			WHERE
 				[PCFirstOnlineCheckDetailId] = #PCFirstOnlineCheckDetailId#
                     ]]>

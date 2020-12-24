@@ -49,6 +49,7 @@ namespace Book.BL
             //
 
             Validate(pCFirstOnlineCheck);
+            TiGuiExists(pCFirstOnlineCheck);
             try
             {
                 BL.V.BeginTransaction();

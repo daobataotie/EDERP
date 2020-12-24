@@ -108,7 +108,7 @@
             // gridColumn2
             // 
             resources.ApplyResources(this.gridColumn2, "gridColumn2");
-            this.gridColumn2.DisplayFormat.FormatString = "yyyy-MM-dd HH:mm";
+            this.gridColumn2.DisplayFormat.FormatString = "yyyy/MM/dd HH:mm";
             this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn2.FieldName = "CheckDate";
             this.gridColumn2.Name = "gridColumn2";
@@ -116,7 +116,7 @@
             // gridColumn3
             // 
             resources.ApplyResources(this.gridColumn3, "gridColumn3");
-            this.gridColumn3.FieldName = "PCFirstOnlineCheck.PronoteHeader.Product.ProductName";
+            this.gridColumn3.FieldName = "Product.ProductName";
             this.gridColumn3.Name = "gridColumn3";
             // 
             // gridColumn4
@@ -128,13 +128,13 @@
             // gridColumn5
             // 
             resources.ApplyResources(this.gridColumn5, "gridColumn5");
-            this.gridColumn5.FieldName = "PCFirstOnlineCheck.PronoteHeader.InvoiceXO.CustomerInvoiceXOId";
+            this.gridColumn5.FieldName = "PronoteHeader.InvoiceXO.CustomerInvoiceXOId";
             this.gridColumn5.Name = "gridColumn5";
             // 
             // gridColumn6
             // 
             resources.ApplyResources(this.gridColumn6, "gridColumn6");
-            this.gridColumn6.FieldName = "PCFirstOnlineCheck.PronoteHeaderId";
+            this.gridColumn6.FieldName = "PronoteHeaderId";
             this.gridColumn6.Name = "gridColumn6";
             // 
             // repositoryItemRichTextEdit1

@@ -22,6 +22,9 @@ namespace Book.UI.Hr.Attendance.Leave
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
+            this.comboBoxEditYear.Properties.Items.Add(DateTime.Now.Year + 2);
+            this.comboBoxEditYear.Properties.Items.Add(DateTime.Now.Year + 1);
+
             for (int i = 0; i < 10; i++)
             {
                 this.comboBoxEditYear.Properties.Items.Add(DateTime.Now.Year - i);

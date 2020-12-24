@@ -33,5 +33,7 @@ namespace Book.Model
         //public string ProductName { get; set; }
 
         public readonly static string PRO_InvoiceXOCusId = "InvoiceXOCusId";
+
+        public readonly static string PRO_ProductName = "ProductName";
     }
 }

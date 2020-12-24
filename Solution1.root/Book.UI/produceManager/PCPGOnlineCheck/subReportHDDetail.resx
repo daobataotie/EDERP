@@ -118,140 +118,140 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="xrTable2.Dpi" type="System.Single, mscorlib">
+  <data name="TCleft3.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrTable2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="TCguankou.Text" xml:space="preserve">
+    <value> </value>
   </data>
   <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
     <value>0, 0</value>
   </data>
-  <data name="TChdb.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="TChdb.Text" xml:space="preserve">
+  <data name="TCleft2.Text" xml:space="preserve">
     <value> </value>
+  </data>
+  <assembly alias="DevExpress.XtraReports.v10.2" name="DevExpress.XtraReports.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="$this.ReportUnit" type="DevExpress.XtraReports.UI.ReportUnit, DevExpress.XtraReports.v10.2">
+    <value>TenthsOfAMillimeter</value>
+  </data>
+  <data name="TCRight4.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="TCguankou.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="TCguankou.Text" xml:space="preserve">
-    <value> </value>
+  <data name="$this.SnapGridSize" type="System.Single, mscorlib">
+    <value>31.75</value>
   </data>
-  <data name="TCgkfm.Dpi" type="System.Single, mscorlib">
+  <data name="BottomMargin.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="TCgkfm.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="TCleft1.Dpi" type="System.Single, mscorlib">
+  <data name="xrTableRow2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
-  </data>
-  <data name="TCleft1.Text" xml:space="preserve">
-    <value> </value>
   </data>
   <data name="TCleft2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
-  <data name="TCleft2.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="TCleft3.Dpi" type="System.Single, mscorlib">
+  <data name="TCgkfm.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="TCleft3.Text" xml:space="preserve">
     <value> </value>
   </data>
-  <data name="TCleft4.Dpi" type="System.Single, mscorlib">
+  <data name="TCleft1.Dpi" type="System.Single, mscorlib">
     <value>254</value>
+  </data>
+  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>TopLeft</value>
   </data>
   <data name="TCleft4.Text" xml:space="preserve">
     <value> </value>
   </data>
-  <data name="TCleft5.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
+  <data name="TCRight1.Text" xml:space="preserve">
+    <value> </value>
   </data>
   <data name="TCleft5.Text" xml:space="preserve">
     <value> </value>
   </data>
+  <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
+    <value>TopLeft</value>
+  </data>
+  <data name="TCleft4.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <data name="TCRight1.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="TCRight1.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="TCRight2.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="TCRight2.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="TCRight3.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="TCRight3.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="TCRight4.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="TCRight4.Text" xml:space="preserve">
-    <value> </value>
-  </data>
-  <data name="TCRight5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="TCRight5.Text" xml:space="preserve">
     <value> </value>
   </data>
-  <data name="xrTableRow2.Dpi" type="System.Single, mscorlib">
+  <data name="TCRight4.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="TCRight2.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="xrTable2.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>1999, 63.49998</value>
   </data>
-  <assembly alias="DevExpress.Data.v10.2" name="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="xrTable2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>MiddleCenter</value>
+  <data name="TChdb.Text" xml:space="preserve">
+    <value> </value>
   </data>
-  <data name="Detail.Dpi" type="System.Single, mscorlib">
+  <data name="TCleft1.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="TCRight3.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
     <value>63.49998</value>
   </data>
-  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>TopLeft</value>
+  <data name="$this.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="TopMargin.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TCRight5.Dpi" type="System.Single, mscorlib">
     <value>254</value>
   </data>
   <data name="TopMargin.HeightF" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
-    <value>TopLeft</value>
-  </data>
-  <data name="BottomMargin.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
   <data name="BottomMargin.HeightF" type="System.Single, mscorlib">
     <value>0</value>
+  </data>
+  <data name="Detail.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TCgkfm.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="TCRight3.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="TCRight2.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="xrTable2.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="TCleft5.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
   </data>
   <data name="BottomMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>TopLeft</value>
   </data>
+  <data name="TChdb.Dpi" type="System.Single, mscorlib">
+    <value>254</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.Dpi" type="System.Single, mscorlib">
-    <value>254</value>
-  </data>
-  <assembly alias="DevExpress.XtraReports.v10.2" name="DevExpress.XtraReports.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="$this.ReportUnit" type="DevExpress.XtraReports.UI.ReportUnit, DevExpress.XtraReports.v10.2">
-    <value>TenthsOfAMillimeter</value>
-  </data>
-  <data name="$this.SnapGridSize" type="System.Single, mscorlib">
-    <value>31.75</value>
-  </data>
 </root>

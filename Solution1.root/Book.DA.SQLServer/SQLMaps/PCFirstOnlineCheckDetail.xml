@@ -17,7 +17,7 @@
 
     <select id="SelectByCondition" parameterClass="Map" resultMap="PCFirstOnlineCheckDetailResult">
       <![CDATA[
-      select pfd.* from PCFirstOnlineCheckDetail pfd  left join PCFirstOnlineCheck pf on pf.PCFirstOnlineCheckId=pfd.PCFirstOnlineCheckId left join PronoteHeader  ph on ph.PronoteHeaderID=pf.PronoteHeaderId  where pf.OnlineDate  between #startDate# and #endDate# $sql$ order by pf.PCFirstOnlineCheckId,pfd.CheckDate
+      select pfd.* from PCFirstOnlineCheckDetail pfd  left join PCFirstOnlineCheck pf on pf.PCFirstOnlineCheckId=pfd.PCFirstOnlineCheckId left join InvoiceXO xo on xo.InvoiceId=pfd.InvoiceXOId  where pf.OnlineDate  between #startDate# and #endDate# $sql$ order by pf.PCFirstOnlineCheckId,pfd.CheckDate
       ]]>
     </select>
   </statements>
