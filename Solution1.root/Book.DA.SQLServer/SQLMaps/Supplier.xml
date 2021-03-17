@@ -53,6 +53,10 @@ where invoicedate between #dateStart# and #dateEnd#)
     <select id="select_bySupplierCategoryId"  resultMap="SupplierResult">
     select * from Supplier where SupplierCategoryId=#value#
    </select>
+
+   <select id="SelectByWorkHouseName" resultMap="SupplierResult" parameterClass="string">
+     select  top 1 * from Supplier where SupplierFullName like '%$value$%' or SupplierShortName like '%$value$%'
+   </select>
  </statements>
  
 </sqlMap>

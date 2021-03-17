@@ -151,7 +151,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCChuanTouR.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.PRO_attrJPDownR);
 
             //this.TCEmployee.DataBindings.Add("Text", this.DataSource, "Employee." + Model.Employee.PROPERTY_EMPLOYEENAME);
-            this.TCNote.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.Pro_Note);
+            this.lblNote.DataBindings.Add("Text", this.DataSource, Model.PCDoubleImpactCheckDetail.Pro_Note);
         }
     }
 }

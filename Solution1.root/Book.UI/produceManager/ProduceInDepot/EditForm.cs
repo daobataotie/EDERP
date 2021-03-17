@@ -117,6 +117,11 @@ namespace Book.UI.produceManager.ProduceInDepot
 
         protected override void Save()
         {
+            //保存前吧鼠标焦点置于 GridControl中，目的是触发一些控件的更改事件，比如说  供应商更改事件
+            //如果控件修改完直接点击保存，对应的修改事件不触发
+            this.gridControl1.Focus();
+
+
             if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
                 return;
             this.produceInDepot.ProduceInDepotId = this.textEditProduceInDepotId.Text;
@@ -166,6 +171,7 @@ namespace Book.UI.produceManager.ProduceInDepot
                     break;
 
                 case "update":
+                    this.produceInDepot.Employee1Id = BL.V.ActiveOperator.EmployeeId;
                     this.produceInDepotManager.Update(this.produceInDepot);
                     break;
             }
@@ -1333,16 +1339,33 @@ namespace Book.UI.produceManager.ProduceInDepot
             ExportExcel(this.produceInDepot.Details);
         }
 
+        //公司部分变化，
+        //1,“前单位转入”变化
+        //2,税率变化。“生產入庫”沒有“供應商”欄位，所以用“公司部門”根據關鍵字匹配“供應商”。
         private void newChooseWorkHorseId_EditValueChanged(object sender, EventArgs e)
         {
             if (newChooseWorkHorseId.EditValue != null && this.action != "view")
             {
+                Model.WorkHouse workHouse = this.newChooseWorkHorseId.EditValue as Model.WorkHouse;
                 foreach (var item in this.produceInDepot.Details)
                 {
-                    item.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumyPronHeaderWorkHouse(item.PronoteHeaderId, (this.newChooseWorkHorseId.EditValue as Model.WorkHouse).WorkHouseId);
+                    item.beforeTransferQuantity = this.produceInDepotDetailManager.select_TransferSumyPronHeaderWorkHouse(item.PronoteHeaderId, (workHouse.WorkHouseId));
                 }
 
                 this.gridControl1.RefreshDataSource();
+
+
+                //税率变化
+                Model.Supplier supplier = new BL.SupplierManager().SelectByWorkHouseName(workHouse.Workhousename);
+                if (supplier != null)
+                {
+                    if (supplier.TaxRateP5.HasValue && supplier.TaxRateP5.Value && supplier.TaxCaluType == 1)
+                    {
+                        this.spe_InvoiceTaxrate.Value = 5;
+                    }
+                    else
+                        this.spe_InvoiceTaxrate.Value = 0;
+                }
             }
         }
 

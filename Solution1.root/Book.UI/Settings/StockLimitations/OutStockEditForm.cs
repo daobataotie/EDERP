@@ -386,7 +386,7 @@ namespace Book.UI.Settings.StockLimitations
                         this._depotOutDetail.DepotOutDetailQuantity = 1;
                         this._depotOutDetail.Description = product.ProductDescription;
                         this._depotOutDetail.CurrentDepotQuantity = this.stockManager.GetTheCount1OfProductByProductId(product, this._depotManager.Get(this.lookUpEditDepotId.EditValue.ToString()));
-                        this._depotOutDetail.CurrentStockQuantity = product == null ? 0 : product.StocksQuantity;
+                        this._depotOutDetail.CurrentStockQuantity = product == null ? 0 : Convert.ToDouble(product.StocksQuantity);
                         this._depotOut.Details.Add(this._depotOutDetail);
 
 
@@ -410,7 +410,7 @@ namespace Book.UI.Settings.StockLimitations
                     this._depotOutDetail.DepotOutDetailQuantity = 1;
                     this._depotOutDetail.Description = product.ProductDescription;
                     this._depotOutDetail.CurrentDepotQuantity = this.stockManager.GetTheCount1OfProductByProductId(product, this._depotManager.Get(this.lookUpEditDepotId.EditValue.ToString()));
-                    this._depotOutDetail.CurrentStockQuantity = product == null ? 0 : product.StocksQuantity;
+                    this._depotOutDetail.CurrentStockQuantity = product == null ? 0 :Convert.ToDouble( product.StocksQuantity);
                     this._depotOut.Details.Add(this._depotOutDetail);
 
                 }
@@ -434,7 +434,7 @@ namespace Book.UI.Settings.StockLimitations
                     if (this.action != "view")
                     {
                         item.CurrentDepotQuantity = this.stockManager.GetTheCount1OfProductByProductId(item.Product, new BL.DepotManager().Get(this.lookUpEditDepotId.EditValue.ToString()));
-                        item.CurrentStockQuantity = item.Product.StocksQuantity;
+                        item.CurrentStockQuantity = Convert.ToDouble(item.Product.StocksQuantity);
                     }
                     //    break;
                     this.gridControl1.RefreshDataSource();
@@ -489,7 +489,7 @@ namespace Book.UI.Settings.StockLimitations
                     Model.Product p = this._productManager.Get(e.Value.ToString());
 
                     detail.CurrentDepotQuantity = this.stockManager.GetTheCount1OfProductByProductId(p, this._depotManager.Get(this.lookUpEditDepotId.EditValue.ToString()));
-                    detail.CurrentStockQuantity = p == null ? 0 : p.StocksQuantity;
+                    detail.CurrentStockQuantity = p == null ? 0 :Convert.ToDouble( p.StocksQuantity);
 
                     detail.DepotOutDetailId = Guid.NewGuid().ToString();
                     detail.DepotPositionId = null;
@@ -817,7 +817,7 @@ namespace Book.UI.Settings.StockLimitations
                     this._depotOutDetail.ProduceMaterialdetailsID = item.ProduceMaterialdetailsID;
                     this._depotOutDetail.InvoiceXOId = item.InvoiceXOId;
                     this._depotOutDetail.CurrentDepotQuantity = stock.StockQuantity1; //this.stockManager.GetTheCount1OfProductByProductId(item.Product, this._depotManager.Get(this.lookUpEditDepotId.EditValue.ToString()));
-                    this._depotOutDetail.CurrentStockQuantity = item.Product == null ? 0 : item.Product.StocksQuantity;
+                    this._depotOutDetail.CurrentStockQuantity = item.Product == null ? 0 : Convert.ToDouble(item.Product.StocksQuantity);
                     this._depotOutDetail.DepotPositionDesc = (item.Materialprocessum - item.Materialprocesedsum) < 0 ? "0" : (item.Materialprocessum - item.Materialprocesedsum).ToString();
                     this._depotOut.Details.Add(this._depotOutDetail);
                 }
@@ -910,7 +910,7 @@ namespace Book.UI.Settings.StockLimitations
                     this._depotOutDetail.ProduceOtherMaterialDetailId = item.ProduceOtherMaterialDetailId;
                     this._depotOutDetail.InvoiceXOId = item.InvoiceXOId;
                     this._depotOutDetail.CurrentDepotQuantity = stock.StockQuantity1; //this.stockManager.GetTheCount1OfProductByProductId(item.Product, this._depotManager.Get(this.lookUpEditDepotId.EditValue.ToString()));
-                    this._depotOutDetail.CurrentStockQuantity = item.Product == null ? 0 : item.Product.StocksQuantity;
+                    this._depotOutDetail.CurrentStockQuantity = item.Product == null ? 0 :Convert.ToDouble( item.Product.StocksQuantity);
                     //this._depotOutDetail.CurrentDepotQuantity = this.stockManager.GetTheCount1OfProductByProductId(item.Product, this._depotManager.Get(this.lookUpEditDepotId.EditValue.ToString()));
                     //this._depotOutDetail.CurrentStockQuantity = item.Product == null ? 0 : item.Product.StocksQuantity;
                     this._depotOut.Details.Add(this._depotOutDetail);

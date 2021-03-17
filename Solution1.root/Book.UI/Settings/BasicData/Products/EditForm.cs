@@ -425,6 +425,7 @@ namespace Book.UI.Settings.BasicData.Products
             this.product.IsQiangHua = this.checkEditQiang.Checked;
             this.product.IsFangWu = this.checkEditFang.Checked;
             this.product.IsNoQiangFang = this.checkEditNoQiang.Checked;
+
             if (this.lookUpProduceUnitId.EditValue != null)
             {
                 Model.ProductUnit unit = this.productUnitManager.Get(this.lookUpProduceUnitId.EditValue.ToString());
@@ -626,6 +627,9 @@ namespace Book.UI.Settings.BasicData.Products
             //2019年11月30日21:31:22
             this.product.Hezhuang = this.spe_Hezhuang.Value == 0 ? 1 : (int)this.spe_Hezhuang.Value;
             this.product.Xiangzhuang = this.spe_Xiangzhuang.Value == 0 ? 1 : (int)this.spe_Xiangzhuang.Value;
+
+            //2021年1月17日15:50:02
+            this.product.IsPU = this.checkEditIsPU.Checked;
 
             switch (this.action)
             {
@@ -1148,6 +1152,9 @@ namespace Book.UI.Settings.BasicData.Products
             //2019年11月30日20:53:16
             this.spe_Hezhuang.EditValue = this.product.Hezhuang;
             this.spe_Xiangzhuang.EditValue = this.product.Xiangzhuang;
+
+            //2021年1月17日15:50:46
+            this.checkEditIsPU.EditValue = this.product.IsPU;
 
             if (!string.IsNullOrEmpty(this.product.SunhaoRage))
             {
@@ -3276,7 +3283,7 @@ namespace Book.UI.Settings.BasicData.Products
             //if (hitInfo.InRow && !gridView5.IsGroupRow(hitInfo.RowHandle))
             //{
             //设置商品类别
-            if (this.gridView5.RowCount > 0)
+            if (this.gridView5.RowCount > 0 && this.gridView5.FocusedRowHandle >= 0)
             {
 
                 this.action = "view";

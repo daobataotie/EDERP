@@ -342,7 +342,7 @@
     <value>編號</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
-    <value>檢查時間</value>
+    <value>檢查日期</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>商品名稱</value>

@@ -40,9 +40,9 @@ namespace Book.Model
             {
                 if (this._otherCompactCount == null)
                     this._otherCompactCount = 0;
-                if (this._inDepotCount == null)
-                    this._inDepotCount = 0;
-                return this._otherCompactCount.Value - this._inDepotCount.Value;
+                if (this._arrivalInQuantity == null)
+                    this._arrivalInQuantity = 0;
+                return this._otherCompactCount.Value - this._arrivalInQuantity.Value;
             }
         }
 

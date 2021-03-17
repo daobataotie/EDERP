@@ -79,6 +79,19 @@ namespace Book.DA.SQLServer
 
             return this.DataReaderBind<Model.Supplier>(sql, null, CommandType.Text);
         }
+
+        /// <summary>
+        /// 根据生产站名称查找供应商
+        /// “生產入庫”沒有“供應商”欄位，所以用“公司部門”根據關鍵字匹配“供應商”。
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public Model.Supplier SelectByWorkHouseName(string name)
+        {
+            return sqlmapper.QueryForObject<Model.Supplier>("Supplier.SelectByWorkHouseName", name);
+        }
+
         #endregion
     }
 }
+

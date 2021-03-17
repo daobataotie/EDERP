@@ -23,7 +23,7 @@ namespace Book.DA
 
         DataTable SelectDataTable(string queryId);
         System.Data.DataTable SelectProductStock();
-        System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId);
+        System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, bool showZeroQty);
 
         DataTable SelectDataTable(DateTime endDate);
         /// <summary>

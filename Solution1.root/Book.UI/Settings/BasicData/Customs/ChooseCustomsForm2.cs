@@ -24,7 +24,7 @@ namespace Book.UI.Settings.BasicData.Customs
         public ChooseCustomsForm2(List<Model.Customer> list)
             : this()
         {
-            if (list != null || list.Count > 0)
+            if (list != null && list.Count > 0)
             {
                 Customers.Intersect(list, new CustomerComparer()).ToList().ForEach(C => C.IsChecked = true);
                 this.gridControl1.RefreshDataSource();

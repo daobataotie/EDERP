@@ -483,7 +483,7 @@
     <value>編   號：</value>
   </data>
   <data name="layoutControlItem10.Text" xml:space="preserve">
-    <value>審核人：</value>
+    <value>修改人：</value>
   </data>
   <data name="layoutControlItem3.Text" xml:space="preserve">
     <value>公司部門：</value>

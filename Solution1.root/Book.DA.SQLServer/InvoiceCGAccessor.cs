@@ -144,6 +144,16 @@ namespace Book.DA.SQLServer
 
         }
 
+        public IList<Model.InvoiceCG> SelectByDateAndSuppliers(DateTime startDate, DateTime endDate, string supplierIds)
+        {
+            string sql = "select InvoiceId,InvoiceDate,InvoiceHeji,InvoiceTax,InvoiceAllowance,InvoiceTotal from InvoiceCG where InvoiceDate between '" + startDate.ToString("yyyy-MM-dd") + "' and '" + endDate.Date.AddDays(1).AddSeconds(-1).ToString("yyyy-MM-dd HH:mm:ss") + "' ";
+
+            if (!string.IsNullOrEmpty(supplierIds))
+                sql += " and SupplierId in (" + supplierIds + ")";
+
+            return DataReaderBind<Model.InvoiceCG>(sql, null, CommandType.Text);
+        }
+
         #endregion
     }
 }

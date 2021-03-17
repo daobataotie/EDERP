@@ -76,6 +76,7 @@
       <result property="HomeMade" column="HomeMade" />
       <result property="IsDepot" column="IsDepot"/>
       <result property="IsProcee" column="IsProcee"/>
+      <result property="IsPU" column="IsPU"/>
     </resultMap>
     <resultMap id="ProductResultNotZCMai" class="Product">
       <result property="Id" column="Id" />
@@ -181,6 +182,7 @@
       <result property="Moshu" column="Moshu"/>
       <result property="SunhaoRage" column="SunhaoRage"/>
       <result property="IsDepot" column="IsDepot"/>
+      <result property="IsPU" column="IsPU"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="CustomInspectionRule" column="CustomInspectionRuleId" lazyLoad="false" select="CustomInspectionRule.select_by_primary_key" />
       <result property="Depot" column="DepotId" lazyLoad="false" select="Depot.select_by_primary_key" />
@@ -253,6 +255,7 @@
       <result property="IsDepot" column="IsDepot"/>
       <result property="Hezhuang" column="Hezhuang"/>
       <result property="Xiangzhuang" column="Xiangzhuang"/>
+      <result property="IsPU" column="IsPU"/>
       <result property="ProductCategory" column="ProductCategoryId" lazyLoad="false" select="ProductCategory.select_by_primary_key" />
       <result property="BuyUnit" column="BuyUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
       <result property="QualityTestUnit" column="QualityTestUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
@@ -333,7 +336,9 @@
       Moshu,
       IsDepot,
       Hezhuang,
-      Xiangzhuang
+      Xiangzhuang,
+      IsPU
+      
       from product
       WHERE
 				[ProductId] = #ProductId#
@@ -458,7 +463,9 @@ where ProductId = #productid#
       Moshu,
       IsDepot,
       Hezhuang,
-      Xiangzhuang
+      Xiangzhuang,
+      IsPU
+      
       from product
       WHERE ProductCategoryId = #value# order by Id
     </select>
@@ -676,7 +683,8 @@ where ProductId = #productid#
       [Paihe],
       [Moshu],
       [SunhaoRage],
-      [IsDepot]
+      [IsDepot],
+      [IsPU]
       from product where (id like '%$id$%' or #id# is null) and (ProductName like '%$name$%' or #name# is null) and (CustomerProductName like '%$customerProductName$%' or #customerProductName# is null)
     </select>
     <update id="update_stock" parameterClass="string">
@@ -692,7 +700,7 @@ where ProductId = #productid#
       SELECT Id,ProductId,ProductName,ProductCategoryId,CustomerProductName,ProductDescription,StocksQuantity,IsCustomerProduct FROM Product  where    ProductCategoryId = #value# order by ProductName
     </select>
     <select id="select_by_primary_key3" resultMap="ProductResultBomPar">
-      SELECT Id,ProductId,CustomerId,ProductName,ProductCategoryId,CustomerProductName,ProductDescription,StocksQuantity,IsCustomerProduct,OutSourcing,TrustOut,HomeMade,IsDepot,IsProcee FROM Product  where    ProductId = #value#
+      SELECT Id,ProductId,CustomerId,ProductName,ProductCategoryId,CustomerProductName,ProductDescription,StocksQuantity,IsCustomerProduct,OutSourcing,TrustOut,HomeMade,IsDepot,IsProcee,IsPU FROM Product  where    ProductId = #value#
     </select>
     <select id="select_by_primary_key4" resultMap="ProductResultNotZCMai">
       SELECT
@@ -798,7 +806,8 @@ where ProductId = #productid#
       [Paihe],
       [Moshu],
       [SunhaoRage],
-      [IsDepot]
+      [IsDepot],
+      [IsPU]
       FROM
       [dbo].[Product]
       WHERE
@@ -865,7 +874,8 @@ where ProductId = #productid#
       Moshu,
       IsDepot,
       Hezhuang,
-      Xiangzhuang
+      Xiangzhuang,
+      IsPU
       from product
       WHERE
 				[ProductId] = #ProductId#

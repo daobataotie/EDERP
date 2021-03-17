@@ -136,6 +136,9 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
 
         protected override void Save()
         {
+            //保存前吧鼠标焦点置于 GridControl中，目的是触发一些控件的更改事件，比如说  供应商更改事件
+            //如果控件修改完直接点击保存，对应的修改事件不触发
+            this.gridControl1.Focus();
 
             if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
                 return;
@@ -705,12 +708,12 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                     if (detail == null) return;
                     e.DisplayText = string.IsNullOrEmpty(detail.Product.Id) ? "" : detail.Product.Id;
                     break;
-                case "gridColumn15":    //未到货数量，订单数量-截止到该入库单所有已进货数量
-                    double hasInQty = produceOtherInDepotDetailManager.SelectHasInQty(detail.ProduceOtherCompactDetailId, detail.ProduceOtherInDepotId);
-                    double noInQty = detail.OrderQuantity.HasValue ? detail.OrderQuantity.Value - hasInQty : 0;
+                //case "gridColumn15":    //未到货数量，订单数量-截止到该入库单所有已进货数量
+                //    double hasInQty = produceOtherInDepotDetailManager.SelectHasInQty(detail.ProduceOtherCompactDetailId, detail.ProduceOtherInDepotId);
+                //    double noInQty = detail.OrderQuantity.HasValue ? detail.OrderQuantity.Value - hasInQty : 0;
 
-                    e.DisplayText = (noInQty < 0 ? 0 : noInQty).ToString();
-                    break;
+                //    e.DisplayText = (noInQty < 0 ? 0 : noInQty).ToString();
+                //break;
             }
         }
 
@@ -805,7 +808,6 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
         //选择委外合同
         private void simpleButtonOther_Click_1(object sender, EventArgs e)
         {
-
             ProduceOtherCompact.ChooseOutContract f = new ProduceOtherCompact.ChooseOutContract();
             if (f.ShowDialog(this) != DialogResult.OK) return;
             if (f.key == null || f.key.Count == 0) return;
@@ -842,9 +844,9 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
                 else
                 {
                     detail.InvoiceCusId = item.ProduceOtherCompact.InvoiceXO.CustomerInvoiceXOId;
-                    detail.OrderQuantity = item.OtherCompactCount;
-                    detail.NotArriveQuantity = item.OtherCompactCount;
                 }
+                detail.OrderQuantity = item.OtherCompactCount;
+                detail.NotArriveQuantity = item.OtherCompactCount - item.InDepotCount;
                 detail.Product = item.Product;
                 detail.ProductId = item.ProductId;
                 detail.ProductUnit = item.ProductUnit;
@@ -936,10 +938,26 @@ namespace Book.UI.produceManager.ProduceOtherInDepot
             this.gridControl1.RefreshDataSource();
         }
 
+        //税率变化
         private void spe_InvoiceTaxrate_EditValueChanged(object sender, EventArgs e)
         {
             if (this.action != "view")
                 UpdateMoneyFields();
+        }
+
+        //委外厂商变更，税率变更
+        private void newChooseContorlSipu_EditValueChanged(object sender, EventArgs e)
+        {
+            if (newChooseContorlSipu.EditValue != null && this.action != "view")
+            {
+                Model.Supplier supplier = newChooseContorlSipu.EditValue as Model.Supplier;
+                if (supplier.TaxRateP5.HasValue && supplier.TaxRateP5.Value && supplier.TaxCaluType == 1)
+                {
+                    this.spe_InvoiceTaxrate.Value = 5;
+                }
+                else
+                    this.spe_InvoiceTaxrate.Value = 0;
+            }
         }
     }
 }

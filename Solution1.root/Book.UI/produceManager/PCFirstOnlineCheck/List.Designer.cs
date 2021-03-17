@@ -108,7 +108,7 @@
             // gridColumn2
             // 
             resources.ApplyResources(this.gridColumn2, "gridColumn2");
-            this.gridColumn2.DisplayFormat.FormatString = "yyyy/MM/dd HH:mm";
+            this.gridColumn2.DisplayFormat.FormatString = "yyyy/MM/dd";
             this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn2.FieldName = "CheckDate";
             this.gridColumn2.Name = "gridColumn2";

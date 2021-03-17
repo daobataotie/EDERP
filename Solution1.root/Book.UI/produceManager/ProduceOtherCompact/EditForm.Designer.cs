@@ -139,6 +139,7 @@
             this.barBtnCondContinuousPrint = new DevExpress.XtraBars.BarButtonItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -396,7 +397,8 @@
             this.gridColumnBeforepPackage,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn18});
+            this.gridColumn18,
+            this.gridColumn19});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
@@ -1246,6 +1248,12 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(60, 14);
             this.layoutControlItem7.TextToControlDistance = 5;
             // 
+            // gridColumn19
+            // 
+            resources.ApplyResources(this.gridColumn19, "gridColumn19");
+            this.gridColumn19.FieldName = "NoInDepotCount";
+            this.gridColumn19.Name = "gridColumn19";
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1442,5 +1450,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
     }
 }

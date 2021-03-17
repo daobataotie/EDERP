@@ -42,7 +42,7 @@ namespace Book.UI.produceManager.PCFirstOnlineCheck
 
             //this.TC_InvoiceCusId.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_InvoiceXOCusId);
             //this.TC_Product.DataBindings.Add("Text", DataSource, "Product.ProductName");
-            this.TC_CheckDate.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_CheckDate, "{0:yyyy-MM-dd HH:mm}");
+            this.TC_CheckDate.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_CheckDate, "{0:yyyy-MM-dd}");
             this.TC_Biduixiandu.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_DuibiXiandu);
             this.xrTBusinessHours.DataBindings.Add("Text", DataSource, "BusinessHours." + Model.BusinessHours.PROPERTY_BUSINESSHOURSNAME);
             this.TC_Jihao.DataBindings.Add("Text", DataSource, Model.PCFirstOnlineCheckDetail.PRO_Jihao);

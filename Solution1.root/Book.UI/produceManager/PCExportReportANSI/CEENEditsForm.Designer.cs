@@ -39,8 +39,6 @@
             this.bindingSourceUnit = new System.Windows.Forms.BindingSource(this.components);
             this.newChooseContorlAuditEmp = new Book.UI.Invoices.NewChooseContorl();
             this.textTraceMarking = new DevExpress.XtraEditors.TextEdit();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
             this.txt_AuditState = new DevExpress.XtraEditors.TextEdit();
             this.NccTestPerson = new Book.UI.Invoices.NewChooseContorl();
             this.SpinTestAmount = new DevExpress.XtraEditors.SpinEdit();
@@ -63,8 +61,6 @@
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem89 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem90 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem104 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem105 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem106 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -167,6 +163,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cob_Trans = new DevExpress.XtraEditors.ComboBoxEdit();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -175,7 +172,8 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.cob_Trans = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -205,8 +203,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem89)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem90)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem105)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem106)).BeginInit();
@@ -241,6 +237,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestConstruction.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cob_Trans.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -267,6 +265,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.comboBoxEdit1);
             this.layoutControl1.Controls.Add(this.DateReportDate);
             this.layoutControl1.Controls.Add(this.NccTestPerson4);
             this.layoutControl1.Controls.Add(this.NccTestPerson3);
@@ -274,8 +273,6 @@
             this.layoutControl1.Controls.Add(this.lookUpEditUnit);
             this.layoutControl1.Controls.Add(this.newChooseContorlAuditEmp);
             this.layoutControl1.Controls.Add(this.textTraceMarking);
-            this.layoutControl1.Controls.Add(this.label64);
-            this.layoutControl1.Controls.Add(this.label63);
             this.layoutControl1.Controls.Add(this.txt_AuditState);
             this.layoutControl1.Controls.Add(this.NccTestPerson);
             this.layoutControl1.Controls.Add(this.SpinTestAmount);
@@ -344,16 +341,6 @@
             this.textTraceMarking.MenuManager = this.barManager1;
             this.textTraceMarking.Name = "textTraceMarking";
             this.textTraceMarking.StyleController = this.layoutControl1;
-            // 
-            // label64
-            // 
-            resources.ApplyResources(this.label64, "label64");
-            this.label64.Name = "label64";
-            // 
-            // label63
-            // 
-            resources.ApplyResources(this.label63, "label63");
-            this.label63.Name = "label63";
             // 
             // txt_AuditState
             // 
@@ -432,8 +419,6 @@
             this.emptySpaceItem6,
             this.emptySpaceItem7,
             this.emptySpaceItem8,
-            this.layoutControlItem89,
-            this.layoutControlItem90,
             this.layoutControlItem104,
             this.layoutControlItem105,
             this.layoutControlItem106,
@@ -450,7 +435,8 @@
             this.layoutControlItem10,
             this.layoutControlItem11,
             this.layoutControlItem12,
-            this.layoutControlItem9});
+            this.layoutControlItem9,
+            this.layoutControlItem13});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1096, 581);
@@ -506,9 +492,9 @@
             // 
             this.layoutControlItem8.Control = this.NccTestPerson;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(322, 50);
+            this.layoutControlItem8.Location = new System.Drawing.Point(323, 50);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(356, 25);
+            this.layoutControlItem8.Size = new System.Drawing.Size(355, 25);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(110, 14);
             // 
             // emptySpaceItem2
@@ -567,28 +553,6 @@
             this.emptySpaceItem8.Name = "emptySpaceItem8";
             this.emptySpaceItem8.Size = new System.Drawing.Size(195, 59);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem89
-            // 
-            this.layoutControlItem89.Control = this.label63;
-            resources.ApplyResources(this.layoutControlItem89, "layoutControlItem89");
-            this.layoutControlItem89.Location = new System.Drawing.Point(0, 50);
-            this.layoutControlItem89.Name = "layoutControlItem89";
-            this.layoutControlItem89.Size = new System.Drawing.Size(146, 25);
-            this.layoutControlItem89.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem89.TextToControlDistance = 0;
-            this.layoutControlItem89.TextVisible = false;
-            // 
-            // layoutControlItem90
-            // 
-            this.layoutControlItem90.Control = this.label64;
-            resources.ApplyResources(this.layoutControlItem90, "layoutControlItem90");
-            this.layoutControlItem90.Location = new System.Drawing.Point(146, 50);
-            this.layoutControlItem90.Name = "layoutControlItem90";
-            this.layoutControlItem90.Size = new System.Drawing.Size(176, 25);
-            this.layoutControlItem90.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem90.TextToControlDistance = 0;
-            this.layoutControlItem90.TextVisible = false;
             // 
             // layoutControlItem104
             // 
@@ -1406,6 +1370,18 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
+            // cob_Trans
+            // 
+            resources.ApplyResources(this.cob_Trans, "cob_Trans");
+            this.cob_Trans.MenuManager = this.barManager1;
+            this.cob_Trans.Name = "cob_Trans";
+            this.cob_Trans.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("cob_Trans.Properties.Appearance.BorderColor")));
+            this.cob_Trans.Properties.Appearance.Options.UseBorderColor = true;
+            this.cob_Trans.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cob_Trans.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cob_Trans.Properties.Buttons"))))});
+            this.cob_Trans.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
             // barButtonItem1
             // 
             resources.ApplyResources(this.barButtonItem1, "barButtonItem1");
@@ -1462,17 +1438,23 @@
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barPrintPPE_ItemClick);
             // 
-            // cob_Trans
+            // comboBoxEdit1
             // 
-            resources.ApplyResources(this.cob_Trans, "cob_Trans");
-            this.cob_Trans.MenuManager = this.barManager1;
-            this.cob_Trans.Name = "cob_Trans";
-            this.cob_Trans.Properties.Appearance.BorderColor = ((System.Drawing.Color)(resources.GetObject("memoTrans.Properties.Appearance.BorderColor")));
-            this.cob_Trans.Properties.Appearance.Options.UseBorderColor = true;
-            this.cob_Trans.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cob_Trans.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("memoTrans.Properties.Buttons"))))});
-            this.cob_Trans.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            resources.ApplyResources(this.comboBoxEdit1, "comboBoxEdit1");
+            this.comboBoxEdit1.MenuManager = this.barManager1;
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit1.Properties.Buttons"))))});
+            this.comboBoxEdit1.StyleController = this.layoutControl1;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.comboBoxEdit1;
+            resources.ApplyResources(this.layoutControlItem13, "layoutControlItem13");
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(323, 25);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(110, 14);
             // 
             // CEENEditsForm
             // 
@@ -1512,8 +1494,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem89)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem90)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem105)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem106)).EndInit();
@@ -1548,6 +1528,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestSp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpinTestConstruction.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cob_Trans.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1580,10 +1562,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
         private DevExpress.XtraBars.BarButtonItem BarBtnCutomerOrder;
         private DevExpress.XtraBars.BarButtonItem BarBtnSearch;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label63;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem89;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem90;
         private DevExpress.XtraEditors.TextEdit textTraceMarking;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
@@ -1700,5 +1678,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraEditors.ComboBoxEdit cob_Trans;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
     }
 }

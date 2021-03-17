@@ -528,6 +528,8 @@ namespace Book.Model
 
         private int? _xiangzhuang;
 
+        private bool? _IsPU;
+
         /// <summary>
         /// 客户
         /// </summary>
@@ -2106,6 +2108,25 @@ namespace Book.Model
             }
         }
 
+        private bool? _isQiangHua;
+        public bool? IsQiangHua
+        {
+            get { return this._isQiangHua; }
+            set { this._isQiangHua = value; }
+        }
+        private bool? _isFangWu;
+        public bool? IsFangWu
+        {
+            get { return this._isFangWu; }
+            set { this._isFangWu = value; }
+        }
+        private bool? _isNoQiangFang;
+        public bool? IsNoQiangFang
+        {
+            get { return this._isNoQiangFang; }
+            set { this._isNoQiangFang = value; }
+        }
+
         /// <summary>
         /// 原料净重
         /// </summary>
@@ -2151,6 +2172,15 @@ namespace Book.Model
             set { _SunhaoRage = value; }
         }
 
+        /// <summary>
+        /// 仓库
+        /// </summary>
+        public bool? IsDepot
+        {
+            get { return _IsDepot; }
+            set { _IsDepot = value; }
+        }
+
         public int? Hezhuang
         {
             get { return _hezhuang; }
@@ -2161,6 +2191,12 @@ namespace Book.Model
         {
             get { return _xiangzhuang; }
             set { _xiangzhuang = value; }
+        }
+
+        public bool? IsPU
+        {
+            get { return _IsPU; }
+            set { _IsPU = value; }
         }
 
         /// <summary>
@@ -2480,36 +2516,6 @@ namespace Book.Model
 
         }
 
-        private bool? _isQiangHua;
-        public bool? IsQiangHua
-        {
-            get
-            { return this._isQiangHua; }
-            set { this._isQiangHua = value; }
-        }
-        private bool? _isFangWu;
-        public bool? IsFangWu
-        {
-            get
-            { return this._isFangWu; }
-            set { this._isFangWu = value; }
-        }
-        private bool? _isNoQiangFang;
-        public bool? IsNoQiangFang
-        {
-            get
-            { return this._isNoQiangFang; }
-            set { this._isNoQiangFang = value; }
-        }
-
-        /// <summary>
-        /// 仓库
-        /// </summary>
-        public bool? IsDepot
-        {
-            get { return _IsDepot; }
-            set { _IsDepot = value; }
-        }
         /// <summary>
         /// 强化
         /// </summary>
@@ -3036,6 +3042,8 @@ namespace Book.Model
         public readonly static string PRO_Hezhuang = "Hezhuang";
 
         public readonly static string PRO_Xiangzhuang = "Xiangzhuang";
+
+        public readonly static string PRO_IsPU = "IsPU";
 
         #endregion
     }

@@ -270,10 +270,19 @@ namespace Book.UI.produceManager.PCFinishCheck
             // checkEdit1
             // 
             resources.ApplyResources(this.checkEdit1, "checkEdit1");
+            this.checkEdit1.BackgroundImage = null;
             this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.AccessibleDescription = null;
+            this.checkEdit1.Properties.AccessibleName = null;
             this.checkEdit1.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkEdit1.Properties.Appearance.Font")));
+            this.checkEdit1.Properties.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("checkEdit1.Properties.Appearance.GradientMode")));
+            this.checkEdit1.Properties.Appearance.Image = null;
             this.checkEdit1.Properties.Appearance.Options.UseFont = true;
+            this.checkEdit1.Properties.AutoHeight = ((bool)(resources.GetObject("checkEdit1.Properties.AutoHeight")));
             this.checkEdit1.Properties.Caption = resources.GetString("checkEdit1.Properties.Caption");
+            this.checkEdit1.Properties.DisplayValueChecked = resources.GetString("checkEdit1.Properties.DisplayValueChecked");
+            this.checkEdit1.Properties.DisplayValueGrayed = resources.GetString("checkEdit1.Properties.DisplayValueGrayed");
+            this.checkEdit1.Properties.DisplayValueUnchecked = resources.GetString("checkEdit1.Properties.DisplayValueUnchecked");
             // 
             // lbl_JHDate
             // 
@@ -1304,6 +1313,7 @@ namespace Book.UI.produceManager.PCFinishCheck
             // ReportFooter
             // 
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
+            this.ReportFooter.Expanded = false;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrPageInfo1
@@ -1337,7 +1347,7 @@ namespace Book.UI.produceManager.PCFinishCheck
             this.ReportFooter,
             this.PageFooter});
             resources.ApplyResources(this, "$this");
-            this.Margins = new System.Drawing.Printing.Margins(80, 80, 80, 80);
+            this.Margins = new System.Drawing.Printing.Margins(79, 79, 79, 79);
             this.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 0, 0, 0, 254F);
             this.PageHeight = 2794;
             this.PageWidth = 2159;

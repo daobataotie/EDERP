@@ -425,9 +425,6 @@
   <data name="radioGroupBarCode.Properties.Items3" xml:space="preserve">
     <value>自動生成</value>
   </data>
-  <data name="textEditProductName.EditValue" xml:space="preserve">
-    <value />
-  </data>
   <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
     <value>商品條碼:</value>
   </data>
@@ -1043,5 +1040,11 @@
   </data>
   <data name="gridColumn33.Caption" xml:space="preserve">
     <value>供應商</value>
+  </data>
+  <data name="layoutControlItem104.Text" xml:space="preserve">
+    <value>委外發料單已分配數量：</value>
+  </data>
+  <data name="layoutControlItem98.Text" xml:space="preserve">
+    <value>領料單已分配數量：</value>
   </data>
 </root>

@@ -1408,5 +1408,11 @@ namespace Book.UI.Invoices.XS
                 TaxMethod(false);
             }
         }
+
+        //ÕÛ×Œ
+        private void calcInvoiceAllowance_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

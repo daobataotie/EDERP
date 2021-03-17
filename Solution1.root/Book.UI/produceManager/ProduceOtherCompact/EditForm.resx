@@ -638,7 +638,7 @@
     <value>True</value>
   </data>
   <data name="ColOtherCompactPrice.VisibleIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="ColOtherCompactPrice.Width" type="System.Int32, mscorlib">
     <value>52</value>
@@ -737,7 +737,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gridColumn14.Width" type="System.Int32, mscorlib">
     <value>48</value>
@@ -755,7 +755,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn15.VisibleIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="gridColumn15.Width" type="System.Int32, mscorlib">
     <value>72</value>
@@ -767,7 +767,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn17.VisibleIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="gridColumn17.Width" type="System.Int32, mscorlib">
     <value>84</value>
@@ -785,7 +785,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn16.VisibleIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="gridColumn16.Width" type="System.Int32, mscorlib">
     <value>72</value>
@@ -797,7 +797,7 @@
     <value>True</value>
   </data>
   <data name="gridColumnBeforepPackage.VisibleIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>下个生产站</value>
@@ -836,7 +836,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>备注</value>
@@ -845,7 +845,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="gridColumn18.Caption" xml:space="preserve">
     <value>進貨數量</value>
@@ -858,6 +858,15 @@
   </data>
   <data name="gridColumn18.Width" type="System.Int32, mscorlib">
     <value>56</value>
+  </data>
+  <data name="gridColumn19.Caption" xml:space="preserve">
+    <value>已定未入量</value>
+  </data>
+  <data name="gridColumn19.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn19.VisibleIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>890, 175</value>
@@ -2274,6 +2283,12 @@
   </data>
   <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn19.Name" xml:space="preserve">
+    <value>gridColumn19</value>
+  </data>
+  <data name="&gt;&gt;gridColumn19.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

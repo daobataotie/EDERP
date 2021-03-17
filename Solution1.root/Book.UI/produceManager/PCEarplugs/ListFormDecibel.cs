@@ -13,14 +13,27 @@ namespace Book.UI.produceManager.PCEarplugs
     public partial class ListFormDecibel : Book.UI.Settings.BasicData.BaseListForm
     {
         BL.PCEarplugsDecibelCheckDetailManager _pCEarplugsDecibelCheckDetailManager = new Book.BL.PCEarplugsDecibelCheckDetailManager();
-
+        int tag = 0;
         public ListFormDecibel()
         {
             InitializeComponent();
         }
 
+        public ListFormDecibel(string invoiceCusId)
+            : this()
+        {
+            this.tag = 1;
+            this.bindingSource1.DataSource = _pCEarplugsDecibelCheckDetailManager.SelectByDateRage(global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, invoiceCusId);
+        }
+
         protected override void RefreshData()
         {
+            if (this.tag == 1)
+            {
+                this.tag = 0;
+                return;
+            }
+
             this.bindingSource1.DataSource = _pCEarplugsDecibelCheckDetailManager.SelectByDateRage(DateTime.Now.AddDays(-15), global::Helper.DateTimeParse.EndDate, null, null);
             barStaticItem1.Caption = string.Format("{0}项", this.bindingSource1.Count);
 

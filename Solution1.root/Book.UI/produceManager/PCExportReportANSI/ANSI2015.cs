@@ -42,11 +42,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.action = "view";
 
             var jiShuBiaoZhun = new BL.SettingManager().SelectByName("ANSI2015JiShuBiaoZhun");
+            jiShuBiaoZhun = jiShuBiaoZhun.OrderByDescending(j => j.IdNO).ToList();
             foreach (var item in jiShuBiaoZhun)
             {
                 comboBoxEdit1.Properties.Items.Add(item.SettingCurrentValue);
             }
-            comboBoxEdit1.SelectedIndex = 0;
 
             var signature = new BL.SettingManager().SelectByName("ALANSignature");
             foreach (var item in jiShuBiaoZhun)
@@ -122,6 +122,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ExportReportId = this._PCExportReportANSIManager.GetId();
             this._PCExportReportANSI.ReportDate = DateTime.Now.Date;
             this._PCExportReportANSI.ExpType = "ANSI2015";
+            this._PCExportReportANSI.CSAJiShuBiaoZhun = comboBoxEdit1.Properties.Items.Count > 0 ? comboBoxEdit1.Properties.Items[0].ToString() : "";
 
             this._PCExportReportANSI.Employee = BL.V.ActiveOperator.Employee;
             this._PCExportReportANSI.EmployeeId = BL.V.ActiveOperator.EmployeeId;

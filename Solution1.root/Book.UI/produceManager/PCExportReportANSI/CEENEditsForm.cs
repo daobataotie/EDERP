@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Linq;
 
 namespace Book.UI.produceManager.PCExportReportANSI
 {
@@ -41,8 +42,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.bindingSourceUnit.DataSource = (new BL.ProductUnitManager()).Select();
             this.action = "view";
 
-            var jiShuBiaoZhun = new BL.SettingManager().SelectByName("CEEN_Tran");
+            var jiShuBiaoZhun = new BL.SettingManager().SelectByName("CEENJiShuBiaoZhun");
+            jiShuBiaoZhun = jiShuBiaoZhun.OrderByDescending(j => j.IdNO).ToList();
             foreach (var item in jiShuBiaoZhun)
+            {
+                comboBoxEdit1.Properties.Items.Add(item.SettingCurrentValue);
+            }
+
+
+            var CEEN_Tran = new BL.SettingManager().SelectByName("CEEN_Tran");
+            foreach (var item in CEEN_Tran)
             {
                 cob_Trans.Properties.Items.Add(item.SettingCurrentValue);
             }
@@ -114,6 +123,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.ExportReportId = this._PCExportReportANSIManager.GetId();
             this._PCExportReportANSI.ReportDate = DateTime.Now.Date;
             this._PCExportReportANSI.ExpType = "CEEN";
+            this._PCExportReportANSI.CSAJiShuBiaoZhun = comboBoxEdit1.Properties.Items.Count > 0 ? comboBoxEdit1.Properties.Items[0].ToString() : "";
 
             this._PCExportReportANSI.Employee = BL.V.ActiveOperator.Employee;
             this._PCExportReportANSI.EmployeeId = BL.V.ActiveOperator.EmployeeId;
@@ -166,6 +176,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this._PCExportReportANSI.Protectionone = this.textProtectionone.Text == null ? null : this.textProtectionone.Text.ToString();
             this._PCExportReportANSI.Protectiontwo = this.textProtectiontwo.Text == null ? null : this.textProtectiontwo.Text.ToString();
             this._PCExportReportANSI.ReportDate = this.DateReportDate.EditValue == null ? DateTime.Now : this.DateReportDate.DateTime;
+
+            this._PCExportReportANSI.CSAJiShuBiaoZhun = this.comboBoxEdit1.SelectedText;
 
             if (this._PCExportReportANSI.Customer != null)
             {
@@ -317,6 +329,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.txt_AuditState.EditValue = this.GetAuditName(this._PCExportReportANSI.AuditState);
 
             this.lookUpEditUnit.EditValue = this._PCExportReportANSI.ProductUnitId;
+
+            this.comboBoxEdit1.Text = string.IsNullOrEmpty(this._PCExportReportANSI.CSAJiShuBiaoZhun) ? "CE EN166:2001" : this._PCExportReportANSI.CSAJiShuBiaoZhun;
         }
 
         //列印

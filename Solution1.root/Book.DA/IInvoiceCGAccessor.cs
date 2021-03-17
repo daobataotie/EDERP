@@ -34,6 +34,8 @@ namespace Book.DA
         IList<Book.Model.InvoiceCG> Select1(DateTime start, DateTime end);
         IList<Book.Model.InvoiceCG> Select(Model.Supplier supplier);
         IList<Book.Model.InvoiceCG> Select(string costartid, string coendid, Model.Supplier SupplierStart, Model.Supplier SupplierEnd, DateTime dateStart, DateTime dateEnd, Model.Product productStart, Model.Product productEnd, string cusxoid, DateTime dateJHStart, DateTime dateJHEnd, string InvoiceCGIdStart, string InvoiceCGIdEnd);
+
+        IList<Model.InvoiceCG> SelectByDateAndSuppliers(DateTime startDate, DateTime endDate, string supplierIds);
     }
 }
 

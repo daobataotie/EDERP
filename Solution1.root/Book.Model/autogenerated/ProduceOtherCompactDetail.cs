@@ -203,7 +203,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 数量
+		/// 订单数量
 		/// </summary>
 		public double? OtherCompactCount
 		{
@@ -263,7 +263,7 @@ namespace Book.Model
 		}
 
 		/// <summary>
-		/// 入库数量
+		/// 已入库数量
 		/// </summary>
 		public double? InDepotCount
 		{

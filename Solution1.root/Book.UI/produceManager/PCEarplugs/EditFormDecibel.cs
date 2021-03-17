@@ -296,7 +296,8 @@ namespace Book.UI.produceManager.PCEarplugs
                         detail.Product = item.Product;
                         detail.ProductId = item.ProductId;
                         detail.ProductUnit = item.InvoiceProductUnit;
-                        detail.InvoiceXOId = item.Invoice.InvoiceXOId;
+                        if (!string.IsNullOrEmpty(item.Invoice.InvoiceXOId))
+                            detail.InvoiceXOId = item.Invoice.InvoiceXOId;
                         detail.InvoiceXOQuantity = item.OrderQuantity;
 
                         Model.InvoiceXO xo = invoiceXOManager.Get(detail.InvoiceXOId);

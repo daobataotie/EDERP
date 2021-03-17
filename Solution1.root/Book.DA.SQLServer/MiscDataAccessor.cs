@@ -480,7 +480,7 @@ namespace Book.DA.SQLServer
             return table;
         }
 
-        public System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId)
+        public System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, bool showZeroQty)
         {
             System.Data.SqlClient.SqlDataAdapter sda = new System.Data.SqlClient.SqlDataAdapter();
             sda.SelectCommand = new System.Data.SqlClient.SqlCommand();
@@ -493,7 +493,11 @@ namespace Book.DA.SQLServer
             switch (queryId)
             {
                 case "Q14":
-                    sql = "select (isnull(p.ProduceMaterialDistributioned,0)+isnull(p.OtherMaterialDistributioned,0)) yifenpeiquantity,d.DepotName,p.Id as spid,p.ProductName,p.CustomerProductName,p.ProductVersion,pu.CnName,dp.Id as DepotPositionId,s.StockQuantity1 as Quantity,p.ProductDescription as ProductDesc from stock s left join product p on s.ProductId=p.ProductId left join ProductUnit pu on pu.ProductUnitId=p.DepotUnitId left join Depot d on s.DepotId=d.DepotId left join DepotPosition dp on s.DepotPositionId=dp.DepotPositionId WHERE (d.depotid='" + depotId + "'  OR '" + depotId + "'='null' OR '" + depotId + "'='') AND (dp.DepotPositionId ='" + depotPositionId + "' OR '" + depotPositionId + "'='null' OR '" + depotPositionId + "'='') AND (p.productid IN(SELECT ProductId FROM Product WHERE ProductCategoryId='" + productCategoryId + "')  OR '" + productCategoryId + "'='null' OR '" + productCategoryId + "'=''   ) and  (p.productid IN(SELECT ProductId FROM Product WHERE ProductName  like '%" + ProductNameOrId + "%')  OR '" + ProductNameOrId + "'='null' OR '" + ProductNameOrId + "'=''   ) and StockQuantity1<>0";
+                    sql = "select (isnull(p.ProduceMaterialDistributioned,0)+isnull(p.OtherMaterialDistributioned,0)) yifenpeiquantity,d.DepotName,p.Id as spid,p.ProductName,p.CustomerProductName,p.ProductVersion,pu.CnName,dp.Id as DepotPositionId,s.StockQuantity1 as Quantity,p.ProductDescription as ProductDesc from stock s left join product p on s.ProductId=p.ProductId left join ProductUnit pu on pu.ProductUnitId=p.DepotUnitId left join Depot d on s.DepotId=d.DepotId left join DepotPosition dp on s.DepotPositionId=dp.DepotPositionId WHERE (d.depotid='" + depotId + "'  OR '" + depotId + "'='null' OR '" + depotId + "'='') AND (dp.DepotPositionId ='" + depotPositionId + "' OR '" + depotPositionId + "'='null' OR '" + depotPositionId + "'='') AND (p.productid IN(SELECT ProductId FROM Product WHERE ProductCategoryId='" + productCategoryId + "')  OR '" + productCategoryId + "'='null' OR '" + productCategoryId + "'=''   ) and  (p.productid IN(SELECT ProductId FROM Product WHERE ProductName  like '%" + ProductNameOrId + "%')  OR '" + ProductNameOrId + "'='null' OR '" + ProductNameOrId + "'='' )";
+
+                    if (!showZeroQty)
+                        sql += " and StockQuantity1<>0";
+
                     break;
             }
             if (!string.IsNullOrEmpty(sql))

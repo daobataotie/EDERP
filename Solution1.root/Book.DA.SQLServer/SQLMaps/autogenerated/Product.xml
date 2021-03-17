@@ -116,6 +116,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <result property="IsDepot" column="IsDepot"/>
       <result property="Hezhuang" column="Hezhuang"/>
       <result property="Xiangzhuang" column="Xiangzhuang"/>
+      <result property="IsPU" column="IsPU"/>
       <result property="Customer" column="CustomerId" lazyLoad="false" select="Customer.select_SimpleCustomer" />
       <result property="EmployeeChange" column="EmployeeChangeId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
       <result property="EmployeeCreator" column="EmployeeCreatorId" lazyLoad="false" select="Employee.select_SimpleEmployee" />
@@ -333,7 +334,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         [SunhaoRage],
         [IsDepot],
         [Hezhuang],
-        [Xiangzhuang]
+        [Xiangzhuang],
+        [IsPU]
 			FROM
 				[dbo].[Product]
 			WHERE
@@ -497,7 +499,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [SunhaoRage],
       [IsDepot],
       [Hezhuang],
-      [Xiangzhuang]
+      [Xiangzhuang],
+      [IsPU]
       )
       VALUES
       (
@@ -610,7 +613,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       #SunhaoRage#,
       #IsDepot#,
       #Hezhuang#,
-      #Xiangzhuang#
+      #Xiangzhuang#,
+      #IsPU#
       )
 
     </insert>
@@ -726,7 +730,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       [SunhaoRage]=#SunhaoRage#,
       [IsDepot]=#IsDepot#,
       [Hezhuang]=#Hezhuang#,
-      [Xiangzhuang]=#Xiangzhuang#
+      [Xiangzhuang]=#Xiangzhuang#,
+      [IsPU]=#IsPU#
       WHERE
       [ProductId] = #ProductId#
 

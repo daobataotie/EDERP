@@ -1594,6 +1594,12 @@ namespace Book.UI.Invoices.CG
                 TaxMethod(false);
             }
         }
+
+        //折讓
+        private void calcInvoiceAllowance_EditValueChanged(object sender, EventArgs e)
+        {
+            UpdateMoneyFields();
+        }
     }
 }
 

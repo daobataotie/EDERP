@@ -230,6 +230,11 @@ namespace Book.BL
         {
             return accessor.SelectNameAndCategoryByCategoryId(supplierCategoryIds);
         }
+
+        public Model.Supplier SelectByWorkHouseName(string name)
+        {
+            return accessor.SelectByWorkHouseName(name);
+        }
     }
 }
 

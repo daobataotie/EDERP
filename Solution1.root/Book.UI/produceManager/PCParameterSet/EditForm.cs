@@ -126,6 +126,11 @@ namespace Book.UI.produceManager.PCParameterSet
             da.Rows.Add(dr);
 
             dr = da.NewRow();
+            dr["SettingSetId"] = "CEENJiShuBiaoZhun";
+            dr["SettingName"] = "CEEN外銷報告技術標準";
+            da.Rows.Add(dr);
+
+            dr = da.NewRow();
             dr["SettingSetId"] = "ALANSignature";
             dr["SettingName"] = "ALAN外销报告署名";
             da.Rows.Add(dr);

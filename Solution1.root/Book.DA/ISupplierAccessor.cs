@@ -24,6 +24,8 @@ namespace Book.DA
         IList<Model.Supplier> Zhunshilv(DateTime startDate, DateTime endDate, string supplierCategoryIds);
 
         IList<Model.Supplier> SelectNameAndCategoryByCategoryId(string supplierCategoryIds);
+
+        Model.Supplier SelectByWorkHouseName(string name);
     }
 }
 

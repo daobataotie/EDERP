@@ -56,7 +56,7 @@ namespace Book.UI.Query
 
         private void Q14Form_Load(object sender, EventArgs e)
         {
-
+            this.gridControl1.Dock = DockStyle.Fill;
         }
 
         private void simpleButton_Search_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace Book.UI.Query
 
             else
             {
-                miscDatas = this.miscDataManager.SelectByCondition("Q14", this.lookUpEditDepot.EditValue == null ? null : this.lookUpEditDepot.EditValue.ToString(), this.lookUpEditDepotPosition.EditValue == null ? null : this.lookUpEditDepotPosition.EditValue.ToString(), this.lookUpEditProductType.EditValue == null ? null : this.lookUpEditProductType.EditValue.ToString(), this.textProductNameOrId.Text);
+                miscDatas = this.miscDataManager.SelectByCondition("Q14", this.lookUpEditDepot.EditValue == null ? null : this.lookUpEditDepot.EditValue.ToString(), this.lookUpEditDepotPosition.EditValue == null ? null : this.lookUpEditDepotPosition.EditValue.ToString(), this.lookUpEditProductType.EditValue == null ? null : this.lookUpEditProductType.EditValue.ToString(), this.textProductNameOrId.Text, checkEdit_ShowZero.Checked);
             }
             this.bindingSource1.DataSource = miscDatas;
             this.gridView1.GroupPanelText = "¿‚Ó›ä›: " + miscDatas.Rows.Count;

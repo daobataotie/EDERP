@@ -332,7 +332,7 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
                         detail.ProductSpecification = detail.Product.ProductSpecification;
                         detail.OtherMaterialQuantity = 0;
                         detail.OtherMaterialALLUserQuantity = 0;
-                        detail.ProductStock = detail.Product.StocksQuantity;
+                        detail.ProductStock = Convert.ToDouble(detail.Product.StocksQuantity);
                         if (!detail.Product.ProduceMaterialDistributioned.HasValue)
                             detail.Product.ProduceMaterialDistributioned = 0;
                         if (!detail.Product.OtherMaterialDistributioned.HasValue)
@@ -352,7 +352,7 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
                     detail.ProductSpecification = detail.Product.ProductSpecification;
                     detail.OtherMaterialQuantity = 0;
                     detail.OtherMaterialALLUserQuantity = 0;
-                    detail.ProductStock = detail.Product.StocksQuantity;
+                    detail.ProductStock = Convert.ToDouble(detail.Product.StocksQuantity);
                     if (!detail.Product.ProduceMaterialDistributioned.HasValue)
                         detail.Product.ProduceMaterialDistributioned = 0;
                     if (!detail.Product.OtherMaterialDistributioned.HasValue)
@@ -412,7 +412,7 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
                         {
                             produceOtherMaterialDetail.Product = ProduceOtherCompactDetail.Product;
                             produceOtherMaterialDetail.ProductId = ProduceOtherCompactDetail.Product.ProductId;
-                            produceOtherMaterialDetail.ProductStock = ProduceOtherCompactDetail.Product.StocksQuantity;
+                            produceOtherMaterialDetail.ProductStock = Convert.ToDouble(ProduceOtherCompactDetail.Product.StocksQuantity);
                             if (ProduceOtherCompactDetail.Product.MainUnit != null)
                             {
                                 produceOtherMaterialDetail.ProductUnit = ProduceOtherCompactDetail.Product.MainUnit.CnName;
@@ -455,7 +455,7 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
                     detail.OtherMaterialALLUserQuantity = 0;
                     detail.Product = p;
                     detail.ProductId = p.ProductId;
-                    detail.ProductStock = p.StocksQuantity;
+                    detail.ProductStock = Convert.ToDouble(p.StocksQuantity );
                     detail.ProductSpecification = p.ProductSpecification;
 
                     this.bindingSourceDetails.Position = this.bindingSourceDetails.IndexOf(detail);
@@ -639,7 +639,7 @@ namespace Book.UI.produceManager.ProduceOtherMaterial
                 detail.Description = item.Description;
                 detail.ParentProductId = item.ParentProductId;
                 detail.ParentProduct = item.ParentProduct;
-                detail.ProductStock = detail.Product.StocksQuantity;
+                detail.ProductStock = Convert.ToDouble(detail.Product.StocksQuantity);
 
                 if (!detail.Product.ProduceMaterialDistributioned.HasValue)
                     detail.Product.ProduceMaterialDistributioned = 0;

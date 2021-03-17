@@ -334,6 +334,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
         //选择加工单
         private void barPronoteHeader_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (this.action == "view")
+                return;
+
             Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm pronoForm = new Book.UI.produceManager.PronoteHeader.ChoosePronoteHeaderDetailsForm(3, true);
             if (pronoForm.ShowDialog(this) == DialogResult.OK)
             {

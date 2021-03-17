@@ -49,7 +49,6 @@ namespace Book.UI.Query
             this.bindingSourceBank.DataSource = bankManager.Select();
 
             this.action = "view";
-
         }
 
         public ShouldPayForm(Model.ShouldPayAccount model)
@@ -264,21 +263,24 @@ namespace Book.UI.Query
             this.nccEmployee.Enabled = false;
 
             //只有新增时，因付票据才能增减，修改不行
-            if (this.action == "insert")
-            {
-                btn_YFAdd.Enabled = true;
-                btn_YFRemove.Enabled = true;
-            }
-            else
-            {
-                btn_YFAdd.Enabled = false;
-                btn_YFRemove.Enabled = false;
-            }
+            //if (this.action == "insert")
+            //{
+            //    btn_YFAdd.Enabled = true;
+            //    btn_YFRemove.Enabled = true;
+            //}
+            //else
+            //{
+            //    btn_YFAdd.Enabled = false;
+            //    btn_YFRemove.Enabled = false;
+            //}
 
             this.txt_AtSummonId_P1.Enabled = false;
             this.cob_AtSummonCategory_P1.Enabled = false;
             this.txt_AtSummonId.Enabled = false;
             this.cobAtSummonCategory.Enabled = false;
+
+            //编辑状态下可以打印，为了预览打印效果，没啥问题再保存
+            barButtonItemPrint.Enabled = true;
         }
 
         protected override void Save()
@@ -644,6 +646,23 @@ namespace Book.UI.Query
 
         protected override DevExpress.XtraReports.UI.XtraReport GetReport()
         {
+            if (this.action != "view")  //编辑状态下打印，数据先赋值一下
+            {
+                //应付账款明细表
+                this.shouldPayAccount.InvoiceDate = this.txt_InvoiceDate.Text;
+                this.shouldPayAccount.PayDate = this.txt_FKDate.Text;
+
+                this.shouldPayAccount.Supplier = this.nccSupplier.EditValue as Model.Supplier;
+                this.shouldPayAccount.SupplierId = this.shouldPayAccount.Supplier == null ? null : this.shouldPayAccount.Supplier.SupplierId;
+                
+                this.shouldPayAccount.JinE = this.spe_JinE.Value;
+                this.shouldPayAccount.ShuiE = this.spe_ShuiE.Value;
+                this.shouldPayAccount.ZheRang = this.spe_ZheRang.Value;
+                this.shouldPayAccount.PayZheRang = this.spe_FKZheRang.Value;
+                this.shouldPayAccount.Total = this.spe_Total.Value;
+                this.shouldPayAccount.EmployeeId = BL.V.ActiveOperator.EmployeeId;
+            }
+
             Model.ShouldPayAccountCondition model = this.shouldPayAccount.ShouldPayAccountCondition;
             if (model != null)
                 dt = this.invoicecgmanager.SelectByConditionCOBiao(model.StartInvoiceDate, model.EndInvoiceDate, model.StartJHDate == null ? global::Helper.DateTimeParse.NullDate : (DateTime)model.StartJHDate, model.EndJHDate == null ? global::Helper.DateTimeParse.EndDate : (DateTime)model.EndJHDate, model.StartFKDate, model.EndFKDate, model.SupplierStart, model.SupplierEnd, model.ProductStart, model.ProductEnd, model.COStartId, model.COEndId, model.CusXOId, model.EmpStart, model.EmpEnd);
@@ -657,6 +676,7 @@ namespace Book.UI.Query
             {
                 atSummonIds += item.Id + ',';
             }
+
             return new ROInvoiceCGlistBiao(this.shouldPayAccount, dt, atSummonIds.TrimEnd(','), this.atBillsIncomeList);
         }
         #endregion
@@ -850,6 +870,8 @@ namespace Book.UI.Query
                     {
                         ROInvoiceCGlistBiao ro = new ROInvoiceCGlistBiao(condition);
                         ro.ShowPreviewDialog();
+
+                        return;
                     }
                     catch (Exception ex)
                     {
@@ -1186,12 +1208,7 @@ namespace Book.UI.Query
                 this.gridControl3.RefreshDataSource();
             }
 
-            decimal pmtotal = 0;
-            foreach (var item in this.atBillsIncomeList)
-            {
-                pmtotal += Convert.ToDecimal(item.NotesMoney);
-            }
-            this.spe_PMTotal.EditValue = pmtotal;
+            CountJieDaiTotal(this.atSummon.Details);
         }
 
         private void gridView3_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

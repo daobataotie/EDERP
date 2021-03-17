@@ -131,6 +131,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             dr = dt.NewRow();
             dr[0] = "出貨報告";
             dt.Rows.Add(dr);
+
+            dr = dt.NewRow();
+            dr[0] = "耳塞測試";
+            dt.Rows.Add(dr);
         }
 
         private void gridControl1_DoubleClick(object sender, EventArgs e)
@@ -704,6 +708,19 @@ namespace Book.UI.produceManager.PCExportReportANSI
                         PCFinishCheck.ListForm listform = new Book.UI.produceManager.PCFinishCheck.ListForm(invoiceCusId);
                         listform.Show(this);
                     }
+
+                    else if (name.Contains("耳塞測試"))
+                    {
+                        PCEarplugs.ListFormDecibel decibel = new Book.UI.produceManager.PCEarplugs.ListFormDecibel(invoiceCusId);
+                        decibel.Show(this);
+
+                        PCEarplugs.ListFormResilience resilience = new Book.UI.produceManager.PCEarplugs.ListFormResilience(invoiceCusId);
+                        resilience.Show(this);
+
+                        PCEarplugs.ListFormStayWire stayWire = new Book.UI.produceManager.PCEarplugs.ListFormStayWire(invoiceCusId);
+                        stayWire.Show(this);
+                    }
+
                     //}
                     //}
                 }

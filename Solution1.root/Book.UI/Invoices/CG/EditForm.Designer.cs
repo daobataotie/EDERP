@@ -29,11 +29,11 @@ namespace Book.UI.Invoices.CG
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.che_CheckAll = new DevExpress.XtraEditors.CheckEdit();
             this.btn_GenerateInputCheck = new DevExpress.XtraEditors.SimpleButton();
@@ -404,6 +404,7 @@ namespace Book.UI.Invoices.CG
             this.calcInvoiceAllowance.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.calcInvoiceAllowance.StyleController = this.layoutControl1;
+            this.calcInvoiceAllowance.EditValueChanged += new System.EventHandler(this.calcInvoiceAllowance_EditValueChanged);
             // 
             // simpleButton_Remove
             // 

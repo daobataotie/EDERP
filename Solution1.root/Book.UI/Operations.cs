@@ -794,6 +794,9 @@ namespace Book.UI
 
             //首件上线检查表
             operations.Add("produceManager.PCFirstOnlineCheck.Editform", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCFirstOnlineCheck.Editform", form); });
+
+            //應付帳款(按科目)
+            operations.Add("Query.ShouPayBySubjectForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.ShouPayBySubjectForm", form); });
         }
 
         static Form CreateForm(string formTypeName)

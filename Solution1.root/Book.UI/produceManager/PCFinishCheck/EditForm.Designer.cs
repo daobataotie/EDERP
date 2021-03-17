@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txt_InvoiceCountNum = new DevExpress.XtraEditors.TextEdit();
             this.radio_AttrESSFYGZTZ = new DevExpress.XtraEditors.RadioGroup();
             this.radio_AttrESSSFZH = new DevExpress.XtraEditors.RadioGroup();
             this.txt_Pihao = new DevExpress.XtraEditors.TextEdit();
@@ -128,17 +129,17 @@
             this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem47 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.barBtn_Search = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.txt_InvoiceCountNum = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem48 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_InvoiceCountNum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radio_AttrESSFYGZTZ.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radio_AttrESSSFZH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Pihao.Properties)).BeginInit();
@@ -227,9 +228,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_InvoiceCountNum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -311,6 +311,13 @@
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // txt_InvoiceCountNum
+            // 
+            resources.ApplyResources(this.txt_InvoiceCountNum, "txt_InvoiceCountNum");
+            this.txt_InvoiceCountNum.MenuManager = this.barManager1;
+            this.txt_InvoiceCountNum.Name = "txt_InvoiceCountNum";
+            this.txt_InvoiceCountNum.StyleController = this.layoutControl1;
             // 
             // radio_AttrESSFYGZTZ
             // 
@@ -1279,6 +1286,15 @@
             this.layoutControlItem47.Size = new System.Drawing.Size(430, 33);
             this.layoutControlItem47.TextSize = new System.Drawing.Size(125, 14);
             // 
+            // layoutControlItem48
+            // 
+            this.layoutControlItem48.Control = this.txt_InvoiceCountNum;
+            resources.ApplyResources(this.layoutControlItem48, "layoutControlItem48");
+            this.layoutControlItem48.Location = new System.Drawing.Point(227, 75);
+            this.layoutControlItem48.Name = "layoutControlItem48";
+            this.layoutControlItem48.Size = new System.Drawing.Size(219, 26);
+            this.layoutControlItem48.TextSize = new System.Drawing.Size(125, 14);
+            // 
             // emptySpaceItem4
             // 
             resources.ApplyResources(this.emptySpaceItem4, "emptySpaceItem4");
@@ -1314,22 +1330,6 @@
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
-            // txt_InvoiceCountNum
-            // 
-            resources.ApplyResources(this.txt_InvoiceCountNum, "txt_InvoiceCountNum");
-            this.txt_InvoiceCountNum.MenuManager = this.barManager1;
-            this.txt_InvoiceCountNum.Name = "txt_InvoiceCountNum";
-            this.txt_InvoiceCountNum.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem48
-            // 
-            this.layoutControlItem48.Control = this.txt_InvoiceCountNum;
-            resources.ApplyResources(this.layoutControlItem48, "layoutControlItem48");
-            this.layoutControlItem48.Location = new System.Drawing.Point(227, 75);
-            this.layoutControlItem48.Name = "layoutControlItem48";
-            this.layoutControlItem48.Size = new System.Drawing.Size(219, 26);
-            this.layoutControlItem48.TextSize = new System.Drawing.Size(125, 14);
-            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1341,6 +1341,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_InvoiceCountNum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radio_AttrESSFYGZTZ.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radio_AttrESSSFZH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Pihao.Properties)).EndInit();
@@ -1429,9 +1430,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem47)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_InvoiceCountNum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             this.ResumeLayout(false);
 
         }

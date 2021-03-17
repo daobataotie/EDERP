@@ -423,6 +423,12 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
                     this.attr90L.Visible = false;
                     this.attr90R.Visible = false;
 
+                    //90°中 改 眼球位置
+                    this.attr60L.Caption = "眼球位置(左)";
+                    this.attr60R.Caption = "眼球位置(右)";
+                    this.attr60L.Width = 80;
+                    this.attr60R.Width = 80;
+
 
                     this.attr30L.Caption = "上框2Cm(左)";
                     this.attr30R.Caption = "上框2CM(右)";

@@ -13,14 +13,28 @@ namespace Book.UI.produceManager.PCEarplugs
     public partial class ListFormResilience : Book.UI.Settings.BasicData.BaseListForm
     {
         BL.PCEarplugsResilienceCheckDetailManager _pCEarplugsResilienceCheckDetailManager = new Book.BL.PCEarplugsResilienceCheckDetailManager();
-
+        int tag = 0;
         public ListFormResilience()
         {
             InitializeComponent();
         }
 
+
+        public ListFormResilience(string invoiceCusId)
+            : this()
+        {
+            this.tag = 1;
+            this.bindingSource1.DataSource = _pCEarplugsResilienceCheckDetailManager.SelectByDateRage(global::Helper.DateTimeParse.NullDate, global::Helper.DateTimeParse.EndDate, null, invoiceCusId);
+        }
+
         protected override void RefreshData()
         {
+            if (this.tag == 1)
+            {
+                this.tag = 0;
+                return;
+            }
+
             this.bindingSource1.DataSource = _pCEarplugsResilienceCheckDetailManager.SelectByDateRage(DateTime.Now.AddDays(-15), global::Helper.DateTimeParse.EndDate, null, null);
             barStaticItem1.Caption = string.Format("{0}项", this.bindingSource1.Count);
 

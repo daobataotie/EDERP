@@ -22,9 +22,9 @@ namespace Book.BL
             return accessor.SelectDataTable(queryId);
         }
 
-        public System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId)
+        public System.Data.DataTable SelectByCondition(string queryId, string depotId, string depotPositionId, string productCategoryId, string ProductNameOrId, bool showZeroQty)
         {
-            return accessor.SelectByCondition(queryId, depotId, depotPositionId, productCategoryId, ProductNameOrId);
+            return accessor.SelectByCondition(queryId, depotId, depotPositionId, productCategoryId, ProductNameOrId,showZeroQty);
         }
 
         public DataTable SelectDataTable(DateTime endTime)

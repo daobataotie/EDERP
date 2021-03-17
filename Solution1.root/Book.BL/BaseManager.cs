@@ -194,12 +194,12 @@ namespace Book.BL
             dic["物料"] = "物料";
             dic["代工 加工"] = "代工加工";
             dic["代工加工"] = "代工加工";
-            dic["客供品"] = "客供品";
             dic["修繕"] = "修繕";
-            dic["清潔用品"] = "清潔";
-            dic["其他"] = "其他";
+            dic["客供品"] = "客供品";
             dic["文具"] = "文具用品";
+            dic["清潔用品"] = "清潔";
             dic["運費"] = "運費";
+            dic["其他"] = "其他";
 
             if (supplier.SupplierCategory == null)
                 throw new Exception("該供應商沒有設置供應商分類，無法計算對應的會計科目！");

@@ -335,7 +335,7 @@
     <value>254</value>
   </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
-    <value>检查时间</value>
+    <value>检查日期</value>
   </data>
   <data name="xrTableCell1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleCenter</value>

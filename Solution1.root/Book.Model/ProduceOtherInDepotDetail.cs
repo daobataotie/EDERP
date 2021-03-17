@@ -55,20 +55,11 @@ namespace Book.Model
         {
             get
             {
-                 _notArriveQuantity=(OrderQuantity.HasValue ? OrderQuantity : 0) - (ProduceQuantity.HasValue ? ProduceQuantity : 0);
-                 return _notArriveQuantity;
+                return _notArriveQuantity < 0 ? 0 : _notArriveQuantity;
             }
             set
             {
                 _notArriveQuantity = value;
-            }
-        }
-
-        public double? NotArrive
-        {
-            get
-            {
-                return NotArriveQuantity <= 0 ? 0 : NotArriveQuantity;
             }
         }
     }

@@ -30,6 +30,7 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RO2));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.lblNote = new DevExpress.XtraReports.UI.XRLabel();
             this.TCattrHeat = new DevExpress.XtraReports.UI.XRLabel();
             this.TCattrBiZhong = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
@@ -46,7 +47,6 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             this.TCattrS_SZhongR = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCattrZhuiQiuR = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCChuanTouR = new DevExpress.XtraReports.UI.XRTableCell();
-            this.TCNote = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell26 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -115,17 +115,28 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblNote,
             this.TCattrHeat,
             this.TCattrBiZhong,
             this.xrTable5,
             this.xrTable4,
-            this.TCNote,
             this.xrTable2,
             this.TCPCDoubleImpactCheckDetailDate,
             this.xrTable3});
             resources.ApplyResources(this.Detail, "Detail");
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            // 
+            // lblNote
+            // 
+            this.lblNote.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
+                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            resources.ApplyResources(this.lblNote, "lblNote");
+            this.lblNote.Name = "lblNote";
+            this.lblNote.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lblNote.StylePriority.UseBorders = false;
+            this.lblNote.StylePriority.UseFont = false;
+            this.lblNote.StylePriority.UseTextAlignment = false;
             // 
             // TCattrHeat
             // 
@@ -263,17 +274,6 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
             resources.ApplyResources(this.TCChuanTouR, "TCChuanTouR");
             this.TCChuanTouR.Name = "TCChuanTouR";
             this.TCChuanTouR.Weight = 0.37215011459600267;
-            // 
-            // TCNote
-            // 
-            this.TCNote.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            resources.ApplyResources(this.TCNote, "TCNote");
-            this.TCNote.Name = "TCNote";
-            this.TCNote.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.TCNote.StylePriority.UseBorders = false;
-            this.TCNote.StylePriority.UseFont = false;
-            this.TCNote.StylePriority.UseTextAlignment = false;
             // 
             // xrTable2
             // 
@@ -873,7 +873,6 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.XRLabel lblCheckStandard;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
-        private DevExpress.XtraReports.UI.XRLabel TCNote;
         private DevExpress.XtraReports.UI.XRTable xrTable5;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow5;
         private DevExpress.XtraReports.UI.XRTableCell TCattrShangLiangL;
@@ -902,5 +901,6 @@ namespace Book.UI.produceManager.PCDoubleImpactCheck
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
+        private DevExpress.XtraReports.UI.XRLabel lblNote;
     }
 }

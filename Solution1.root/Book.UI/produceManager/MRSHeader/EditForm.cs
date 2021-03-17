@@ -1001,7 +1001,7 @@ namespace Book.UI.produceManager.MRSHeader
                                         pronoteProceduresDetail.ProceduresNo = technologydetails.TechnologydetailsNo;
                                         pronoteProceduresDetail.ProceduresId = technologydetails.ProceduresId;
                                         pronoteProceduresDetail.WorkHouseId = technologydetails.WorkHouseId;
-                                        if (tedetail.IndexOf(technologydetails) == 0)
+                                        if (tedetail.IndexOf(technologydetails) == 1)  //2021年2月2日23:22:32 改 ==1  原来 ==0
                                             pronoteProceduresDetail.PronoteProceduresDate = _mrsdetail.JiaoHuoDate;
                                         //if (technologydetails.Procedures != null)
                                         //{

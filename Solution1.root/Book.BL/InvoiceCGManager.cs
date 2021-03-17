@@ -452,6 +452,10 @@ namespace Book.BL
             return accessor.Select(costartid, coendid, SupplierStart, SupplierEnd, dateStart, dateEnd, productStart, productEnd, cusxoid, dateJHStart, dateJHEnd, InvoiceCGIdStart, InvoiceCGIdEnd);
         }
 
+        public IList<Model.InvoiceCG> SelectByDateAndSuppliers(DateTime startDate, DateTime endDate, string supplierIds)
+        {
+            return accessor.SelectByDateAndSuppliers(startDate, endDate, supplierIds);
+        }
 
         #region 生成对应的会计传票
 
@@ -625,6 +629,7 @@ namespace Book.BL
             }
         }
         #endregion
+
     }
 }
 

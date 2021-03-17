@@ -395,7 +395,7 @@
     <value>110</value>
   </data>
   <data name="gridColumn2.Caption" xml:space="preserve">
-    <value>检查时间</value>
+    <value>检查日期</value>
   </data>
   <data name="gridColumn2.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -404,7 +404,7 @@
     <value>1</value>
   </data>
   <data name="gridColumn2.Width" type="System.Int32, mscorlib">
-    <value>114</value>
+    <value>96</value>
   </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>商品名称</value>

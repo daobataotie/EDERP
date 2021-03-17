@@ -50,7 +50,7 @@ namespace Book.UI.Invoices.XS
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelTax = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelTatol = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabelHeji = new DevExpress.XtraReports.UI.XRLabel();
@@ -97,7 +97,6 @@ namespace Book.UI.Invoices.XS
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -302,7 +301,6 @@ namespace Book.UI.Invoices.XS
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel8,
-            this.xrLabel3,
             this.xrLabelTax,
             this.xrLabelTatol,
             this.xrLabelHeji,
@@ -317,13 +315,12 @@ namespace Book.UI.Invoices.XS
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
             // 
-            // xrLabel3
+            // xrLabel8
             // 
-            resources.ApplyResources(this.xrLabel3, "xrLabel3");
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel3.StylePriority.UseFont = false;
-            this.xrLabel3.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.xrLabel8, "xrLabel8");
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel8.StylePriority.UseTextAlignment = false;
             // 
             // xrLabelTax
             // 
@@ -753,13 +750,6 @@ namespace Book.UI.Invoices.XS
             resources.ApplyResources(this.bottomMarginBand1, "bottomMarginBand1");
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
-            // xrLabel8
-            // 
-            resources.ApplyResources(this.xrLabel8, "xrLabel8");
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel8.StylePriority.UseTextAlignment = false;
-            // 
             // R01
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -849,7 +839,6 @@ namespace Book.UI.Invoices.XS
         private DevExpress.XtraReports.UI.XRLabel xrLabelTax;
         private DevExpress.XtraReports.UI.XRLabel xrLabelTatol;
         private DevExpress.XtraReports.UI.XRLabel xrLabelHeji;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel xrLabelFreightWay;
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
