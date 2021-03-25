@@ -452,10 +452,10 @@
     <value>新細明體, 9.75pt</value>
   </data>
   <data name="xrLabelPiHao.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Utils.v10.2">
-    <value>839.071838, 374.399139</value>
+    <value>839.071838, 374.556763</value>
   </data>
   <data name="xrLabelPiHao.SizeF" type="System.Drawing.SizeF, System.Drawing">
-    <value>434.0238, 49.99994</value>
+    <value>1055.92822, 49.8423157</value>
   </data>
   <data name="xrLabelPiHao.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v10.2">
     <value>MiddleLeft</value>

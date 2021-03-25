@@ -124,11 +124,11 @@
             this.TCRS = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCRC = new DevExpress.XtraReports.UI.XRTableCell();
             this.TCRA = new DevExpress.XtraReports.UI.XRTableCell();
+            this.lbl_Condition = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbl_Condition2 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable11)).BeginInit();
@@ -317,7 +317,9 @@
             this.xrTable5,
             this.xrLabel1,
             this.xrLabel2,
-            this.xrLabel3});
+            this.xrLabel3,
+            this.lbl_Condition,
+            this.lbl_Condition2});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             this.ReportHeader.Name = "ReportHeader";
             this.ReportHeader.StylePriority.UseFont = false;
@@ -942,13 +944,27 @@
             this.TCRA.StylePriority.UseFont = false;
             this.TCRA.Weight = 0.70866146237830818;
             // 
+            // lbl_Condition
+            // 
+            resources.ApplyResources(this.lbl_Condition, "lbl_Condition");
+            this.lbl_Condition.Name = "lbl_Condition";
+            this.lbl_Condition.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Condition.StylePriority.UseFont = false;
+            this.lbl_Condition.StylePriority.UseTextAlignment = false;
+            // 
+            // lbl_Condition2
+            // 
+            resources.ApplyResources(this.lbl_Condition2, "lbl_Condition2");
+            this.lbl_Condition2.Name = "lbl_Condition2";
+            this.lbl_Condition2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.lbl_Condition2.StylePriority.UseFont = false;
+            this.lbl_Condition2.StylePriority.UseTextAlignment = false;
+            // 
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel7,
-            this.xrLabel6,
-            this.xrLabel5,
-            this.xrLabel4});
+            this.xrLabel5});
             resources.ApplyResources(this.ReportFooter, "ReportFooter");
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.StylePriority.UseFont = false;
@@ -961,14 +977,6 @@
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             // 
-            // xrLabel6
-            // 
-            resources.ApplyResources(this.xrLabel6, "xrLabel6");
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.StylePriority.UseTextAlignment = false;
-            // 
             // xrLabel5
             // 
             resources.ApplyResources(this.xrLabel5, "xrLabel5");
@@ -976,14 +984,6 @@
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel4
-            // 
-            resources.ApplyResources(this.xrLabel4, "xrLabel4");
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel4.StylePriority.UseFont = false;
-            this.xrLabel4.StylePriority.UseTextAlignment = false;
             // 
             // PCOpticalMachineRO
             // 
@@ -1038,9 +1038,9 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
+        private DevExpress.XtraReports.UI.XRLabel lbl_Condition;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.UI.XRLabel lbl_Condition2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRTable xrTable11;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow11;
