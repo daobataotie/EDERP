@@ -59,6 +59,7 @@ namespace Book.BL
 
                 foreach (Model.PCFirstOnlineCheckDetail model in pCFirstOnlineCheck.Detail)
                 {
+                    model.PCFirstOnlineCheckId = pCFirstOnlineCheck.PCFirstOnlineCheckId;
                     detailAccessor.Insert(model);
                 }
                 BL.V.CommitTransaction();

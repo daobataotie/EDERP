@@ -26,7 +26,7 @@ namespace Book.UI.Query
 
             if (dt == null || dt.Rows.Count <= 0)
             {
-                throw new global::Helper.InvalidValueException();
+                throw new global::Helper.InvalidValueException("Ÿo”µ“þ");
             }
 
             this.DataSource = dt;

@@ -29,7 +29,7 @@ namespace Book.UI.Query
             IList<Model.ProduceInDepotDetail> list = detailManager.Select(condition.StartPronoteHeader, condition.EndPronoteHeader, condition.StartDate, condition.EndDate, condition.Product, condition.WorkHouse, condition.MDepot, condition.MDepotPosition, condition.Id1, condition.Id2, condition.Cusxoid, condition.Customer1, condition.Customer2, condition.ProductState, condition.IsClosed);
             if (list == null || list.Count <= 0)
             {
-                throw new global::Helper.InvalidValueException();
+                 throw new global::Helper.InvalidValueException("無數據");
             }
 
             if (!global::Helper.DateTimeParse.DateTimeEquls(condition.EndDate, global::Helper.DateTimeParse.NullDate))

@@ -511,6 +511,8 @@ namespace Book.UI
 
             operations.Add("query.q21", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q21", new Book.UI.Query.ConditionAChooseForm()); });
             operations.Add("query.q22", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q22", new Book.UI.Query.ConditionAChooseForm()); });
+            
+            //出货退货明细表
             operations.Add("invoices.xt.edit-detail", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q23", new Book.UI.Query.ConditionAChooseForm()); });
             //  operations.Add("query.q24", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q24", new Book.UI.Query.ConditionDChooseForm()); });//m7
             operations.Add("query.q25", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q25", new Book.UI.Query.ConditionAChooseForm()); });

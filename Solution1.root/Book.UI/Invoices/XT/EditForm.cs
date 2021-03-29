@@ -231,6 +231,9 @@ namespace Book.UI.Invoices.XT
 
         protected override void Save(Helper.InvoiceStatus status)
         {
+            if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
+                return;
+
             this.invoice.InvoiceStatus = (int)status;
             this.invoice.InvoiceId = this.textEditInvoiceId.Text;
             this.invoice.InvoiceDate = this.dateEditInvoiceDate.DateTime;
@@ -274,8 +277,6 @@ namespace Book.UI.Invoices.XT
             this.invoice.Employee1 = this.buttonEditEmployee1.EditValue as Model.Employee;
             this.invoice.Employee2 = this.buttonEditEmployee2.EditValue as Model.Employee;
             this.invoice.AuditState = this.saveAuditState;
-            if (!this.gridView1.PostEditor() || !this.gridView1.UpdateCurrentRow())
-                return;
             switch (this.action)
             {
                 case "insert":
