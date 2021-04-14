@@ -285,6 +285,15 @@
       <result property="AttrCeMai" column="AttrCeMai"/>
       <result property="QualityTestUnit" column="QualityTestUnitId" lazyLoad="false" select="ProductUnit.select_by_primary_key" />
     </resultMap>
+    <resultMap id="ProductResult6" class="Product">
+      <result property="ProductId" column="ProductId" />
+      <result property="Id" column="Id" />
+      <result property="ProductName" column="ProductName" />
+      <result property="CustomerProductName" column="CustomerProductName"/>
+      <result property="StocksQuantity" column="StocksQuantity"/>
+      <result property="ReferenceCost" column="ReferenceCost"/>
+      <result property="ProductType" column="ProductType"/>
+    </resultMap>
   </resultMaps>
   <statements>
     <select id="select_SimpleProduct" resultMap="ProductResultSimple" parameterClass="Product">
@@ -465,7 +474,7 @@ where ProductId = #productid#
       Hezhuang,
       Xiangzhuang,
       IsPU
-      
+
       from product
       WHERE ProductCategoryId = #value# order by Id
     </select>
@@ -897,6 +906,12 @@ select ProductId,Id,ProductName from Product where ProductId in (select ProductI
     <select id="SelectStocksQuantityByStock" resultClass="double" parameterClass="string">
       <![CDATA[
       select ISNULL(sum(stockquantity1),0) from Stock where ProductId=#value#
+      ]]>
+    </select>
+
+    <select id="SelectQtyAndCost" resultMap="ProductResult6" parameterClass="Map">
+      <![CDATA[
+      select Id,ProductId,ProductName,CustomerProductName,isnull(StocksQuantity,0) as StocksQuantity,isnull(ReferenceCost,0) as ReferenceCost,(case when HomeMade=1 then 0 when OutSourcing=1 then 1 when TrustOut=1 then 2 else 0 end) as ProductType from Product where 1=1 $sql$ order by Id
       ]]>
     </select>
   </statements>

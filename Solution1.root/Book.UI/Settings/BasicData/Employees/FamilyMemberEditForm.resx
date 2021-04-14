@@ -117,14 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="spe_JianbaoMoney.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="spe_JianbaoMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 137</value>
+  </data>
+  <data name="spe_JianbaoMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 21</value>
+  </data>
+  <data name="spe_JianbaoMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;spe_JianbaoMoney.Name" xml:space="preserve">
+    <value>spe_JianbaoMoney</value>
+  </data>
+  <data name="&gt;&gt;spe_JianbaoMoney.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spe_JianbaoMoney.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;spe_JianbaoMoney.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="spe_LaobaoMoney.EditValue" type="System.Decimal, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="spe_LaobaoMoney.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 112</value>
+  </data>
+  <data name="spe_LaobaoMoney.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 21</value>
+  </data>
+  <data name="spe_LaobaoMoney.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;spe_LaobaoMoney.Name" xml:space="preserve">
+    <value>spe_LaobaoMoney</value>
+  </data>
+  <data name="&gt;&gt;spe_LaobaoMoney.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SpinEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;spe_LaobaoMoney.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;spe_LaobaoMoney.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="simpleButtonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 135</value>
+    <value>184, 162</value>
   </data>
   <data name="simpleButtonCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 23</value>
+    <value>169, 22</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="simpleButtonCancel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
@@ -141,13 +189,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButtonCancel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="simpleButtonOk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 135</value>
+    <value>12, 162</value>
   </data>
   <data name="simpleButtonOk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 23</value>
+    <value>168, 22</value>
   </data>
   <data name="simpleButtonOk.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -165,95 +213,95 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButtonOk.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textEdit3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 103</value>
-  </data>
-  <data name="textEdit3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 21</value>
-  </data>
-  <data name="textEdit3.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;textEdit3.Name" xml:space="preserve">
-    <value>textEdit3</value>
+  <data name="textEditRelation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 87</value>
   </data>
-  <data name="&gt;&gt;textEdit3.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="textEditRelation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 21</value>
   </data>
-  <data name="&gt;&gt;textEdit3.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;textEdit3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="dateEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 71</value>
-  </data>
-  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="dateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="dateEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 21</value>
-  </data>
-  <data name="dateEdit1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;dateEdit1.Name" xml:space="preserve">
-    <value>dateEdit1</value>
-  </data>
-  <data name="&gt;&gt;dateEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dateEdit1.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;dateEdit1.ZOrder" xml:space="preserve">
+  <data name="textEditRelation.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="textEdit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 39</value>
+  <data name="&gt;&gt;textEditRelation.Name" xml:space="preserve">
+    <value>textEditRelation</value>
   </data>
-  <data name="textEdit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 21</value>
-  </data>
-  <data name="textEdit2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textEdit2.Name" xml:space="preserve">
-    <value>textEdit2</value>
-  </data>
-  <data name="&gt;&gt;textEdit2.Type" xml:space="preserve">
+  <data name="&gt;&gt;textEditRelation.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;textEdit2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textEditRelation.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="&gt;&gt;textEdit2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textEditRelation.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="textEdit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 7</value>
+  <data name="dateEditBirthday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 62</value>
   </data>
-  <data name="textEdit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 21</value>
+  <assembly alias="DevExpress.Utils.v10.2" name="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="dateEditBirthday.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
   </data>
-  <data name="textEdit1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="dateEditBirthday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 21</value>
   </data>
-  <data name="&gt;&gt;textEdit1.Name" xml:space="preserve">
-    <value>textEdit1</value>
+  <data name="dateEditBirthday.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;textEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;dateEditBirthday.Name" xml:space="preserve">
+    <value>dateEditBirthday</value>
   </data>
-  <data name="&gt;&gt;textEdit1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dateEditBirthday.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dateEditBirthday.Parent" xml:space="preserve">
     <value>layoutControl1</value>
   </data>
-  <data name="&gt;&gt;textEdit1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dateEditBirthday.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="textEditPersonId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 37</value>
+  </data>
+  <data name="textEditPersonId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 21</value>
+  </data>
+  <data name="textEditPersonId.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textEditPersonId.Name" xml:space="preserve">
+    <value>textEditPersonId</value>
+  </data>
+  <data name="&gt;&gt;textEditPersonId.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEditPersonId.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;textEditPersonId.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="textEditFamilyMembersName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 12</value>
+  </data>
+  <data name="textEditFamilyMembersName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 21</value>
+  </data>
+  <data name="textEditFamilyMembersName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;textEditFamilyMembersName.Name" xml:space="preserve">
+    <value>textEditFamilyMembersName</value>
+  </data>
+  <data name="&gt;&gt;textEditFamilyMembersName.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;textEditFamilyMembersName.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;textEditFamilyMembersName.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -295,23 +343,29 @@
   <data name="layoutControlItem6.Text" xml:space="preserve">
     <value>layoutControlItem6</value>
   </data>
-  <data name="emptySpaceItem2.CustomizationFormText" xml:space="preserve">
-    <value>emptySpaceItem2</value>
-  </data>
-  <data name="emptySpaceItem2.Text" xml:space="preserve">
-    <value>emptySpaceItem2</value>
-  </data>
   <data name="layoutControlItem5.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem5</value>
   </data>
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>layoutControlItem5</value>
   </data>
+  <data name="layoutControlItem7.CustomizationFormText" xml:space="preserve">
+    <value>勞保負擔金額：</value>
+  </data>
+  <data name="layoutControlItem7.Text" xml:space="preserve">
+    <value>勞保負擔金額：</value>
+  </data>
+  <data name="layoutControlItem8.CustomizationFormText" xml:space="preserve">
+    <value>健保負擔金額：</value>
+  </data>
+  <data name="layoutControlItem8.Text" xml:space="preserve">
+    <value>健保負擔金額：</value>
+  </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 169</value>
+    <value>365, 197</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -335,10 +389,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+    <value>7, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>313, 169</value>
+    <value>365, 197</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -382,16 +436,22 @@
   <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;emptySpaceItem2.Name" xml:space="preserve">
-    <value>emptySpaceItem2</value>
-  </data>
-  <data name="&gt;&gt;emptySpaceItem2.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.EmptySpaceItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
     <value>layoutControlItem5</value>
   </data>
   <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -300,5 +300,22 @@ namespace Book.DA.SQLServer
 
             return (value == null ? "" : value.ToString());
         }
+
+
+        public IList<Model.Product> SelectQtyAndCost(string startCategory_Id, string endCategory_Id)
+        {
+            string sql = "";
+            if (!string.IsNullOrEmpty(startCategory_Id) || !string.IsNullOrEmpty(endCategory_Id))
+            {
+                if (!string.IsNullOrEmpty(startCategory_Id) && !string.IsNullOrEmpty(endCategory_Id))
+                    sql = " and ProductCategoryId in (select ProductCategoryId from ProductCategory where Id between '" + startCategory_Id + "' and '" + endCategory_Id + "')";
+                else
+                    sql = " and ProductCategoryId in (select ProductCategoryId from ProductCategory where Id = '" + (string.IsNullOrEmpty(startCategory_Id) ? endCategory_Id : startCategory_Id) + "')";
+            }
+            Hashtable ht = new Hashtable();
+            ht.Add("sql", sql);
+
+            return sqlmapper.QueryForList<Model.Product>("Product.SelectQtyAndCost", ht);
+        }
     }
 }

@@ -169,6 +169,11 @@ namespace Book.Model
             get { return this.ProductName + "    版次:" + this.ProductVersion; }
         }
 
+        /// <summary>
+        /// 總成本
+        /// </summary>
+        public decimal TotalCost { get; set; }
+
         public static string Pro_ProductNameWithVersion = "ProductNameWithVersion";
     }
 }

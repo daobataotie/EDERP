@@ -41,27 +41,36 @@ namespace Book.UI.Settings.BasicData.Employees
             this._familyMember = member;
             this.action = "update";
 
-
             this.textEditFamilyMembersName.Text = member.FamilyMembersName;
             this.textEditPersonId.Text = member.PersonId;
             this.textEditRelation.Text = member.Relation;
             this.dateEditBirthday.EditValue = member.Birthday;
+            this.spe_LaobaoMoney.Value = member.LaobaoMoney.HasValue ? member.LaobaoMoney.Value : 0;
+            this.spe_JianbaoMoney.Value = member.JianbaoMoney.HasValue ? member.JianbaoMoney.Value : 0;
         }
 
         private void simpleButtonOk_Click(object sender, EventArgs e)
         {
-            if (this.action == "insert") 
+            if (this.action == "insert")
             {
                 _familyMember = new Book.Model.FamilyMembers();
             }
             this._familyMember.FamilyMembersId = Guid.NewGuid().ToString();
+
+            if (this.dateEditBirthday.DateTime < DateTime.Parse("1900-01-01"))
+            {
+                MessageBox.Show("出生日期有誤", "提示", MessageBoxButtons.OK);
+                return;
+            }
             this._familyMember.Birthday = this.dateEditBirthday.DateTime;
             this._familyMember.FamilyMembersName = this.textEditFamilyMembersName.Text;
             this._familyMember.PersonId = this.textEditPersonId.Text;
             this._familyMember.Relation = this.textEditRelation.Text;
+            this._familyMember.LaobaoMoney = this.spe_LaobaoMoney.Value;
+            this._familyMember.JianbaoMoney = this.spe_JianbaoMoney.Value;
             this.DialogResult = DialogResult.OK;
         }
 
-        
+
     }
 }

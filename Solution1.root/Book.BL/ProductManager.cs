@@ -716,6 +716,11 @@ namespace Book.BL
         {
             return accessor.SelectStocksQuantityByStock(productId);
         }
+
+        public IList<Model.Product> SelectQtyAndCost(string startCategory_Id, string endCategory_Id)
+        {
+            return accessor.SelectQtyAndCost(startCategory_Id, endCategory_Id);
+        }
     }
 }
 

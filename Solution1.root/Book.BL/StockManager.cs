@@ -212,9 +212,14 @@ namespace Book.BL
         /// </summary>
         /// <param name="productid"></param>
         /// <returns></returns>
-        public string  GetLastDepotInDate(string productid)
+        public string GetLastDepotInDate(string productid)
         {
             return accessor.GetLastDepotInDate(productid);
+        }
+
+        public IList<Model.StockSeach> SelectJiShi(string productId, DateTime startDate, DateTime endDate)
+        {
+            return accessor.SelectJiShi(productId, startDate, endDate);
         }
     }
 }

@@ -107,7 +107,20 @@ namespace Book.Model
 
     }
     public class StockSeach
-    {
+    { 
+        /// <summary>
+        /// 0 出 1入 2调拨 3盘点
+        /// </summary>
+        private int _invoiceTypeIndex;
+        /// <summary>
+        /// 單據庫存類型： 0 出 1入 2调拨 3盘点
+        /// </summary>
+        public int InvoiceTypeIndex
+        {
+            get { return _invoiceTypeIndex; }
+            set { _invoiceTypeIndex = value; }
+        }
+
         private string _invoiceType;
         /// <summary>
         /// 订单类别
@@ -135,6 +148,16 @@ namespace Book.Model
         {
             get { return _invoiceDate; }
             set { _invoiceDate = value; }
+        }
+
+        private DateTime? _insertTime;
+        /// <summary>
+        /// 日期
+        /// </summary>
+        public DateTime? InsertTime
+        {
+            get { return _insertTime; }
+            set { _insertTime = value; }
         }
 
 

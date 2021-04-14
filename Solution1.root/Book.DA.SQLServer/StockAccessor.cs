@@ -428,5 +428,64 @@ namespace Book.DA.SQLServer
         {
             return sqlmapper.QueryForObject<string>("Stock.GetLastDepotInDate", productid);
         }
+
+
+        //商品及时库存
+        public IList<Model.StockSeach> SelectJiShi(string productId, DateTime startDate, DateTime endDate)
+        {
+            //0出 1 入 2调拨 3盘点
+            IList<Model.StockSeach> list = new List<Model.StockSeach>();
+            string[] sqls ={"SELECT 0 as InvoiceTypeIndex, '出倉單' as InvoiceType,DepotOutId   as InvoiceNO,(select inserttime  FROM DepotOut where DepotOut.DepotOutId = DepotOutDetail.DepotOutId) as InsertTime,(select DepotOutDate  FROM DepotOut where DepotOut.DepotOutId = DepotOutDetail.DepotOutId) as InvoiceDate ,DepotOutDetail.DepotOutDetailQuantity AS InvoiceQuantity, DepotOutDetail.DepotPositionId  AS PositionName  FROM DepotOutDetail WHERE ProductId='"+productId+"' and DepotOutId in (select DepotOutId from DepotOut where (DepotOutDate between '"+startDate.ToString("yyyy-MM-dd")+"' and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') or ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null))",
+                            "SELECT 1 as InvoiceTypeIndex,'入倉單' as InvoiceType,DepotInId as InvoiceNO,(select InsertTime  FROM depotIn where depotIn.DepotInId = DepotInDetail.DepotInId) as InsertTime ,(select DepotInDate  FROM depotIn where depotIn.DepotInId = DepotInDetail.DepotInId) as InvoiceDate ,DepotInDetail.DepotInQuantity AS InvoiceQuantity,DepotPositionId PositionName FROM DepotInDetail WHERE ProductId='"+productId+"' and DepotInId in (select DepotInId from DepotIn where (DepotInDate between '"+startDate.ToString("yyyy-MM-dd")+"' and '"+endDate.ToString("yyyy-MM-dd HH:mm:dd")+"') or ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null )) ",
+                            "SELECT 3 as InvoiceTypeIndex,'盤點核准單' as InvoiceType,StockCheckId as InvoiceNO,(select InsertTime  FROM StockCheck where StockCheck.StockCheckId = StockCheckDetail.StockCheckId) as InsertTime ,(select StockCheckDate  FROM StockCheck where StockCheck.StockCheckId = StockCheckDetail.StockCheckId) as InvoiceDate ,StockCheckDetail.StockCheckQuantity AS InvoiceQuantity,DepotPositionId AS PositionName,StockCheckBookQuantity FROM StockCheckDetail WHERE ProductId='"+productId+"' and StockCheckId in (select StockCheckId from StockCheck where (StockCheckDate between '"+startDate.ToString("yyyy-MM-dd")+"' and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') or ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null ))",
+
+
+                            "SELECT 2 as InvoiceTypeIndex,'庫存調撥單' as InvoiceType,InvoiceId as InvoiceNO,(select InsertTime  FROM InvoicePT where InvoicePT.InvoiceId = InvoicePTdetail.InvoiceId) as InsertTime ,(select InvoiceDate  FROM InvoicePT where InvoicePT.InvoiceId = InvoicePTdetail.InvoiceId) as InvoiceDate ,InvoicePTdetail.InvoicePTDetailQuantity AS InvoiceQuantity,DepotPositionInId AS PositionName,DepotPositionId AS OutPositionName FROM InvoicePTdetail WHERE ProductId='"+productId+"' and InvoiceId in (select InvoiceId from InvoicePT where (InvoiceDate between '"+startDate.ToString("yyyy-MM-dd")+"' and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') or ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null ))",
+                            "SELECT 1 as InvoiceTypeIndex,'生產入庫單' as InvoiceType,ProduceInDepotId as InvoiceNO,(select InsertTime  FROM ProduceInDepot where ProduceInDepot.ProduceInDepotId = ProduceInDepotDetail.ProduceInDepotId) as InsertTime ,(select ProduceInDepotDate  FROM ProduceInDepot where ProduceInDepot.ProduceInDepotId = ProduceInDepotDetail.ProduceInDepotId) as InvoiceDate ,ProduceInDepotDetail.ProduceQuantity AS InvoiceQuantity,DepotPositionId AS PositionName FROM ProduceInDepotDetail WHERE ProduceQuantity <> 0 and  ProductId='"+productId+"' and ProduceInDepotId in (select ProduceInDepotId from ProduceInDepot where (ProduceInDepotDate between '"+startDate.ToString("yyyy-MM-dd")+"' and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') or ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null )) ",
+
+                            "SELECT 1 as InvoiceTypeIndex,'委外入庫單' as InvoiceType,ProduceOtherInDepotDetail.ProduceOtherInDepotId as InvoiceNO,(SELECT ProduceOtherInDepot.InsertTime FROM ProduceOtherInDepot WHERE ProduceOtherInDepot.ProduceOtherInDepotId = ProduceOtherInDepotDetail.ProduceOtherInDepotId) AS InsertTime,(SELECT ProduceOtherInDepot.ProduceOtherInDepotDate FROM ProduceOtherInDepot WHERE ProduceOtherInDepot.ProduceOtherInDepotId = ProduceOtherInDepotDetail.ProduceOtherInDepotId) AS InvoiceDate,ProduceOtherInDepotDetail.ProduceInDepotQuantity AS InvoiceQuantity,DepotPositionId AS PositionName FROM ProduceOtherInDepotDetail WHERE ProductId='"+productId+"' AND ProduceOtherInDepotId IN (SELECT ProduceOtherInDepotId FROM ProduceOtherInDepot WHERE (ProduceOtherInDepotDate BETWEEN '"+startDate.ToString("yyyy-MM-dd")+"' AND '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') OR ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null ))",
+                            "SELECT 0 as InvoiceTypeIndex,'銷售出貨單' as InvoiceType,InvoiceId as InvoiceNO,(SELECT InvoiceXS.InsertTime FROM InvoiceXS WHERE InvoiceXS.InvoiceId = InvoiceXSDetail.InvoiceId) AS InsertTime,(SELECT InvoiceXS.InvoiceDate FROM InvoiceXS WHERE InvoiceXS.InvoiceId = InvoiceXSDetail.InvoiceId) AS InvoiceDate,InvoiceXSDetailQuantity AS InvoiceQuantity,DepotPositionId AS PositionName FROM InvoiceXSDetail WHERE ProductId = '"+productId+"' AND InvoiceId IN (SELECT InvoiceXS.InvoiceId FROM InvoiceXS WHERE (InvoiceDate BETWEEN '"+startDate.ToString("yyyy-MM-dd")+"' AND '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') OR ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null ))",
+                            "SELECT 1 as InvoiceTypeIndex,'採購入庫單' as InvoiceType,InvoiceId as InvoiceNO,(SELECT InvoiceCG.InsertTime FROM InvoiceCG WHERE invoicecg.InvoiceId = InvoiceCGDetail.InvoiceId) AS InsertTime,(SELECT InvoiceCG.InvoiceDate FROM InvoiceCG WHERE invoicecg.InvoiceId = InvoiceCGDetail.InvoiceId) AS InvoiceDate,InvoiceCGDetail.InvoiceCGDetaiInQuantity AS InvoiceQuantity,DepotPositionId AS PositionName FROM InvoiceCGDetail WHERE ProductId = '"+productId+"' AND InvoiceId IN (SELECT InvoiceCG.InvoiceId FROM InvoiceCG WHERE (InvoiceDate BETWEEN '"+startDate.ToString("yyyy-MM-dd")+"' AND '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') OR ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null ))",
+                            "SELECT 1 as InvoiceTypeIndex,'銷售退貨' as InvoiceType,InvoiceId as InvoiceNO,(SELECT InvoiceXT.InsertTime FROM InvoiceXT WHERE InvoiceXT.InvoiceId = InvoiceXTDetail.InvoiceId) AS InsertTime,(SELECT InvoiceXT.InvoiceDate FROM InvoiceXT WHERE InvoiceXT.InvoiceId = InvoiceXTDetail.InvoiceId) AS InvoiceDate, InvoiceXTDetail.InvoiceXTDetailQuantity AS InvoiceQuantity, InvoiceXTDetail.DepotPositionId AS PositionName FROM InvoiceXTDetail WHERE ProductId = '"+productId+"' AND InvoiceId IN (SELECT InvoiceId FROM InvoiceXT WHERE (InvoiceDate BETWEEN '"+startDate.ToString("yyyy-MM-dd")+"' AND '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') OR ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null ))",
+                            "SELECT 0 as InvoiceTypeIndex,'採購退貨' as InvoiceType,InvoiceId as InvoiceNO,(SELECT InvoiceCT.InsertTime FROM InvoiceCT WHERE InvoiceCT.InvoiceId = InvoiceCTDetail.InvoiceId) AS InsertTime, (SELECT InvoiceCT.InvoiceDate FROM InvoiceCT WHERE InvoiceCT.InvoiceId = InvoiceCTDetail.InvoiceId) AS InvoiceDate, InvoiceCTDetail.InvoiceCTDetailQuantity AS InvoiceQuantity, InvoiceCTDetail.DepotPositionId AS PositionName  FROM InvoiceCTDetail WHERE ProductId = '"+productId+"' AND InvoiceId IN (SELECT InvoiceId FROM InvoiceCT WHERE (InvoiceDate BETWEEN '"+startDate.ToString("yyyy-MM-dd")+"' AND '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') OR ('"+startDate.ToString("yyyy-MM-dd")+"' is null and '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' is null ))",
+                            "SELECT 1 as InvoiceTypeIndex,'生产退料' as InvoiceType,ProduceMaterialExitId as InvoiceNO,(SELECT	ProduceMaterialExit.InsertTime FROM ProduceMaterialExit WHERE ProduceMaterialExit.ProduceMaterialExitId=ProduceMaterialExitDetail.ProduceMaterialExitId) AS InsertTime,(SELECT	ProduceMaterialExit.ProduceExitMaterialDate FROM ProduceMaterialExit WHERE ProduceMaterialExit.ProduceMaterialExitId=ProduceMaterialExitDetail.ProduceMaterialExitId) AS InvoiceDate,ProduceMaterialExitDetail.ProduceQuantity AS InvoiceQuantity,ProduceMaterialExitDetail.DepotPositionId  AS PositionName FROM ProduceMaterialExitDetail WHERE ProductId='"+productId+"' AND ProduceMaterialExitId IN (SELECT ProduceMaterialExit.ProduceMaterialExitId FROM ProduceMaterialExit WHERE (ProduceExitMaterialDate BETWEEN '"+startDate.ToString("yyyy-MM-dd")+"' AND '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"') OR('"+startDate.ToString("yyyy-MM-dd")+"' IS NULL AND '"+endDate.ToString("yyyy-MM-dd HH:mm:ss")+"' IS NULL))"
+                           };
+            for (int m = 0; m < sqls.Length; m++)
+            {
+                #region
+                Model.StockSeach stockSeach;
+                using (SqlDataReader dataReader = SQLDB.SqlHelper.ExecuteReader(SQLDB.SqlHelper.ConnectionStringLocalTransaction, CommandType.Text, sqls[m], null))
+                {
+                    while (dataReader.Read())
+                    {
+                        stockSeach = new Model.StockSeach();
+                        for (int i = 0; i < dataReader.FieldCount; i++)
+                        {
+                            foreach (var item in stockSeach.GetType().GetProperties())
+                            {
+                                string fieldName = item.Name;//属性名
+                                //判断当前迭代出的属性名称是否和迭代出的dataReader的列名称一致
+                                if (item.Name.ToLower().Equals(dataReader.GetName(i).ToLower()))
+                                {
+                                    //从DataReader中读取值
+                                    object _value = dataReader[fieldName];
+                                    //将当前dataReader的单列值赋予相匹配的属性,否则赋予一个null值.
+                                    if (_value != null && _value != DBNull.Value)
+                                        item.SetValue(stockSeach, _value, null);
+                                    else
+                                        item.SetValue(stockSeach, null, null);
+                                }
+                            }
+                        }
+                        list.Add(stockSeach);
+
+                    }
+                }
+                #endregion
+            }
+            return list;
+
+        }
+
     }
 }

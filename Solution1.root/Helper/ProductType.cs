@@ -35,7 +35,7 @@ namespace Helper
         TrustOutProcee = 6,
 
         /// <summary>
-        ///倉庫(半成品加工)
+        ///倉庫(半成品加工) 也算是自製吧
         /// </summary>
         DepotMadeProcee = 7
     }

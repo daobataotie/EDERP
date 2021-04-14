@@ -57,6 +57,7 @@ namespace Book.DA
 
         string GetLastDepotInDate(string productid);
 
+        IList<Model.StockSeach> SelectJiShi(string productId, DateTime startDate, DateTime endDate);
     }
 }
 

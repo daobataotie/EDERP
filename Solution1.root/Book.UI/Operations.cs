@@ -511,7 +511,7 @@ namespace Book.UI
 
             operations.Add("query.q21", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q21", new Book.UI.Query.ConditionAChooseForm()); });
             operations.Add("query.q22", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q22", new Book.UI.Query.ConditionAChooseForm()); });
-            
+
             //出货退货明细表
             operations.Add("invoices.xt.edit-detail", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q23", new Book.UI.Query.ConditionAChooseForm()); });
             //  operations.Add("query.q24", (D1)delegate(System.Windows.Forms.Form form) { MM("Query.Q24", new Book.UI.Query.ConditionDChooseForm()); });//m7
@@ -799,6 +799,12 @@ namespace Book.UI
 
             //應付帳款(按科目)
             operations.Add("Query.ShouPayBySubjectForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Query.ShouPayBySubjectForm", form); });
+
+            //庫存成本分析表
+            operations.Add("Settings.StockLimitations.InventoryCostForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.StockLimitations.InventoryCostForm", form); });
+
+
+
         }
 
         static Form CreateForm(string formTypeName)

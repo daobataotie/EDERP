@@ -48,7 +48,11 @@ namespace Book.Model
 		/// 员工
 		/// </summary>
 		private Employee employee;
-		 
+
+        private decimal? _laobaoMoney;
+
+        private decimal? _jianbaoMoney;
+
 		#endregion
 		
 		#region Properties
@@ -158,6 +162,25 @@ namespace Book.Model
 			}
 			
 		}
+
+        /// <summary>
+        /// 勞保負擔金額
+        /// </summary>
+        public decimal? LaobaoMoney
+        {
+            get { return _laobaoMoney; }
+            set { _laobaoMoney = value; }
+        }
+        
+        /// <summary>
+        /// 健保負擔金額
+        /// </summary>
+        public decimal? JianbaoMoney
+        {
+            get { return _jianbaoMoney; }
+            set { _jianbaoMoney = value; }
+        }		 
+
 		/// <summary>
 		/// 编号
 		/// </summary>
@@ -187,7 +210,10 @@ namespace Book.Model
 		/// 生日
 		/// </summary>
 		public readonly static string PROPERTY_BIRTHDAY = "Birthday";
-		
+
+        public readonly static string PRO_LaobaoMoney = "LaobaoMoney";
+
+        public readonly static string PRO_JianbaoMoney = "JianbaoMoney";
 
 		#endregion
 	}

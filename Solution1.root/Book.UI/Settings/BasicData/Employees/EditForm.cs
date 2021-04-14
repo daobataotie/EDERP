@@ -658,7 +658,7 @@ namespace Book.UI.Settings.BasicData.Employees
         {
             if (MessageBox.Show("´_¶¨Òª„h³ýÔ“¾ìŒÙ?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.employee.FamilyMembers.Remove(this.bindingSourceFamilyMember.Current as Model.FamilyMembers);
+                this.employee.FamilyMembers.RemoveAt(bindingSourceFamilyMember.Position);
                 this.gridControl1.RefreshDataSource();
             }
         }
