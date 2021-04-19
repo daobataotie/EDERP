@@ -4327,6 +4327,10 @@
       <DependentUpon>AttenForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Attendance\Atten\AttenreportCrystal3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttenreportCrystal3.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hr\Attendance\ClockData\NewClockForm.resx">
       <DependentUpon>NewClockForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -11972,6 +11976,12 @@
     </Compile>
     <Compile Include="AnnualCarryoverForm.Designer.cs">
       <DependentUpon>AnnualCarryoverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Attendance\Atten\AttenreportCrystal3.cs">
+      <DependentUpon>AttenreportCrystal3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Hr\Attendance\ClockData\NewClockForm.cs">
       <SubType>Form</SubType>

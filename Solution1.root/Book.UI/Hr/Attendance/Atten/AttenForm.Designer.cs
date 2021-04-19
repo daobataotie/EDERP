@@ -49,6 +49,7 @@ namespace Book.UI.Hr.Attendance.Atten
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btn_MonthReportNoDepartment = new DevExpress.XtraEditors.SimpleButton();
             this.sbtn_SearchTree = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -87,6 +88,7 @@ namespace Book.UI.Hr.Attendance.Atten
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
@@ -142,6 +144,7 @@ namespace Book.UI.Hr.Attendance.Atten
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).BeginInit();
@@ -158,7 +161,7 @@ namespace Book.UI.Hr.Attendance.Atten
             resources.ApplyResources(this.splitContainerControl1.Panel1, "splitContainerControl1.Panel1");
             this.splitContainerControl1.Panel2.Controls.Add(this.layoutControl1);
             resources.ApplyResources(this.splitContainerControl1.Panel2, "splitContainerControl1.Panel2");
-            this.splitContainerControl1.SplitterPosition = 255;
+            this.splitContainerControl1.SplitterPosition = 241;
             // 
             // layoutControl2
             // 
@@ -261,7 +264,8 @@ namespace Book.UI.Hr.Attendance.Atten
             this.layoutControlItem7});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(231, 377);
+            this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(225, 385);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem7
@@ -270,7 +274,7 @@ namespace Book.UI.Hr.Attendance.Atten
             resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(211, 357);
+            this.layoutControlItem7.Size = new System.Drawing.Size(213, 373);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextToControlDistance = 0;
             this.layoutControlItem7.TextVisible = false;
@@ -282,7 +286,8 @@ namespace Book.UI.Hr.Attendance.Atten
             this.layoutControlItem5});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(255, 401);
+            this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(241, 401);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem5
@@ -291,13 +296,14 @@ namespace Book.UI.Hr.Attendance.Atten
             resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(235, 381);
+            this.layoutControlItem5.Size = new System.Drawing.Size(229, 389);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextToControlDistance = 0;
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btn_MonthReportNoDepartment);
             this.layoutControl1.Controls.Add(this.sbtn_SearchTree);
             this.layoutControl1.Controls.Add(this.simpleButton2);
             this.layoutControl1.Controls.Add(this.simpleButton1);
@@ -309,6 +315,13 @@ namespace Book.UI.Hr.Attendance.Atten
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
+            // 
+            // btn_MonthReportNoDepartment
+            // 
+            resources.ApplyResources(this.btn_MonthReportNoDepartment, "btn_MonthReportNoDepartment");
+            this.btn_MonthReportNoDepartment.Name = "btn_MonthReportNoDepartment";
+            this.btn_MonthReportNoDepartment.StyleController = this.layoutControl1;
+            this.btn_MonthReportNoDepartment.Click += new System.EventHandler(this.btn_MonthReportNoDepartment_Click);
             // 
             // sbtn_SearchTree
             // 
@@ -572,10 +585,12 @@ namespace Book.UI.Hr.Attendance.Atten
             this.layoutControlItem9,
             this.layoutControlItem4,
             this.layoutControlItem10,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(703, 401);
+            this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(724, 401);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -584,7 +599,7 @@ namespace Book.UI.Hr.Attendance.Atten
             resources.ApplyResources(this.layoutControlItem1, "layoutControlItem1");
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(683, 355);
+            this.layoutControlItem1.Size = new System.Drawing.Size(712, 363);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextToControlDistance = 0;
             this.layoutControlItem1.TextVisible = false;
@@ -593,19 +608,21 @@ namespace Book.UI.Hr.Attendance.Atten
             // 
             this.layoutControlItem2.Control = this.lookupEmployeeName;
             resources.ApplyResources(this.layoutControlItem2, "layoutControlItem2");
-            this.layoutControlItem2.Location = new System.Drawing.Point(201, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(156, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(139, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(137, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.cmbDutyDate;
             resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
-            this.layoutControlItem6.Location = new System.Drawing.Point(340, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(293, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(126, 26);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 14);
+            this.layoutControlItem6.Size = new System.Drawing.Size(118, 26);
+            this.layoutControlItem6.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(35, 14);
+            this.layoutControlItem6.TextToControlDistance = 5;
             // 
             // layoutControlItem3
             // 
@@ -613,14 +630,14 @@ namespace Book.UI.Hr.Attendance.Atten
             resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(201, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(156, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(60, 14);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.simpleButton2;
             resources.ApplyResources(this.layoutControlItem9, "layoutControlItem9");
-            this.layoutControlItem9.Location = new System.Drawing.Point(505, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(450, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(39, 26);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -631,7 +648,7 @@ namespace Book.UI.Hr.Attendance.Atten
             // 
             this.layoutControlItem4.Control = this.btnSearch;
             resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
-            this.layoutControlItem4.Location = new System.Drawing.Point(466, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(411, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(39, 26);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -642,9 +659,9 @@ namespace Book.UI.Hr.Attendance.Atten
             // 
             this.layoutControlItem10.Control = this.sbtn_SearchTree;
             resources.ApplyResources(this.layoutControlItem10, "layoutControlItem10");
-            this.layoutControlItem10.Location = new System.Drawing.Point(544, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(489, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(63, 26);
+            this.layoutControlItem10.Size = new System.Drawing.Size(51, 26);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextToControlDistance = 0;
             this.layoutControlItem10.TextVisible = false;
@@ -653,12 +670,23 @@ namespace Book.UI.Hr.Attendance.Atten
             // 
             this.layoutControlItem8.Control = this.simpleButton1;
             resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
-            this.layoutControlItem8.Location = new System.Drawing.Point(607, 0);
+            this.layoutControlItem8.Location = new System.Drawing.Point(637, 0);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(76, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(75, 26);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextToControlDistance = 0;
             this.layoutControlItem8.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.btn_MonthReportNoDepartment;
+            resources.ApplyResources(this.layoutControlItem11, "layoutControlItem11");
+            this.layoutControlItem11.Location = new System.Drawing.Point(540, 0);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(97, 26);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextToControlDistance = 0;
+            this.layoutControlItem11.TextVisible = false;
             // 
             // barManager1
             // 
@@ -818,6 +846,7 @@ namespace Book.UI.Hr.Attendance.Atten
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
@@ -900,5 +929,7 @@ namespace Book.UI.Hr.Attendance.Atten
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private System.Windows.Forms.BindingSource bindingSourceDepartment;
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit2;
+        private DevExpress.XtraEditors.SimpleButton btn_MonthReportNoDepartment;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

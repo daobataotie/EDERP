@@ -617,6 +617,30 @@
   <data name="&gt;&gt;newChooseEmployeeId.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="dateAcInvoiceXOBillDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 12</value>
+  </data>
+  <data name="dateEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
+    <value>Combo</value>
+  </data>
+  <data name="dateAcInvoiceXOBillDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 21</value>
+  </data>
+  <data name="dateAcInvoiceXOBillDate.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;dateAcInvoiceXOBillDate.Name" xml:space="preserve">
+    <value>dateAcInvoiceXOBillDate</value>
+  </data>
+  <data name="&gt;&gt;dateAcInvoiceXOBillDate.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;dateAcInvoiceXOBillDate.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;dateAcInvoiceXOBillDate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="txt_RelatedNumbers.Location" type="System.Drawing.Point, System.Drawing">
     <value>840, 112</value>
   </data>
@@ -636,7 +660,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_RelatedNumbers.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lue_SalesType.Location" type="System.Drawing.Point, System.Drawing">
     <value>587, 112</value>
@@ -663,7 +687,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_SalesType.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="che_HuikaiNote.Location" type="System.Drawing.Point, System.Drawing">
     <value>264, 112</value>
@@ -687,7 +711,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;che_HuikaiNote.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lue_Currency.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 112</value>
@@ -714,7 +738,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_Currency.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="spe_ExchangeRate.EditValue" type="System.Decimal, mscorlib">
     <value>0</value>
@@ -738,7 +762,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;spe_ExchangeRate.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lue_ClearanceType.Location" type="System.Drawing.Point, System.Drawing">
     <value>840, 37</value>
@@ -765,7 +789,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_ClearanceType.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="lue_InvoiceType.Location" type="System.Drawing.Point, System.Drawing">
     <value>840, 12</value>
@@ -792,7 +816,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lue_InvoiceType.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="simBtnAdd.Location" type="System.Drawing.Point, System.Drawing">
     <value>133, 338</value>
@@ -816,7 +840,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simBtnAdd.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="pictureEditIsCancel.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1309,7 +1333,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;panelControl1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="txt_AuditState.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 388</value>
@@ -1330,7 +1354,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;txt_AuditState.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="newChooseCustomer2.Location" type="System.Drawing.Point, System.Drawing">
     <value>344, 37</value>
@@ -1351,7 +1375,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;newChooseCustomer2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="calcNoHeXiaoTotal.Location" type="System.Drawing.Point, System.Drawing">
     <value>587, 87</value>
@@ -1375,7 +1399,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcNoHeXiaoTotal.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="calcmHeXiaoJingE.Location" type="System.Drawing.Point, System.Drawing">
     <value>344, 87</value>
@@ -1399,7 +1423,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcmHeXiaoJingE.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="simBtnRemove.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 338</value>
@@ -1423,7 +1447,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simBtnRemove.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="XoId.Location" type="System.Drawing.Point, System.Drawing">
     <value>587, 12</value>
@@ -1456,7 +1480,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;XoId.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="calcHeJiMoney.Location" type="System.Drawing.Point, System.Drawing">
     <value>344, 62</value>
@@ -1495,7 +1519,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcHeJiMoney.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="calcTaxRateMoney.Location" type="System.Drawing.Point, System.Drawing">
     <value>587, 62</value>
@@ -1534,7 +1558,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcTaxRateMoney.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="TaxType.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 62</value>
@@ -1582,7 +1606,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;TaxType.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="calcTaxRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>587, 37</value>
@@ -1621,7 +1645,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcTaxRate.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="calcZongMoney.Location" type="System.Drawing.Point, System.Drawing">
     <value>840, 62</value>
@@ -1660,7 +1684,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;calcZongMoney.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="memoAcInvoiceXOBillDesc.Location" type="System.Drawing.Point, System.Drawing">
     <value>588, 364</value>
@@ -1681,60 +1705,6 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;memoAcInvoiceXOBillDesc.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 12</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
-    <value>Combo</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v10.2">
-    <value>None</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 21</value>
-  </data>
-  <data name="dateAcInvoiceXOBillDate.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;dateAcInvoiceXOBillDate.Name" xml:space="preserve">
-    <value>dateAcInvoiceXOBillDate</value>
-  </data>
-  <data name="&gt;&gt;dateAcInvoiceXOBillDate.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.DateEdit, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;dateAcInvoiceXOBillDate.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;dateAcInvoiceXOBillDate.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
   <data name="simbtnAppend.Location" type="System.Drawing.Point, System.Drawing">
@@ -1844,12 +1814,6 @@
   </data>
   <data name="layoutControlItem28.Text" xml:space="preserve">
     <value>编      号：</value>
-  </data>
-  <data name="layoutControlItem29.CustomizationFormText" xml:space="preserve">
-    <value>日期:</value>
-  </data>
-  <data name="layoutControlItem29.Text" xml:space="preserve">
-    <value>日  期：</value>
   </data>
   <data name="emptySpaceItem1.CustomizationFormText" xml:space="preserve">
     <value>emptySpaceItem1</value>
@@ -1970,6 +1934,12 @@
   </data>
   <data name="layoutControlItem46.Text" xml:space="preserve">
     <value>相關號碼：</value>
+  </data>
+  <data name="layoutControlItem29.CustomizationFormText" xml:space="preserve">
+    <value>日期：</value>
+  </data>
+  <data name="layoutControlItem29.Text" xml:space="preserve">
+    <value>日期：</value>
   </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>Root</value>
@@ -2325,12 +2295,6 @@
   <data name="&gt;&gt;layoutControlItem28.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">
-    <value>layoutControlItem29</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem29.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;emptySpaceItem1.Name" xml:space="preserve">
     <value>emptySpaceItem1</value>
   </data>
@@ -2492,6 +2456,12 @@
   </data>
   <data name="&gt;&gt;bar_ExportExcel.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem29.Name" xml:space="preserve">
+    <value>layoutControlItem29</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem29.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>EditForm</value>

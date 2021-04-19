@@ -96,7 +96,6 @@
             this.calcTaxRate = new DevExpress.XtraEditors.CalcEdit();
             this.calcZongMoney = new DevExpress.XtraEditors.CalcEdit();
             this.memoAcInvoiceXOBillDesc = new DevExpress.XtraEditors.MemoEdit();
-            this.dateAcInvoiceXOBillDate = new DevExpress.XtraEditors.DateEdit();
             this.simbtnAppend = new DevExpress.XtraEditors.SimpleButton();
             this.AcInvoiceXOBillId = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -107,7 +106,6 @@
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem32 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem28 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -135,6 +133,8 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barCancel = new DevExpress.XtraBars.BarButtonItem();
             this.bar_ExportExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.dateAcInvoiceXOBillDate = new DevExpress.XtraEditors.DateEdit();
+            this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -183,8 +183,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcTaxRate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcZongMoney.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoAcInvoiceXOBillDesc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateAcInvoiceXOBillDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AcInvoiceXOBillId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
@@ -194,7 +192,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
@@ -216,6 +213,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateAcInvoiceXOBillDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -427,6 +427,7 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.dateAcInvoiceXOBillDate);
             this.layoutControl1.Controls.Add(this.txt_RelatedNumbers);
             this.layoutControl1.Controls.Add(this.lue_SalesType);
             this.layoutControl1.Controls.Add(this.che_HuikaiNote);
@@ -448,7 +449,6 @@
             this.layoutControl1.Controls.Add(this.calcTaxRate);
             this.layoutControl1.Controls.Add(this.calcZongMoney);
             this.layoutControl1.Controls.Add(this.memoAcInvoiceXOBillDesc);
-            this.layoutControl1.Controls.Add(this.dateAcInvoiceXOBillDate);
             this.layoutControl1.Controls.Add(this.newChooseEmployeeId);
             this.layoutControl1.Controls.Add(this.simbtnAppend);
             this.layoutControl1.Controls.Add(this.newChooseEmployee0Id);
@@ -884,32 +884,6 @@
             this.memoAcInvoiceXOBillDesc.Properties.NullValuePrompt = null;
             this.memoAcInvoiceXOBillDesc.StyleController = this.layoutControl1;
             // 
-            // dateAcInvoiceXOBillDate
-            // 
-            this.dateAcInvoiceXOBillDate.EditValue = null;
-            resources.ApplyResources(this.dateAcInvoiceXOBillDate, "dateAcInvoiceXOBillDate");
-            this.dateAcInvoiceXOBillDate.MenuManager = this.barManager1;
-            this.dateAcInvoiceXOBillDate.Name = "dateAcInvoiceXOBillDate";
-            this.dateAcInvoiceXOBillDate.Properties.AutoHeight = ((bool)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.AutoHeight")));
-            this.dateAcInvoiceXOBillDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.Buttons"))))});
-            this.dateAcInvoiceXOBillDate.Properties.Mask.EditMask = null;
-            this.dateAcInvoiceXOBillDate.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.Mask.IgnoreMaskBlank")));
-            this.dateAcInvoiceXOBillDate.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.Mask.MaskType")));
-            this.dateAcInvoiceXOBillDate.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.Mask.SaveLiteral")));
-            this.dateAcInvoiceXOBillDate.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.Mask.ShowPlaceHolders")));
-            this.dateAcInvoiceXOBillDate.Properties.NullValuePrompt = null;
-            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.AutoHeight = ((bool)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.AutoHeight")));
-            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.EditMask = null;
-            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.IgnoreMaskBlank")));
-            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.MaskType")));
-            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.SaveLiteral = ((bool)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.SaveLiteral")));
-            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Mask.ShowPlaceHolders")));
-            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.NullValuePrompt = null;
-            this.dateAcInvoiceXOBillDate.StyleController = this.layoutControl1;
-            // 
             // simbtnAppend
             // 
             resources.ApplyResources(this.simbtnAppend, "simbtnAppend");
@@ -943,7 +917,6 @@
             this.layoutControlItem23,
             this.layoutControlItem32,
             this.layoutControlItem28,
-            this.layoutControlItem29,
             this.emptySpaceItem1,
             this.layoutControlItem21,
             this.layoutControlItem24,
@@ -963,7 +936,8 @@
             this.layoutControlItem43,
             this.layoutControlItem44,
             this.layoutControlItem45,
-            this.layoutControlItem46});
+            this.layoutControlItem46,
+            this.layoutControlItem29});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1005, 421);
@@ -1032,15 +1006,6 @@
             this.layoutControlItem28.Name = "layoutControlItem28";
             this.layoutControlItem28.Size = new System.Drawing.Size(252, 25);
             this.layoutControlItem28.TextSize = new System.Drawing.Size(76, 14);
-            // 
-            // layoutControlItem29
-            // 
-            this.layoutControlItem29.Control = this.dateAcInvoiceXOBillDate;
-            resources.ApplyResources(this.layoutControlItem29, "layoutControlItem29");
-            this.layoutControlItem29.Location = new System.Drawing.Point(252, 0);
-            this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(243, 25);
-            this.layoutControlItem29.TextSize = new System.Drawing.Size(76, 14);
             // 
             // emptySpaceItem1
             // 
@@ -1283,6 +1248,27 @@
             this.bar_ExportExcel.Name = "bar_ExportExcel";
             this.bar_ExportExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ExportExcel_ItemClick);
             // 
+            // dateAcInvoiceXOBillDate
+            // 
+            this.dateAcInvoiceXOBillDate.EditValue = null;
+            resources.ApplyResources(this.dateAcInvoiceXOBillDate, "dateAcInvoiceXOBillDate");
+            this.dateAcInvoiceXOBillDate.MenuManager = this.barManager1;
+            this.dateAcInvoiceXOBillDate.Name = "dateAcInvoiceXOBillDate";
+            this.dateAcInvoiceXOBillDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dateEdit1.Properties.Buttons"))))});
+            this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.dateAcInvoiceXOBillDate.StyleController = this.layoutControl1;
+            // 
+            // layoutControlItem29
+            // 
+            this.layoutControlItem29.Control = this.dateAcInvoiceXOBillDate;
+            resources.ApplyResources(this.layoutControlItem29, "layoutControlItem29");
+            this.layoutControlItem29.Location = new System.Drawing.Point(252, 0);
+            this.layoutControlItem29.Name = "layoutControlItem29";
+            this.layoutControlItem29.Size = new System.Drawing.Size(243, 25);
+            this.layoutControlItem29.TextSize = new System.Drawing.Size(76, 14);
+            // 
             // EditForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1338,8 +1324,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcTaxRate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcZongMoney.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoAcInvoiceXOBillDesc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateAcInvoiceXOBillDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AcInvoiceXOBillId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
@@ -1349,7 +1333,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
@@ -1371,6 +1354,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateAcInvoiceXOBillDate.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateAcInvoiceXOBillDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1399,14 +1385,12 @@
         private Invoices.NewChooseContorl newChooseCustomerId;
         private Invoices.NewChooseContorl newChooseEmployeeId;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.DateEdit dateAcInvoiceXOBillDate;
         private DevExpress.XtraEditors.TextEdit AcInvoiceXOBillId;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem28;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
         private DevExpress.XtraEditors.CalcEdit calcZongMoney;
         private DevExpress.XtraEditors.CalcEdit calcHeJiMoney;
         private DevExpress.XtraEditors.CalcEdit calcTaxRateMoney;
@@ -1481,5 +1465,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
+        private DevExpress.XtraEditors.DateEdit dateAcInvoiceXOBillDate;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem29;
     }
 }

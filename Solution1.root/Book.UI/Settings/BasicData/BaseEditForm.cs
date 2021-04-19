@@ -268,9 +268,12 @@ namespace Book.UI.Settings.BasicData
 
                             if (AuditState() != (int)global::Helper.InvoiceAudit.Audited)
                                 flag = 1;
-                            BL.V.BeginTransaction();
-
+                            
                             Model.RoleAuditing roleAuditing = this.roleAuditingManager.SelectByInvoiceIdAndTable(tableKeyId, tableName);
+                            if (roleAuditing == null)
+                                return;
+
+                            BL.V.BeginTransaction();
 
                             if (this.barButtonItemAudit.Caption == "åè∫À" || this.barButtonItemAudit.Caption == "…Û∫À" || this.barButtonItemAudit.Caption == "—}∫À" || this.barButtonItemAudit.Caption == "∏¥∫À")
                             {

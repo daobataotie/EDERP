@@ -25,16 +25,18 @@ namespace Book.UI.Hr.Attendance.Atten
         private HrDailyEmployeeAttendInfoManager hremp = new HrDailyEmployeeAttendInfoManager();
         private DateTime _date;
         DataSet ds;
+        private bool hasDepartment = true;
 
         public AttenreportForm2()
         {
             InitializeComponent();
         }
 
-        public AttenreportForm2(DateTime date)
+        public AttenreportForm2(DateTime date, bool b)
             : this()
         {
             this._date = date;
+            hasDepartment = b;
         }
 
         private void AttenreportForm2_Load(object sender, EventArgs e)
@@ -45,8 +47,7 @@ namespace Book.UI.Hr.Attendance.Atten
             //DateTime endate = Convert.ToDateTime(dt.Rows[0]["ShouldCheckOut"].ToString());
 
             dt.TableName = "attentreport";
-            AttenreportCrystal2 attenreport = new AttenreportCrystal2();
-            attenreport.SetDataSource(ds);
+            
             CrystalDecisions.Shared.ParameterValues employeename = new CrystalDecisions.Shared.ParameterValues();
             CrystalDecisions.Shared.ParameterDiscreteValue PDEmployeeId = new CrystalDecisions.Shared.ParameterDiscreteValue();
 
@@ -57,7 +58,20 @@ namespace Book.UI.Hr.Attendance.Atten
             //CrystalDecisions.Shared.ParameterDiscreteValue PDEmployeeID = new CrystalDecisions.Shared.ParameterDiscreteValue();
             //PDEmployeeID.Value = "EmployeeName";
             //EmployeeName.Add(PDEmployeeID);
-            crystalReportViewer1.ReportSource = attenreport;
+
+
+            if (hasDepartment)
+            {
+                AttenreportCrystal2 attenreport = new AttenreportCrystal2();
+                attenreport.SetDataSource(ds);
+                crystalReportViewer1.ReportSource = attenreport;
+            }
+            else
+            {
+                AttenreportCrystal3 attenreport = new AttenreportCrystal3();
+                attenreport.SetDataSource(ds);
+                crystalReportViewer1.ReportSource = attenreport;
+            }
         }
     }
 }

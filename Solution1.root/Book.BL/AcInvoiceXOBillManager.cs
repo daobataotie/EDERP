@@ -55,8 +55,11 @@ namespace Book.BL
 
 
                 Model.BillIdSet billIdSet = new BL.BillIdSetManager().SelectEnable();
-                billIdSet.IdNumber = Convert.ToInt32(billIdSet.IdNumber) - 1;
-                new BL.BillIdSetManager().UpdateIdnumber(billIdSet);
+                if (acInvoiceXOBill.Id.StartsWith(billIdSet.EnglishId))  //可能存在，现在删除去年的单据，结果吧现在的发票编号数量减掉了
+                {
+                    billIdSet.IdNumber = Convert.ToInt32(billIdSet.IdNumber) - 1;
+                    new BL.BillIdSetManager().UpdateIdnumber(billIdSet);
+                }
 
                 BL.V.CommitTransaction();
             }

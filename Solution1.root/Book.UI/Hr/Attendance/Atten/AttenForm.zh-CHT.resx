@@ -147,7 +147,7 @@
     <value>554, 12</value>
   </data>
   <data name="sbtn_SearchTree.Text" xml:space="preserve">
-    <value>總月報表</value>
+    <value>月報表</value>
   </data>
   <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
     <value>515, 12</value>

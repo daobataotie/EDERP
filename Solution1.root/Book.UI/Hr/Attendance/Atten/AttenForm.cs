@@ -236,7 +236,20 @@ namespace Book.UI.Hr.Attendance.Atten
             //{
             //    return;
             //}
-            AttenreportForm2 ff = new AttenreportForm2(date);
+            AttenreportForm2 ff = new AttenreportForm2(date, true);
+            ff.Show();
+        }
+
+        //总月报表(无部门)
+        private void btn_MonthReportNoDepartment_Click(object sender, EventArgs e)
+        {
+            if (cmbDutyDate.Text == "") return;
+            DateTime date = new DateTime();
+            if (cmbDutyDate.Text != "")
+            {
+                date = DateTime.Parse(cmbDutyDate.Text.ToString());
+            }
+            AttenreportForm2 ff = new AttenreportForm2(date, false);
             ff.Show();
         }
 

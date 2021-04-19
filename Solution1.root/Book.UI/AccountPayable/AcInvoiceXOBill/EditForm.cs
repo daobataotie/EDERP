@@ -296,9 +296,7 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             GenerateBillId();
         }
 
-        /// <summary>
-        /// 生成發票編號
-        /// </summary>
+        // 生成發票編號
         public void GenerateBillId()
         {
             Model.BillIdSet billIdSet = this.BillIdSetManager.SelectEnable();
@@ -307,8 +305,6 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
                 if (DateTime.Now.Date > billIdSet.EndDate.Value.Date || DateTime.Now.Date < billIdSet.StartDate.Value.Date)
                 {
                     throw new Helper.MessageValueException("當前日期已超出發票編號使用日期！");
-                    //MessageBox.Show("當前日期已超出發票編號使用日期！", this.Text, MessageBoxButtons.OK);
-                    //return;
                 }
                 //this._acInvoiceXoBill.Id = this.BillIdDeletedManager.SelectBillIdByBillIdSetId(billIdSet.BillIdSetId);
                 //this.billIdIsDeleted = 1;        //发票编号不能回收
@@ -319,17 +315,13 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
                 if (id > Convert.ToInt32(billIdSet.EndBillId))
                 {
                     throw new Helper.MessageValueException("發票編號已超出編號使用範圍！");
-                    //MessageBox.Show("發票編號已超出編號使用範圍！", this.Text, MessageBoxButtons.OK);
-                    //return;
                 }
                 this._acInvoiceXoBill.Id = billIdSet.EnglishId + id.ToString("00000000"); //发票采用八位编码，如1显示为00000001
                 //}
             }
             else
             {
-                throw new Helper.MessageValueException("請先設置發票編碼！");
-                //MessageBox.Show("請先設置發票編碼！", this.Text, MessageBoxButtons.OK);
-                //return;
+                throw new Helper.MessageValueException("請先設置發票編號！");
             }
         }
 
@@ -387,19 +379,21 @@ namespace Book.UI.AccountPayable.AcInvoiceXOBill
             this._acInvoiceXoBill.SalesType = this.lue_SalesType.EditValue == null ? null : this.lue_SalesType.EditValue.ToString();
             this._acInvoiceXoBill.RelatedNumbers = this.txt_RelatedNumbers.Text;
 
-            if (this.action == "insert")
-            {
-                Model.AcInvoiceXOBill last = this._acInvoiceXoBillManager.GetLast();
-                if (this._acInvoiceXoBill.AcInvoiceXOBillDate < last.AcInvoiceXOBillDate.Value.Date)
-                {
-                    throw new Helper.MessageValueException("發票日期不能小於上笔日期");
-                }
-            }
-            else if (this.action == "update")
-            {
-                if (this._acInvoiceXoBill.AcInvoiceXOBillDate < this._acInvoiceXoBillManager.SelectLastDate(this._acInvoiceXoBill.InsertTime.Value).Date)
-                    throw new Helper.MessageValueException("發票日期不能小於上笔日期");
-            }
+            //2021年4月19日20:42:53：去掉时间不能小于之前的验证
+            //if (this.action == "insert")
+            //{
+            //    Model.AcInvoiceXOBill last = this._acInvoiceXoBillManager.GetLast();
+            //    if (this._acInvoiceXoBill.AcInvoiceXOBillDate < last.AcInvoiceXOBillDate.Value.Date)
+            //    {
+            //        throw new Helper.MessageValueException("發票日期不能小於上笔日期");
+            //    }
+            //}
+            //else if (this.action == "update")
+            //{
+            //    if (this._acInvoiceXoBill.AcInvoiceXOBillDate < this._acInvoiceXoBillManager.SelectLastDate(this._acInvoiceXoBill.InsertTime.Value).Date)
+            //        throw new Helper.MessageValueException("發票日期不能小於上笔日期");
+            //}
+
             //if (global::Helper.DateTimeParse.DateTimeEquls(this.dateForYSDate.DateTime, new DateTime()))
             //    this._acInvoiceXoBill.YSDate = global::Helper.DateTimeParse.NullDate;
             //else

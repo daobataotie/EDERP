@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Linq;
+using System.Threading;
 
 namespace Book.UI.Settings.StockLimitations
 {
@@ -25,79 +26,184 @@ namespace Book.UI.Settings.StockLimitations
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if (date_Search.EditValue == null)
+            try
             {
-                MessageBox.Show("請先選擇查詢日期", "提示", MessageBoxButtons.OK);
-                return;
-            }
 
-            //第一步先查詢對應日期的 商品庫存。若日期<當天日期則查詢對應日期的 即時庫存,否則,直接用現在的商品庫存
-            IList<Model.Product> listPro = productManager.SelectQtyAndCost(lue_CategoryStart.EditValue == null ? "" : lue_CategoryStart.EditValue.ToString(), lue_CategoryEnd.EditValue == null ? "" : lue_CategoryEnd.EditValue.ToString());
-
-            if (date_Search.DateTime < DateTime.Now.Date)
-            {
-                DateTime date = this.date_Search.DateTime.Date.AddDays(1);
-
-                foreach (var item in listPro)
+                #region 目前只查当前库存，历史库存太耗时，暂不处理
+                if (date_Search.EditValue == null)
                 {
-                    var stockList = this.stockManager.SelectJiShi(item.ProductId, date, DateTime.Now).OrderByDescending(o => o.InvoiceDate.Value.Date);
+                    MessageBox.Show("請先選擇查詢日期", "提示", MessageBoxButtons.OK);
+                    return;
+                }
 
-                    //因為調撥後總庫存不變，暫不處理
+                //第一步先查詢對應日期的 商品庫存。若日期<當天日期則查詢對應日期的 即時庫存,否則,直接用現在的商品庫存
+                IList<Model.Product> listPro = productManager.SelectQtyAndCost(lue_CategoryStart.EditValue == null ? "" : lue_CategoryStart.EditValue.ToString(), lue_CategoryEnd.EditValue == null ? "" : lue_CategoryEnd.EditValue.ToString());
+
+                if (date_Search.DateTime < DateTime.Now.Date)
+                {
+                    DateTime date = this.date_Search.DateTime.Date.AddDays(1);
+
+                    #region 多线程版，有问题
+                    ////每1000条数据开一个线程处理
+                    //int count = (int)Math.Ceiling(listPro.Count / 1000D);
+
+                    //List<ManualResetEvent> listMre = new List<ManualResetEvent>();
+                    //for (int i = 0; i < count; i++)
+                    //{
+                    //    var subList = listPro.Skip(i * 1000).Take(1000);
+
+                    //    ManualResetEvent mre = new ManualResetEvent(false);
+                    //    Thread t = new Thread((obj) =>
+                    //    {
+                    //        ManualResetEvent manualResetEvent = (obj as object[])[0] as ManualResetEvent;
+                    //        IEnumerable<Model.Product> list = (obj as object[])[1] as IEnumerable<Model.Product>;
+
+                    //        CalcHistoryStock(list, date);
+                    //        manualResetEvent.Set();
+                    //    });
+
+                    //    t.SetApartmentState(ApartmentState.MTA);
+                    //    t.IsBackground = true;
+                    //    listMre.Add(mre);
+                    //    t.Start(new object[2] { mre, subList });
+                    //}
+
+                    //好像是多线程和数据库查询冲突，执行到此会报 WaitAll for multiple handles on a STA thread is not supported，但是吧这句话注释掉就不会报错了，但是sqlhelper会报连接池错误，大概是因为在线程中开启了多个数据库链接吧
+                    //以后有时间了试试在计算每个商品历史库存的循环内部，查出历史数据后启动线程看看效率如何
+                    //WaitHandle.WaitAll(listMre.ToArray()); 
+                    #endregion
+
+                    CalcHistoryStock2(listPro, date);
+                }
+
+                #endregion
+
+                //IList<Model.Product> listPro = productManager.SelectQtyAndCost(lue_CategoryStart.EditValue == null ? "" : lue_CategoryStart.EditValue.ToString(), lue_CategoryEnd.EditValue == null ? "" : lue_CategoryEnd.EditValue.ToString());
+
+                //計算成本，目前之分自製，採購
+                //ProductType，原指商品 常態，特殊，耳塞。此處為了查詢時不添加新字段用來當做商品生產類型：0 自製；1 外購；2，委外
+                var zizhiList = listPro.Where(l => l.ProductType == 0);
+                var caigouList = listPro.Where(l => l.ProductType != 0);
+
+                foreach (var item in zizhiList)
+                {
+                    item.TotalCost = Convert.ToDecimal(item.StocksQuantity.Value) * item.ReferenceCost.Value;
+                }
+
+                foreach (var item in caigouList)
+                {
+
+                }
+
+                bindingSourceDetail.DataSource = listPro;
+                gridControl1.RefreshDataSource();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void CalcHistoryStock(IEnumerable<Model.Product> listPro, DateTime date)
+        {
+            foreach (var item in listPro)
+            {
+                var stockList = this.stockManager.SelectJiShi(item.ProductId, date, DateTime.Now).OrderByDescending(o => o.InvoiceDate.Value.Date);
+
+                //因為調撥後總庫存不變，暫不處理
+                if (stockList != null && stockList.Count() > 0)
+                {
+                    //若有盘点，以盘点后库存为准                        
+                    Model.StockSeach seach = stockList.Where(s => s.InvoiceTypeIndex == 3).OrderByDescending(o => o.InvoiceDate).ThenByDescending(d => d.InsertTime).FirstOrDefault();
+                    if (seach != null)
+                    {
+                        stockList = stockList.Where(l => l.InvoiceDate.Value.Date <= seach.InvoiceDate.Value.Date && l.InsertTime.Value < seach.InsertTime.Value)
+                             .OrderByDescending(o => o.InvoiceDate.Value.Date);
+
+                        item.StocksQuantity = seach.StockCheckBookQuantity;
+                    }
+
                     if (stockList != null && stockList.Count() > 0)
                     {
-                        //若有盘点，以盘点后库存为准                        
-                        Model.StockSeach seach = stockList.Where(s => s.InvoiceTypeIndex == 3).OrderByDescending(o => o.InvoiceDate).ThenByDescending(d => d.InsertTime).FirstOrDefault();
-                        if (seach != null)
+                        foreach (Model.StockSeach stock in stockList)
                         {
-                            stockList = stockList.Where(l => l.InvoiceDate.Value.Date <= seach.InvoiceDate.Value.Date && l.InsertTime.Value < seach.InsertTime.Value)
-                                 .OrderByDescending(o => o.InvoiceDate.Value.Date);
 
-                            item.StocksQuantity = seach.StockCheckBookQuantity;
-                        }
-
-                        if (stockList != null && stockList.Count() > 0)
-                        {
-                            foreach (Model.StockSeach stock in stockList)
+                            if (stock.InvoiceTypeIndex == 0)
                             {
+                                item.StocksQuantity = Convert.ToDouble(item.StocksQuantity) + Convert.ToDouble(stock.InvoiceQuantity);
 
-                                if (stock.InvoiceTypeIndex == 0)
-                                {
-                                    item.StocksQuantity = Convert.ToDouble(item.StocksQuantity) + stock.InvoiceQuantity.Value;
-
-                                }
-                                if (stock.InvoiceTypeIndex == 1)
-                                {
-                                    item.StocksQuantity = Convert.ToDouble(item.StocksQuantity) - stock.InvoiceQuantity.Value;
-
-                                }
                             }
+                            if (stock.InvoiceTypeIndex == 1)
+                            {
+                                item.StocksQuantity = Convert.ToDouble(item.StocksQuantity) - Convert.ToDouble(stock.InvoiceQuantity);
 
-
+                            }
                         }
+
                     }
                 }
 
             }
-
-            //計算成本，目前之分自製，採購
-            //ProductType，原指商品 常態，特殊，耳塞。此處為了查詢時不添加新字段用來當做商品生產類型：0 自製；1 外購；2，委外
-            var zizhiList = listPro.Where(l => l.ProductType == 0);
-            var caigouList = listPro.Where(l => l.ProductType != 0);
-
-            foreach (var item in zizhiList)
-            {
-                item.TotalCost = Convert.ToDecimal(item.StocksQuantity.Value) * item.ReferenceCost.Value;
-            }
-
-            foreach (var item in caigouList)
-            {
-
-            }
-
-            bindingSourceDetail.DataSource = listPro;
-            gridControl1.RefreshDataSource();
         }
 
+        private void CalcHistoryStock2(IList<Model.Product> listPro, DateTime date)
+        {
+            List<ManualResetEvent> listMre = new List<ManualResetEvent>();
+            foreach (var item in listPro)
+            {
+                var stockList = this.stockManager.SelectJiShi(item.ProductId, date, DateTime.Now).OrderByDescending(o => o.InvoiceDate.Value.Date);
+
+                ManualResetEvent mre = new ManualResetEvent(false);
+                Thread t = new Thread((obj) =>
+                {
+                    ManualResetEvent manualResetEvent = (obj as object[])[0] as ManualResetEvent;
+                    var list = (obj as object[])[1] as IList<Model.StockSeach>;
+
+                    //因為調撥後總庫存不變，暫不處理
+                    if (list != null && list.Count() > 0)
+                    {
+                        //若有盘点，以盘点后库存为准                        
+                        Model.StockSeach seach = list.Where(s => s.InvoiceTypeIndex == 3).OrderByDescending(o => o.InvoiceDate).ThenByDescending(d => d.InsertTime).FirstOrDefault();
+                        if (seach != null)
+                        {
+                            list = list.Where(l => l.InvoiceDate.Value.Date <= seach.InvoiceDate.Value.Date && l.InsertTime.Value < seach.InsertTime.Value)
+                                 .OrderByDescending(o => o.InvoiceDate.Value.Date).ToList();
+
+                            item.StocksQuantity = seach.StockCheckBookQuantity;
+                        }
+
+                        if (list != null && list.Count() > 0)
+                        {
+                            foreach (Model.StockSeach stock in list)
+                            {
+
+                                if (stock.InvoiceTypeIndex == 0)
+                                {
+                                    item.StocksQuantity = Convert.ToDouble(item.StocksQuantity) + Convert.ToDouble(stock.InvoiceQuantity);
+
+                                }
+                                if (stock.InvoiceTypeIndex == 1)
+                                {
+                                    item.StocksQuantity = Convert.ToDouble(item.StocksQuantity) - Convert.ToDouble(stock.InvoiceQuantity);
+
+                                }
+                            }
+
+                        }
+                    }
+
+                    manualResetEvent.Set();
+                });
+
+                t.SetApartmentState(ApartmentState.MTA);
+                t.IsBackground = true;
+                listMre.Add(mre);
+                t.Start(new object[2] { mre, stockList });
+
+            }
+
+            WaitHandle.WaitAll(listMre.ToArray());
+        }
 
     }
 }

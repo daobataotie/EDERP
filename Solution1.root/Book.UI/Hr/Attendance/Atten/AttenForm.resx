@@ -129,7 +129,7 @@
     <value>306, 17</value>
   </metadata>
   <data name="gridControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>8, 8</value>
   </data>
   <data name="gridColumn1.Caption" xml:space="preserve">
     <value>员工编号</value>
@@ -219,7 +219,7 @@
     <value>Combo</value>
   </data>
   <data name="gridControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 353</value>
+    <value>209, 369</value>
   </data>
   <data name="gridControl2.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -237,7 +237,7 @@
     <value>4</value>
   </data>
   <data name="layoutControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>8, 8</value>
   </data>
   <data name="layoutControlGroup3.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup3</value>
@@ -252,7 +252,7 @@
     <value>layoutControlGroup3</value>
   </data>
   <data name="layoutControl3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 377</value>
+    <value>225, 385</value>
   </data>
   <data name="layoutControl3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -291,7 +291,7 @@
     <value>layoutControlGroup2</value>
   </data>
   <data name="layoutControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 401</value>
+    <value>241, 401</value>
   </data>
   <data name="layoutControl2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -314,17 +314,41 @@
   <data name="splitContainerControl1.Panel1.Text" xml:space="preserve">
     <value>Panel1</value>
   </data>
+  <data name="btn_MonthReportNoDepartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>548, 8</value>
+  </data>
+  <data name="btn_MonthReportNoDepartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 22</value>
+  </data>
+  <data name="btn_MonthReportNoDepartment.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btn_MonthReportNoDepartment.Text" xml:space="preserve">
+    <value>月報表(無部門)</value>
+  </data>
+  <data name="&gt;&gt;btn_MonthReportNoDepartment.Name" xml:space="preserve">
+    <value>btn_MonthReportNoDepartment</value>
+  </data>
+  <data name="&gt;&gt;btn_MonthReportNoDepartment.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btn_MonthReportNoDepartment.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;btn_MonthReportNoDepartment.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="sbtn_SearchTree.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 12</value>
+    <value>497, 8</value>
   </data>
   <data name="sbtn_SearchTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 22</value>
+    <value>47, 22</value>
   </data>
   <data name="sbtn_SearchTree.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="sbtn_SearchTree.Text" xml:space="preserve">
-    <value>总月报表</value>
+    <value>月报表</value>
   </data>
   <data name="&gt;&gt;sbtn_SearchTree.Name" xml:space="preserve">
     <value>sbtn_SearchTree</value>
@@ -336,10 +360,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;sbtn_SearchTree.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 12</value>
+    <value>458, 8</value>
   </data>
   <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
@@ -360,13 +384,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButton2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 12</value>
+    <value>645, 8</value>
   </data>
   <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 22</value>
+    <value>71, 22</value>
   </data>
   <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -384,16 +408,16 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="cmbDutyDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>416, 12</value>
+    <value>341, 8</value>
   </data>
   <data name="cmbDutyDate.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
   </data>
   <data name="cmbDutyDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 21</value>
+    <value>74, 21</value>
   </data>
   <data name="cmbDutyDate.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -408,10 +432,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;cmbDutyDate.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 12</value>
+    <value>419, 8</value>
   </data>
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 22</value>
@@ -432,10 +456,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lookUpEmployeeId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 12</value>
+    <value>72, 8</value>
   </data>
   <data name="lookUpEmployeeId.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -477,7 +501,7 @@
     <value />
   </data>
   <data name="lookUpEmployeeId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 21</value>
+    <value>88, 21</value>
   </data>
   <data name="lookUpEmployeeId.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -492,10 +516,10 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lookUpEmployeeId.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="lookupEmployeeName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>277, 12</value>
+    <value>228, 8</value>
   </data>
   <data name="lookupEmployeeName.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v10.2">
     <value>Combo</value>
@@ -510,7 +534,7 @@
     <value />
   </data>
   <data name="lookupEmployeeName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 21</value>
+    <value>69, 21</value>
   </data>
   <data name="lookupEmployeeName.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -525,13 +549,13 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;lookupEmployeeName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <metadata name="bindingSource_atten.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
+    <value>8, 34</value>
   </data>
   <data name="DutyDate.Caption" xml:space="preserve">
     <value>日期</value>
@@ -690,7 +714,7 @@
     <value>False</value>
   </data>
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>679, 351</value>
+    <value>708, 359</value>
   </data>
   <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -705,7 +729,7 @@
     <value>layoutControl1</value>
   </data>
   <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -732,7 +756,7 @@
     <value>查询月份：</value>
   </data>
   <data name="layoutControlItem6.Text" xml:space="preserve">
-    <value>查询月份：</value>
+    <value>月份：</value>
   </data>
   <data name="layoutControlItem3.CustomizationFormText" xml:space="preserve">
     <value>员工编号：</value>
@@ -764,11 +788,17 @@
   <data name="layoutControlItem8.Text" xml:space="preserve">
     <value>layoutControlItem8</value>
   </data>
+  <data name="layoutControlItem11.CustomizationFormText" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="layoutControlItem11.Text" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
   <data name="layoutControlGroup1.Text" xml:space="preserve">
     <value>layoutControlGroup1</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>703, 401</value>
+    <value>724, 401</value>
   </data>
   <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -792,7 +822,7 @@
     <value>Panel2</value>
   </data>
   <data name="splitContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 401</value>
+    <value>970, 401</value>
   </data>
   <data name="splitContainerControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -828,7 +858,7 @@
     <value>0, 0</value>
   </data>
   <data name="barDockControlTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 0</value>
+    <value>970, 0</value>
   </data>
   <data name="&gt;&gt;barDockControlTop.Name" xml:space="preserve">
     <value>barDockControlTop</value>
@@ -849,7 +879,7 @@
     <value>0, 401</value>
   </data>
   <data name="barDockControlBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>963, 28</value>
+    <value>970, 28</value>
   </data>
   <data name="&gt;&gt;barDockControlBottom.Name" xml:space="preserve">
     <value>barDockControlBottom</value>
@@ -888,7 +918,7 @@
     <value>Right</value>
   </data>
   <data name="barDockControlRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>963, 0</value>
+    <value>970, 0</value>
   </data>
   <data name="barDockControlRight.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 401</value>
@@ -912,7 +942,7 @@
     <value>102</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>963, 429</value>
+    <value>970, 429</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>出勤记录</value>
@@ -1179,6 +1209,12 @@
     <value>layoutControlItem8</value>
   </data>
   <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
     <value>DevExpress.XtraLayout.LayoutControlItem, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;barManager1.Name" xml:space="preserve">
