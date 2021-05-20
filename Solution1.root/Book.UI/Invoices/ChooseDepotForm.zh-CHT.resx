@@ -119,25 +119,41 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>768, 288</value>
+    <value>476, 288</value>
   </data>
   <data name="simpleButtonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>705, 312</value>
+    <value>391, 307</value>
   </data>
   <data name="simpleButtonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>624, 312</value>
+    <value>298, 307</value>
   </data>
   <data name="simpleButtonOK.Text" xml:space="preserve">
     <value>確定</value>
   </data>
+  <data name="simpleButtonNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 307</value>
+  </data>
   <data name="colDepotId.Caption" xml:space="preserve">
     <value>庫房編號</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="colDepotId.Width" type="System.Int32, mscorlib">
+    <value>76</value>
   </data>
   <data name="colDepotName.Caption" xml:space="preserve">
     <value>庫房名稱</value>
   </data>
+  <data name="colDepotName.Width" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
   <data name="colDepotDescription.Caption" xml:space="preserve">
     <value>庫房說明</value>
+  </data>
+  <data name="colDepotDescription.Width" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>490, 340</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>選擇庫房</value>

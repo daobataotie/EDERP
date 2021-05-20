@@ -224,7 +224,26 @@ namespace Book.BL
 
             IList<Model.ProduceInDepotDetail> olddetail = DetailAccessor.Select(produceInDepot);
             calEffectUpdate(olddetail);
+            //Model.ProduceInDepot oldProduceInDepot = GetDetails(produceInDepot.ProduceInDepotId);
+            //calEffectUpdate(oldProduceInDepot.Details);
             DetailAccessor.DeleteByHeader(produceInDepot);
+
+            //先将原数据删除，对应的后续单据合计数量修改。如果不这样，会出现一种情况，修改时，删除某一项明细，该明细对应的后续合计数量不变
+            //this.UpdateDetailHjSum(oldProduceInDepot);  //这样太慢，改为下面单独针对删除的项目做合计修改
+            foreach (var item in olddetail)
+            {
+                if (!produceInDepot.Details.Any(d => d.ProduceInDepotDetailId == item.ProduceInDepotDetailId))
+                {
+                    IList<Model.ProduceInDepotDetail> updatelist = DetailAccessor.Select_ByWorkHosueAndPronoteId(produceInDepot.WorkHouseId, item.PronoteHeaderId);
+                    foreach (Model.ProduceInDepotDetail indetail in updatelist)
+                    {
+                        indetail.HeJiProceduresSum = (from i in updatelist where i.ProduceInDepot.InsertTime < indetail.ProduceInDepot.InsertTime select i.ProceduresSum).Sum() + indetail.ProceduresSum;
+                        indetail.HeJiCheckOutSum = (from i in updatelist where i.ProduceInDepot.InsertTime < indetail.ProduceInDepot.InsertTime select i.CheckOutSum).Sum() + indetail.CheckOutSum;
+                        DetailAccessor.Update(indetail);
+                    }
+                }
+            }
+
             addDetail(produceInDepot);
             //修改详细合计生产数量,合计合格数量 2012年6月7日10:38:42
             //this.UpdateDetailHjSum(produceInDepot);

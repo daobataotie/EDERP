@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btn_UpdateClockRecord = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -43,8 +44,8 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -78,6 +79,14 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 435);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(560, 14);
+            this.labelControl1.StyleController = this.layoutControl1;
+            this.labelControl1.TabIndex = 9;
+            // 
             // btn_UpdateClockRecord
             // 
             this.btn_UpdateClockRecord.Location = new System.Drawing.Point(470, 12);
@@ -102,9 +111,11 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
+            this.gridColumn3,
             this.gridColumn2});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
             // 
             // gridColumn1
             // 
@@ -235,14 +246,6 @@
             this.layoutControlItem5.TextToControlDistance = 0;
             this.layoutControlItem5.TextVisible = false;
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 435);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(560, 14);
-            this.labelControl1.StyleController = this.layoutControl1;
-            this.labelControl1.TabIndex = 9;
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.labelControl1;
@@ -254,6 +257,14 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextToControlDistance = 0;
             this.layoutControlItem6.TextVisible = false;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "部門";
+            this.gridColumn3.FieldName = "Employee.Department.DepartmentName";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
             // 
             // NewClockForm
             // 
@@ -301,5 +312,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }

@@ -253,6 +253,9 @@
   <data name="repositoryItemCalcEdit1.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="gridColumn8.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value>{0:0.##}</value>
+  </data>
   <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -267,6 +270,9 @@
   </data>
   <data name="repositoryItemCalcEdit2.AutoHeight" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="gridColumn9.SummaryItem.DisplayFormat" xml:space="preserve">
+    <value>{0:0.##}</value>
   </data>
   <data name="gridColumn9.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -353,30 +359,6 @@
   <data name="layoutControlGroup1.CustomizationFormText" xml:space="preserve">
     <value>layoutControlGroup1</value>
   </data>
-  <data name="layoutControlGroup1.Text" xml:space="preserve">
-    <value>Root</value>
-  </data>
-  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>699, 466</value>
-  </data>
-  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="layoutControl1.Text" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="layoutControlItem1.CustomizationFormText" xml:space="preserve">
     <value>layoutControlItem1</value>
   </data>
@@ -407,6 +389,30 @@
   <data name="emptySpaceItem1.Text" xml:space="preserve">
     <value>emptySpaceItem1</value>
   </data>
+  <data name="layoutControlGroup1.Text" xml:space="preserve">
+    <value>Root</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>699, 466</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="layoutControl1.Text" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="barButtonItem2.Caption" xml:space="preserve">
     <value>保存</value>
   </data>
@@ -436,6 +442,9 @@
   </data>
   <data name="bar2.Text" xml:space="preserve">
     <value>Main menu</value>
+  </data>
+  <data name="barStaticItem2.Width" type="System.Int32, mscorlib">
+    <value>32</value>
   </data>
   <data name="bar3.Text" xml:space="preserve">
     <value>Status bar</value>
@@ -707,6 +716,12 @@
   <data name="&gt;&gt;barButtonItem5.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;bar_Search.Name" xml:space="preserve">
+    <value>bar_Search</value>
+  </data>
+  <data name="&gt;&gt;bar_Search.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;bar3.Name" xml:space="preserve">
     <value>bar3</value>
   </data>
@@ -773,12 +788,6 @@
   <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bar_Search.Name" xml:space="preserve">
-    <value>bar_Search</value>
-  </data>
-  <data name="&gt;&gt;bar_Search.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MealslistForm</value>
   </data>
@@ -844,9 +853,6 @@
 </value>
   </data>
   <data name="barStaticItem1.Width" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="barStaticItem2.Width" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
   <data name="gridCol.Caption" xml:space="preserve">

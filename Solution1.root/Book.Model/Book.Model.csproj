@@ -649,6 +649,7 @@
     <Compile Include="ProduceOtherReturnMaterial.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductCategory.cs" />
+    <Compile Include="ProductCost.cs" />
     <Compile Include="ProductEpiboly.cs" />
     <Compile Include="ProductImage.cs" />
     <Compile Include="ProductMaterial.cs" />

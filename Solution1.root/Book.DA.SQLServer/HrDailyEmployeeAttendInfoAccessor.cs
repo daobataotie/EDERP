@@ -202,7 +202,7 @@ namespace Book.DA.SQLServer
 
             //2020-9-26 20:44:20：蔡銘祥，蔡宗庭，蔡炳南，黃承芳，莊秋琴，辛旻瓊 不出现在异常出勤列表
             DataTable dt = data.Clone();
-            DataRow[] rows = data.Select("EmployeeName not in  ('蔡銘祥','蔡宗庭','蔡炳南','黃承芳','莊秋琴','辛旻瓊')");
+            DataRow[] rows = data.Select("EmployeeName not in  ('蔡銘祥','蔡宗庭','蔡炳南','黃承芳','莊秋琴','辛旻瓊','陳家祥','蔡惠生')");
             foreach (var item in rows)
             {
                 dt.Rows.Add(item.ItemArray);

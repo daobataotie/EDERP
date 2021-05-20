@@ -63,6 +63,7 @@ namespace Book.UI.Hr.Attendance.Meals
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_Search = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -78,7 +79,6 @@ namespace Book.UI.Hr.Attendance.Meals
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.bar_Search = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceLunch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -162,6 +162,7 @@ namespace Book.UI.Hr.Attendance.Meals
             resources.ApplyResources(this.gridView1, "gridView1");
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
@@ -207,6 +208,8 @@ namespace Book.UI.Hr.Attendance.Meals
             this.gridColumn8.ColumnEdit = this.repositoryItemCalcEdit1;
             this.gridColumn8.FieldName = "LunchFee";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.SummaryItem.DisplayFormat = resources.GetString("gridColumn8.SummaryItem.DisplayFormat");
+            this.gridColumn8.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             // 
             // repositoryItemCalcEdit1
             // 
@@ -226,6 +229,8 @@ namespace Book.UI.Hr.Attendance.Meals
             this.gridColumn9.FieldName = "ShouldPay";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
+            this.gridColumn9.SummaryItem.DisplayFormat = resources.GetString("gridColumn9.SummaryItem.DisplayFormat");
+            this.gridColumn9.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             // 
             // repositoryItemCalcEdit2
             // 
@@ -429,6 +434,13 @@ namespace Book.UI.Hr.Attendance.Meals
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.Tag = "doc";
             // 
+            // bar_Search
+            // 
+            resources.ApplyResources(this.bar_Search, "bar_Search");
+            this.bar_Search.Id = 8;
+            this.bar_Search.Name = "bar_Search";
+            this.bar_Search.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_Search_ItemClick);
+            // 
             // bar3
             // 
             this.bar3.BarName = "Status bar";
@@ -522,13 +534,6 @@ namespace Book.UI.Hr.Attendance.Meals
             resources.ApplyResources(this.gridColumn4, "gridColumn4");
             this.gridColumn4.FieldName = "ShouldPay";
             this.gridColumn4.Name = "gridColumn4";
-            // 
-            // bar_Search
-            // 
-            resources.ApplyResources(this.bar_Search, "bar_Search");
-            this.bar_Search.Id = 8;
-            this.bar_Search.Name = "bar_Search";
-            this.bar_Search.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_Search_ItemClick);
             // 
             // MealslistForm
             // 

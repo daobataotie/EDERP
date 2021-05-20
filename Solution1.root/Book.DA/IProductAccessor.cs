@@ -8,6 +8,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.DA
 {
@@ -66,7 +67,15 @@ namespace Book.DA
         string SelectCustomerProductNameByProductIds(string productIds);
 
         double SelectStocksQuantityByStock(string productId);
-        IList<Model.Product> SelectQtyAndCost(string startCategory_Id, string endCategory_Id);
+        IList<Model.Product> SelectQtyAndCost(string startCategory_Id, string endCategory_Id, string depotId);
+
+        IList<Model.ProductCost> SelectCGPriceByMonth();
+
+        IList<Model.ProductCost> SelectOtherInDepotPriceByMonth();
+
+        IList<Model.Product> GetAllProductReferenceCost();
+
+        void BatchUpdateReferenceCost(DataTable dt);
     }
 }
 

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.ncc_Depot = new Book.UI.Invoices.NewChooseContorl();
             this.lue_CategoryEnd = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSourceCategory = new System.Windows.Forms.BindingSource(this.components);
             this.lue_CategoryStart = new DevExpress.XtraEditors.LookUpEdit();
@@ -51,6 +52,7 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lue_CategoryEnd.Properties)).BeginInit();
@@ -68,10 +70,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.ncc_Depot);
             this.layoutControl1.Controls.Add(this.lue_CategoryEnd);
             this.layoutControl1.Controls.Add(this.lue_CategoryStart);
             this.layoutControl1.Controls.Add(this.gridControl1);
@@ -84,6 +88,14 @@
             this.layoutControl1.Size = new System.Drawing.Size(790, 568);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // ncc_Depot
+            // 
+            this.ncc_Depot.EditValue = null;
+            this.ncc_Depot.Location = new System.Drawing.Point(92, 38);
+            this.ncc_Depot.Name = "ncc_Depot";
+            this.ncc_Depot.Size = new System.Drawing.Size(686, 21);
+            this.ncc_Depot.TabIndex = 11;
             // 
             // lue_CategoryEnd
             // 
@@ -122,10 +134,10 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.bindingSourceDetail;
-            this.gridControl1.Location = new System.Drawing.Point(12, 38);
+            this.gridControl1.Location = new System.Drawing.Point(12, 62);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(766, 518);
+            this.gridControl1.Size = new System.Drawing.Size(766, 494);
             this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -149,11 +161,11 @@
             this.gridColumn1.Caption = "商品編號";
             this.gridColumn1.FieldName = "Id";
             this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.SummaryItem.DisplayFormat = "總計：";
-            this.gridColumn1.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Custom;
+            this.gridColumn1.SummaryItem.DisplayFormat = "{0:0}項";
+            this.gridColumn1.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 124;
+            this.gridColumn1.Width = 182;
             // 
             // gridColumn2
             // 
@@ -162,7 +174,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 242;
+            this.gridColumn2.Width = 219;
             // 
             // gridColumn3
             // 
@@ -171,7 +183,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 143;
+            this.gridColumn3.Width = 129;
             // 
             // gridColumn4
             // 
@@ -180,7 +192,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 78;
+            this.gridColumn4.Width = 59;
             // 
             // gridColumn5
             // 
@@ -191,12 +203,12 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 59;
+            this.gridColumn5.Width = 53;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "總成本";
-            this.gridColumn6.DisplayFormat.FormatString = "p";
+            this.gridColumn6.DisplayFormat.FormatString = "0.##";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "TotalCost";
             this.gridColumn6.Name = "gridColumn6";
@@ -204,7 +216,7 @@
             this.gridColumn6.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 102;
+            this.gridColumn6.Width = 106;
             // 
             // gridView2
             // 
@@ -244,7 +256,8 @@
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem2,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(790, 568);
@@ -261,6 +274,7 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(200, 26);
             this.layoutControlItem1.Text = "查詢日期：";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(76, 14);
+            this.layoutControlItem1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem4
             // 
@@ -278,9 +292,9 @@
             // 
             this.layoutControlItem5.Control = this.gridControl1;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(770, 522);
+            this.layoutControlItem5.Size = new System.Drawing.Size(770, 498);
             this.layoutControlItem5.Text = "layoutControlItem5";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextToControlDistance = 0;
@@ -305,6 +319,16 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(234, 26);
             this.layoutControlItem3.Text = "至：";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(76, 14);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.ncc_Depot;
+            this.layoutControlItem6.CustomizationFormText = "庫房：";
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(770, 24);
+            this.layoutControlItem6.Text = "庫房：";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(76, 14);
             // 
             // InventoryCostForm
             // 
@@ -331,6 +355,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,5 +384,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private System.Windows.Forms.BindingSource bindingSourceDetail;
+        private Book.UI.Invoices.NewChooseContorl ncc_Depot;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

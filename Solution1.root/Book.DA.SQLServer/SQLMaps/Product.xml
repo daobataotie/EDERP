@@ -914,5 +914,12 @@ select ProductId,Id,ProductName from Product where ProductId in (select ProductI
       select Id,ProductId,ProductName,CustomerProductName,isnull(StocksQuantity,0) as StocksQuantity,isnull(ReferenceCost,0) as ReferenceCost,(case when HomeMade=1 then 0 when OutSourcing=1 then 1 when TrustOut=1 then 2 else 0 end) as ProductType from Product where 1=1 $sql$ order by Id
       ]]>
     </select>
+  
+    <select id="SelectQtyAndCostByDepot" resultMap="ProductResult6" parameterClass="Map">
+      <![CDATA[
+      select Id,ProductId,ProductName,CustomerProductName,isnull(ReferenceCost,0) as ReferenceCost,(case when HomeMade=1 then 0 when OutSourcing=1 then 1 when TrustOut=1 then 2 else 0 end) as ProductType,(select isnull(SUM(StockQuantity1),0) from Stock where ProductId=Product.ProductId  and DepotId=#DepotId#) as StocksQuantity  from Product where 1=1 $sql$ order by Id
+      ]]>
+    </select>
+
   </statements>
 </sqlMap>

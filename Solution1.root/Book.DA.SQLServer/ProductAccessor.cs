@@ -302,7 +302,7 @@ namespace Book.DA.SQLServer
         }
 
 
-        public IList<Model.Product> SelectQtyAndCost(string startCategory_Id, string endCategory_Id)
+        public IList<Model.Product> SelectQtyAndCost(string startCategory_Id, string endCategory_Id, string depotId)
         {
             string sql = "";
             if (!string.IsNullOrEmpty(startCategory_Id) || !string.IsNullOrEmpty(endCategory_Id))
@@ -315,7 +315,95 @@ namespace Book.DA.SQLServer
             Hashtable ht = new Hashtable();
             ht.Add("sql", sql);
 
-            return sqlmapper.QueryForList<Model.Product>("Product.SelectQtyAndCost", ht);
+            //若仓库为空，直接查商品库存，否则查对应仓库的库存
+            if (string.IsNullOrEmpty(depotId))
+                return sqlmapper.QueryForList<Model.Product>("Product.SelectQtyAndCost", ht);
+            else
+            {
+                ht.Add("DepotId", depotId);
+                return sqlmapper.QueryForList<Model.Product>("Product.SelectQtyAndCostByDepot", ht);
+            }
+        }
+
+
+        //按月份查询所有商品平均采购单价
+        public IList<Model.ProductCost> SelectCGPriceByMonth()
+        {
+            string sql = "select * from (select Avg(ISNULL(cgd.InvoiceCGDetailPrice,0)) as Price,Cast((CONVERT(varchar(7),cg.InvoiceDate,120)+'-01') as datetime) as InvoiceDate,cgd.ProductId from InvoiceCGDetail cgd left join InvoiceCG cg on cgd.InvoiceId=cg.InvoiceId where cgd.InvoiceCGDetailPrice<>0 group by Cast((CONVERT(varchar(7),cg.InvoiceDate,120)+'-01') as datetime),cgd.ProductId) a order by a.InvoiceDate desc ";
+
+            return DataReaderBind<Model.ProductCost>(sql, null, CommandType.Text);
+        }
+
+        //按月份查询所有商品平均委外入库单价
+        public IList<Model.ProductCost> SelectOtherInDepotPriceByMonth()
+        {
+            string sql = "select * from (select AVG(ISNULL(poid.ProcessPrice,0)) as Price,Cast((CONVERT(varchar(7),poi.ProduceOtherInDepotDate,120)+'-01') as datetime) as InvoiceDate ,poid.ProductId from ProduceOtherInDepotDetail poid left join ProduceOtherInDepot poi on poid.ProduceOtherInDepotId=poi.ProduceOtherInDepotId where poid.ProcessPrice<>0 group by Cast((CONVERT(varchar(7),poi.ProduceOtherInDepotDate,120)+'-01') as datetime),poid.ProductId) a order by a.InvoiceDate desc ";
+
+            return DataReaderBind<Model.ProductCost>(sql, null, CommandType.Text);
+        }
+
+        //获取所有商品的参考成本
+        public IList<Model.Product> GetAllProductReferenceCost()
+        {
+            //查询“参考成本”=0 的所有商品，然后去“客户商品价格”和“厂商商品价格”中查询其对应的 销售/采购 价格，若销售/采购同时存在，以 采购 价格为准当做参考成本 ；一个商品可能对不同的客户/厂商有不同的价格，所以查询结果中，一个商品可能会对应多个价格，后续计算中以日期最近的价格为准
+            string sql = "select a.ProductId,a.ProductName,a.PriceAndRange,a.InsertTime,COUNT(*) from (select ReferenceCost,p.ProductId,p.ProductName,cpp.CustomerProductPriceRage,sp.SupplierProductPriceRange,ISNULL(sp.SupplierProductPriceRange,cpp.CustomerProductPriceRage) as PriceAndRange,ISNULL(sp.InsertTime,cpp.InsertTime) as InsertTime from Product p left join CustomerProductPrice cpp on p.ProductId=cpp.ProductId left join SupplierProduct sp on p.ProductId=sp.ProductId where (p. ReferenceCost =0 or p.ReferenceCost is null) and( cpp.CustomerProductPriceRage is not null or sp.SupplierProductPriceRange is not null) ) a group by a.ProductId,a.ProductName,a.PriceAndRange,a.InsertTime ";
+
+            return DataReaderBind<Model.Product>(sql, null, CommandType.Text);
+        }
+
+        //批量更新商品的 参考成本
+        public void BatchUpdateReferenceCost(DataTable dt)
+        {
+            using (SqlConnection connection = new SqlConnection(sqlmapper.DataSource.ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("", connection))
+                {
+                    //创建临时表，因为SqlBulkCopy只能批量插入，所以先批量插入到临时表中，再从临时表中更新到商品表，然后删除临时表
+                    //由于临时表关闭连接自动删除，所以保持在一个链接内
+                    string createTempTableSql = "Create Table #ProHelper (ProductId varchar(50),ReferenceCost money)";
+
+                    try
+                    {
+                        connection.Open();
+                        cmd.CommandText = createTempTableSql;
+                        int row = cmd.ExecuteNonQuery();
+
+                        using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))
+                        {
+                            bulkCopy.BatchSize = 100;
+                            bulkCopy.BulkCopyTimeout = 300;
+
+                            bulkCopy.DestinationTableName = "#ProHelper";
+                            bulkCopy.ColumnMappings.Add("ProductId", "ProductId");
+                            bulkCopy.ColumnMappings.Add("ReferenceCost", "ReferenceCost");
+
+                            bulkCopy.WriteToServer(dt);
+                        }
+
+                        //从临时表中更新到商品表
+                        string updateSql = "update Product set ReferenceCost=p.ReferenceCost  from #ProHelper p  where Product.ProductId=p.ProductId  and p.ReferenceCost>0";
+                        cmd.CommandText = updateSql;
+                        row = cmd.ExecuteNonQuery();
+
+                        //删除临时表
+                        string dropTempTableSql = "drop table #ProHelper";
+                        cmd.CommandText = dropTempTableSql;
+                        row = cmd.ExecuteNonQuery();
+
+                    }
+                    catch (System.Data.SqlClient.SqlException e)
+                    {
+                        connection.Close();
+                        throw e;
+                    }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                            connection.Close();
+                    }
+                }
+            }
+
         }
     }
 }

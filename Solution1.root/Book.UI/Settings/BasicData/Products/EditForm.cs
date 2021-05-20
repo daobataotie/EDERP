@@ -3450,5 +3450,52 @@ namespace Book.UI.Settings.BasicData.Products
                 this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() { });
             }
         }
+
+        //批量更新商品的 参考成本
+        private void BatchUpdateReferenceCost()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ProductId", typeof(string));
+            dt.Columns.Add("ReferenceCost", typeof(decimal));
+
+            //查询“参考成本”=0 的所有商品，然后去“客户商品价格”和“厂商商品价格”中查询其对应的 销售/采购 价格，若销售/采购同时存在，以 采购 价格为准当做参考成本 ；一个商品可能对不同的客户/厂商有不同的价格，所以查询结果中，一个商品可能会对应多个价格，后续计算中以日期最近的价格为准
+            IList<Model.Product> list = productManager.GetAllProductReferenceCost();
+
+            var group = list.GroupBy(p => p.ProductId);
+
+            foreach (var item in group)
+            {
+                var data = item.OrderByDescending(i => i.InsertTime);   //按照日期降序排序
+                foreach (var pro in data)
+                {
+                    //以价格区间的第一组数据为准 计算参考成本
+                    string priceRange = pro.PriceAndRange.Split(',')[0];   //查询时已经过滤了价格为空的数据，所以这里必有价格
+                    string[] strs = priceRange.Split('/');
+                    if (strs.Length == 3)
+                    {
+                        decimal price = Convert.ToDecimal(strs[2]);
+
+                        //最近日期的价格 如果为0，继续往下找
+                        if (price > 0)
+                        {
+                            DataRow dr = dt.NewRow();
+                            dr[0] = pro.ProductId;
+                            dr[1] = price;
+                            dt.Rows.Add(dr);
+
+                            break;
+                        }
+                    }
+                }
+
+            }
+
+
+            //将商品的参考成本批量更新到数据库
+            if (dt.Rows.Count > 0)
+                productManager.BatchUpdateReferenceCost(dt);
+
+        }
+
     }
 }

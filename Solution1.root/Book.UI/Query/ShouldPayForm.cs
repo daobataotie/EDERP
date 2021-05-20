@@ -654,7 +654,7 @@ namespace Book.UI.Query
 
                 this.shouldPayAccount.Supplier = this.nccSupplier.EditValue as Model.Supplier;
                 this.shouldPayAccount.SupplierId = this.shouldPayAccount.Supplier == null ? null : this.shouldPayAccount.Supplier.SupplierId;
-                
+
                 this.shouldPayAccount.JinE = this.spe_JinE.Value;
                 this.shouldPayAccount.ShuiE = this.spe_ShuiE.Value;
                 this.shouldPayAccount.ZheRang = this.spe_ZheRang.Value;
@@ -987,9 +987,9 @@ namespace Book.UI.Query
 
                     CountJieDaiTotal(this.atSummon.Details);
 
-
+                    //如果是修改，并且之前已经存在第二笔传票，编号不能变，否则删除的时候根据编号删不掉原数据
                     //第二筆會計傳票
-                    if (this.atSummon2 != null)
+                    if (this.atSummon2 == null)
                     {
                         this.atSummon2 = new Book.Model.AtSummon();
                         this.atSummon2.SummonCategory = "轉帳傳票";
@@ -1048,8 +1048,19 @@ namespace Book.UI.Query
                     {
                         fpList.ToList().ForEach(fp =>
                             {
-                                fp.ShouldPayAccountId = shouldPayAccount.ShouldPayAccountId;
-                                shouldPayAccount.Detail.Add(fp);
+                                Model.ShouldPayAccountDetail detail = new Book.Model.ShouldPayAccountDetail();
+                                detail.ShouldPayAccountId = shouldPayAccount.ShouldPayAccountId;
+                                detail.ShouldPayAccountDetailId = Guid.NewGuid().ToString();
+                                detail.FPDate = fp.FPDate;
+                                detail.FPHeader = fp.FPHeader;
+                                detail.FPId = fp.FPId;
+                                detail.FPSupplier = fp.FPSupplier;
+                                detail.FPSupplierId = fp.FPSupplierId;
+                                detail.FPMoney = fp.FPMoney;
+                                detail.FPTax = fp.FPTax;
+                                detail.FPTotalMoney = fp.FPTotalMoney;
+
+                                shouldPayAccount.Detail.Add(detail);
                             });
                         this.gridControl2.RefreshDataSource();
                         this.CountFP();
@@ -1233,10 +1244,15 @@ namespace Book.UI.Query
                 if (e.RowHandle == 0 && this.atSummon2 != null)
                 {
                     this.atSummon2.SummonDate = Convert.ToDateTime(e.Value);
-                    this.atSummon2.Id = this.atSummonManager.GetConsecutiveId(this.atSummon2.SummonDate.Value);
+
+                    //如果是修改，并且之前已经存在第二笔传票，编号不能变，否则删除的时候根据编号删不掉原数据
+                    if (this.action == "insert" || (this.action == "update" && string.IsNullOrEmpty(this.txt_AtSummonId_P1.Text)))
+                    {
+                        this.atSummon2.Id = this.atSummonManager.GetConsecutiveId(this.atSummon2.SummonDate.Value);
+                        this.txt_AtSummonId_P1.EditValue = this.atSummon2.Id;
+                    }
 
                     this.date_AtSummonDate_P1.EditValue = this.atSummon2.SummonDate;
-                    this.txt_AtSummonId_P1.EditValue = this.atSummon2.Id;
                 }
             }
             else if (e.Column.Name == "gridColumn12")       //票面金額

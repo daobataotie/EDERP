@@ -8,6 +8,7 @@
 using System;
 using System.Text;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Book.BL
 {
@@ -717,9 +718,29 @@ namespace Book.BL
             return accessor.SelectStocksQuantityByStock(productId);
         }
 
-        public IList<Model.Product> SelectQtyAndCost(string startCategory_Id, string endCategory_Id)
+        public IList<Model.Product> SelectQtyAndCost(string startCategory_Id, string endCategory_Id, string depotId)
         {
-            return accessor.SelectQtyAndCost(startCategory_Id, endCategory_Id);
+            return accessor.SelectQtyAndCost(startCategory_Id, endCategory_Id, depotId);
+        }
+
+        public IList<Model.ProductCost> SelectCGPriceByMonth()
+        {
+            return accessor.SelectCGPriceByMonth();
+        }
+
+        public IList<Model.ProductCost> SelectOtherInDepotPriceByMonth()
+        {
+            return accessor.SelectOtherInDepotPriceByMonth();
+        }
+
+        public IList<Model.Product> GetAllProductReferenceCost()
+        {
+            return accessor.GetAllProductReferenceCost();
+        }
+
+        public void BatchUpdateReferenceCost(DataTable dt)
+        {
+            accessor.BatchUpdateReferenceCost(dt);
         }
     }
 }
