@@ -343,7 +343,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
 
             this.lookUpEditUnit.EditValue = this._PCExportReportANSI.ProductUnitId;
 
-            this.comboBoxEdit1.Text = string.IsNullOrEmpty(this._PCExportReportANSI.CSAJiShuBiaoZhun) ? "ANSI Z87.1-2015" : this._PCExportReportANSI.CSAJiShuBiaoZhun;
+            this.comboBoxEdit1.Text = string.IsNullOrEmpty(this._PCExportReportANSI.CSAJiShuBiaoZhun) ? "ANSI Z87.1-2020" : this._PCExportReportANSI.CSAJiShuBiaoZhun;
         }
 
         //列印

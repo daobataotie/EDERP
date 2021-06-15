@@ -360,7 +360,7 @@ namespace Book.DA.SQLServer
                 {
                     //创建临时表，因为SqlBulkCopy只能批量插入，所以先批量插入到临时表中，再从临时表中更新到商品表，然后删除临时表
                     //由于临时表关闭连接自动删除，所以保持在一个链接内
-                    string createTempTableSql = "Create Table #ProHelper (ProductId varchar(50),ReferenceCost money)";
+                    string createTempTableSql = "Create Table ProHelper (ProductId varchar(50),ReferenceCost money)";
 
                     try
                     {
@@ -373,7 +373,7 @@ namespace Book.DA.SQLServer
                             bulkCopy.BatchSize = 100;
                             bulkCopy.BulkCopyTimeout = 300;
 
-                            bulkCopy.DestinationTableName = "#ProHelper";
+                            bulkCopy.DestinationTableName = "ProHelper";
                             bulkCopy.ColumnMappings.Add("ProductId", "ProductId");
                             bulkCopy.ColumnMappings.Add("ReferenceCost", "ReferenceCost");
 
@@ -381,12 +381,12 @@ namespace Book.DA.SQLServer
                         }
 
                         //从临时表中更新到商品表
-                        string updateSql = "update Product set ReferenceCost=p.ReferenceCost  from #ProHelper p  where Product.ProductId=p.ProductId  and p.ReferenceCost>0";
+                        string updateSql = "update Product set ReferenceCost=p.ReferenceCost from ProHelper p where Product.ProductId=p.ProductId";
                         cmd.CommandText = updateSql;
                         row = cmd.ExecuteNonQuery();
 
                         //删除临时表
-                        string dropTempTableSql = "drop table #ProHelper";
+                        string dropTempTableSql = "drop table ProHelper";
                         cmd.CommandText = dropTempTableSql;
                         row = cmd.ExecuteNonQuery();
 

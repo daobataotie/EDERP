@@ -67,10 +67,12 @@ namespace Book.UI.produceManager.PronoteHeader
                 this.xrLabelCheckedStandard.Text = xo.xocustomer.CheckedStandard;
                 this.xrLabelCustomer.Text = xo.xocustomer.CustomerShortName;
                 this.xrLabelCustomerXOId.Text = xo.CustomerInvoiceXOId;
-                if (flag != 0 && flag != 5)
+                if (flag != 0)
                 {
-                    //this.xrLabelXOJHDate.Text = xo.InvoiceYjrq.Value.ToString("yyyy-MM-dd");   //生产加工单和加工指示单 不显示交期
                     this.xrLabelPiHao.Text = xo.CustomerLotNumber;
+
+                    if (flag != 5)
+                        this.xrLabelXOJHDate.Text = xo.InvoiceYjrq.Value.ToString("yyyy-MM-dd");   //生产加工单和加工指示单 不显示交期
                 }
 
                 if (xo.xocustomer != null && !string.IsNullOrEmpty(xo.xocustomer.CheckedStandard))

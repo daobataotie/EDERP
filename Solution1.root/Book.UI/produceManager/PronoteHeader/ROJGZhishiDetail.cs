@@ -73,12 +73,11 @@ namespace Book.UI.produceManager.PronoteHeader
             this.xrLabelCount.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_DetailsSum);
 
             this.xrLabelUnit.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_ProductUnit);
-            if (type != 0 && type != 5)
-            {
-                //生产加工单和加工指示单不显示交期
-                //this.xrLabelXOJHDate.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");
-                this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerLotNumber);
-            }
+            this.xrLabelPiHao.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_CustomerLotNumber);
+
+            //生产加工单和加工指示单不显示交期
+            //this.xrLabelXOJHDate.DataBindings.Add("Text", this.DataSource, "InvoiceXO." + Model.InvoiceXO.PRO_InvoiceYjrq, "{0:yyyy-MM-dd}");
+
             this.xrLabelProductName.DataBindings.Add("Text", this.DataSource, "ProductName");
             this.xrRichTextProDesc.DataBindings.Add("Rtf", this.DataSource, "ProductDesc");
             this.xrLabelMRP.DataBindings.Add("Text", this.DataSource, Model.PronoteHeader.PRO_MRSHeaderId);

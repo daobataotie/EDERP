@@ -100,6 +100,9 @@ namespace Book.UI
 
             //CSA外销报告
             operations.Add("produceManager.PCExportReportANSI.CSAEditForm", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.CSAEditForm", form); });
+            //CSA外销报告_稽核用
+            operations.Add("produceManager.PCExportReportANSI.CSAEditForm_Jihe", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.CSAEditForm_Jihe", form); });
+
             operations.Add("produceManager.PCExportReportANSI.DetailsForm-CSAWDCS", (D1)delegate(System.Windows.Forms.Form form) { M7("produceManager.PCExportReportANSI.DetailsForm-CSAWDCS", form); });
             operations.Add("produceManager.PCExportReportANSI.DetailsForm-CSAGX", (D1)delegate(System.Windows.Forms.Form form) { M7("produceManager.PCExportReportANSI.DetailsForm-CSAGX", form); });
             operations.Add("produceManager.PCExportReportANSI.DetailsForm-CSAQXD", (D1)delegate(System.Windows.Forms.Form form) { M7("produceManager.PCExportReportANSI.DetailsForm-CSAQXD", form); });
@@ -285,9 +288,6 @@ namespace Book.UI
 
             //外发入库
             operations.Add("produceManager.ProduceOtherInDepot", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.ProduceOtherInDepot.Editform", form); });
-
-
-
 
             //物料清单
             operations.Add("settings.producemanager.bommanagerform", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.ProduceManager.BomEdit", form); });
@@ -803,7 +803,8 @@ namespace Book.UI
             //庫存成本分析表
             operations.Add("Settings.StockLimitations.InventoryCostForm", (D1)delegate(System.Windows.Forms.Form form) { M1("Settings.StockLimitations.InventoryCostForm", form); });
 
-
+            //CSA稽核版_数据输入页 (2021年6月7日00:03:56)
+            operations.Add("produceManager.PCExportReportANSI.DataInputForm_CSAJihe", (D1)delegate(System.Windows.Forms.Form form) { M1("produceManager.PCExportReportANSI.DataInputForm_CSAJihe", form); });
 
         }
 

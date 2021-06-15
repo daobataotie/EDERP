@@ -46,48 +46,35 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableRow7 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell19 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell20 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell21 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbImpaceTestAmount = new DevExpress.XtraReports.UI.XRLabel();
-            this.LbImpactJudge = new DevExpress.XtraReports.UI.XRLabel();
+            this.LbImpaceTestAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable6 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell16 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell17 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbMirrorlens = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrTableCell23 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbLightTestAmount = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbLightJudge = new DevExpress.XtraReports.UI.XRLabel();
+            this.LbMirrorlens = new DevExpress.XtraReports.UI.XRTableCell();
+            this.LbLightTestAmount = new DevExpress.XtraReports.UI.XRTableCell();
+            this.LbLightJudge = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbFogTestAmount = new DevExpress.XtraReports.UI.XRLabel();
-            this.LbFogJudge = new DevExpress.XtraReports.UI.XRLabel();
+            this.LbFogTestAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbPolarizedTestAmount = new DevExpress.XtraReports.UI.XRLabel();
-            this.LbPolarizedJudge = new DevExpress.XtraReports.UI.XRLabel();
+            this.LbPolarizedTestAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.LbReportDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbTestAmount = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbOrderAmount = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbTesrPerson = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbProduct = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbOrderId = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.LbSpecifiction = new DevExpress.XtraReports.UI.XRLabel();
             this.LbCustomer = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -100,18 +87,22 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbOpticsTestAmount = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrTableCell22 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbOpticsJudge = new DevExpress.XtraReports.UI.XRLabel();
+            this.LbOpticsTestAmount = new DevExpress.XtraReports.UI.XRTableCell();
+            this.LbOpticsJudge = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.LbClearJudge = new DevExpress.XtraReports.UI.XRLabel();
-            this.LbClearTestAmount = new DevExpress.XtraReports.UI.XRLabel();
+            this.LbClearTestAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.LbClearJudge = new DevExpress.XtraReports.UI.XRTableCell();
+            this.LbPolarizedJudge = new DevExpress.XtraReports.UI.XRTableCell();
+            this.LbFogJudge = new DevExpress.XtraReports.UI.XRTableCell();
+            this.LbImpactJudge = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -124,6 +115,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // Detail
             // 
             resources.ApplyResources(this.Detail, "Detail");
+            this.Detail.Expanded = false;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             // 
@@ -272,7 +264,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableRow7.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell19,
             this.xrTableCell20,
-            this.xrTableCell21});
+            this.LbImpaceTestAmount,
+            this.LbImpactJudge});
             resources.ApplyResources(this.xrTableRow7, "xrTableRow7");
             this.xrTableRow7.Name = "xrTableRow7";
             this.xrTableRow7.Weight = 1;
@@ -295,36 +288,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell20.StylePriority.UseTextAlignment = false;
             this.xrTableCell20.Weight = 1.3365383757641953;
             // 
-            // xrTableCell21
-            // 
-            this.xrTableCell21.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbImpaceTestAmount,
-            this.LbImpactJudge});
-            resources.ApplyResources(this.xrTableCell21, "xrTableCell21");
-            this.xrTableCell21.Name = "xrTableCell21";
-            this.xrTableCell21.Weight = 1;
-            // 
             // LbImpaceTestAmount
             // 
-            this.LbImpaceTestAmount.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
             resources.ApplyResources(this.LbImpaceTestAmount, "LbImpaceTestAmount");
             this.LbImpaceTestAmount.Name = "LbImpaceTestAmount";
-            this.LbImpaceTestAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbImpaceTestAmount.StylePriority.UseBorders = false;
-            this.LbImpaceTestAmount.StylePriority.UseFont = false;
             this.LbImpaceTestAmount.StylePriority.UseTextAlignment = false;
-            // 
-            // LbImpactJudge
-            // 
-            this.LbImpactJudge.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
-            resources.ApplyResources(this.LbImpactJudge, "LbImpactJudge");
-            this.LbImpactJudge.Name = "LbImpactJudge";
-            this.LbImpactJudge.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbImpactJudge.StylePriority.UseBorders = false;
-            this.LbImpactJudge.StylePriority.UseFont = false;
-            this.LbImpactJudge.StylePriority.UseTextAlignment = false;
+            this.LbImpaceTestAmount.Weight = 0.520165561967591;
             // 
             // xrTable6
             // 
@@ -341,9 +310,9 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // 
             this.xrTableRow6.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell16,
-            this.xrTableCell17,
-            this.xrTableCell23,
-            this.xrTableCell18});
+            this.LbMirrorlens,
+            this.LbLightTestAmount,
+            this.LbLightJudge});
             resources.ApplyResources(this.xrTableRow6, "xrTableRow6");
             this.xrTableRow6.Name = "xrTableRow6";
             this.xrTableRow6.Weight = 1;
@@ -357,62 +326,27 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell16.StylePriority.UseTextAlignment = false;
             this.xrTableCell16.Weight = 0.66346162423580457;
             // 
-            // xrTableCell17
-            // 
-            this.xrTableCell17.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbMirrorlens});
-            resources.ApplyResources(this.xrTableCell17, "xrTableCell17");
-            this.xrTableCell17.Multiline = true;
-            this.xrTableCell17.Name = "xrTableCell17";
-            this.xrTableCell17.StylePriority.UseTextAlignment = false;
-            this.xrTableCell17.Weight = 1.3365383757641953;
-            // 
             // LbMirrorlens
             // 
-            this.LbMirrorlens.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right)
-                        | DevExpress.XtraPrinting.BorderSide.Bottom)));
             resources.ApplyResources(this.LbMirrorlens, "LbMirrorlens");
+            this.LbMirrorlens.Multiline = true;
             this.LbMirrorlens.Name = "LbMirrorlens";
-            this.LbMirrorlens.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.LbMirrorlens.StylePriority.UseBorders = false;
-            this.LbMirrorlens.StylePriority.UseFont = false;
             this.LbMirrorlens.StylePriority.UseTextAlignment = false;
-            // 
-            // xrTableCell23
-            // 
-            this.xrTableCell23.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbLightTestAmount});
-            resources.ApplyResources(this.xrTableCell23, "xrTableCell23");
-            this.xrTableCell23.Name = "xrTableCell23";
-            this.xrTableCell23.Weight = 0.52016560160974046;
+            this.LbMirrorlens.Weight = 1.3365383757641953;
             // 
             // LbLightTestAmount
             // 
-            this.LbLightTestAmount.Borders = DevExpress.XtraPrinting.BorderSide.None;
             resources.ApplyResources(this.LbLightTestAmount, "LbLightTestAmount");
             this.LbLightTestAmount.Name = "LbLightTestAmount";
-            this.LbLightTestAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbLightTestAmount.StylePriority.UseBorders = false;
-            this.LbLightTestAmount.StylePriority.UseFont = false;
             this.LbLightTestAmount.StylePriority.UseTextAlignment = false;
-            // 
-            // xrTableCell18
-            // 
-            this.xrTableCell18.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbLightJudge});
-            resources.ApplyResources(this.xrTableCell18, "xrTableCell18");
-            this.xrTableCell18.Name = "xrTableCell18";
-            this.xrTableCell18.Weight = 0.47983439839025954;
+            this.LbLightTestAmount.Weight = 0.52016560160974046;
             // 
             // LbLightJudge
             // 
-            this.LbLightJudge.Borders = DevExpress.XtraPrinting.BorderSide.None;
             resources.ApplyResources(this.LbLightJudge, "LbLightJudge");
             this.LbLightJudge.Name = "LbLightJudge";
-            this.LbLightJudge.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbLightJudge.StylePriority.UseBorders = false;
-            this.LbLightJudge.StylePriority.UseFont = false;
             this.LbLightJudge.StylePriority.UseTextAlignment = false;
+            this.LbLightJudge.Weight = 0.47983439839025954;
             // 
             // xrTable5
             // 
@@ -430,7 +364,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableRow5.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell13,
             this.xrTableCell14,
-            this.xrTableCell15});
+            this.LbFogTestAmount,
+            this.LbFogJudge});
             resources.ApplyResources(this.xrTableRow5, "xrTableRow5");
             this.xrTableRow5.Name = "xrTableRow5";
             this.xrTableRow5.Weight = 1;
@@ -453,30 +388,12 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell14.StylePriority.UseTextAlignment = false;
             this.xrTableCell14.Weight = 1.3365383757641953;
             // 
-            // xrTableCell15
-            // 
-            this.xrTableCell15.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbFogTestAmount,
-            this.LbFogJudge});
-            resources.ApplyResources(this.xrTableCell15, "xrTableCell15");
-            this.xrTableCell15.Name = "xrTableCell15";
-            this.xrTableCell15.Weight = 1;
-            // 
             // LbFogTestAmount
             // 
             resources.ApplyResources(this.LbFogTestAmount, "LbFogTestAmount");
             this.LbFogTestAmount.Name = "LbFogTestAmount";
-            this.LbFogTestAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbFogTestAmount.StylePriority.UseFont = false;
             this.LbFogTestAmount.StylePriority.UseTextAlignment = false;
-            // 
-            // LbFogJudge
-            // 
-            resources.ApplyResources(this.LbFogJudge, "LbFogJudge");
-            this.LbFogJudge.Name = "LbFogJudge";
-            this.LbFogJudge.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbFogJudge.StylePriority.UseFont = false;
-            this.LbFogJudge.StylePriority.UseTextAlignment = false;
+            this.LbFogTestAmount.Weight = 0.52016523644698776;
             // 
             // xrTable4
             // 
@@ -494,7 +411,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableRow4.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell10,
             this.xrTableCell11,
-            this.xrTableCell12});
+            this.LbPolarizedTestAmount,
+            this.LbPolarizedJudge});
             resources.ApplyResources(this.xrTableRow4, "xrTableRow4");
             this.xrTableRow4.Name = "xrTableRow4";
             this.xrTableRow4.Weight = 1;
@@ -515,32 +433,14 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.StylePriority.UseFont = false;
             this.xrTableCell11.StylePriority.UseTextAlignment = false;
-            this.xrTableCell11.Weight = 1.3365383757641953;
-            // 
-            // xrTableCell12
-            // 
-            this.xrTableCell12.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbPolarizedTestAmount,
-            this.LbPolarizedJudge});
-            resources.ApplyResources(this.xrTableCell12, "xrTableCell12");
-            this.xrTableCell12.Name = "xrTableCell12";
-            this.xrTableCell12.Weight = 1;
+            this.xrTableCell11.Weight = 1.3365376429758369;
             // 
             // LbPolarizedTestAmount
             // 
             resources.ApplyResources(this.LbPolarizedTestAmount, "LbPolarizedTestAmount");
             this.LbPolarizedTestAmount.Name = "LbPolarizedTestAmount";
-            this.LbPolarizedTestAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbPolarizedTestAmount.StylePriority.UseFont = false;
             this.LbPolarizedTestAmount.StylePriority.UseTextAlignment = false;
-            // 
-            // LbPolarizedJudge
-            // 
-            resources.ApplyResources(this.LbPolarizedJudge, "LbPolarizedJudge");
-            this.LbPolarizedJudge.Name = "LbPolarizedJudge";
-            this.LbPolarizedJudge.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbPolarizedJudge.StylePriority.UseFont = false;
-            this.LbPolarizedJudge.StylePriority.UseTextAlignment = false;
+            this.LbPolarizedTestAmount.Weight = 0.520166152432436;
             // 
             // LbReportDate
             // 
@@ -569,15 +469,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbTestAmount.StylePriority.UseBorders = false;
             this.LbTestAmount.StylePriority.UseTextAlignment = false;
             // 
-            // xrLabel17
-            // 
-            resources.ApplyResources(this.xrLabel17, "xrLabel17");
-            this.xrLabel17.Multiline = true;
-            this.xrLabel17.Name = "xrLabel17";
-            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel17.StylePriority.UseFont = false;
-            this.xrLabel17.StylePriority.UseTextAlignment = false;
-            // 
             // LbOrderAmount
             // 
             this.LbOrderAmount.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
@@ -586,15 +477,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbOrderAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.LbOrderAmount.StylePriority.UseBorders = false;
             this.LbOrderAmount.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel15
-            // 
-            resources.ApplyResources(this.xrLabel15, "xrLabel15");
-            this.xrLabel15.Multiline = true;
-            this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel15.StylePriority.UseFont = false;
-            this.xrLabel15.StylePriority.UseTextAlignment = false;
             // 
             // LbTesrPerson
             // 
@@ -641,15 +523,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.LbOrderId.StylePriority.UseBorders = false;
             this.LbOrderId.StylePriority.UseTextAlignment = false;
             // 
-            // xrLabel7
-            // 
-            resources.ApplyResources(this.xrLabel7, "xrLabel7");
-            this.xrLabel7.Multiline = true;
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel7.StylePriority.UseFont = false;
-            this.xrLabel7.StylePriority.UseTextAlignment = false;
-            // 
             // LbSpecifiction
             // 
             this.LbSpecifiction.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
@@ -676,15 +549,6 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
-            // 
-            // xrLabel3
-            // 
-            resources.ApplyResources(this.xrLabel3, "xrLabel3");
-            this.xrLabel3.Multiline = true;
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel3.StylePriority.UseFont = false;
-            this.xrLabel3.StylePriority.UseTextAlignment = false;
             // 
             // xrTable1
             // 
@@ -735,23 +599,29 @@ namespace Book.UI.produceManager.PCExportReportANSI
             // 
             // xrLabel8
             // 
+            this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.None;
             resources.ApplyResources(this.xrLabel8, "xrLabel8");
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel8.StylePriority.UseBorders = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel6
             // 
+            this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             resources.ApplyResources(this.xrLabel6, "xrLabel6");
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel6.StylePriority.UseBorders = false;
             this.xrLabel6.StylePriority.UseTextAlignment = false;
             // 
             // xrLabel24
             // 
+            this.xrLabel24.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             resources.ApplyResources(this.xrLabel24, "xrLabel24");
             this.xrLabel24.Name = "xrLabel24";
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel24.StylePriority.UseBorders = false;
             this.xrLabel24.StylePriority.UseFont = false;
             this.xrLabel24.StylePriority.UseTextAlignment = false;
             // 
@@ -771,8 +641,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell4,
             this.xrTableCell5,
-            this.xrTableCell6,
-            this.xrTableCell22});
+            this.LbOpticsTestAmount,
+            this.LbOpticsJudge});
             resources.ApplyResources(this.xrTableRow2, "xrTableRow2");
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.Weight = 1.0612226450909461;
@@ -793,43 +663,19 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell5.StylePriority.UseTextAlignment = false;
             this.xrTableCell5.Weight = 1.3365384850135216;
             // 
-            // xrTableCell6
-            // 
-            this.xrTableCell6.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbOpticsTestAmount});
-            resources.ApplyResources(this.xrTableCell6, "xrTableCell6");
-            this.xrTableCell6.Name = "xrTableCell6";
-            this.xrTableCell6.Weight = 0.52016560160974057;
-            // 
             // LbOpticsTestAmount
             // 
-            this.LbOpticsTestAmount.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
             resources.ApplyResources(this.LbOpticsTestAmount, "LbOpticsTestAmount");
             this.LbOpticsTestAmount.Name = "LbOpticsTestAmount";
-            this.LbOpticsTestAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbOpticsTestAmount.StylePriority.UseBorders = false;
-            this.LbOpticsTestAmount.StylePriority.UseFont = false;
             this.LbOpticsTestAmount.StylePriority.UseTextAlignment = false;
-            // 
-            // xrTableCell22
-            // 
-            this.xrTableCell22.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbOpticsJudge});
-            resources.ApplyResources(this.xrTableCell22, "xrTableCell22");
-            this.xrTableCell22.Name = "xrTableCell22";
-            this.xrTableCell22.Weight = 0.47983439839025949;
+            this.LbOpticsTestAmount.Weight = 0.52016560160974057;
             // 
             // LbOpticsJudge
             // 
-            this.LbOpticsJudge.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top)
-                        | DevExpress.XtraPrinting.BorderSide.Right)));
             resources.ApplyResources(this.LbOpticsJudge, "LbOpticsJudge");
             this.LbOpticsJudge.Name = "LbOpticsJudge";
-            this.LbOpticsJudge.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbOpticsJudge.StylePriority.UseBorders = false;
-            this.LbOpticsJudge.StylePriority.UseFont = false;
             this.LbOpticsJudge.StylePriority.UseTextAlignment = false;
+            this.LbOpticsJudge.Weight = 0.47983439839025949;
             // 
             // xrTable3
             // 
@@ -847,7 +693,8 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell7,
             this.xrTableCell8,
-            this.xrTableCell9});
+            this.LbClearTestAmount,
+            this.LbClearJudge});
             resources.ApplyResources(this.xrTableRow3, "xrTableRow3");
             this.xrTableRow3.Name = "xrTableRow3";
             this.xrTableRow3.Weight = 1;
@@ -868,37 +715,83 @@ namespace Book.UI.produceManager.PCExportReportANSI
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseFont = false;
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
-            this.xrTableCell8.Weight = 1.3365383757641953;
-            // 
-            // xrTableCell9
-            // 
-            this.xrTableCell9.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.LbClearJudge,
-            this.LbClearTestAmount});
-            resources.ApplyResources(this.xrTableCell9, "xrTableCell9");
-            this.xrTableCell9.Name = "xrTableCell9";
-            this.xrTableCell9.Weight = 0.99999835122629377;
-            // 
-            // LbClearJudge
-            // 
-            resources.ApplyResources(this.LbClearJudge, "LbClearJudge");
-            this.LbClearJudge.Name = "LbClearJudge";
-            this.LbClearJudge.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbClearJudge.StylePriority.UseFont = false;
-            this.LbClearJudge.StylePriority.UseTextAlignment = false;
+            this.xrTableCell8.Weight = 1.3365377803736902;
             // 
             // LbClearTestAmount
             // 
             resources.ApplyResources(this.LbClearTestAmount, "LbClearTestAmount");
             this.LbClearTestAmount.Name = "LbClearTestAmount";
-            this.LbClearTestAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.LbClearTestAmount.StylePriority.UseFont = false;
             this.LbClearTestAmount.StylePriority.UseTextAlignment = false;
+            this.LbClearTestAmount.Weight = 0.520165922204628;
             // 
             // PageFooter
             // 
             resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.Name = "PageFooter";
+            // 
+            // LbClearJudge
+            // 
+            resources.ApplyResources(this.LbClearJudge, "LbClearJudge");
+            this.LbClearJudge.Name = "LbClearJudge";
+            this.LbClearJudge.StylePriority.UseTextAlignment = false;
+            this.LbClearJudge.Weight = 0.47983302441217096;
+            // 
+            // LbPolarizedJudge
+            // 
+            resources.ApplyResources(this.LbPolarizedJudge, "LbPolarizedJudge");
+            this.LbPolarizedJudge.Name = "LbPolarizedJudge";
+            this.LbPolarizedJudge.StylePriority.UseTextAlignment = false;
+            this.LbPolarizedJudge.Weight = 0.47983458035592264;
+            // 
+            // LbFogJudge
+            // 
+            resources.ApplyResources(this.LbFogJudge, "LbFogJudge");
+            this.LbFogJudge.Name = "LbFogJudge";
+            this.LbFogJudge.StylePriority.UseTextAlignment = false;
+            this.LbFogJudge.Weight = 0.4798347635530123;
+            // 
+            // LbImpactJudge
+            // 
+            resources.ApplyResources(this.LbImpactJudge, "LbImpactJudge");
+            this.LbImpactJudge.Name = "LbImpactJudge";
+            this.LbImpactJudge.StylePriority.UseTextAlignment = false;
+            this.LbImpactJudge.Weight = 0.47983443803240905;
+            // 
+            // xrLabel17
+            // 
+            resources.ApplyResources(this.xrLabel17, "xrLabel17");
+            this.xrLabel17.Multiline = true;
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel17.StylePriority.UseFont = false;
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel15
+            // 
+            resources.ApplyResources(this.xrLabel15, "xrLabel15");
+            this.xrLabel15.Multiline = true;
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel15.StylePriority.UseFont = false;
+            this.xrLabel15.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel7
+            // 
+            resources.ApplyResources(this.xrLabel7, "xrLabel7");
+            this.xrLabel7.Multiline = true;
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel7.StylePriority.UseFont = false;
+            this.xrLabel7.StylePriority.UseTextAlignment = false;
+            // 
+            // xrLabel3
+            // 
+            resources.ApplyResources(this.xrLabel3, "xrLabel3");
+            this.xrLabel3.Multiline = true;
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.StylePriority.UseTextAlignment = false;
             // 
             // CSARO
             // 
@@ -935,22 +828,18 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel LbSpecifiction;
         private DevExpress.XtraReports.UI.XRLabel LbCustomer;
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
         private DevExpress.XtraReports.UI.XRLabel LbOrderId;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel LbProduct;
         private DevExpress.XtraReports.UI.XRLabel LbTesrPerson;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
         private DevExpress.XtraReports.UI.XRLabel LbReportDate;
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRLabel LbTestAmount;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel LbOrderAmount;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
@@ -961,54 +850,49 @@ namespace Book.UI.produceManager.PCExportReportANSI
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
+        private DevExpress.XtraReports.UI.XRTableCell LbOpticsTestAmount;
         private DevExpress.XtraReports.UI.XRTable xrTable3;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
-        private DevExpress.XtraReports.UI.XRLabel LbOpticsJudge;
-        private DevExpress.XtraReports.UI.XRLabel LbOpticsTestAmount;
-        private DevExpress.XtraReports.UI.XRLabel LbClearTestAmount;
-        private DevExpress.XtraReports.UI.XRLabel LbClearJudge;
+        private DevExpress.XtraReports.UI.XRTableCell LbClearTestAmount;
         private DevExpress.XtraReports.UI.XRTable xrTable5;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow5;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell14;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell15;
-        private DevExpress.XtraReports.UI.XRLabel LbFogTestAmount;
-        private DevExpress.XtraReports.UI.XRLabel LbFogJudge;
+        private DevExpress.XtraReports.UI.XRTableCell LbFogTestAmount;
         private DevExpress.XtraReports.UI.XRTable xrTable4;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
-        private DevExpress.XtraReports.UI.XRLabel LbPolarizedTestAmount;
-        private DevExpress.XtraReports.UI.XRLabel LbPolarizedJudge;
+        private DevExpress.XtraReports.UI.XRTableCell LbPolarizedTestAmount;
         private DevExpress.XtraReports.UI.XRTable xrTable7;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow7;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell19;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell20;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell21;
-        private DevExpress.XtraReports.UI.XRLabel LbImpaceTestAmount;
-        private DevExpress.XtraReports.UI.XRLabel LbImpactJudge;
+        private DevExpress.XtraReports.UI.XRTableCell LbImpaceTestAmount;
         private DevExpress.XtraReports.UI.XRTable xrTable6;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow6;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell18;
-        private DevExpress.XtraReports.UI.XRLabel LbLightTestAmount;
-        private DevExpress.XtraReports.UI.XRLabel LbLightJudge;
-        private DevExpress.XtraReports.UI.XRLabel LbMirrorlens;
+        private DevExpress.XtraReports.UI.XRTableCell LbMirrorlens;
+        private DevExpress.XtraReports.UI.XRTableCell LbLightJudge;
         private DevExpress.XtraReports.UI.XRLabel lbl_Signature;
         private DevExpress.XtraReports.UI.XRLabel xrLabel121;
         private DevExpress.XtraReports.UI.XRLabel xrLabel118;
         private DevExpress.XtraReports.UI.XRLabel xrLabel119;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell22;
+        private DevExpress.XtraReports.UI.XRTableCell LbOpticsJudge;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell23;
+        private DevExpress.XtraReports.UI.XRTableCell LbLightTestAmount;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.UI.XRTableCell LbClearJudge;
+        private DevExpress.XtraReports.UI.XRTableCell LbPolarizedJudge;
+        private DevExpress.XtraReports.UI.XRTableCell LbFogJudge;
+        private DevExpress.XtraReports.UI.XRTableCell LbImpactJudge;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel17;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel15;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
     }
 }

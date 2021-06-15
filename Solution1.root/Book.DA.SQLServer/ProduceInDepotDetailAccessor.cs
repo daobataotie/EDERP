@@ -377,7 +377,7 @@ namespace Book.DA.SQLServer
                 #region 展开
                 sbMain.Append("SELECT Substring(CONVERT(varchar,h.ProduceInDepotDate,120),0,11) AS ProduceInDepotDate,h.WorkHouseId,");
                 sbMain.Append("CASE d.ProceduresSum WHEN 0 THEN '0%' ELSE RTrim(CONVERT(varchar,round(1 - isnull(d.CheckOutSum,0)/isnull(d.ProceduresSum,1),2)*100))+'%' END AS RejectionRate_1,");
-                sbMain.Append("w.Workhousename,CASE p.ProductType WHEN 0 THEN '常態' WHEN 1 THEN '特殊' ELSE '' END AS ProductType,");
+                sbMain.Append("w.Workhousename,CASE p.ProductType WHEN 0 THEN '常態' WHEN 1 THEN '特殊' WHEN 2 THEN '耳塞' ELSE '' END AS ProductType,");
                 sbMain.Append("CASE p.IsQiangHua WHEN 1 THEN '強化' ELSE (CASE p.IsFangWu WHEN 1 THEN '防霧' ELSE (CASE p.IsNoQiangFang WHEN 1 THEN '無強化防霧' ELSE '' END) END ) END AS ProductWDQHua,");
                 sbMain.Append("p.ProductName,d.ProductUnit AS ProductUnit,isnull(ProceduresSum,0) AS ProceduresSum,");
                 sbMain.Append("isnull(CheckOutSum,0) AS CheckOutSum,isnull(mYuanliaowenti,0) AS mYuanliaowenti,isnull(mChouliaowenti,0) AS mChouliaowenti,");
@@ -746,7 +746,7 @@ namespace Book.DA.SQLServer
                 sbMain.Append("SELECT aa.*,case op.IsQiangHua WHEN 1 THEN '強化' else (case op.IsFangWU  WHEN 1 THEN '防霧' else(case op.IsNoQiangFang WHEN 1 THEN ' 無強化防霧 ' else '' end) END) END AS ProductWDQHua FROM (");
                 sbMain.Append("SELECT o.ProductId,h.WorkHouseId,w.Workhousename,ProductUnit,isnull(sum(ProceduresSum),0) AS ProceduresSum,");
                 sbMain.Append("isnull(sum(CheckOutSum),0) AS CheckOutSum,CASE sum(ProceduresSum) WHEN 0 THEN '0%'ELSE RTrim(CONVERT(varchar,round(1 - isnull(sum(CheckOutSum),0)/isnull(sum(ProceduresSum),1),2)*100))+'%' END AS RejectionRate_1,");
-                sbMain.Append("CASE p.ProductType WHEN 0 THEN '常態' WHEN 1 THEN '特殊' else '' end AS ProductType,");
+                sbMain.Append("CASE p.ProductType WHEN 0 THEN '常態' WHEN 1 THEN '特殊' WHEN 2 THEN '耳塞' else '' end AS ProductType,");
                 sbMain.Append("p.ProductName,'" + StartDate.ToString("yyyy-MM-dd") + "~" + EndDate.ToString("yyyy-MM-dd") + "' AS ProduceInDepotDate,isnull(sum(mYuanliaowenti),0) AS mYuanliaowenti,");
                 sbMain.Append("ISNULL(sum(mChouliaowenti),0) AS mChouliaowenti,isnull(sum(mPaoguanwenti),0) AS mPaoguanwenti,isnull(sum(mJingdiangudingdian),0) AS mJingdiangudingdian,");
                 sbMain.Append("isnull(sum(mChapiancashang),0) AS mChapiancashang,isnull(sum(mWanMocashang),0) AS mWanMocashang,");

@@ -3438,16 +3438,70 @@ namespace Book.UI.Settings.BasicData.Products
             return "Product" + "," + this.product.Id;
         }
 
+
+        /* tab页切换事件，切换不同的tab，上面显示不同的“打印XXX”
+         * xtraTabPage10，gridView2，採購記錄
+         * xtraTabPage11，gridView4，銷售記錄
+         * xtraTabPageStock，gridViewStock，庫存記錄
+         * xtraTabPageOtherCompact，gridView6，委外合同記錄
+         * xtraTabproduceMaterial，gridView7，領料記錄
+         */
+        private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            switch (e.Page.Name)
+            {
+                case "xtraTabPage10":
+                    this.bar_ReportStockRecord.Caption = "導出Excel-採購記錄";
+                    break;
+                case "xtraTabPage11":
+                    this.bar_ReportStockRecord.Caption = "導出Excel-銷售記錄";
+                    break;
+                case "xtraTabPageStock":
+                    this.bar_ReportStockRecord.Caption = "導出Excel-庫存記錄";
+                    break;
+                case "xtraTabPageOtherCompact":
+                    this.bar_ReportStockRecord.Caption = "導出Excel-委外合同記錄";
+                    break;
+                case "xtraTabproduceMaterial":
+                    this.bar_ReportStockRecord.Caption = "導出Excel-領料記錄";
+                    break;
+            }
+        }
+
+        //導出Excel
         private void bar_ReportStockRecord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel|*.xlsx";
-            sfd.Title = "請選擇保存路徑";
+            sfd.Title = "請選擇Excel保存路徑";
+
+            GridView exportGridView = null;
+            string btnName = this.bar_ReportStockRecord.Caption;
+            if (btnName.Contains("採購記錄"))
+            {
+                exportGridView = gridView2;
+            }
+            else if (btnName.Contains("銷售記錄"))
+            {
+                exportGridView = gridView4;
+            }
+            else if (btnName.Contains("庫存記錄"))
+            {
+                exportGridView = gridViewStock;
+            }
+            else if (btnName.Contains("委外合同記錄"))
+            {
+                exportGridView = gridView6;
+            }
+            else if (btnName.Contains("領料記錄"))
+            {
+                exportGridView = gridView7;
+            }
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                this.gridViewStock.OptionsPrint.AutoWidth = false;
-                this.gridViewStock.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() { });
+                exportGridView.OptionsPrint.AutoWidth = false;
+                exportGridView.ExportToXlsx(sfd.FileName, new DevExpress.XtraPrinting.XlsxExportOptions() {TextExportMode = DevExpress.XtraPrinting.TextExportMode.Text });
             }
         }
 

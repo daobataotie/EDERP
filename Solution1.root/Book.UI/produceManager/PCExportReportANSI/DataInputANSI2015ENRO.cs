@@ -13,15 +13,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
             InitializeComponent();
         }
 
-        public DataInputANSI2015ENRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI pcExportReportANSI, Model.PCExportReportANSI pcEN, int tag, int ENType)
+        public DataInputANSI2015ENRO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI pcExportReportANSI, Model.PCExportReportANSI pcEN, int tag, int ENType, bool isJihe)
             : this()
         {
             if (pcDataInput == null)
                 return;
 
-            this.TCTSData.Text = pcDataInput.PCDataInputDate.HasValue ? pcDataInput.PCDataInputDate.Value.ToString("yyyy-MM-dd") : "";
-            this.TCTSQuantity.Text = pcDataInput.PCPerspectiveList.Count.ToString();
-            this.TCTSEmployee.Text = pcDataInput.Employee3 == null ? "" : pcDataInput.Employee3.ToString();
+            if (!isJihe)
+            {
+                this.xrSubreportPCPerspective.ReportSource = new PCPerspective(pcDataInput);
+            }
 
             string customer = string.Empty;
             if (pcExportReportANSI != null)

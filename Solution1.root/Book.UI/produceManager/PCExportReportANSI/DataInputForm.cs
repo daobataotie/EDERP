@@ -350,14 +350,16 @@ namespace Book.UI.produceManager.PCExportReportANSI
                     this.txt_Customer.Text = pronoteHeader.CustomerShortName;
                     this.cob_CheckStandard.EditValue = pronoteHeader.CustomerCheckStandard;
 
+                    this.spe_TestQuantity.EditValue = pronoteHeader.InvoiceXODetailQuantity;
+                    this.sp_OrderQuantity.EditValue = Common.AutoCalculation.Calculation(pronoteHeader.CustomerCheckStandard, Convert.ToInt32(pronoteHeader.InvoiceXODetailQuantity));
+
                     //光学机内容拉取该加工单对应的 组装成品检验单的光学测试
                     Model.PCFinishCheck pcFinishCheck = (new BL.PCFinishCheckManager()).SelectByPronoteHeader(pronoteHeader.PronoteHeaderID);
                     if (pcFinishCheck != null)
                     {
                         this.ncc_Tester1.EditValue = pcFinishCheck.Employee0;
-                        this.spe_TestQuantity.EditValue = pcFinishCheck.PCFinishCheckCount;
-
-                        this.sp_OrderQuantity.EditValue = pcFinishCheck.PCFinishCheckInCoiunt;
+                        //this.spe_TestQuantity.EditValue = pcFinishCheck.PCFinishCheckCount;
+                        //this.sp_OrderQuantity.EditValue = pcFinishCheck.PCFinishCheckInCoiunt;
 
                         IList<Model.OpticsTest> opticsTestList = new BL.OpticsTestManager().FSelect(pcFinishCheck.PCFinishCheckID);
                         foreach (var opticsTest in opticsTestList)
@@ -423,41 +425,41 @@ namespace Book.UI.produceManager.PCExportReportANSI
             {
                 case "ANSI":
                     Model.PCExportReportANSI ansi1 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI");
-                    DataInputANSIRO ansiro = new DataInputANSIRO(this._PCDataInput, ansi1, this.radioGroup1.SelectedIndex);
+                    DataInputANSIRO ansiro = new DataInputANSIRO(this._PCDataInput, ansi1, this.radioGroup1.SelectedIndex, false);
                     ansiro.ShowPreviewDialog();
                     break;
                 case "ANSI/CSA":
                     Model.PCExportReportANSI ansi2 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI");
                     Model.PCExportReportANSI csa2 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CSA");
-                    DataInputCSARO csaro = new DataInputCSARO(this._PCDataInput, ansi2, csa2, this.radioGroup1.SelectedIndex);
+                    DataInputCSARO csaro = new DataInputCSARO(this._PCDataInput, ansi2, csa2, this.radioGroup1.SelectedIndex, false);
                     csaro.ShowPreviewDialog();
                     break;
                 case "EN":
                     Model.PCExportReportANSI en = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CEEN");
-                    DataInputENRO enro = new DataInputENRO(this._PCDataInput, en, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex);
+                    DataInputENRO enro = new DataInputENRO(this._PCDataInput, en, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex, false);
                     enro.ShowPreviewDialog();
                     break;
                 case "AS/NZS":
                     Model.PCExportReportANSI aso = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "AS");
-                    DataInputASRO asro = new DataInputASRO(this._PCDataInput, aso, this.radioGroup1.SelectedIndex);
+                    DataInputASRO asro = new DataInputASRO(this._PCDataInput, aso, this.radioGroup1.SelectedIndex, false);
                     asro.ShowPreviewDialog();
                     break;
 
                 //2017年4月23日17:20:39 添加
                 case "ANSI2015":
                     Model.PCExportReportANSI ansi20151 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
-                    DataInputANSI2015RO ansi2015ro = new DataInputANSI2015RO(this._PCDataInput, ansi20151, this.radioGroup1.SelectedIndex);
+                    DataInputANSI2015RO ansi2015ro = new DataInputANSI2015RO(this._PCDataInput, ansi20151, this.radioGroup1.SelectedIndex, false);
                     ansi2015ro.ShowPreviewDialog();
                     break;
                 case "ANSI2015/CSA2015":
                     Model.PCExportReportANSI ansi20152 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
                     Model.PCExportReportANSI csa20152 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CSA");
-                    DataInputCSA2015RO csa2015ro = new DataInputCSA2015RO(this._PCDataInput, ansi20152, csa20152, this.radioGroup1.SelectedIndex);
+                    DataInputCSA2015RO csa2015ro = new DataInputCSA2015RO(this._PCDataInput, ansi20152, csa20152, this.radioGroup1.SelectedIndex, false);
                     csa2015ro.ShowPreviewDialog();
                     break;
                 case "AS2017":
                     Model.PCExportReportANSI aso2017 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "AS");
-                    DataInputAS2017RO as2017ro = new DataInputAS2017RO(this._PCDataInput, aso2017, this.radioGroup1.SelectedIndex);
+                    DataInputAS2017RO as2017ro = new DataInputAS2017RO(this._PCDataInput, aso2017, this.radioGroup1.SelectedIndex, false);
                     as2017ro.ShowPreviewDialog();
                     break;
 
@@ -465,14 +467,14 @@ namespace Book.UI.produceManager.PCExportReportANSI
                 case "ANSI2015/EN":
                     Model.PCExportReportANSI ansi20154 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
                     Model.PCExportReportANSI en4 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CEEN");
-                    DataInputANSI2015ENRO ansiEN = new DataInputANSI2015ENRO(this._PCDataInput, ansi20154, en4, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex);
+                    DataInputANSI2015ENRO ansiEN = new DataInputANSI2015ENRO(this._PCDataInput, ansi20154, en4, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex, false);
                     ansiEN.ShowPreviewDialog();
                     break;
                 case "ANSI2015/EN/AS2017":
                     Model.PCExportReportANSI ansi20155 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "ANSI2015");
                     Model.PCExportReportANSI en5 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "CEEN");
                     Model.PCExportReportANSI aso20175 = this.pCExportReportANSIManager.SelectByCusIdAndProduct(this._PCDataInput.InvoiceCusId, this._PCDataInput.ProductId, "AS");
-                    DataInputANSI2015ENASRO ansiASEN = new DataInputANSI2015ENASRO(this._PCDataInput, ansi20155, en5, aso20175, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex);
+                    DataInputANSI2015ENASRO ansiASEN = new DataInputANSI2015ENASRO(this._PCDataInput, ansi20155, en5, aso20175, this.radioGroup1.SelectedIndex, this.rg_CEENType.SelectedIndex, false);
                     ansiASEN.ShowPreviewDialog();
                     break;
             }

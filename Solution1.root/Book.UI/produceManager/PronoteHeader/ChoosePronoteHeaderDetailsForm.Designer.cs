@@ -36,6 +36,7 @@
             this.lookUpEditMachine = new DevExpress.XtraEditors.LookUpEdit();
             this.bindingSourceMachine = new System.Windows.Forms.BindingSource(this.components);
             this.lbl_Status = new System.Windows.Forms.Label();
+            this.check_DepotProcess = new DevExpress.XtraEditors.CheckEdit();
             this.date_JiaohuoStart = new DevExpress.XtraEditors.DateEdit();
             this.date_JiaohuoEnd = new DevExpress.XtraEditors.DateEdit();
             this.btn_Print = new DevExpress.XtraEditors.SimpleButton();
@@ -100,10 +101,8 @@
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -111,6 +110,9 @@
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem29 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem27 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem26 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -118,12 +120,11 @@
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.check_DepotProcess = new DevExpress.XtraEditors.CheckEdit();
-            this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMachine.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceMachine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.check_DepotProcess.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_JiaohuoStart.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_JiaohuoStart.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_JiaohuoEnd.Properties.VistaTimeProperties)).BeginInit();
@@ -164,10 +165,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -175,6 +174,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
@@ -182,8 +184,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.check_DepotProcess.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -250,6 +250,13 @@
             // 
             resources.ApplyResources(this.lbl_Status, "lbl_Status");
             this.lbl_Status.Name = "lbl_Status";
+            // 
+            // check_DepotProcess
+            // 
+            resources.ApplyResources(this.check_DepotProcess, "check_DepotProcess");
+            this.check_DepotProcess.Name = "check_DepotProcess";
+            this.check_DepotProcess.Properties.Caption = resources.GetString("check_DepotProcess.Properties.Caption");
+            this.check_DepotProcess.StyleController = this.layoutControl1;
             // 
             // date_JiaohuoStart
             // 
@@ -805,17 +812,6 @@
             this.layoutControlItem22.TextToControlDistance = 0;
             this.layoutControlItem22.TextVisible = false;
             // 
-            // layoutControlItem23
-            // 
-            this.layoutControlItem23.Control = this.checkEditZizhiBCP;
-            resources.ApplyResources(this.layoutControlItem23, "layoutControlItem23");
-            this.layoutControlItem23.Location = new System.Drawing.Point(304, 101);
-            this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(205, 28);
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem23.TextToControlDistance = 0;
-            this.layoutControlItem23.TextVisible = false;
-            // 
             // layoutControlItem25
             // 
             this.layoutControlItem25.Control = this.date_JiaohuoEnd;
@@ -833,17 +829,6 @@
             this.layoutControlItem24.Name = "layoutControlItem24";
             this.layoutControlItem24.Size = new System.Drawing.Size(232, 25);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(64, 14);
-            // 
-            // layoutControlItem26
-            // 
-            this.layoutControlItem26.Control = this.lookUpEditMachine;
-            resources.ApplyResources(this.layoutControlItem26, "layoutControlItem26");
-            this.layoutControlItem26.Location = new System.Drawing.Point(509, 74);
-            this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(169, 25);
-            this.layoutControlItem26.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem26.TextSize = new System.Drawing.Size(30, 20);
-            this.layoutControlItem26.TextToControlDistance = 5;
             // 
             // emptySpaceItem3
             // 
@@ -920,6 +905,39 @@
             this.layoutControlItem27.TextVisible = false;
             this.layoutControlItem27.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
+            // layoutControlItem23
+            // 
+            this.layoutControlItem23.Control = this.checkEditZizhiBCP;
+            resources.ApplyResources(this.layoutControlItem23, "layoutControlItem23");
+            this.layoutControlItem23.Location = new System.Drawing.Point(304, 101);
+            this.layoutControlItem23.Name = "layoutControlItem23";
+            this.layoutControlItem23.Size = new System.Drawing.Size(205, 28);
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem23.TextToControlDistance = 0;
+            this.layoutControlItem23.TextVisible = false;
+            // 
+            // layoutControlItem26
+            // 
+            this.layoutControlItem26.Control = this.lookUpEditMachine;
+            resources.ApplyResources(this.layoutControlItem26, "layoutControlItem26");
+            this.layoutControlItem26.Location = new System.Drawing.Point(509, 74);
+            this.layoutControlItem26.Name = "layoutControlItem26";
+            this.layoutControlItem26.Size = new System.Drawing.Size(169, 25);
+            this.layoutControlItem26.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(30, 20);
+            this.layoutControlItem26.TextToControlDistance = 5;
+            // 
+            // layoutControlItem31
+            // 
+            this.layoutControlItem31.Control = this.check_DepotProcess;
+            resources.ApplyResources(this.layoutControlItem31, "layoutControlItem31");
+            this.layoutControlItem31.Location = new System.Drawing.Point(509, 99);
+            this.layoutControlItem31.Name = "layoutControlItem31";
+            this.layoutControlItem31.Size = new System.Drawing.Size(169, 30);
+            this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem31.TextToControlDistance = 0;
+            this.layoutControlItem31.TextVisible = false;
+            // 
             // layoutControlItem12
             // 
             resources.ApplyResources(this.layoutControlItem12, "layoutControlItem12");
@@ -985,24 +1003,6 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(718, 41);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // check_DepotProcess
-            // 
-            resources.ApplyResources(this.check_DepotProcess, "check_DepotProcess");
-            this.check_DepotProcess.Name = "check_DepotProcess";
-            this.check_DepotProcess.Properties.Caption = resources.GetString("checkEdit2.Properties.Caption");
-            this.check_DepotProcess.StyleController = this.layoutControl1;
-            // 
-            // layoutControlItem31
-            // 
-            this.layoutControlItem31.Control = this.check_DepotProcess;
-            resources.ApplyResources(this.layoutControlItem31, "layoutControlItem31");
-            this.layoutControlItem31.Location = new System.Drawing.Point(509, 99);
-            this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(169, 30);
-            this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem31.TextToControlDistance = 0;
-            this.layoutControlItem31.TextVisible = false;
-            // 
             // ChoosePronoteHeaderDetailsForm
             // 
             resources.ApplyResources(this, "$this");
@@ -1016,6 +1016,7 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMachine.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceMachine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.check_DepotProcess.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_JiaohuoStart.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_JiaohuoStart.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_JiaohuoEnd.Properties.VistaTimeProperties)).EndInit();
@@ -1056,10 +1057,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -1067,6 +1066,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
@@ -1074,8 +1076,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.check_DepotProcess.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -14,6 +14,11 @@ namespace Book.UI.produceManager.PCExportReportANSI
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 霧度
+        /// </summary>
+        /// <param name="pcHazeList"></param>
+        /// <param name="pcDataInput"></param>
         public PCHazeRO(IList<Model.PCHaze> pcHazeList, Model.PCDataInput pcDataInput)
             : this()
         {

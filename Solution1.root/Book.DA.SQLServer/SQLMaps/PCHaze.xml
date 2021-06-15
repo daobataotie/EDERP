@@ -4,7 +4,7 @@
   <statements>
     <select id="SelectByHeaderId" resultMap="PCHazeResult" parameterClass="string">
       <![CDATA[
-      select * from PCHaze where PCDataInputId=#value# order by NoId 
+      select * from PCHaze where PCDataInputId=#value#  order by RIGHT('0000000000'+NoId,10)
       ]]>
     </select>
   </statements>

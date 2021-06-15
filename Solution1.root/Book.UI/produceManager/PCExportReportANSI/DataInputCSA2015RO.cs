@@ -13,7 +13,7 @@ namespace Book.UI.produceManager.PCExportReportANSI
             InitializeComponent();
         }
 
-        public DataInputCSA2015RO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI ANSI, Model.PCExportReportANSI CSA, int tag)
+        public DataInputCSA2015RO(Model.PCDataInput pcDataInput, Model.PCExportReportANSI ANSI, Model.PCExportReportANSI CSA, int tag, bool isJihe)
             : this()
         {
             if (pcDataInput == null)
@@ -31,7 +31,10 @@ namespace Book.UI.produceManager.PCExportReportANSI
             }
             if (CSA != null)
             {
-                this.xrSubreportCSA.ReportSource = new CSARO(CSA, tag);
+                if (isJihe)
+                    this.xrSubreportCSA.ReportSource = new CSARO_Jihe(CSA, tag);
+                else
+                    this.xrSubreportCSA.ReportSource = new CSARO(CSA, tag);
                 customer = CSA.Customer.CustomerName;
             }
             if (string.IsNullOrEmpty(customer))
